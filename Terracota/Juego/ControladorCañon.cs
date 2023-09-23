@@ -8,33 +8,85 @@ using Stride.Input;
 using Stride.Engine;
 using System.Collections;
 using Stride.Core.Diagnostics;
+using Silk.NET.SDL;
+using BulletSharp;
+using System.Diagnostics;
+using System.Reflection.Metadata.Ecma335;
 
-namespace Terracota
+namespace Terracota;
+using static Constantes;
+
+public class ControladorCañon : SyncScript
 {
-    public class ControladorCañon : SyncScript
+    public float fuerzaBala;
+    public float fuerzaMetralla;
+
+    public Entity soporte;
+    public Entity tubo;
+    public Entity origenProyectil;
+    public Prefab bala;
+    public Prefab metralla;
+
+    private float últimaPosiciónX;
+    private float últimaPosiciónY;
+
+    private float aaa;
+    public override void Start()
     {
-        // Declared public member fields and properties will show in the game studio
 
-        public override void Start()
+    }
+
+    public override void Update()
+    {
+        Mirar();
+
+        if (!Input.HasMouse)
+            return;
+
+        if (Input.IsKeyPressed(Keys.Z))
+            Disparar(TipoProyectil.bala);
+
+        if (Input.IsKeyPressed(Keys.X))
+            Disparar(TipoProyectil.metralla);
+    }
+    
+    private void Mirar()
+    {
+        Console.WriteLine(soporte.Transform.RotationEulerXYZ);
+
+        if (últimaPosiciónX != Input.AbsoluteMousePosition.X)
+            soporte.Transform.Rotation = Quaternion.RotationY((últimaPosiciónX - Input.AbsoluteMousePosition.X) / 10);
+
+        if (últimaPosiciónY != Input.AbsoluteMousePosition.Y)
+            tubo.Transform.Rotation = Quaternion.RotationX((últimaPosiciónY - Input.AbsoluteMousePosition.Y) / 10);
+
+        últimaPosiciónX = Input.AbsoluteMousePosition.X;
+        últimaPosiciónY = Input.AbsoluteMousePosition.Y;
+    }
+        
+    private void Disparar(TipoProyectil tipoProyectil)
+    {
+        Console.WriteLine(tipoProyectil);
+        /*
+        switch (tipoProyectil)
         {
-            // Initialization of the script.
-            Log.Warning("a");
-            Log.Debug("b");
-            Console.WriteLine("console");
+            case TipoProyectil.bala:
+                var nuevaBala = Instantiate(bala, origenProyectil.position, origenProyectil.rotation);
+                var cuerpoBala = nuevaBala.GetComponent<Rigidbody>();
 
-            //var imprimir = Imprimir();
-            //imprimir.Start();
-        }
+                cuerpoBala.AddForce(origenProyectil.up * fuerzaBala, ForceMode.Impulse);
+                break;
+            case TipoProyectil.metralla:
+                var nuevaMetralla = Instantiate(metralla, origenProyectil.position, origenProyectil.rotation);
+                var cuerposMetralla = nuevaMetralla.GetComponentsInChildren<Rigidbody>();
 
-        public override void Update()
-        {
-            // Do stuff every new frame
-        }
-
-        private async Task Imprimir()
-        {
-            await Task.Delay(1000);
-            Console.WriteLine("tt");
-        }
+                foreach (var metralla in cuerposMetralla)
+                {
+                    var aleatorio = Random.Range(-1f, 0.5f);
+                    metralla.mass += aleatorio;
+                    metralla.AddForce(origenProyectil.up * (fuerzaMetralla + aleatorio), ForceMode.Impulse);
+                }
+                break;
+        }*/
     }
 }
