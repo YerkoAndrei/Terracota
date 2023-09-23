@@ -1,17 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Input;
 using Stride.Engine;
-using System.Collections;
-using Stride.Core.Diagnostics;
-using Silk.NET.SDL;
-using BulletSharp;
-using System.Diagnostics;
-using System.Reflection.Metadata.Ecma335;
+using Stride.Physics;
+using Stride.Core;
 
 namespace Terracota;
 using static Constantes;
@@ -21,28 +13,34 @@ public class ControladorCañon : SyncScript
     public float fuerzaBala;
     public float fuerzaMetralla;
 
+    public float sensibilidadX;
+    public float sensibilidadY;
+
     public Entity soporte;
     public Entity tubo;
     public Entity origenProyectil;
     public Prefab bala;
     public Prefab metralla;
 
-    private float últimaPosiciónX;
-    private float últimaPosiciónY;
+    private bool active;
 
-    private float aaa;
     public override void Start()
     {
-
+        // Turnos
+        active = true;
     }
 
     public override void Update()
     {
-        Mirar();
-
-        if (!Input.HasMouse)
+        if (!active)
             return;
 
+        if (Input.HasMouse)
+            MoverCañónPC();
+        else
+            MoverCañónMóvil();
+
+        // pruebas
         if (Input.IsKeyPressed(Keys.Z))
             Disparar(TipoProyectil.bala);
 
@@ -50,33 +48,42 @@ public class ControladorCañon : SyncScript
             Disparar(TipoProyectil.metralla);
     }
     
-    private void Mirar()
+    private void MoverCañónPC()
     {
-        Console.WriteLine(soporte.Transform.RotationEulerXYZ);
+        if (!Input.IsMouseButtonDown(MouseButton.Left))
+            return;
 
-        if (últimaPosiciónX != Input.AbsoluteMousePosition.X)
-            soporte.Transform.Rotation = Quaternion.RotationY((últimaPosiciónX - Input.AbsoluteMousePosition.X) / 10);
+        if (Input.MouseDelta.X != 0)
+            soporte.Transform.RotationEulerXYZ += new Vector3(0, -(Input.MouseDelta.X * sensibilidadX), 0);
 
-        if (últimaPosiciónY != Input.AbsoluteMousePosition.Y)
-            tubo.Transform.Rotation = Quaternion.RotationX((últimaPosiciónY - Input.AbsoluteMousePosition.Y) / 10);
-
-        últimaPosiciónX = Input.AbsoluteMousePosition.X;
-        últimaPosiciónY = Input.AbsoluteMousePosition.Y;
+        if (Input.MouseDelta.Y != 0)
+            tubo.Transform.RotationEulerXYZ += new Vector3(-(Input.MouseDelta.Y * sensibilidadY), 0, 0);
     }
-        
+
+    private void MoverCañónMóvil()
+    {
+
+    }
+
     private void Disparar(TipoProyectil tipoProyectil)
     {
         Console.WriteLine(tipoProyectil);
-        /*
+        var aleatorio = new Random();
+        
         switch (tipoProyectil)
         {
             case TipoProyectil.bala:
-                var nuevaBala = Instantiate(bala, origenProyectil.position, origenProyectil.rotation);
-                var cuerpoBala = nuevaBala.GetComponent<Rigidbody>();
+                var nuevaBala = bala.Instantiate()[0];
+                nuevaBala.Transform.Position = origenProyectil.Transform.WorldMatrix.TranslationVector;
+                nuevaBala.Transform.RotationEulerXYZ = new Vector3(aleatorio.Next(0, 360), aleatorio.Next(0, 360), aleatorio.Next(0, 360));
 
-                cuerpoBala.AddForce(origenProyectil.up * fuerzaBala, ForceMode.Impulse);
+                SceneSystem.SceneInstance.RootScene.Entities.Add(nuevaBala);
+
+                // Impulso
+                var cuerpo = nuevaBala.Get<RigidbodyComponent>();
+                cuerpo.ApplyForce(origenProyectil.Transform.WorldMatrix.Up * fuerzaBala);
                 break;
-            case TipoProyectil.metralla:
+            case TipoProyectil.metralla:/*
                 var nuevaMetralla = Instantiate(metralla, origenProyectil.position, origenProyectil.rotation);
                 var cuerposMetralla = nuevaMetralla.GetComponentsInChildren<Rigidbody>();
 
@@ -85,8 +92,8 @@ public class ControladorCañon : SyncScript
                     var aleatorio = Random.Range(-1f, 0.5f);
                     metralla.mass += aleatorio;
                     metralla.AddForce(origenProyectil.up * (fuerzaMetralla + aleatorio), ForceMode.Impulse);
-                }
+                }*/
                 break;
-        }*/
+        }
     }
 }

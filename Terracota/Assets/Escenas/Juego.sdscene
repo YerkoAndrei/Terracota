@@ -28,6 +28,20 @@ Hierarchy:
                         Id: c515b6dc-28c3-4f28-8092-34ed51d54caa
                         Model: a31cc64d-df78-4561-892a-dd04bd19610a:Modelos/Ground
                         Materials: {}
+                    bd6eb7e6f842440332cd95f2b211f5c7: !StaticColliderComponent
+                        Id: 4c9bd3f6-810e-4b8d-9200-56b3a97ec3c4
+                        CanSleep: false
+                        Restitution: 0.5
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            53ce6677ce3d8eb8ca16c4e23209b6d9: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                Offset: 0.0
         -   Entity:
                 Id: 0866fe54-7f2d-4808-8f79-7d2ba52a3880
                 Name: Skybox
@@ -96,14 +110,16 @@ Hierarchy:
                         Id: d0aa2221-2ef9-443d-a853-fad729532d35
                         fuerzaBala: 2000.0
                         fuerzaMetralla: 400.0
-                        soporte: ref!! 6a7b61ba-4bb3-4bbe-8a6e-ad82a3aed366
+                        sensibilidadX: 1.2
+                        sensibilidadY: 1.2
+                        soporte: ref!! 58ce7c51-2c88-4226-9ee1-cfc5122a606d
                         tubo: ref!! 133ac696-ed46-4e45-9ed6-2dab4f6fc97d
                         origenProyectil: ref!! d3cc82e5-4c61-4353-852a-69db5db48306
                         bala: 32dc5310-2c33-4019-a4a0-fdf11fafd6c0:Prefabs/Bala
                         metralla: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
         -   Entity:
                 Id: 58ce7c51-2c88-4226-9ee1-cfc5122a606d
-                Name: Base
+                Name: Soporte
                 Components:
                     0bf070e32c32c4e7329253d312cfd959: !TransformComponent
                         Id: 24f68de4-cd16-4865-b448-9daf57422e94
@@ -115,7 +131,7 @@ Hierarchy:
                             668aac500cf7400a5b94237819a8111a: ref!! 58c5b638-456c-4c0e-a144-f24dc7285b8b
         -   Entity:
                 Id: 6a7b61ba-4bb3-4bbe-8a6e-ad82a3aed366
-                Name: Soporte
+                Name: Caja
                 Components:
                     2e3a2a7c0e7a6f328cd043bb96b51f4b: !TransformComponent
                         Id: 8be4eebd-b85e-4e18-8117-5db0cd1a6e87
@@ -133,9 +149,9 @@ Hierarchy:
                 Components:
                     89f7b83236c70f4c78f22aceaca8a0bb: !TransformComponent
                         Id: 875f4a34-15a6-4da2-809d-aa59a5a408b7
-                        Position: {X: 0.0, Y: 0.0, Z: -1.0}
+                        Position: {X: 0.0, Y: -0.25, Z: -1.0}
                         Rotation: {X: -0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 1.0, Y: 3.0, Z: 1.0}
+                        Scale: {X: 0.5, Y: 3.0, Z: 0.5}
                         Children:
                             2acb488d0fd3d163514a34e1fd6510b7: ref!! bfc9b836-7db6-488f-afb6-345bf1de9a4e
                     88a49386d9ce43522cd82b95113a8b97: !ModelComponent
@@ -194,3 +210,23 @@ Hierarchy:
                         Id: dd7bb349-e234-41cf-9f20-e64d65f36a96
                         Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
                         Materials: {}
+                    038d921fc5246d7c813f9519dd14340a: !RigidbodyComponent
+                        Id: e6c4de3c-fbc4-4503-ba61-5da943bc4c51
+                        CanSleep: false
+                        Restitution: 0.5
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fc9d1dad4a0162a0aaba9e06963e5127: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}

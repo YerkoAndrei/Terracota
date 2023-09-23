@@ -16,7 +16,7 @@ public class SistemaAnimación : StartupScript
         Log.Warning("a");
 
         // Async
-        Task.Run(Imprimir);
+        //Task.Run(Imprimir);
     }
 
     private async Task Imprimir()
