@@ -3,5 +3,68 @@ Id: fbf030df-c449-4d06-ab6b-e1dfbfd3460f
 SerializedVersion: {Stride: 3.1.0.1}
 Tags: []
 Hierarchy:
-    RootParts: []
-    Parts: []
+    RootParts:
+        - ref!! 88aa0e63-7949-4475-a5ab-7074456ed6b4
+        - ref!! 14556bb6-b4a3-4922-b41f-1376e78a50b6
+        - ref!! 6daa43fa-c11e-4954-aa0d-ccda5f883119
+        - ref!! 9a38fb44-eb64-4ed9-9800-db4b0586675a
+    Parts:
+        -   Folder: null
+            Entity:
+                Id: 14556bb6-b4a3-4922-b41f-1376e78a50b6
+                Name: Bala 1
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 3480331a-3c49-4b98-9e0e-ed7f98ff6b95
+                        Position: {X: 0.067864545, Y: 0.15608796, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 28dead80-e850-4494-98e9-937e701714fc
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}
+        -   Folder: null
+            Entity:
+                Id: 6daa43fa-c11e-4954-aa0d-ccda5f883119
+                Name: Bala 2
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 876a0340-811f-4c23-b157-08bc4ad030bc
+                        Position: {X: 0.08822388, Y: 0.020359417, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: d800b3ed-77cd-4a8c-9e38-8b7b51f7138c
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}
+        -   Entity:
+                Id: 88aa0e63-7949-4475-a5ab-7074456ed6b4
+                Name: Bala 0
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 10de49cd-8e34-450e-9f86-9bd4a3f864e4
+                        Position: {X: -0.074650615, Y: 0.1425149, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 673c2d3e-66ae-4623-bf25-0af2745590ac
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}
+        -   Folder: null
+            Entity:
+                Id: 9a38fb44-eb64-4ed9-9800-db4b0586675a
+                Name: Bala 3
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 602aad07-4c58-4d66-b76c-e06dd36fd27e
+                        Position: {X: -0.07465052, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 47aa491a-0441-4eea-9eec-db7b6cda955e
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}

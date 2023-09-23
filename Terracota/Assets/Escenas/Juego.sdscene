@@ -11,7 +11,8 @@ Hierarchy:
         - ref!! 0866fe54-7f2d-4808-8f79-7d2ba52a3880
         - ref!! 042cc7ad-933a-4747-8dca-2bbe0af0e74f
         - ref!! d6bcf8c3-43a5-4d52-aa7c-cc5e346de25d
-        - ref!! a1870a25-e718-490d-bb18-1b56cbb964cb
+        - ref!! 521124b3-1212-4d82-a5d0-6364d258afcf
+        - ref!! 8290a77a-1c4f-466e-ba7c-0ebb7c604e88
     Parts:
         -   Entity:
                 Id: 042cc7ad-933a-4747-8dca-2bbe0af0e74f
@@ -45,6 +46,17 @@ Hierarchy:
                         Type: !LightSkybox
                             Skybox: 870c1df6-0b77-44c6-85ce-bda61c75f79c:Texturas/Skybox
         -   Entity:
+                Id: 133ac696-ed46-4e45-9ed6-2dab4f6fc97d
+                Name: "BaseCañon"
+                Components:
+                    877598e8027c6260de275fc3b666da40: !TransformComponent
+                        Id: 58c5b638-456c-4c0e-a144-f24dc7285b8b
+                        Position: {X: 0.0, Y: 1.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            2e567aa23606836b1f84c0d4581a7e94: ref!! 875f4a34-15a6-4da2-809d-aa59a5a408b7
+        -   Entity:
                 Id: 15d601e6-c5c4-4d0e-a7e3-822f87a14526
                 Name: Directional light
                 Components:
@@ -70,25 +82,87 @@ Hierarchy:
                                 BiasParameters: {}
                         Intensity: 20.0
         -   Entity:
-                Id: a1870a25-e718-490d-bb18-1b56cbb964cb
+                Id: 521124b3-1212-4d82-a5d0-6364d258afcf
                 Name: "ControladorCañon"
                 Components:
                     b2b0bf1d60b3fc31afd4f21fa78fdfaa: !TransformComponent
-                        Id: 74e76761-f4db-465f-8a90-1cb8e9646981
+                        Id: fd72abb2-840c-42f8-8fc9-777749e7e0af
+                        Position: {X: 0.0, Y: 0.0, Z: 4.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            fe850ff2a034e6ac607d6288829530db: ref!! 24f68de4-cd16-4865-b448-9daf57422e94
+                    01012f41acd01fcc81b519c485845d44: !Terracota.ControladorCa%25C3%25B1on,Terracota
+                        Id: d0aa2221-2ef9-443d-a853-fad729532d35
+                        fuerzaBala: 2000.0
+                        fuerzaMetralla: 400.0
+                        soporte: ref!! 6a7b61ba-4bb3-4bbe-8a6e-ad82a3aed366
+                        tubo: ref!! 133ac696-ed46-4e45-9ed6-2dab4f6fc97d
+                        origenProyectil: ref!! d3cc82e5-4c61-4353-852a-69db5db48306
+                        bala: 32dc5310-2c33-4019-a4a0-fdf11fafd6c0:Prefabs/Bala
+                        metralla: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+        -   Entity:
+                Id: 58ce7c51-2c88-4226-9ee1-cfc5122a606d
+                Name: Base
+                Components:
+                    0bf070e32c32c4e7329253d312cfd959: !TransformComponent
+                        Id: 24f68de4-cd16-4865-b448-9daf57422e94
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            88934090ceb7beb5ebed20423ff61859: ref!! 8be4eebd-b85e-4e18-8117-5db0cd1a6e87
+                            668aac500cf7400a5b94237819a8111a: ref!! 58c5b638-456c-4c0e-a144-f24dc7285b8b
+        -   Entity:
+                Id: 6a7b61ba-4bb3-4bbe-8a6e-ad82a3aed366
+                Name: Soporte
+                Components:
+                    2e3a2a7c0e7a6f328cd043bb96b51f4b: !TransformComponent
+                        Id: 8be4eebd-b85e-4e18-8117-5db0cd1a6e87
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.5, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    5c71c0d1625d170fbf45e8496839912a: !ModelComponent
+                        Id: 744a6b87-34cc-4e5c-abd5-10c8befba705
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cube
+                        Materials: {}
+        -   Entity:
+                Id: 6ca5a77d-d776-4909-a095-9d932d53aff6
+                Name: "Cañon"
+                Components:
+                    89f7b83236c70f4c78f22aceaca8a0bb: !TransformComponent
+                        Id: 875f4a34-15a6-4da2-809d-aa59a5a408b7
+                        Position: {X: 0.0, Y: 0.0, Z: -1.0}
+                        Rotation: {X: -0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 3.0, Z: 1.0}
+                        Children:
+                            2acb488d0fd3d163514a34e1fd6510b7: ref!! bfc9b836-7db6-488f-afb6-345bf1de9a4e
+                    88a49386d9ce43522cd82b95113a8b97: !ModelComponent
+                        Id: 19d27362-6c54-46ae-a36b-74b8d4810619
+                        Model: 260a1c56-d157-4ed2-a6ec-285f8b3e851c:Modelos/Cylinder
+                        Materials: {}
+        -   Entity:
+                Id: 8290a77a-1c4f-466e-ba7c-0ebb7c604e88
+                Name: "SistemaAnimación"
+                Components:
+                    c93a7a0a58a0c175008ca1f11acb19e2: !TransformComponent
+                        Id: 5e1482bf-0ffb-4048-906a-e66e7ddd19a8
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    01012f41acd01fcc81b519c485845d44: !Terracota.ControladorCa%25C3%25B1on,Terracota
-                        Id: 12f5ca28-4366-4e31-91e1-eb27d9f479ee
+                    d8e8ba5c96ef0daea82b0aecb87eb425: !Terracota.SistemaAnimaci%25C3%25B3n,Terracota
+                        Id: 21e6ae1a-c689-4a21-9fbc-11457457c2e5
+                        curvaEstandar: null
         -   Entity:
                 Id: adc923ed-eaae-4693-bb70-d48943f97e8c
                 Name: Camera
                 Components:
                     712b2eb1c77a9868ac5cef0b07912892: !TransformComponent
                         Id: b3bb83f2-5020-438d-bdee-6242dd68d627
-                        Position: {X: 2.6, Y: 0.6, Z: -1.0}
-                        Rotation: {X: 0.0, Y: 0.82903755, Z: 0.0, W: 0.5591929}
+                        Position: {X: 0.0, Y: 4.0, Z: 8.0}
+                        Rotation: {X: -0.21643962, Y: 0.0, Z: 0.0, W: 0.976296}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     28bcb0d3abe1a8f4b18356fbb1492920: !CameraComponent
@@ -97,12 +171,22 @@ Hierarchy:
                         Projection: Perspective
                         Slot: 9f373eee-c85c-45b0-9b02-82451f709476
         -   Entity:
+                Id: d3cc82e5-4c61-4353-852a-69db5db48306
+                Name: Origen
+                Components:
+                    7276b1e02e02603a44404b7fba8254d1: !TransformComponent
+                        Id: bfc9b836-7db6-488f-afb6-345bf1de9a4e
+                        Position: {X: 0.0, Y: 0.6, Z: -1.4268366E-07}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+        -   Entity:
                 Id: d6bcf8c3-43a5-4d52-aa7c-cc5e346de25d
                 Name: Sphere
                 Components:
                     317381eceb5a3f1755b2f0a08c22099c: !TransformComponent
                         Id: f4fc8b94-c3eb-416f-ab8b-475ecf661262
-                        Position: {X: -0.6545859, Y: 0.5, Z: 0.0}
+                        Position: {X: -0.6545859, Y: 1.2800407, Z: -2.4049287}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
