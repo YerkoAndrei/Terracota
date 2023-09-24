@@ -4,19 +4,83 @@ SerializedVersion: {Stride: 3.1.0.1}
 Tags: []
 Hierarchy:
     RootParts:
-        - ref!! 88aa0e63-7949-4475-a5ab-7074456ed6b4
-        - ref!! 14556bb6-b4a3-4922-b41f-1376e78a50b6
-        - ref!! 6daa43fa-c11e-4954-aa0d-ccda5f883119
-        - ref!! 9a38fb44-eb64-4ed9-9800-db4b0586675a
+        - ref!! f6965832-4159-4309-a3ad-a36383a25b37
     Parts:
-        -   Folder: null
-            Entity:
+        -   Entity:
+                Id: 0dceba87-214d-4562-93d7-de53e24b5fe0
+                Name: Bala 0
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: ddb53f6f-fa83-4dae-ae8f-1d9ba705348c
+                        Position: {X: -0.11, Y: 0.11, Z: 0.22}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 29546666-e8e9-4e89-8cd0-096e373a30e5
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}
+                    7e94a9b7fe903a0c200eea4e3d0608ac: !RigidbodyComponent
+                        Id: 17cb6a90-82a8-4d1a-9530-1a5439cf1656
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            6afd0e436ab581cd19d3998d17cd3488: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
+                Id: 14301384-26a9-4008-b970-26f7c1058e48
+                Name: Bala 2
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 93b80016-b463-4ca3-9b4a-a6dc6c78446f
+                        Position: {X: 0.11, Y: 0.11, Z: 0.22}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 1956c145-e291-484d-a1be-d30700d4471d
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}
+                    04b0c235630663c97f266c474c2b3b0f: !RigidbodyComponent
+                        Id: 0d8ba637-10e5-46ef-bf75-447e9a73999c
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            1b89d0fd53d3204372d8b0660920d230: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
                 Id: 14556bb6-b4a3-4922-b41f-1376e78a50b6
                 Name: Bala 1
                 Components:
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
                         Id: 3480331a-3c49-4b98-9e0e-ed7f98ff6b95
-                        Position: {X: 0.067864545, Y: 0.15608796, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.11, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.1, Y: 0.1, Z: 0.1}
                         Children: {}
@@ -24,14 +88,203 @@ Hierarchy:
                         Id: 28dead80-e850-4494-98e9-937e701714fc
                         Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
                         Materials: {}
-        -   Folder: null
-            Entity:
+                    e4a5c22b98a6cb0ca96e6f8214ee3a73: !RigidbodyComponent
+                        Id: e627827d-cef0-4ab2-8815-86e2784d288f
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            2377c83f19e96e00ca9d168645740cd7: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
+                Id: 1e4b5581-b491-43b9-8985-c1f599141089
+                Name: Bala 2
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 90eccd28-b03d-4d2f-b7d8-6c4b9b458eb6
+                        Position: {X: 0.11, Y: 0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: e6f4a992-4459-4564-bdbb-6642d1223588
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}
+                    4f8e85a7b06d88d5fdf38ad6cfc84107: !RigidbodyComponent
+                        Id: a44501eb-2f55-4ec1-aa23-a05b55f28564
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9fcc4caa8cef5e90b0e7cbda94c6b076: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
+                Id: 27aabf80-265b-4cc6-a3cf-38423a79309a
+                Name: Bala 6
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: e16dd2c8-e761-442e-bf9d-19f793d7a332
+                        Position: {X: -0.11, Y: -0.11, Z: 0.22}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: ae21de85-ed79-43ae-ba18-31c51f908499
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}
+                    1aadcb6e0ea80409eb47f476ee00887b: !RigidbodyComponent
+                        Id: 0faac83a-56d7-4658-b711-54f371c824da
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            c2fd4bb93ef7c5f3485681132a75c862: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
+                Id: 30349ddb-ea66-43ec-a0fa-12f5fc7048d7
+                Name: Bala 5
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 1fdb48c9-f0a3-47d0-88b0-0760ac87c6f7
+                        Position: {X: 0.11, Y: 0.0, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 36323c3f-052b-4aae-b6bf-7893f6f409c7
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}
+                    dc983ac982905dee8da5c6523210273b: !RigidbodyComponent
+                        Id: 68cad65b-db79-408b-9771-89d76a782f36
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8a47e96799f66356c93f3246a124aafa: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
+                Id: 4732ba64-d2db-4d32-8f86-d419504627d0
+                Name: Bala 6
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 605bd471-5a64-40dc-8940-b40ea77bb115
+                        Position: {X: -0.11, Y: -0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 6aebd60b-d4f6-4825-9c64-166d28dfac81
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}
+                    0f043d6ccbedae29810be6264bff5235: !RigidbodyComponent
+                        Id: 109cb7b6-d087-457c-a6df-97c20371c024
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            07fcb43f0e6b512d6927ee528d864299: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
+                Id: 559330a7-748b-48e6-ae4c-37553a5025b1
+                Name: Bala 8
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 8ac75572-3bcb-4e72-9dfa-c2dee68d16ac
+                        Position: {X: 0.11, Y: -0.11, Z: 0.22}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: a827fb73-66a4-41fc-9c45-65ef9890d12d
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}
+                    700d06d4f156f454cf23b40c053fa9f5: !RigidbodyComponent
+                        Id: a50eaff3-8c04-47d6-a517-fb4dce5c3032
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            b55d4c3eb93f1a643325d994c18ffc9b: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
                 Id: 6daa43fa-c11e-4954-aa0d-ccda5f883119
                 Name: Bala 2
                 Components:
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
                         Id: 876a0340-811f-4c23-b157-08bc4ad030bc
-                        Position: {X: 0.08822388, Y: 0.020359417, Z: 0.0}
+                        Position: {X: 0.11, Y: 0.11, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.1, Y: 0.1, Z: 0.1}
                         Children: {}
@@ -39,13 +292,271 @@ Hierarchy:
                         Id: d800b3ed-77cd-4a8c-9e38-8b7b51f7138c
                         Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
                         Materials: {}
+                    7ba6f1ca8713790a9b8162f9da5e3cbd: !RigidbodyComponent
+                        Id: d07d36a6-0aa5-456f-bbf9-1e0400f02f50
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            1ed59ab01cb35a18b5c5bcd2dc96b044: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
+                Id: 7084e51c-9f28-44ca-9192-f113c0d1a1b6
+                Name: Bala 0
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 1defab0d-cf42-4ff7-b3f2-f846d8208eff
+                        Position: {X: -0.11, Y: 0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: dba87a09-dbec-4c5b-ae72-fc614f24d622
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}
+                    4e3693cbe13a59c3693af4e320e4c334: !RigidbodyComponent
+                        Id: cfae995f-9240-466b-84ca-b50f09215d30
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            1a748e3ac1a822566b360951f0c21b61: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
+                Id: 74048fc2-9c45-47fe-b6e9-04c88c8c04eb
+                Name: Bala 8
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: d80ed258-54ec-44ef-82db-35aa3c25e34f
+                        Position: {X: 0.11, Y: -0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 90517862-660e-4400-9e17-d2932ec177a9
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}
+                    83472d07fabf764d3605f77193b76fd8: !RigidbodyComponent
+                        Id: 1ff9c582-a3a9-46be-8c49-74406a906794
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            14f3da4d56819fd57bbd599bb5aaf79a: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
+                Id: 76e1192f-a9d0-4fc1-9bc7-a911456d7eb7
+                Name: Bala 7
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: f73bfe0b-f57b-4c8e-aaa3-36812a0844ad
+                        Position: {X: 0.0, Y: -0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 597128b6-e266-4a4a-acc5-298205b0fadf
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}
+                    116efe57a035d60db4313ad54a3f8a2d: !RigidbodyComponent
+                        Id: 184a5b33-9e5c-41df-b971-c870f5fe1c4a
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            5da18a26a56c55e2b189f2a21111c7b9: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
+                Id: 78c05d55-bcb1-4eba-8352-1de1347fde44
+                Name: Bala 5
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 279e7ac6-9ffa-476a-8b86-e61c74239835
+                        Position: {X: 0.11, Y: 0.0, Z: 0.22}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: ad6fee45-8b38-4029-96bc-83ccad288da9
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}
+                    02eccabbab1fa83fd4a30e7a13ca2334: !RigidbodyComponent
+                        Id: e4ab86c0-12ed-4a0b-8416-0bc894e96332
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            62a8bdaabd2582b5e5fcdb4123fe84a4: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
+                Id: 7beb5c6e-3b56-48a3-bb84-e3f0ae7d25a8
+                Name: Bala 1
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 2bd7b2a4-095e-49ef-b990-b6d625f6dc43
+                        Position: {X: 0.0, Y: 0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: a9e52229-afe7-434b-8994-263af13e60a6
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}
+                    30e3ae85ef0e2a0566f2ea75d35c0afb: !RigidbodyComponent
+                        Id: 6b67a1c0-4644-48e4-b549-5c4dd6191d2c
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            07370cde40c300624b2240d1945a0d38: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
+                Id: 810288bd-4dfa-4f0c-a75c-f0eb0720ade7
+                Name: Bala 4
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 60fdf747-97ae-485c-93a4-07319942f1fd
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 4e131530-6483-4891-a730-2f2229036016
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}
+                    a1637319c29a8d884daa2b2822856748: !RigidbodyComponent
+                        Id: ab158170-d5ae-478b-8002-07c59e2976be
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            b72ee723dc545feb04a85ec5cf1117f3: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
+                Id: 8428f241-86a1-4293-9916-b68380f0b4f7
+                Name: Bala 3
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: a9472315-372c-479a-9af0-d9968dba8d96
+                        Position: {X: -0.11, Y: 0.0, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: f7fb748b-8554-4d35-8613-e0e184611688
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}
+                    b58a68dcf585b0b8b7fd9a7d941c3e93: !RigidbodyComponent
+                        Id: 09a75601-2aff-420c-99ef-e7d13ebc7e72
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            406a850509e7f0c245ab57b400b130a4: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
         -   Entity:
                 Id: 88aa0e63-7949-4475-a5ab-7074456ed6b4
                 Name: Bala 0
                 Components:
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
                         Id: 10de49cd-8e34-450e-9f86-9bd4a3f864e4
-                        Position: {X: -0.074650615, Y: 0.1425149, Z: 0.0}
+                        Position: {X: -0.11, Y: 0.11, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.1, Y: 0.1, Z: 0.1}
                         Children: {}
@@ -53,14 +564,33 @@ Hierarchy:
                         Id: 673c2d3e-66ae-4623-bf25-0af2745590ac
                         Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
                         Materials: {}
-        -   Folder: null
-            Entity:
+                    114b90db974cabdf571a34bde6aba6b8: !RigidbodyComponent
+                        Id: e8ec9889-b697-4775-8332-27b0554799c9
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            88fc81dbeb4e77279fd45c895c8babd5: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
                 Id: 9a38fb44-eb64-4ed9-9800-db4b0586675a
                 Name: Bala 3
                 Components:
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
                         Id: 602aad07-4c58-4d66-b76c-e06dd36fd27e
-                        Position: {X: -0.07465052, Y: 0.0, Z: 0.0}
+                        Position: {X: -0.11, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.1, Y: 0.1, Z: 0.1}
                         Children: {}
@@ -68,3 +598,366 @@ Hierarchy:
                         Id: 47aa491a-0441-4eea-9eec-db7b6cda955e
                         Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
                         Materials: {}
+                    d5c98a43ed644c0147459ecc64ee8fc3: !RigidbodyComponent
+                        Id: 59273acb-1cc1-440f-b7ae-7ec55c21f922
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            179bfef96c019dd55919d6ab733f04fb: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
+                Id: b5adb895-5cee-4ea0-84f1-b40393f0aaca
+                Name: Bala 4
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: ad565992-3369-4e35-bba0-728d96ed67c4
+                        Position: {X: 0.0, Y: 0.0, Z: 0.22}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: bb6d1040-e97b-43e8-b3e7-ff43b424ad51
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}
+                    b8881723367197eb845b2243f7c619a1: !RigidbodyComponent
+                        Id: 5d714b06-f24e-479f-839d-8b62e4335f9b
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            d0975cb3a7578f5072d0e7c327fe154c: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
+                Id: b791ce70-9816-4c64-a395-6490185b4011
+                Name: Bala 8
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 92635fe6-5eb3-4e01-aa09-3f8ed80fcafa
+                        Position: {X: 0.11, Y: -0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 09a65f57-980a-4401-ba6d-1b7ebd704d2f
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}
+                    d5251afc6f5b651a1a94b4bd2e088c66: !RigidbodyComponent
+                        Id: 3cc916f8-fdbf-42dd-9cd1-7174592600e5
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9fac12e4a535b183d798c8aeb4fbd604: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
+                Id: ba6104f0-90d6-462d-8354-93d0776920a3
+                Name: Bala 3
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: e6ba1b45-2521-45ab-b4b0-b6c0bcd84219
+                        Position: {X: -0.11, Y: 0.0, Z: 0.22}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 197b5548-45d8-4639-b7cb-c86fafe02c3e
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}
+                    cd635cd3147ab9327951c49133bfab34: !RigidbodyComponent
+                        Id: 394f400d-6ee1-4d3d-9977-1858a65b9122
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            ab6f54433a82ec5c58f1efd99edbdfba: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
+                Id: bf9296c3-0419-4584-922d-032356ee71fc
+                Name: Bala 7
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: c97563e3-91da-4fd7-8c3e-9b5fb18f4a04
+                        Position: {X: 0.0, Y: -0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: edcac608-081b-4dfd-9933-62e11700ed09
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}
+                    a6d22df1d2178fc6a6b410d3b44f6854: !RigidbodyComponent
+                        Id: cb816acc-52a6-4b4d-b7c7-2b6ecae83ae0
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            eb41dee8b6544923550d08e9878eef3d: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
+                Id: c9d234d0-9e69-4abe-9ba4-bce1d7e04d06
+                Name: Bala 7
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 81c3e333-9f3c-4c24-b4f5-eda91b9260a1
+                        Position: {X: 0.0, Y: -0.11, Z: 0.22}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 979c581e-3c8f-4e7d-821d-05d2d50cffe2
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}
+                    3f7970af7788dc6e6a5dbf67de75e3a3: !RigidbodyComponent
+                        Id: a49de7fe-23e0-466c-95ef-8f1912681eb7
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            ad2bb2e506e61b47d0bad41ad6819697: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
+                Id: ca9d3f76-ae8f-4729-bb6a-c1a0ece69453
+                Name: Bala 1
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 78dda89d-f4e0-4ccd-b7df-2b238f3ca694
+                        Position: {X: 0.0, Y: 0.11, Z: 0.22}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: ba7db24a-9de5-4316-8bc6-b84101fd2d5d
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}
+                    995c7e5d0707e2b02f3ff06d64e08509: !RigidbodyComponent
+                        Id: 40171ea7-8795-4772-a24e-6a33c46f9e3f
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            f08d04bb80f1a5f226d1796a365deefb: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
+                Id: cd443751-e04f-45a0-a5c9-7ba898c9674e
+                Name: Bala 4
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: af56c5a6-4c24-44ec-82d0-66e0aa7a35f5
+                        Position: {X: 0.0, Y: 0.0, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: e9383026-f749-43ac-941e-7988850b78a9
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}
+                    6e5385600a2427c4a5ee919c28307474: !RigidbodyComponent
+                        Id: dbc9e5ad-ed83-43d4-91ba-a6acfbdcd53e
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            3f7bc706fcba336adebf0c4d30880bda: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
+                Id: ed16f15f-057f-437d-ace3-8dcfd0a38840
+                Name: Bala 5
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 1cfb2aec-aa36-4189-a642-e07fd9d07fd3
+                        Position: {X: 0.11, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 9aee0635-485f-41a8-a71d-d921ad62cb17
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}
+                    5c945a4b622ce02792f7526f38056797: !RigidbodyComponent
+                        Id: 60929bd2-27e2-4189-80c7-de67233a0a87
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            c083dbfa606773dc799a09a39b454781: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
+                Id: f316b750-1721-44b8-9f7a-c3ab662e9db1
+                Name: Bala 6
+                Components:
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: e95953d1-ea3d-4325-84cd-04a7617160b2
+                        Position: {X: -0.11, Y: -0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: e1c3f406-d38a-4b72-a6c2-b63486bd373e
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Materials: {}
+                    53750bb8e11858310b58e10351d57ad9: !RigidbodyComponent
+                        Id: b4827464-fe9d-4c6c-b50d-8016fce32fbc
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            27b6c850302040f216172514ecbf67b2: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+        -   Entity:
+                Id: f6965832-4159-4309-a3ad-a36383a25b37
+                Name: Metralla
+                Components:
+                    0015f01b8cffd28b59fa58ad2e691917: !TransformComponent
+                        Id: f89ee40b-e428-4fa5-829f-e3943863aabb
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            108df0998ddd66574f1e0059ced300b7: ref!! 10de49cd-8e34-450e-9f86-9bd4a3f864e4
+                            0a1e783a62a02a36ee938759b2b20aa9: ref!! 3480331a-3c49-4b98-9e0e-ed7f98ff6b95
+                            023789ab9e18b546206c14e2dbcdf283: ref!! 876a0340-811f-4c23-b157-08bc4ad030bc
+                            7a9c714e48be018c4594a47fccac2640: ref!! 602aad07-4c58-4d66-b76c-e06dd36fd27e
+                            710f9f0b31e7dc2d9e3e901adbdb7496: ref!! 60fdf747-97ae-485c-93a4-07319942f1fd
+                            1dae4029e77b24648aae3c4645389e08: ref!! 1cfb2aec-aa36-4189-a642-e07fd9d07fd3
+                            d011336908acae6fd19b98ab57edc619: ref!! e95953d1-ea3d-4325-84cd-04a7617160b2
+                            72f8aa0e5f0cb07617bc4f69758af2bb: ref!! c97563e3-91da-4fd7-8c3e-9b5fb18f4a04
+                            7cc98d1cbbb3d6502ca5f46ed20a9fa9: ref!! 92635fe6-5eb3-4e01-aa09-3f8ed80fcafa
+                            d94436df9a6dc3044cf53faac2ef4542: ref!! 1defab0d-cf42-4ff7-b3f2-f846d8208eff
+                            9cc79b36c5726a86e2396cb8784d95b4: ref!! 2bd7b2a4-095e-49ef-b990-b6d625f6dc43
+                            5281c1321db7680d3c5598c26224f498: ref!! 90eccd28-b03d-4d2f-b7d8-6c4b9b458eb6
+                            52ecf0a18f240dfac20c1483432e0ba3: ref!! a9472315-372c-479a-9af0-d9968dba8d96
+                            b67ece50e08f11347ce9e7fd486f3bf8: ref!! af56c5a6-4c24-44ec-82d0-66e0aa7a35f5
+                            53781ef384437456af2198de5aec7f22: ref!! 1fdb48c9-f0a3-47d0-88b0-0760ac87c6f7
+                            60ac6806ee177aefd5dae9228f1cd2c7: ref!! 605bd471-5a64-40dc-8940-b40ea77bb115
+                            dc845900bbdd8b05b6a142b971db8bf5: ref!! f73bfe0b-f57b-4c8e-aaa3-36812a0844ad
+                            ef2a888ff8af080c1bd1b96969a54a63: ref!! d80ed258-54ec-44ef-82db-35aa3c25e34f
+                            ce7e1cd1c87798742c73a21cf11abd88: ref!! ddb53f6f-fa83-4dae-ae8f-1d9ba705348c
+                            f15a036af1609c3c90e37fd3f3951315: ref!! 78dda89d-f4e0-4ccd-b7df-2b238f3ca694
+                            2b5ba3477cb33438ac4606583575859a: ref!! 93b80016-b463-4ca3-9b4a-a6dc6c78446f
+                            425c33ea79659b440668b894197e7209: ref!! e6ba1b45-2521-45ab-b4b0-b6c0bcd84219
+                            433373633637a599efaf6e67587e6698: ref!! ad565992-3369-4e35-bba0-728d96ed67c4
+                            07fd10ade8cfd043f62c75d8da5162dd: ref!! 279e7ac6-9ffa-476a-8b86-e61c74239835
+                            9def16cac53a5f84874e9535bd327a72: ref!! e16dd2c8-e761-442e-bf9d-19f793d7a332
+                            783f0f2d2d5fd171dbeb2455afcd8ac9: ref!! 81c3e333-9f3c-4c24-b4f5-eda91b9260a1
+                            e3163f09b1e76f6d778ea1ba37379bb9: ref!! 8ac75572-3bcb-4e72-9dfa-c2dee68d16ac

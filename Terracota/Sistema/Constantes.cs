@@ -1,6 +1,6 @@
 ﻿namespace Terracota;
 
-public class Constantes
+public static class Constantes
 {
     public enum TipoProyectil
     {

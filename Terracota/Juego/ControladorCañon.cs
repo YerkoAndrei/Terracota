@@ -3,10 +3,11 @@ using Stride.Core.Mathematics;
 using Stride.Input;
 using Stride.Engine;
 using Stride.Physics;
-using Stride.Core;
+using System.Drawing.Printing;
 
 namespace Terracota;
 using static Constantes;
+using static Sistema;
 
 public class ControladorCañon : SyncScript
 {
@@ -67,7 +68,6 @@ public class ControladorCañon : SyncScript
 
     private void Disparar(TipoProyectil tipoProyectil)
     {
-        Console.WriteLine(tipoProyectil);
         var aleatorio = new Random();
         
         switch (tipoProyectil)
@@ -83,16 +83,23 @@ public class ControladorCañon : SyncScript
                 var cuerpo = nuevaBala.Get<RigidbodyComponent>();
                 cuerpo.ApplyForce(origenProyectil.Transform.WorldMatrix.Up * fuerzaBala);
                 break;
-            case TipoProyectil.metralla:/*
-                var nuevaMetralla = Instantiate(metralla, origenProyectil.position, origenProyectil.rotation);
-                var cuerposMetralla = nuevaMetralla.GetComponentsInChildren<Rigidbody>();
+            case TipoProyectil.metralla:
+                var nuevaMetralla = metralla.Instantiate()[0];
+                nuevaMetralla.Transform.Position = origenProyectil.Transform.WorldMatrix.TranslationVector;
+                nuevaMetralla.Transform.RotationEulerXYZ = new Vector3(aleatorio.Next(0, 360), aleatorio.Next(0, 360), aleatorio.Next(0, 360));
 
+                SceneSystem.SceneInstance.RootScene.Entities.Add(nuevaMetralla);
+
+                var cuerposMetralla = nuevaMetralla.GetChildren();
                 foreach (var metralla in cuerposMetralla)
                 {
-                    var aleatorio = Random.Range(-1f, 0.5f);
-                    metralla.mass += aleatorio;
-                    metralla.AddForce(origenProyectil.up * (fuerzaMetralla + aleatorio), ForceMode.Impulse);
-                }*/
+                    var fuerzaAleatoria = RangoAleatorio(-1f, 0.5f);
+                    var cuerpoMetralla = metralla.Get<RigidbodyComponent>();
+                    cuerpoMetralla.Mass += fuerzaAleatoria;
+
+                    // Impulso
+                    cuerpoMetralla.ApplyForce(origenProyectil.Transform.WorldMatrix.Up * (fuerzaMetralla + fuerzaAleatoria));
+                }
                 break;
         }
     }

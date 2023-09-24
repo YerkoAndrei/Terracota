@@ -11,6 +11,7 @@ Attributes:
             Value: {R: 0.54901963, G: 0.54901963, B: 0.54901963, A: 1.0}
     DiffuseModel: !MaterialDiffuseLambertModelFeature {}
     Specular: !MaterialMetalnessMapFeature
+        Enabled: false
         MetalnessMap: !ComputeFloat
             Value: 1.0
     SpecularModel: !MaterialSpecularMicrofacetModelFeature
