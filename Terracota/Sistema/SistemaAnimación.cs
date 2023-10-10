@@ -1,8 +1,5 @@
-﻿using System;
-using System.Threading.Tasks;
-using Stride.Engine;
+﻿using Stride.Engine;
 using Stride.Animations;
-using Stride.Core.Mathematics;
 
 namespace Terracota;
 using static Constantes;
@@ -13,23 +10,9 @@ public class SistemaAnimación : StartupScript
 
     public override void Start()
     {
-        Log.Warning("a");
-
-        // Async
-        //Task.Run(Imprimir);
+        Log.Warning("Log activado:");
     }
 
-    private async Task Imprimir()
-    {
-        Console.WriteLine("async");
-        float tiempoLerp = 0;
-        while (true)
-        {
-            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            Console.WriteLine(tiempoLerp + "+1");
-            await Task.Delay(1000);
-        }
-    }
     /*
     public static float EvaluarCurva(float tiempo)
     {
