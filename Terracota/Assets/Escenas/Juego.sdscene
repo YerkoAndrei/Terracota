@@ -6,14 +6,32 @@ ChildrenIds: []
 Offset: {X: 0.0, Y: 0.0, Z: 0.0}
 Hierarchy:
     RootParts:
-        - ref!! adc923ed-eaae-4693-bb70-d48943f97e8c
+        - ref!! 017e0fa5-95bb-4f5e-9130-738e96c92a22
         - ref!! 15d601e6-c5c4-4d0e-a7e3-822f87a14526
         - ref!! 0866fe54-7f2d-4808-8f79-7d2ba52a3880
         - ref!! b813ba7f-cafe-4e28-b38f-053a088e2a76
-        - ref!! d750a0de-0c12-4f92-aaa5-5802f5af4dce
+        - ref!! 44054d8f-9ce8-499d-a2d1-3a4088188e7b
         - ref!! 521124b3-1212-4d82-a5d0-6364d258afcf
         - ref!! 8290a77a-1c4f-466e-ba7c-0ebb7c604e88
     Parts:
+        -   Entity:
+                Id: 017e0fa5-95bb-4f5e-9130-738e96c92a22
+                Name: ControladorPartida
+                Components:
+                    7136405419223884c86025a38d18bc5f: !TransformComponent
+                        Id: 4c2fb05d-f190-44c6-b3a4-2a1b69300b24
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            e96be3206e6ba1ef98a4b4ed36155d71: ref!! b3bb83f2-5020-438d-bdee-6242dd68d627
+                            41267fcd89ff112d015f35b467f47cfa: ref!! e12cf71c-0926-45f4-9f6b-d96d8497718b
+                            db00a2e5fe69f928cadf4d7fa17129c1: ref!! 81f01d98-4dbc-4b9c-ad09-59a313bfeedc
+                    10593d81249632210e412a69ef5a3e77: !Terracota.Juego.ControladorPartida,Terracota
+                        Id: 999bd403-ac5a-402c-bec4-29f49d4ad458
+                        "cámara": ref!! b3bb83f2-5020-438d-bdee-6242dd68d627
+                        "cámaraAnfitrión": ref!! e12cf71c-0926-45f4-9f6b-d96d8497718b
+                        "cámaraHuesped": ref!! 81f01d98-4dbc-4b9c-ad09-59a313bfeedc
         -   Entity:
                 Id: 03e4088a-8967-41b0-9342-b14ac887ecf5
                 Name: Cube 10
@@ -27,7 +45,8 @@ Hierarchy:
                     23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
                         Id: 7135c7da-9e57-49bb-8982-e9636e629923
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
-                        Materials: {}
+                        Materials:
+                            bda2eb44af5fa24a9d145d9f2c68869c~0: 59e60c43-7b0b-45c9-afb5-3dc533da620e:Materiales/Rojo
                     0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
                         Id: f396924a-d04c-47d0-96a8-f516b0a7fd44
                         CanSleep: false
@@ -145,7 +164,7 @@ Hierarchy:
                         Id: 92d86ce3-cf72-420a-82eb-2c5fc8310fd1
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
                         Materials:
-                            9608322aea6edfa9f223026c5fcdfc98~0: f9c1f927-9739-4a73-924f-ff2a79e97e84:Materiales/Suelo
+                            9608322aea6edfa9f223026c5fcdfc98~0: f9c1f927-9739-4a73-924f-ff2a79e97e84:Materiales/Verde
                     2a707741730e3c6e1f54acddbb918b51: !StaticColliderComponent
                         Id: 96e8e184-fa43-454c-90aa-849051bd7909
                         CanSleep: false
@@ -189,7 +208,18 @@ Hierarchy:
                     dd5408248c5246cf9fdb19cf892f584e: !ModelComponent
                         Id: 3009a983-5308-4ef5-97fc-6ad895890dc4
                         Model: 260a1c56-d157-4ed2-a6ec-285f8b3e851c:Modelos/Cilindro
-                        Materials: {}
+                        Materials:
+                            cbff040f1491e8d845f5620040975dad~0: f9c1f927-9739-4a73-924f-ff2a79e97e84:Materiales/Verde
+        -   Entity:
+                Id: 1aba6ca2-18ba-4834-8b8d-a3191c6a2a06
+                Name: "CámaraAnf"
+                Components:
+                    4891b23ec8e15da600a5b62899ad91e6: !TransformComponent
+                        Id: e12cf71c-0926-45f4-9f6b-d96d8497718b
+                        Position: {X: 0.0, Y: 6.0, Z: 14.0}
+                        Rotation: {X: -0.21643962, Y: 0.0, Z: 0.0, W: 0.976296}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
         -   Entity:
                 Id: 211abe63-1a2a-467d-b209-698646660b90
                 Name: Cube 9
@@ -203,7 +233,8 @@ Hierarchy:
                     23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
                         Id: 88bf901c-6b97-48ef-b86f-082526e19891
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
-                        Materials: {}
+                        Materials:
+                            9f1d6e4e7e08cc519f4af01f323be072~0: e543d4aa-dd8e-4f33-9b58-232a9375f416:Materiales/Azul
                     0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
                         Id: b5a45bb9-7fbf-4a58-8baa-22bcc2c91372
                         CanSleep: false
@@ -239,7 +270,8 @@ Hierarchy:
                     23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
                         Id: 1a1d090d-13ef-442b-ad8f-d050e6198dfc
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
-                        Materials: {}
+                        Materials:
+                            6e834cbcdcce45c456c2ce7cf2186357~0: 59e60c43-7b0b-45c9-afb5-3dc533da620e:Materiales/Rojo
                     0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
                         Id: cf291d78-ae03-41e7-a9a8-b1696c8d12cd
                         CanSleep: false
@@ -262,6 +294,18 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: 44054d8f-9ce8-499d-a2d1-3a4088188e7b
+                Name: Fortaleza
+                Components:
+                    5daf95322206bf8d422c5a6578a7e451: !TransformComponent
+                        Id: 6d4835bb-0889-4d3d-87e8-c904a3b47625
+                        Position: {X: 0.0, Y: 0.0, Z: -4.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            f89320cd36c2ea4dac0117137925d2ea: ref!! e5cc0eea-55e2-42f9-afbc-c653fd1d1a9a
+                            365d86f9b480455d7b7ebc8917d06272: ref!! 2ec59e61-95ae-4ef6-be78-b6f6fad9c725
         -   Folder: null
             Entity:
                 Id: 4fa984c8-b13e-4f14-aeff-975affb026fb
@@ -293,7 +337,7 @@ Hierarchy:
                         Id: a7fe1167-9bc8-435b-b67d-cd323e11711b
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
                         Materials:
-                            9608322aea6edfa9f223026c5fcdfc98~0: f9c1f927-9739-4a73-924f-ff2a79e97e84:Materiales/Suelo
+                            9608322aea6edfa9f223026c5fcdfc98~0: f9c1f927-9739-4a73-924f-ff2a79e97e84:Materiales/Verde
         -   Entity:
                 Id: 508d37dd-576a-4ee8-a7eb-9d1d9d522f60
                 Name: Cube 2
@@ -307,7 +351,8 @@ Hierarchy:
                     23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
                         Id: 710ac6a8-2327-4124-88a0-693f2fe62e99
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
-                        Materials: {}
+                        Materials:
+                            8e8b8568dd4df16571bffb5fb566f95d~0: 59e60c43-7b0b-45c9-afb5-3dc533da620e:Materiales/Rojo
                     0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
                         Id: 99fb84c5-d0c4-4a04-9022-1404c3c62fac
                         CanSleep: false
@@ -395,7 +440,7 @@ Hierarchy:
                         Id: 4564c8b4-c895-4074-ba5d-6e748ad89b5a
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
                         Materials:
-                            9608322aea6edfa9f223026c5fcdfc98~0: f9c1f927-9739-4a73-924f-ff2a79e97e84:Materiales/Suelo
+                            9608322aea6edfa9f223026c5fcdfc98~0: f9c1f927-9739-4a73-924f-ff2a79e97e84:Materiales/Verde
         -   Entity:
                 Id: 6a7b61ba-4bb3-4bbe-8a6e-ad82a3aed366
                 Name: Caja
@@ -438,7 +483,8 @@ Hierarchy:
                     23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
                         Id: addb4ac9-6d90-4ea9-bf7a-31287cf6f3d1
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
-                        Materials: {}
+                        Materials:
+                            4b1c77f608e2c538cff4281d1b39834c~0: 59e60c43-7b0b-45c9-afb5-3dc533da620e:Materiales/Rojo
                     0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
                         Id: 90226f5c-8a70-48e7-900e-318cfd21d3e0
                         CanSleep: false
@@ -476,7 +522,7 @@ Hierarchy:
                         Id: c8062efc-4ba6-41f6-a386-75e87655046e
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
                         Materials:
-                            9608322aea6edfa9f223026c5fcdfc98~0: f9c1f927-9739-4a73-924f-ff2a79e97e84:Materiales/Suelo
+                            9608322aea6edfa9f223026c5fcdfc98~0: f9c1f927-9739-4a73-924f-ff2a79e97e84:Materiales/Verde
                     171677990668ccabbce5af2f07ead21d: !StaticColliderComponent
                         Id: 712937fd-774e-4cae-9381-5eedc96c6ca5
                         CanSleep: false
@@ -506,7 +552,8 @@ Hierarchy:
                     23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
                         Id: d53dc883-68bf-4758-901b-9473a85f09ba
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
-                        Materials: {}
+                        Materials:
+                            25af864b5b39b795f90e38c7a77fceb5~0: e543d4aa-dd8e-4f33-9b58-232a9375f416:Materiales/Azul
                     0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
                         Id: 111bf8cd-923f-4193-a9a1-1d7e33e07aa8
                         CanSleep: false
@@ -570,7 +617,8 @@ Hierarchy:
                     dd5408248c5246cf9fdb19cf892f584e: !ModelComponent
                         Id: 773a9462-453f-4f3e-afa0-b5d4e00e2d24
                         Model: 260a1c56-d157-4ed2-a6ec-285f8b3e851c:Modelos/Cilindro
-                        Materials: {}
+                        Materials:
+                            b31d23777b6b45ee9216500915cccecd~0: f9c1f927-9739-4a73-924f-ff2a79e97e84:Materiales/Verde
         -   Entity:
                 Id: 97e06ba2-3ff3-4f88-9658-d8833e46589d
                 Name: Cube 7
@@ -584,7 +632,8 @@ Hierarchy:
                     23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
                         Id: f29fd235-7f3a-46f3-bcbd-126e38713c2a
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
-                        Materials: {}
+                        Materials:
+                            cdeb0b6ffb2f8770d794717f6439eaca~0: e543d4aa-dd8e-4f33-9b58-232a9375f416:Materiales/Azul
                     0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
                         Id: a6e646dc-6d2c-40f5-ba00-b34b7711c7af
                         CanSleep: false
@@ -621,7 +670,7 @@ Hierarchy:
                         Id: d8a11b28-2e57-491d-b9a2-08f122b0dcf1
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
                         Materials:
-                            c1bfb8f999a1eb185cac7059b4eb3eec~0: e4f63d6a-02db-4f8d-ba9b-96a7fcf5eb42:Materiales/Material Base
+                            c1bfb8f999a1eb185cac7059b4eb3eec~0: e543d4aa-dd8e-4f33-9b58-232a9375f416:Materiales/Azul
                     0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
                         Id: 7d27644c-484e-418b-a8c0-c4c23bc0ebde
                         CanSleep: false
@@ -646,7 +695,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: adc923ed-eaae-4693-bb70-d48943f97e8c
-                Name: Camera
+                Name: "Cámara"
                 Components:
                     712b2eb1c77a9868ac5cef0b07912892: !TransformComponent
                         Id: b3bb83f2-5020-438d-bdee-6242dd68d627
@@ -672,7 +721,8 @@ Hierarchy:
                     23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
                         Id: 3c713fc0-e60b-4972-be46-fcc220f5f273
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
-                        Materials: {}
+                        Materials:
+                            bb75d3237878705832161b848f21c3d6~0: 59e60c43-7b0b-45c9-afb5-3dc533da620e:Materiales/Rojo
                     0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
                         Id: 887a37f9-0a0b-4795-86ce-9a26d9dcf523
                         CanSleep: false
@@ -725,7 +775,8 @@ Hierarchy:
                     23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
                         Id: e60dd20a-6b4c-433d-b36e-627a54123c63
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
-                        Materials: {}
+                        Materials:
+                            99f8120a8849ca2c9edfef11de490123~0: e543d4aa-dd8e-4f33-9b58-232a9375f416:Materiales/Azul
                     0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
                         Id: 5dbdce6c-5f9a-4185-8f9b-f8dc41d4f179
                         CanSleep: false
@@ -749,6 +800,55 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
+                Id: c1f7e99e-cace-4486-8911-1c260b548568
+                Name: Estatua (0)
+                Components:
+                    c913bdc152810c2cf6493604d43210e1: !Terracota.Juego.ControladorEstatua,Terracota
+                        Id: ea0efc7d-636e-4e15-9eba-df8d12b3704c
+                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
+                        Id: 2ec59e61-95ae-4ef6-be78-b6f6fad9c725
+                        Position: {X: 0.0, Y: 1.0000002, Z: 4.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 2.0, Z: 1.0}
+                        Children: {}
+                    7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
+                        Id: 69412165-baae-4579-b15f-7eb8acc88e09
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials: {}
+                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
+                        Id: 46d7b681-54ec-4053-b2e9-fd97de01e6f3
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 200.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            bb7635abb649633b6dc624c179f90578: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Folder: null
+            Entity:
+                Id: cdf3debb-9596-492e-8935-4baf90c22555
+                Name: "CámaraHue"
+                Components:
+                    4891b23ec8e15da600a5b62899ad91e6: !TransformComponent
+                        Id: 81f01d98-4dbc-4b9c-ad09-59a313bfeedc
+                        Position: {X: 0.0, Y: 6.0, Z: -14.0}
+                        Rotation: {X: 9.4608765E-09, Y: 0.976296, Z: 0.21643962, W: -4.2675254E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+        -   Entity:
                 Id: d3cc82e5-4c61-4353-852a-69db5db48306
                 Name: Origen
                 Components:
@@ -771,7 +871,8 @@ Hierarchy:
                     23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
                         Id: 37e132df-c667-4559-8fc4-74e6c7056dab
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
-                        Materials: {}
+                        Materials:
+                            fc1956bba2521d0b829309f8ded26ddd~0: 59e60c43-7b0b-45c9-afb5-3dc533da620e:Materiales/Rojo
                     0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
                         Id: ca67368a-f98a-46c5-9607-5db6f2a444e1
                         CanSleep: false
@@ -807,7 +908,8 @@ Hierarchy:
                     23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
                         Id: ef2f6b06-7994-45e1-8549-c1a394204169
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
-                        Materials: {}
+                        Materials:
+                            fe90b0d21dcd32716c7e4d5687b4a441~0: e543d4aa-dd8e-4f33-9b58-232a9375f416:Materiales/Azul
                     0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
                         Id: 8e58616e-6631-43a0-9f0f-1b6623ec16ea
                         CanSleep: false
@@ -832,11 +934,11 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: d750a0de-0c12-4f92-aaa5-5802f5af4dce
-                Name: Fuerte
+                Name: Bloques
                 Components:
                     a5b403a2a8b6441dc2182a3018221b1c: !TransformComponent
                         Id: e5cc0eea-55e2-42f9-afbc-c653fd1d1a9a
-                        Position: {X: 0.0, Y: 0.0, Z: -4.57587}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:

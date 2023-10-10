@@ -10,8 +10,8 @@ Hierarchy:
                 Id: cb5b5796-6cb4-4515-8461-8563363ed366
                 Name: Bala
                 Components:
-                    270381a2cdd81e6344d7762de513da9a: !Terracota.Juego.Bala,Terracota
-                        Id: 9ebd999e-17e2-4443-936b-fe6a3f1df6c9
+                    37e1f72f72a66edb2a0e0d88f4865964: !Terracota.Juego.ControladorBala,Terracota
+                        Id: ae960cd6-d0b6-40c5-888d-1016dc9b42c7
                         maxColisiones: 8
                     45f11cee7c77c9296c3e3dc685715f6e: !TransformComponent
                         Id: e0212e71-6397-4438-86e8-fdfe739ba630
@@ -25,7 +25,7 @@ Hierarchy:
                         Materials: {}
                     c1f56cbccac418b87b6546e758c8f1d1: !RigidbodyComponent
                         Id: aa1fe151-34bf-458c-adc7-d20c92b54e99
-                        CanSleep: false
+                        CanSleep: true
                         Restitution: 0.8
                         Friction: 1.0
                         RollingFriction: 0.0
