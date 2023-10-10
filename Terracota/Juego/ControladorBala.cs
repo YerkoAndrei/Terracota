@@ -5,7 +5,7 @@ using Stride.Physics;
 
 namespace Terracota.Juego;
 
-public class Bala : AsyncScript
+public class ControladorBala : AsyncScript
 {
     public int maxColisiones;
 
@@ -14,6 +14,8 @@ public class Bala : AsyncScript
     public override async Task Execute()
     {
         var cuerpo = Entity.Get<RigidbodyComponent>();
+
+        // PENDIENTE: destruir por tiempo
 
         while (Game.IsRunning)
         {
