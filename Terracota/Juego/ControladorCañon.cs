@@ -3,7 +3,6 @@ using Stride.Core.Mathematics;
 using Stride.Input;
 using Stride.Engine;
 using Stride.Physics;
-using System.Drawing.Printing;
 
 namespace Terracota;
 using static Constantes;

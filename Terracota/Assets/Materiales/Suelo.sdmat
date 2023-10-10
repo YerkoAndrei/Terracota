@@ -1,0 +1,21 @@
+!MaterialAsset
+Id: f9c1f927-9739-4a73-924f-ff2a79e97e84
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Attributes:
+    MicroSurface: !MaterialGlossinessMapFeature
+        Enabled: false
+        GlossinessMap: !ComputeFloat
+            Value: 0.1
+    Diffuse: !MaterialDiffuseMapFeature
+        DiffuseMap: !ComputeColor
+            PremultiplyAlpha: false
+            Value: {R: 0.0, G: 1.0, B: 0.0, A: 1.0}
+    DiffuseModel: !MaterialDiffuseLambertModelFeature {}
+    Specular: !MaterialMetalnessMapFeature
+        Enabled: false
+        MetalnessMap: !ComputeFloat
+            Value: 0.0
+    Overrides:
+        UVScale: {X: 1.0, Y: 1.0}
+Layers: {}
