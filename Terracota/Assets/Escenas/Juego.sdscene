@@ -11,9 +11,23 @@ Hierarchy:
         - ref!! 0866fe54-7f2d-4808-8f79-7d2ba52a3880
         - ref!! b813ba7f-cafe-4e28-b38f-053a088e2a76
         - ref!! 44054d8f-9ce8-499d-a2d1-3a4088188e7b
+        - ref!! 00bb6bec-f893-4e2d-80c5-b35c800696d8
         - ref!! 521124b3-1212-4d82-a5d0-6364d258afcf
         - ref!! 8290a77a-1c4f-466e-ba7c-0ebb7c604e88
     Parts:
+        -   Folder: null
+            Entity:
+                Id: 00bb6bec-f893-4e2d-80c5-b35c800696d8
+                Name: Fortaleza
+                Components:
+                    5daf95322206bf8d422c5a6578a7e451: !TransformComponent
+                        Id: 68adc4b5-8c41-4bd3-a56c-7621e9e99b5b
+                        Position: {X: 0.0, Y: 0.0, Z: 10.736886}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            f89320cd36c2ea4dac0117137925d2ea: ref!! 969088c3-08ba-42be-ab4c-b677312e2095
+                            365d86f9b480455d7b7ebc8917d06272: ref!! b372a92a-9f97-48af-baf9-a89d37f08245
         -   Entity:
                 Id: 017e0fa5-95bb-4f5e-9130-738e96c92a22
                 Name: ControladorPartida
@@ -77,7 +91,7 @@ Hierarchy:
                         Id: c50ef5d0-c82b-42ce-9477-e6910b8d2ccf
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 2.0}
+                        Scale: {X: 2.0, Y: 1.0, Z: 4.0}
                         Children: {}
                     1220a401bb4a39f027a7aaa331b8ebee: !ModelComponent
                         Id: c515b6dc-28c3-4f28-8092-34ed51d54caa
@@ -114,6 +128,28 @@ Hierarchy:
                         Id: 64aad952-8611-4ef9-952f-c8f6f0d84c1d
                         Type: !LightSkybox
                             Skybox: 870c1df6-0b77-44c6-85ce-bda61c75f79c:Texturas/Skybox
+        -   Entity:
+                Id: 1299cb34-8ebe-4aad-9477-964055072a18
+                Name: Bloques
+                Components:
+                    a5b403a2a8b6441dc2182a3018221b1c: !TransformComponent
+                        Id: 969088c3-08ba-42be-ab4c-b677312e2095
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            c007e61692ac458b0ed77c6179600e76: ref!! 97ce631b-ec55-40a1-b5ef-30d95383c75b
+                            66e5597fe26c9dc9f7d120469e6ac25c: ref!! 661de835-59dc-4625-b562-95dd6dbd78f6
+                            47b0f888ebf317eca91a3122891d8829: ref!! f6545589-348b-4c0c-8d43-277612f5726a
+                            5672d5bf767d48ecfac8242a8ee87c91: ref!! a464f328-0a5d-4b80-b768-22dcd55124a4
+                            d450a01e675e98ea93913da6da792126: ref!! b92305a0-a185-4626-bdd2-84dee45d1785
+                            3fc28dbc3369943a5852f70aa1418c29: ref!! 29296d37-a371-44dd-836d-7cb13c569ca3
+                            3a00b73f465f95dcd2cbcbec8b9bbd9c: ref!! 284ae1e4-4132-4567-92eb-d7fe93ed5109
+                            af9b9dd662619100eaf52854fb2873a9: ref!! 0f86a83d-65d6-441f-adf1-69a14238dd80
+                            f6fee257275cf9dab617323189baf799: ref!! 9dd1c454-096a-4e86-849a-721d7a4a9d2d
+                            4d7d4037b4fc7c621a895e27df23d1f3: ref!! 057184d0-a62c-452a-92cb-77c3f8a5ae02
+                            96abe5e233be12b084e815d66d3a502c: ref!! e0fa4381-aa82-4c7f-a1b1-d8ab4a41c5cf
+                            372583a858ffaaa437da37c72af6925a: ref!! 2c5c23ff-6460-4ef2-a3af-9d0ca61cad55
         -   Entity:
                 Id: 133ac696-ed46-4e45-9ed6-2dab4f6fc97d
                 Name: "BaseCañon"
@@ -156,9 +192,9 @@ Hierarchy:
                 Components:
                     9a2439465c1d95fb64e102fbf112be90: !TransformComponent
                         Id: 4e5a286c-937e-4ab9-a0ed-4cb70333096e
-                        Position: {X: -7.1, Y: 0.0, Z: 0.0}
+                        Position: {X: -12.8, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.38268346, W: 0.9238795}
-                        Scale: {X: 3.0, Y: 3.0, Z: 24.2}
+                        Scale: {X: 4.0, Y: 4.0, Z: 45.6}
                         Children: {}
                     aefe31d5ae8eaaef55145e7133ee5081: !ModelComponent
                         Id: 92d86ce3-cf72-420a-82eb-2c5fc8310fd1
@@ -169,7 +205,7 @@ Hierarchy:
                         Id: 96e8e184-fa43-454c-90aa-849051bd7909
                         CanSleep: false
                         Restitution: 0.0
-                        Friction: 0.5
+                        Friction: 1.0
                         RollingFriction: 0.0
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
@@ -182,14 +218,51 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
+                Id: 1899f446-801f-48f5-b5c1-3c846e58d9ee
+                Name: Cube 7
+                Components:
+                    e68c8134aca3b055cee94acf5f8a10d9: !TransformComponent
+                        Id: 180310d6-4bf4-4588-8921-8c5dd53563af
+                        Position: {X: 0.5199998, Y: 1.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
+                        Id: 14c109f5-81e0-43c8-b3d3-9871b73b0e63
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials:
+                            cdeb0b6ffb2f8770d794717f6439eaca~0: e543d4aa-dd8e-4f33-9b58-232a9375f416:Materiales/Azul
+                    0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
+                        Id: 396908a1-28a1-420e-afd5-99286060cc37
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 1.0
+                        RollingFriction: 0.1
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9554e6e115387841cad1bb5bbd9df3f7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
                 Id: 19f1e7ad-53f5-4c0d-9810-0899394a2b1d
                 Name: Cilindro (0)
                 Components:
                     0c6ec4ccb1bad59279d85cf905fc4223: !TransformComponent
                         Id: 0ea348a3-57ba-4af1-ad8c-33a9d1181868
-                        Position: {X: 0.0, Y: 1.25, Z: 11.0}
+                        Position: {X: 0.0, Y: 2.0, Z: 21.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 2.0, Y: 2.5, Z: 2.0}
+                        Scale: {X: 2.0, Y: 4.0, Z: 2.0}
                         Children: {}
                     d8f044db166725b3a961043b5dfc093d: !StaticColliderComponent
                         Id: 107a8d9d-96d5-4e22-b278-ed037abadf87
@@ -216,8 +289,8 @@ Hierarchy:
                 Components:
                     4891b23ec8e15da600a5b62899ad91e6: !TransformComponent
                         Id: e12cf71c-0926-45f4-9f6b-d96d8497718b
-                        Position: {X: 0.0, Y: 6.0, Z: 14.0}
-                        Rotation: {X: -0.21643962, Y: 0.0, Z: 0.0, W: 0.976296}
+                        Position: {X: 0.0, Y: 8.0, Z: 25.0}
+                        Rotation: {X: -0.17364818, Y: 0.0, Z: 0.0, W: 0.9848077}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
         -   Entity:
@@ -237,6 +310,80 @@ Hierarchy:
                             9f1d6e4e7e08cc519f4af01f323be072~0: e543d4aa-dd8e-4f33-9b58-232a9375f416:Materiales/Azul
                     0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
                         Id: b5a45bb9-7fbf-4a58-8baa-22bcc2c91372
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 1.0
+                        RollingFriction: 0.1
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9554e6e115387841cad1bb5bbd9df3f7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: 2914c73e-1c62-429d-a3b0-40350b38f3e3
+                Name: Cube 10
+                Components:
+                    e68c8134aca3b055cee94acf5f8a10d9: !TransformComponent
+                        Id: e0fa4381-aa82-4c7f-a1b1-d8ab4a41c5cf
+                        Position: {X: 0.08000028, Y: 2.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
+                        Id: d7541c03-1899-43ab-9de1-a33f6e4bddde
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials:
+                            bda2eb44af5fa24a9d145d9f2c68869c~0: 59e60c43-7b0b-45c9-afb5-3dc533da620e:Materiales/Rojo
+                    0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
+                        Id: a373e7e4-77d5-4306-8431-a3cd87b19b54
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 1.0
+                        RollingFriction: 0.1
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9554e6e115387841cad1bb5bbd9df3f7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: 2964aa0f-896a-47f5-a773-850f8d5ef8ad
+                Name: Cube 2
+                Components:
+                    e68c8134aca3b055cee94acf5f8a10d9: !TransformComponent
+                        Id: 28035471-b4b4-4226-ad8e-d95bc5e27180
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
+                        Id: b3bb638b-61f4-40b4-b37d-b37505394d1a
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials:
+                            8e8b8568dd4df16571bffb5fb566f95d~0: 59e60c43-7b0b-45c9-afb5-3dc533da620e:Materiales/Rojo
+                    0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
+                        Id: 7358f091-a2ea-4f49-8367-b2171ef89924
                         CanSleep: false
                         Restitution: 0.2
                         Friction: 1.0
@@ -294,18 +441,97 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Folder: null
+            Entity:
+                Id: 3c841ffe-594b-467e-a720-4c34228b29ce
+                Name: Estatua (1)
+                Components:
+                    c913bdc152810c2cf6493604d43210e1: !Terracota.Juego.ControladorEstatua,Terracota
+                        Id: 5eace295-7a02-4ebc-8086-9b1452b65bf2
+                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
+                        Id: ade90ed7-4c47-448f-9875-a9dc3f75a23a
+                        Position: {X: 0.19291067, Y: 0.9999978, Z: -1.0173254}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 2.0, Z: 1.0}
+                        Children: {}
+                    7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
+                        Id: 287cb533-7685-4182-9cf7-f6495c84c10a
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials: {}
+                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
+                        Id: e1bd98a5-3ae4-4e66-a731-db0a1f36421c
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 200.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            bb7635abb649633b6dc624c179f90578: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: 3eb8d2e6-07bc-4f1a-ac23-32416b0b2187
+                Name: Cube 2
+                Components:
+                    e68c8134aca3b055cee94acf5f8a10d9: !TransformComponent
+                        Id: f6545589-348b-4c0c-8d43-277612f5726a
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
+                        Id: 7434be4f-2032-4817-b1ba-48abce90d0a6
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials:
+                            8e8b8568dd4df16571bffb5fb566f95d~0: 59e60c43-7b0b-45c9-afb5-3dc533da620e:Materiales/Rojo
+                    0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
+                        Id: 69a807c6-8910-4892-a875-594492aa5a74
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 1.0
+                        RollingFriction: 0.1
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9554e6e115387841cad1bb5bbd9df3f7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: 44054d8f-9ce8-499d-a2d1-3a4088188e7b
                 Name: Fortaleza
                 Components:
                     5daf95322206bf8d422c5a6578a7e451: !TransformComponent
                         Id: 6d4835bb-0889-4d3d-87e8-c904a3b47625
-                        Position: {X: 0.0, Y: 0.0, Z: -4.5}
+                        Position: {X: 0.0, Y: 0.0, Z: -15.553358}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             f89320cd36c2ea4dac0117137925d2ea: ref!! e5cc0eea-55e2-42f9-afbc-c653fd1d1a9a
+                            5ade6a985a8d78f4a5368dfaf6367c86: ref!! ec396c8a-3968-4b15-9a98-cd797a5ff517
                             365d86f9b480455d7b7ebc8917d06272: ref!! 2ec59e61-95ae-4ef6-be78-b6f6fad9c725
+                            b818e792b4496bab2d670aaeb677c9f7: ref!! ade90ed7-4c47-448f-9875-a9dc3f75a23a
+                            a839dda4e50a7842536fe4bffed826d9: ref!! 2fc24a1d-899a-421f-ad31-ee54fd86ead0
         -   Folder: null
             Entity:
                 Id: 4fa984c8-b13e-4f14-aeff-975affb026fb
@@ -315,7 +541,7 @@ Hierarchy:
                         Id: c9ea4d72-00ed-4100-a0d6-1d781df9812a
                         CanSleep: false
                         Restitution: 0.0
-                        Friction: 0.5
+                        Friction: 1.0
                         RollingFriction: 0.0
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
@@ -329,9 +555,9 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     9a2439465c1d95fb64e102fbf112be90: !TransformComponent
                         Id: 640cce2e-b523-42f3-8889-df555a9dff41
-                        Position: {X: 0.0, Y: 0.0, Z: -12.1}
+                        Position: {X: 0.0, Y: 0.0, Z: -22.8}
                         Rotation: {X: 0.38268346, Y: 0.0, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 14.2, Y: 3.0, Z: 3.0}
+                        Scale: {X: 25.6, Y: 4.0, Z: 4.0}
                         Children: {}
                     aefe31d5ae8eaaef55145e7133ee5081: !ModelComponent
                         Id: a7fe1167-9bc8-435b-b67d-cd323e11711b
@@ -381,15 +607,15 @@ Hierarchy:
                 Components:
                     b2b0bf1d60b3fc31afd4f21fa78fdfaa: !TransformComponent
                         Id: fd72abb2-840c-42f8-8fc9-777749e7e0af
-                        Position: {X: 0.0, Y: 2.5, Z: 11.0}
+                        Position: {X: 0.0, Y: 4.0, Z: 21.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             fe850ff2a034e6ac607d6288829530db: ref!! 24f68de4-cd16-4865-b448-9daf57422e94
                     5b462109dbbdaf98fd6224eed4682246: !Terracota.ControladorCa%25C3%25B1on,Terracota
                         Id: d0aa2221-2ef9-443d-a853-fad729532d35
-                        fuerzaBala: 40000.0
-                        fuerzaMetralla: 4000.0
+                        fuerzaBala: 50000.0
+                        fuerzaMetralla: 5000.0
                         sensibilidadX: 1.2
                         sensibilidadY: 1.2
                         soporte: ref!! 58ce7c51-2c88-4226-9ee1-cfc5122a606d
@@ -397,6 +623,43 @@ Hierarchy:
                         origenProyectil: ref!! d3cc82e5-4c61-4353-852a-69db5db48306
                         bala: 32dc5310-2c33-4019-a4a0-fdf11fafd6c0:Prefabs/Bala
                         metralla: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+        -   Entity:
+                Id: 54990818-030f-4dd7-8ea4-8cb296d3c217
+                Name: Cube 11
+                Components:
+                    e68c8134aca3b055cee94acf5f8a10d9: !TransformComponent
+                        Id: 85525298-89dc-4eed-8229-fec09ba0d033
+                        Position: {X: 1.2080003, Y: 2.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
+                        Id: 84f2e6cb-5ae1-48de-82f2-637c03315ce5
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials:
+                            c1bfb8f999a1eb185cac7059b4eb3eec~0: e543d4aa-dd8e-4f33-9b58-232a9375f416:Materiales/Azul
+                    0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
+                        Id: 2090d955-2a78-4319-bf09-8ea859b782ea
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 1.0
+                        RollingFriction: 0.1
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9554e6e115387841cad1bb5bbd9df3f7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: 58ce7c51-2c88-4226-9ee1-cfc5122a606d
                 Name: Soporte
@@ -411,6 +674,66 @@ Hierarchy:
                             668aac500cf7400a5b94237819a8111a: ref!! 58c5b638-456c-4c0e-a144-f24dc7285b8b
         -   Folder: null
             Entity:
+                Id: 62decd3b-296a-446f-b868-efec11bce252
+                Name: Bloques
+                Components:
+                    a5b403a2a8b6441dc2182a3018221b1c: !TransformComponent
+                        Id: ec396c8a-3968-4b15-9a98-cd797a5ff517
+                        Position: {X: 2.7007866, Y: -1.2234449E-06, Z: 4.205514}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            c007e61692ac458b0ed77c6179600e76: ref!! 039448d0-5dd4-411f-801f-2aa8b0b885ed
+                            66e5597fe26c9dc9f7d120469e6ac25c: ref!! 36020bdd-d737-48a9-968f-d26bda79f372
+                            47b0f888ebf317eca91a3122891d8829: ref!! 28035471-b4b4-4226-ad8e-d95bc5e27180
+                            5672d5bf767d48ecfac8242a8ee87c91: ref!! b456fed1-abe3-4e29-bb11-3b947eebc4ff
+                            d450a01e675e98ea93913da6da792126: ref!! 879bce9f-f6fe-45d2-8415-17af66182ebf
+                            3fc28dbc3369943a5852f70aa1418c29: ref!! 0803f05c-7635-4381-aa97-31327ee21ee2
+                            3a00b73f465f95dcd2cbcbec8b9bbd9c: ref!! a781a000-73ff-4aa1-afb8-9652454f4455
+                            af9b9dd662619100eaf52854fb2873a9: ref!! 180310d6-4bf4-4588-8921-8c5dd53563af
+                            f6fee257275cf9dab617323189baf799: ref!! 283779e4-56b7-4981-9d91-752e3507e00b
+                            4d7d4037b4fc7c621a895e27df23d1f3: ref!! 9f4b5d30-b25f-4fff-85b0-dc402669202c
+                            96abe5e233be12b084e815d66d3a502c: ref!! ef05c4d3-6d05-4a84-a45f-02d82cbe2bd2
+                            372583a858ffaaa437da37c72af6925a: ref!! 85525298-89dc-4eed-8229-fec09ba0d033
+        -   Entity:
+                Id: 665f2d72-8e5e-4d0c-bb0b-d25db7522451
+                Name: Cube 1
+                Components:
+                    e68c8134aca3b055cee94acf5f8a10d9: !TransformComponent
+                        Id: 36020bdd-d737-48a9-968f-d26bda79f372
+                        Position: {X: -1.064, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
+                        Id: fe642c81-51f7-4d4e-8f57-9916e98764b0
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials:
+                            fe90b0d21dcd32716c7e4d5687b4a441~0: e543d4aa-dd8e-4f33-9b58-232a9375f416:Materiales/Azul
+                    0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
+                        Id: ff16e0bb-0740-44c4-af93-ec9cfaa906a7
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 1.0
+                        RollingFriction: 0.1
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9554e6e115387841cad1bb5bbd9df3f7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Folder: null
+            Entity:
                 Id: 6824f2ef-6a21-4e2a-8daa-8a59d3eb7fdb
                 Name: Cubo (3)
                 Components:
@@ -418,7 +741,7 @@ Hierarchy:
                         Id: f7515d0c-0188-43ca-91a1-38d69b09385b
                         CanSleep: false
                         Restitution: 0.0
-                        Friction: 0.5
+                        Friction: 1.0
                         RollingFriction: 0.0
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
@@ -432,15 +755,52 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     9a2439465c1d95fb64e102fbf112be90: !TransformComponent
                         Id: 5fcbdc26-d48e-4659-9612-da3054522241
-                        Position: {X: 0.0, Y: 0.0, Z: 12.1}
+                        Position: {X: 0.0, Y: 0.0, Z: 22.8}
                         Rotation: {X: 0.38268346, Y: 0.0, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 14.2, Y: 3.0, Z: 3.0}
+                        Scale: {X: 25.6, Y: 4.0, Z: 4.0}
                         Children: {}
                     aefe31d5ae8eaaef55145e7133ee5081: !ModelComponent
                         Id: 4564c8b4-c895-4074-ba5d-6e748ad89b5a
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
                         Materials:
                             9608322aea6edfa9f223026c5fcdfc98~0: f9c1f927-9739-4a73-924f-ff2a79e97e84:Materiales/Verde
+        -   Entity:
+                Id: 6919dbc8-8ae8-42bf-9540-42ea544b755b
+                Name: Cube 0
+                Components:
+                    e68c8134aca3b055cee94acf5f8a10d9: !TransformComponent
+                        Id: 97ce631b-ec55-40a1-b5ef-30d95383c75b
+                        Position: {X: -2.1335654, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
+                        Id: d00eeb88-8d9a-4aac-bd2d-dead66d3e286
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials:
+                            fc1956bba2521d0b829309f8ded26ddd~0: 59e60c43-7b0b-45c9-afb5-3dc533da620e:Materiales/Rojo
+                    0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
+                        Id: 8f6bfd4d-d0a0-4af9-a27e-1631eb4bfc1f
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 1.0
+                        RollingFriction: 0.1
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9554e6e115387841cad1bb5bbd9df3f7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: 6a7b61ba-4bb3-4bbe-8a6e-ad82a3aed366
                 Name: Caja
@@ -514,9 +874,9 @@ Hierarchy:
                 Components:
                     9a2439465c1d95fb64e102fbf112be90: !TransformComponent
                         Id: c6f934a2-b177-40ea-9972-27d266b44e11
-                        Position: {X: 7.1, Y: 0.0, Z: 0.0}
+                        Position: {X: 12.8, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.38268346, W: 0.9238795}
-                        Scale: {X: 3.0, Y: 3.0, Z: 24.2}
+                        Scale: {X: 4.0, Y: 4.0, Z: 45.6}
                         Children: {}
                     aefe31d5ae8eaaef55145e7133ee5081: !ModelComponent
                         Id: c8062efc-4ba6-41f6-a386-75e87655046e
@@ -527,7 +887,7 @@ Hierarchy:
                         Id: 712937fd-774e-4cae-9381-5eedc96c6ca5
                         CanSleep: false
                         Restitution: 0.0
-                        Friction: 0.5
+                        Friction: 1.0
                         RollingFriction: 0.0
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
@@ -535,6 +895,43 @@ Hierarchy:
                         AlwaysUpdateNaviMeshCache: false
                         ColliderShapes:
                             43715f90feba52f8be414fcf3938e934: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: 80cb4c65-e8d2-490d-b3ec-283a34c7fc02
+                Name: Cube 1
+                Components:
+                    e68c8134aca3b055cee94acf5f8a10d9: !TransformComponent
+                        Id: 661de835-59dc-4625-b562-95dd6dbd78f6
+                        Position: {X: -1.064, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
+                        Id: de64da94-d6f9-4e80-bdf8-debfb60fdeb7
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials:
+                            fe90b0d21dcd32716c7e4d5687b4a441~0: e543d4aa-dd8e-4f33-9b58-232a9375f416:Materiales/Azul
+                    0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
+                        Id: c145bcd7-48f0-4249-bac7-4d7e65614721
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 1.0
+                        RollingFriction: 0.1
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9554e6e115387841cad1bb5bbd9df3f7: !BoxColliderShapeDesc
                                 Is2D: false
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -589,6 +986,43 @@ Hierarchy:
                     9674fb718cfda9571febe596a79ab26a: !Terracota.SistemaAnimaci%25C3%25B3n,Terracota
                         Id: 21e6ae1a-c689-4a21-9fbc-11457457c2e5
                         curvaEstandar: null
+        -   Entity:
+                Id: 86e9284a-4733-4eb3-82ad-137deced652c
+                Name: Cube 4
+                Components:
+                    e68c8134aca3b055cee94acf5f8a10d9: !TransformComponent
+                        Id: 879bce9f-f6fe-45d2-8415-17af66182ebf
+                        Position: {X: 2.1279998, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
+                        Id: b4b940a5-4d06-499a-b667-57c2c55813b6
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials:
+                            6e834cbcdcce45c456c2ce7cf2186357~0: 59e60c43-7b0b-45c9-afb5-3dc533da620e:Materiales/Rojo
+                    0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
+                        Id: c2757f93-faa0-4493-a29b-d2892186401e
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 1.0
+                        RollingFriction: 0.1
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9554e6e115387841cad1bb5bbd9df3f7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Folder: null
             Entity:
                 Id: 91a70ea0-65e1-4d55-8a31-5d29a2d95df1
@@ -596,9 +1030,9 @@ Hierarchy:
                 Components:
                     0c6ec4ccb1bad59279d85cf905fc4223: !TransformComponent
                         Id: 5aa3c375-50c0-452d-a8aa-cf6473ed82d7
-                        Position: {X: 0.0, Y: 1.25, Z: -11.0}
+                        Position: {X: 0.0, Y: 2.0, Z: -21.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 2.0, Y: 2.5, Z: 2.0}
+                        Scale: {X: 2.0, Y: 4.0, Z: 2.0}
                         Children: {}
                     7f2bc87af196ab879ac4a50245f4fe6b: !StaticColliderComponent
                         Id: c3cbde07-ea8d-404c-a6aa-6593642ca078
@@ -620,6 +1054,43 @@ Hierarchy:
                         Materials:
                             b31d23777b6b45ee9216500915cccecd~0: f9c1f927-9739-4a73-924f-ff2a79e97e84:Materiales/Verde
         -   Entity:
+                Id: 92a1e182-8435-4040-99ef-5ce17f73275c
+                Name: Cube 3
+                Components:
+                    e68c8134aca3b055cee94acf5f8a10d9: !TransformComponent
+                        Id: b456fed1-abe3-4e29-bb11-3b947eebc4ff
+                        Position: {X: 1.0640001, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
+                        Id: 9cde4d86-2aa1-470c-8dcc-94b518dcf640
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials:
+                            25af864b5b39b795f90e38c7a77fceb5~0: e543d4aa-dd8e-4f33-9b58-232a9375f416:Materiales/Azul
+                    0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
+                        Id: 3d54b01c-4e9c-47e5-9dcc-1f497de57fe3
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 1.0
+                        RollingFriction: 0.1
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9554e6e115387841cad1bb5bbd9df3f7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
                 Id: 97e06ba2-3ff3-4f88-9658-d8833e46589d
                 Name: Cube 7
                 Components:
@@ -636,6 +1107,117 @@ Hierarchy:
                             cdeb0b6ffb2f8770d794717f6439eaca~0: e543d4aa-dd8e-4f33-9b58-232a9375f416:Materiales/Azul
                     0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
                         Id: a6e646dc-6d2c-40f5-ba00-b34b7711c7af
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 1.0
+                        RollingFriction: 0.1
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9554e6e115387841cad1bb5bbd9df3f7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: 9b128d6f-ccb3-467a-9b8f-966a7c12f702
+                Name: Cube 3
+                Components:
+                    e68c8134aca3b055cee94acf5f8a10d9: !TransformComponent
+                        Id: a464f328-0a5d-4b80-b768-22dcd55124a4
+                        Position: {X: 1.0640001, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
+                        Id: b8e7694e-9780-4588-ba61-d8368c936313
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials:
+                            25af864b5b39b795f90e38c7a77fceb5~0: e543d4aa-dd8e-4f33-9b58-232a9375f416:Materiales/Azul
+                    0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
+                        Id: 8e1477b7-f595-4519-bf2e-a6de84ee7acd
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 1.0
+                        RollingFriction: 0.1
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9554e6e115387841cad1bb5bbd9df3f7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: 9d872a72-7970-4e97-92c3-ca9bb4556590
+                Name: Cube 11
+                Components:
+                    e68c8134aca3b055cee94acf5f8a10d9: !TransformComponent
+                        Id: 2c5c23ff-6460-4ef2-a3af-9d0ca61cad55
+                        Position: {X: 1.2080003, Y: 2.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
+                        Id: 545a51fa-79d7-4d01-91eb-3d5a3ab5eab9
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials:
+                            c1bfb8f999a1eb185cac7059b4eb3eec~0: e543d4aa-dd8e-4f33-9b58-232a9375f416:Materiales/Azul
+                    0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
+                        Id: 2c4fe8b5-9f8e-4987-9c38-9a64161e8fec
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 1.0
+                        RollingFriction: 0.1
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9554e6e115387841cad1bb5bbd9df3f7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: 9e13e5ee-7776-4980-a71b-1128bb64c774
+                Name: Cube 0
+                Components:
+                    e68c8134aca3b055cee94acf5f8a10d9: !TransformComponent
+                        Id: 039448d0-5dd4-411f-801f-2aa8b0b885ed
+                        Position: {X: -2.1335654, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
+                        Id: 805650e2-ccb7-48ee-8aba-eceb2f9aa21a
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials:
+                            fc1956bba2521d0b829309f8ded26ddd~0: 59e60c43-7b0b-45c9-afb5-3dc533da620e:Materiales/Rojo
+                    0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
+                        Id: 27e665a4-e4bf-48a6-ae6c-37b25c0a0158
                         CanSleep: false
                         Restitution: 0.2
                         Friction: 1.0
@@ -699,8 +1281,8 @@ Hierarchy:
                 Components:
                     712b2eb1c77a9868ac5cef0b07912892: !TransformComponent
                         Id: b3bb83f2-5020-438d-bdee-6242dd68d627
-                        Position: {X: 0.0, Y: 6.0, Z: 14.0}
-                        Rotation: {X: -0.21643962, Y: 0.0, Z: 0.0, W: 0.976296}
+                        Position: {X: 0.0, Y: 8.0, Z: 25.0}
+                        Rotation: {X: -0.17364818, Y: 0.0, Z: 0.0, W: 0.9848077}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     28bcb0d3abe1a8f4b18356fbb1492920: !CameraComponent
@@ -746,6 +1328,43 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
+                Id: b79b70c8-9949-4a66-9864-6fdf59788f95
+                Name: Cube 8
+                Components:
+                    e68c8134aca3b055cee94acf5f8a10d9: !TransformComponent
+                        Id: 283779e4-56b7-4981-9d91-752e3507e00b
+                        Position: {X: 1.6319995, Y: 1.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
+                        Id: 368c888a-668f-4f22-a956-9bbac326f9d5
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials:
+                            bb75d3237878705832161b848f21c3d6~0: 59e60c43-7b0b-45c9-afb5-3dc533da620e:Materiales/Rojo
+                    0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
+                        Id: 880d4b72-996f-453c-b62d-463176fb0a9d
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 1.0
+                        RollingFriction: 0.1
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9554e6e115387841cad1bb5bbd9df3f7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
                 Id: b813ba7f-cafe-4e28-b38f-053a088e2a76
                 Name: Entorno
                 Components:
@@ -762,6 +1381,43 @@ Hierarchy:
                             e43806d1ee325488f3cc5fc844f2fd5e: ref!! 5fcbdc26-d48e-4659-9612-da3054522241
                             4a3e4b741923876548b2360738e8005d: ref!! 0ea348a3-57ba-4af1-ad8c-33a9d1181868
                             b99e225148678e86498cc55b4e4a3534: ref!! 5aa3c375-50c0-452d-a8aa-cf6473ed82d7
+        -   Entity:
+                Id: b9bd3962-a7f9-4695-8efe-cefa3fc7e875
+                Name: Cube 6
+                Components:
+                    e68c8134aca3b055cee94acf5f8a10d9: !TransformComponent
+                        Id: a781a000-73ff-4aa1-afb8-9652454f4455
+                        Position: {X: -0.49600065, Y: 1.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
+                        Id: 4b7ac38c-b8e7-45a1-9c57-f8049809ffaa
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials:
+                            4b1c77f608e2c538cff4281d1b39834c~0: 59e60c43-7b0b-45c9-afb5-3dc533da620e:Materiales/Rojo
+                    0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
+                        Id: fc799ed5-4956-4886-9066-c6613e1957d4
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 1.0
+                        RollingFriction: 0.1
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9554e6e115387841cad1bb5bbd9df3f7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: ba33a2b4-66e9-428e-a282-9075176bd392
                 Name: Cube 5
@@ -800,6 +1456,154 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
+                Id: bda03aab-101b-43d0-85e5-071abece21f8
+                Name: Cube 9
+                Components:
+                    e68c8134aca3b055cee94acf5f8a10d9: !TransformComponent
+                        Id: 057184d0-a62c-452a-92cb-77c3f8a5ae02
+                        Position: {X: -1.0639999, Y: 2.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
+                        Id: 766d35aa-00a0-4b37-8736-09bd7084210a
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials:
+                            9f1d6e4e7e08cc519f4af01f323be072~0: e543d4aa-dd8e-4f33-9b58-232a9375f416:Materiales/Azul
+                    0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
+                        Id: 1659ec11-a21f-46f3-82b6-892c4c4f85fb
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 1.0
+                        RollingFriction: 0.1
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9554e6e115387841cad1bb5bbd9df3f7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: bf9d141a-4b83-48b7-b96e-d0d9775e0027
+                Name: Cube 4
+                Components:
+                    e68c8134aca3b055cee94acf5f8a10d9: !TransformComponent
+                        Id: b92305a0-a185-4626-bdd2-84dee45d1785
+                        Position: {X: 2.1279998, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
+                        Id: 4a2d6155-c7d9-448f-9c65-e5e578e8970d
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials:
+                            6e834cbcdcce45c456c2ce7cf2186357~0: 59e60c43-7b0b-45c9-afb5-3dc533da620e:Materiales/Rojo
+                    0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
+                        Id: 8844eba1-3741-43e9-b6be-3b5acf62293b
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 1.0
+                        RollingFriction: 0.1
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9554e6e115387841cad1bb5bbd9df3f7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: c12ae54d-c3a1-4e30-b849-70617fbc4195
+                Name: Cube 5
+                Components:
+                    e68c8134aca3b055cee94acf5f8a10d9: !TransformComponent
+                        Id: 0803f05c-7635-4381-aa97-31327ee21ee2
+                        Position: {X: -1.6000004, Y: 1.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
+                        Id: 6c3f0156-177d-403f-8b35-c97fb787ba41
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials:
+                            99f8120a8849ca2c9edfef11de490123~0: e543d4aa-dd8e-4f33-9b58-232a9375f416:Materiales/Azul
+                    0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
+                        Id: 2f497323-5d3f-4c5f-b212-083b3463021b
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 1.0
+                        RollingFriction: 0.1
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9554e6e115387841cad1bb5bbd9df3f7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: c1f3d3fe-d33c-44bc-875b-d2e95c41e9cc
+                Name: Cube 7
+                Components:
+                    e68c8134aca3b055cee94acf5f8a10d9: !TransformComponent
+                        Id: 0f86a83d-65d6-441f-adf1-69a14238dd80
+                        Position: {X: 0.5199998, Y: 1.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
+                        Id: 3641ab14-225d-4cda-86c5-cb49192dd05e
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials:
+                            cdeb0b6ffb2f8770d794717f6439eaca~0: e543d4aa-dd8e-4f33-9b58-232a9375f416:Materiales/Azul
+                    0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
+                        Id: 8aa9dc29-430d-44e2-a3ef-86e6f05d7a5e
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 1.0
+                        RollingFriction: 0.1
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9554e6e115387841cad1bb5bbd9df3f7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
                 Id: c1f7e99e-cace-4486-8911-1c260b548568
                 Name: Estatua (0)
                 Components:
@@ -807,7 +1611,7 @@ Hierarchy:
                         Id: ea0efc7d-636e-4e15-9eba-df8d12b3704c
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
                         Id: 2ec59e61-95ae-4ef6-be78-b6f6fad9c725
-                        Position: {X: 0.0, Y: 1.0000002, Z: 4.5}
+                        Position: {X: -7.292133, Y: 0.9999978, Z: -1.8661445}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 2.0, Z: 1.0}
                         Children: {}
@@ -837,6 +1641,80 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: c5623664-96b0-4a3b-8022-c282fd49453d
+                Name: Cube 5
+                Components:
+                    e68c8134aca3b055cee94acf5f8a10d9: !TransformComponent
+                        Id: 29296d37-a371-44dd-836d-7cb13c569ca3
+                        Position: {X: -1.6000004, Y: 1.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
+                        Id: 7220c24a-bd80-47f9-bc35-be989046ffd1
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials:
+                            99f8120a8849ca2c9edfef11de490123~0: e543d4aa-dd8e-4f33-9b58-232a9375f416:Materiales/Azul
+                    0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
+                        Id: a983c94a-5e68-422e-8aca-a70576e86fb4
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 1.0
+                        RollingFriction: 0.1
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9554e6e115387841cad1bb5bbd9df3f7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: cad48bd2-fba2-4979-844f-2cb8b85b6313
+                Name: Cube 8
+                Components:
+                    e68c8134aca3b055cee94acf5f8a10d9: !TransformComponent
+                        Id: 9dd1c454-096a-4e86-849a-721d7a4a9d2d
+                        Position: {X: 1.6319995, Y: 1.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
+                        Id: 89e9198c-24a7-4705-af81-f216554d1bb4
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials:
+                            bb75d3237878705832161b848f21c3d6~0: 59e60c43-7b0b-45c9-afb5-3dc533da620e:Materiales/Rojo
+                    0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
+                        Id: 13d87ee8-53c3-4265-8fa9-02f3240decbe
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 1.0
+                        RollingFriction: 0.1
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9554e6e115387841cad1bb5bbd9df3f7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Folder: null
             Entity:
                 Id: cdf3debb-9596-492e-8935-4baf90c22555
@@ -844,8 +1722,8 @@ Hierarchy:
                 Components:
                     4891b23ec8e15da600a5b62899ad91e6: !TransformComponent
                         Id: 81f01d98-4dbc-4b9c-ad09-59a313bfeedc
-                        Position: {X: 0.0, Y: 6.0, Z: -14.0}
-                        Rotation: {X: 9.4608765E-09, Y: 0.976296, Z: 0.21643962, W: -4.2675254E-08}
+                        Position: {X: 0.0, Y: 8.0, Z: -25.0}
+                        Rotation: {X: -1.3110073E-08, Y: -0.9848077, Z: -0.17364818, W: 7.4350915E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
         -   Entity:
@@ -858,6 +1736,45 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
+        -   Folder: null
+            Entity:
+                Id: d4214a34-8894-4fec-a19e-0420b8ef5625
+                Name: Estatua (2)
+                Components:
+                    c913bdc152810c2cf6493604d43210e1: !Terracota.Juego.ControladorEstatua,Terracota
+                        Id: a0ea9644-7c6d-4744-9707-b693b6d87b7f
+                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
+                        Id: 2fc24a1d-899a-421f-ad31-ee54fd86ead0
+                        Position: {X: 5.787402, Y: 0.9999978, Z: 0.41023386}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 2.0, Z: 1.0}
+                        Children: {}
+                    7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
+                        Id: eaa9bb6f-a492-4143-876f-1203f2a03552
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials: {}
+                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
+                        Id: 09fd805c-bb7f-49ce-ad74-0a3d6075d080
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 200.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            bb7635abb649633b6dc624c179f90578: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: d430d9ee-ee01-4ff1-b63d-6b7446d96adf
                 Name: Cube 0
@@ -875,6 +1792,43 @@ Hierarchy:
                             fc1956bba2521d0b829309f8ded26ddd~0: 59e60c43-7b0b-45c9-afb5-3dc533da620e:Materiales/Rojo
                     0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
                         Id: ca67368a-f98a-46c5-9607-5db6f2a444e1
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 1.0
+                        RollingFriction: 0.1
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9554e6e115387841cad1bb5bbd9df3f7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: d45f8f3a-ed39-46d1-9e4a-9892af75b0a3
+                Name: Cube 9
+                Components:
+                    e68c8134aca3b055cee94acf5f8a10d9: !TransformComponent
+                        Id: 9f4b5d30-b25f-4fff-85b0-dc402669202c
+                        Position: {X: -1.0639999, Y: 2.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
+                        Id: 445f9d2c-2f38-434f-bd03-fca925c91325
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials:
+                            9f1d6e4e7e08cc519f4af01f323be072~0: e543d4aa-dd8e-4f33-9b58-232a9375f416:Materiales/Azul
+                    0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
+                        Id: 66147af5-7b77-4cea-8119-93b84bb0fc86
                         CanSleep: false
                         Restitution: 0.2
                         Friction: 1.0
@@ -938,7 +1892,7 @@ Hierarchy:
                 Components:
                     a5b403a2a8b6441dc2182a3018221b1c: !TransformComponent
                         Id: e5cc0eea-55e2-42f9-afbc-c653fd1d1a9a
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: -6.5204763, Y: 0.0, Z: 3.5881903}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -954,3 +1908,115 @@ Hierarchy:
                             4d7d4037b4fc7c621a895e27df23d1f3: ref!! bb21c464-9406-4d42-a101-17555137b1dd
                             96abe5e233be12b084e815d66d3a502c: ref!! 92664b81-6d88-45e0-8821-3512649d8fb9
                             372583a858ffaaa437da37c72af6925a: ref!! 3f73603a-75a2-4205-ae4e-22fd0e2ba67e
+        -   Entity:
+                Id: e1c7844f-2e19-44b0-9495-e15efdc3fa61
+                Name: Cube 6
+                Components:
+                    e68c8134aca3b055cee94acf5f8a10d9: !TransformComponent
+                        Id: 284ae1e4-4132-4567-92eb-d7fe93ed5109
+                        Position: {X: -0.49600065, Y: 1.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
+                        Id: 2a8350db-211d-468f-9d0a-0621e523fc31
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials:
+                            4b1c77f608e2c538cff4281d1b39834c~0: 59e60c43-7b0b-45c9-afb5-3dc533da620e:Materiales/Rojo
+                    0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
+                        Id: 57ef3aa6-8273-425a-a66b-862ad4c5f545
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 1.0
+                        RollingFriction: 0.1
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9554e6e115387841cad1bb5bbd9df3f7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: e25fbd38-978f-441a-aa1c-f74de990ae3b
+                Name: Cube 10
+                Components:
+                    e68c8134aca3b055cee94acf5f8a10d9: !TransformComponent
+                        Id: ef05c4d3-6d05-4a84-a45f-02d82cbe2bd2
+                        Position: {X: 0.08000028, Y: 2.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    23a03b33d82ab3461dbd97cd5ae4bcb3: !ModelComponent
+                        Id: d6212b83-a371-4f42-a0b0-e31b8408d6f6
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials:
+                            bda2eb44af5fa24a9d145d9f2c68869c~0: 59e60c43-7b0b-45c9-afb5-3dc533da620e:Materiales/Rojo
+                    0eade38f18be683dc106f42eb754b384: !RigidbodyComponent
+                        Id: d165a605-1f31-4d0a-b2cb-489fbf1bf96d
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 1.0
+                        RollingFriction: 0.1
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9554e6e115387841cad1bb5bbd9df3f7: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: e3e39413-2af3-4298-bcd8-24d785b27d5f
+                Name: Estatua (0)
+                Components:
+                    c913bdc152810c2cf6493604d43210e1: !Terracota.Juego.ControladorEstatua,Terracota
+                        Id: e576dfd8-6e31-4fd9-9168-8652a16036d1
+                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
+                        Id: b372a92a-9f97-48af-baf9-a89d37f08245
+                        Position: {X: 0.0, Y: 1.0000002, Z: 4.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 2.0, Z: 1.0}
+                        Children: {}
+                    7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
+                        Id: bd87f16e-a10d-4a00-ad18-1f3c3c221d36
+                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                        Materials: {}
+                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
+                        Id: a4e7a91d-5df9-404f-874c-755e33a0e8ca
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 200.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            bb7635abb649633b6dc624c179f90578: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}

@@ -28,7 +28,7 @@ public class ControladorPartida : AsyncScript
 
     private async Task MoverCámara(TipoJugador jugador)
     {
-        float duraciónLerp = 2;
+        float duraciónLerp = 1.5f;
         float tiempoLerp = 0;
         float tiempo = 0;
 
@@ -54,6 +54,7 @@ public class ControladorPartida : AsyncScript
 
             cámara.Position = Vector3.Lerp(posiciónInicial, posiciónObjetivo, tiempo);
             cámara.Rotation = Quaternion.Lerp(rotaciónInicial, rotaciónObjetivo, tiempo);
+
             tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
             await Script.NextFrame();
         }
