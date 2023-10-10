@@ -10,6 +10,9 @@ Hierarchy:
                 Id: cb5b5796-6cb4-4515-8461-8563363ed366
                 Name: Bala
                 Components:
+                    270381a2cdd81e6344d7762de513da9a: !Terracota.Juego.Bala,Terracota
+                        Id: 9ebd999e-17e2-4443-936b-fe6a3f1df6c9
+                        maxColisiones: 8
                     45f11cee7c77c9296c3e3dc685715f6e: !TransformComponent
                         Id: e0212e71-6397-4438-86e8-fdfe739ba630
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -18,7 +21,7 @@ Hierarchy:
                         Children: {}
                     f05b3696c40f743d796fc0bba1f38923: !ModelComponent
                         Id: 7dca5f2b-5b50-4883-9432-f1b5f846ebe0
-                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Sphere
+                        Model: 6fe6e5bf-aa9f-434f-a5c8-adaca477bd6e:Modelos/Esfera
                         Materials: {}
                     c1f56cbccac418b87b6546e758c8f1d1: !RigidbodyComponent
                         Id: aa1fe151-34bf-458c-adc7-d20c92b54e99
