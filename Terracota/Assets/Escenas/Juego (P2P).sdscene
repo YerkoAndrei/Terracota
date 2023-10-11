@@ -10,7 +10,6 @@ Hierarchy:
         - ref!! 6fceecdd-766c-4ad4-8c66-d41126c8ed76
         - ref!! 808f42ce-9ce5-4e0f-b5e6-dcadddc4ff17
         - ref!! 0935c7c1-ee34-4dbf-a5c2-d0b11f7edb25
-        - ref!! a5d8b38c-6dc9-467b-8401-63634a4fe0aa
         - ref!! 9294d530-7c9c-4523-9403-2a5a7512c626
         - ref!! cf7e1df6-ac69-49ac-aa59-d7ddb958b0a9
     Parts:
@@ -190,8 +189,8 @@ Hierarchy:
                 Id: 0bae4038-bfc0-40e5-ac04-c2aa665f5b52
                 Name: Estatua (1)
                 Components:
-                    c913bdc152810c2cf6493604d43210e1: !Terracota.Juego.ControladorEstatua,Terracota
-                        Id: c9da3208-c029-4252-bd84-769189cd1edb
+                    c913bdc152810c2cf6493604d43210e1: !Terracota.ControladorEstatua,Terracota
+                        Id: 2f680609-48e5-48e2-97e5-c359645af5fb
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
                         Id: 35f3bb66-cff8-4f20-80a1-be21844661f8
                         Position: {X: 0.19291067, Y: 0.9999978, Z: -1.0173254}
@@ -367,8 +366,8 @@ Hierarchy:
                 Id: 20eabfe4-c681-4775-adde-2362714d3aac
                 Name: Estatua (0)
                 Components:
-                    c913bdc152810c2cf6493604d43210e1: !Terracota.Juego.ControladorEstatua,Terracota
-                        Id: 4279ae76-df2a-44cf-ae82-2280a7d18987
+                    c913bdc152810c2cf6493604d43210e1: !Terracota.ControladorEstatua,Terracota
+                        Id: a9cda3d2-6937-4c0c-9d39-ba1f72311ab6
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
                         Id: 7ec08389-804b-4aac-b0ca-5feb80635543
                         Position: {X: -7.292133, Y: 0.9999978, Z: 6.5164275}
@@ -443,8 +442,8 @@ Hierarchy:
                 Id: 2af51ac5-fb6a-4ae0-9665-84b7ce29fb63
                 Name: Estatua (0)
                 Components:
-                    c913bdc152810c2cf6493604d43210e1: !Terracota.Juego.ControladorEstatua,Terracota
-                        Id: e67255d5-dedd-426c-a36f-227d315935ce
+                    c913bdc152810c2cf6493604d43210e1: !Terracota.ControladorEstatua,Terracota
+                        Id: 1cd0493e-cebc-435b-a79d-00ac5131a961
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
                         Id: 80195b05-15a0-42e8-8da3-61695cc8d9f3
                         Position: {X: -7.292133, Y: 0.9999978, Z: -1.8661445}
@@ -624,8 +623,8 @@ Hierarchy:
                 Id: 2f1c9538-cfb5-40ba-80fe-de4d1b9eae82
                 Name: Estatua (2)
                 Components:
-                    c913bdc152810c2cf6493604d43210e1: !Terracota.Juego.ControladorEstatua,Terracota
-                        Id: b1ae404c-8629-4a18-a9be-e1205de20de0
+                    c913bdc152810c2cf6493604d43210e1: !Terracota.ControladorEstatua,Terracota
+                        Id: 2f932d6e-5250-41ea-987e-a94635fb4362
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
                         Id: e41d31bc-880a-4955-8850-27867fdcfd06
                         Position: {X: 3.0029263, Y: 0.9999978, Z: 7.090318}
@@ -1415,11 +1414,10 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             e4db0740564c7cca70cdfa3dd36edfeb: ref!! 310f1062-20c3-45c5-ba74-31bcd1a6902b
-                    10593d81249632210e412a69ef5a3e77: !Terracota.Juego.ControladorPartida,Terracota
-                        Id: 999bd403-ac5a-402c-bec4-29f49d4ad458
-                        "cañónAnfitrión": ref!! d0aa2221-2ef9-443d-a853-fad729532d35
-                        "cañónHuesped": ref!! 3e38968f-7a3a-4bfb-8eb9-83e0abd2f74d
-                        "ejeCámara": ref!! 215294be-ea30-42ae-aa9d-646ec7a45d55
+                    aa4ecb74cfb19d5123616df3f9408c10: !Terracota.ControladorPartidaP2P,Terracota
+                        Id: b4794675-50c1-4776-93d7-e49de2468ae0
+                        "cañónAnfitrión": null
+                        "cañónHuesped": null
         -   Folder: null
             Entity:
                 Id: 8c53a8e6-58d4-4aca-97ec-73ae39e4e649
@@ -1729,44 +1727,6 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             9554e6e115387841cad1bb5bbd9df3f7: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-        -   Entity:
-                Id: a5d8b38c-6dc9-467b-8401-63634a4fe0aa
-                Name: Estatua (0)
-                Components:
-                    c913bdc152810c2cf6493604d43210e1: !Terracota.Juego.ControladorEstatua,Terracota
-                        Id: 537c2030-78b9-4c2b-9fc4-e6a82c6b0aad
-                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
-                        Id: 099382e8-230a-4c63-8aef-3e5527ca997d
-                        Position: {X: 0.0, Y: 0.9999978, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 2.0, Z: 1.0}
-                        Children: {}
-                    7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
-                        Id: 725fe662-80bd-44f5-83c8-418c35f0ee57
-                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
-                        Materials: {}
-                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
-                        Id: df924237-8f2a-4f85-a663-2e36302b30c8
-                        CanSleep: false
-                        Restitution: 0.2
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: false
-                        Mass: 200.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.1
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            bb7635abb649633b6dc624c179f90578: !BoxColliderShapeDesc
                                 Is2D: false
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -2142,8 +2102,8 @@ Hierarchy:
                 Id: dafedaff-60de-4db7-892f-20156c1334a9
                 Name: Estatua (2)
                 Components:
-                    c913bdc152810c2cf6493604d43210e1: !Terracota.Juego.ControladorEstatua,Terracota
-                        Id: 14b11408-4ce0-4e70-bec8-6befe3029c72
+                    c913bdc152810c2cf6493604d43210e1: !Terracota.ControladorEstatua,Terracota
+                        Id: 5dea6975-a398-429e-891e-6f6bc2aaef85
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
                         Id: 016c8744-51ce-436d-b603-e299baebbdae
                         Position: {X: 5.787402, Y: 0.9999978, Z: 0.41023386}
@@ -2582,8 +2542,8 @@ Hierarchy:
                 Id: f6efc6bf-8813-4b69-a19a-bdfc3cc34bc4
                 Name: Estatua (1)
                 Components:
-                    c913bdc152810c2cf6493604d43210e1: !Terracota.Juego.ControladorEstatua,Terracota
-                        Id: bda1b465-268e-4a0c-9d5f-19bad8275859
+                    c913bdc152810c2cf6493604d43210e1: !Terracota.ControladorEstatua,Terracota
+                        Id: 7e8bd926-1f9c-441b-aaf7-dd658bbcb971
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
                         Id: a2489efb-46f5-458f-8409-c2c98d84bdc9
                         Position: {X: 0.033937335, Y: 0.9999978, Z: 10.517452}
