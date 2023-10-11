@@ -22,32 +22,29 @@ public class ControladorCañon : SyncScript
     public Prefab bala;
     public Prefab metralla;
 
-    private bool active;
+    private bool activo;
 
     public override void Start()
     {
-        // Turnos
-        active = true;
+
     }
 
     public override void Update()
     {
-        if (!active)
+        if (!activo)
             return;
 
         if (Input.HasMouse)
             MoverCañónPC();
         else
             MoverCañónMóvil();
-
-        // pruebas
-        if (Input.IsKeyPressed(Keys.Z))
-            Disparar(TipoProyectil.bala);
-
-        if (Input.IsKeyPressed(Keys.X))
-            Disparar(TipoProyectil.metralla);
     }
-    
+
+    public void Activar(bool activar)
+    {
+        activo = activar;
+    }
+
     private void MoverCañónPC()
     {
         if (!Input.IsMouseButtonDown(MouseButton.Left))
@@ -65,13 +62,13 @@ public class ControladorCañon : SyncScript
 
     }
 
-    private void Disparar(TipoProyectil tipoProyectil)
+    public void Disparar(TipoProyectil tipoProyectil)
     {
         var aleatorio = new Random();
         
         switch (tipoProyectil)
         {
-            case TipoProyectil.bala:
+            case TipoProyectil.bola:
                 var nuevaBala = bala.Instantiate()[0];
                 nuevaBala.Transform.Position = origenProyectil.Transform.WorldMatrix.TranslationVector;
                 nuevaBala.Transform.RotationEulerXYZ = new Vector3(aleatorio.Next(0, 360), aleatorio.Next(0, 360), aleatorio.Next(0, 360));
