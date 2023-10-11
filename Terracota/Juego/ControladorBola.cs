@@ -22,8 +22,14 @@ public class ControladorBola : AsyncScript
 
         while (Game.IsRunning)
         {
-            await cuerpo.NewCollision();
-            colisiones++;
+            var colisión = await cuerpo.NewCollision();
+
+            // Metralla con metralla no cuenta como colisión
+            if ((colisión.ColliderA == cuerpo && colisión.ColliderB.Entity.Get<ControladorBola>() == null) ||
+               (colisión.ColliderB == cuerpo && colisión.ColliderA.Entity.Get<ControladorBola>() == null))
+            {
+                colisiones++;
+            }
             
             // Evita colisiones innesesarias
             if (colisiones >= maxColisiones)
