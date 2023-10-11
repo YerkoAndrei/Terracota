@@ -43,5 +43,33 @@ public class SistemaAnimación : StartupScript
         if (alFinal != null)
             alFinal.Invoke();
     }
+
+    private async Task MoverCámara(TransformComponent objetivo)
+    {
+        float duraciónLerp = 1.5f;
+        float tiempoLerp = 0;
+        float tiempo = 0;
+
+        var posiciónInicial = cámara.Position;
+        var rotaciónInicial = cámara.Rotation;
+
+        var posiciónObjetivo = objetivo.Position;
+        var rotaciónObjetivo = objetivo.Rotation;
+
+        while (tiempoLerp < duraciónLerp)
+        {
+            tiempo = tiempoLerp / duraciónLerp;
+
+            cámara.Position = Vector3.Lerp(posiciónInicial, posiciónObjetivo, tiempo);
+            cámara.Rotation = Quaternion.Lerp(rotaciónInicial, rotaciónObjetivo, tiempo);
+
+            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            await Script.NextFrame();
+        }
+
+        // Fin
+        cámara.Position = posiciónObjetivo;
+        cámara.Rotation = rotaciónObjetivo;
+    }
     */
 }

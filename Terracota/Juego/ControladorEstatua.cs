@@ -4,7 +4,7 @@ using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
 
-namespace Terracota.Juego;
+namespace Terracota;
 
 public class ControladorEstatua : AsyncScript
 {
@@ -36,14 +36,14 @@ public class ControladorEstatua : AsyncScript
         }
     }
 
+    // PENDIENTE: nada de esto funciona
     private async Task VerificarÁngulo()
     {
         while (estatua.WorldMatrix.TranslationVector != posiciónAnterior)
         {
-            // PENDIENTE: esto no funciona, DecomposeXYZ no es lo del editor
             // Verifica rotación respecto al suelo
-            estatua.UpdateWorldMatrix();
-            estatua.WorldMatrix.DecomposeXYZ(out var rotación);
+            estatua.UpdateLocalMatrix();
+            var rotación = estatua.RotationEulerXYZ;
 
             if (CalcularRotación(rotación.X) > 70 || CalcularRotación(rotación.Z) > 70)
             {
@@ -72,6 +72,6 @@ public class ControladorEstatua : AsyncScript
     private void DesactivarEstatua()
     {
         activo = false;
-        Console.WriteLine();
+        Console.WriteLine("me morí");
     }
 }

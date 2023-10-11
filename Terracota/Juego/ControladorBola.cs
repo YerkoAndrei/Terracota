@@ -3,25 +3,28 @@ using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
 
-namespace Terracota.Juego;
+namespace Terracota;
+using static Constantes;
 
-public class ControladorBala : AsyncScript
+public class ControladorBola : AsyncScript
 {
     public int maxColisiones;
 
     private int colisiones;
+    private bool destruyendo;
 
     public override async Task Execute()
     {
         var cuerpo = Entity.Get<RigidbodyComponent>();
 
-        // PENDIENTE: destruir por tiempo
+        // Tiempo de vida
+        ContarVida();
 
         while (Game.IsRunning)
         {
             await cuerpo.NewCollision();
             colisiones++;
-
+            
             // Evita colisiones innesesarias
             if (colisiones >= maxColisiones)
                 await Destruir();
@@ -30,8 +33,17 @@ public class ControladorBala : AsyncScript
         }
     }
 
+    private async Task ContarVida()
+    {
+        await Task.Delay(duraciónTurno);
+        await Destruir();
+    }
+
     private async Task Destruir()
     {
+        if (destruyendo) return;
+        destruyendo = true;
+
         float duraciónLerp = 1;
         float tiempoLerp = 0;
         float tiempo = 0;

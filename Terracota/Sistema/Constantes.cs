@@ -2,6 +2,8 @@
 
 public static class Constantes
 {
+    public static int duraciónTurno = 4000;
+
     public enum TipoJugador
     {
         anfitrión,
@@ -10,7 +12,7 @@ public static class Constantes
 
     public enum TipoProyectil
     {
-        bala,
+        bola,
         metralla
     }
 }
