@@ -18,8 +18,6 @@ public class ControladorEstatua : AsyncScript
     private Vector3 rotaciónAnterior;
 
     private bool activo;
-    private float contador;
-    private float tiempoCaída;
 
     public override async Task Execute()
     {
@@ -29,10 +27,7 @@ public class ControladorEstatua : AsyncScript
         estatua = Entity.Transform;
         rotaciónAnterior = estatua.RotationEulerXYZ;
 
-        tiempoCaída = 3;
-        contador = tiempoCaída;
         activo = true;
-
         while (Game.IsRunning)
         {
             // Verifica ángulo después de una colisión
@@ -46,35 +41,28 @@ public class ControladorEstatua : AsyncScript
         }
     }
 
+    // PENDIENTE: inestable
     private async Task VerificarÁngulo()
     {
-        while (estatua.RotationEulerXYZ != rotaciónAnterior && contador > 0 && activo)
+        // Espera a que se quede quieto
+        while (estatua.RotationEulerXYZ != rotaciónAnterior)
         {
-            // Verifica rotación respecto al suelo
-            estatua.UpdateLocalMatrix();
-            var rotación = estatua.RotationEulerXYZ;
-
-            // PENDIENTE: falsos positivos, no se cumplen los 3 segundos
-            if (CalcularRotación(rotación.X) > 80 || CalcularRotación(rotación.Z) > 80)
-            {
-                // Debe estar cierto tiempo en el suelo para que tome en cuenta
-                contador -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
-                if (contador <= tiempoCaída)
-                    DesactivarEstatua();
-            }
-            
             rotaciónAnterior = estatua.RotationEulerXYZ;
             await Script.NextFrame();
         }
-        contador = tiempoCaída;
+
+        // Verifica rotación
+        estatua.UpdateLocalMatrix();
+        if (CalcularRotación(estatua.RotationEulerXYZ.X) > 80 || CalcularRotación(estatua.RotationEulerXYZ.Z) > 80)
+            DesactivarEstatua();
     }
-    
+
     private float CalcularRotación(float ángulo)
     {
         var absoluto = MathF.Abs(MathUtil.RadiansToDegrees(ángulo));
 
-        if (absoluto > 270)
-            return MathF.Abs(absoluto - 360);
+        if (absoluto > 180)
+            return MathF.Abs(absoluto - 180);
         else
             return absoluto;
     }
