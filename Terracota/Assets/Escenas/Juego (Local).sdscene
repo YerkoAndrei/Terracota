@@ -7,6 +7,7 @@ Offset: {X: 0.0, Y: 0.0, Z: 0.0}
 Hierarchy:
     RootParts:
         - ref!! 017e0fa5-95bb-4f5e-9130-738e96c92a22
+        - ref!! 02355854-c833-4889-9ca9-258050f1b1e5
         - ref!! b813ba7f-cafe-4e28-b38f-053a088e2a76
         - ref!! 521124b3-1212-4d82-a5d0-6364d258afcf
         - ref!! 62e1c01a-f526-4550-8c96-f5959d6622b6
@@ -29,6 +30,30 @@ Hierarchy:
                         "cañónAnfitrión": ref!! d0aa2221-2ef9-443d-a853-fad729532d35
                         "cañónHuesped": ref!! 3e38968f-7a3a-4bfb-8eb9-83e0abd2f74d
                         "ejeCámara": ref!! 215294be-ea30-42ae-aa9d-646ec7a45d55
+                        controladorInterfaz: ref!! 5af9dbe3-239a-4e0f-b163-6a2e7576fd52
+        -   Entity:
+                Id: 02355854-c833-4889-9ca9-258050f1b1e5
+                Name: Juego
+                Components:
+                    70ef2b96dc5fa7fbc693fdbbf72fe5c5: !Terracota.ControladorInterfaz,Terracota
+                        Id: 5af9dbe3-239a-4e0f-b163-6a2e7576fd52
+                        controladorPartida: ref!! 8467c665-6f6a-4e41-8353-b93fb0b8b0b1
+                        spriteBola: d681f95d-d384-43f3-b287-8df74a534497:Texturas/Interfaz/Bola
+                        spriteMetralla: 017a6458-410b-4810-9447-3254c0c8db29:Texturas/Interfaz/Metralla
+                        "spriteAnfitrión": "f02ff77d-c4ca-486e-86a5-6f67d3fee235:Texturas/Interfaz/Anfitrión"
+                        spriteHuesped: bb3b4f3b-88c6-46e2-91a1-7695c6e079e1:Texturas/Interfaz/Huesped
+                    d9134663cf65c4ff1e2f051b273a0936: !TransformComponent
+                        Id: 973c3c82-a892-4ee0-914a-36ffe7ff1aa7
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1a24c41704f8422b77d7625af2a028f5: !UIComponent
+                        Id: 8df76c69-40d2-4800-87ff-e93a3a59f8f3
+                        Page: cbaa0158-6796-41f4-a5f5-a699458ca406:Interfaz/Juego
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.28, Y: 0.72, Z: 1.0}
+                        RenderGroup: Group31
         -   Folder: null
             Entity:
                 Id: 02a16f60-38e0-4350-8b40-54e8bfe45f42
@@ -38,14 +63,15 @@ Hierarchy:
                         Id: 318acd90-ebdb-4980-8da8-213b9a5cdff3
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
                         Id: e1413d3c-336c-4177-8535-37c0063c9b2f
-                        Position: {X: -0.06319588, Y: 1.1858903, Z: 8.554164}
+                        Position: {X: -0.06319588, Y: 1.1858903, Z: 8.984944}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 2.0, Z: 1.0}
                         Children: {}
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: 672964ab-f34a-4809-940d-b5a4b1ad475e
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
-                        Materials: {}
+                        Materials:
+                            44bf77c0dd38dd8c613e19a818b631a9~0: d4be94e3-4a98-4069-9b66-aea5a0a4da3b:Materiales/Dorado
                     a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
                         Id: bda36f92-e79f-465e-9dff-12599ed3283c
                         CanSleep: false
@@ -216,14 +242,13 @@ Hierarchy:
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                             Shadow:
                                 Enabled: true
-                                Filter: !LightShadowMapFilterTypePcf
-                                    FilterSize: Filter5x5
-                                Size: Large
+                                Filter: !LightShadowMapFilterTypePcf {}
+                                Size: XLarge
                                 DepthRange: {}
                                 PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
                                 ComputeTransmittance: false
                                 BiasParameters: {}
-                        Intensity: 20.0
+                        Intensity: 10.0
         -   Entity:
                 Id: 16ded33c-35d1-43e1-95bc-751bc1c446e2
                 Name: Cube 8
@@ -449,7 +474,8 @@ Hierarchy:
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: e969484c-6aeb-4a9f-bcc7-902e60731a1b
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
-                        Materials: {}
+                        Materials:
+                            a7a9597a9e01146e63855b74af586558~0: d4be94e3-4a98-4069-9b66-aea5a0a4da3b:Materiales/Dorado
                     a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
                         Id: 5c034d03-7430-4513-9285-992d3676b354
                         CanSleep: false
@@ -659,7 +685,8 @@ Hierarchy:
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: 287cb533-7685-4182-9cf7-f6495c84c10a
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
-                        Materials: {}
+                        Materials:
+                            86b1c6e78fd6708e93f06702702b6909~0: d4be94e3-4a98-4069-9b66-aea5a0a4da3b:Materiales/Dorado
                     a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
                         Id: e1bd98a5-3ae4-4e66-a731-db0a1f36421c
                         CanSleep: false
@@ -1653,7 +1680,8 @@ Hierarchy:
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: b231746f-14c8-459b-9111-1dde28695f97
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
-                        Materials: {}
+                        Materials:
+                            a81956b20af7619089a15c81a1253706~0: d4be94e3-4a98-4069-9b66-aea5a0a4da3b:Materiales/Dorado
                     a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
                         Id: 48e81466-4424-44c5-8aa1-8ccd83705091
                         CanSleep: false
@@ -2017,7 +2045,8 @@ Hierarchy:
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: bf47b0d5-73e7-4747-9e01-9623fa8b5a8e
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
-                        Materials: {}
+                        Materials:
+                            8f405dc7b036f89eccd4a352f9eab4d3~0: d4be94e3-4a98-4069-9b66-aea5a0a4da3b:Materiales/Dorado
                     a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
                         Id: 75cb2bd5-5df0-43fc-83d1-50e3df7b9fcf
                         CanSleep: false
@@ -2081,7 +2110,8 @@ Hierarchy:
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: eaa9bb6f-a492-4143-876f-1203f2a03552
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
-                        Materials: {}
+                        Materials:
+                            fc1e616ce34e036c541ba94678111167~0: d4be94e3-4a98-4069-9b66-aea5a0a4da3b:Materiales/Dorado
                     a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
                         Id: 09fd805c-bb7f-49ce-ad74-0a3d6075d080
                         CanSleep: false

@@ -13,34 +13,73 @@ public class ControladorPartidaLocal : AsyncScript
 
     public TransformComponent ejeCámara;
 
+    public ControladorInterfaz controladorInterfaz;
+
     private ControladorCañon cañónActual;
-    private TipoJugador turnoJugador;
     private bool cambiandoTurno;
+
+    private TipoJugador turnoJugador;
+    private TipoProyectil proyectilAnfitrión;
+    private TipoProyectil proyectilHuesped;
 
     public override async Task Execute()
     {
+        // Predeterminado
         cañónAnfitrión.Activar(true);
         cañónHuesped.Activar(false);
 
         turnoJugador = TipoJugador.anfitrión;
         cañónActual = cañónAnfitrión;
 
+        proyectilAnfitrión = TipoProyectil.bola;
+        proyectilHuesped = TipoProyectil.bola;
+
         while (Game.IsRunning)
         {
-            // pruebas
-            if (Input.IsKeyPressed(Keys.Z) && !cambiandoTurno)
+            if (Input.IsKeyPressed(Keys.Space) && !cambiandoTurno)
             {
-                cañónActual.Disparar(TipoProyectil.bola);
+                Disparar();
                 CambiarTurno();
             }
-
-            if (Input.IsKeyPressed(Keys.X) && !cambiandoTurno)
-            {
-                cañónActual.Disparar(TipoProyectil.metralla);
-                CambiarTurno();
-            }
-            
             await Script.NextFrame();
+        }
+    }
+
+    private void Disparar()
+    {
+        if (turnoJugador == TipoJugador.anfitrión)
+            cañónActual.Disparar(proyectilAnfitrión);
+        else
+            cañónActual.Disparar(proyectilHuesped);
+    }
+
+    public TipoProyectil CambiarProyectil()
+    {
+        if (turnoJugador == TipoJugador.anfitrión)
+        {
+            switch (proyectilAnfitrión)
+            {
+                case TipoProyectil.bola:
+                    proyectilAnfitrión = TipoProyectil.metralla;
+                    break;
+                case TipoProyectil.metralla:
+                    proyectilAnfitrión = TipoProyectil.bola;
+                    break;
+            }
+            return proyectilAnfitrión;
+        }
+        else
+        {
+            switch (proyectilHuesped)
+            {
+                case TipoProyectil.bola:
+                    proyectilHuesped = TipoProyectil.metralla;
+                    break;
+                case TipoProyectil.metralla:
+                    proyectilHuesped = TipoProyectil.bola;
+                    break;
+            }
+            return proyectilHuesped;
         }
     }
 
@@ -56,7 +95,10 @@ public class ControladorPartidaLocal : AsyncScript
             cañónActual = cañónHuesped;
 
             turnoJugador = TipoJugador.huesped;
+
+            controladorInterfaz.PausarInterfaz();
             await MoverCámara(Quaternion.RotationY(MathUtil.DegreesToRadians(-180)));
+            controladorInterfaz.CambiarInterfaz(turnoJugador, proyectilHuesped);
         }
         else
         {
@@ -65,7 +107,10 @@ public class ControladorPartidaLocal : AsyncScript
             cañónActual = cañónAnfitrión;
 
             turnoJugador = TipoJugador.anfitrión;
+
+            controladorInterfaz.PausarInterfaz();
             await MoverCámara(Quaternion.RotationY(MathUtil.DegreesToRadians(0)));
+            controladorInterfaz.CambiarInterfaz(turnoJugador, proyectilAnfitrión);
         }
     }
 
