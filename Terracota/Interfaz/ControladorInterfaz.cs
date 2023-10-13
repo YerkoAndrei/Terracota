@@ -28,6 +28,7 @@ public class ControladorInterfaz : StartupScript
 
     private Grid gridGanador;
     private TextBlock txtGanador;
+    private ImageElement imgGanador;
     private ImageElement imgTurno;
 
     private Button btnProyectil;
@@ -45,6 +46,7 @@ public class ControladorInterfaz : StartupScript
 
         gridGanador = página.RootElement.FindVisualChildOfType<Grid>("Ganador");
         txtGanador = página.RootElement.FindVisualChildOfType<TextBlock>("txtGanador");
+        imgGanador = página.RootElement.FindVisualChildOfType<ImageElement>("imgGanador");
         imgTurno = página.RootElement.FindVisualChildOfType<ImageElement>("imgTurno");
 
         btnProyectil = página.RootElement.FindVisualChildOfType<Button>("btnProyectil");
@@ -166,9 +168,11 @@ public class ControladorInterfaz : StartupScript
         switch (jugador)
         {
             case TipoJugador.anfitrión:
+                imgGanador.Source = ObtenerSprite(spriteAnfitrión);
                 txtGanador.Text = "Ganador: " + "Anfitrión";
                 break;
             case TipoJugador.huesped:
+                imgGanador.Source = ObtenerSprite(spriteHuesped);
                 txtGanador.Text = "Ganador: " + "Huesped";
                 break;
         }
