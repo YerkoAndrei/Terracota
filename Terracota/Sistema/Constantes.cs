@@ -2,7 +2,7 @@
 
 public static class Constantes
 {
-    public static int duraciónTurno = 4000;
+    public static int duraciónTurno = 3000;
 
     public enum TipoJugador
     {
