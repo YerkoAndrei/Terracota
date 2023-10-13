@@ -38,6 +38,7 @@ Hierarchy:
                     70ef2b96dc5fa7fbc693fdbbf72fe5c5: !Terracota.ControladorInterfaz,Terracota
                         Id: 5af9dbe3-239a-4e0f-b163-6a2e7576fd52
                         controladorPartida: ref!! 8467c665-6f6a-4e41-8353-b93fb0b8b0b1
+                        escenaJuego: af761eff-0def-4e64-9185-a183866d2296:Escenas/Juego (Local)
                         spriteBola: d681f95d-d384-43f3-b287-8df74a534497:Texturas/Interfaz/Bola
                         spriteMetralla: 017a6458-410b-4810-9447-3254c0c8db29:Texturas/Interfaz/Metralla
                         "spriteAnfitrión": "f02ff77d-c4ca-486e-86a5-6f67d3fee235:Texturas/Interfaz/Anfitrión"
@@ -61,6 +62,7 @@ Hierarchy:
                 Components:
                     a7f8c63f837089ea12c8514b9dc37a45: !Terracota.ControladorEstatua,Terracota
                         Id: 318acd90-ebdb-4980-8da8-213b9a5cdff3
+                        jugador: "anfitrión"
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
                         Id: e1413d3c-336c-4177-8535-37c0063c9b2f
                         Position: {X: -0.06319588, Y: 1.1858903, Z: 8.984944}
@@ -465,6 +467,7 @@ Hierarchy:
                 Components:
                     218eaebcd0a07cad5ce0a0eabe68e189: !Terracota.ControladorEstatua,Terracota
                         Id: 5f16b8ac-1fcb-40ac-be64-75be4de7f566
+                        jugador: "anfitrión"
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
                         Id: 2ccdc71e-3b0c-4986-b1ed-3d169213a805
                         Position: {X: -7.292133, Y: 0.9999978, Z: 6.5164275}
@@ -676,6 +679,7 @@ Hierarchy:
                 Components:
                     c913bdc152810c2cf6493604d43210e1: !Terracota.ControladorEstatua,Terracota
                         Id: 6c11a747-5d3c-46dd-8cbc-764cba7463d1
+                        jugador: huesped
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
                         Id: ade90ed7-4c47-448f-9875-a9dc3f75a23a
                         Position: {X: -0.0044412613, Y: 0.9999978, Z: 0.4229741}
@@ -1671,6 +1675,7 @@ Hierarchy:
                 Components:
                     b6a83b2c531f74274f2441a8ff1c0d7b: !Terracota.ControladorEstatua,Terracota
                         Id: e15ea477-1057-41ba-967c-308ed71a1ac9
+                        jugador: "anfitrión"
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
                         Id: 156af1b5-7939-46fd-973f-b304bd0295f4
                         Position: {X: 3.976952, Y: 0.9999978, Z: 6.279701}
@@ -2036,6 +2041,7 @@ Hierarchy:
                 Components:
                     c913bdc152810c2cf6493604d43210e1: !Terracota.ControladorEstatua,Terracota
                         Id: c08f7d28-d3c9-44ed-a646-4aac26b741c1
+                        jugador: huesped
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
                         Id: 7c26c23d-b682-40a5-a177-fee35d138140
                         Position: {X: -7.5052786, Y: 0.9999978, Z: -0.59157526}
@@ -2101,6 +2107,7 @@ Hierarchy:
                 Components:
                     c913bdc152810c2cf6493604d43210e1: !Terracota.ControladorEstatua,Terracota
                         Id: b42addc9-af42-4dca-9014-b6d9bde32897
+                        jugador: huesped
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
                         Id: 2fc24a1d-899a-421f-ad31-ee54fd86ead0
                         Position: {X: 5.787402, Y: 0.9999978, Z: 0.41023386}

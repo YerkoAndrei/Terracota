@@ -6,6 +6,7 @@ public static class Constantes
 
     public enum TipoJugador
     {
+        nada,
         anfitrión,
         huesped
     }
@@ -14,5 +15,12 @@ public static class Constantes
     {
         bola,
         metralla
+    }
+
+    public enum Estatua
+    {
+        chimpancé,
+        orangután,
+        gorila
     }
 }

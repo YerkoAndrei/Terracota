@@ -5,6 +5,7 @@ using Stride.Engine;
 
 namespace Terracota;
 using static Constantes;
+using static Terracota.Constantes;
 
 public class ControladorPartidaLocal : AsyncScript
 {
@@ -22,6 +23,12 @@ public class ControladorPartidaLocal : AsyncScript
     private TipoProyectil proyectilAnfitrión;
     private TipoProyectil proyectilHuesped;
 
+    private int estatuasAnfitrión;
+    private int estatuasHuesped;
+    private int maxEstatuas;
+
+    private bool partidaActiva;
+
     public override async Task Execute()
     {
         // Predeterminado
@@ -34,7 +41,10 @@ public class ControladorPartidaLocal : AsyncScript
         proyectilAnfitrión = TipoProyectil.bola;
         proyectilHuesped = TipoProyectil.bola;
 
-        while (Game.IsRunning)
+        maxEstatuas = 3;
+
+        partidaActiva = true;
+        while (Game.IsRunning && partidaActiva)
         {
             if (Input.IsKeyPressed(Keys.Space) && !cambiandoTurno)
             {
@@ -88,6 +98,9 @@ public class ControladorPartidaLocal : AsyncScript
         cambiandoTurno = true;
         await Task.Delay(duraciónTurno);
 
+        if (!partidaActiva)
+            return;
+
         if (turnoJugador == TipoJugador.anfitrión)
         {
             cañónAnfitrión.Activar(false);
@@ -112,6 +125,47 @@ public class ControladorPartidaLocal : AsyncScript
             await MoverCámara(Quaternion.RotationY(MathUtil.DegreesToRadians(0)));
             controladorInterfaz.CambiarInterfaz(turnoJugador, proyectilAnfitrión);
         }
+    }
+
+    public void DesactivarEstatua(TipoJugador jugador)
+    {
+        if (jugador == TipoJugador.anfitrión)
+        {
+            controladorInterfaz.RestarAnfitrión(estatuasAnfitrión);
+            estatuasAnfitrión++;
+        }
+        else
+        {
+            controladorInterfaz.RestarHuesped(estatuasHuesped);
+            estatuasHuesped++;
+        }
+        VerificarPartida();
+    }
+
+    // PENDIENTE: Esto rompe el juego
+    private void VerificarPartida()
+    {
+        var ganador = TipoJugador.nada;
+
+        if (estatuasAnfitrión >= maxEstatuas)
+            ganador = TipoJugador.huesped;
+        else if(estatuasHuesped >= maxEstatuas)
+            ganador = TipoJugador.anfitrión;
+
+        if (ganador != TipoJugador.nada)
+        {
+            partidaActiva = false;
+            //MirarGanador(ganador);
+            controladorInterfaz.MostrarGanador(ganador);
+        }
+    }
+
+    private async void MirarGanador(TipoJugador ganador)
+    {
+        if (ganador == TipoJugador.anfitrión && turnoJugador == TipoJugador.huesped)
+            await MoverCámara(Quaternion.RotationY(MathUtil.DegreesToRadians(0)));
+        if (ganador == TipoJugador.huesped && turnoJugador == TipoJugador.anfitrión)
+            await MoverCámara(Quaternion.RotationY(MathUtil.DegreesToRadians(-180)));
     }
 
     // PENDIENTE: mejorar movimiento cuando entienda mejor las rotaciones

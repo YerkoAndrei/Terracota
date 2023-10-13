@@ -171,6 +171,22 @@ Hierarchy:
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
         -   UIElement: !TextBlock
+                Id: 7052a2c7-e47b-473f-8824-7106dde1f7d6
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 600.0
+                Height: 50.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtGanador
+                Text: 'Ganador:'
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                TextSize: 40.0
+                TextColor: {R: 0, G: 0, B: 0, A: 255}
+                TextAlignment: Center
+        -   UIElement: !TextBlock
                 Id: 7358cc6d-be98-462f-b60d-bbb234e9950f
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
@@ -211,6 +227,22 @@ Hierarchy:
                 MouseOverImage: !SpriteFromTexture
                     Texture: "03c66b25-d2c7-4121-86d9-4e5f7b912b87:Texturas/Círculo"
                     Center: {X: 0.0, Y: 0.0}
+        -   UIElement: !ImageElement
+                Id: 899c184c-c358-4627-a209-c58038292748
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Opacity: 0.8
+                Width: 100.0
+                Height: 100.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: imgGanador
+                Source: !SpriteFromTexture
+                    Texture: 66d859f6-5dbf-4782-bf1c-a7fdc0806448:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 255, A: 255}
         -   UIElement: !Grid
                 Id: 9528b722-aba2-4485-bf3d-b7161869fe08
                 DependencyProperties: {}
@@ -224,6 +256,7 @@ Hierarchy:
                     3589f8a2bc2fb281032c9d819536f16b: !Grid ref!! d38f562e-4345-4b81-a0c4-b58d436c3623
                     252197d66a5784cd627d50b843d88321: !Grid ref!! 57cee361-e441-4644-8c13-048c3dcbc12a
                     eb3f3ddc467d927dd340e82798f55adb: !Grid ref!! 6a723e94-9032-4d61-9e51-50561ab9db5a
+                    1f94b202617473880cd1d942ab7533ea: !Grid ref!! f662c260-4aae-408d-ad1b-f409838a2e2a
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -364,3 +397,21 @@ Hierarchy:
                     Texture: "f02ff77d-c4ca-486e-86a5-6f67d3fee235:Texturas/Interfaz/Anfitrión"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
+        -   UIElement: !Grid
+                Id: f662c260-4aae-408d-ad1b-f409838a2e2a
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 600.0
+                Height: 100.0
+                VerticalAlignment: Top
+                Margin: {Left: 308.0, Right: 348.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: Ganador
+                Children:
+                    280f0448ca272f03133d9d936fd3d904: !ImageElement ref!! 899c184c-c358-4627-a209-c58038292748
+                    21035e51c43fa54933b98723b664bb60: !TextBlock ref!! 7052a2c7-e47b-473f-8824-7106dde1f7d6
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
