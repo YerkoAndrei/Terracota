@@ -38,6 +38,10 @@ RenderStages:
         Name: GBuffer
         EffectSlotName: GBuffer
         SortMode: !FrontToBackSortMode {}
+    901817354c1fb1455b7d42f281d60562*:
+        Id: 45dffc0d-b245-40a0-b901-1d171d872112
+        Name: UI
+        EffectSlotName: Main
 RenderFeatures:
     d8fb80b0e7995140a46bca8dc36ee8a2: !Stride.Rendering.MeshRenderFeature,Stride.Rendering
         RenderStageSelectors:
@@ -107,8 +111,13 @@ RenderFeatures:
     93933ad00d0c357d4915ad462cbfd04c: !Stride.Rendering.UI.UIRenderFeature,Stride.UI
         RenderStageSelectors:
             14a071694411235038a102ac3794bb4d: !Stride.Rendering.SimpleGroupToRenderStageSelector,Stride.Rendering
-                RenderStage: ref!! 0c18fde9-2246-4be3-99f4-124103292b0d
+                RenderGroup*: Group0, Group1, Group2, Group3, Group4, Group5, Group6, Group7, Group8, Group9, Group10, Group11, Group12, Group13, Group14, Group15, Group16, Group17, Group18, Group19, Group20, Group21, Group22, Group23, Group24, Group25, Group26, Group27, Group28, Group29, Group30
+                RenderStage*: ref!! 0c18fde9-2246-4be3-99f4-124103292b0d
                 EffectName: Test
+            d7e5d97f23388562f5501b9caed60c79*: !Stride.Rendering.SimpleGroupToRenderStageSelector,Stride.Rendering
+                RenderGroup: Group31
+                RenderStage: ref!! 45dffc0d-b245-40a0-b901-1d171d872112
+                EffectName: null
     9013eab3ea0ef6c98bf133b86c173d45: !Stride.Particles.Rendering.ParticleEmitterRenderFeature,Stride.Particles
         RenderStageSelectors:
             af1bd241305893ef8ff7952184e1cb0b: !Stride.Particles.Rendering.ParticleEmitterTransparentRenderStageSelector,Stride.Particles
@@ -130,7 +139,7 @@ SharedRenderers:
             87ff1d9cdd52418daf76385176a0e316: ref!! 3d855dbd-b230-43df-b6c4-ac34f47750a4
             5e059d4cc2db4ee8a1f28a40f4ac3ae8: ref!! df12b59e-a179-45d7-9847-3d60ccf0c0ab
         GBufferRenderStage: ref!! 9c8d8be1-b6fc-4cf5-9047-f1b2aed94d17
-        PostEffects: !PostProcessingEffects ref!! 86579c6a-454f-4aa1-98ec-234472c85d80
+        PostEffects*: !PostProcessingEffects ref!! 86579c6a-454f-4aa1-98ec-234472c85d80
         LightShafts: null
         VRSettings:
             Enabled: false
@@ -205,15 +214,27 @@ SharedRenderers:
     ee80a20a9bd99f2d70711114e15fe7ca: !Stride.Rendering.Compositing.DebugRenderer,Stride.Rendering
         Id: de501136-4ee7-4b36-8b5b-e67754f042c3
         DebugRenderStages: {}
-Game: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
-    Id: 76fe87cf-f574-4ad6-85b8-e9a9586be0e2
-    Camera: ref!! 9f373eee-c85c-45b0-9b02-82451f709476
-    Child: !Stride.Rendering.Compositing.SceneRendererCollection,Stride.Rendering
-        Id: 82568e46-92e7-421a-8dca-114a74e0cd69
-        Children:
-            d39c5ddbf8b7d5ca02bafb6496b1cc3c: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! 5aa54f67-d745-4edf-bd62-22592caae259
-            01d338078e9b21121ead0868932613dd: !Stride.Rendering.Compositing.DebugRenderer,Stride.Rendering ref!! de501136-4ee7-4b36-8b5b-e67754f042c3
-    RenderMask: All
+Game*: !Stride.Rendering.Compositing.SceneRendererCollection,Stride.Rendering
+    Id: 0f82b768-ae06-44b9-bd80-c7e82ab82e04
+    Children:
+        3954600b5bfacb982ec536cc3f095afe: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
+            Id: 9f9ebe98-de6b-44d1-afc8-e5bca249535b
+            Camera: ref!! 9f373eee-c85c-45b0-9b02-82451f709476
+            Child: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! 5aa54f67-d745-4edf-bd62-22592caae259
+            RenderMask: Group0, Group1, Group2, Group3, Group4, Group5, Group6, Group7, Group8, Group9, Group10, Group11, Group12, Group13, Group14, Group15, Group16, Group17, Group18, Group19, Group20, Group21, Group22, Group23, Group24, Group25, Group26, Group27, Group28, Group29, Group30
+        3c1007aa23b81248e1377430c9d539c4: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
+            Id: 9ffb25cd-f31e-461b-b3ec-1a42c6e86b30
+            Camera: ref!! 9f373eee-c85c-45b0-9b02-82451f709476
+            Child: !Stride.Rendering.Compositing.SingleStageRenderer,Stride.Rendering
+                Id: 94ae2a4c-3d9c-4f09-96ec-772790a9fd89
+                RenderStage: ref!! 45dffc0d-b245-40a0-b901-1d171d872112
+            RenderMask: Group31
 SingleView: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! 308699fb-6328-424e-9357-633dce9efd04
-Editor: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! 5aa54f67-d745-4edf-bd62-22592caae259
+Editor*: !Stride.Rendering.Compositing.SceneRendererCollection,Stride.Rendering
+    Id: c0120f52-cf13-4663-b84b-0329386e8960
+    Children:
+        7e8e8d3b1a6e9ee4f2305a782bd50ed8: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! 5aa54f67-d745-4edf-bd62-22592caae259
+        1d87ed15566bfb1f23061c9abc412bd2: !Stride.Rendering.Compositing.SingleStageRenderer,Stride.Rendering
+            Id: fbc7233e-2a5a-46c1-9e94-00722a836f82
+            RenderStage: ref!! 45dffc0d-b245-40a0-b901-1d171d872112
 BlockPositions: {}
