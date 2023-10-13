@@ -18,7 +18,7 @@ public static class Sistema
     {
         var sprite = ObtenerSprite(textura);
 
-        // Multiplicar por colores
+        // PENDIENTE: Multiplicar por colores
         botón.NotPressedImage = sprite;
         botón.PressedImage = sprite;
         botón.MouseOverImage = sprite;
