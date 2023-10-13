@@ -88,19 +88,29 @@ public class ControladorInterfaz : StartupScript
 
     public void PausarInterfaz()
     {
-        txtTurno.Text = string.Empty;
         txtProyectil.Text = string.Empty;
 
-        imgTurno.Visibility = Visibility.Hidden;
-        btnProyectil.Visibility = Visibility.Hidden;
         btnPausa.Visibility = Visibility.Hidden;
+        btnProyectil.Visibility = Visibility.Hidden;
 
         btnProyectil.CanBeHitByUser = false;
         btnPausa.CanBeHitByUser = false;
     }
 
+    public void ActivarTurno(bool activar)
+    {
+        if (activar)
+            imgTurno.Visibility = Visibility.Visible;
+        else
+        {
+            imgTurno.Visibility = Visibility.Hidden;
+            txtTurno.Text = string.Empty;
+        }
+    }
+
     public void CambiarInterfaz(TipoJugador jugador, TipoProyectil proyectil)
     {
+        ActivarTurno(false);
         CambiarTurno(jugador);
 
         imgTurno.Visibility = Visibility.Visible;
@@ -156,9 +166,10 @@ public class ControladorInterfaz : StartupScript
     public void MostrarGanador(TipoJugador jugador)
     {
         CambiarTurno(jugador);
+        ActivarTurno(true);
 
         gridGanador.Visibility = Visibility.Visible;
-        imgTurno.Visibility = Visibility.Visible;
+
         btnProyectil.Visibility = Visibility.Hidden;
         btnPausa.Visibility = Visibility.Visible;
 
