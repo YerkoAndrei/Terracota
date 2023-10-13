@@ -98,6 +98,7 @@ public class ControladorPartidaLocal : AsyncScript
         cambiandoTurno = true;
         controladorInterfaz.PausarInterfaz();
         await Task.Delay(duraciónTurno);
+        controladorInterfaz.ActivarTurno(false);
 
         if (!partidaActiva)
             return;
@@ -107,22 +108,21 @@ public class ControladorPartidaLocal : AsyncScript
 
         if (turnoJugador == TipoJugador.anfitrión)
         {
+            await MoverCámara(180, true);
+
             cañónHuesped.Activar(true);
             cañónActual = cañónHuesped;
 
             turnoJugador = TipoJugador.huesped;
-
-            await MoverCámara(-180);
             controladorInterfaz.CambiarInterfaz(turnoJugador, proyectilHuesped);
         }
         else
         {
+            await MoverCámara(0, true);
             cañónAnfitrión.Activar(true);
             cañónActual = cañónAnfitrión;
 
             turnoJugador = TipoJugador.anfitrión;
-
-            await MoverCámara(0);
             controladorInterfaz.CambiarInterfaz(turnoJugador, proyectilAnfitrión);
         }
     }
@@ -172,25 +172,31 @@ public class ControladorPartidaLocal : AsyncScript
     {
         // En caso de que pierda el que tiene el turno
         if (ganador == TipoJugador.anfitrión && turnoJugador == TipoJugador.huesped)
-            await MoverCámara(0);
+            await MoverCámara(0, true);
         if (ganador == TipoJugador.huesped && turnoJugador == TipoJugador.anfitrión)
-            await MoverCámara(-180);
+            await MoverCámara(180, true);
     }
 
-    // PENDIENTE: mejorar movimiento cuando entienda mejor las rotaciones
-    private async Task MoverCámara(float YObjetivo)
+    private async Task MoverCámara(float YObjetivo, bool derecha)
     {
-        float duraciónLerp = 1.5f;
+        float duraciónLerp = 1f;
         float tiempoLerp = 0;
         float tiempo = 0;
 
         var rotaciónInicial = ejeCámara.Rotation;
         var rotaciónObjetivo = Quaternion.RotationY(MathUtil.DegreesToRadians(YObjetivo));
 
+        // Ajusta dirección de movimiento
+        var direcciónObjetivo = rotaciónObjetivo;
+        if(derecha)
+            direcciónObjetivo = Quaternion.RotationY(MathUtil.DegreesToRadians(YObjetivo - 0.01f));
+        else
+            direcciónObjetivo = Quaternion.RotationY(MathUtil.DegreesToRadians(YObjetivo + 0.01f));
+
         while (tiempoLerp < duraciónLerp)
         {
             tiempo = tiempoLerp / duraciónLerp;
-            ejeCámara.Rotation = Quaternion.Lerp(rotaciónInicial, rotaciónObjetivo, tiempo);
+            ejeCámara.Rotation = Quaternion.Lerp(rotaciónInicial, direcciónObjetivo, tiempo);
 
             tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
             await Script.NextFrame();
