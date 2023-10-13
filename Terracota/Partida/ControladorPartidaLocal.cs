@@ -14,6 +14,7 @@ public class ControladorPartidaLocal : AsyncScript
     public TransformComponent ejeCámara;
 
     public ControladorInterfaz controladorInterfaz;
+    public ControladorCámara controladorCámara;
 
     private ControladorCañon cañónActual;
     private bool cambiandoTurno;
@@ -57,6 +58,8 @@ public class ControladorPartidaLocal : AsyncScript
 
     private void Disparar()
     {
+        controladorCámara.ActivarEfectoDisparo();
+
         if (turnoJugador == TipoJugador.anfitrión)
             cañónActual.Disparar(proyectilAnfitrión);
         else

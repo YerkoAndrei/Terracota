@@ -31,6 +31,7 @@ Hierarchy:
                         "cañónHuesped": ref!! 3e38968f-7a3a-4bfb-8eb9-83e0abd2f74d
                         "ejeCámara": ref!! 215294be-ea30-42ae-aa9d-646ec7a45d55
                         controladorInterfaz: ref!! 5af9dbe3-239a-4e0f-b163-6a2e7576fd52
+                        "controladorCámara": ref!! 2ddc581e-7adf-42aa-afab-88409cfd0e64
         -   Entity:
                 Id: 02355854-c833-4889-9ca9-258050f1b1e5
                 Name: Juego
@@ -1656,6 +1657,8 @@ Hierarchy:
                 Id: adc923ed-eaae-4693-bb70-d48943f97e8c
                 Name: "Cámara"
                 Components:
+                    6cae0bb4e717151a72d506dfef2a32c7: !Terracota.ControladorC%25C3%25A1mara,Terracota
+                        Id: 2ddc581e-7adf-42aa-afab-88409cfd0e64
                     712b2eb1c77a9868ac5cef0b07912892: !TransformComponent
                         Id: b3bb83f2-5020-438d-bdee-6242dd68d627
                         Position: {X: 0.0, Y: 8.0, Z: 25.0}
