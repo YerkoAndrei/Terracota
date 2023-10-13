@@ -10,12 +10,13 @@ public class ControladorBola : AsyncScript
 {
     public int maxColisiones;
 
-    private int colisiones;
+    private RigidbodyComponent cuerpo;
     private bool destruyendo;
+    private int colisiones;
 
     public override async Task Execute()
     {
-        var cuerpo = Entity.Get<RigidbodyComponent>();
+        cuerpo = Entity.Get<RigidbodyComponent>();
 
         // Tiempo de vida
         ContarVida();
@@ -65,6 +66,7 @@ public class ControladorBola : AsyncScript
         }
 
         // Fin
+        cuerpo.Enabled = false;
         SceneSystem.SceneInstance.RootScene.Entities.Remove(Entity);
     }
 }
