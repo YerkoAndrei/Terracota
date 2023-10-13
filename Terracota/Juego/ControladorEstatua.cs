@@ -1,15 +1,21 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
 
 namespace Terracota;
+using static Constantes;
 
 public class ControladorEstatua : AsyncScript
 {
+    public TipoJugador jugador;
+
+    private ControladorPartidaLocal controladorPartida;
+
     private TransformComponent estatua;
-    private Vector3 posiciónAnterior;
+    private Vector3 rotaciónAnterior;
 
     private bool activo;
     private float contador;
@@ -17,10 +23,11 @@ public class ControladorEstatua : AsyncScript
 
     public override async Task Execute()
     {
+        controladorPartida = SceneSystem.SceneInstance.RootScene.Entities.FirstOrDefault(e => e.Name == "ControladorPartida").Get<ControladorPartidaLocal>();
         var cuerpo = Entity.Get<RigidbodyComponent>();
 
         estatua = Entity.Transform;
-        posiciónAnterior = estatua.WorldMatrix.TranslationVector;
+        rotaciónAnterior = estatua.RotationEulerXYZ;
 
         tiempoCaída = 3;
         contador = tiempoCaída;
@@ -36,32 +43,32 @@ public class ControladorEstatua : AsyncScript
         }
     }
 
-    // PENDIENTE: nada de esto funciona
     private async Task VerificarÁngulo()
     {
-        while (estatua.WorldMatrix.TranslationVector != posiciónAnterior)
+        while (estatua.RotationEulerXYZ != rotaciónAnterior && contador > 0 && activo)
         {
             // Verifica rotación respecto al suelo
             estatua.UpdateLocalMatrix();
             var rotación = estatua.RotationEulerXYZ;
 
-            if (CalcularRotación(rotación.X) > 70 || CalcularRotación(rotación.Z) > 70)
+            // PENDIENTE: falsos positivos, no se cumplen los 3 segundos
+            if (CalcularRotación(rotación.X) > 80 || CalcularRotación(rotación.Z) > 80)
             {
                 // Debe estar cierto tiempo en el suelo para que tome en cuenta
                 contador -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
                 if (contador <= tiempoCaída)
                     DesactivarEstatua();
             }
-
-            posiciónAnterior = estatua.WorldMatrix.TranslationVector;
+            
+            rotaciónAnterior = estatua.RotationEulerXYZ;
             await Script.NextFrame();
         }
         contador = tiempoCaída;
     }
-
+    
     private float CalcularRotación(float ángulo)
     {
-        var absoluto = MathF.Abs(ángulo);
+        var absoluto = MathF.Abs(MathUtil.RadiansToDegrees(ángulo));
 
         if (absoluto > 270)
             return MathF.Abs(absoluto - 360);
@@ -72,6 +79,6 @@ public class ControladorEstatua : AsyncScript
     private void DesactivarEstatua()
     {
         activo = false;
-        Console.WriteLine("me morí");
+        controladorPartida.DesactivarEstatua(jugador);
     }
 }
