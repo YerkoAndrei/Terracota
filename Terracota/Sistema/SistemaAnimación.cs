@@ -10,7 +10,7 @@ public class SistemaAnimación : StartupScript
 
     public override void Start()
     {
-        Log.Warning("Log activado:");
+        //Log.Warning("Log activado:");
     }
 
     /*
