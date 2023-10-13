@@ -33,11 +33,14 @@ public class ControladorEstatua : AsyncScript
         contador = tiempoCaída;
         activo = true;
 
-        while (Game.IsRunning && activo)
+        while (Game.IsRunning)
         {
             // Verifica ángulo después de una colisión
-            await cuerpo.NewCollision();
-            await VerificarÁngulo();
+            if (activo)
+            {
+                await cuerpo.NewCollision();
+                await VerificarÁngulo();
+            }
 
             await Script.NextFrame();
         }
