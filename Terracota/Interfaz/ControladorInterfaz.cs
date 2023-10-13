@@ -158,9 +158,10 @@ public class ControladorInterfaz : StartupScript
         gridGanador.Visibility = Visibility.Visible;
         imgTurno.Visibility = Visibility.Visible;
         btnProyectil.Visibility = Visibility.Hidden;
-        btnPausa.Visibility = Visibility.Hidden;
+        btnPausa.Visibility = Visibility.Visible;
 
         btnProyectil.CanBeHitByUser = false;
+        btnPausa.CanBeHitByUser = true;
 
         switch (jugador)
         {
