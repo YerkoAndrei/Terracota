@@ -2,6 +2,7 @@
 using Stride.Core.Mathematics;
 using Stride.Input;
 using Stride.Engine;
+using Stride.Games;
 
 namespace Terracota;
 using static Constantes;
@@ -31,6 +32,9 @@ public class ControladorPartidaLocal : AsyncScript
 
     public override async Task Execute()
     {
+        //Game.Window.PreferredFullscreenSize = new Int2(1920, 1080);
+        //Game.Window.IsFullscreen = true;
+
         // Predeterminado
         cañónAnfitrión.Activar(true);
         cañónHuesped.Activar(false);
