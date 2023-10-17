@@ -12,7 +12,7 @@ Hierarchy:
         - ref!! 62e1c01a-f526-4550-8c96-f5959d6622b6
         - ref!! b813ba7f-cafe-4e28-b38f-053a088e2a76
         - ref!! d2c0a1c6-ba03-4c17-b57f-15b5efc31219
-        - ref!! fe7b3c9b-ada6-48f0-80f9-96e8c9aed995
+        - ref!! d7722097-8c07-42c8-a952-a7bc54f8fd7d
         - ref!! 187add89-ab40-4047-a7f5-294617942d41
     Parts:
         -   Folder: null
@@ -45,18 +45,6 @@ Hierarchy:
                         "ejeCámara": ref!! 215294be-ea30-42ae-aa9d-646ec7a45d55
                         controladorInterfaz: ref!! 5af9dbe3-239a-4e0f-b163-6a2e7576fd52
                         "controladorCámara": ref!! 2ddc581e-7adf-42aa-afab-88409cfd0e64
-        -   Folder: null
-            Entity:
-                Id: 01a3e8f4-1e21-45ed-a525-04e3451fd3a3
-                Name: Corto 5
-                Components:
-                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
-                        Id: 0896dbef-5273-44db-9060-87cd03ee1225
-                        Position: {X: 0.034790516, Y: 2.0, Z: 1.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            ab326f135d369e5d6e6e1086288f80a3: ref!! 3cdcbbcc-bd64-4201-99ea-f801d17a174b
         -   Entity:
                 Id: 02355854-c833-4889-9ca9-258050f1b1e5
                 Name: Juego
@@ -177,39 +165,6 @@ Hierarchy:
                                 Normal: {X: 0.0, Y: 1.0, Z: 0.0}
                                 Offset: 0.0
         -   Entity:
-                Id: 04f02044-04e4-4db1-8cc6-cd738158afd5
-                Name: Modelo Corto
-                Components:
-                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
-                        Id: fbbb523e-003e-4113-bbf1-a8d82d9afa84
-                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
-                        Id: c24a2e18-9fa4-448d-a7a8-3b411b9b9aee
-                        Model: 7e12a4ba-1b5b-4744-9a14-2d3c65bb6b70:Modelos/Corto/Corto
-                        Materials: {}
-                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
-                        Id: 2ecf4e00-008e-457a-801b-6bf06ebf4feb
-                        CanSleep: true
-                        Restitution: 0.2
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: false
-                        Mass: 100.0
-                        LinearDamping: 0.1
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
-                                Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/CortoColliderHull
-        -   Entity:
                 Id: 05d7be7c-0c7e-477a-af4a-a1461bf81a7d
                 Name: Modelo Estatua
                 Components:
@@ -218,7 +173,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.1, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            5398c2358d4e0330b562a6f7672c9788: ref!! 9d661e6c-e488-4404-beff-067ddb1b8117
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: ddfbd5ef-2e7e-4b01-8ea3-df9d0d7b2acf
                         Model: a74dcfbb-6d03-4fca-9735-28a4dbbe3914:Modelos/Mono/Mono
@@ -235,8 +191,8 @@ Hierarchy:
                         IsTrigger: false
                         IsKinematic: false
                         Mass: 400.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.1
+                        LinearDamping: 0.1
+                        AngularDamping: 0.0
                         OverrideGravity: false
                         Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
                         NodeName: null
@@ -272,17 +228,115 @@ Hierarchy:
                         Id: 64aad952-8611-4ef9-952f-c8f6f0d84c1d
                         Type: !LightSkybox
                             Skybox: 870c1df6-0b77-44c6-85ce-bda61c75f79c:Texturas/Skybox
-        -   Entity:
-                Id: 10e44965-fbb6-4791-87bd-f9c2a804e3de
-                Name: Corto 0
+        -   Folder: null
+            Entity:
+                Id: 08721fe2-a760-4056-944f-74afc2be05bd
+                Name: Largo 5
                 Components:
                     0eabf5bba933c7faa52215d1567d3275: !TransformComponent
-                        Id: 29b434a3-d12a-45bb-944b-455d94b2f58c
-                        Position: {X: -6.623024, Y: 1.0, Z: 3.0}
+                        Id: fb8e9b54-e4b3-48c8-a458-62324aea3d2d
+                        Position: {X: 5.3573046, Y: 1.0, Z: 5.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            ab326f135d369e5d6e6e1086288f80a3: ref!! fbbb523e-003e-4113-bbf1-a8d82d9afa84
+                            ab326f135d369e5d6e6e1086288f80a3: ref!! 73d79d8e-dffb-45b9-a465-c134feabfc9b
+        -   Entity:
+                Id: 0caac1b7-076e-4cdc-b1e2-77dc0b48797d
+                Name: Modelo Corto
+                Components:
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: 2e03a70c-7a91-44a6-b8c4-c4865107d640
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: 1b3f5648-874e-4943-aa45-984706c00014
+                        Model: 7e12a4ba-1b5b-4744-9a14-2d3c65bb6b70:Modelos/Corto/Corto
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: 4644b6f5-ab54-419d-92fc-43b82f26661a
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
+                                Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/CortoColliderHull
+        -   Folder: null
+            Entity:
+                Id: 0ce41cc8-2a39-40f3-bf63-b865009ff455
+                Name: Estatua 1
+                Components:
+                    989543ebf8561c02b507b715a2796bd7: !Terracota.ControladorEstatua,Terracota
+                        Id: 05d88082-1e57-4a47-ae5b-735d79d0bf6d
+                        jugador: huesped
+                        estatua: ref!! 70e177ce-2878-4d18-9873-c5e37faf9f06
+                        cabeza: ref!! 37e0ad10-bce9-4cce-97cd-e8e54664ea15
+                    1ff5b84f1e279da93224f2a5edcc3f59: !TransformComponent
+                        Id: 33f7dff2-beb6-452c-8691-1e9af3a6fdb7
+                        Position: {X: 0.0, Y: 0.0, Z: 3.0}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            b9a6de9d3e362d0511a1a20a34248d55: ref!! 70e177ce-2878-4d18-9873-c5e37faf9f06
+        -   Folder: null
+            Entity:
+                Id: 0e8d8b1f-ca94-4f02-b3d4-afe675e86020
+                Name: Corto 2
+                Components:
+                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
+                        Id: 3f50ea67-0bc0-43c4-af0a-2eb1426e971d
+                        Position: {X: -4.2837944, Y: 1.0, Z: 3.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            ab326f135d369e5d6e6e1086288f80a3: ref!! 608113dd-9118-46d0-a91b-698f6891da22
+        -   Entity:
+                Id: 11aa3ba8-9242-46bd-91e9-6767af6b7b2f
+                Name: Modelo Estatua
+                Components:
+                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
+                        Id: 21f9df01-a89e-4270-bba4-4eb128448bfc
+                        Position: {X: 0.0, Y: 0.1, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            49ac178f430575013f4470da0bea1a68: ref!! 91101bff-3b99-43bd-97c8-88028627f389
+                    7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
+                        Id: 6467e651-b046-4db8-94c2-7052f08cc5ea
+                        Model: a74dcfbb-6d03-4fca-9735-28a4dbbe3914:Modelos/Mono/Mono
+                        Materials:
+                            fb59f7268e0c02d5b1db8993b9a4569a~0: d4be94e3-4a98-4069-9b66-aea5a0a4da3b:Materiales/Dorado
+                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
+                        Id: c25fd210-a67a-4640-9c9e-9810e0ff0f82
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 400.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
+                                Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Mono/MonoColliderHull
         -   Entity:
                 Id: 133ac696-ed46-4e45-9ed6-2dab4f6fc97d
                 Name: "BaseCañon"
@@ -362,22 +416,6 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-        -   Folder: null
-            Entity:
-                Id: 186847ad-3d8d-4176-827a-34309e0162ee
-                Name: Estatua 2
-                Components:
-                    989543ebf8561c02b507b715a2796bd7: !Terracota.ControladorEstatua,Terracota
-                        Id: 34c9172e-5c1a-485e-bf99-db06b5490470
-                        jugador: huesped
-                        cuerpo: ref!! 19e669b3-f254-4168-8b6e-dcb1505a25fa
-                    1ff5b84f1e279da93224f2a5edcc3f59: !TransformComponent
-                        Id: 6d2693bb-a268-481c-a406-aaa89457bc31
-                        Position: {X: 4.8, Y: 0.0, Z: 6.5}
-                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            b9a6de9d3e362d0511a1a20a34248d55: ref!! 04fbf289-28dc-4d13-9e9d-42a6a8ddbc05
         -   Entity:
                 Id: 187add89-ab40-4047-a7f5-294617942d41
                 Name: Profiler
@@ -390,12 +428,24 @@ Hierarchy:
                         Children: {}
                     f7ac26501f17cd6383460a18d17a0180: !Terracota.GameProfiler,Terracota
                         Id: 82c8afeb-e52b-40a2-bc48-10b2f93b32c3
-                        Enabled: true
+                        Enabled: false
                         TextColor: {R: 0, G: 238, B: 0, A: 255}
                         RefreshTime: 500.0
                         SortingMode: ByTime
                         FilteringMode: Fps
                         ResultPage: 1
+        -   Folder: null
+            Entity:
+                Id: 19090f9f-4534-42e1-9342-403fb6ab095c
+                Name: Corto 1
+                Components:
+                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
+                        Id: df61d056-141a-4b55-ab1f-e8ff0b79ffc6
+                        Position: {X: -5.4884095, Y: 1.0, Z: 3.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            ab326f135d369e5d6e6e1086288f80a3: ref!! 579874d7-3261-4e22-a6fb-0c0cdf328051
         -   Entity:
                 Id: 19f1e7ad-53f5-4c0d-9810-0899394a2b1d
                 Name: Cilindro (0)
@@ -427,50 +477,60 @@ Hierarchy:
                         Materials:
                             cbff040f1491e8d845f5620040975dad~0: f9c1f927-9739-4a73-924f-ff2a79e97e84:Materiales/Verde
         -   Entity:
-                Id: 1cf199ef-1be8-428e-97be-d272f725a85d
-                Name: Modelo Corto
+                Id: 1c2de558-f104-4ac7-8811-c0872753434e
+                Name: Cabeza
                 Components:
-                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
-                        Id: aed3faa4-7467-4909-9688-3c9716c201a8
-                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                    aae717941d47dadafb07fc74e51b757a: !TransformComponent
+                        Id: 91101bff-3b99-43bd-97c8-88028627f389
+                        Position: {X: 0.0, Y: 1.7, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Scale: {X: 1.0, Y: 0.3, Z: 1.0}
                         Children: {}
-                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
-                        Id: 89a96c6d-36d4-44c4-8b7f-5b27007645a5
-                        Model: 7e12a4ba-1b5b-4744-9a14-2d3c65bb6b70:Modelos/Corto/Corto
-                        Materials: {}
-                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
-                        Id: d49911ce-bd5e-42f2-94f6-bccfb4753333
-                        CanSleep: true
-                        Restitution: 0.2
-                        Friction: 0.5
+                    a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
+                        Id: 57611872-0436-499c-90bb-fa455e28f0e9
+                        CanCollideWith: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
                         RollingFriction: 0.0
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: false
-                        Mass: 100.0
-                        LinearDamping: 0.1
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
                         AngularDamping: 0.0
                         OverrideGravity: false
                         Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
                         NodeName: null
                         ColliderShapes:
-                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
-                                Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/CortoColliderHull
+                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Folder: null
             Entity:
-                Id: 2075a92e-9872-411c-abe1-914e61427532
-                Name: Largo 4
+                Id: 1dc9d7fe-b561-4a7e-9092-99ea3888acde
+                Name: Corto 8
                 Components:
                     0eabf5bba933c7faa52215d1567d3275: !TransformComponent
-                        Id: 834dc5d4-34b1-4fe8-9502-8c4c5b7d4a20
-                        Position: {X: 4.9, Y: 0.0, Z: 5.0}
+                        Id: f052a7e3-2139-44bb-a7f8-d2bb49617209
+                        Position: {X: 6.5100994, Y: 0.0, Z: 5.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            ab326f135d369e5d6e6e1086288f80a3: ref!! 9df4f15e-d6f0-4e88-8061-87735ab2de75
+                            ab326f135d369e5d6e6e1086288f80a3: ref!! a18e467d-ba06-4464-b92d-deed1cfbc42e
+        -   Folder: null
+            Entity:
+                Id: 25f731bf-a11f-4046-98b9-a2108e9a2285
+                Name: Corto 7
+                Components:
+                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
+                        Id: 76c22a0d-d1b1-453e-b064-1abac88da5f7
+                        Position: {X: 5.8091054, Y: 2.0, Z: 5.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            ab326f135d369e5d6e6e1086288f80a3: ref!! d295745d-0069-4f08-8bab-4dff9f027e3c
         -   Entity:
                 Id: 26f1c020-7dba-432f-98b6-6ef078081b7b
                 Name: Modelo Estatua
@@ -480,7 +540,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.1, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            4bca3c07c9495a3d7c5bfd4d287fc7b9: ref!! 52ba679e-3b35-4aaf-bb84-c795534ff9f2
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: e62708de-e1fa-433d-91ec-f873daf099ca
                         Model: a74dcfbb-6d03-4fca-9735-28a4dbbe3914:Modelos/Mono/Mono
@@ -497,8 +558,8 @@ Hierarchy:
                         IsTrigger: false
                         IsKinematic: false
                         Mass: 400.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.1
+                        LinearDamping: 0.1
+                        AngularDamping: 0.0
                         OverrideGravity: false
                         Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
                         NodeName: null
@@ -506,16 +567,38 @@ Hierarchy:
                             4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
                                 Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Mono/MonoColliderHull
         -   Entity:
-                Id: 27e8ea4e-60fd-4689-a0bb-7745e062910b
-                Name: Largo 0
+                Id: 275790b7-53da-443a-b161-bf8906d5c088
+                Name: Modelo Largo
                 Components:
-                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
-                        Id: e79ad48c-c3ba-48ff-b5b9-64f3fdac5398
-                        Position: {X: -6.5205817, Y: 0.0, Z: 3.0}
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: efa6f55f-b47f-4c55-a314-f5c9fe0fab93
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            ab326f135d369e5d6e6e1086288f80a3: ref!! 2f490e8b-6a16-4d61-bf45-37ece2773766
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: 81db39d8-ac6e-44fa-8da6-6b01fc76658e
+                        Model: a4410e1e-9c23-4056-b962-51cfdae42906:Modelos/Largo/Largo
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: 99abf7d0-c874-4d01-882b-f96d24b007f0
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
+                                Shape: f937161a-f3cc-45e9-a90e-45e91ce953d0:Modelos/Largo/LargoColliderHull
         -   Entity:
                 Id: 2892c792-1ae8-4930-8445-045458885461
                 Name: Modelo Corto
@@ -549,18 +632,6 @@ Hierarchy:
                         ColliderShapes:
                             8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
                                 Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/CortoColliderHull
-        -   Folder: null
-            Entity:
-                Id: 28c0b486-42f3-4f3c-b14b-b22df90ff30d
-                Name: Largo 3
-                Components:
-                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
-                        Id: f7025beb-44fd-41e9-a2ef-31d988a72d5f
-                        Position: {X: 1.1, Y: 0.0, Z: 1.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            ab326f135d369e5d6e6e1086288f80a3: ref!! 2c26921b-e1ff-4731-86d3-30835499761d
         -   Entity:
                 Id: 2aae5891-712e-4664-b7a7-134f97565612
                 Name: Modelo Estatua
@@ -570,7 +641,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.1, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            49ac178f430575013f4470da0bea1a68: ref!! 75e6a77b-f600-4d05-a2c1-723b3314ccfc
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: e969484c-6aeb-4a9f-bcc7-902e60731a1b
                         Model: a74dcfbb-6d03-4fca-9735-28a4dbbe3914:Modelos/Mono/Mono
@@ -587,8 +659,8 @@ Hierarchy:
                         IsTrigger: false
                         IsKinematic: false
                         Mass: 400.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.1
+                        LinearDamping: 0.1
+                        AngularDamping: 0.0
                         OverrideGravity: false
                         Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
                         NodeName: null
@@ -596,21 +668,21 @@ Hierarchy:
                             4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
                                 Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Mono/MonoColliderHull
         -   Entity:
-                Id: 2d8c1526-421c-40c6-aea9-01ba83574e07
+                Id: 2c319f0c-d8d8-40ea-95e1-5a6770020c0b
                 Name: Modelo Corto
                 Components:
                     2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
-                        Id: 21175f64-bdaa-4280-978a-0876912393fe
+                        Id: 579874d7-3261-4e22-a6fb-0c0cdf328051
                         Position: {X: 0.0, Y: 0.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
-                        Id: 1141f513-261d-4082-ab37-6e072b19a122
+                        Id: 5d1c6e1f-0673-454f-a488-45c97d4bce6a
                         Model: 7e12a4ba-1b5b-4744-9a14-2d3c65bb6b70:Modelos/Corto/Corto
                         Materials: {}
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
-                        Id: 665b434e-9e51-49bf-8309-85aa78643808
+                        Id: e4c6e489-ec86-4cc4-9d67-a84332f36422
                         CanSleep: true
                         Restitution: 0.2
                         Friction: 0.5
@@ -628,6 +700,18 @@ Hierarchy:
                         ColliderShapes:
                             8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
                                 Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/CortoColliderHull
+        -   Folder: null
+            Entity:
+                Id: 2d9b9969-062c-4740-b679-10fbbadff17d
+                Name: Largo 4
+                Components:
+                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
+                        Id: 68628742-845b-4c8c-a9df-ee50a06eec01
+                        Position: {X: 4.9, Y: 0.0, Z: 5.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            ab326f135d369e5d6e6e1086288f80a3: ref!! 12a3ad62-f82e-44a6-89cd-d035d4750d21
         -   Entity:
                 Id: 3095ddf0-c96c-4b07-bc4d-1de1341d5e0e
                 Name: "EjeCámara"
@@ -639,51 +723,6 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             d8444a100efcce04e87fd19c11e0d9a9: ref!! b3bb83f2-5020-438d-bdee-6242dd68d627
-        -   Folder: null
-            Entity:
-                Id: 3228c2d1-7887-4f5b-b127-441536786c98
-                Name: Corto 2
-                Components:
-                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
-                        Id: a61dfc67-eb11-431d-85a6-4ba8c6b102f2
-                        Position: {X: -4.2837944, Y: 1.0, Z: 3.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            ab326f135d369e5d6e6e1086288f80a3: ref!! eebb2d43-35a8-488d-9245-6b374b3beade
-        -   Entity:
-                Id: 32f779e7-3a89-48df-a4b8-0d57206ec619
-                Name: Modelo Largo
-                Components:
-                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
-                        Id: 2f490e8b-6a16-4d61-bf45-37ece2773766
-                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
-                        Id: 453711f4-00d2-4228-be25-dbefb2440e0a
-                        Model: a4410e1e-9c23-4056-b962-51cfdae42906:Modelos/Largo/Largo
-                        Materials: {}
-                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
-                        Id: 7c38f4a6-f6a1-4054-9c92-43f8556d41a1
-                        CanSleep: true
-                        Restitution: 0.2
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: false
-                        Mass: 100.0
-                        LinearDamping: 0.1
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
-                                Shape: f937161a-f3cc-45e9-a90e-45e91ce953d0:Modelos/Largo/LargoColliderHull
         -   Entity:
                 Id: 338b99b4-0a39-4f1d-b092-068839a537ce
                 Name: Modelo Corto
@@ -717,6 +756,23 @@ Hierarchy:
                         ColliderShapes:
                             8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
                                 Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/CortoColliderHull
+        -   Folder: null
+            Entity:
+                Id: 34630100-8657-4dd1-bc31-583e4760599a
+                Name: Estatua 2
+                Components:
+                    989543ebf8561c02b507b715a2796bd7: !Terracota.ControladorEstatua,Terracota
+                        Id: 354be441-81cd-435f-a134-8174b1dd1075
+                        jugador: huesped
+                        estatua: ref!! 3013aecc-6020-4c96-90de-4d4e02d1baef
+                        cabeza: ref!! 0baa68e3-1ed2-45e4-8139-aab28f3434af
+                    1ff5b84f1e279da93224f2a5edcc3f59: !TransformComponent
+                        Id: bce30f38-74b2-46f3-b8a2-917d0b03b5fc
+                        Position: {X: 4.8, Y: 0.0, Z: 6.5}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            b9a6de9d3e362d0511a1a20a34248d55: ref!! 3013aecc-6020-4c96-90de-4d4e02d1baef
         -   Entity:
                 Id: 3c3932e9-4ae3-4d6b-b0fa-b37a84f6a4cf
                 Name: Soporte
@@ -729,18 +785,39 @@ Hierarchy:
                         Children:
                             88934090ceb7beb5ebed20423ff61859: ref!! 842faf3a-5570-4437-a4a7-fdbf8a78c70d
                             668aac500cf7400a5b94237819a8111a: ref!! d0adbe3a-64d9-4c98-a9b2-182b23be9518
-        -   Folder: null
-            Entity:
-                Id: 3cbb2f75-0cd3-4a8c-af96-260741873237
-                Name: Corto 8
+        -   Entity:
+                Id: 3cc921d5-d639-45e9-8643-2e4b4d92224f
+                Name: Modelo Largo
                 Components:
-                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
-                        Id: 724a0ac9-49e4-4c1a-9ac4-3f6132358831
-                        Position: {X: 6.5100994, Y: 0.0, Z: 5.0}
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: debd72f2-76b7-45e3-b1ba-7c7c304fb0d5
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            ab326f135d369e5d6e6e1086288f80a3: ref!! ffb8da0e-986e-416a-beca-cefa88d22d37
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: da2ffac3-ac12-4665-a402-8417fc9b8421
+                        Model: a4410e1e-9c23-4056-b962-51cfdae42906:Modelos/Largo/Largo
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: 37a55980-b716-4db6-b971-1f9aed88ac7e
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
+                                Shape: f937161a-f3cc-45e9-a90e-45e91ce953d0:Modelos/Largo/LargoColliderHull
         -   Entity:
                 Id: 3d92dcbf-8160-4af9-b651-fff85831450c
                 Name: Modelo Largo
@@ -775,64 +852,21 @@ Hierarchy:
                             8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
                                 Shape: f937161a-f3cc-45e9-a90e-45e91ce953d0:Modelos/Largo/LargoColliderHull
         -   Entity:
-                Id: 408589a0-e149-4d20-af6a-8b68402aec00
-                Name: Cortos
-                Components:
-                    00a88d548d9c75891fb16d0e63e12a44: !TransformComponent
-                        Id: 5030bbf1-9930-4b44-987a-1ccdc7ac1f50
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            13033dc69685fb65b19abbf2d2aa24c7: ref!! 29b434a3-d12a-45bb-944b-455d94b2f58c
-                            afb96389cd89c20d72a70dcb9d3a3a2c: ref!! a0e52961-3edc-468d-8825-63586cfa1960
-                            552891387684a79c6708a7e562a7fab9: ref!! a61dfc67-eb11-431d-85a6-4ba8c6b102f2
-                            4557be13374089a3b7ef1ba340c8e968: ref!! 6d090642-b47b-4c71-8be5-b62c24c1731d
-                            2ecbddcc578256b30458ed8561b14e71: ref!! ba43affe-befc-49db-9f6e-a71314c09e38
-                            805bf144a556439bfda94801377e3b56: ref!! 0896dbef-5273-44db-9060-87cd03ee1225
-                            ea1af9511d8c9edb959e7f811213b705: ref!! e9cf2261-fce2-4415-bd05-9033069f5566
-                            6c9955bc9ad9006c1310dd4d615d478a: ref!! 46b30edb-2835-4171-bca3-9faa2cc3f24d
-                            f12a6758a27907f4da9ed339cba219aa: ref!! 724a0ac9-49e4-4c1a-9ac4-3f6132358831
-        -   Folder: null
-            Entity:
-                Id: 4680f1ac-2609-477b-9cfe-2cb703a21e09
-                Name: Largo 1
-                Components:
-                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
-                        Id: b5b7f92a-1862-438c-be18-e5ed32566bc8
-                        Position: {X: -4.4205813, Y: 0.0, Z: 3.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            ab326f135d369e5d6e6e1086288f80a3: ref!! 43f3e77d-cdd7-4c1b-b35d-41f801eac623
-        -   Folder: null
-            Entity:
-                Id: 476bb949-deea-467d-bda2-66707be25fd0
-                Name: Largo 5
-                Components:
-                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
-                        Id: 17bbb55d-f439-4142-a8bf-36dfea04578f
-                        Position: {X: 5.3573046, Y: 1.0, Z: 5.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            ab326f135d369e5d6e6e1086288f80a3: ref!! 34a6b1a2-cebb-44e9-a4ba-9a9bfeebc525
-        -   Entity:
-                Id: 4c07f71d-984c-4568-8afa-a955f5da79b0
+                Id: 3db2bade-6f43-48b3-858a-63dcfc51108a
                 Name: Modelo Corto
                 Components:
                     2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
-                        Id: 60f3313f-7052-4c79-b945-753e7c41686d
+                        Id: c3255f42-7c0e-4c2b-ba80-6ed28c891585
                         Position: {X: 0.0, Y: 0.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
-                        Id: 22d70891-7a2f-4750-894f-be226c3dd5ab
+                        Id: 70fca68b-49da-4bec-a656-ab254c0710aa
                         Model: 7e12a4ba-1b5b-4744-9a14-2d3c65bb6b70:Modelos/Corto/Corto
                         Materials: {}
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
-                        Id: aa03ac11-0a29-4f5c-b0a0-adab3e735848
+                        Id: fd62e24f-23dc-4f9c-ac8b-7673fe16ddb5
                         CanSleep: true
                         Restitution: 0.2
                         Friction: 0.5
@@ -850,6 +884,37 @@ Hierarchy:
                         ColliderShapes:
                             8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
                                 Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/CortoColliderHull
+        -   Entity:
+                Id: 46bbbdf8-6b68-41c2-a5f1-3c96b811f361
+                Name: Cabeza
+                Components:
+                    aae717941d47dadafb07fc74e51b757a: !TransformComponent
+                        Id: 9d661e6c-e488-4404-beff-067ddb1b8117
+                        Position: {X: 0.0, Y: 1.7, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 0.3, Z: 1.0}
+                        Children: {}
+                    a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
+                        Id: a17c74f8-8deb-4cb6-a1fd-48fb6f232097
+                        CanCollideWith: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Folder: null
             Entity:
                 Id: 4fa984c8-b13e-4f14-aeff-975affb026fb
@@ -884,6 +949,39 @@ Hierarchy:
                         Materials:
                             9608322aea6edfa9f223026c5fcdfc98~0: f9c1f927-9739-4a73-924f-ff2a79e97e84:Materiales/Verde
         -   Entity:
+                Id: 505f88ce-ac5d-4edb-ba93-51a4046784a3
+                Name: Modelo Largo
+                Components:
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: 12a3ad62-f82e-44a6-89cd-d035d4750d21
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: a51e0b99-e244-4079-9195-29c6b56e70e6
+                        Model: a4410e1e-9c23-4056-b962-51cfdae42906:Modelos/Largo/Largo
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: c2578b4b-5215-47f8-8d2b-9489e048780e
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
+                                Shape: f937161a-f3cc-45e9-a90e-45e91ce953d0:Modelos/Largo/LargoColliderHull
+        -   Entity:
                 Id: 50db0ce8-c06e-431b-b628-fe708cee5132
                 Name: Modelo Corto
                 Components:
@@ -917,39 +1015,6 @@ Hierarchy:
                             8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
                                 Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/CortoColliderHull
         -   Entity:
-                Id: 5157d8da-a37b-4433-96d6-7ccb54246920
-                Name: Modelo Largo
-                Components:
-                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
-                        Id: 7c86f18f-dffe-4237-abc3-2e3df9aa3fff
-                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
-                        Id: 6215b71b-62a7-46ba-81fb-ee9d1a59e009
-                        Model: a4410e1e-9c23-4056-b962-51cfdae42906:Modelos/Largo/Largo
-                        Materials: {}
-                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
-                        Id: b8918682-f9e9-4f36-b177-9c80c538efb2
-                        CanSleep: true
-                        Restitution: 0.2
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: false
-                        Mass: 100.0
-                        LinearDamping: 0.1
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
-                                Shape: f937161a-f3cc-45e9-a90e-45e91ce953d0:Modelos/Largo/LargoColliderHull
-        -   Entity:
                 Id: 521124b3-1212-4d82-a5d0-6364d258afcf
                 Name: "ControladorCañon (Anfitrión)"
                 Components:
@@ -971,22 +1036,6 @@ Hierarchy:
                         origenProyectil: ref!! d3cc82e5-4c61-4353-852a-69db5db48306
                         bala: 32dc5310-2c33-4019-a4a0-fdf11fafd6c0:Prefabs/Bola
                         metralla: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
-        -   Entity:
-                Id: 54bdf2f4-ef34-4d58-a468-2ce070531936
-                Name: Largos
-                Components:
-                    a5b403a2a8b6441dc2182a3018221b1c: !TransformComponent
-                        Id: 86ceb391-bf17-4b26-9634-4539c7aaa92e
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            34e5cf78d4de6abe48747d2a46593579: ref!! e79ad48c-c3ba-48ff-b5b9-64f3fdac5398
-                            db2b10d0f331da8a7bdbf6dd21378006: ref!! b5b7f92a-1862-438c-be18-e5ed32566bc8
-                            13af84bb866ee6257d4550aa05e82c99: ref!! 8b2b1c7c-1049-4aa3-98a4-38ef07aa8464
-                            ef5e26406e54cef212fac72126f20ebe: ref!! f7025beb-44fd-41e9-a2ef-31d988a72d5f
-                            fcaee7c791856fa64423c96e5273adf6: ref!! 834dc5d4-34b1-4fe8-9502-8c4c5b7d4a20
-                            b08fa67b18e07c04eb6a594a579cb56d: ref!! 17bbb55d-f439-4142-a8bf-36dfea04578f
         -   Entity:
                 Id: 550b2f5c-6505-4a76-a67c-bb51170f9482
                 Name: Modelo Largo
@@ -1057,72 +1106,6 @@ Hierarchy:
                         Children:
                             ab326f135d369e5d6e6e1086288f80a3: ref!! 76db17e7-8dfb-431d-b6d0-be1225878ab0
         -   Entity:
-                Id: 59b207cf-8469-4e13-8ac0-ca0fb717c286
-                Name: Modelo Corto
-                Components:
-                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
-                        Id: 3cdcbbcc-bd64-4201-99ea-f801d17a174b
-                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
-                        Id: 277d90a1-d78e-46a2-9ca8-17a751a34239
-                        Model: 7e12a4ba-1b5b-4744-9a14-2d3c65bb6b70:Modelos/Corto/Corto
-                        Materials: {}
-                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
-                        Id: aad7c8e2-1998-4ac6-b0b6-ea6e11e43325
-                        CanSleep: true
-                        Restitution: 0.2
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: false
-                        Mass: 100.0
-                        LinearDamping: 0.1
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
-                                Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/CortoColliderHull
-        -   Entity:
-                Id: 5ec74fbb-57d0-40f3-94c4-4988e377f620
-                Name: Modelo Largo
-                Components:
-                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
-                        Id: 9df4f15e-d6f0-4e88-8061-87735ab2de75
-                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
-                        Id: 2ada5d58-7742-4cf7-b7b4-3158afdacb69
-                        Model: a4410e1e-9c23-4056-b962-51cfdae42906:Modelos/Largo/Largo
-                        Materials: {}
-                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
-                        Id: cb481b4e-13ce-433e-8dd7-8bf891a40deb
-                        CanSleep: true
-                        Restitution: 0.2
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: false
-                        Mass: 100.0
-                        LinearDamping: 0.1
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
-                                Shape: f937161a-f3cc-45e9-a90e-45e91ce953d0:Modelos/Largo/LargoColliderHull
-        -   Entity:
                 Id: 5f0c052e-235c-4b14-b867-c335974914fb
                 Name: Largo 0
                 Components:
@@ -1133,6 +1116,37 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             ab326f135d369e5d6e6e1086288f80a3: ref!! d5678857-607b-42d1-9020-867a5ea370d2
+        -   Entity:
+                Id: 5f812898-c8c7-454a-a8f0-e68036c55fc3
+                Name: Cabeza
+                Components:
+                    aae717941d47dadafb07fc74e51b757a: !TransformComponent
+                        Id: 75e6a77b-f600-4d05-a2c1-723b3314ccfc
+                        Position: {X: 0.0, Y: 1.7, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 0.3, Z: 1.0}
+                        Children: {}
+                    a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
+                        Id: a3551030-763d-4bb8-af26-6b513e9796f6
+                        CanCollideWith: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: 60121fbe-3a6b-4352-b38c-2f0453a5c2d4
                 Name: Modelo Corto
@@ -1200,6 +1214,39 @@ Hierarchy:
                         origenProyectil: ref!! bb64b125-3234-457b-bb62-0909da58cc70
                         bala: 32dc5310-2c33-4019-a4a0-fdf11fafd6c0:Prefabs/Bola
                         metralla: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+        -   Entity:
+                Id: 666cdee9-0459-4017-b040-a1bb540e5f6e
+                Name: Modelo Corto
+                Components:
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: 608113dd-9118-46d0-a91b-698f6891da22
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: b1167a76-e48c-4939-8e34-f6bee36c180b
+                        Model: 7e12a4ba-1b5b-4744-9a14-2d3c65bb6b70:Modelos/Corto/Corto
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: 49cc520e-08ee-410e-83f3-c0625693b1b2
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
+                                Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/CortoColliderHull
         -   Folder: null
             Entity:
                 Id: 6824f2ef-6a21-4e2a-8daa-8a59d3eb7fdb
@@ -1247,22 +1294,6 @@ Hierarchy:
                         Id: 744a6b87-34cc-4e5c-abd5-10c8befba705
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
                         Materials: {}
-        -   Folder: null
-            Entity:
-                Id: 6b3f65c5-e09a-48d4-bcee-9cc8cef2e58a
-                Name: Estatua 1
-                Components:
-                    989543ebf8561c02b507b715a2796bd7: !Terracota.ControladorEstatua,Terracota
-                        Id: 64d0f9d9-2598-4108-be70-51da276892a0
-                        jugador: huesped
-                        cuerpo: ref!! 4b20f3b6-540e-40e8-b8cf-e3dc39c4e61e
-                    1ff5b84f1e279da93224f2a5edcc3f59: !TransformComponent
-                        Id: 751e1ca3-67ce-49c4-abdc-10ec3adb7736
-                        Position: {X: 0.0, Y: 0.0, Z: 3.0}
-                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            b9a6de9d3e362d0511a1a20a34248d55: ref!! ef6f165b-019c-4ada-964f-9df3e3e8ccde
         -   Entity:
                 Id: 6c3c92f4-76fd-450d-86a9-65c5341cf101
                 Name: Estatua 0
@@ -1270,7 +1301,8 @@ Hierarchy:
                     989543ebf8561c02b507b715a2796bd7: !Terracota.ControladorEstatua,Terracota
                         Id: 44a37ec5-8076-46ca-99f3-4bfa7ba7c786
                         jugador: "anfitrión"
-                        cuerpo: ref!! 5c034d03-7430-4513-9285-992d3676b354
+                        estatua: ref!! 2ccdc71e-3b0c-4986-b1ed-3d169213a805
+                        cabeza: ref!! a3551030-763d-4bb8-af26-6b513e9796f6
                     1ff5b84f1e279da93224f2a5edcc3f59: !TransformComponent
                         Id: f8ae39e0-9bd6-48a3-882f-917fbcb82ee2
                         Position: {X: -5.7627983, Y: 0.0, Z: 6.0}
@@ -1293,6 +1325,18 @@ Hierarchy:
                         Id: 19d27362-6c54-46ae-a36b-74b8d4810619
                         Model: 260a1c56-d157-4ed2-a6ec-285f8b3e851c:Modelos/Cilindro
                         Materials: {}
+        -   Folder: null
+            Entity:
+                Id: 6cd1f4f2-ffff-4d70-af46-25730753c03d
+                Name: Corto 6
+                Components:
+                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
+                        Id: 9a42a88d-c110-481b-8c21-d5afd4a8fcb3
+                        Position: {X: 4.781577, Y: 2.0, Z: 5.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            ab326f135d369e5d6e6e1086288f80a3: ref!! 2e03a70c-7a91-44a6-b8c4-c4865107d640
         -   Folder: null
             Entity:
                 Id: 746823da-5516-40af-9526-6f462f9385ed
@@ -1326,40 +1370,18 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-        -   Entity:
-                Id: 770cd13b-aa25-4d65-91d1-264afe3dcc7a
-                Name: Modelo Estatua
+        -   Folder: null
+            Entity:
+                Id: 7ab50547-20ab-4e34-8390-e77094b72852
+                Name: Largo 3
                 Components:
-                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
-                        Id: ef6f165b-019c-4ada-964f-9df3e3e8ccde
-                        Position: {X: 0.0, Y: 0.1, Z: 0.0}
+                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
+                        Id: 39450a9d-bef6-4ba2-bcb8-59c97c8e8592
+                        Position: {X: 1.1, Y: 0.0, Z: 1.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
-                        Id: 8332488b-f8fb-4586-b6b8-2ee84f9b8751
-                        Model: a74dcfbb-6d03-4fca-9735-28a4dbbe3914:Modelos/Mono/Mono
-                        Materials:
-                            ca3d3a4daabeb150c14449b7ee83e8f4~0: d4be94e3-4a98-4069-9b66-aea5a0a4da3b:Materiales/Dorado
-                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
-                        Id: 4b20f3b6-540e-40e8-b8cf-e3dc39c4e61e
-                        CanSleep: true
-                        Restitution: 0.2
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: false
-                        Mass: 400.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.1
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
-                                Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Mono/MonoColliderHull
+                        Children:
+                            ab326f135d369e5d6e6e1086288f80a3: ref!! efa6f55f-b47f-4c55-a314-f5c9fe0fab93
         -   Entity:
                 Id: 7e3a639f-50bc-4a09-a300-57ca782be419
                 Name: Largos
@@ -1376,39 +1398,6 @@ Hierarchy:
                             ef5e26406e54cef212fac72126f20ebe: ref!! 6ea4e68a-7b9c-4066-b1ca-4770e385241e
                             fcaee7c791856fa64423c96e5273adf6: ref!! 3a75e229-4f08-4ee4-b089-c82dda015b79
                             b08fa67b18e07c04eb6a594a579cb56d: ref!! 952cd08d-2015-4d0b-81b1-21e14fdff9ce
-        -   Entity:
-                Id: 7edefcfc-8433-440e-a596-0a087d772841
-                Name: Modelo Corto
-                Components:
-                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
-                        Id: eede8d73-0517-4ebd-887c-62f744be5d01
-                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
-                        Id: 47161192-2c6e-4a03-abcd-867951d0e2ce
-                        Model: 7e12a4ba-1b5b-4744-9a14-2d3c65bb6b70:Modelos/Corto/Corto
-                        Materials: {}
-                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
-                        Id: ace4f604-637b-4a8a-8f5b-0c3b7f630163
-                        CanSleep: true
-                        Restitution: 0.2
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: false
-                        Mass: 100.0
-                        LinearDamping: 0.1
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
-                                Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/CortoColliderHull
         -   Entity:
                 Id: 7f4374fe-80d4-45c9-8d45-440dd3abbe04
                 Name: Modelo Largo
@@ -1443,6 +1432,25 @@ Hierarchy:
                             8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
                                 Shape: f937161a-f3cc-45e9-a90e-45e91ce953d0:Modelos/Largo/LargoColliderHull
         -   Entity:
+                Id: 831aaf80-ab98-4f45-9543-3c04dd449636
+                Name: Cortos
+                Components:
+                    00a88d548d9c75891fb16d0e63e12a44: !TransformComponent
+                        Id: 6a5045b9-c0fe-474d-88dc-e4fecc020121
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            13033dc69685fb65b19abbf2d2aa24c7: ref!! 731d0439-2c1d-4516-9e0c-c255a8207c0f
+                            afb96389cd89c20d72a70dcb9d3a3a2c: ref!! df61d056-141a-4b55-ab1f-e8ff0b79ffc6
+                            552891387684a79c6708a7e562a7fab9: ref!! 3f50ea67-0bc0-43c4-af0a-2eb1426e971d
+                            4557be13374089a3b7ef1ba340c8e968: ref!! 5cd85759-850a-4c80-9523-cbfa806be57b
+                            2ecbddcc578256b30458ed8561b14e71: ref!! a807f40f-77f3-4aa1-ae97-a9ea02f24602
+                            805bf144a556439bfda94801377e3b56: ref!! 355b59cc-ef6c-4dc5-b998-57c5d8166cc0
+                            ea1af9511d8c9edb959e7f811213b705: ref!! 9a42a88d-c110-481b-8c21-d5afd4a8fcb3
+                            6c9955bc9ad9006c1310dd4d615d478a: ref!! 76c22a0d-d1b1-453e-b064-1abac88da5f7
+                            f12a6758a27907f4da9ed339cba219aa: ref!! f052a7e3-2139-44bb-a7f8-d2bb49617209
+        -   Entity:
                 Id: 84c4396c-65c2-4680-a785-782d2ecb467f
                 Name: Cortos
                 Components:
@@ -1473,6 +1481,50 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             ab326f135d369e5d6e6e1086288f80a3: ref!! 1a85ab33-2134-45ff-b99a-c8740326f827
+        -   Entity:
+                Id: 8b52f758-ba27-4e49-bbcb-645d32e0eecc
+                Name: Modelo Largo
+                Components:
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: a4aa18a5-9672-4228-b690-ce4b73139d15
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: 5a42739b-7252-40fe-b80e-0ac107aca184
+                        Model: a4410e1e-9c23-4056-b962-51cfdae42906:Modelos/Largo/Largo
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: d756884a-0cf8-4020-afe7-7ac66a20f630
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
+                                Shape: f937161a-f3cc-45e9-a90e-45e91ce953d0:Modelos/Largo/LargoColliderHull
+        -   Entity:
+                Id: 91045ab1-202c-4cb3-9940-4862dd711024
+                Name: Corto 0
+                Components:
+                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
+                        Id: 731d0439-2c1d-4516-9e0c-c255a8207c0f
+                        Position: {X: -6.623024, Y: 1.0, Z: 3.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            ab326f135d369e5d6e6e1086288f80a3: ref!! 52d8eaf9-c1d9-45f4-8565-530ac51e8ea0
         -   Folder: null
             Entity:
                 Id: 91a70ea0-65e1-4d55-8a31-5d29a2d95df1
@@ -1504,51 +1556,37 @@ Hierarchy:
                         Model: 260a1c56-d157-4ed2-a6ec-285f8b3e851c:Modelos/Cilindro
                         Materials:
                             b31d23777b6b45ee9216500915cccecd~0: f9c1f927-9739-4a73-924f-ff2a79e97e84:Materiales/Verde
-        -   Folder: null
-            Entity:
-                Id: 92cc469b-1294-4d3c-9e02-1fd6f2abb2f4
-                Name: Corto 4
-                Components:
-                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
-                        Id: ba43affe-befc-49db-9f6e-a71314c09e38
-                        Position: {X: 0.6978656, Y: 1.0, Z: 1.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            ab326f135d369e5d6e6e1086288f80a3: ref!! 22bb0cc6-e92a-42f1-a5ba-b804f58f33da
         -   Entity:
-                Id: 95a690e8-d77a-4211-a2b0-2990e870a4a7
-                Name: Modelo Corto
+                Id: 940beb75-c07b-4dd7-965e-8e741f1366a9
+                Name: Cabeza
                 Components:
-                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
-                        Id: eebb2d43-35a8-488d-9245-6b374b3beade
-                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                    aae717941d47dadafb07fc74e51b757a: !TransformComponent
+                        Id: 52ba679e-3b35-4aaf-bb84-c795534ff9f2
+                        Position: {X: 0.0, Y: 1.7, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Scale: {X: 1.0, Y: 0.3, Z: 1.0}
                         Children: {}
-                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
-                        Id: 96f06c40-dd07-436a-b6b9-62de3d92b246
-                        Model: 7e12a4ba-1b5b-4744-9a14-2d3c65bb6b70:Modelos/Corto/Corto
-                        Materials: {}
-                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
-                        Id: fecebd7c-68d3-452f-9048-f75a29dac742
-                        CanSleep: true
-                        Restitution: 0.2
-                        Friction: 0.5
+                    a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
+                        Id: 52001b48-6f98-4c26-9f45-59e53c0c3c0e
+                        CanCollideWith: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
                         RollingFriction: 0.0
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: false
-                        Mass: 100.0
-                        LinearDamping: 0.1
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
                         AngularDamping: 0.0
                         OverrideGravity: false
                         Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
                         NodeName: null
                         ColliderShapes:
-                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
-                                Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/CortoColliderHull
+                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: 96354e5b-8817-4683-baa9-230528cc87df
                 Name: Modelo Corto
@@ -1582,39 +1620,34 @@ Hierarchy:
                         ColliderShapes:
                             8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
                                 Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/CortoColliderHull
-        -   Entity:
-                Id: 9afa90da-a6b9-406e-9806-84a34a1b5664
-                Name: Modelo Corto
+        -   Folder: null
+            Entity:
+                Id: 99d256c8-94eb-44db-a2fe-916056ebcb53
+                Name: Largo 2
                 Components:
-                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
-                        Id: 22bb0cc6-e92a-42f1-a5ba-b804f58f33da
-                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
+                        Id: 69183648-b710-4a10-a985-eb97f04ef4d2
+                        Position: {X: -1.099731, Y: 0.0, Z: 1.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
-                        Id: ffeb3dc6-ad65-4354-b8d0-7a284275bde3
-                        Model: 7e12a4ba-1b5b-4744-9a14-2d3c65bb6b70:Modelos/Corto/Corto
-                        Materials: {}
-                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
-                        Id: effea831-75e5-4ed8-80ba-4f39e330f14b
-                        CanSleep: true
-                        Restitution: 0.2
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: false
-                        Mass: 100.0
-                        LinearDamping: 0.1
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
-                                Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/CortoColliderHull
+                        Children:
+                            ab326f135d369e5d6e6e1086288f80a3: ref!! debd72f2-76b7-45e3-b1ba-7c7c304fb0d5
+        -   Entity:
+                Id: 9dab03b7-3696-4813-a293-e5c50ac63e27
+                Name: Largos
+                Components:
+                    a5b403a2a8b6441dc2182a3018221b1c: !TransformComponent
+                        Id: 140f52a4-b329-496e-9afa-8c0352172060
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            34e5cf78d4de6abe48747d2a46593579: ref!! c0ef71e6-4e71-4045-9349-444e762e239e
+                            db2b10d0f331da8a7bdbf6dd21378006: ref!! 500f8b74-5701-4900-9069-efdfe99f5ea9
+                            13af84bb866ee6257d4550aa05e82c99: ref!! 69183648-b710-4a10-a985-eb97f04ef4d2
+                            ef5e26406e54cef212fac72126f20ebe: ref!! 39450a9d-bef6-4ba2-bcb8-59c97c8e8592
+                            fcaee7c791856fa64423c96e5273adf6: ref!! 68628742-845b-4c8c-a9df-ee50a06eec01
+                            b08fa67b18e07c04eb6a594a579cb56d: ref!! fb8e9b54-e4b3-48c8-a458-62324aea3d2d
         -   Folder: null
             Entity:
                 Id: 9ecc5301-8074-45a6-94b3-11619187ca5b
@@ -1623,7 +1656,8 @@ Hierarchy:
                     989543ebf8561c02b507b715a2796bd7: !Terracota.ControladorEstatua,Terracota
                         Id: c035fa9b-5ab0-4a33-9531-1b755debc209
                         jugador: "anfitrión"
-                        cuerpo: ref!! 17077292-7bf8-4ad1-923d-50b8a1639484
+                        estatua: ref!! 5c0f92cc-d66d-43db-9be0-d8a9c9390841
+                        cabeza: ref!! a17c74f8-8deb-4cb6-a1fd-48fb6f232097
                     1ff5b84f1e279da93224f2a5edcc3f59: !TransformComponent
                         Id: c4aa1378-43b8-4c72-a4f1-1ce048c14bc3
                         Position: {X: 4.8, Y: 0.0, Z: 6.5}
@@ -1633,16 +1667,16 @@ Hierarchy:
                             b9a6de9d3e362d0511a1a20a34248d55: ref!! 5c0f92cc-d66d-43db-9be0-d8a9c9390841
         -   Folder: null
             Entity:
-                Id: ab48c30d-f5e4-49c1-8fff-09ad27bf7cef
-                Name: Largo 2
+                Id: a1e490ea-8eff-4ca0-b47a-a4a8b0a3f88f
+                Name: Largo 1
                 Components:
                     0eabf5bba933c7faa52215d1567d3275: !TransformComponent
-                        Id: 8b2b1c7c-1049-4aa3-98a4-38ef07aa8464
-                        Position: {X: -1.099731, Y: 0.0, Z: 1.0}
+                        Id: 500f8b74-5701-4900-9069-efdfe99f5ea9
+                        Position: {X: -4.4205813, Y: 0.0, Z: 3.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            ab326f135d369e5d6e6e1086288f80a3: ref!! 7c86f18f-dffe-4237-abc3-2e3df9aa3fff
+                            ab326f135d369e5d6e6e1086288f80a3: ref!! a4aa18a5-9672-4228-b690-ce4b73139d15
         -   Folder: null
             Entity:
                 Id: ac0fe1a6-4ead-41bb-9e9c-d9a7dd711b6c
@@ -1663,7 +1697,8 @@ Hierarchy:
                     989543ebf8561c02b507b715a2796bd7: !Terracota.ControladorEstatua,Terracota
                         Id: 7988fa34-f81d-48f1-a478-8e8a8fb17829
                         jugador: "anfitrión"
-                        cuerpo: ref!! b21dea36-3b2d-443b-8835-06ff0384ced2
+                        estatua: ref!! 1a559082-14dd-4f4d-ac8e-a661afa3240b
+                        cabeza: ref!! 52001b48-6f98-4c26-9f45-59e53c0c3c0e
                     1ff5b84f1e279da93224f2a5edcc3f59: !TransformComponent
                         Id: 66c4ea5d-8c4f-4c00-a8a2-43607b4d0c00
                         Position: {X: 0.0, Y: 0.0, Z: 3.0}
@@ -1671,6 +1706,18 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             b9a6de9d3e362d0511a1a20a34248d55: ref!! 1a559082-14dd-4f4d-ac8e-a661afa3240b
+        -   Folder: null
+            Entity:
+                Id: ad998d61-d8a4-416a-95e6-0bd4a9826554
+                Name: Corto 5
+                Components:
+                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
+                        Id: 355b59cc-ef6c-4dc5-b998-57c5d8166cc0
+                        Position: {X: 0.034790516, Y: 2.0, Z: 1.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            ab326f135d369e5d6e6e1086288f80a3: ref!! c3255f42-7c0e-4c2b-ba80-6ed28c891585
         -   Entity:
                 Id: adc923ed-eaae-4693-bb70-d48943f97e8c
                 Name: "Cámara"
@@ -1689,6 +1736,105 @@ Hierarchy:
                         Projection: Perspective
                         FarClipPlane: 100.0
                         Slot: 9f373eee-c85c-45b0-9b02-82451f709476
+        -   Entity:
+                Id: aec06fa9-e7ee-4f7d-8df8-f710a38b07c9
+                Name: Cabeza
+                Components:
+                    aae717941d47dadafb07fc74e51b757a: !TransformComponent
+                        Id: 2981d9ef-15d6-45a1-a89e-5747bb25cf5b
+                        Position: {X: 0.0, Y: 1.7, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 0.3, Z: 1.0}
+                        Children: {}
+                    a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
+                        Id: 0baa68e3-1ed2-45e4-8139-aab28f3434af
+                        CanCollideWith: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: aee06f80-05de-444c-98bb-0bff3ba9db4e
+                Name: Modelo Estatua
+                Components:
+                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
+                        Id: 3013aecc-6020-4c96-90de-4d4e02d1baef
+                        Position: {X: 0.0, Y: 0.1, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            5398c2358d4e0330b562a6f7672c9788: ref!! 2981d9ef-15d6-45a1-a89e-5747bb25cf5b
+                    7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
+                        Id: a4aa1d75-a5e8-4377-9404-2714b96c8f08
+                        Model: a74dcfbb-6d03-4fca-9735-28a4dbbe3914:Modelos/Mono/Mono
+                        Materials:
+                            037485e16c3c88ed45818635f182393a~0: d4be94e3-4a98-4069-9b66-aea5a0a4da3b:Materiales/Dorado
+                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
+                        Id: b447f3ef-87cb-4ac9-a1c2-b3551e25b51a
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 400.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
+                                Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Mono/MonoColliderHull
+        -   Entity:
+                Id: b0c1387a-5181-4fb3-9de8-f32e35dbbb2b
+                Name: Modelo Corto
+                Components:
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: 6a41c696-5b43-4bd7-98a1-30f5eac2a80f
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: a831ea6a-34da-46f7-b27a-a74c08eb2344
+                        Model: 7e12a4ba-1b5b-4744-9a14-2d3c65bb6b70:Modelos/Corto/Corto
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: 59bbd6b1-8cc1-4290-a30c-e3c19e60bae5
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
+                                Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/CortoColliderHull
         -   Folder: null
             Entity:
                 Id: b0eb62b4-41d2-4905-9057-e7b318cfc35b
@@ -1717,6 +1863,39 @@ Hierarchy:
                         Materials: {}
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: c70dc640-d4f8-431d-8f41-3f92c1d13a66
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
+                                Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/CortoColliderHull
+        -   Entity:
+                Id: b79f606e-fdc4-4084-83f6-b29486ac4b92
+                Name: Modelo Corto
+                Components:
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: 52d8eaf9-c1d9-45f4-8565-530ac51e8ea0
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: 3c33c352-d76a-4e91-a633-98625f8dd167
+                        Model: 7e12a4ba-1b5b-4744-9a14-2d3c65bb6b70:Modelos/Corto/Corto
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: 38180bfd-fc9c-4ef6-a770-3b926082d7a8
                         CanSleep: true
                         Restitution: 0.2
                         Friction: 0.5
@@ -1765,33 +1944,6 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             ab326f135d369e5d6e6e1086288f80a3: ref!! 1b8c02c6-f500-4098-afb0-2269692a7f38
-        -   Folder: null
-            Entity:
-                Id: b9937545-8ea6-4823-9f0d-ad8873548a3a
-                Name: Corto 3
-                Components:
-                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
-                        Id: 6d090642-b47b-4c71-8be5-b62c24c1731d
-                        Position: {X: -0.7205948, Y: 1.0, Z: 1.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            ab326f135d369e5d6e6e1086288f80a3: ref!! eede8d73-0517-4ebd-887c-62f744be5d01
-        -   Entity:
-                Id: ba459a8b-2583-41f0-8b5a-b33dc42bbc3d
-                Name: Estatua 0
-                Components:
-                    989543ebf8561c02b507b715a2796bd7: !Terracota.ControladorEstatua,Terracota
-                        Id: f1e2f71b-7c29-45c4-a0f6-bca3a0ce634a
-                        jugador: huesped
-                        cuerpo: ref!! 52e673f9-ba38-4686-b924-6b0d7eb575ef
-                    1ff5b84f1e279da93224f2a5edcc3f59: !TransformComponent
-                        Id: a091939f-c6a2-49ee-a41c-2cd8806000a0
-                        Position: {X: -5.7627983, Y: 0.0, Z: 6.0}
-                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            b9a6de9d3e362d0511a1a20a34248d55: ref!! 81451ec5-436e-44fe-9bbf-c76bd91aa35b
         -   Entity:
                 Id: bb64b125-3234-457b-bb62-0909da58cc70
                 Name: Origen
@@ -1802,6 +1954,33 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
+        -   Entity:
+                Id: bcb1d4c2-951b-4e25-b94c-71bd4b51e807
+                Name: Largo 0
+                Components:
+                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
+                        Id: c0ef71e6-4e71-4045-9349-444e762e239e
+                        Position: {X: -6.5205817, Y: 0.0, Z: 3.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            ab326f135d369e5d6e6e1086288f80a3: ref!! cf54e63f-e0c3-478f-91d0-9634853dcc69
+        -   Entity:
+                Id: bcc6acea-543a-47e8-9f41-477d2032e307
+                Name: Estatua 0
+                Components:
+                    989543ebf8561c02b507b715a2796bd7: !Terracota.ControladorEstatua,Terracota
+                        Id: 626b46ad-ee16-4ea0-8d28-612d76bf74dc
+                        jugador: huesped
+                        estatua: ref!! 21f9df01-a89e-4270-bba4-4eb128448bfc
+                        cabeza: ref!! 57611872-0436-499c-90bb-fa455e28f0e9
+                    1ff5b84f1e279da93224f2a5edcc3f59: !TransformComponent
+                        Id: bc6b5b20-d615-4307-a546-268be97b7a0a
+                        Position: {X: -5.7627983, Y: 0.0, Z: 6.0}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            b9a6de9d3e362d0511a1a20a34248d55: ref!! 21f9df01-a89e-4270-bba4-4eb128448bfc
         -   Folder: null
             Entity:
                 Id: be0691e5-3cdd-42e5-9c96-ac7c7d5320d0
@@ -1815,22 +1994,21 @@ Hierarchy:
                         Children:
                             ab326f135d369e5d6e6e1086288f80a3: ref!! 5ab4746d-31ab-423b-8e4d-51be33e66ea5
         -   Entity:
-                Id: c51f91f1-32d5-44d5-8b4e-5c801a4555b1
-                Name: Modelo Estatua
+                Id: c489a1cd-e07d-4ee5-bb09-8a026c09decc
+                Name: Modelo Corto
                 Components:
-                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
-                        Id: 81451ec5-436e-44fe-9bbf-c76bd91aa35b
-                        Position: {X: 0.0, Y: 0.1, Z: 0.0}
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: d295745d-0069-4f08-8bab-4dff9f027e3c
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
-                        Id: 74e4a431-e920-4bff-ac45-1afa38ced04e
-                        Model: a74dcfbb-6d03-4fca-9735-28a4dbbe3914:Modelos/Mono/Mono
-                        Materials:
-                            fb59f7268e0c02d5b1db8993b9a4569a~0: d4be94e3-4a98-4069-9b66-aea5a0a4da3b:Materiales/Dorado
-                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
-                        Id: 52e673f9-ba38-4686-b924-6b0d7eb575ef
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: eab5129e-e304-4122-8c59-14290be390f1
+                        Model: 7e12a4ba-1b5b-4744-9a14-2d3c65bb6b70:Modelos/Corto/Corto
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: ec6c65dd-4c78-4663-9c33-87385458d264
                         CanSleep: true
                         Restitution: 0.2
                         Friction: 0.5
@@ -1839,15 +2017,15 @@ Hierarchy:
                         CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         IsKinematic: false
-                        Mass: 400.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.1
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.0
                         OverrideGravity: false
                         Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
                         NodeName: null
                         ColliderShapes:
-                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
-                                Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Mono/MonoColliderHull
+                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
+                                Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/CortoColliderHull
         -   Folder: null
             Entity:
                 Id: c6023987-9c90-4f9e-ba5e-80e9df2fc8b3
@@ -1861,22 +2039,21 @@ Hierarchy:
                         Children:
                             ab326f135d369e5d6e6e1086288f80a3: ref!! 799589fd-a5a5-4691-91b3-95b80e91913c
         -   Entity:
-                Id: c7c7b545-e816-4f8c-aa1a-b60630d27c5a
-                Name: Modelo Estatua
+                Id: c82b87aa-67ab-411e-ac52-05675c117cfb
+                Name: Modelo Largo
                 Components:
-                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
-                        Id: 04fbf289-28dc-4d13-9e9d-42a6a8ddbc05
-                        Position: {X: 0.0, Y: 0.1, Z: 0.0}
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: cf54e63f-e0c3-478f-91d0-9634853dcc69
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
-                        Id: 87d01f56-7744-4609-8422-727fce619046
-                        Model: a74dcfbb-6d03-4fca-9735-28a4dbbe3914:Modelos/Mono/Mono
-                        Materials:
-                            037485e16c3c88ed45818635f182393a~0: d4be94e3-4a98-4069-9b66-aea5a0a4da3b:Materiales/Dorado
-                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
-                        Id: 19e669b3-f254-4168-8b6e-dcb1505a25fa
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: db3c03e6-bc27-4a04-a02a-dc569bcb672f
+                        Model: a4410e1e-9c23-4056-b962-51cfdae42906:Modelos/Largo/Largo
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: 98152aa0-f4b3-49b6-8f38-8a8b8c32a8a2
                         CanSleep: true
                         Restitution: 0.2
                         Friction: 0.5
@@ -1885,15 +2062,15 @@ Hierarchy:
                         CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         IsKinematic: false
-                        Mass: 400.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.1
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.0
                         OverrideGravity: false
                         Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
                         NodeName: null
                         ColliderShapes:
-                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
-                                Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Mono/MonoColliderHull
+                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
+                                Shape: f937161a-f3cc-45e9-a90e-45e91ce953d0:Modelos/Largo/LargoColliderHull
         -   Entity:
                 Id: c9310995-4f73-486c-b3df-6aefca594679
                 Name: Modelo Corto
@@ -1927,34 +2104,22 @@ Hierarchy:
                         ColliderShapes:
                             8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
                                 Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/CortoColliderHull
-        -   Folder: null
-            Entity:
-                Id: cad81578-2ab1-4692-b7d3-b19368b346ad
-                Name: Corto 1
-                Components:
-                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
-                        Id: a0e52961-3edc-468d-8825-63586cfa1960
-                        Position: {X: -5.4884095, Y: 1.0, Z: 3.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            ab326f135d369e5d6e6e1086288f80a3: ref!! 21175f64-bdaa-4280-978a-0876912393fe
         -   Entity:
-                Id: cb831ef4-520f-4d8a-b47b-510cb251ccae
-                Name: Modelo Largo
+                Id: c96b4644-c4c9-49f7-a4d5-05e482219450
+                Name: Modelo Corto
                 Components:
                     2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
-                        Id: 34a6b1a2-cebb-44e9-a4ba-9a9bfeebc525
+                        Id: a18e467d-ba06-4464-b92d-deed1cfbc42e
                         Position: {X: 0.0, Y: 0.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
-                        Id: ca7f6ea8-2947-49f3-a364-0a556ba56914
-                        Model: a4410e1e-9c23-4056-b962-51cfdae42906:Modelos/Largo/Largo
+                        Id: 33517afc-ed90-448b-85f6-d4bfa375f3fc
+                        Model: 7e12a4ba-1b5b-4744-9a14-2d3c65bb6b70:Modelos/Corto/Corto
                         Materials: {}
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
-                        Id: 7afa010b-5038-41a0-ab10-e2c5003cf20b
+                        Id: a6752180-df2f-4b27-a62a-6c495b1945c2
                         CanSleep: true
                         Restitution: 0.2
                         Friction: 0.5
@@ -1971,7 +2136,19 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
-                                Shape: f937161a-f3cc-45e9-a90e-45e91ce953d0:Modelos/Largo/LargoColliderHull
+                                Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/CortoColliderHull
+        -   Folder: null
+            Entity:
+                Id: ca18fffd-e785-4249-9665-cee0f1df827b
+                Name: Corto 4
+                Components:
+                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
+                        Id: a807f40f-77f3-4aa1-ae97-a9ea02f24602
+                        Position: {X: 0.6978656, Y: 1.0, Z: 1.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            ab326f135d369e5d6e6e1086288f80a3: ref!! 52a3d7f0-4690-426c-ba15-526d7d2cda41
         -   Entity:
                 Id: d2c0a1c6-ba03-4c17-b57f-15b5efc31219
                 Name: "Fortaleza (Anfitrión)"
@@ -2009,18 +2186,55 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             ab326f135d369e5d6e6e1086288f80a3: ref!! d3e7f473-9da9-49c2-ad79-fd00710a93d8
-        -   Folder: null
-            Entity:
-                Id: d683a619-50bc-4348-9996-c7b0d985e4fb
-                Name: Corto 7
+        -   Entity:
+                Id: d5cbbcbe-54c1-4752-a8e9-4451c9ee1aff
+                Name: Modelo Corto
                 Components:
-                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
-                        Id: 46b30edb-2835-4171-bca3-9faa2cc3f24d
-                        Position: {X: 5.8091054, Y: 2.0, Z: 5.0}
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: 52a3d7f0-4690-426c-ba15-526d7d2cda41
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: a051b112-ad0b-4f84-a6bc-f67a9e10f746
+                        Model: 7e12a4ba-1b5b-4744-9a14-2d3c65bb6b70:Modelos/Corto/Corto
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: 0d75e9d6-2798-41f9-977d-2bd3f9f1ddc6
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
+                                Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/CortoColliderHull
+        -   Folder: null
+            Entity:
+                Id: d7722097-8c07-42c8-a952-a7bc54f8fd7d
+                Name: Fortaleza (Huesped)
+                Components:
+                    5daf95322206bf8d422c5a6578a7e451: !TransformComponent
+                        Id: 4e464bb0-be66-4409-ba3f-b5575480677f
+                        Position: {X: 0.0, Y: 0.0, Z: -10.0}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            ab326f135d369e5d6e6e1086288f80a3: ref!! aed3faa4-7467-4909-9688-3c9716c201a8
+                            f89320cd36c2ea4dac0117137925d2ea: ref!! 140f52a4-b329-496e-9afa-8c0352172060
+                            d7b3439dc8b31e049c1c6db96067ec6e: ref!! 6a5045b9-c0fe-474d-88dc-e4fecc020121
+                            377b5b2c4b848fcaec7b1d0371aea91c: ref!! bc6b5b20-d615-4307-a546-268be97b7a0a
+                            377dc6833616c46621f885a633515f6f: ref!! 33f7dff2-beb6-452c-8691-1e9af3a6fdb7
+                            0c74630b82187006590cd8990669d519: ref!! bce30f38-74b2-46f3-b8a2-917d0b03b5fc
         -   Folder: null
             Entity:
                 Id: d89ea96f-ecf9-48e4-8efc-7c718e727f29
@@ -2035,32 +2249,32 @@ Hierarchy:
                             ab326f135d369e5d6e6e1086288f80a3: ref!! 65d4998a-b395-480f-95c3-2287a1505c34
         -   Folder: null
             Entity:
-                Id: df228563-b567-4d4e-aa34-0486f5a2ad67
-                Name: Corto 6
+                Id: e0cd2da6-45b3-42ed-95d9-4b2306417dfa
+                Name: Corto 3
                 Components:
                     0eabf5bba933c7faa52215d1567d3275: !TransformComponent
-                        Id: e9cf2261-fce2-4415-bd05-9033069f5566
-                        Position: {X: 4.781577, Y: 2.0, Z: 5.0}
+                        Id: 5cd85759-850a-4c80-9523-cbfa806be57b
+                        Position: {X: -0.7205948, Y: 1.0, Z: 1.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            ab326f135d369e5d6e6e1086288f80a3: ref!! 60f3313f-7052-4c79-b945-753e7c41686d
+                            ab326f135d369e5d6e6e1086288f80a3: ref!! 6a41c696-5b43-4bd7-98a1-30f5eac2a80f
         -   Entity:
-                Id: e1a9c776-2d3a-4348-88d7-0155750a2a57
+                Id: e4965d90-1269-4216-a02b-f8ea5c36f71a
                 Name: Modelo Largo
                 Components:
                     2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
-                        Id: 2c26921b-e1ff-4731-86d3-30835499761d
+                        Id: 73d79d8e-dffb-45b9-a465-c134feabfc9b
                         Position: {X: 0.0, Y: 0.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
-                        Id: 0e9f06a5-e2af-4168-aecd-22e177db03ba
+                        Id: 8cdee600-08dd-43c5-88ea-7296fb91f577
                         Model: a4410e1e-9c23-4056-b962-51cfdae42906:Modelos/Largo/Largo
                         Materials: {}
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
-                        Id: 9826b761-8eaa-4cd3-b036-e9b8622d2383
+                        Id: 22ac0628-8de3-4fc4-857d-a94d6c79fdf0
                         CanSleep: true
                         Restitution: 0.2
                         Friction: 0.5
@@ -2089,39 +2303,6 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             ab326f135d369e5d6e6e1086288f80a3: ref!! 16afafbf-b672-47a6-a882-3cdaffdfca53
-        -   Entity:
-                Id: e79f5e4a-c091-4459-82f5-9d1cac25aac9
-                Name: Modelo Corto
-                Components:
-                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
-                        Id: ffb8da0e-986e-416a-beca-cefa88d22d37
-                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
-                        Id: eb0d88d3-d9c7-4ff1-8afb-089d80458bb3
-                        Model: 7e12a4ba-1b5b-4744-9a14-2d3c65bb6b70:Modelos/Corto/Corto
-                        Materials: {}
-                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
-                        Id: 11e5a5a2-7603-4fed-a92b-e9de019b8e83
-                        CanSleep: true
-                        Restitution: 0.2
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: false
-                        Mass: 100.0
-                        LinearDamping: 0.1
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
-                                Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/CortoColliderHull
         -   Entity:
                 Id: ea6c853f-56cf-4043-ae66-353ac93deded
                 Name: Modelo Largo
@@ -2156,6 +2337,41 @@ Hierarchy:
                             8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
                                 Shape: f937161a-f3cc-45e9-a90e-45e91ce953d0:Modelos/Largo/LargoColliderHull
         -   Entity:
+                Id: edb0d318-d3fc-4aba-9916-c381a268c3ca
+                Name: Modelo Estatua
+                Components:
+                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
+                        Id: 70e177ce-2878-4d18-9873-c5e37faf9f06
+                        Position: {X: 0.0, Y: 0.1, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            4bca3c07c9495a3d7c5bfd4d287fc7b9: ref!! 08851e76-07f5-4cf8-a35a-f30fe46f3c5a
+                    7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
+                        Id: 8276b73c-9964-4d0e-adda-e6f1e5e7036c
+                        Model: a74dcfbb-6d03-4fca-9735-28a4dbbe3914:Modelos/Mono/Mono
+                        Materials:
+                            ca3d3a4daabeb150c14449b7ee83e8f4~0: d4be94e3-4a98-4069-9b66-aea5a0a4da3b:Materiales/Dorado
+                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
+                        Id: 24f17e04-d413-4fd9-b792-d87b0182fcac
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 400.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
+                                Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Mono/MonoColliderHull
+        -   Entity:
                 Id: ee14c579-4a60-4f30-8462-d0771fb81d9b
                 Name: "Cañon"
                 Components:
@@ -2184,6 +2400,37 @@ Hierarchy:
                         Id: 0c3b6b73-81db-4cb9-a7c8-0cf55bf91ad6
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
                         Materials: {}
+        -   Entity:
+                Id: ee4f2936-c8c2-4472-a19f-efe94c9f274b
+                Name: Cabeza
+                Components:
+                    aae717941d47dadafb07fc74e51b757a: !TransformComponent
+                        Id: 08851e76-07f5-4cf8-a35a-f30fe46f3c5a
+                        Position: {X: 0.0, Y: 1.7, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 0.3, Z: 1.0}
+                        Children: {}
+                    a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
+                        Id: 37e0ad10-bce9-4cce-97cd-e8e54664ea15
+                        CanCollideWith: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: f107b973-2f13-4b09-ae5b-9a7c72353a65
                 Name: Modelo Corto
@@ -2250,52 +2497,3 @@ Hierarchy:
                         ColliderShapes:
                             8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
                                 Shape: f937161a-f3cc-45e9-a90e-45e91ce953d0:Modelos/Largo/LargoColliderHull
-        -   Entity:
-                Id: fba1a504-de73-48c0-b07e-130d2da22180
-                Name: Modelo Largo
-                Components:
-                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
-                        Id: 43f3e77d-cdd7-4c1b-b35d-41f801eac623
-                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
-                        Id: c3ffee22-b12e-42bf-a433-3269f89cd0ec
-                        Model: a4410e1e-9c23-4056-b962-51cfdae42906:Modelos/Largo/Largo
-                        Materials: {}
-                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
-                        Id: 0d772c50-aa74-464b-bb2d-d06cfd6b7a9b
-                        CanSleep: true
-                        Restitution: 0.2
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: false
-                        Mass: 100.0
-                        LinearDamping: 0.1
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
-                                Shape: f937161a-f3cc-45e9-a90e-45e91ce953d0:Modelos/Largo/LargoColliderHull
-        -   Folder: null
-            Entity:
-                Id: fe7b3c9b-ada6-48f0-80f9-96e8c9aed995
-                Name: Fortaleza (Huesped)
-                Components:
-                    5daf95322206bf8d422c5a6578a7e451: !TransformComponent
-                        Id: 326119b3-a16c-4719-be83-bc3d2b40b9e7
-                        Position: {X: 0.0, Y: 0.0, Z: -10.0}
-                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            f89320cd36c2ea4dac0117137925d2ea: ref!! 86ceb391-bf17-4b26-9634-4539c7aaa92e
-                            d7b3439dc8b31e049c1c6db96067ec6e: ref!! 5030bbf1-9930-4b44-987a-1ccdc7ac1f50
-                            377b5b2c4b848fcaec7b1d0371aea91c: ref!! a091939f-c6a2-49ee-a41c-2cd8806000a0
-                            377dc6833616c46621f885a633515f6f: ref!! 751e1ca3-67ce-49c4-abdc-10ec3adb7736
-                            0c74630b82187006590cd8990669d519: ref!! 6d2693bb-a268-481c-a406-aaa89457bc31
