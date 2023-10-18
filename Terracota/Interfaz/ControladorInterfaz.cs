@@ -138,7 +138,7 @@ public class ControladorInterfaz : StartupScript
         txtCantidadTurnos.Text = turno.ToString();
         txtMultiplicador.Text = "x" + multiplicador.ToString("0.0");
 
-        if(multiplicador != multiplicadorMáximo)
+        if(multiplicador >= multiplicadorMáximo)
             txtMultiplicador.TextColor = Color.Red;
     }
 

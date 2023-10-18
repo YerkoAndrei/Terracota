@@ -49,9 +49,10 @@ public class ControladorPartidaLocal : AsyncScript
         proyectilHuesped = TipoProyectil.bola;
 
         maxEstatuas = 3;
+        cantidadTurnos = 1;
         multiplicador = 1.0f;
 
-        controladorInterfaz.ActualizarTurno(0, multiplicador);
+        controladorInterfaz.ActualizarTurno(cantidadTurnos, multiplicador);
 
         partidaActiva = true;
         while (Game.IsRunning)
@@ -61,7 +62,6 @@ public class ControladorPartidaLocal : AsyncScript
                 Disparar();
                 CambiarTurno();
             }
-
             await Script.NextFrame();
         }
     }
