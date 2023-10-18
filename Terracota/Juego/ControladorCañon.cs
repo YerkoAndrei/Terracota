@@ -1,8 +1,9 @@
-﻿using System;
-using Stride.Core.Mathematics;
+﻿using Stride.Core.Mathematics;
 using Stride.Input;
 using Stride.Engine;
 using Stride.Physics;
+using Stride.Particles;
+using Stride.Particles.Components;
 
 namespace Terracota;
 using static Constantes;
@@ -22,6 +23,8 @@ public class ControladorCañon : SyncScript
 
     public Entity ruedaIzquierda;
     public Entity ruedaDerecha;
+
+    public ParticleSystemComponent partículasHumo;
 
     public Prefab bala;
     public Prefab metralla;
@@ -109,5 +112,12 @@ public class ControladorCañon : SyncScript
                 }
                 break;
         }
+
+        // Partículas
+        if (!partículasHumo.Enabled)
+            partículasHumo.Enabled = true;
+
+        partículasHumo.ParticleSystem.ResetSimulation();
+        partículasHumo.ParticleSystem.Play();
     }
 }
