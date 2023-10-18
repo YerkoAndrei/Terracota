@@ -71,7 +71,7 @@ public class ControladorCañon : SyncScript
 
     }
 
-    public void Disparar(TipoProyectil tipoProyectil)
+    public void Disparar(TipoProyectil tipoProyectil, float multiplicador)
     {        
         switch (tipoProyectil)
         {
@@ -84,7 +84,7 @@ public class ControladorCañon : SyncScript
 
                 // Impulso
                 var cuerpo = nuevaBala.Get<RigidbodyComponent>();
-                cuerpo.ApplyForce(origenProyectil.Transform.WorldMatrix.Up * fuerzaBala);
+                cuerpo.ApplyForce(origenProyectil.Transform.WorldMatrix.Up * (fuerzaBala * multiplicador));
                 break;
             case TipoProyectil.metralla:
                 var nuevaMetralla = metralla.Instantiate()[0];
@@ -101,7 +101,7 @@ public class ControladorCañon : SyncScript
                     cuerpoMetralla.Mass += fuerzaAleatoria;
 
                     // Impulso
-                    cuerpoMetralla.ApplyForce(origenProyectil.Transform.WorldMatrix.Up * (fuerzaMetralla + fuerzaAleatoria));
+                    cuerpoMetralla.ApplyForce(origenProyectil.Transform.WorldMatrix.Up * ((fuerzaMetralla * multiplicador) + fuerzaAleatoria));
                 }
                 break;
         }

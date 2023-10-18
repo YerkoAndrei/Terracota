@@ -26,13 +26,13 @@ public class ControladorPartidaP2P : AsyncScript
         {
             if (Input.IsKeyPressed(Keys.Z) && !cambiandoTurno)
             {
-                cañónActual.Disparar(TipoProyectil.bola);
+                cañónActual.Disparar(TipoProyectil.bola, 1);
                 CambiarTurno();
             }
 
             if (Input.IsKeyPressed(Keys.X) && !cambiandoTurno)
             {
-                cañónActual.Disparar(TipoProyectil.metralla);
+                cañónActual.Disparar(TipoProyectil.metralla, 1);
                 CambiarTurno();
             }
             

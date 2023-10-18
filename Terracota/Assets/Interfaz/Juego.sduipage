@@ -137,7 +137,7 @@ Hierarchy:
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 180.0
-                Height: 150.0
+                Height: 200.0
                 HorizontalAlignment: Right
                 VerticalAlignment: Bottom
                 Margin: {}
@@ -146,6 +146,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Proyectil
                 Children:
+                    4c710afcf8c8274c287ef65b131ad271: !TextBlock ref!! 8a6b3d09-9162-4525-ad49-99bbba703f1b
                     eed3a4d0e3c9e968e0cc8401f332679d: !Button ref!! c8980f7a-eff5-4318-befd-2cb14599ca1e
                     39b2edaee69364a7c26cb294427d95fe: !TextBlock ref!! 7358cc6d-be98-462f-b60d-bbb234e9950f
                 RowDefinitions: {}
@@ -244,6 +245,24 @@ Hierarchy:
                     Texture: "03c66b25-d2c7-4121-86d9-4e5f7b912b87:Texturas/Círculo"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
+        -   UIElement: !TextBlock
+                Id: 8a6b3d09-9162-4525-ad49-99bbba703f1b
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Opacity: 0.8
+                Width: 180.0
+                Height: 60.0
+                VerticalAlignment: Top
+                Margin: {Right: 20.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtMultiplicador
+                Text: x1,0
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                TextSize: 40.0
+                TextColor: {R: 255, G: 255, B: 255, A: 255}
+                TextAlignment: Right
         -   UIElement: !Grid
                 Id: 9528b722-aba2-4485-bf3d-b7161869fe08
                 DependencyProperties: {}
@@ -305,7 +324,7 @@ Hierarchy:
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 80.0
                 Height: 60.0
-                VerticalAlignment: Bottom
+                VerticalAlignment: Center
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -366,7 +385,7 @@ Hierarchy:
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 80.0
-                Height: 200.0
+                Height: 280.0
                 HorizontalAlignment: Right
                 VerticalAlignment: Top
                 Margin: {Top: 20.0, Right: 20.0}
@@ -377,9 +396,28 @@ Hierarchy:
                 Children:
                     003b18eb5621054d2273c77cbb70fa1c: !Grid ref!! 98b6e512-5883-4a88-bc43-fd6612faacfb
                     2e8d88b0e9eab8fbc5ca77201c776076: !Grid ref!! b3926fa2-ac2f-419b-bc38-1aab970836d5
+                    1306fe37def09de21984ac9bf335b522: !TextBlock ref!! d94f4469-1449-4db3-b0d1-11a608b44912
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
+        -   UIElement: !TextBlock
+                Id: d94f4469-1449-4db3-b0d1-11a608b44912
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Opacity: 0.8
+                Width: 80.0
+                Height: 60.0
+                VerticalAlignment: Bottom
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtCantidadTurnos
+                Text: 00
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                TextSize: 50.0
+                TextColor: {R: 255, G: 255, B: 255, A: 255}
+                TextAlignment: Center
         -   UIElement: !ImageElement
                 Id: f5d9ff45-828d-4091-9182-8efbe3db112b
                 DependencyProperties: {}

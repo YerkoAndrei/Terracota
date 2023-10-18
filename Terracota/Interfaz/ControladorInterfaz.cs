@@ -23,13 +23,18 @@ public class ControladorInterfaz : StartupScript
     public Texture spriteAnfitrión;
     public Texture spriteHuesped;
 
-    private TextBlock txtTurno;
-    private TextBlock txtProyectil;
-
+    private Grid gridProyectil;
     private Grid gridGanador;
+
+    private TextBlock txtTurno;
+    private ImageElement imgTurno;
+
     private TextBlock txtGanador;
     private ImageElement imgGanador;
-    private ImageElement imgTurno;
+
+    private TextBlock txtProyectil;
+    private TextBlock txtCantidadTurnos;
+    private TextBlock txtMultiplicador;
 
     private Button btnProyectil;
     private Button btnPausa;
@@ -41,10 +46,14 @@ public class ControladorInterfaz : StartupScript
     {
         var página = Entity.Get<UIComponent>().Page;
 
+        gridGanador = página.RootElement.FindVisualChildOfType<Grid>("Ganador");
+        gridProyectil = página.RootElement.FindVisualChildOfType<Grid>("Proyectil");
+
         txtTurno = página.RootElement.FindVisualChildOfType<TextBlock>("txtTurno");
         txtProyectil = página.RootElement.FindVisualChildOfType<TextBlock>("txtProyectil");
+        txtCantidadTurnos = página.RootElement.FindVisualChildOfType<TextBlock>("txtCantidadTurnos");
+        txtMultiplicador = página.RootElement.FindVisualChildOfType<TextBlock>("txtMultiplicador");
 
-        gridGanador = página.RootElement.FindVisualChildOfType<Grid>("Ganador");
         txtGanador = página.RootElement.FindVisualChildOfType<TextBlock>("txtGanador");
         imgGanador = página.RootElement.FindVisualChildOfType<ImageElement>("imgGanador");
         imgTurno = página.RootElement.FindVisualChildOfType<ImageElement>("imgTurno");
@@ -89,9 +98,10 @@ public class ControladorInterfaz : StartupScript
     public void PausarInterfaz()
     {
         txtProyectil.Text = string.Empty;
+        txtCantidadTurnos.Text = string.Empty;
 
         btnPausa.Visibility = Visibility.Hidden;
-        btnProyectil.Visibility = Visibility.Hidden;
+        gridProyectil.Visibility = Visibility.Hidden;
 
         btnProyectil.CanBeHitByUser = false;
         btnPausa.CanBeHitByUser = false;
@@ -114,13 +124,19 @@ public class ControladorInterfaz : StartupScript
         CambiarTurno(jugador);
 
         imgTurno.Visibility = Visibility.Visible;
-        btnProyectil.Visibility = Visibility.Visible;
+        gridProyectil.Visibility = Visibility.Visible;
         btnPausa.Visibility = Visibility.Visible;
 
         btnProyectil.CanBeHitByUser = true;
         btnPausa.CanBeHitByUser = true;
 
         CambiarProyectil(proyectil);
+    }
+
+    public void ActualizarTurno(int turno, float multiplicador)
+    {
+        txtCantidadTurnos.Text = turno.ToString();
+        txtMultiplicador.Text = "x" + multiplicador.ToString("0.0");
     }
 
     private void CambiarTurno(TipoJugador jugador)
@@ -163,14 +179,16 @@ public class ControladorInterfaz : StartupScript
         estadoHuesped[estatua].Color = Color.Red;
     }
 
-    public void MostrarGanador(TipoJugador jugador)
+    public void MostrarGanador(TipoJugador jugador, int turno)
     {
         CambiarTurno(jugador);
         ActivarTurno(true);
 
+        txtCantidadTurnos.Text = turno.ToString();
+
         gridGanador.Visibility = Visibility.Visible;
 
-        btnProyectil.Visibility = Visibility.Hidden;
+        gridProyectil.Visibility = Visibility.Hidden;
         btnPausa.Visibility = Visibility.Visible;
 
         btnProyectil.CanBeHitByUser = false;

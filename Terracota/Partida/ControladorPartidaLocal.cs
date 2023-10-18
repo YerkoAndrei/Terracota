@@ -27,8 +27,11 @@ public class ControladorPartidaLocal : AsyncScript
     private int estatuasAnfitrión;
     private int estatuasHuesped;
     private int maxEstatuas;
+    private int cantidadTurnos;
+    private float multiplicador;
 
     private bool partidaActiva;
+    private bool sumarMultiplicador;
 
     public override async Task Execute()
     {
@@ -46,6 +49,9 @@ public class ControladorPartidaLocal : AsyncScript
         proyectilHuesped = TipoProyectil.bola;
 
         maxEstatuas = 3;
+        multiplicador = 1.0f;
+
+        controladorInterfaz.ActualizarTurno(0, multiplicador);
 
         partidaActiva = true;
         while (Game.IsRunning)
@@ -65,9 +71,9 @@ public class ControladorPartidaLocal : AsyncScript
         controladorCámara.ActivarEfectoDisparo();
 
         if (turnoJugador == TipoJugador.anfitrión)
-            cañónActual.Disparar(proyectilAnfitrión);
+            cañónActual.Disparar(proyectilAnfitrión, multiplicador);
         else
-            cañónActual.Disparar(proyectilHuesped);
+            cañónActual.Disparar(proyectilHuesped, multiplicador);
     }
 
     public TipoProyectil CambiarProyectil()
@@ -131,7 +137,21 @@ public class ControladorPartidaLocal : AsyncScript
 
             turnoJugador = TipoJugador.anfitrión;
             controladorInterfaz.CambiarInterfaz(turnoJugador, proyectilAnfitrión);
+
+            // Suma potencia despues de 4 turnos
+            SumarPotencia();
         }
+
+        cantidadTurnos++;
+        controladorInterfaz.ActualizarTurno(cantidadTurnos, multiplicador);
+    }
+
+    public void SumarPotencia()
+    {
+        if (sumarMultiplicador && multiplicador < 1.5f)
+            multiplicador += 0.1f;
+
+        sumarMultiplicador = !sumarMultiplicador;
     }
 
     public void DesactivarEstatua(TipoJugador jugador)
@@ -171,7 +191,7 @@ public class ControladorPartidaLocal : AsyncScript
         {
             partidaActiva = false;
             MirarGanador(ganador);
-            controladorInterfaz.MostrarGanador(ganador);
+            controladorInterfaz.MostrarGanador(ganador, cantidadTurnos);
         }
     }
 
