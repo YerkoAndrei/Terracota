@@ -30,36 +30,35 @@ Hierarchy:
                 Components:
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
                         Id: 8db621ed-1920-43a2-8875-d985433e077c
-                        Position: {X: 0.0, Y: 0.1, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.3, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             49ac178f430575013f4470da0bea1a68: ref!! c2f262da-8b23-4e89-a4d4-119afb2144b3
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: da1983ca-4fae-4c02-bcc6-9f118a4d2b93
-                        Model: a74dcfbb-6d03-4fca-9735-28a4dbbe3914:Modelos/Mono/Mono
-                        Materials:
-                            fb59f7268e0c02d5b1db8993b9a4569a~0: d4be94e3-4a98-4069-9b66-aea5a0a4da3b:Materiales/Dorado
+                        Model: cf9e0846-4760-4b3e-b2b8-0f630d6df8a5:Modelos/Mono/Mono
+                        Materials: {}
                     a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
                         Id: c47addce-fbb0-4105-a967-f909a0509bc9
                         CollisionGroup: CharacterFilter
                         CanSleep: true
                         Restitution: 0.2
                         Friction: 0.5
-                        RollingFriction: 0.0
+                        RollingFriction: 0.5
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         IsKinematic: false
                         Mass: 400.0
-                        LinearDamping: 0.1
-                        AngularDamping: 0.0
+                        LinearDamping: 0.2
+                        AngularDamping: 0.2
                         OverrideGravity: false
                         Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
                         NodeName: null
                         ColliderShapes:
                             4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
-                                Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Mono/MonoColliderHull
+                                Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Mono/ColliderMono
         -   Folder: null
             Entity:
                 Id: d9a9e123-b76c-4584-beef-96a502353fcb
@@ -67,9 +66,9 @@ Hierarchy:
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: c2f262da-8b23-4e89-a4d4-119afb2144b3
-                        Position: {X: 0.0, Y: 1.7, Z: 0.0}
+                        Position: {X: 0.0, Y: 1.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 0.3, Z: 1.0}
+                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
                         Children: {}
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
                         Id: eb4fb358-ef62-4cdf-80fe-260d34eabd00
