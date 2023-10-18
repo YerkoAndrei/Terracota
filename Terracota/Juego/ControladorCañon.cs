@@ -19,6 +19,10 @@ public class ControladorCañon : SyncScript
     public Entity soporte;
     public Entity cañón;
     public Entity origenProyectil;
+
+    public Entity ruedaIzquierda;
+    public Entity ruedaDerecha;
+
     public Prefab bala;
     public Prefab metralla;
 
@@ -52,7 +56,11 @@ public class ControladorCañon : SyncScript
             return;
 
         if (Input.MouseDelta.X != 0)
+        {
             soporte.Transform.RotationEulerXYZ += new Vector3(0, -(Input.MouseDelta.X * sensibilidadX), 0);
+            ruedaIzquierda.Transform.RotationEulerXYZ += new Vector3(-(Input.MouseDelta.X * sensibilidadX), 0, 0);
+            ruedaDerecha.Transform.RotationEulerXYZ += new Vector3((Input.MouseDelta.X * sensibilidadX), 0, 0);
+        }
 
         if (Input.MouseDelta.Y != 0)
             cañón.Transform.RotationEulerXYZ += new Vector3(-(Input.MouseDelta.Y * sensibilidadY), 0, 0);
