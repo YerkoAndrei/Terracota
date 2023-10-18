@@ -17,7 +17,7 @@ public class ControladorCañon : SyncScript
     public float sensibilidadY;
 
     public Entity soporte;
-    public Entity tubo;
+    public Entity cañón;
     public Entity origenProyectil;
     public Prefab bala;
     public Prefab metralla;
@@ -26,7 +26,8 @@ public class ControladorCañon : SyncScript
 
     public override void Start()
     {
-
+        fuerzaBala *= 1000;
+        fuerzaMetralla *= 1000;
     }
 
     public override void Update()
@@ -54,7 +55,7 @@ public class ControladorCañon : SyncScript
             soporte.Transform.RotationEulerXYZ += new Vector3(0, -(Input.MouseDelta.X * sensibilidadX), 0);
 
         if (Input.MouseDelta.Y != 0)
-            tubo.Transform.RotationEulerXYZ += new Vector3(-(Input.MouseDelta.Y * sensibilidadY), 0, 0);
+            cañón.Transform.RotationEulerXYZ += new Vector3(-(Input.MouseDelta.Y * sensibilidadY), 0, 0);
     }
 
     private void MoverCañónMóvil()
@@ -63,15 +64,13 @@ public class ControladorCañon : SyncScript
     }
 
     public void Disparar(TipoProyectil tipoProyectil)
-    {
-        var aleatorio = new Random();
-        
+    {        
         switch (tipoProyectil)
         {
             case TipoProyectil.bola:
                 var nuevaBala = bala.Instantiate()[0];
                 nuevaBala.Transform.Position = origenProyectil.Transform.WorldMatrix.TranslationVector;
-                nuevaBala.Transform.RotationEulerXYZ = new Vector3(aleatorio.Next(0, 360), aleatorio.Next(0, 360), aleatorio.Next(0, 360));
+                nuevaBala.Transform.RotationEulerXYZ = EulerAleatorio();
 
                 SceneSystem.SceneInstance.RootScene.Entities.Add(nuevaBala);
 
@@ -82,7 +81,7 @@ public class ControladorCañon : SyncScript
             case TipoProyectil.metralla:
                 var nuevaMetralla = metralla.Instantiate()[0];
                 nuevaMetralla.Transform.Position = origenProyectil.Transform.WorldMatrix.TranslationVector;
-                nuevaMetralla.Transform.RotationEulerXYZ = new Vector3(aleatorio.Next(0, 360), aleatorio.Next(0, 360), aleatorio.Next(0, 360));
+                nuevaMetralla.Transform.RotationEulerXYZ = EulerAleatorio();
 
                 SceneSystem.SceneInstance.RootScene.Entities.Add(nuevaMetralla);
 

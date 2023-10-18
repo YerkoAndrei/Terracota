@@ -118,12 +118,12 @@ Hierarchy:
                             fe850ff2a034e6ac607d6288829530db: ref!! e4244ac8-8b78-4362-8d82-f2e50691514e
                     5b462109dbbdaf98fd6224eed4682246: !Terracota.ControladorCa%25C3%25B1on,Terracota
                         Id: 3f3b5b74-dc2b-4f8e-9593-f4e7b376292c
-                        fuerzaBala: 55000.0
-                        fuerzaMetralla: 5000.0
+                        fuerzaBala: 150.0
+                        fuerzaMetralla: 12.0
                         sensibilidadX: 1.2
                         sensibilidadY: 1.2
                         soporte: ref!! 5eada21f-e82b-4b3f-894f-4ca44eb2899e
-                        tubo: ref!! 65de65a6-b1ae-4b8f-8ee4-60069ac2fad6
+                        "cañón": ref!! 7c227d63-65dc-49fe-bdb3-52dc0d7b06be
                         origenProyectil: ref!! d732340a-175d-4806-b73c-5128c04ac288
                         bala: 32dc5310-2c33-4019-a4a0-fdf11fafd6c0:Prefabs/Bola
                         metralla: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
@@ -230,22 +230,6 @@ Hierarchy:
                 BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
                 BasePartId: 7bfbc985-e878-49aa-948a-892caab395c5
                 InstanceId: 87051872-3fb3-4034-8273-49c85dc2ae63
-        -   Folder: null
-            Entity:
-                Id: 0f0fb5fe-a713-4e38-9fe7-73a30491ab8d
-                Name: "BaseCañon"
-                Components:
-                    877598e8027c6260de275fc3b666da40: !TransformComponent
-                        Id: 726c8557-4076-4526-bca5-5699a808a79a
-                        Position: {X: 0.0, Y: 1.5, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            2e567aa23606836b1f84c0d4581a7e94: ref!! 59f4c6c6-7b88-415c-b018-9a2fb4122a4b
-            Base:
-                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
-                BasePartId: 23eb46dd-f992-462d-a713-59798aba03ca
-                InstanceId: 72952ed6-a3df-48ba-bebc-63c28a5ed472
         -   Entity:
                 Id: 0f9ad076-9f4a-4569-a28d-e950b5234bb1
                 Name: Modelo Corto
@@ -444,7 +428,7 @@ Hierarchy:
                         Children: {}
                     f7ac26501f17cd6383460a18d17a0180: !Terracota.GameProfiler,Terracota
                         Id: 82c8afeb-e52b-40a2-bc48-10b2f93b32c3
-                        Enabled: true
+                        Enabled: false
                         TextColor: {R: 0, G: 238, B: 0, A: 255}
                         RefreshTime: 500.0
                         SortingMode: ByTime
@@ -518,26 +502,6 @@ Hierarchy:
                 BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
                 BasePartId: d9a9e123-b76c-4584-beef-96a502353fcb
                 InstanceId: da36cc5a-086d-47e4-9b6a-f60f90a7ca9f
-        -   Folder: null
-            Entity:
-                Id: 206c92d9-84e0-447e-8183-e74b1765be3e
-                Name: "Cañon"
-                Components:
-                    89f7b83236c70f4c78f22aceaca8a0bb: !TransformComponent
-                        Id: 59f4c6c6-7b88-415c-b018-9a2fb4122a4b
-                        Position: {X: 0.0, Y: -0.25, Z: -0.8}
-                        Rotation: {X: -0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 0.5, Y: 3.0, Z: 0.5}
-                        Children:
-                            2acb488d0fd3d163514a34e1fd6510b7: ref!! 2b2d81eb-aa9e-46af-8635-52a867cb783a
-                    88a49386d9ce43522cd82b95113a8b97: !ModelComponent
-                        Id: 76f83c54-8a69-4f9e-95c8-dac0bc913c15
-                        Model: 260a1c56-d157-4ed2-a6ec-285f8b3e851c:Modelos/Cilindro
-                        Materials: {}
-            Base:
-                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
-                BasePartId: 5064d7e9-705a-435e-a317-78602596f2b7
-                InstanceId: 72952ed6-a3df-48ba-bebc-63c28a5ed472
         -   Entity:
                 Id: 20f359f6-53cd-4beb-a871-f16dac4d0e73
                 Name: Modelo Corto
@@ -724,26 +688,6 @@ Hierarchy:
                 BasePartAsset: c3e1eb07-569c-4430-b6df-621730483430:Prefabs/Largo
                 BasePartId: 4e261b7d-1476-4149-ae5a-e14dc2a812d1
                 InstanceId: 6dc2f582-9054-41d0-93dc-142d30ddac31
-        -   Folder: null
-            Entity:
-                Id: 3a97eb38-a988-4066-85ff-880f727bac95
-                Name: "Cañon"
-                Components:
-                    89f7b83236c70f4c78f22aceaca8a0bb: !TransformComponent
-                        Id: aec32404-c903-4128-9849-1e1bf489cd62
-                        Position: {X: 0.0, Y: -0.25, Z: -0.8}
-                        Rotation: {X: -0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 0.5, Y: 3.0, Z: 0.5}
-                        Children:
-                            2acb488d0fd3d163514a34e1fd6510b7: ref!! 56cc80ec-77ae-4073-9f93-628ce8061e02
-                    88a49386d9ce43522cd82b95113a8b97: !ModelComponent
-                        Id: 35d41d3b-2db8-4fe8-9322-df9feb011ece
-                        Model: 260a1c56-d157-4ed2-a6ec-285f8b3e851c:Modelos/Cilindro
-                        Materials: {}
-            Base:
-                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
-                BasePartId: 5064d7e9-705a-435e-a317-78602596f2b7
-                InstanceId: 0c05979a-3900-4c8e-a09d-a3c740b17de2
         -   Folder: null
             Entity:
                 Id: 3b17da31-5780-49d5-9597-69b8b28133e4
@@ -994,7 +938,8 @@ Hierarchy:
                     5c71c0d1625d170fbf45e8496839912a: !ModelComponent
                         Id: a0c87d45-2b00-4f87-8042-d6afd8304ded
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
-                        Materials: {}
+                        Materials:
+                            9a40d6ded94f43f2b19c09520506d7f4~0: bf539459-df0f-4ce7-8741-75834713c0a7:Materiales/Gris
             Base:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: dc62891d-6401-4bb0-b2df-8eb437305eb3
@@ -1168,7 +1113,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             88934090ceb7beb5ebed20423ff61859: ref!! bbd83f84-93de-4c13-876f-63798118ba06
-                            668aac500cf7400a5b94237819a8111a: ref!! 7d3f9029-8e67-46b4-a9e8-dbdecbe8c77c
+                            43a2ac13d2fd8b48155833be15a4aa50: ref!! 6e4bb845-b562-4b4f-93c0-6069b07ea717
             Base:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: 7e222b09-5877-449d-a77d-140653edf2e7
@@ -1210,22 +1155,6 @@ Hierarchy:
                 BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
                 BasePartId: cba927cc-2354-4112-a312-644e88b8deda
                 InstanceId: 1abdb427-437c-4be1-8399-c8e22ae293e9
-        -   Folder: null
-            Entity:
-                Id: 65de65a6-b1ae-4b8f-8ee4-60069ac2fad6
-                Name: "BaseCañon"
-                Components:
-                    877598e8027c6260de275fc3b666da40: !TransformComponent
-                        Id: 7d3f9029-8e67-46b4-a9e8-dbdecbe8c77c
-                        Position: {X: 0.0, Y: 1.5, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            2e567aa23606836b1f84c0d4581a7e94: ref!! aec32404-c903-4128-9849-1e1bf489cd62
-            Base:
-                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
-                BasePartId: 23eb46dd-f992-462d-a713-59798aba03ca
-                InstanceId: 0c05979a-3900-4c8e-a09d-a3c740b17de2
         -   Folder: null
             Entity:
                 Id: 6824f2ef-6a21-4e2a-8daa-8a59d3eb7fdb
@@ -1523,6 +1452,26 @@ Hierarchy:
                 BasePartId: cba927cc-2354-4112-a312-644e88b8deda
                 InstanceId: 194c5be2-f0f4-4c04-ad19-6e9998b6c073
         -   Entity:
+                Id: 7c227d63-65dc-49fe-bdb3-52dc0d7b06be
+                Name: "Cañón"
+                Components:
+                    f8f4f5bc7d383dc67172293c840324ca: !TransformComponent
+                        Id: 6e4bb845-b562-4b4f-93c0-6069b07ea717
+                        Position: {X: 0.0, Y: 1.1, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            56142d5e9d452f2e490bcdac00265333: ref!! 56cc80ec-77ae-4073-9f93-628ce8061e02
+                    c01ba252a1fd21a5a4bdf503db071e34: !ModelComponent
+                        Id: 4039c8f9-e449-4f04-8e72-24a7ae78229a
+                        Model: "59f0f758-be28-4dd8-abcd-1127dc35aa75:Modelos/Cañón/Cañón"
+                        Materials:
+                            9b618ce6019ff15686217db5bff95820~0: bf539459-df0f-4ce7-8741-75834713c0a7:Materiales/Gris
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 08868581-5001-468d-8f30-83fb352761d3
+                InstanceId: 0c05979a-3900-4c8e-a09d-a3c740b17de2
+        -   Entity:
                 Id: 7e3a639f-50bc-4a09-a300-57ca782be419
                 Name: Largos
                 Components:
@@ -1538,15 +1487,14 @@ Hierarchy:
                             9477684a48e400c6b6c755d2af89f3c9: ref!! d560f231-3a76-405f-b49e-624f29590bf4
                             eab20a432ddc341a84c6be22cf5b4cbb: ref!! d543498e-9d98-44ee-a070-ed40b7d2a63a
                             bef01a726d161fdef780c2732c9c19a6: ref!! 9f1d6bc2-3998-41ce-9e35-85733059fd43
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: 80a542a5-3816-40fc-b4df-312104dbb28f
                 Name: Origen
                 Components:
                     7276b1e02e02603a44404b7fba8254d1: !TransformComponent
                         Id: 2b2d81eb-aa9e-46af-8635-52a867cb783a
-                        Position: {X: 0.0, Y: 0.5, Z: -2.1220109E-07}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Position: {X: 0.0, Y: 0.0, Z: -2.3}
+                        Rotation: {X: -0.7071067, Y: 0.0, Z: 0.0, W: 0.7071068}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
             Base:
@@ -1724,7 +1672,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             88934090ceb7beb5ebed20423ff61859: ref!! 28284309-260e-45c2-a5ec-2fa686ec95c4
-                            668aac500cf7400a5b94237819a8111a: ref!! 726c8557-4076-4526-bca5-5699a808a79a
+                            6d98225b06711d238f3024ae3f4399d8: ref!! a28695ec-a4a4-4bbf-bf86-b3600ab58bf2
             Base:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: 7e222b09-5877-449d-a77d-140653edf2e7
@@ -2148,7 +2096,8 @@ Hierarchy:
                     5c71c0d1625d170fbf45e8496839912a: !ModelComponent
                         Id: d872e1d1-6fcd-418c-a033-ff66cb4370e9
                         Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
-                        Materials: {}
+                        Materials:
+                            9a40d6ded94f43f2b19c09520506d7f4~0: bf539459-df0f-4ce7-8741-75834713c0a7:Materiales/Gris
             Base:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: dc62891d-6401-4bb0-b2df-8eb437305eb3
@@ -2308,6 +2257,26 @@ Hierarchy:
                 BasePartId: cba927cc-2354-4112-a312-644e88b8deda
                 InstanceId: 274c9be7-760c-4097-8da9-5dac261038e7
         -   Entity:
+                Id: cfadc0ae-3718-4e55-a237-d12c6668a408
+                Name: "Cañón"
+                Components:
+                    f8f4f5bc7d383dc67172293c840324ca: !TransformComponent
+                        Id: a28695ec-a4a4-4bbf-bf86-b3600ab58bf2
+                        Position: {X: 0.0, Y: 1.1, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            79e776e1fb493e1c15aa997935c7d242: ref!! 2b2d81eb-aa9e-46af-8635-52a867cb783a
+                    c01ba252a1fd21a5a4bdf503db071e34: !ModelComponent
+                        Id: 3b19d2ca-538c-4132-85bf-14a1827f4942
+                        Model: "59f0f758-be28-4dd8-abcd-1127dc35aa75:Modelos/Cañón/Cañón"
+                        Materials:
+                            9b618ce6019ff15686217db5bff95820~0: bf539459-df0f-4ce7-8741-75834713c0a7:Materiales/Gris
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 08868581-5001-468d-8f30-83fb352761d3
+                InstanceId: 72952ed6-a3df-48ba-bebc-63c28a5ed472
+        -   Entity:
                 Id: d2c0a1c6-ba03-4c17-b57f-15b5efc31219
                 Name: "Fortaleza (Anfitrión)"
                 Components:
@@ -2335,12 +2304,12 @@ Hierarchy:
                             fe850ff2a034e6ac607d6288829530db: ref!! b86f0d03-fbb8-4dbd-afc5-f2525ab9ee33
                     5b462109dbbdaf98fd6224eed4682246: !Terracota.ControladorCa%25C3%25B1on,Terracota
                         Id: e8f15215-1e14-4edd-927c-7124d9e82cda
-                        fuerzaBala: 55000.0
-                        fuerzaMetralla: 5000.0
+                        fuerzaBala: 150.0
+                        fuerzaMetralla: 12.0
                         sensibilidadX: 1.2
                         sensibilidadY: 1.2
                         soporte: ref!! 927653da-24b3-4516-9718-af15f71537fa
-                        tubo: ref!! 0f0fb5fe-a713-4e38-9fe7-73a30491ab8d
+                        "cañón": ref!! cfadc0ae-3718-4e55-a237-d12c6668a408
                         origenProyectil: ref!! 80a542a5-3816-40fc-b4df-312104dbb28f
                         bala: 32dc5310-2c33-4019-a4a0-fdf11fafd6c0:Prefabs/Bola
                         metralla: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
@@ -2408,15 +2377,14 @@ Hierarchy:
                 BasePartAsset: c3e1eb07-569c-4430-b6df-621730483430:Prefabs/Largo
                 BasePartId: 7aee0956-0800-4c88-93ee-0d281fcf29e6
                 InstanceId: ecfd3061-79fe-4cb0-bec4-be5135da73b4
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: d732340a-175d-4806-b73c-5128c04ac288
                 Name: Origen
                 Components:
                     7276b1e02e02603a44404b7fba8254d1: !TransformComponent
                         Id: 56cc80ec-77ae-4073-9f93-628ce8061e02
-                        Position: {X: 0.0, Y: 0.5, Z: -2.1220109E-07}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Position: {X: 0.0, Y: 0.0, Z: -2.3}
+                        Rotation: {X: -0.7071067, Y: 0.0, Z: 0.0, W: 0.7071068}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
             Base:

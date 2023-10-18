@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Graphics;
 using Stride.Rendering.Sprites;
@@ -11,9 +12,20 @@ public static class Sistema
 {
     public static float RangoAleatorio(float min, float max)
     {
-        System.Random random = new();
-        double val = (random.NextDouble() * (max - min) + min);
+        var aleatorio = new Random();
+        double val = (aleatorio.NextDouble() * (max - min) + min);
         return (float)val;
+    }
+
+    public static Vector3 EulerAleatorio()
+    {
+        var aleatorio = new Random();
+
+        // RotationEulerXYZ está en radianes
+        var x = MathUtil.DegreesToRadians(aleatorio.Next(0, 360));
+        var y = MathUtil.DegreesToRadians(aleatorio.Next(0, 360));
+        var z = MathUtil.DegreesToRadians(aleatorio.Next(0, 360));
+        return new Vector3(x, y, z);
     }
 
     // Solo encuenta en primeros hijos
