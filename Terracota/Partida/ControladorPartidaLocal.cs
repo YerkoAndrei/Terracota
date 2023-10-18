@@ -2,7 +2,6 @@
 using Stride.Core.Mathematics;
 using Stride.Input;
 using Stride.Engine;
-using Stride.Games;
 
 namespace Terracota;
 using static Constantes;
@@ -13,6 +12,7 @@ public class ControladorPartidaLocal : AsyncScript
     public ControladorCañon cañónHuesped;
 
     public TransformComponent ejeCámara;
+    public TransformComponent luzDireccional;
 
     public ControladorInterfaz controladorInterfaz;
     public ControladorCámara controladorCámara;
@@ -224,6 +224,9 @@ public class ControladorPartidaLocal : AsyncScript
         {
             tiempo = tiempoLerp / duraciónLerp;
             ejeCámara.Rotation = Quaternion.Lerp(rotaciónInicial, direcciónObjetivo, tiempo);
+
+            // Mueve sol 45º
+            luzDireccional.Rotation *= Quaternion.RotationY(0.005f);
 
             tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
             await Script.NextFrame();

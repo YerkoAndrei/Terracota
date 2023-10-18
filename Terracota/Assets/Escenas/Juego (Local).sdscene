@@ -63,6 +63,7 @@ Hierarchy:
                         "cañónAnfitrión": ref!! e8f15215-1e14-4edd-927c-7124d9e82cda
                         "cañónHuesped": ref!! 3f3b5b74-dc2b-4f8e-9593-f4e7b376292c
                         "ejeCámara": ref!! 215294be-ea30-42ae-aa9d-646ec7a45d55
+                        luzDireccional: ref!! 9d1e5c73-1c8f-4fba-84b4-1ceeb30442ad
                         controladorInterfaz: ref!! 5af9dbe3-239a-4e0f-b163-6a2e7576fd52
                         "controladorCámara": ref!! 2ddc581e-7adf-42aa-afab-88409cfd0e64
         -   Entity:
@@ -351,14 +352,14 @@ Hierarchy:
                     09d666fe569b6705e10ac0fd980915ae: !TransformComponent
                         Id: 9d1e5c73-1c8f-4fba-84b4-1ceeb30442ad
                         Position: {X: 0.0, Y: 4.0, Z: 0.0}
-                        Rotation: {X: -0.044943467, Y: 0.9512512, Z: 0.25488698, W: 0.1677313}
+                        Rotation: {X: -0.18301268, Y: 0.68301266, Z: 0.18301268, W: 0.68301266}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     d3bd436bb21fdc2fc472afaa3883cec3: !LightComponent
                         Id: befb1ef5-6944-4e29-8f04-04d7734ff1c6
                         Type: !LightDirectional
                             Color: !ColorRgbProvider
-                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                                Value: {R: 1.0, G: 1.0, B: 0.9411765}
                             Shadow:
                                 Enabled: true
                                 Filter: !LightShadowMapFilterTypePcf {}
@@ -467,7 +468,7 @@ Hierarchy:
                         Children: {}
                     f7ac26501f17cd6383460a18d17a0180: !Terracota.GameProfiler,Terracota
                         Id: 82c8afeb-e52b-40a2-bc48-10b2f93b32c3
-                        Enabled: false
+                        Enabled: true
                         TextColor: {R: 0, G: 238, B: 0, A: 255}
                         RefreshTime: 500.0
                         SortingMode: ByTime
