@@ -148,7 +148,7 @@ public class ControladorPartidaLocal : AsyncScript
 
     public void SumarPotencia()
     {
-        if (sumarMultiplicador && multiplicador < 1.5f)
+        if (sumarMultiplicador && multiplicador < multiplicadorMáximo)
             multiplicador += 0.1f;
 
         sumarMultiplicador = !sumarMultiplicador;

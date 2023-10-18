@@ -137,6 +137,9 @@ public class ControladorInterfaz : StartupScript
     {
         txtCantidadTurnos.Text = turno.ToString();
         txtMultiplicador.Text = "x" + multiplicador.ToString("0.0");
+
+        if(multiplicador != multiplicadorMáximo)
+            txtMultiplicador.TextColor = Color.Red;
     }
 
     private void CambiarTurno(TipoJugador jugador)
