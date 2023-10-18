@@ -135,35 +135,6 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: 5a937d20-d3e9-4e7e-98cb-a6926d62f59b
                 InstanceId: 0c05979a-3900-4c8e-a09d-a3c740b17de2
-        -   Entity:
-                Id: 042cc7ad-933a-4747-8dca-2bbe0af0e74f
-                Name: Suelo
-                Components:
-                    0a541feac8fdc65234f0cc3637987d06: !TransformComponent
-                        Id: c50ef5d0-c82b-42ce-9477-e6910b8d2ccf
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 2.0, Y: 1.0, Z: 4.0}
-                        Children: {}
-                    1220a401bb4a39f027a7aaa331b8ebee: !ModelComponent
-                        Id: c515b6dc-28c3-4f28-8092-34ed51d54caa
-                        Model: a31cc64d-df78-4561-892a-dd04bd19610a:Modelos/Piso
-                        Materials: {}
-                    bd6eb7e6f842440332cd95f2b211f5c7: !StaticColliderComponent
-                        Id: 4c9bd3f6-810e-4b8d-9200-56b3a97ec3c4
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.5
-                        Friction: 0.5
-                        RollingFriction: 0.5
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            53ce6677ce3d8eb8ca16c4e23209b6d9: !StaticPlaneColliderShapeDesc
-                                Normal: {X: 0.0, Y: 1.0, Z: 0.0}
-                                Offset: 0.0
         -   Folder: null
             Entity:
                 Id: 05a3c4b7-1bbe-4781-b53f-ef9fbe4af016
@@ -252,6 +223,34 @@ Hierarchy:
                 BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
                 BasePartId: 7bfbc985-e878-49aa-948a-892caab395c5
                 InstanceId: 87051872-3fb3-4034-8273-49c85dc2ae63
+        -   Entity:
+                Id: 0f4e2896-db4a-4915-8126-8c09a6ce2e76
+                Name: Contorno
+                Components:
+                    950b390a30fc58b4792ba2d2343484cf: !TransformComponent
+                        Id: ca9df025-f5ff-40c1-868d-ad1432b9c09f
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    836654aef2839f0022554b08475e0f0c: !ModelComponent
+                        Id: b6835214-ba83-4432-bb11-62306d8131aa
+                        Model: 81f56bdc-362e-4388-8137-9558109d3349:Modelos/Entorno/Contorno
+                        Materials:
+                            b68cbc0ea7891821455a40d51307603b~0: b6273490-45c9-4ac2-9f6a-a6c259e47b34:Materiales/Verde
+                    acd5d61e00c21f00f5de9c2f52ad5d8d: !StaticColliderComponent
+                        Id: afc7f901-5fd6-4d5c-85ca-66a0defa8098
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 1.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            0303fef4de4f34fbf12747f932d23e22: !StaticMeshColliderShapeDesc
+                                Model: 81f56bdc-362e-4388-8137-9558109d3349:Modelos/Entorno/Contorno
         -   Entity:
                 Id: 0f9ad076-9f4a-4569-a28d-e950b5234bb1
                 Name: Modelo Corto
@@ -407,39 +406,6 @@ Hierarchy:
                 BasePartAsset: c3e1eb07-569c-4430-b6df-621730483430:Prefabs/Largo
                 BasePartId: 7aee0956-0800-4c88-93ee-0d281fcf29e6
                 InstanceId: d7605ce4-58c8-4c76-afc2-ed62ecae4506
-        -   Entity:
-                Id: 17a975b6-94a1-4e75-aa38-384489dab404
-                Name: Cubo (0)
-                Components:
-                    9a2439465c1d95fb64e102fbf112be90: !TransformComponent
-                        Id: 4e5a286c-937e-4ab9-a0ed-4cb70333096e
-                        Position: {X: -12.8, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.38268346, W: 0.9238795}
-                        Scale: {X: 4.0, Y: 4.0, Z: 45.6}
-                        Children: {}
-                    aefe31d5ae8eaaef55145e7133ee5081: !ModelComponent
-                        Id: 92d86ce3-cf72-420a-82eb-2c5fc8310fd1
-                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
-                        Materials:
-                            9608322aea6edfa9f223026c5fcdfc98~0: b6273490-45c9-4ac2-9f6a-a6c259e47b34:Materiales/Verde
-                    2a707741730e3c6e1f54acddbb918b51: !StaticColliderComponent
-                        Id: 96e8e184-fa43-454c-90aa-849051bd7909
-                        CollisionGroup: StaticFilter
-                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 1.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            ba9b39ad266e4aee0e8eb263a2d6592b: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Folder: null
             Entity:
                 Id: 184c0fce-aac4-401a-9097-b5385b7701ff
@@ -468,43 +434,12 @@ Hierarchy:
                         Children: {}
                     f7ac26501f17cd6383460a18d17a0180: !Terracota.GameProfiler,Terracota
                         Id: 82c8afeb-e52b-40a2-bc48-10b2f93b32c3
-                        Enabled: true
+                        Enabled: false
                         TextColor: {R: 0, G: 238, B: 0, A: 255}
                         RefreshTime: 500.0
                         SortingMode: ByTime
                         FilteringMode: Fps
                         ResultPage: 1
-        -   Entity:
-                Id: 19f1e7ad-53f5-4c0d-9810-0899394a2b1d
-                Name: Cilindro (0)
-                Components:
-                    0c6ec4ccb1bad59279d85cf905fc4223: !TransformComponent
-                        Id: 0ea348a3-57ba-4af1-ad8c-33a9d1181868
-                        Position: {X: 0.0, Y: 2.0, Z: 21.3}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 2.5, Y: 4.0, Z: 2.5}
-                        Children: {}
-                    d8f044db166725b3a961043b5dfc093d: !StaticColliderComponent
-                        Id: 107a8d9d-96d5-4e22-b278-ed037abadf87
-                        CollisionGroup: StaticFilter
-                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 1.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            79327e398210175aed76bcc1d47ff7ac: !CylinderColliderShapeDesc
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    dd5408248c5246cf9fdb19cf892f584e: !ModelComponent
-                        Id: 3009a983-5308-4ef5-97fc-6ad895890dc4
-                        Model: 260a1c56-d157-4ed2-a6ec-285f8b3e851c:Modelos/Cilindro
-                        Materials:
-                            cbff040f1491e8d845f5620040975dad~0: b6273490-45c9-4ac2-9f6a-a6c259e47b34:Materiales/Verde
         -   Folder: null
             Entity:
                 Id: 1ba3ac05-ae87-426d-b604-0db68e602952
@@ -1000,6 +935,38 @@ Hierarchy:
                 BasePartId: cba927cc-2354-4112-a312-644e88b8deda
                 InstanceId: 910cf8ad-0cde-4b81-be38-34b3c2f254e8
         -   Entity:
+                Id: 4a93a7d2-1deb-4e99-9e4b-3816dcf50813
+                Name: Piso
+                Components:
+                    675d0f283ce13a10164c43c161b631f8: !TransformComponent
+                        Id: 73cbdbc3-1434-43af-9c83-370017bd0ac6
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f25d3b57c6c09cfcdb411d942b10cc1f: !ModelComponent
+                        Id: 3f911f43-45e2-4f77-ad85-d43ca726cd7f
+                        Model: 9820a66d-9dab-402a-9645-fcb7239d3966:Modelos/Entorno/Piso
+                        IsShadowCaster: false
+                        Materials:
+                            fa705330a241796ebad7aeb6fd81e74c~0: b6273490-45c9-4ac2-9f6a-a6c259e47b34:Materiales/Verde
+                            a9678b57c6ce734aa0a9c1cdab7ebb58~1: "767ca21c-d14f-4d8f-962c-b3276d36c879:Materiales/Límite"
+                    49474570cf54df486a2d130aeedb5e1f: !StaticColliderComponent
+                        Id: 9e91ab89-e4a9-4928-91fb-6c68fb542eff
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.5
+                        Friction: 0.5
+                        RollingFriction: 0.5
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            e721525d5d54483a1b0a7dc5eeb5e684: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                Offset: 0.0
+        -   Entity:
                 Id: 4ae59712-42a1-44ee-9673-40706c60b6b0
                 Name: Modelo Corto
                 Components:
@@ -1126,40 +1093,6 @@ Hierarchy:
                 BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
                 BasePartId: cba927cc-2354-4112-a312-644e88b8deda
                 InstanceId: fb9db244-7dcb-4a8e-b600-07c50733caa4
-        -   Folder: null
-            Entity:
-                Id: 4fa984c8-b13e-4f14-aeff-975affb026fb
-                Name: Cubo (2)
-                Components:
-                    51dc80648bba31dfa0eaaab16f028506: !StaticColliderComponent
-                        Id: c9ea4d72-00ed-4100-a0d6-1d781df9812a
-                        CollisionGroup: StaticFilter
-                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 1.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            ba9b39ad266e4aee0e8eb263a2d6592b: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    9a2439465c1d95fb64e102fbf112be90: !TransformComponent
-                        Id: 640cce2e-b523-42f3-8889-df555a9dff41
-                        Position: {X: 0.0, Y: 0.0, Z: -22.8}
-                        Rotation: {X: 0.38268346, Y: 0.0, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 25.6, Y: 4.0, Z: 4.0}
-                        Children: {}
-                    aefe31d5ae8eaaef55145e7133ee5081: !ModelComponent
-                        Id: a7fe1167-9bc8-435b-b67d-cd323e11711b
-                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
-                        Materials:
-                            9608322aea6edfa9f223026c5fcdfc98~0: b6273490-45c9-4ac2-9f6a-a6c259e47b34:Materiales/Verde
         -   Folder: null
             Entity:
                 Id: 52fd2355-2213-47c6-b18c-d287d6f410f1
@@ -1375,40 +1308,6 @@ Hierarchy:
                 InstanceId: 1abdb427-437c-4be1-8399-c8e22ae293e9
         -   Folder: null
             Entity:
-                Id: 6824f2ef-6a21-4e2a-8daa-8a59d3eb7fdb
-                Name: Cubo (3)
-                Components:
-                    67f847d2c3b23859cfe471690a52e071: !StaticColliderComponent
-                        Id: f7515d0c-0188-43ca-91a1-38d69b09385b
-                        CollisionGroup: StaticFilter
-                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 1.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            ba9b39ad266e4aee0e8eb263a2d6592b: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    9a2439465c1d95fb64e102fbf112be90: !TransformComponent
-                        Id: 5fcbdc26-d48e-4659-9612-da3054522241
-                        Position: {X: 0.0, Y: 0.0, Z: 22.8}
-                        Rotation: {X: 0.38268346, Y: 0.0, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 25.6, Y: 4.0, Z: 4.0}
-                        Children: {}
-                    aefe31d5ae8eaaef55145e7133ee5081: !ModelComponent
-                        Id: 4564c8b4-c895-4074-ba5d-6e748ad89b5a
-                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
-                        Materials:
-                            9608322aea6edfa9f223026c5fcdfc98~0: b6273490-45c9-4ac2-9f6a-a6c259e47b34:Materiales/Verde
-        -   Folder: null
-            Entity:
                 Id: 6c1b6820-6658-4691-9ae0-3c8b5f52d970
                 Name: Modelo Largo
                 Components:
@@ -1445,40 +1344,6 @@ Hierarchy:
                 BasePartAsset: c3e1eb07-569c-4430-b6df-621730483430:Prefabs/Largo
                 BasePartId: 7aee0956-0800-4c88-93ee-0d281fcf29e6
                 InstanceId: 6dc2f582-9054-41d0-93dc-142d30ddac31
-        -   Folder: null
-            Entity:
-                Id: 746823da-5516-40af-9526-6f462f9385ed
-                Name: Cubo (1)
-                Components:
-                    9a2439465c1d95fb64e102fbf112be90: !TransformComponent
-                        Id: c6f934a2-b177-40ea-9972-27d266b44e11
-                        Position: {X: 12.8, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.38268346, W: 0.9238795}
-                        Scale: {X: 4.0, Y: 4.0, Z: 45.6}
-                        Children: {}
-                    aefe31d5ae8eaaef55145e7133ee5081: !ModelComponent
-                        Id: c8062efc-4ba6-41f6-a386-75e87655046e
-                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
-                        Materials:
-                            9608322aea6edfa9f223026c5fcdfc98~0: b6273490-45c9-4ac2-9f6a-a6c259e47b34:Materiales/Verde
-                    171677990668ccabbce5af2f07ead21d: !StaticColliderComponent
-                        Id: 712937fd-774e-4cae-9381-5eedc96c6ca5
-                        CollisionGroup: StaticFilter
-                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 1.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            43715f90feba52f8be414fcf3938e934: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Folder: null
             Entity:
                 Id: 74d3f223-f1ea-4d87-9213-749e830f3eec
@@ -2026,38 +1891,6 @@ Hierarchy:
                 InstanceId: 0c05979a-3900-4c8e-a09d-a3c740b17de2
         -   Folder: null
             Entity:
-                Id: 91a70ea0-65e1-4d55-8a31-5d29a2d95df1
-                Name: Cilindro (0)
-                Components:
-                    0c6ec4ccb1bad59279d85cf905fc4223: !TransformComponent
-                        Id: 5aa3c375-50c0-452d-a8aa-cf6473ed82d7
-                        Position: {X: 0.0, Y: 2.0, Z: -21.3}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 2.5, Y: 4.0, Z: 2.5}
-                        Children: {}
-                    7f2bc87af196ab879ac4a50245f4fe6b: !StaticColliderComponent
-                        Id: c3cbde07-ea8d-404c-a6aa-6593642ca078
-                        CollisionGroup: StaticFilter
-                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 1.0
-                        RollingFriction: 1.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            bc6da3569c68cd1d8369c5142cbed4ad: !CylinderColliderShapeDesc
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    dd5408248c5246cf9fdb19cf892f584e: !ModelComponent
-                        Id: 773a9462-453f-4f3e-afa0-b5d4e00e2d24
-                        Model: 260a1c56-d157-4ed2-a6ec-285f8b3e851c:Modelos/Cilindro
-                        Materials:
-                            b31d23777b6b45ee9216500915cccecd~0: b6273490-45c9-4ac2-9f6a-a6c259e47b34:Materiales/Verde
-        -   Folder: null
-            Entity:
                 Id: 927653da-24b3-4516-9718-af15f71537fa
                 Name: Soporte
                 Components:
@@ -2436,13 +2269,10 @@ Hierarchy:
                         Children:
                             84740b1bff3c411b34af1ea98099aac8: ref!! 9d1e5c73-1c8f-4fba-84b4-1ceeb30442ad
                             108f352a607968ca4ac0193815008379: ref!! 7d7f37af-473e-4328-add6-2de9ec52e4a1
-                            28297eb353c6e7c959e59bcbd90aa408: ref!! c50ef5d0-c82b-42ce-9477-e6910b8d2ccf
-                            499717dc3d9356710c1bdba8a4fca17e: ref!! 4e5a286c-937e-4ab9-a0ed-4cb70333096e
-                            4cc005b307d0e1d2ad40c297c4fc2950: ref!! c6f934a2-b177-40ea-9972-27d266b44e11
-                            c6f31d05bd798ca9eed3b34f933875e5: ref!! 640cce2e-b523-42f3-8889-df555a9dff41
-                            e43806d1ee325488f3cc5fc844f2fd5e: ref!! 5fcbdc26-d48e-4659-9612-da3054522241
-                            4a3e4b741923876548b2360738e8005d: ref!! 0ea348a3-57ba-4af1-ad8c-33a9d1181868
-                            b99e225148678e86498cc55b4e4a3534: ref!! 5aa3c375-50c0-452d-a8aa-cf6473ed82d7
+                            dd4534c9a527c1e490d5b24a381ba169: ref!! 73cbdbc3-1434-43af-9c83-370017bd0ac6
+                            c319c92745bd1a660ac4b3adb8ee7600: ref!! ca9df025-f5ff-40c1-868d-ad1432b9c09f
+                            455d2f42baf16150ea0df286a294e197: ref!! ecfd9cc7-d64e-416b-9ad7-ee207f034c99
+                            9a506e4494fcafd341581261af8c86aa: ref!! 4bfcf35b-c993-4d30-b03d-d5df4283f827
         -   Entity:
                 Id: b83dbcc1-1060-4781-84a7-abad8a7a8bbe
                 Name: Largos
@@ -3231,6 +3061,36 @@ Hierarchy:
                 BasePartAsset: c3e1eb07-569c-4430-b6df-621730483430:Prefabs/Largo
                 BasePartId: 4e261b7d-1476-4149-ae5a-e14dc2a812d1
                 InstanceId: aa6ce312-1454-4dba-a07c-0a9a91b32e85
+        -   Folder: null
+            Entity:
+                Id: f06cbe2a-19dc-49b3-9ac7-1b3273f18079
+                Name: Cilindro (1)
+                Components:
+                    392ac170602ecc7334f1dfc12f9ed7d3: !TransformComponent
+                        Id: 4bfcf35b-c993-4d30-b03d-d5df4283f827
+                        Position: {X: 0.0, Y: 0.0, Z: -21.3}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fa9b5c7cc3073381354db58123c39f41: !ModelComponent
+                        Id: a571f1db-71aa-4786-b045-3cf3d037bb0f
+                        Model: fa1024de-7206-4892-881b-9afd692c1c8e:Modelos/Entorno/Cilindro
+                        Materials:
+                            159c1635917631459596764fa6832df8~0: b6273490-45c9-4ac2-9f6a-a6c259e47b34:Materiales/Verde
+                    d35b92e1319dda4cbd28b69080d7a4a7: !StaticColliderComponent
+                        Id: bb21a978-1e24-4576-8aae-282e79a16377
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 1.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            bf3f65f38d7d8cec67cf9e1f81d2b18e: !CylinderColliderShapeDesc
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: f0a8f956-04da-4636-9060-7f7bb83b0784
                 Name*: Estatua 0
@@ -3290,6 +3150,35 @@ Hierarchy:
                 BasePartAsset: c3e1eb07-569c-4430-b6df-621730483430:Prefabs/Largo
                 BasePartId: 7aee0956-0800-4c88-93ee-0d281fcf29e6
                 InstanceId: aa6ce312-1454-4dba-a07c-0a9a91b32e85
+        -   Entity:
+                Id: f6ef6f72-4908-44e9-b89f-63c3854886d3
+                Name: Cilindro (0)
+                Components:
+                    392ac170602ecc7334f1dfc12f9ed7d3: !TransformComponent
+                        Id: ecfd9cc7-d64e-416b-9ad7-ee207f034c99
+                        Position: {X: 0.0, Y: 0.0, Z: 21.3}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fa9b5c7cc3073381354db58123c39f41: !ModelComponent
+                        Id: 8c0ee70c-7cb9-46f9-b1a1-1103ac516abf
+                        Model: fa1024de-7206-4892-881b-9afd692c1c8e:Modelos/Entorno/Cilindro
+                        Materials:
+                            159c1635917631459596764fa6832df8~0: b6273490-45c9-4ac2-9f6a-a6c259e47b34:Materiales/Verde
+                    d35b92e1319dda4cbd28b69080d7a4a7: !StaticColliderComponent
+                        Id: c92aa8ca-8271-463b-8b48-00042c6afa13
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 1.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            bf3f65f38d7d8cec67cf9e1f81d2b18e: !CylinderColliderShapeDesc
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: f705ba81-9095-4594-8b3b-aecb0468b136
                 Name: Rueda (Izquierda)
