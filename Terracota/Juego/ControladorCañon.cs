@@ -55,14 +55,18 @@ public class ControladorCañon : SyncScript
         if (!Input.IsMouseButtonDown(MouseButton.Left))
             return;
 
-        if (Input.MouseDelta.X != 0)
+        // Restricción
+        var ánguloX = MathUtil.RadiansToDegrees(cañón.Transform.RotationEulerXYZ.X + -(Input.MouseDelta.Y * sensibilidadY));
+        var ánguloY = MathUtil.RadiansToDegrees(soporte.Transform.RotationEulerXYZ.Y + -(Input.MouseDelta.X * sensibilidadX));
+
+        if (Input.MouseDelta.X != 0 && ánguloY < 60 && ánguloY > -60)
         {
             soporte.Transform.RotationEulerXYZ += new Vector3(0, -(Input.MouseDelta.X * sensibilidadX), 0);
             ruedaIzquierda.Transform.RotationEulerXYZ += new Vector3(-(Input.MouseDelta.X * sensibilidadX), 0, 0);
             ruedaDerecha.Transform.RotationEulerXYZ += new Vector3((Input.MouseDelta.X * sensibilidadX), 0, 0);
         }
 
-        if (Input.MouseDelta.Y != 0)
+        if (Input.MouseDelta.Y != 0 && ánguloX < 60 && ánguloX > -40)
             cañón.Transform.RotationEulerXYZ += new Vector3(-(Input.MouseDelta.Y * sensibilidadY), 0, 0);
     }
 
