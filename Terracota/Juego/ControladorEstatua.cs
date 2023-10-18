@@ -9,6 +9,7 @@ public class ControladorEstatua : AsyncScript
 {
     public TipoJugador jugador;
     public TransformComponent estatua;
+    public RigidbodyComponent cuerpo;
     public RigidbodyComponent cabeza;
 
     private ControladorPartidaLocal controladorPartida;
@@ -33,7 +34,10 @@ public class ControladorEstatua : AsyncScript
 
     private void DesactivarEstatua()
     {
+        cuerpo.Restitution = 0;
+        cuerpo.Mass = 1000;
         activo = false;
+
         controladorPartida.DesactivarEstatua(jugador);
     }
 }
