@@ -7,6 +7,21 @@ Hierarchy:
         - ref!! 5a937d20-d3e9-4e7e-98cb-a6926d62f59b
     Parts:
         -   Entity:
+                Id: 07aa2fbf-15fd-445b-9cc0-019214e795bc
+                Name: Rueda (Izquierda)
+                Components:
+                    5706a669773ea88e3283c59425aae98d: !TransformComponent
+                        Id: f5fcc75c-ef1c-4e06-9cf7-e7268c1523da
+                        Position: {X: -0.85, Y: 0.8, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    27b1ac87dabc08e68efbfcc6c3ea5fd9: !ModelComponent
+                        Id: 2b64cff1-c5cc-4097-9e13-67be68256acf
+                        Model: "92f8ecc7-cfb3-4153-a873-aeccb688702e:Modelos/Cañón/Rueda"
+                        Materials:
+                            532671e6549e44552b4726da9c5ad0b7~0: bf539459-df0f-4ce7-8741-75834713c0a7:Materiales/Gris
+        -   Entity:
                 Id: 08868581-5001-468d-8f30-83fb352761d3
                 Name: "Cañón"
                 Components:
@@ -35,8 +50,8 @@ Hierarchy:
                             fe850ff2a034e6ac607d6288829530db: ref!! c4c73266-ca5a-4c2d-bbaa-24df2a9c2eac
                     5b462109dbbdaf98fd6224eed4682246: !Terracota.ControladorCa%25C3%25B1on,Terracota
                         Id: 23039150-d421-445c-af8a-0c6e6f17df3c
-                        fuerzaBala: 150.0
-                        fuerzaMetralla: 12.0
+                        fuerzaBala: 160.0
+                        fuerzaMetralla: 15.0
                         sensibilidadX: 1.2
                         sensibilidadY: 1.2
                         soporte: ref!! 7e222b09-5877-449d-a77d-140653edf2e7
@@ -55,7 +70,9 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            88934090ceb7beb5ebed20423ff61859: ref!! 5f7877c7-c6fc-412a-936c-eac7200f348f
+                            e095058ba12a1baa7407df732afc6f65: ref!! 0b4ac603-6dfc-48a9-b7ba-b1cae2562c38
+                            fc5c8b934e8d5a817e50f86927b00c88: ref!! f5fcc75c-ef1c-4e06-9cf7-e7268c1523da
+                            889575bab8a32e30e6946bf965542c43: ref!! 38d1d07a-254a-48d0-ae6a-61d4bd9c2fca
                             dc80c1909c4da4970ba74ff9a0aeb042: ref!! e59dcf6d-bbc9-4734-b341-db49f844d742
         -   Entity:
                 Id: b1e3dd4b-e127-4d5c-91f4-5da6de0221b4
@@ -69,17 +86,31 @@ Hierarchy:
                         Children: {}
         -   Folder: null
             Entity:
-                Id: dc62891d-6401-4bb0-b2df-8eb437305eb3
-                Name: Caja
+                Id: bc1ab3a9-6c59-4948-9a5b-691f36b94197
+                Name: Rueda (Derecha)
                 Components:
-                    2e3a2a7c0e7a6f328cd043bb96b51f4b: !TransformComponent
-                        Id: 5f7877c7-c6fc-412a-936c-eac7200f348f
-                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                    5706a669773ea88e3283c59425aae98d: !TransformComponent
+                        Id: 38d1d07a-254a-48d0-ae6a-61d4bd9c2fca
+                        Position: {X: 0.85, Y: 0.8, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.5, Y: 1.0, Z: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    5c71c0d1625d170fbf45e8496839912a: !ModelComponent
-                        Id: bd9bea83-48e9-469b-a9f2-0a469b9051e2
-                        Model: f32ad522-038e-44c0-a3de-f336b8396ede:Modelos/Cubo
+                    27b1ac87dabc08e68efbfcc6c3ea5fd9: !ModelComponent
+                        Id: 52b348ef-3389-4b32-9d14-ea093808c421
+                        Model: "92f8ecc7-cfb3-4153-a873-aeccb688702e:Modelos/Cañón/Rueda"
                         Materials:
-                            9a40d6ded94f43f2b19c09520506d7f4~0: bf539459-df0f-4ce7-8741-75834713c0a7:Materiales/Gris
+                            1ef38b44de2c7edcc950920ec0a889c2~0: bf539459-df0f-4ce7-8741-75834713c0a7:Materiales/Gris
+        -   Entity:
+                Id: f2b48e3a-68ee-4e2c-be7e-b0998925f257
+                Name: Soporte
+                Components:
+                    a21fbb49378f5e86a5d4beba7ba28247: !TransformComponent
+                        Id: 0b4ac603-6dfc-48a9-b7ba-b1cae2562c38
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    9479ad81bd99611306874aedffe0ab1d: !ModelComponent
+                        Id: 85e0371d-6279-4fb6-b135-f8a753f364f4
+                        Model: "dab8cfd7-1d67-4305-933b-6f947dd81292:Modelos/Cañón/Soporte"
+                        Materials: {}
