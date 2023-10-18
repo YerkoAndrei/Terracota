@@ -16,9 +16,8 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            ab326f135d369e5d6e6e1086288f80a3: ref!! d624349a-f40a-409c-ae09-c01cbe0145d5
-        -   Folder: null
-            Entity:
+                            22993c01f6c508ca01285a5586b61195: ref!! d624349a-f40a-409c-ae09-c01cbe0145d5
+        -   Entity:
                 Id: cba927cc-2354-4112-a312-644e88b8deda
                 Name: Modelo Corto
                 Components:
@@ -36,18 +35,18 @@ Hierarchy:
                         Id: 0e836c28-c18d-4f9c-a981-fcdc67a4e7ba
                         CanSleep: true
                         Restitution: 0.2
-                        Friction: 0.5
-                        RollingFriction: 0.0
+                        Friction: 0.8
+                        RollingFriction: 0.8
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         IsKinematic: false
                         Mass: 100.0
                         LinearDamping: 0.1
-                        AngularDamping: 0.0
+                        AngularDamping: 0.1
                         OverrideGravity: false
                         Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
                         NodeName: null
                         ColliderShapes:
                             8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
-                                Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/CortoColliderHull
+                                Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/ColliderCorto
