@@ -25,6 +25,7 @@ public class ControladorInterfaz : StartupScript
 
     private Grid gridProyectil;
     private Grid gridGanador;
+    private Grid gridPausa;
 
     private TextBlock txtTurno;
     private ImageElement imgTurno;
@@ -36,50 +37,51 @@ public class ControladorInterfaz : StartupScript
     private TextBlock txtCantidadTurnos;
     private TextBlock txtMultiplicador;
 
+    private Button btnPausa;
     private Button btnProyectil;
     private ImageElement imgProyectil;
-
-    private Button btnPausa;
 
     private List<ImageElement> estadoAnfitrión;
     private List<ImageElement> estadoHuesped;
 
     public override void Start()
     {
-        var página = Entity.Get<UIComponent>().Page;
+        var página = Entity.Get<UIComponent>().Page.RootElement;
 
-        gridGanador = página.RootElement.FindVisualChildOfType<Grid>("Ganador");
-        gridProyectil = página.RootElement.FindVisualChildOfType<Grid>("Proyectil");
+        gridGanador = página.FindVisualChildOfType<Grid>("Ganador");
+        gridProyectil = página.FindVisualChildOfType<Grid>("Proyectil");
 
-        txtTurno = página.RootElement.FindVisualChildOfType<TextBlock>("txtTurno");
-        txtProyectil = página.RootElement.FindVisualChildOfType<TextBlock>("txtProyectil");
-        txtCantidadTurnos = página.RootElement.FindVisualChildOfType<TextBlock>("txtCantidadTurnos");
-        txtMultiplicador = página.RootElement.FindVisualChildOfType<TextBlock>("txtMultiplicador");
+        txtTurno = página.FindVisualChildOfType<TextBlock>("txtTurno");
+        txtProyectil = página.FindVisualChildOfType<TextBlock>("txtProyectil");
+        txtCantidadTurnos = página.FindVisualChildOfType<TextBlock>("txtCantidadTurnos");
+        txtMultiplicador = página.FindVisualChildOfType<TextBlock>("txtMultiplicador");
 
-        txtGanador = página.RootElement.FindVisualChildOfType<TextBlock>("txtGanador");
-        imgGanador = página.RootElement.FindVisualChildOfType<ImageElement>("imgGanador");
-        imgTurno = página.RootElement.FindVisualChildOfType<ImageElement>("imgTurno");
+        txtGanador = página.FindVisualChildOfType<TextBlock>("txtGanador");
+        imgGanador = página.FindVisualChildOfType<ImageElement>("imgGanador");
+        imgTurno = página.FindVisualChildOfType<ImageElement>("imgTurno");
 
-        btnProyectil = página.RootElement.FindVisualChildOfType<Button>("btnProyectil");
-        imgProyectil = página.RootElement.FindVisualChildOfType<ImageElement>("imgProyectil");
-        btnProyectil = ConfigurarColores(btnProyectil, imgProyectil);
+        btnProyectil = página.FindVisualChildOfType<Button>("btnProyectil");
+        imgProyectil = página.FindVisualChildOfType<ImageElement>("imgProyectil");
+        btnProyectil = ConfigurarBotón(btnProyectil, imgProyectil);
         btnProyectil.Click += EnClicProyectil;
 
-        btnPausa = página.RootElement.FindVisualChildOfType<Button>("btnPausa");
+        gridPausa = página.FindVisualChildOfType<Grid>("BI_Pausa");
+        btnPausa = página.FindVisualChildOfType<Button>("btnPausa");
+        btnPausa = ConfigurarBotón(btnPausa, página.FindVisualChildOfType<ImageElement>("imgPausa"));
         btnPausa.Click += EnClicPausa;
 
         estadoAnfitrión = new List<ImageElement>
         {
-            página.RootElement.FindVisualChildOfType<ImageElement>("imgAnfitrión_0"),
-            página.RootElement.FindVisualChildOfType<ImageElement>("imgAnfitrión_1"),
-            página.RootElement.FindVisualChildOfType<ImageElement>("imgAnfitrión_2")
+            página.FindVisualChildOfType<ImageElement>("imgAnfitrión_0"),
+            página.FindVisualChildOfType<ImageElement>("imgAnfitrión_1"),
+            página.FindVisualChildOfType<ImageElement>("imgAnfitrión_2")
         };
 
         estadoHuesped = new List<ImageElement>
         {
-            página.RootElement.FindVisualChildOfType<ImageElement>("imgHuesped_0"),
-            página.RootElement.FindVisualChildOfType<ImageElement>("imgHuesped_1"),
-            página.RootElement.FindVisualChildOfType<ImageElement>("imgHuesped_2")
+            página.FindVisualChildOfType<ImageElement>("imgHuesped_0"),
+            página.FindVisualChildOfType<ImageElement>("imgHuesped_1"),
+            página.FindVisualChildOfType<ImageElement>("imgHuesped_2")
         };
 
         // Predeterminado
@@ -104,7 +106,7 @@ public class ControladorInterfaz : StartupScript
         txtProyectil.Text = string.Empty;
         txtCantidadTurnos.Text = string.Empty;
 
-        btnPausa.Visibility = Visibility.Hidden;
+        gridPausa.Visibility = Visibility.Hidden;
         gridProyectil.Visibility = Visibility.Hidden;
 
         btnProyectil.CanBeHitByUser = false;
@@ -129,7 +131,7 @@ public class ControladorInterfaz : StartupScript
 
         imgTurno.Visibility = Visibility.Visible;
         gridProyectil.Visibility = Visibility.Visible;
-        btnPausa.Visibility = Visibility.Visible;
+        gridPausa.Visibility = Visibility.Visible;
 
         btnProyectil.CanBeHitByUser = true;
         btnPausa.CanBeHitByUser = true;
@@ -192,11 +194,9 @@ public class ControladorInterfaz : StartupScript
         ActivarTurno(true);
 
         txtCantidadTurnos.Text = turno.ToString();
-
         gridGanador.Visibility = Visibility.Visible;
-
         gridProyectil.Visibility = Visibility.Hidden;
-        btnPausa.Visibility = Visibility.Visible;
+        gridPausa.Visibility = Visibility.Visible;
 
         btnProyectil.CanBeHitByUser = false;
         btnPausa.CanBeHitByUser = true;

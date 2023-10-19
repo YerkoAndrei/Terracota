@@ -146,10 +146,29 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: Proyectil
                 Children:
+                    4dab0d93fc3887f25a326899c2efca18: !Grid ref!! 5aacc511-0539-4330-91c1-c608bb45a7be
                     4c710afcf8c8274c287ef65b131ad271: !TextBlock ref!! 8a6b3d09-9162-4525-ad49-99bbba703f1b
-                    531e100e881f735e754b9adf21e8dc99: !Button ref!! c8980f7a-eff5-4318-befd-2cb14599ca1e
-                    0b465963ad1c5700bc4c264bea101871: !ImageElement ref!! 7684bda4-0929-4e4a-b76b-fddfa52cf1d4
                     39b2edaee69364a7c26cb294427d95fe: !TextBlock ref!! 7358cc6d-be98-462f-b60d-bbb234e9950f
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !Grid
+                Id: 5aacc511-0539-4330-91c1-c608bb45a7be
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 80.0
+                Height: 80.0
+                Depth: 0.0
+                HorizontalAlignment: Right
+                VerticalAlignment: Bottom
+                Margin: {Right: 20.0, Bottom: 60.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: BI_Proyectil
+                Children:
+                    21950b6ae099597a396ccd6983fb426f: !Button ref!! c8980f7a-eff5-4318-befd-2cb14599ca1e
+                    eccdcd5e08cbbbf5b2ea9278a2ea2b3f: !ImageElement ref!! 7684bda4-0929-4e4a-b76b-fddfa52cf1d4
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -213,9 +232,8 @@ Hierarchy:
                 Width: 80.0
                 Height: 80.0
                 Depth: 0.0
-                HorizontalAlignment: Right
-                VerticalAlignment: Bottom
-                Margin: {Right: 20.0, Bottom: 70.0}
+                DepthAlignment: Back
+                Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -228,13 +246,13 @@ Hierarchy:
                 Id: 7d2d09b4-3f89-4c9a-b54d-6b4a174b0235
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Opacity: 0.8
+                Opacity: 0.0
                 DrawLayerNumber: 2
                 Width: 60.0
                 Height: 60.0
-                HorizontalAlignment: Left
-                VerticalAlignment: Top
-                Margin: {Left: 20.0, Top: 20.0}
+                Depth: 0.0
+                DepthAlignment: Stretch
+                Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -248,6 +266,25 @@ Hierarchy:
                 MouseOverImage: !SpriteFromTexture
                     Texture: "03c66b25-d2c7-4121-86d9-4e5f7b912b87:Texturas/Círculo"
                     Center: {X: 0.0, Y: 0.0}
+        -   UIElement: !Grid
+                Id: 7d957913-9c72-41c8-b020-b9cd7c9155e1
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 60.0
+                Height: 60.0
+                HorizontalAlignment: Left
+                VerticalAlignment: Top
+                Margin: {Left: 20.0, Top: 20.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: BI_Pausa
+                Children:
+                    83a07769dd618e6625cda93486da7acf: !Button ref!! 7d2d09b4-3f89-4c9a-b54d-6b4a174b0235
+                    43c13bcbbad12493c5c39d7f5c5b21e4: !ImageElement ref!! bdd49298-062a-474a-8b76-60de1f0f08ee
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
         -   UIElement: !ImageElement
                 Id: 899c184c-c358-4627-a209-c58038292748
                 DependencyProperties: {}
@@ -271,7 +308,7 @@ Hierarchy:
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Opacity: 0.8
                 Width: 180.0
-                Height: 60.0
+                Height: 50.0
                 VerticalAlignment: Top
                 Margin: {Right: 20.0}
                 MaximumWidth: 3.4028235E+38
@@ -292,7 +329,7 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Children:
-                    afff035a35a0ebeb10feefcaf67e64ac: !Button ref!! 7d2d09b4-3f89-4c9a-b54d-6b4a174b0235
+                    a6ce51bd93ef1ba8bd54ab3721cd7ee5: !Grid ref!! 7d957913-9c72-41c8-b020-b9cd7c9155e1
                     3589f8a2bc2fb281032c9d819536f16b: !Grid ref!! d38f562e-4345-4b81-a0c4-b58d436c3623
                     252197d66a5784cd627d50b843d88321: !Grid ref!! 57cee361-e441-4644-8c13-048c3dcbc12a
                     eb3f3ddc467d927dd340e82798f55adb: !Grid ref!! 6a723e94-9032-4d61-9e51-50561ab9db5a
@@ -376,6 +413,24 @@ Hierarchy:
                     Texture: "03c66b25-d2c7-4121-86d9-4e5f7b912b87:Texturas/Círculo"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 0, G: 255, B: 0, A: 255}
+        -   UIElement: !ImageElement
+                Id: bdd49298-062a-474a-8b76-60de1f0f08ee
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Opacity: 0.8
+                Width: 60.0
+                Height: 60.0
+                Depth: 0.0
+                DepthAlignment: Stretch
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: imgPausa
+                Source: !SpriteFromTexture
+                    Texture: "03c66b25-d2c7-4121-86d9-4e5f7b912b87:Texturas/Círculo"
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 255, A: 255}
         -   UIElement: !Button
                 Id: c8980f7a-eff5-4318-befd-2cb14599ca1e
                 DependencyProperties: {}
@@ -385,9 +440,8 @@ Hierarchy:
                 Width: 80.0
                 Height: 80.0
                 Depth: 0.0
-                HorizontalAlignment: Right
-                VerticalAlignment: Bottom
-                Margin: {Right: 20.0, Bottom: 70.0}
+                DepthAlignment: Stretch
+                Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38

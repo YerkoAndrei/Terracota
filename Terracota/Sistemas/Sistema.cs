@@ -59,11 +59,12 @@ public static class Sistema
         return sprite;
     }
 
-    public static Button ConfigurarColores(Button botón, ImageElement imagen)
+    public static Button ConfigurarBotón(Button botón, ImageElement imagen)
     {
-        botón.MouseOverStateChanged += (object sender, PropertyChangedArgs<MouseOverState> e) =>
+        // Cambios color
+        botón.MouseOverStateChanged += (sender, args) =>
         {
-            switch (e.NewValue)
+            switch (args.NewValue)
             {
                 case MouseOverState.MouseOverElement:
                     imagen.Color = colorEnCursor;
@@ -73,11 +74,11 @@ public static class Sistema
                     break;
             }
         };
-        botón.TouchDown += (object sender, TouchEventArgs e) =>
+        botón.TouchDown += (sender, args) =>
         {
             imagen.Color = colorEnClic;
         };
-        botón.TouchUp += (object sender, TouchEventArgs e) =>
+        botón.TouchUp += (sender, args) =>
         {
             imagen.Color = colorEnCursor;
         };
