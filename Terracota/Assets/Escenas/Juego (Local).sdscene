@@ -76,8 +76,8 @@ Hierarchy:
                         escenaJuego: af761eff-0def-4e64-9185-a183866d2296:Escenas/Juego (Local)
                         spriteBola: d681f95d-d384-43f3-b287-8df74a534497:Texturas/Interfaz/Bola
                         spriteMetralla: 017a6458-410b-4810-9447-3254c0c8db29:Texturas/Interfaz/Metralla
-                        "spriteAnfitrión": "f02ff77d-c4ca-486e-86a5-6f67d3fee235:Texturas/Interfaz/Anfitrión"
-                        spriteHuesped: bb3b4f3b-88c6-46e2-91a1-7695c6e079e1:Texturas/Interfaz/Huesped
+                        "spriteAnfitrión": "8d986627-e68f-4481-a6c3-9ef06599ea85:Texturas/Interfaz/Anfitrión"
+                        spriteHuesped: 976e2b48-5f94-437c-91e9-b29ecf29da95:Texturas/Interfaz/Huesped
                     d9134663cf65c4ff1e2f051b273a0936: !TransformComponent
                         Id: 973c3c82-a892-4ee0-914a-36ffe7ff1aa7
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -239,6 +239,7 @@ Hierarchy:
                         Materials: {}
                     acd5d61e00c21f00f5de9c2f52ad5d8d: !StaticColliderComponent
                         Id: afc7f901-5fd6-4d5c-85ca-66a0defa8098
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 1.0
@@ -3065,6 +3066,7 @@ Hierarchy:
                     d35b92e1319dda4cbd28b69080d7a4a7: !StaticColliderComponent
                         Id: bb21a978-1e24-4576-8aae-282e79a16377
                         CollisionGroup: StaticFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 1.0
@@ -3155,6 +3157,7 @@ Hierarchy:
                     d35b92e1319dda4cbd28b69080d7a4a7: !StaticColliderComponent
                         Id: c92aa8ca-8271-463b-8b48-00042c6afa13
                         CollisionGroup: StaticFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 1.0
