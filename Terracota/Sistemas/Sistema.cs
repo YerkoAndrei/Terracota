@@ -4,9 +4,11 @@ using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Graphics;
 using Stride.Rendering.Sprites;
+using Stride.UI;
 using Stride.UI.Controls;
 
 namespace Terracota;
+using static Constantes;
 
 public static class Sistema
 {
@@ -49,21 +51,36 @@ public static class Sistema
         }
     }
 
-    public static void CambiarImagenBotón(Button botón, Texture textura)
-    {
-        var sprite = ObtenerSprite(textura);
-
-        // PENDIENTE: Multiplicar por colores
-        botón.NotPressedImage = sprite;
-        botón.PressedImage = sprite;
-        botón.MouseOverImage = sprite;
-    }
-
     public static ISpriteProvider ObtenerSprite(Texture textura)
     {
         var sprite = new SpriteFromTexture();
         sprite.Texture = textura;
 
         return sprite;
+    }
+
+    public static Button ConfigurarColores(Button botón, ImageElement imagen)
+    {
+        botón.MouseOverStateChanged += (object sender, PropertyChangedArgs<MouseOverState> e) =>
+        {
+            switch (e.NewValue)
+            {
+                case MouseOverState.MouseOverElement:
+                    imagen.Color = colorEnCursor;
+                    break;
+                case MouseOverState.MouseOverNone:
+                    imagen.Color = colorNormal;
+                    break;
+            }
+        };
+        botón.TouchDown += (object sender, TouchEventArgs e) =>
+        {
+            imagen.Color = colorEnClic;
+        };
+        botón.TouchUp += (object sender, TouchEventArgs e) =>
+        {
+            imagen.Color = colorEnCursor;
+        };
+        return botón;
     }
 }

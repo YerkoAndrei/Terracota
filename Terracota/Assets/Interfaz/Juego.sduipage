@@ -147,7 +147,8 @@ Hierarchy:
                 Name: Proyectil
                 Children:
                     4c710afcf8c8274c287ef65b131ad271: !TextBlock ref!! 8a6b3d09-9162-4525-ad49-99bbba703f1b
-                    eed3a4d0e3c9e968e0cc8401f332679d: !Button ref!! c8980f7a-eff5-4318-befd-2cb14599ca1e
+                    531e100e881f735e754b9adf21e8dc99: !Button ref!! c8980f7a-eff5-4318-befd-2cb14599ca1e
+                    0b465963ad1c5700bc4c264bea101871: !ImageElement ref!! 7684bda4-0929-4e4a-b76b-fddfa52cf1d4
                     39b2edaee69364a7c26cb294427d95fe: !TextBlock ref!! 7358cc6d-be98-462f-b60d-bbb234e9950f
                 RowDefinitions: {}
                 ColumnDefinitions: {}
@@ -204,6 +205,25 @@ Hierarchy:
                 TextSize: 30.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
                 TextAlignment: Right
+        -   UIElement: !ImageElement
+                Id: 7684bda4-0929-4e4a-b76b-fddfa52cf1d4
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Opacity: 0.8
+                Width: 80.0
+                Height: 80.0
+                Depth: 0.0
+                HorizontalAlignment: Right
+                VerticalAlignment: Bottom
+                Margin: {Right: 20.0, Bottom: 70.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: imgProyectil
+                Source: !SpriteFromTexture
+                    Texture: d681f95d-d384-43f3-b287-8df74a534497:Texturas/Interfaz/Bola
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 255, A: 255}
         -   UIElement: !Button
                 Id: 7d2d09b4-3f89-4c9a-b54d-6b4a174b0235
                 DependencyProperties: {}
@@ -360,10 +380,11 @@ Hierarchy:
                 Id: c8980f7a-eff5-4318-befd-2cb14599ca1e
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Opacity: 0.8
+                Opacity: 0.0
                 DrawLayerNumber: 2
                 Width: 80.0
                 Height: 80.0
+                Depth: 0.0
                 HorizontalAlignment: Right
                 VerticalAlignment: Bottom
                 Margin: {Right: 20.0, Bottom: 70.0}
@@ -372,13 +393,13 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: btnProyectil
                 PressedImage: !SpriteFromTexture
-                    Texture: d681f95d-d384-43f3-b287-8df74a534497:Texturas/Interfaz/Bola
+                    Texture: "03c66b25-d2c7-4121-86d9-4e5f7b912b87:Texturas/Círculo"
                     Center: {X: 0.0, Y: 0.0}
                 NotPressedImage: !SpriteFromTexture
-                    Texture: d681f95d-d384-43f3-b287-8df74a534497:Texturas/Interfaz/Bola
+                    Texture: "03c66b25-d2c7-4121-86d9-4e5f7b912b87:Texturas/Círculo"
                     Center: {X: 0.0, Y: 0.0}
                 MouseOverImage: !SpriteFromTexture
-                    Texture: d681f95d-d384-43f3-b287-8df74a534497:Texturas/Interfaz/Bola
+                    Texture: "03c66b25-d2c7-4121-86d9-4e5f7b912b87:Texturas/Círculo"
                     Center: {X: 0.0, Y: 0.0}
         -   UIElement: !Grid
                 Id: d38f562e-4345-4b81-a0c4-b58d436c3623

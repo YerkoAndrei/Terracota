@@ -9,8 +9,8 @@ using Stride.Core.Mathematics;
 using Stride.Core.Serialization;
 
 namespace Terracota;
-using static Constantes;
 using static Sistema;
+using static Constantes;
 
 public class ControladorInterfaz : StartupScript
 {
@@ -37,6 +37,8 @@ public class ControladorInterfaz : StartupScript
     private TextBlock txtMultiplicador;
 
     private Button btnProyectil;
+    private ImageElement imgProyectil;
+
     private Button btnPausa;
 
     private List<ImageElement> estadoAnfitrión;
@@ -59,6 +61,8 @@ public class ControladorInterfaz : StartupScript
         imgTurno = página.RootElement.FindVisualChildOfType<ImageElement>("imgTurno");
 
         btnProyectil = página.RootElement.FindVisualChildOfType<Button>("btnProyectil");
+        imgProyectil = página.RootElement.FindVisualChildOfType<ImageElement>("imgProyectil");
+        btnProyectil = ConfigurarColores(btnProyectil, imgProyectil);
         btnProyectil.Click += EnClicProyectil;
 
         btnPausa = página.RootElement.FindVisualChildOfType<Button>("btnPausa");
@@ -163,11 +167,11 @@ public class ControladorInterfaz : StartupScript
         {
             case TipoProyectil.bola:
                 txtProyectil.Text = "Bola";
-                CambiarImagenBotón(btnProyectil, spriteBola);
+                imgProyectil.Source = ObtenerSprite(spriteBola);
                 break;
             case TipoProyectil.metralla:
                 txtProyectil.Text = "Metralla";
-                CambiarImagenBotón(btnProyectil, spriteMetralla);
+                imgProyectil.Source = ObtenerSprite(spriteMetralla);
                 break;
         }
     }
