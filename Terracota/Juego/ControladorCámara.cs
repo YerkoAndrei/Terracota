@@ -17,12 +17,12 @@ public class ControladorCámara : StartupScript
 
     public async void ActivarEfectoDisparo()
     {
-        await MoverCámara(0.5f);
+        await MoverCámara(0.8f);
     }
 
     private async Task MoverCámara(float retroceso)
     {
-        float duraciónLerp = 0.05f;
+        float duraciónLerp = 0.03f;
         float tiempoLerp = 0;
         float tiempo = 0;
 
@@ -42,7 +42,7 @@ public class ControladorCámara : StartupScript
         cámara.Position = posiciónObjetivo;
 
         // Retroceso
-        duraciónLerp = 1f;
+        duraciónLerp = 0.8f;
         tiempoLerp = 0;
         tiempo = 0;
 
