@@ -136,8 +136,7 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: 5a937d20-d3e9-4e7e-98cb-a6926d62f59b
                 InstanceId: 0c05979a-3900-4c8e-a09d-a3c740b17de2
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: 05a3c4b7-1bbe-4781-b53f-ef9fbe4af016
                 Name: Cabeza
                 Components:
@@ -372,8 +371,7 @@ Hierarchy:
                         SortingMode: ByTime
                         FilteringMode: Fps
                         ResultPage: 1
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: 1ba3ac05-ae87-426d-b604-0db68e602952
                 Name: Cabeza
                 Components:
@@ -992,8 +990,7 @@ Hierarchy:
                 BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
                 BasePartId: cba927cc-2354-4112-a312-644e88b8deda
                 InstanceId: fb9db244-7dcb-4a8e-b600-07c50733caa4
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: 52fd2355-2213-47c6-b18c-d287d6f410f1
                 Name: Cabeza
                 Components:
@@ -1040,7 +1037,8 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            49ac178f430575013f4470da0bea1a68: ref!! 26bea165-d276-4f5f-942e-4ff8ba775fc9
+                            ab378894df637d71b4266b1b4a495071: ref!! 26bea165-d276-4f5f-942e-4ff8ba775fc9
+                            338ebab01e24d780c6f7aa7f1d0a9b33: ref!! 1234974d-c103-4c2a-bdc4-8faab2bb5275
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: 4520dbd5-9ccf-41d8-b1d7-f65a4626c543
                         Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
@@ -1080,7 +1078,8 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            49ac178f430575013f4470da0bea1a68: ref!! 452d9de1-27d2-4491-9a7d-321cae4365c0
+                            001b5b0aaf4627bddb78e406437743ac: ref!! 452d9de1-27d2-4491-9a7d-321cae4365c0
+                            2499e630bf354f3d667717db2c708064: ref!! b8bcbdcb-b201-4b3d-9f50-22089dde0f7e
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: aac6afb9-9628-4fe8-a8fd-fff17326ecaa
                         Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
@@ -1166,6 +1165,24 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: 7e222b09-5877-449d-a77d-140653edf2e7
                 InstanceId: 0c05979a-3900-4c8e-a09d-a3c740b17de2
+        -   Entity:
+                Id: 5ec94907-47c0-40bc-9d8e-4b5373d3f836
+                Name: Bandera
+                Components:
+                    c376e76ea8faadeb37730ecff53b7d5c: !TransformComponent
+                        Id: 0f48cebc-34f5-4d37-ba02-36c7ad460d6d
+                        Position: {X: 0.0, Y: 1.9, Z: 0.65}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fc40e600c10f9b65227ac0f836817c9c: !ModelComponent
+                        Id: 2f9bdac9-6b88-4801-8764-6949e0914847
+                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Mono/Bandera
+                        Materials: {}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: af7d3fcd-d621-4c0c-80ed-20a356d32750
+                InstanceId: 6d61ba0c-bbca-4a4e-9d05-bfbf56aa1b8c
         -   Entity:
                 Id: 60c9fd13-fcf7-4d13-af43-ede7187a6897
                 Name: Modelo Corto
@@ -1347,7 +1364,8 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            49ac178f430575013f4470da0bea1a68: ref!! d35a7fde-37a6-4197-825e-02c7e871e15a
+                            ff6944636b11fde8eaad6fcc865292bf: ref!! d35a7fde-37a6-4197-825e-02c7e871e15a
+                            73a5c7b4242e71087fe8be9b1cd33e93: ref!! 0f48cebc-34f5-4d37-ba02-36c7ad460d6d
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: 222217a1-704d-4397-9555-144244c3f7c5
                         Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
@@ -1376,6 +1394,24 @@ Hierarchy:
                 BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
                 BasePartId: b846398e-bc6c-47ed-bb1c-425e4e5347fa
                 InstanceId: 6d61ba0c-bbca-4a4e-9d05-bfbf56aa1b8c
+        -   Entity:
+                Id: 796a0bce-f9a9-4861-94a0-7855568c8d5a
+                Name: Bandera
+                Components:
+                    c376e76ea8faadeb37730ecff53b7d5c: !TransformComponent
+                        Id: e4bb31fa-cdf3-40fb-8279-390a303fe511
+                        Position: {X: 0.0, Y: 1.9, Z: 0.65}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fc40e600c10f9b65227ac0f836817c9c: !ModelComponent
+                        Id: 9ce4d2d4-6528-45e8-8edf-02d2965389e7
+                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Mono/Bandera
+                        Materials: {}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: af7d3fcd-d621-4c0c-80ed-20a356d32750
+                InstanceId: c5366ce7-dde7-4766-ab5a-f42ac7a570ca
         -   Entity:
                 Id: 7996bd63-f821-4561-a611-077fcdce7c19
                 Name: Modelo Corto
@@ -1861,8 +1897,7 @@ Hierarchy:
                 BasePartAsset: c3e1eb07-569c-4430-b6df-621730483430:Prefabs/Largo
                 BasePartId: 7aee0956-0800-4c88-93ee-0d281fcf29e6
                 InstanceId: 892a5bfe-74bc-4a3e-8f82-8e13ce75ecdc
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: 9752ca57-9f6e-427c-87ee-8405963f9fb3
                 Name: Cabeza
                 Components:
@@ -2019,8 +2054,7 @@ Hierarchy:
                 BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
                 BasePartId: 56f5ad60-3d77-4bf7-9c13-cbb046c76088
                 InstanceId: da36cc5a-086d-47e4-9b6a-f60f90a7ca9f
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: a4b3e908-a005-465b-b7ec-9a1c0039d138
                 Name: Cabeza
                 Components:
@@ -2075,6 +2109,24 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: bc1ab3a9-6c59-4948-9a5b-691f36b94197
                 InstanceId: 0c05979a-3900-4c8e-a09d-a3c740b17de2
+        -   Entity:
+                Id: ab09c79d-72dd-47ce-b9d8-9670d6e84872
+                Name: Bandera
+                Components:
+                    c376e76ea8faadeb37730ecff53b7d5c: !TransformComponent
+                        Id: 1234974d-c103-4c2a-bdc4-8faab2bb5275
+                        Position: {X: 0.0, Y: 1.9, Z: 0.65}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fc40e600c10f9b65227ac0f836817c9c: !ModelComponent
+                        Id: 2e4d9fa4-7910-4ec8-a80f-8d3bbf1669d6
+                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Mono/Bandera
+                        Materials: {}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: af7d3fcd-d621-4c0c-80ed-20a356d32750
+                InstanceId: 3e1e7a73-769b-4bcf-895d-ae46d4685e2f
         -   Entity:
                 Id: adc923ed-eaae-4693-bb70-d48943f97e8c
                 Name: "Cámara"
@@ -2231,6 +2283,42 @@ Hierarchy:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
                 BasePartId: ed40b23d-5d39-418b-9236-c3e332db1654
                 InstanceId: 542d16e6-720c-418e-831b-de378013b2ab
+        -   Entity:
+                Id: b43faae4-4659-4526-a2f5-13a8a004331a
+                Name: Bandera
+                Components:
+                    c376e76ea8faadeb37730ecff53b7d5c: !TransformComponent
+                        Id: c33c78ee-d09d-46a0-864e-64722b96048e
+                        Position: {X: 0.0, Y: 1.9, Z: 0.65}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fc40e600c10f9b65227ac0f836817c9c: !ModelComponent
+                        Id: bcafddf6-f06e-42d6-8018-2a5e11936c29
+                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Mono/Bandera
+                        Materials: {}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: af7d3fcd-d621-4c0c-80ed-20a356d32750
+                InstanceId: b88ecc5a-f5df-47ca-9edb-1671d36b9dc4
+        -   Entity:
+                Id: b4f066a8-2970-424d-9c34-2fbc94e16d7e
+                Name: Bandera
+                Components:
+                    c376e76ea8faadeb37730ecff53b7d5c: !TransformComponent
+                        Id: b8bcbdcb-b201-4b3d-9f50-22089dde0f7e
+                        Position: {X: 0.0, Y: 1.9, Z: 0.65}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fc40e600c10f9b65227ac0f836817c9c: !ModelComponent
+                        Id: 71a6c68d-12fc-48c3-8882-00dfdf141bfe
+                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Mono/Bandera
+                        Materials: {}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: af7d3fcd-d621-4c0c-80ed-20a356d32750
+                InstanceId: 1b6b1524-52ba-4b41-991f-874322ffbf7e
         -   Folder: null
             Entity:
                 Id: b7402967-4987-4e87-9c66-1d50880cfd23
@@ -2242,7 +2330,8 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            49ac178f430575013f4470da0bea1a68: ref!! 4fde47ab-08d1-445a-8f84-dd20b7ee9bc9
+                            96e24b93d0e8fdb1b29ba0190a91165f: ref!! 4fde47ab-08d1-445a-8f84-dd20b7ee9bc9
+                            79c20e0dfbe559d0d59bdb508fa681d3: ref!! c33c78ee-d09d-46a0-864e-64722b96048e
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: f3b37348-c3b1-4ba7-862d-0e50cbffb6ee
                         Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
@@ -2298,7 +2387,8 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            49ac178f430575013f4470da0bea1a68: ref!! 6015d0c6-28ad-44c1-a0bf-8b2e50076787
+                            703588278c1637f9917cb87be33b3661: ref!! 6015d0c6-28ad-44c1-a0bf-8b2e50076787
+                            443ab77749a5fd395472ad3ff6255251: ref!! e4bb31fa-cdf3-40fb-8279-390a303fe511
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: def1b379-bf3e-4183-81f4-431bf38cf9d8
                         Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
@@ -2738,7 +2828,8 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            49ac178f430575013f4470da0bea1a68: ref!! 37c937ac-3b64-4a40-b9af-1037642aad22
+                            c2c7c604a14e700a0b3489afa51b324d: ref!! 37c937ac-3b64-4a40-b9af-1037642aad22
+                            a22166bb8c452a3715470e2277327006: ref!! 125d8c7a-808e-43fa-b0bb-ec501fd718c6
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: 090cebed-d0aa-4a6a-afcc-9e2f5285d6b7
                         Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
@@ -2970,6 +3061,24 @@ Hierarchy:
                 BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
                 BasePartId: cba927cc-2354-4112-a312-644e88b8deda
                 InstanceId: c70e2261-ab08-4245-b0a1-228675abc75c
+        -   Entity:
+                Id: e48d49ec-dfc4-4382-81db-c2e1cdb5542e
+                Name: Bandera
+                Components:
+                    c376e76ea8faadeb37730ecff53b7d5c: !TransformComponent
+                        Id: 125d8c7a-808e-43fa-b0bb-ec501fd718c6
+                        Position: {X: 0.0, Y: 1.9, Z: 0.65}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fc40e600c10f9b65227ac0f836817c9c: !ModelComponent
+                        Id: 8d4aed7e-95f6-4e5d-99d9-f68b9e4161d4
+                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Mono/Bandera
+                        Materials: {}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: af7d3fcd-d621-4c0c-80ed-20a356d32750
+                InstanceId: da36cc5a-086d-47e4-9b6a-f60f90a7ca9f
         -   Folder: null
             Entity:
                 Id: e57d4a0d-7fc9-4df4-a956-26ee4ce31fdc
@@ -3078,8 +3187,7 @@ Hierarchy:
                 BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
                 BasePartId: cba927cc-2354-4112-a312-644e88b8deda
                 InstanceId: 5d155b29-8e7f-4ccd-ab38-408b91a5bd5f
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: e99a845c-cd83-4a80-bee9-123f0d9c886b
                 Name: Cabeza
                 Components:

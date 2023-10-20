@@ -23,6 +23,20 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             b9a6de9d3e362d0511a1a20a34248d55: ref!! 8db621ed-1920-43a2-8875-d985433e077c
+        -   Entity:
+                Id: af7d3fcd-d621-4c0c-80ed-20a356d32750
+                Name: Bandera
+                Components:
+                    c376e76ea8faadeb37730ecff53b7d5c: !TransformComponent
+                        Id: 57f0536a-312a-4fc1-bb56-875a2df8477c
+                        Position: {X: 0.0, Y: 1.9, Z: 0.65}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fc40e600c10f9b65227ac0f836817c9c: !ModelComponent
+                        Id: 5ec6b1e0-071a-45ff-bae7-e826ac9175ae
+                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Mono/Bandera
+                        Materials: {}
         -   Folder: null
             Entity:
                 Id: b846398e-bc6c-47ed-bb1c-425e4e5347fa
@@ -34,7 +48,8 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            49ac178f430575013f4470da0bea1a68: ref!! c2f262da-8b23-4e89-a4d4-119afb2144b3
+                            d22f48e1c3b8bf2a1e04183b56083dfb: ref!! c2f262da-8b23-4e89-a4d4-119afb2144b3
+                            ebaf1d9d63ee8bb2702c68efc71c90e4: ref!! 57f0536a-312a-4fc1-bb56-875a2df8477c
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: da1983ca-4fae-4c02-bcc6-9f118a4d2b93
                         Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
@@ -59,8 +74,7 @@ Hierarchy:
                         ColliderShapes:
                             4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
                                 Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Mono/ColliderMono
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: d9a9e123-b76c-4584-beef-96a502353fcb
                 Name: Cabeza
                 Components:
