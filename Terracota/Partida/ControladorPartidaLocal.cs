@@ -39,6 +39,9 @@ public class ControladorPartidaLocal : AsyncScript
         cañónAnfitrión.Activar(true);
         cañónHuesped.Activar(false);
 
+        cañónAnfitrión.Asignar(controladorInterfaz);
+        cañónHuesped.Asignar(controladorInterfaz);
+
         turnoJugador = TipoJugador.anfitrión;
         cañónActual = cañónAnfitrión;
 
@@ -54,7 +57,8 @@ public class ControladorPartidaLocal : AsyncScript
         partidaActiva = true;
         while (Game.IsRunning)
         {
-            if (Input.IsKeyPressed(Keys.Space) && partidaActiva && !cambiandoTurno)
+            if (Input.IsKeyPressed(Keys.Space) && !controladorInterfaz.ObtenerPausa()
+                && partidaActiva && !cambiandoTurno)
             {
                 Disparar();
                 CambiarTurno();

@@ -44,6 +44,8 @@ public class ControladorInterfaz : StartupScript
     private List<ImageElement> estadoAnfitrión;
     private List<ImageElement> estadoHuesped;
 
+    private bool pausa;
+
     public override void Start()
     {
         var página = Entity.Get<UIComponent>().Page.RootElement;
@@ -81,12 +83,14 @@ public class ControladorInterfaz : StartupScript
 
         // Menú pausa
         biPausa = página.FindVisualChildOfType<Grid>("BI_Pausa");
+        gridPausa = página.FindVisualChildOfType<Grid>("Pausa");
+
         var btnPausa = página.FindVisualChildOfType<Button>("btnPausa");
         btnPausa = ConfigurarBotón(btnPausa, página.FindVisualChildOfType<ImageElement>("imgPausa"));
         btnPausa.Click += EnClicPausa;
 
-        gridPausa = página.FindVisualChildOfType<Grid>("Pausa");
-        gridPausa.Visibility = Visibility.Hidden;
+        var btnPanelOscuro = página.FindVisualChildOfType<Button>("PanelOscuro");
+        btnPanelOscuro.Click += EnClicPausa;
 
         página.FindVisualChildOfType<Button>("btnReanudar").Click += EnClicPausa;
         página.FindVisualChildOfType<Button>("btnReiniciar").Click += EnClicReiniciar;
@@ -94,13 +98,16 @@ public class ControladorInterfaz : StartupScript
         página.FindVisualChildOfType<Button>("btnSalir").Click += EnClicSalir;
 
         // Predeterminado
+        pausa = false;
         gridGanador.Visibility = Visibility.Hidden;
+        gridPausa.Visibility = Visibility.Hidden;
         CambiarInterfaz(TipoJugador.anfitrión, TipoProyectil.bola);
     }
 
     private void EnClicPausa(object sender, RoutedEventArgs e)
     {
-        if (gridPausa.Visibility == Visibility.Hidden)
+        pausa = !pausa;
+        if (pausa)
             gridPausa.Visibility = Visibility.Visible;
         else
             gridPausa.Visibility = Visibility.Hidden;
@@ -108,7 +115,6 @@ public class ControladorInterfaz : StartupScript
 
     private void EnClicReiniciar(object sender, RoutedEventArgs e)
     {
-        // Recargar escena
         Content.Unload(SceneSystem.SceneInstance.RootScene);
         SceneSystem.SceneInstance.RootScene = Content.Load(escenaJuego);
     }
@@ -231,5 +237,10 @@ public class ControladorInterfaz : StartupScript
                 txtGanador.Text = "Ganador: " + "Huesped";
                 break;
         }
+    }
+
+    public bool ObtenerPausa()
+    {
+        return pausa;
     }
 }

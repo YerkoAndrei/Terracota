@@ -30,6 +30,7 @@ public class ControladorCañon : SyncScript
     public Prefab metralla;
 
     private bool activo;
+    private ControladorInterfaz controladorInterfaz;
 
     public override void Start()
     {
@@ -37,9 +38,14 @@ public class ControladorCañon : SyncScript
         fuerzaMetralla *= 1000;
     }
 
+    public void Asignar(ControladorInterfaz _controladorInterfaz)
+    {
+        controladorInterfaz = _controladorInterfaz;
+    }
+
     public override void Update()
     {
-        if (!activo)
+        if (!activo || controladorInterfaz.ObtenerPausa())
             return;
 
         if (Input.HasMouse)

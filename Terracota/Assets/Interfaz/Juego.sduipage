@@ -101,19 +101,6 @@ Hierarchy:
                     CurrentFrame: 1
                 MouseOverImage: !SpriteFromSheet
                     Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-        -   UIElement: !Grid
-                Id: 2c3a3847-825c-4490-b39d-c2a15a0b86f2
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 100}
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: PanelOscuro
-                Children: {}
-                RowDefinitions: {}
-                ColumnDefinitions: {}
-                LayerDefinitions: {}
         -   UIElement: !Button
                 Id: 3823b38e-0d0a-4cc4-adb1-8705e3ec4c87
                 DependencyProperties: {}
@@ -191,6 +178,25 @@ Hierarchy:
                     Texture: "03c66b25-d2c7-4121-86d9-4e5f7b912b87:Texturas/Círculo"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 0, G: 255, B: 0, A: 255}
+        -   UIElement: !Button
+                Id: 56411a0c-d976-489c-9c11-b87638c04a5e
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 100}
+                DrawLayerNumber: 2
+                DepthAlignment: Back
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: PanelOscuro
+                PressedImage: !SpriteFromSheet
+                    Sheet: null
+                    CurrentFrame: 2
+                NotPressedImage: !SpriteFromSheet
+                    Sheet: null
+                    CurrentFrame: 1
+                MouseOverImage: !SpriteFromSheet
+                    Sheet: null
         -   UIElement: !Grid
                 Id: 57cee361-e441-4644-8c13-048c3dcbc12a
                 DependencyProperties: {}
@@ -278,7 +284,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Text: Opciones
+                Text: Opciones (x)
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
                 TextSize: 30.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}
@@ -399,15 +405,14 @@ Hierarchy:
                 Id: 819e3e86-f93b-4627-b08d-bb8dccc124d4
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Visibility: Hidden
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: Pausa
                 Children:
-                    5800791f0c4f60bc1e16fab84a82d928: !Grid ref!! 9d35844b-2ac7-4a32-880f-bc9111ff8e4d
-                    2338b094206b423a5858b9dd92b012c5: !Grid ref!! 2c3a3847-825c-4490-b39d-c2a15a0b86f2
+                    b2a26b9d10a6116a77a817413925ecc1: !Button ref!! 56411a0c-d976-489c-9c11-b87638c04a5e
+                    0a718dc130339393ca09ba11d737f63c: !Grid ref!! 9d35844b-2ac7-4a32-880f-bc9111ff8e4d
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -503,7 +508,8 @@ Hierarchy:
                 Id: 9d35844b-2ac7-4a32-880f-bc9111ff8e4d
                 DependencyProperties:
                     78359b1046d288ddac983daf86094a1c~GridBase.RowSpanPropertyKey: 1
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 100}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 200}
+                CanBeHitByUser: true
                 Width: 400.0
                 Height: 500.0
                 Margin: {}
