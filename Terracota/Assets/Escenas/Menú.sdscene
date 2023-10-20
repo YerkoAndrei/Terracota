@@ -1,0 +1,967 @@
+!SceneAsset
+Id: bf45c4dd-f4db-4005-9135-dab8e0ef10ed
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! 8515cc8d-8e8b-423a-aa91-0a077d6dc0bc
+        - ref!! 7293a8a3-667d-4967-ada2-4cee0d7b6929
+        - ref!! 94f201f2-25d2-4a5c-80c3-4e3787c11d66
+    Parts:
+        -   Folder: null
+            Entity:
+                Id: 06e077ec-de5c-4fbc-92e5-70423f69d57c
+                Name: Soporte
+                Components:
+                    0bf070e32c32c4e7329253d312cfd959: !TransformComponent
+                        Id: b97e2f17-3bef-4b2a-b912-84c0d6531a71
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            e095058ba12a1baa7407df732afc6f65: ref!! 5d412c96-03da-4198-8122-17e5d0fb08f1
+                            fc5c8b934e8d5a817e50f86927b00c88: ref!! 13c8861f-cdf9-48d9-8371-25be4e4f0b5c
+                            889575bab8a32e30e6946bf965542c43: ref!! 5aa4217d-5224-4e04-b5b0-3976501d47b3
+                            dc80c1909c4da4970ba74ff9a0aeb042: ref!! b1293da7-213c-4c8a-8ac5-43fd0a98ccc8
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 7e222b09-5877-449d-a77d-140653edf2e7
+                InstanceId: ce28e181-3d28-4000-89a6-ae77d7930396
+        -   Entity:
+                Id: 28ae2379-0261-498e-b20f-acdbe262fa11
+                Name: "Cañón"
+                Components:
+                    f8f4f5bc7d383dc67172293c840324ca: !TransformComponent
+                        Id: b1293da7-213c-4c8a-8ac5-43fd0a98ccc8
+                        Position: {X: 0.0, Y: 1.1, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            5535fce094d5910c5dc14e93c45cc1fd: ref!! eb88ede3-2a01-4403-bac1-f992590f9831
+                            49147154d2037270ab565c006539beb7: ref!! 63c2fd4b-31c3-4a0b-9f8e-596e210849b4
+                    c01ba252a1fd21a5a4bdf503db071e34: !ModelComponent
+                        Id: c6e4e777-aec7-4770-80dd-d9e37ca22324
+                        Model: "59f0f758-be28-4dd8-abcd-1127dc35aa75:Modelos/Cañón/Cañón"
+                        Materials: {}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 08868581-5001-468d-8f30-83fb352761d3
+                InstanceId: ce28e181-3d28-4000-89a6-ae77d7930396
+        -   Entity:
+                Id: 4016f5ac-d14d-4f52-b9f7-63fa367349af
+                Name: Modelo Estatua
+                Components:
+                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
+                        Id: b8730952-1033-4f41-98fd-cd114f5a83bf
+                        Position*: {X: 5.0, Y: 0.8, Z: 5.0}
+                        Rotation*: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale*: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
+                        Id: 6c8ec35b-e1df-42bf-92cf-c3da9db68183
+                        Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
+                        Materials: {}
+                    a1acdcd205fd97b1fa283b1c4342baa9: ~(Deleted)
+        -   Entity:
+                Id: 42eda054-cbe8-44c5-a73c-528a95845789
+                Name: "ControladorCañón"
+                Components:
+                    b2b0bf1d60b3fc31afd4f21fa78fdfaa: !TransformComponent
+                        Id: 9ab0687a-6654-4e27-b04a-c0b82be22f9d
+                        Position*: {X: 0.0, Y: 0.0, Z: 10.0}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale*: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            fe850ff2a034e6ac607d6288829530db: ref!! 351fd8eb-7555-45bd-bdaf-fa8154f71e9c
+        -   Entity:
+                Id: 479e844f-892e-449c-8972-acad44ff1180
+                Name: Rueda (Izquierda)
+                Components:
+                    5706a669773ea88e3283c59425aae98d: !TransformComponent
+                        Id: 13c8861f-cdf9-48d9-8371-25be4e4f0b5c
+                        Position: {X: -0.85, Y: 0.8, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    27b1ac87dabc08e68efbfcc6c3ea5fd9: !ModelComponent
+                        Id: f840b976-1403-4619-9f78-b2773efff810
+                        Model: "92f8ecc7-cfb3-4153-a873-aeccb688702e:Modelos/Cañón/Rueda"
+                        Materials: {}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 07aa2fbf-15fd-445b-9cc0-019214e795bc
+                InstanceId: ce28e181-3d28-4000-89a6-ae77d7930396
+        -   Folder: null
+            Entity:
+                Id: 55d22590-8fcb-4130-8a1d-163ea1720923
+                Name: Rueda (Derecha)
+                Components:
+                    5706a669773ea88e3283c59425aae98d: !TransformComponent
+                        Id: 33819c48-f950-4d7a-b795-d76aabdb9aa4
+                        Position: {X: 0.85, Y: 0.8, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    27b1ac87dabc08e68efbfcc6c3ea5fd9: !ModelComponent
+                        Id: d09abc00-62a1-4b17-93d4-d298268aef09
+                        Model: "92f8ecc7-cfb3-4153-a873-aeccb688702e:Modelos/Cañón/Rueda"
+                        Materials: {}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: bc1ab3a9-6c59-4948-9a5b-691f36b94197
+                InstanceId: 88bb57af-9542-4a93-8bab-6863a55dad6d
+        -   Folder: null
+            Entity:
+                Id: 58dcaca2-b517-4d13-b83f-e4160516fea6
+                Name: Contorno
+                Components:
+                    950b390a30fc58b4792ba2d2343484cf: !TransformComponent
+                        Id: 22bd8092-82ac-48d2-a47a-65fc8ae87ce0
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    836654aef2839f0022554b08475e0f0c: !ModelComponent
+                        Id: 81e224c1-8abe-4b6a-87f4-b84841bd02f3
+                        Model: 81f56bdc-362e-4388-8137-9558109d3349:Modelos/Entorno/Contorno
+                        Materials: {}
+                    acd5d61e00c21f00f5de9c2f52ad5d8d: !StaticColliderComponent
+                        Id: f08e8980-8033-44f6-9e09-917c2c49b345
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 1.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            0303fef4de4f34fbf12747f932d23e22: !StaticMeshColliderShapeDesc
+                                Model: 81f56bdc-362e-4388-8137-9558109d3349:Modelos/Entorno/Contorno
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: c40ee53f-b9d0-4c6d-bc46-4727d5a8fa35
+                InstanceId: 8e464a2a-cba3-4fb8-93e5-341a4ecf45f7
+        -   Entity:
+                Id: 63464ef4-33bc-4318-839f-40b95f6a9ce6
+                Name: "PartículasHumo"
+                Components:
+                    f1b3da3c239d0cdb538fda54fa843a7e: !TransformComponent
+                        Id: 9a1c1486-9f4f-476c-b6a0-2adfea0d5ace
+                        Position: {X: 0.0, Y: 0.0, Z: -2.4}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f8724608dc26693057602d67126d5311: !ParticleSystemComponent
+                        Id: e2717731-e0e0-4b58-8a0b-4e76714805b0
+                        Enabled: false
+                        Control:
+                            ResetSeconds: 1.0
+                            Control: Stop
+                        Color: {R: 0.39215687, G: 0.39215687, B: 0.39215687, A: 0.39215687}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                74cc9b27efbd4a42b9b37f886bffab91:
+                                    ParticleLifetime: {X: 0.5, Y: 1.0}
+                                    ShapeBuilder: !ShapeBuilderBillboard
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        AlphaAdditive: 0.5
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: "03c66b25-d2c7-4121-86d9-4e5f7b912b87:Texturas/Círculo"
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        5d1dff6d0e33c4018f2a90e188b092e9: !SpawnerBurst
+                                            LoopCondition: OneShot
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 100
+                                    Initializers:
+                                        38f63c62943ef694052bfd50568e464e: !InitialSizeSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            RandomSize: {X: 0.5, Y: 1.0}
+                                        a903e448d7c1708ccae1a5165a51fbcd: !InitialPositionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: false
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.38268346, W: 0.9238795}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: -0.5, Y: -0.5, Z: -1.0}
+                                            PositionMax: {X: 0.5, Y: 0.5, Z: 0.0}
+                                            Interpolate: false
+                                        ada5849bd548a7d0b516a6ce33aadc1c: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 2.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: -1.5, Y: -1.5, Z: -10.0}
+                                            VelocityMax: {X: 1.5, Y: 1.5, Z: 0.1}
+                                    Updaters:
+                                        ed94bebc9df81d9c9abf995948f476d2: !UpdaterForceField
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: true
+                                            FieldShape: null
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: true
+                                            DisplayParticleScaleUniform: false
+                                            FieldFalloff:
+                                                StrengthInside: 1.0
+                                                FalloffStart: 0.1
+                                                StrengthOutside: 1.0
+                                                FalloffEnd: 0.9
+                                            EnergyConservation: 1.0
+                                            ForceDirected: 0.0
+                                            ForceVortex: 0.0
+                                            ForceRepulsive: 0.0
+                                            ForceFixed: {X: 0.0, Y: -2.5, Z: 0.0}
+                                        fe9bc263f0ecb41cd9bb4768fdb9c26b: !UpdaterSizeOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames:
+                                                        5c412d3d762da5beb25e2e02e28d3ae8:
+                                                            Key: 0.0
+                                                            Value: 1.0
+                                                            TangentType: Linear
+                                                        94828919f968a42f83b2d19df6c44163:
+                                                            Key: 0.8
+                                                            Value: 0.4
+                                                            TangentType: Linear
+                                                        b2225dc5a3cd1bf55d8c091c4289d9fa:
+                                                            Key: 1.0
+                                                            Value: 0.0
+                                                            TangentType: Linear
+                                            SamplerOptional: null
+                                            SeedOffset: 0
+                                        7ae429d955af5a1e210f2dde28fac508: !UpdaterColorOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerColor4
+                                                Curve: !ComputeAnimationCurveColor4
+                                                    KeyFrames:
+                                                        f1ca84b435fdaa5b5ed0e107831f434b:
+                                                            Key: 0.0
+                                                            Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                                            TangentType: Linear
+                                                        c918a66e1d47e94118c7856243a2dc64:
+                                                            Key: 0.8
+                                                            Value: {R: 1.0, G: 1.0, B: 1.0, A: 0.4}
+                                                            TangentType: Linear
+                                                        1ae787d10dcfc87c5c8c810be7483555:
+                                                            Key: 1.0
+                                                            Value: {R: 1.0, G: 1.0, B: 1.0, A: 0.0}
+                                                            TangentType: Linear
+                                            SamplerOptional: null
+                                            SeedOffset: 0
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: d5365882-ad49-47ac-9c3a-d08c3cf53fd8
+                InstanceId: 88bb57af-9542-4a93-8bab-6863a55dad6d
+        -   Entity:
+                Id: 63a3ac9d-9f60-4ff0-a9be-deaf50284b02
+                Name: Modelo Estatua
+                Components:
+                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
+                        Id: 88f49789-f938-4076-86f9-4e7cb6678e2a
+                        Position*: {X: 0.0, Y: 0.8, Z: 5.0}
+                        Rotation*: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale*: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
+                        Id: c0df62ea-9b0e-40a7-a447-1e3fcb1b4f7c
+                        Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
+                        Materials: {}
+                    a1acdcd205fd97b1fa283b1c4342baa9: ~(Deleted)
+        -   Entity:
+                Id: 7165f536-7780-4599-add3-3a05126568e6
+                Name: Rueda (Izquierda)
+                Components:
+                    5706a669773ea88e3283c59425aae98d: !TransformComponent
+                        Id: 6128011f-c1a9-4a88-b2c5-898273a3abaf
+                        Position: {X: -0.85, Y: 0.8, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    27b1ac87dabc08e68efbfcc6c3ea5fd9: !ModelComponent
+                        Id: 21c8bda9-8f21-4f49-979d-26cab55dcfbc
+                        Model: "92f8ecc7-cfb3-4153-a873-aeccb688702e:Modelos/Cañón/Rueda"
+                        Materials: {}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 07aa2fbf-15fd-445b-9cc0-019214e795bc
+                InstanceId: 88bb57af-9542-4a93-8bab-6863a55dad6d
+        -   Entity:
+                Id: 7293a8a3-667d-4967-ada2-4cee0d7b6929
+                Name: Camera
+                Components:
+                    c5c5e26f2538bab8ef2598b4df166f84: !TransformComponent
+                        Id: 50eaadae-6533-4915-9cff-692329fb2b90
+                        Position: {X: 0.0, Y: 8.0, Z: 20.0}
+                        Rotation: {X: -0.17364818, Y: 0.0, Z: 0.0, W: 0.9848077}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    de14db4be28b4f161fd7a8bf6b0f18f3: !CameraComponent
+                        Id: b437039e-ce34-4999-b291-0427a2172c2a
+                        Name: null
+                        Projection: Perspective
+                        Slot: 9f373eee-c85c-45b0-9b02-82451f709476
+        -   Entity:
+                Id: 73331b5c-8ed2-4aa4-99ec-8767dd97f851
+                Name: "Cañón"
+                Components:
+                    f8f4f5bc7d383dc67172293c840324ca: !TransformComponent
+                        Id: dd47e4f8-cdd5-4b21-9412-ceb44eb27b26
+                        Position: {X: 0.0, Y: 1.1, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            5535fce094d5910c5dc14e93c45cc1fd: ref!! af8fcab8-b723-40c2-abc8-de83fac4d50e
+                            49147154d2037270ab565c006539beb7: ref!! 9a1c1486-9f4f-476c-b6a0-2adfea0d5ace
+                    c01ba252a1fd21a5a4bdf503db071e34: !ModelComponent
+                        Id: 999d31ad-3035-41af-ae62-82c18bcae245
+                        Model: "59f0f758-be28-4dd8-abcd-1127dc35aa75:Modelos/Cañón/Cañón"
+                        Materials: {}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 08868581-5001-468d-8f30-83fb352761d3
+                InstanceId: 88bb57af-9542-4a93-8bab-6863a55dad6d
+        -   Entity:
+                Id: 73f3de31-77a1-4bc3-8da8-4db15655ee11
+                Name: Origen
+                Components:
+                    7276b1e02e02603a44404b7fba8254d1: !TransformComponent
+                        Id: eb88ede3-2a01-4403-bac1-f992590f9831
+                        Position: {X: 0.0, Y: 0.0, Z: -2.4}
+                        Rotation: {X: -0.7071067, Y: 0.0, Z: 0.0, W: 0.7071068}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: b1e3dd4b-e127-4d5c-91f4-5da6de0221b4
+                InstanceId: ce28e181-3d28-4000-89a6-ae77d7930396
+        -   Folder: null
+            Entity:
+                Id: 7c74481c-ca81-4daa-bfe8-5df0fb591d77
+                Name: Rueda (Derecha)
+                Components:
+                    5706a669773ea88e3283c59425aae98d: !TransformComponent
+                        Id: 5aa4217d-5224-4e04-b5b0-3976501d47b3
+                        Position: {X: 0.85, Y: 0.8, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    27b1ac87dabc08e68efbfcc6c3ea5fd9: !ModelComponent
+                        Id: b6d97def-c628-4416-8fb2-abf21ca09cfa
+                        Model: "92f8ecc7-cfb3-4153-a873-aeccb688702e:Modelos/Cañón/Rueda"
+                        Materials: {}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: bc1ab3a9-6c59-4948-9a5b-691f36b94197
+                InstanceId: ce28e181-3d28-4000-89a6-ae77d7930396
+        -   Entity:
+                Id: 8515cc8d-8e8b-423a-aa91-0a077d6dc0bc
+                Name: "Entorno Menú"
+                Components:
+                    6dbec267d3fe7ef02c653e57af473741: !TransformComponent
+                        Id: e19da255-20eb-492f-93b2-56e497d86572
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            45bab970ebd2d7f09eb04007a37d9ad6: ref!! f9ca1432-da68-42fc-b899-c817875c8878
+                            4c4341f4462d108ef844d0140f42764f: ref!! f81e7700-5599-4638-8475-6d48c75c91cf
+                            1d95a6275cc467223d8b865e7a9166ff: ref!! 88f49789-f938-4076-86f9-4e7cb6678e2a
+                            28abc926fb3e1e2de060a817da1cb9c4: ref!! b8730952-1033-4f41-98fd-cd114f5a83bf
+                            ece2ccd8861ba047da868b0c7f71360a: ref!! a810d9cb-b769-4f3f-9c7a-347888c11e80
+                            8131f5fd873392528283ea31c112cbe2: ref!! 5a7650f1-8499-4b19-af97-ae4d991797d3
+                            debd0cb1c37a27b50df133b38f2101c5: ref!! a072a717-13be-41ec-aeac-8e713dc60d0a
+                            fc688d84f80cc0e219a20c01bcc82495: ref!! 9ab0687a-6654-4e27-b04a-c0b82be22f9d
+                            e0115cff4f2a4ce8a9f6b8fcf3d870f9: ref!! 7d32e911-2efa-4ab9-93e6-8986954d8e26
+                    7cdb739911303c6a0eb67d7a07f1a0c5: !Terracota.Rotador,Terracota
+                        Id: c1cf4945-4481-487f-9e75-ee1a6e574502
+                        "ánguloY": 0.1
+        -   Entity:
+                Id: 94f201f2-25d2-4a5c-80c3-4e3787c11d66
+                Name: "Menú"
+                Components:
+                    c0796b37e711bd090b258f0890de57c0: !Terracota.ControladorMen%25C3%25BA,Terracota
+                        Id: 9a39f057-8763-40e2-a796-205afa176c0e
+                        escenaLocal: af761eff-0def-4e64-9185-a183866d2296:Escenas/Juego (Local)
+                        escenaRed: null
+                        escenaP2P: ffbba4ff-025e-4071-af06-8e046bd6fa9f:Escenas/Juego (P2P)
+                        "escenaCreación": null
+                    2666011d2b1dda9258dbe3635b1fa833: !TransformComponent
+                        Id: 807ff794-4d83-40ec-91ff-b965f7459804
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    a20ece3741fb41a95529880d36d38bd4: !UIComponent
+                        Id: b464d7eb-3179-4f5b-b666-1d009a15c437
+                        Page: "47fe3e54-569f-408c-802d-c1a4227f381c:Interfaz/Menú"
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.28, Y: 0.72, Z: 1.0}
+                        ResolutionStretch: FixedHeightAdaptableWidth
+                        RenderGroup: Group31
+        -   Entity:
+                Id: 950b32be-d611-40c2-a016-77d5cb41e729
+                Name: Soporte
+                Components:
+                    a21fbb49378f5e86a5d4beba7ba28247: !TransformComponent
+                        Id: 5d412c96-03da-4198-8122-17e5d0fb08f1
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    9479ad81bd99611306874aedffe0ab1d: !ModelComponent
+                        Id: 71b9aeb6-2975-429d-ba37-3d220eebf90c
+                        Model: "dab8cfd7-1d67-4305-933b-6f947dd81292:Modelos/Cañón/Soporte"
+                        Materials: {}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: f2b48e3a-68ee-4e2c-be7e-b0998925f257
+                InstanceId: ce28e181-3d28-4000-89a6-ae77d7930396
+        -   Entity:
+                Id: a3547ccd-2528-4e77-a41e-bf3ac3ce3883
+                Name: Entorno
+                Components:
+                    d9ab37e23ab84403bed08d1d1f14eb90: !TransformComponent
+                        Id: f9ca1432-da68-42fc-b899-c817875c8878
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            84740b1bff3c411b34af1ea98099aac8: ref!! f855078d-9b76-4462-8249-4cf5178e5f21
+                            108f352a607968ca4ac0193815008379: ref!! a546e874-3c62-4d62-9edd-b059a3c205ce
+                            dd4534c9a527c1e490d5b24a381ba169: ref!! 5da2e36f-d7cf-479b-9186-fa1f2ddf05d6
+                            c319c92745bd1a660ac4b3adb8ee7600: ref!! 22bd8092-82ac-48d2-a47a-65fc8ae87ce0
+                            455d2f42baf16150ea0df286a294e197: ref!! fc02fa0c-9bd8-4626-9ab0-424fccdc07b7
+                            9a506e4494fcafd341581261af8c86aa: ref!! 0b5e642d-ceb3-4c54-a383-fd58ecc1bcdf
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: 4bff4cad-8d16-4606-8882-0d34fe8e309a
+                InstanceId: 8e464a2a-cba3-4fb8-93e5-341a4ecf45f7
+        -   Entity:
+                Id: a4b909fc-c25e-4b08-ace3-91437c7e94f3
+                Name: Modelo Estatua
+                Components:
+                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
+                        Id: f81e7700-5599-4638-8475-6d48c75c91cf
+                        Position*: {X: -5.0, Y: 0.8, Z: 5.0}
+                        Rotation*: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale*: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
+                        Id: e0b37282-7290-4895-bf20-461aa0666bc2
+                        Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
+                        Materials: {}
+                    a1acdcd205fd97b1fa283b1c4342baa9: ~(Deleted)
+        -   Entity:
+                Id: af03e5da-b7a4-47f1-b427-ceb766938ada
+                Name: "PartículasHumo"
+                Components:
+                    f1b3da3c239d0cdb538fda54fa843a7e: !TransformComponent
+                        Id: 63c2fd4b-31c3-4a0b-9f8e-596e210849b4
+                        Position: {X: 0.0, Y: 0.0, Z: -2.4}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f8724608dc26693057602d67126d5311: !ParticleSystemComponent
+                        Id: 9cdf757b-ea47-47a6-b485-acdfc3e7d7f2
+                        Enabled: false
+                        Control:
+                            ResetSeconds: 1.0
+                            Control: Stop
+                        Color: {R: 0.39215687, G: 0.39215687, B: 0.39215687, A: 0.39215687}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                74cc9b27efbd4a42b9b37f886bffab91:
+                                    ParticleLifetime: {X: 0.5, Y: 1.0}
+                                    ShapeBuilder: !ShapeBuilderBillboard
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        AlphaAdditive: 0.5
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: "03c66b25-d2c7-4121-86d9-4e5f7b912b87:Texturas/Círculo"
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        5d1dff6d0e33c4018f2a90e188b092e9: !SpawnerBurst
+                                            LoopCondition: OneShot
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 100
+                                    Initializers:
+                                        38f63c62943ef694052bfd50568e464e: !InitialSizeSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            RandomSize: {X: 0.5, Y: 1.0}
+                                        a903e448d7c1708ccae1a5165a51fbcd: !InitialPositionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: false
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.38268346, W: 0.9238795}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: -0.5, Y: -0.5, Z: -1.0}
+                                            PositionMax: {X: 0.5, Y: 0.5, Z: 0.0}
+                                            Interpolate: false
+                                        ada5849bd548a7d0b516a6ce33aadc1c: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 2.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: -1.5, Y: -1.5, Z: -10.0}
+                                            VelocityMax: {X: 1.5, Y: 1.5, Z: 0.1}
+                                    Updaters:
+                                        ed94bebc9df81d9c9abf995948f476d2: !UpdaterForceField
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: true
+                                            FieldShape: null
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: true
+                                            DisplayParticleScaleUniform: false
+                                            FieldFalloff:
+                                                StrengthInside: 1.0
+                                                FalloffStart: 0.1
+                                                StrengthOutside: 1.0
+                                                FalloffEnd: 0.9
+                                            EnergyConservation: 1.0
+                                            ForceDirected: 0.0
+                                            ForceVortex: 0.0
+                                            ForceRepulsive: 0.0
+                                            ForceFixed: {X: 0.0, Y: -2.5, Z: 0.0}
+                                        fe9bc263f0ecb41cd9bb4768fdb9c26b: !UpdaterSizeOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames:
+                                                        5c412d3d762da5beb25e2e02e28d3ae8:
+                                                            Key: 0.0
+                                                            Value: 1.0
+                                                            TangentType: Linear
+                                                        94828919f968a42f83b2d19df6c44163:
+                                                            Key: 0.8
+                                                            Value: 0.4
+                                                            TangentType: Linear
+                                                        b2225dc5a3cd1bf55d8c091c4289d9fa:
+                                                            Key: 1.0
+                                                            Value: 0.0
+                                                            TangentType: Linear
+                                            SamplerOptional: null
+                                            SeedOffset: 0
+                                        7ae429d955af5a1e210f2dde28fac508: !UpdaterColorOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerColor4
+                                                Curve: !ComputeAnimationCurveColor4
+                                                    KeyFrames:
+                                                        f1ca84b435fdaa5b5ed0e107831f434b:
+                                                            Key: 0.0
+                                                            Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                                            TangentType: Linear
+                                                        c918a66e1d47e94118c7856243a2dc64:
+                                                            Key: 0.8
+                                                            Value: {R: 1.0, G: 1.0, B: 1.0, A: 0.4}
+                                                            TangentType: Linear
+                                                        1ae787d10dcfc87c5c8c810be7483555:
+                                                            Key: 1.0
+                                                            Value: {R: 1.0, G: 1.0, B: 1.0, A: 0.0}
+                                                            TangentType: Linear
+                                            SamplerOptional: null
+                                            SeedOffset: 0
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: d5365882-ad49-47ac-9c3a-d08c3cf53fd8
+                InstanceId: ce28e181-3d28-4000-89a6-ae77d7930396
+        -   Entity:
+                Id: b2e787db-f9b3-4e62-a028-394b34f96f66
+                Name: Origen
+                Components:
+                    7276b1e02e02603a44404b7fba8254d1: !TransformComponent
+                        Id: af8fcab8-b723-40c2-abc8-de83fac4d50e
+                        Position: {X: 0.0, Y: 0.0, Z: -2.4}
+                        Rotation: {X: -0.7071067, Y: 0.0, Z: 0.0, W: 0.7071068}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: b1e3dd4b-e127-4d5c-91f4-5da6de0221b4
+                InstanceId: 88bb57af-9542-4a93-8bab-6863a55dad6d
+        -   Entity:
+                Id: b4ddc864-b595-4e86-b25e-03f714cb1524
+                Name: Modelo Estatua
+                Components:
+                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
+                        Id: a072a717-13be-41ec-aeac-8e713dc60d0a
+                        Position*: {X: 5.0, Y: 0.8, Z: -5.0}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale*: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
+                        Id: 3c7e269f-d31d-40d8-afd5-fb8332cac15f
+                        Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
+                        Materials: {}
+                    a1acdcd205fd97b1fa283b1c4342baa9: ~(Deleted)
+        -   Folder: null
+            Entity:
+                Id: b5a42809-2954-4853-9887-2af4ab9e5782
+                Name: Directional light
+                Components:
+                    09d666fe569b6705e10ac0fd980915ae: !TransformComponent
+                        Id: f855078d-9b76-4462-8249-4cf5178e5f21
+                        Position: {X: 0.0, Y: 4.0, Z: 0.0}
+                        Rotation: {X: -0.18301268, Y: 0.68301266, Z: 0.18301268, W: 0.68301266}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d3bd436bb21fdc2fc472afaa3883cec3: !LightComponent
+                        Id: e8889a52-1e13-4db4-a8a3-cf56fe3ba646
+                        Type: !LightDirectional
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 0.9411765}
+                            Shadow:
+                                Enabled: true
+                                Filter: !LightShadowMapFilterTypePcf {}
+                                Size: XLarge
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                ComputeTransmittance: false
+                                BiasParameters: {}
+                        Intensity: 10.0
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: 2bb12672-64e7-4c41-bb2c-23f9e7330029
+                InstanceId: 8e464a2a-cba3-4fb8-93e5-341a4ecf45f7
+        -   Folder: null
+            Entity:
+                Id: bb8b7ff6-28cf-43fd-aff7-5e151cec0e9c
+                Name: Piso
+                Components:
+                    675d0f283ce13a10164c43c161b631f8: !TransformComponent
+                        Id: 5da2e36f-d7cf-479b-9186-fa1f2ddf05d6
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f25d3b57c6c09cfcdb411d942b10cc1f: !ModelComponent
+                        Id: cc4cf168-c11a-4f1d-af5b-aa0cf328d335
+                        Model: 9820a66d-9dab-402a-9645-fcb7239d3966:Modelos/Entorno/Piso
+                        IsShadowCaster: false
+                        Materials: {}
+                    49474570cf54df486a2d130aeedb5e1f: !StaticColliderComponent
+                        Id: d0a7ac1d-de70-4f7f-baa0-2b36ce184ec8
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.5
+                        Friction: 0.5
+                        RollingFriction: 0.5
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            e721525d5d54483a1b0a7dc5eeb5e684: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                Offset: 0.0
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: 94c9c704-b68d-423b-9bd6-28970e014edf
+                InstanceId: 8e464a2a-cba3-4fb8-93e5-341a4ecf45f7
+        -   Entity:
+                Id: bbda587a-e3b5-4cc6-bb3d-f004fc38215c
+                Name: Modelo Estatua
+                Components:
+                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
+                        Id: a810d9cb-b769-4f3f-9c7a-347888c11e80
+                        Position*: {X: -5.0, Y: 0.8, Z: -5.0}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale*: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
+                        Id: f2df7be3-3140-47f5-a0b0-e1139a8ff21e
+                        Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
+                        Materials: {}
+                    a1acdcd205fd97b1fa283b1c4342baa9: ~(Deleted)
+        -   Folder: null
+            Entity:
+                Id: bcef15de-72b4-4f2e-91ec-e0d206fa88e1
+                Name: Cilindro (1)
+                Components:
+                    392ac170602ecc7334f1dfc12f9ed7d3: !TransformComponent
+                        Id: 0b5e642d-ceb3-4c54-a383-fd58ecc1bcdf
+                        Position: {X: 0.0, Y: 0.0, Z: -21.3}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fa9b5c7cc3073381354db58123c39f41: !ModelComponent
+                        Id: 2647dfed-e7c2-46bc-8eea-e82262ac275b
+                        Model: fa1024de-7206-4892-881b-9afd692c1c8e:Modelos/Entorno/Cilindro
+                        Materials: {}
+                    d35b92e1319dda4cbd28b69080d7a4a7: !StaticColliderComponent
+                        Id: 70b0d149-32a1-46b7-bf57-f3cdc4e00445
+                        CollisionGroup: StaticFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 1.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            bf3f65f38d7d8cec67cf9e1f81d2b18e: !CylinderColliderShapeDesc
+                                Height: 6.0
+                                Radius: 1.2
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: e0d3d8f6-b609-4ad8-9984-789a0a30dd0e
+                InstanceId: 8e464a2a-cba3-4fb8-93e5-341a4ecf45f7
+        -   Folder: null
+            Entity:
+                Id: c096594d-7fce-405e-b283-77a27afab0cc
+                Name: Skybox
+                Components:
+                    cd2bdc16cfee10d3f8d09d643cfe49b3: !TransformComponent
+                        Id: a546e874-3c62-4d62-9edd-b059a3c205ce
+                        Position: {X: 0.0, Y: 2.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    243e388bf0f0dc93b596380f4cd8bc07: !BackgroundComponent
+                        Id: be1f20b7-fc6b-4bfa-9bd6-c7f80306c326
+                        Texture: 8adb9d12-d5d9-490a-ad92-06fd46cf8de9:Texturas/Skybox texture
+                    0dfcd21788f053924694bc7973f9e575: !LightComponent
+                        Id: 86743872-bb86-4d2e-b2a1-fcbc2ceb06dd
+                        Type: !LightSkybox
+                            Skybox: 870c1df6-0b77-44c6-85ce-bda61c75f79c:Texturas/Skybox
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: d636c902-a785-4353-b5b4-1f6a1ee79ba9
+                InstanceId: 8e464a2a-cba3-4fb8-93e5-341a4ecf45f7
+        -   Folder: null
+            Entity:
+                Id: cc795214-e233-4a22-a6b7-2cd4610a7413
+                Name: Cilindro (0)
+                Components:
+                    392ac170602ecc7334f1dfc12f9ed7d3: !TransformComponent
+                        Id: fc02fa0c-9bd8-4626-9ab0-424fccdc07b7
+                        Position: {X: 0.0, Y: 0.0, Z: 21.3}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fa9b5c7cc3073381354db58123c39f41: !ModelComponent
+                        Id: e1fdc335-a037-4cef-9ae8-3fa27b5ca93e
+                        Model: fa1024de-7206-4892-881b-9afd692c1c8e:Modelos/Entorno/Cilindro
+                        Materials: {}
+                    d35b92e1319dda4cbd28b69080d7a4a7: !StaticColliderComponent
+                        Id: cb6ba1d8-92a7-44ae-91c0-14e643441f4c
+                        CollisionGroup: StaticFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 1.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            bf3f65f38d7d8cec67cf9e1f81d2b18e: !CylinderColliderShapeDesc
+                                Height: 6.0
+                                Radius: 1.2
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: ed40b23d-5d39-418b-9236-c3e332db1654
+                InstanceId: 8e464a2a-cba3-4fb8-93e5-341a4ecf45f7
+        -   Entity:
+                Id: d1050e95-6aed-47d9-b050-144ef80e2ed0
+                Name: Modelo Estatua
+                Components:
+                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
+                        Id: 5a7650f1-8499-4b19-af97-ae4d991797d3
+                        Position*: {X: 0.0, Y: 0.8, Z: -5.0}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale*: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
+                        Id: 4e8744ae-d96f-44b7-acfa-972c2355fefc
+                        Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
+                        Materials: {}
+                    a1acdcd205fd97b1fa283b1c4342baa9: ~(Deleted)
+        -   Folder: null
+            Entity:
+                Id: e36dc503-584b-4984-9947-05f5f161adf0
+                Name: Soporte
+                Components:
+                    0bf070e32c32c4e7329253d312cfd959: !TransformComponent
+                        Id: 351fd8eb-7555-45bd-bdaf-fa8154f71e9c
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            e095058ba12a1baa7407df732afc6f65: ref!! e4690b13-4da7-4656-ad58-0c53fb3687e9
+                            fc5c8b934e8d5a817e50f86927b00c88: ref!! 6128011f-c1a9-4a88-b2c5-898273a3abaf
+                            889575bab8a32e30e6946bf965542c43: ref!! 33819c48-f950-4d7a-b795-d76aabdb9aa4
+                            dc80c1909c4da4970ba74ff9a0aeb042: ref!! dd47e4f8-cdd5-4b21-9412-ceb44eb27b26
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 7e222b09-5877-449d-a77d-140653edf2e7
+                InstanceId: 88bb57af-9542-4a93-8bab-6863a55dad6d
+        -   Entity:
+                Id: eeccda40-8759-4b82-ab97-5ad5cc904971
+                Name: Soporte
+                Components:
+                    a21fbb49378f5e86a5d4beba7ba28247: !TransformComponent
+                        Id: e4690b13-4da7-4656-ad58-0c53fb3687e9
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    9479ad81bd99611306874aedffe0ab1d: !ModelComponent
+                        Id: 82907a87-8084-443a-b0e7-3770d068d945
+                        Model: "dab8cfd7-1d67-4305-933b-6f947dd81292:Modelos/Cañón/Soporte"
+                        Materials: {}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: f2b48e3a-68ee-4e2c-be7e-b0998925f257
+                InstanceId: 88bb57af-9542-4a93-8bab-6863a55dad6d
+        -   Entity:
+                Id: faec6f7e-a15d-488b-8440-094c04ab82e4
+                Name: "ControladorCañón"
+                Components:
+                    b2b0bf1d60b3fc31afd4f21fa78fdfaa: !TransformComponent
+                        Id: 7d32e911-2efa-4ab9-93e6-8986954d8e26
+                        Position*: {X: 0.0, Y: 0.0, Z: -10.0}
+                        Rotation*: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale*: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            fe850ff2a034e6ac607d6288829530db: ref!! b97e2f17-3bef-4b2a-b912-84c0d6531a71

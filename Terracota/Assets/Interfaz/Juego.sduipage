@@ -78,6 +78,65 @@ Hierarchy:
                     Texture: "03c66b25-d2c7-4121-86d9-4e5f7b912b87:Texturas/Círculo"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 0, G: 255, B: 0, A: 255}
+        -   UIElement: !Button
+                Id: 2c219f61-37e0-408f-9786-fc9dd9589a13
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                Width: 300.0
+                Height: 60.0
+                VerticalAlignment: Bottom
+                Margin: {Bottom: 20.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btnSalir
+                Padding: {Left: 0.0, Top: 0.0, Right: 0.0, Bottom: 0.0}
+                Content: !TextBlock ref!! efda6c16-494d-4c61-ab64-4fb54ace1f39
+                PressedImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 2
+                NotPressedImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 1
+                MouseOverImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+        -   UIElement: !Grid
+                Id: 2c3a3847-825c-4490-b39d-c2a15a0b86f2
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 100}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: PanelOscuro
+                Children: {}
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !Button
+                Id: 3823b38e-0d0a-4cc4-adb1-8705e3ec4c87
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                Width: 300.0
+                Height: 60.0
+                VerticalAlignment: Bottom
+                Margin: {Bottom: 90.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btnOpciones
+                Padding: {Left: 0.0, Top: 0.0, Right: 0.0, Bottom: 0.0}
+                Content: !TextBlock ref!! 63b63324-333e-4705-b4c1-5c1ad83a3539
+                PressedImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 2
+                NotPressedImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 1
+                MouseOverImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
         -   UIElement: !ImageElement
                 Id: 38329539-0bb0-45c3-9c15-1016d452fde6
                 DependencyProperties: {}
@@ -152,6 +211,20 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
+        -   UIElement: !TextBlock
+                Id: 57f44f83-0a40-416f-9396-75e62f05cbf5
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                HorizontalAlignment: Center
+                VerticalAlignment: Center
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Text: Reiniciar
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 30.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
         -   UIElement: !Grid
                 Id: 5aacc511-0539-4330-91c1-c608bb45a7be
                 DependencyProperties: {}
@@ -172,6 +245,43 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
+        -   UIElement: !Button
+                Id: 5d33602b-1e73-4c25-9270-8debb935c77e
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                Width: 300.0
+                Height: 60.0
+                VerticalAlignment: Bottom
+                Margin: {Bottom: 160.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btnReiniciar
+                Padding: {Left: 0.0, Top: 0.0, Right: 0.0, Bottom: 0.0}
+                Content: !TextBlock ref!! 57f44f83-0a40-416f-9396-75e62f05cbf5
+                PressedImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 2
+                NotPressedImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 1
+                MouseOverImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+        -   UIElement: !TextBlock
+                Id: 63b63324-333e-4705-b4c1-5c1ad83a3539
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                HorizontalAlignment: Center
+                VerticalAlignment: Center
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Text: Opciones
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 30.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
         -   UIElement: !Grid
                 Id: 6a723e94-9032-4d61-9e51-50561ab9db5a
                 DependencyProperties: {}
@@ -204,7 +314,7 @@ Hierarchy:
                 Name: txtGanador
                 Text: 'Ganador:'
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
-                TextSize: 40.0
+                TextSize: 35.0
                 TextColor: {R: 0, G: 0, B: 0, A: 255}
                 TextAlignment: Center
         -   UIElement: !TextBlock
@@ -258,13 +368,13 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: btnPausa
                 PressedImage: !SpriteFromTexture
-                    Texture: 2e527869-7a26-4c20-a559-7e897e8e6a00:Texturas/Interfaz/Reiniciar
+                    Texture: 8bed889a-fb97-48ed-83b6-d7efe9f5818f:Texturas/Interfaz/Pausa
                     Center: {X: 0.0, Y: 0.0}
                 NotPressedImage: !SpriteFromTexture
-                    Texture: 2e527869-7a26-4c20-a559-7e897e8e6a00:Texturas/Interfaz/Reiniciar
+                    Texture: 8bed889a-fb97-48ed-83b6-d7efe9f5818f:Texturas/Interfaz/Pausa
                     Center: {X: 0.0, Y: 0.0}
                 MouseOverImage: !SpriteFromTexture
-                    Texture: 2e527869-7a26-4c20-a559-7e897e8e6a00:Texturas/Interfaz/Reiniciar
+                    Texture: 8bed889a-fb97-48ed-83b6-d7efe9f5818f:Texturas/Interfaz/Pausa
                     Center: {X: 0.0, Y: 0.0}
         -   UIElement: !Grid
                 Id: 7d957913-9c72-41c8-b020-b9cd7c9155e1
@@ -282,6 +392,22 @@ Hierarchy:
                 Children:
                     83a07769dd618e6625cda93486da7acf: !Button ref!! 7d2d09b4-3f89-4c9a-b54d-6b4a174b0235
                     43c13bcbbad12493c5c39d7f5c5b21e4: !ImageElement ref!! bdd49298-062a-474a-8b76-60de1f0f08ee
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !Grid
+                Id: 819e3e86-f93b-4627-b08d-bb8dccc124d4
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Visibility: Hidden
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: Pausa
+                Children:
+                    5800791f0c4f60bc1e16fab84a82d928: !Grid ref!! 9d35844b-2ac7-4a32-880f-bc9111ff8e4d
+                    2338b094206b423a5858b9dd92b012c5: !Grid ref!! 2c3a3847-825c-4490-b39d-c2a15a0b86f2
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -333,9 +459,26 @@ Hierarchy:
                     252197d66a5784cd627d50b843d88321: !Grid ref!! 57cee361-e441-4644-8c13-048c3dcbc12a
                     eb3f3ddc467d927dd340e82798f55adb: !Grid ref!! 6a723e94-9032-4d61-9e51-50561ab9db5a
                     1f94b202617473880cd1d942ab7533ea: !Grid ref!! f662c260-4aae-408d-ad1b-f409838a2e2a
+                    f9d680aeef5b4b05503a298bc16aea1d: !Grid ref!! 819e3e86-f93b-4627-b08d-bb8dccc124d4
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
+        -   UIElement: !TextBlock
+                Id: 98ad69d7-1b0e-42a6-93f5-5e74e0a81564
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 180.0
+                Height: 50.0
+                VerticalAlignment: Top
+                Margin: {Top: 10.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Text: Pausa
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 30.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
+                TextAlignment: Center
         -   UIElement: !Grid
                 Id: 98b6e512-5883-4a88-bc43-fd6612faacfb
                 DependencyProperties: {}
@@ -353,6 +496,27 @@ Hierarchy:
                     30f456facf73ad7b0ca54f8c3cfd6319: !ImageElement ref!! 4759b142-9bc6-493b-85e0-75c15615f027
                     77d7e84fbf22546d7e56106c8a567e77: !ImageElement ref!! 1a760f80-1485-465d-9c11-c86a6af0dc49
                     40ed12fc2c2b2437ff3a655bc4c39558: !ImageElement ref!! 4ef80319-0216-4470-bf16-b95bd739c484
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !Grid
+                Id: 9d35844b-2ac7-4a32-880f-bc9111ff8e4d
+                DependencyProperties:
+                    78359b1046d288ddac983daf86094a1c~GridBase.RowSpanPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 100}
+                Width: 400.0
+                Height: 500.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: "MenúPausa"
+                Children:
+                    323fd2e885bd1e4f0933a018adf0a5e8: !TextBlock ref!! 98ad69d7-1b0e-42a6-93f5-5e74e0a81564
+                    4afa455a132842a756a2299d10073c87: !Button ref!! e96af00a-6126-4cc5-beab-017b98808598
+                    76fa1b14b0933586deadcca0475cb9e4: !Button ref!! 5d33602b-1e73-4c25-9270-8debb935c77e
+                    4d7552b109dba2cf3339352ea95bb7f3: !Button ref!! 3823b38e-0d0a-4cc4-adb1-8705e3ec4c87
+                    4b9918ed730f19b4b62a83caa3310273: !Button ref!! 2c219f61-37e0-408f-9786-fc9dd9589a13
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -427,7 +591,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: imgPausa
                 Source: !SpriteFromTexture
-                    Texture: 2e527869-7a26-4c20-a559-7e897e8e6a00:Texturas/Interfaz/Reiniciar
+                    Texture: 8bed889a-fb97-48ed-83b6-d7efe9f5818f:Texturas/Interfaz/Pausa
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
         -   UIElement: !Button
@@ -491,6 +655,57 @@ Hierarchy:
                 TextSize: 40.0
                 TextColor: {R: 255, G: 255, B: 255, A: 255}
                 TextAlignment: Center
+        -   UIElement: !Button
+                Id: e96af00a-6126-4cc5-beab-017b98808598
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                Width: 300.0
+                Height: 60.0
+                VerticalAlignment: Bottom
+                Margin: {Bottom: 230.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btnReanudar
+                Padding: {Left: 0.0, Top: 0.0, Right: 0.0, Bottom: 0.0}
+                Content: !TextBlock ref!! ebfb0357-c30f-4d7f-8d04-83ec477151d1
+                PressedImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 2
+                NotPressedImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 1
+                MouseOverImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+        -   UIElement: !TextBlock
+                Id: ebfb0357-c30f-4d7f-8d04-83ec477151d1
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                HorizontalAlignment: Center
+                VerticalAlignment: Center
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Text: Reanudar
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 30.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
+        -   UIElement: !TextBlock
+                Id: efda6c16-494d-4c61-ab64-4fb54ace1f39
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                HorizontalAlignment: Center
+                VerticalAlignment: Center
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Text: Salir
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 30.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
         -   UIElement: !ImageElement
                 Id: f5d9ff45-828d-4091-9182-8efbe3db112b
                 DependencyProperties: {}

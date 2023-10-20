@@ -35,9 +35,6 @@ public class ControladorPartidaLocal : AsyncScript
 
     public override async Task Execute()
     {
-        //Game.Window.PreferredFullscreenSize = new Int2(1920, 1080);
-        //Game.Window.IsFullscreen = true;
-
         // Predeterminado
         cañónAnfitrión.Activar(true);
         cañónHuesped.Activar(false);
