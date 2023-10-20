@@ -1,0 +1,193 @@
+!PrefabAsset
+Id: 5ce14289-c373-4ab7-b03f-ed219e6a5486
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 4bff4cad-8d16-4606-8882-0d34fe8e309a
+    Parts:
+        -   Folder: null
+            Entity:
+                Id: 2bb12672-64e7-4c41-bb2c-23f9e7330029
+                Name: Directional light
+                Components:
+                    09d666fe569b6705e10ac0fd980915ae: !TransformComponent
+                        Id: 20fd93eb-4798-47ba-bb56-d9a15636e70e
+                        Position: {X: 0.0, Y: 4.0, Z: 0.0}
+                        Rotation: {X: -0.18301268, Y: 0.68301266, Z: 0.18301268, W: 0.68301266}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d3bd436bb21fdc2fc472afaa3883cec3: !LightComponent
+                        Id: 9c0ab699-2a54-45e5-9b10-812579f8b93c
+                        Type: !LightDirectional
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 0.9411765}
+                            Shadow:
+                                Enabled: true
+                                Filter: !LightShadowMapFilterTypePcf {}
+                                Size: XLarge
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                ComputeTransmittance: false
+                                BiasParameters: {}
+                        Intensity: 10.0
+        -   Entity:
+                Id: 4bff4cad-8d16-4606-8882-0d34fe8e309a
+                Name: Entorno
+                Components:
+                    d9ab37e23ab84403bed08d1d1f14eb90: !TransformComponent
+                        Id: a5032f52-c8bc-44a3-817e-54478b1ff1fe
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            84740b1bff3c411b34af1ea98099aac8: ref!! 20fd93eb-4798-47ba-bb56-d9a15636e70e
+                            108f352a607968ca4ac0193815008379: ref!! 09297654-2d0d-4dbe-9999-6887bc9c112c
+                            dd4534c9a527c1e490d5b24a381ba169: ref!! 2ffc7946-756d-4512-b523-0c37c1261aac
+                            c319c92745bd1a660ac4b3adb8ee7600: ref!! 80fcc63b-6ab2-4a5e-bf6d-123680296e68
+                            455d2f42baf16150ea0df286a294e197: ref!! 08f21160-a0fb-409f-86c4-3081c36e8385
+                            9a506e4494fcafd341581261af8c86aa: ref!! 2bd6ebcb-2926-4a14-9ed7-d8c0f62fe872
+        -   Folder: null
+            Entity:
+                Id: 94c9c704-b68d-423b-9bd6-28970e014edf
+                Name: Piso
+                Components:
+                    675d0f283ce13a10164c43c161b631f8: !TransformComponent
+                        Id: 2ffc7946-756d-4512-b523-0c37c1261aac
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f25d3b57c6c09cfcdb411d942b10cc1f: !ModelComponent
+                        Id: 7c371965-adea-4c64-9c4a-9916c45e0233
+                        Model: 9820a66d-9dab-402a-9645-fcb7239d3966:Modelos/Entorno/Piso
+                        IsShadowCaster: false
+                        Materials: {}
+                    49474570cf54df486a2d130aeedb5e1f: !StaticColliderComponent
+                        Id: eb37c702-cf52-462f-b19d-c1f42283f274
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.5
+                        Friction: 0.5
+                        RollingFriction: 0.5
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            e721525d5d54483a1b0a7dc5eeb5e684: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                Offset: 0.0
+        -   Folder: null
+            Entity:
+                Id: c40ee53f-b9d0-4c6d-bc46-4727d5a8fa35
+                Name: Contorno
+                Components:
+                    950b390a30fc58b4792ba2d2343484cf: !TransformComponent
+                        Id: 80fcc63b-6ab2-4a5e-bf6d-123680296e68
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    836654aef2839f0022554b08475e0f0c: !ModelComponent
+                        Id: 1d561d51-cf2f-4159-815f-a727d121eef4
+                        Model: 81f56bdc-362e-4388-8137-9558109d3349:Modelos/Entorno/Contorno
+                        Materials: {}
+                    acd5d61e00c21f00f5de9c2f52ad5d8d: !StaticColliderComponent
+                        Id: 81eef2d8-497f-4480-906c-dcc05878163b
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 1.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            0303fef4de4f34fbf12747f932d23e22: !StaticMeshColliderShapeDesc
+                                Model: 81f56bdc-362e-4388-8137-9558109d3349:Modelos/Entorno/Contorno
+        -   Folder: null
+            Entity:
+                Id: d636c902-a785-4353-b5b4-1f6a1ee79ba9
+                Name: Skybox
+                Components:
+                    cd2bdc16cfee10d3f8d09d643cfe49b3: !TransformComponent
+                        Id: 09297654-2d0d-4dbe-9999-6887bc9c112c
+                        Position: {X: 0.0, Y: 2.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    243e388bf0f0dc93b596380f4cd8bc07: !BackgroundComponent
+                        Id: 3cf3d27a-dca0-4b68-a495-9094fcee65c9
+                        Texture: 8adb9d12-d5d9-490a-ad92-06fd46cf8de9:Texturas/Skybox texture
+                    0dfcd21788f053924694bc7973f9e575: !LightComponent
+                        Id: 21828b23-7116-45a0-987c-4ca39b1d05a6
+                        Type: !LightSkybox
+                            Skybox: 870c1df6-0b77-44c6-85ce-bda61c75f79c:Texturas/Skybox
+        -   Folder: null
+            Entity:
+                Id: e0d3d8f6-b609-4ad8-9984-789a0a30dd0e
+                Name: Cilindro (1)
+                Components:
+                    392ac170602ecc7334f1dfc12f9ed7d3: !TransformComponent
+                        Id: 2bd6ebcb-2926-4a14-9ed7-d8c0f62fe872
+                        Position: {X: 0.0, Y: 0.0, Z: -21.3}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fa9b5c7cc3073381354db58123c39f41: !ModelComponent
+                        Id: ca573382-ffd2-457d-bcb1-e2d6c85b2828
+                        Model: fa1024de-7206-4892-881b-9afd692c1c8e:Modelos/Entorno/Cilindro
+                        Materials: {}
+                    d35b92e1319dda4cbd28b69080d7a4a7: !StaticColliderComponent
+                        Id: 1f77131e-296c-45f9-bf14-d7fbec5ab3d8
+                        CollisionGroup: StaticFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 1.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            bf3f65f38d7d8cec67cf9e1f81d2b18e: !CylinderColliderShapeDesc
+                                Height: 6.0
+                                Radius: 1.2
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Folder: null
+            Entity:
+                Id: ed40b23d-5d39-418b-9236-c3e332db1654
+                Name: Cilindro (0)
+                Components:
+                    392ac170602ecc7334f1dfc12f9ed7d3: !TransformComponent
+                        Id: 08f21160-a0fb-409f-86c4-3081c36e8385
+                        Position: {X: 0.0, Y: 0.0, Z: 21.3}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fa9b5c7cc3073381354db58123c39f41: !ModelComponent
+                        Id: c7e3c8f8-7678-444d-b901-5458b65185e7
+                        Model: fa1024de-7206-4892-881b-9afd692c1c8e:Modelos/Entorno/Cilindro
+                        Materials: {}
+                    d35b92e1319dda4cbd28b69080d7a4a7: !StaticColliderComponent
+                        Id: 46659cb3-377f-4060-af3d-7e0e2c269427
+                        CollisionGroup: StaticFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 1.0
+                        RollingFriction: 1.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            bf3f65f38d7d8cec67cf9e1f81d2b18e: !CylinderColliderShapeDesc
+                                Height: 6.0
+                                Radius: 1.2
+                                LocalOffset: {X: 0.0, Y: 3.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
