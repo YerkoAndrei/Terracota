@@ -18,10 +18,10 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Text: P2P (X)
+                Text: P2P
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
                 TextSize: 30.0
-                TextColor: {R: 255, G: 255, B: 255, A: 255}
+                TextColor: {R: 0, G: 0, B: 0, A: 255}
                 TextAlignment: Center
         -   UIElement: !Button
                 Id: 36710788-a580-41ae-a38c-d6a441b811d3
@@ -69,6 +69,23 @@ Hierarchy:
                     CurrentFrame: 1
                 MouseOverImage: !SpriteFromSheet
                     Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+        -   UIElement: !TextBlock
+                Id: 3700845e-b7c0-4da8-878c-2025671e1a1a
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 60.0
+                HorizontalAlignment: Right
+                DepthAlignment: Stretch
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: "txtVersión"
+                Text: 0.1
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 25.0
+                TextColor: {R: 255, G: 255, B: 255, A: 255}
+                TextAlignment: Center
         -   UIElement: !Button
                 Id: 41479202-f6dc-4d61-a141-a46553991ee6
                 DependencyProperties: {}
@@ -121,7 +138,23 @@ Hierarchy:
                 Text: Terracota
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
                 TextSize: 100.0
-                TextColor: {R: 190, G: 84, B: 65, A: 255}
+                TextColor: {R: 190, G: 89, B: 70, A: 255}
+                TextAlignment: Center
+        -   UIElement: !TextBlock
+                Id: 56f02e30-ab7a-44a2-b701-35979312ca4b
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 240.0
+                HorizontalAlignment: Left
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtAutor
+                Text: YerkoAndrei
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 25.0
+                TextColor: {R: 255, G: 255, B: 200, A: 255}
                 TextAlignment: Center
         -   UIElement: !TextBlock
                 Id: 6c358e49-bf28-4c24-a96b-927831ed4949
@@ -148,10 +181,10 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Text: Red local (X)
+                Text: Red local
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
                 TextSize: 30.0
-                TextColor: {R: 255, G: 255, B: 255, A: 255}
+                TextColor: {R: 0, G: 0, B: 0, A: 255}
                 TextAlignment: Center
         -   UIElement: !Button
                 Id: 84407b88-651b-457b-8829-00959c860965
@@ -176,6 +209,26 @@ Hierarchy:
                     CurrentFrame: 1
                 MouseOverImage: !SpriteFromSheet
                     Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+        -   UIElement: !Grid
+                Id: 935f400b-eb50-4246-8d02-e00ecd98449c
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 300.0
+                Height: 35.0
+                HorizontalAlignment: Right
+                VerticalAlignment: Bottom
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: "Créditos"
+                Children:
+                    9f39e586aca63cd2cb3121367e6ecfeb: !Button ref!! d8c828d6-ef49-4eab-82e2-d91c67b4a653
+                    e68eba3cd36b412b3d7e761a17fdfddc: !TextBlock ref!! 56f02e30-ab7a-44a2-b701-35979312ca4b
+                    6c79d6b915112179dd17218eba5907b9: !TextBlock ref!! 3700845e-b7c0-4da8-878c-2025671e1a1a
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
         -   UIElement: !Button
                 Id: 9e06d917-75f9-44db-b3c0-918c8eea2f6c
                 DependencyProperties: {}
@@ -232,10 +285,10 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Text: Crear fortaleza (X)
+                Text: Crear fortaleza
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
                 TextSize: 30.0
-                TextColor: {R: 255, G: 255, B: 255, A: 255}
+                TextColor: {R: 0, G: 0, B: 0, A: 255}
                 TextAlignment: Center
         -   UIElement: !Grid
                 Id: afede330-ce9c-459c-944e-efc54d037d6f
@@ -249,6 +302,7 @@ Hierarchy:
                     d8e967dc7ca4192027db01bcb0e5f0a6: !TextBlock ref!! 517726bb-1003-4227-ae66-efbedb7a083d
                     a332af5ab5822b37f3c960e9a6ac4ab3: !Grid ref!! fad848e2-bf02-4c36-a8db-3b7e31b27802
                     f67b91dc584b94656ed0e78c242a7951: !Grid ref!! b522a0b9-4088-4cd5-a575-98069bbd2494
+                    e230a9b00343be28bc4b250380fb2eb7: !Grid ref!! 935f400b-eb50-4246-8d02-e00ecd98449c
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -271,6 +325,26 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
+        -   UIElement: !Button
+                Id: d8c828d6-ef49-4eab-82e2-d91c67b4a653
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Opacity: 0.0
+                DrawLayerNumber: 2
+                DepthAlignment: Stretch
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: "btnCréditos"
+                PressedImage: !SpriteFromSheet
+                    Sheet: null
+                    CurrentFrame: 2
+                NotPressedImage: !SpriteFromSheet
+                    Sheet: null
+                    CurrentFrame: 1
+                MouseOverImage: !SpriteFromSheet
+                    Sheet: null
         -   UIElement: !Grid
                 Id: fad848e2-bf02-4c36-a8db-3b7e31b27802
                 DependencyProperties: {}
@@ -300,8 +374,8 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Text: Opciones (X)
+                Text: Opciones
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
                 TextSize: 30.0
-                TextColor: {R: 255, G: 255, B: 255, A: 255}
+                TextColor: {R: 0, G: 0, B: 0, A: 255}
                 TextAlignment: Center

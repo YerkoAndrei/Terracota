@@ -15,14 +15,6 @@ public class ControladorMenú : StartupScript
 
     public UrlReference<Scene> escenaCreación;
 
-    private Button btnLocal;
-    private Button btnRed;
-    private Button btnP2P;
-
-    private Button btnCrear;
-    private Button btnOpciones;
-    private Button btnSalir;
-
     public override void Start()
     {
         //Game.Window.PreferredFullscreenSize = new Int2(1920, 1080);
@@ -30,13 +22,15 @@ public class ControladorMenú : StartupScript
 
         var página = Entity.Get<UIComponent>().Page.RootElement;
 
-        btnLocal = página.FindVisualChildOfType<Button>("btnLocal");
-        btnRed = página.FindVisualChildOfType<Button>("btnRed");
-        btnP2P = página.FindVisualChildOfType<Button>("btnP2P");
+        var btnLocal = página.FindVisualChildOfType<Button>("btnLocal");
+        var btnRed = página.FindVisualChildOfType<Button>("btnRed");
+        var btnP2P = página.FindVisualChildOfType<Button>("btnP2P");
 
-        btnCrear = página.FindVisualChildOfType<Button>("btnCrear");
-        btnOpciones = página.FindVisualChildOfType<Button>("btnOpciones");
-        btnSalir = página.FindVisualChildOfType<Button>("btnSalir");
+        var btnCrear = página.FindVisualChildOfType<Button>("btnCrear");
+        var btnOpciones = página.FindVisualChildOfType<Button>("btnOpciones");
+        var btnSalir = página.FindVisualChildOfType<Button>("btnSalir");
+
+        var btnCréditos = página.FindVisualChildOfType<Button>("btnCréditos");
 
         btnLocal.Click += EnClicLocal;
         btnRed.Click += EnClicRed;

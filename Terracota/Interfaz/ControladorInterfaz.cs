@@ -104,6 +104,11 @@ public class ControladorInterfaz : StartupScript
         CambiarInterfaz(TipoJugador.anfitrión, TipoProyectil.bola);
     }
 
+    public bool ObtenerPausa()
+    {
+        return pausa;
+    }
+
     private void EnClicPausa(object sender, RoutedEventArgs e)
     {
         pausa = !pausa;
@@ -237,10 +242,5 @@ public class ControladorInterfaz : StartupScript
                 txtGanador.Text = "Ganador: " + "Huesped";
                 break;
         }
-    }
-
-    public bool ObtenerPausa()
-    {
-        return pausa;
     }
 }
