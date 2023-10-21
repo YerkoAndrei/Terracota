@@ -64,7 +64,7 @@ Hierarchy:
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
                         Id: 72f254af-92a4-420d-8cf0-cfca2650aba3
                         CollisionGroup: SensorTrigger
-                        CanCollideWith: StaticFilter
+                        CanCollideWith: SensorTrigger
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -81,6 +81,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
+                                Radius: 0.52
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
@@ -100,7 +101,7 @@ Hierarchy:
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
                         Id: cd94821e-9869-4520-9f95-b43a42c79344
                         CollisionGroup: SensorTrigger
-                        CanCollideWith: StaticFilter
+                        CanCollideWith: SensorTrigger
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -117,6 +118,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
+                                Radius: 0.52
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
@@ -244,9 +246,10 @@ Hierarchy:
                         Materials: {}
                     acd5d61e00c21f00f5de9c2f52ad5d8d: !StaticColliderComponent
                         Id: f08e8980-8033-44f6-9e09-917c2c49b345
+                        CollisionGroup: StaticFilter
                         CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
                         CanSleep: false
-                        Restitution: 0.0
+                        Restitution: 0.1
                         Friction: 1.0
                         RollingFriction: 1.0
                         CcdMotionThreshold: 0.0
@@ -273,7 +276,7 @@ Hierarchy:
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
                         Id: ecc21b98-05a8-44a2-bd1f-688e8af554bb
                         CollisionGroup: SensorTrigger
-                        CanCollideWith: StaticFilter
+                        CanCollideWith: SensorTrigger
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -290,6 +293,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
+                                Radius: 0.52
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
@@ -520,7 +524,7 @@ Hierarchy:
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
                         Id: 35314548-71cb-4128-95a6-0b0fc488874c
                         CollisionGroup: SensorTrigger
-                        CanCollideWith: StaticFilter
+                        CanCollideWith: SensorTrigger
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -537,6 +541,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
+                                Radius: 0.52
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
@@ -1084,7 +1089,7 @@ Hierarchy:
                         Materials: {}
                     49474570cf54df486a2d130aeedb5e1f: !StaticColliderComponent
                         Id: d0a7ac1d-de70-4f7f-baa0-2b36ce184ec8
-                        CollisionGroup: StaticFilter
+                        CollisionGroup: SensorTrigger
                         CanSleep: false
                         Restitution: 0.5
                         Friction: 0.5
@@ -1121,7 +1126,7 @@ Hierarchy:
                         CollisionGroup: StaticFilter
                         CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
                         CanSleep: false
-                        Restitution: 0.0
+                        Restitution: 0.1
                         Friction: 1.0
                         RollingFriction: 1.0
                         CcdMotionThreshold: 0.0
@@ -1173,7 +1178,7 @@ Hierarchy:
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
                         Id: c6a0e4df-d105-414f-a6a7-0490b4b50654
                         CollisionGroup: SensorTrigger
-                        CanCollideWith: StaticFilter
+                        CanCollideWith: SensorTrigger
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -1190,6 +1195,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
+                                Radius: 0.52
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
@@ -1238,7 +1244,7 @@ Hierarchy:
                         CollisionGroup: StaticFilter
                         CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
                         CanSleep: false
-                        Restitution: 0.0
+                        Restitution: 0.1
                         Friction: 1.0
                         RollingFriction: 1.0
                         CcdMotionThreshold: 0.0
@@ -1268,7 +1274,7 @@ Hierarchy:
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
                         Id: c432c51b-c719-464e-98a2-ea7be1eb6c8b
                         CollisionGroup: SensorTrigger
-                        CanCollideWith: StaticFilter
+                        CanCollideWith: SensorTrigger
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -1285,6 +1291,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
+                                Radius: 0.52
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:

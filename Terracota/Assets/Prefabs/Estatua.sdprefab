@@ -87,7 +87,7 @@ Hierarchy:
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
                         Id: eb4fb358-ef62-4cdf-80fe-260d34eabd00
                         CollisionGroup: SensorTrigger
-                        CanCollideWith: StaticFilter
+                        CanCollideWith: SensorTrigger
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -104,5 +104,6 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
+                                Radius: 0.52
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}

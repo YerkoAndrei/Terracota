@@ -1,4 +1,5 @@
-﻿using Stride.Core.Serialization;
+﻿using Stride.Core.Mathematics;
+using Stride.Core.Serialization;
 using Stride.Engine;
 using Stride.UI;
 using Stride.UI.Controls;

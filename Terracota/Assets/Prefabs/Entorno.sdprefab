@@ -65,7 +65,7 @@ Hierarchy:
                         Materials: {}
                     49474570cf54df486a2d130aeedb5e1f: !StaticColliderComponent
                         Id: eb37c702-cf52-462f-b19d-c1f42283f274
-                        CollisionGroup: StaticFilter
+                        CollisionGroup: SensorTrigger
                         CanSleep: false
                         Restitution: 0.5
                         Friction: 0.5
@@ -95,9 +95,10 @@ Hierarchy:
                         Materials: {}
                     acd5d61e00c21f00f5de9c2f52ad5d8d: !StaticColliderComponent
                         Id: 81eef2d8-497f-4480-906c-dcc05878163b
+                        CollisionGroup: StaticFilter
                         CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
                         CanSleep: false
-                        Restitution: 0.0
+                        Restitution: 0.1
                         Friction: 1.0
                         RollingFriction: 1.0
                         CcdMotionThreshold: 0.0
@@ -145,7 +146,7 @@ Hierarchy:
                         CollisionGroup: StaticFilter
                         CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
                         CanSleep: false
-                        Restitution: 0.0
+                        Restitution: 0.1
                         Friction: 1.0
                         RollingFriction: 1.0
                         CcdMotionThreshold: 0.0
@@ -178,7 +179,7 @@ Hierarchy:
                         CollisionGroup: StaticFilter
                         CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
                         CanSleep: false
-                        Restitution: 0.0
+                        Restitution: 0.1
                         Friction: 1.0
                         RollingFriction: 1.0
                         CcdMotionThreshold: 0.0
