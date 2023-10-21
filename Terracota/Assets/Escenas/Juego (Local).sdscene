@@ -955,6 +955,44 @@ Hierarchy:
                 BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
                 BasePartId: cba927cc-2354-4112-a312-644e88b8deda
                 InstanceId: 6b2740ce-cb30-4c00-9d35-fddb2f0264d4
+        -   Folder: null
+            Entity:
+                Id: 4c265203-73e1-41ea-9ef8-feb3bb2366d4
+                Name: Lanza
+                Components:
+                    aae717941d47dadafb07fc74e51b757a: !TransformComponent
+                        Id: 598608d4-2217-45a1-8b12-091515bfd506
+                        Position: {X: -8.0910235E-07, Y: 1.9, Z: 0.6}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
+                        Children: {}
+                    a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
+                        Id: d6943f91-026a-487e-a49e-47bfa33ab378
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: StaticFilter
+                        CanSleep: false
+                        Restitution: 10.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
+                                Radius: 0.25
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: f7806c36-9b87-48a7-b4f6-d614ce7c93ab
+                InstanceId: da36cc5a-086d-47e4-9b6a-f60f90a7ca9f
         -   Entity:
                 Id: 4c98ac14-4e12-4a4d-95d0-68a40410731b
                 Name: Modelo Corto
@@ -1041,6 +1079,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             ab378894df637d71b4266b1b4a495071: ref!! 26bea165-d276-4f5f-942e-4ff8ba775fc9
+                            ded997af1f40fd47dcaa5aba67cdb2f5: ref!! 70b3356d-3ba5-48cd-825a-e0ebf0485a16
                             338ebab01e24d780c6f7aa7f1d0a9b33: ref!! 1234974d-c103-4c2a-bdc4-8faab2bb5275
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: 4520dbd5-9ccf-41d8-b1d7-f65a4626c543
@@ -1049,7 +1088,7 @@ Hierarchy:
                     a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
                         Id: 938adfc3-b65c-48db-bc75-375a55eb528d
                         CollisionGroup: CharacterFilter
-                        CanSleep: true
+                        CanSleep: false
                         Restitution: 0.2
                         Friction: 0.5
                         RollingFriction: 0.5
@@ -1082,6 +1121,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             001b5b0aaf4627bddb78e406437743ac: ref!! 452d9de1-27d2-4491-9a7d-321cae4365c0
+                            3abc97baf4ae6dcc5ecc17b7652d7110: ref!! a614c0d0-0e82-4eaf-9065-f75f0b2960f7
                             2499e630bf354f3d667717db2c708064: ref!! b8bcbdcb-b201-4b3d-9f50-22089dde0f7e
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: aac6afb9-9628-4fe8-a8fd-fff17326ecaa
@@ -1090,7 +1130,7 @@ Hierarchy:
                     a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
                         Id: c631c25e-ce37-4014-9e51-85b2ba53bc23
                         CollisionGroup: CharacterFilter
-                        CanSleep: true
+                        CanSleep: false
                         Restitution: 0.2
                         Friction: 0.5
                         RollingFriction: 0.5
@@ -1368,6 +1408,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             ff6944636b11fde8eaad6fcc865292bf: ref!! d35a7fde-37a6-4197-825e-02c7e871e15a
+                            b457e1ceaa3858082aaf190812b006e7: ref!! c3c7f584-0ca2-4422-b354-bdf5899fad51
                             73a5c7b4242e71087fe8be9b1cd33e93: ref!! 0f48cebc-34f5-4d37-ba02-36c7ad460d6d
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: 222217a1-704d-4397-9555-144244c3f7c5
@@ -1376,7 +1417,7 @@ Hierarchy:
                     a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
                         Id: c0efb030-4e11-4960-9a19-1d6666f298d1
                         CollisionGroup: CharacterFilter
-                        CanSleep: true
+                        CanSleep: false
                         Restitution: 0.2
                         Friction: 0.5
                         RollingFriction: 0.5
@@ -1646,6 +1687,44 @@ Hierarchy:
                 InstanceId: 3b672407-7f11-4f85-ab14-109d94771893
         -   Folder: null
             Entity:
+                Id: 8ab19a8c-bd55-4ef4-8796-c95ddc38bc97
+                Name: Lanza
+                Components:
+                    aae717941d47dadafb07fc74e51b757a: !TransformComponent
+                        Id: 70b3356d-3ba5-48cd-825a-e0ebf0485a16
+                        Position: {X: -8.0910235E-07, Y: 1.9, Z: 0.6}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
+                        Children: {}
+                    a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
+                        Id: 18f0189e-5d81-431f-a181-a7555a6ea65b
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: StaticFilter
+                        CanSleep: false
+                        Restitution: 10.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
+                                Radius: 0.25
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: f7806c36-9b87-48a7-b4f6-d614ce7c93ab
+                InstanceId: 3e1e7a73-769b-4bcf-895d-ae46d4685e2f
+        -   Folder: null
+            Entity:
                 Id: 8b67e6c8-d1d4-4776-92e0-92a212ca2948
                 Name*: Estatua 1
                 Components:
@@ -1666,6 +1745,44 @@ Hierarchy:
                 BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
                 BasePartId: 56f5ad60-3d77-4bf7-9c13-cbb046c76088
                 InstanceId: 1b6b1524-52ba-4b41-991f-874322ffbf7e
+        -   Folder: null
+            Entity:
+                Id: 8ca5aa94-66c3-4364-85fa-74fd834389cd
+                Name: Lanza
+                Components:
+                    aae717941d47dadafb07fc74e51b757a: !TransformComponent
+                        Id: 65b7ce1e-49c3-434d-b81b-a000818b95cb
+                        Position: {X: -8.0910235E-07, Y: 1.9, Z: 0.6}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
+                        Children: {}
+                    a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
+                        Id: 760664c5-5c87-47a9-88c4-5fd5baa57301
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: StaticFilter
+                        CanSleep: false
+                        Restitution: 10.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
+                                Radius: 0.25
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: f7806c36-9b87-48a7-b4f6-d614ce7c93ab
+                InstanceId: c5366ce7-dde7-4766-ab5a-f42ac7a570ca
         -   Entity:
                 Id: 8cb3e94f-5c74-4819-a965-c429570ae445
                 Name: "PartículasHumo"
@@ -2336,6 +2453,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             96e24b93d0e8fdb1b29ba0190a91165f: ref!! 4fde47ab-08d1-445a-8f84-dd20b7ee9bc9
+                            7d96fd5e0c1fe1de86dfd108df1ab9e1: ref!! 037cd17f-9199-4609-a0e4-d1ebeaffcaf6
                             79c20e0dfbe559d0d59bdb508fa681d3: ref!! c33c78ee-d09d-46a0-864e-64722b96048e
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: f3b37348-c3b1-4ba7-862d-0e50cbffb6ee
@@ -2344,7 +2462,7 @@ Hierarchy:
                     a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
                         Id: 96aba5cb-9ff3-4106-b8d4-4cc1c3e4ef3e
                         CollisionGroup: CharacterFilter
-                        CanSleep: true
+                        CanSleep: false
                         Restitution: 0.2
                         Friction: 0.5
                         RollingFriction: 0.5
@@ -2393,6 +2511,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             703588278c1637f9917cb87be33b3661: ref!! 6015d0c6-28ad-44c1-a0bf-8b2e50076787
+                            35791e33a2c6108a7ba6e224ed25f8b8: ref!! 65b7ce1e-49c3-434d-b81b-a000818b95cb
                             443ab77749a5fd395472ad3ff6255251: ref!! e4bb31fa-cdf3-40fb-8279-390a303fe511
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: def1b379-bf3e-4183-81f4-431bf38cf9d8
@@ -2401,7 +2520,7 @@ Hierarchy:
                     a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
                         Id: f443c2b5-d30e-4875-8448-9660d917173e
                         CollisionGroup: CharacterFilter
-                        CanSleep: true
+                        CanSleep: false
                         Restitution: 0.2
                         Friction: 0.5
                         RollingFriction: 0.5
@@ -2422,6 +2541,44 @@ Hierarchy:
                 BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
                 BasePartId: b846398e-bc6c-47ed-bb1c-425e4e5347fa
                 InstanceId: c5366ce7-dde7-4766-ab5a-f42ac7a570ca
+        -   Folder: null
+            Entity:
+                Id: bd81c994-32f4-4efa-bd2b-d0c2ba59a27e
+                Name: Lanza
+                Components:
+                    aae717941d47dadafb07fc74e51b757a: !TransformComponent
+                        Id: c3c7f584-0ca2-4422-b354-bdf5899fad51
+                        Position: {X: -8.0910235E-07, Y: 1.9, Z: 0.6}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
+                        Children: {}
+                    a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
+                        Id: 4b133042-cf06-425b-8e93-5d5a7a6d42e2
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: StaticFilter
+                        CanSleep: false
+                        Restitution: 10.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
+                                Radius: 0.25
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: f7806c36-9b87-48a7-b4f6-d614ce7c93ab
+                InstanceId: 6d61ba0c-bbca-4a4e-9d05-bfbf56aa1b8c
         -   Folder: null
             Entity:
                 Id: c05fb093-ee1d-4a5b-ac9b-9e2a8666eff1
@@ -2470,6 +2627,44 @@ Hierarchy:
                 BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
                 BasePartId: 7bfbc985-e878-49aa-948a-892caab395c5
                 InstanceId: 910cf8ad-0cde-4b81-be38-34b3c2f254e8
+        -   Folder: null
+            Entity:
+                Id: c98f94c8-c21a-400b-98ae-a1d41e34345c
+                Name: Lanza
+                Components:
+                    aae717941d47dadafb07fc74e51b757a: !TransformComponent
+                        Id: 037cd17f-9199-4609-a0e4-d1ebeaffcaf6
+                        Position: {X: -8.0910235E-07, Y: 1.9, Z: 0.6}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
+                        Children: {}
+                    a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
+                        Id: d2f6fbc7-02c8-4e9e-8fc1-a7558e7872eb
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: StaticFilter
+                        CanSleep: false
+                        Restitution: 10.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
+                                Radius: 0.25
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: f7806c36-9b87-48a7-b4f6-d614ce7c93ab
+                InstanceId: b88ecc5a-f5df-47ca-9edb-1671d36b9dc4
         -   Folder: null
             Entity:
                 Id: c9be3a51-f7d3-4802-b51a-34612f705c00
@@ -2788,6 +2983,44 @@ Hierarchy:
                 InstanceId: 5a535466-695a-4220-8ff2-b6826862906f
         -   Folder: null
             Entity:
+                Id: d9d01bd6-85ce-4e40-8fbb-e223ee9bb60a
+                Name: Lanza
+                Components:
+                    aae717941d47dadafb07fc74e51b757a: !TransformComponent
+                        Id: a614c0d0-0e82-4eaf-9065-f75f0b2960f7
+                        Position: {X: -8.0910235E-07, Y: 1.9, Z: 0.6}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
+                        Children: {}
+                    a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
+                        Id: 0389c7fe-f252-4da6-ac07-3c7feace55a8
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: StaticFilter
+                        CanSleep: false
+                        Restitution: 10.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
+                                Radius: 0.25
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: f7806c36-9b87-48a7-b4f6-d614ce7c93ab
+                InstanceId: 1b6b1524-52ba-4b41-991f-874322ffbf7e
+        -   Folder: null
+            Entity:
                 Id: db6486c6-b27e-4ebd-92ec-c8774a233cb1
                 Name: Cilindro (1)
                 Components:
@@ -2835,6 +3068,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             c2c7c604a14e700a0b3489afa51b324d: ref!! 37c937ac-3b64-4a40-b9af-1037642aad22
+                            5f2bd6e9e051b77e8bbe927cab9c16c7: ref!! 598608d4-2217-45a1-8b12-091515bfd506
                             a22166bb8c452a3715470e2277327006: ref!! 125d8c7a-808e-43fa-b0bb-ec501fd718c6
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: 090cebed-d0aa-4a6a-afcc-9e2f5285d6b7
@@ -2843,7 +3077,7 @@ Hierarchy:
                     a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
                         Id: 7fa84d3f-8f02-4ab4-a787-d585302927d3
                         CollisionGroup: CharacterFilter
-                        CanSleep: true
+                        CanSleep: false
                         Restitution: 0.2
                         Friction: 0.5
                         RollingFriction: 0.5

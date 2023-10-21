@@ -49,6 +49,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             d22f48e1c3b8bf2a1e04183b56083dfb: ref!! c2f262da-8b23-4e89-a4d4-119afb2144b3
+                            487a3a39c37027668accfbc72bbe8d69: ref!! aee247a5-2a13-4f06-9019-a06d3efff9b6
                             ebaf1d9d63ee8bb2702c68efc71c90e4: ref!! 57f0536a-312a-4fc1-bb56-875a2df8477c
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: da1983ca-4fae-4c02-bcc6-9f118a4d2b93
@@ -57,7 +58,7 @@ Hierarchy:
                     a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
                         Id: c47addce-fbb0-4105-a967-f909a0509bc9
                         CollisionGroup: CharacterFilter
-                        CanSleep: true
+                        CanSleep: false
                         Restitution: 0.2
                         Friction: 0.5
                         RollingFriction: 0.5
@@ -105,5 +106,39 @@ Hierarchy:
                         ColliderShapes:
                             3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
                                 Radius: 0.52
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Folder: null
+            Entity:
+                Id: f7806c36-9b87-48a7-b4f6-d614ce7c93ab
+                Name: Lanza
+                Components:
+                    aae717941d47dadafb07fc74e51b757a: !TransformComponent
+                        Id: aee247a5-2a13-4f06-9019-a06d3efff9b6
+                        Position: {X: -8.0910235E-07, Y: 1.9, Z: 0.6}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
+                        Children: {}
+                    a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
+                        Id: 0b4c1e64-3dcb-45b0-96ee-7841425a81bf
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: StaticFilter
+                        CanSleep: false
+                        Restitution: 10.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
+                                Radius: 0.25
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
