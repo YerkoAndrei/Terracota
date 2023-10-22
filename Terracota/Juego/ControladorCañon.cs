@@ -2,7 +2,6 @@
 using Stride.Input;
 using Stride.Engine;
 using Stride.Physics;
-using Stride.Particles;
 using Stride.Particles.Components;
 
 namespace Terracota;

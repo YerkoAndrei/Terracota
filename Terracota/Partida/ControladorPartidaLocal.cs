@@ -174,20 +174,20 @@ public class ControladorPartidaLocal : AsyncScript
     {
         var ganador = TipoJugador.nada;
 
-        cañónAnfitrión.Activar(false);
-        cañónHuesped.Activar(false);
-
         if (estatuasAnfitrión >= maxEstatuas)
         {
             ganador = TipoJugador.huesped;
+            cañónAnfitrión.Activar(false);
             cañónHuesped.Activar(true);
         }
         else if (estatuasHuesped >= maxEstatuas)
         {
             ganador = TipoJugador.anfitrión;
             cañónAnfitrión.Activar(true);
+            cañónHuesped.Activar(false);
         }
 
+        // Muestra ganador
         if (ganador != TipoJugador.nada)
         {
             partidaActiva = false;
