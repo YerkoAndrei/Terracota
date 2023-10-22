@@ -109,7 +109,7 @@ public class ControladorInterfazCreación : StartupScript
 
     private void Reiniciar()
     {
-        controladorCreación.Reiniciar();
+        controladorCreación.ReiniciarPosiciones();
     }
 
     private void Salir()

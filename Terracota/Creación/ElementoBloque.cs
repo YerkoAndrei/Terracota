@@ -43,6 +43,13 @@ public class ElementoBloque : AsyncScript
         Entity.Transform.Position = new Vector3(nuevaPosición.X, altura, nuevaPosición.Z);
     }
 
+    public void ForzarPosición(Vector3 nuevaPosición)
+    {
+        moviendo = false;
+        Entity.Transform.Rotation = Quaternion.Identity;
+        Entity.Transform.Position = new Vector3(nuevaPosición.X, 0, nuevaPosición.Z);
+    }
+
     public bool Colocar()
     {
         moviendo = false;
