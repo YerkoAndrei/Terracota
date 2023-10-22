@@ -40,7 +40,14 @@ public class ControladorCreación : SyncScript
             bloqueActual.ActualizarPosición(resultado.Point, bloqueBase.ObtenerColisión());
         }
 
-        if (Input.IsMouseButtonDown(MouseButton.Left))
+        // Rotación
+        if (Input.IsMouseButtonPressed(MouseButton.Right))
+        {
+            bloqueActual.Entity.Transform.Rotation *= Quaternion.RotationY(MathUtil.DegreesToRadians(-45));
+        }
+
+        // Guardar
+        if (Input.IsMouseButtonPressed(MouseButton.Left))
         { 
             if(bloqueActual.Colocar())
                 bloqueActual = null;
