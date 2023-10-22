@@ -14,30 +14,30 @@ public class ElementoBloqueBase : AsyncScript
     public override async Task Execute()
     {
         cuerpo = Entity.Get<RigidbodyComponent>();
-        Log.Warning("a");
         while (Game.IsRunning)
-        {/*
+        {
             var colisión = await cuerpo.NewCollision();
             
             // Identifica colisión
-            ElementoBloque bloque;
-            if (colisión.ColliderA.Entity.GetParent().Get<ElementoBloque>() != null)
+            ElementoBloque bloque = null;
+            if (colisión.ColliderA.Entity.GetParent() != null && colisión.ColliderA.Entity.GetParent().Get<ElementoBloque>() != null)
                 bloque = colisión.ColliderA.Entity.GetParent().Get<ElementoBloque>();
-            else
+            else if (colisión.ColliderB.Entity.GetParent() != null && colisión.ColliderB.Entity.GetParent().Get<ElementoBloque>() != null)
                 bloque = colisión.ColliderB.Entity.GetParent().Get<ElementoBloque>();
 
-            if (bloque.moviendo)
+            if (!bloque.moviendo)
             {
                 tocandoBloque = true;
                 await cuerpo.CollisionEnded();
                 tocandoBloque = false;
-            }*/
+            }
             await Script.NextFrame();
         }
     }
 
     public void ActualizarPosición(Vector3 nuevaPosición)
     {
+        nuevaPosición.Y = 0.5f;
         Entity.Transform.Position = nuevaPosición;
     }
 

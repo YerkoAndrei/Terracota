@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
@@ -16,12 +17,21 @@ public class ElementoBloque : AsyncScript
     {
         while (Game.IsRunning)
         {
-            await cuerpo.NewCollision();
-            tocandoBloque = true;
+            var colisión = await cuerpo.NewCollision();
 
-            await cuerpo.CollisionEnded();
-            tocandoBloque = false;
+            // Identifica colisión
+            var tocandoBase = false;
+            if (colisión.ColliderA.Entity.Get<ElementoBloqueBase>() != null)
+                tocandoBase = true;
+            else if (colisión.ColliderB.Entity.Get<ElementoBloqueBase>() != null)
+                tocandoBase = true;
 
+            if (!tocandoBase)
+            {
+                tocandoBloque = true;
+                await cuerpo.CollisionEnded();
+                tocandoBloque = false;
+            }
             await Script.NextFrame();
         }
     }
