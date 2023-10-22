@@ -1,34 +1,62 @@
-﻿using Stride.Engine;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using System.Collections.Generic;
 using Stride.Core.Mathematics;
+using Stride.Engine;
+using Stride.Physics;
+using Stride.Graphics;
+using Stride.Input;
 
 namespace Terracota;
 
 public class ControladorCreación : SyncScript
 {
     public TransformComponent ejeCámara;
+    public CameraComponent cámara;
 
-    public Entity[] cortos;
-    public Entity[] largos;
+    public List<Entity> cortos = new List<Entity> { };
+    public List<Entity> largos = new List<Entity> { };
+
+    private Entity bloqueActual;
+
+    private Texture backBuffer;
+    private Viewport viewport;
 
     public override void Start()
     {
-
+        backBuffer = GraphicsDevice.Presenter.BackBuffer;
+        viewport = new Viewport(0, 0, backBuffer.Width, backBuffer.Height);
     }
 
     public override void Update()
     {
+        if (bloqueActual == null)
+            return;
 
+        var resultado = ObtienePosiciónCursor();
+        if (resultado.Succeeded)
+            bloqueActual.Transform.Position = resultado.Point;
+
+        if (Input.IsMouseButtonDown(MouseButton.Left))
+            bloqueActual = null;
+    }
+
+    public HitResult ObtienePosiciónCursor()
+    {
+        var posiciónCerca = viewport.Unproject(new Vector3(Input.AbsoluteMousePosition, 0.0f), cámara.ProjectionMatrix, cámara.ViewMatrix, Matrix.Identity);
+        var pocisiónLejos = viewport.Unproject(new Vector3(Input.AbsoluteMousePosition, 1.0f), cámara.ProjectionMatrix, cámara.ViewMatrix, Matrix.Identity);
+
+        var resultado = this.GetSimulation().Raycast(posiciónCerca, pocisiónLejos);
+        return resultado;
     }
 
     public void AgregaCorto(int corto)
     {
-        //cortos[corto].Transform.Position = mouse
+        bloqueActual = cortos[corto];
     }
 
     public void AgregarLargo(int largo)
     {
-        //largos[largo].Transform.Position = 
+        bloqueActual = largos[largo];
     }
 
     public async void MoverCámara(bool derecha)
