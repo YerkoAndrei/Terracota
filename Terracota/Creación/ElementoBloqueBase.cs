@@ -4,6 +4,7 @@ using Stride.Engine;
 using Stride.Physics;
 
 namespace Terracota;
+using static Constantes;
 
 public class ElementoBloqueBase : AsyncScript
 {
@@ -30,6 +31,7 @@ public class ElementoBloqueBase : AsyncScript
 
                 // Verificar nuevas colisiones
                 //await colisión.Ended();
+
                 await cuerpo.CollisionEnded();
                 CambiarCuerpo(false);
             }
@@ -44,13 +46,29 @@ public class ElementoBloqueBase : AsyncScript
         else if(!agrandar && altura > 0)
             altura -= 1;
 
-        Entity.Transform.Scale = new Vector3(1, altura, 1);
+        Entity.Transform.Scale = new Vector3(Entity.Transform.Scale.X, (altura + 1), Entity.Transform.Scale.Z);
     }
 
-    public void ReiniciarCuerpo()
+    public void Rotar()
+    {
+        Entity.Transform.Rotation *= Quaternion.RotationY(MathUtil.DegreesToRadians(-45));
+    }
+
+    public void ReiniciarCuerpo(TipoBloque tipoBloque, Quaternion rotación)
     {
         altura = 0;
-        Entity.Transform.Scale = Vector3.One;
+
+        Entity.Transform.Rotation = rotación;
+        switch (tipoBloque)
+        {
+            case TipoBloque.nada:
+            case TipoBloque.corto:
+                Entity.Transform.Scale = new Vector3(1, 1, 1);
+                break;
+            case TipoBloque.largo:
+                Entity.Transform.Scale = new Vector3(2, 1, 1);
+                break;
+        }
     }
 
     public void ActualizarPosición(Vector3 nuevaPosición)

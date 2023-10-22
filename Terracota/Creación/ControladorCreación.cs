@@ -65,14 +65,14 @@ public class ControladorCreación : SyncScript
 
     public void AgregarCorto(int corto)
     {
-        bloqueBase.ReiniciarCuerpo();
         bloqueActual = cortos[corto];
+        bloqueBase.ReiniciarCuerpo(bloqueActual.tipoBloque, bloqueActual.ObtenerRotación());
     }
 
     public void AgregarLargo(int largo)
     {
-        bloqueBase.ReiniciarCuerpo();
         bloqueActual = largos[largo];
+        bloqueBase.ReiniciarCuerpo(bloqueActual.tipoBloque, bloqueActual.ObtenerRotación());
     }
 
     public void Reiniciar()
@@ -95,6 +95,7 @@ public class ControladorCreación : SyncScript
         if (bloqueActual == null)
             return;
 
+        bloqueBase.Rotar();
         bloqueActual.Entity.Transform.Rotation *= Quaternion.RotationY(MathUtil.DegreesToRadians(-45));
     }
 
