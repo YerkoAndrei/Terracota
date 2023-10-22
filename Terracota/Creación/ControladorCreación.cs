@@ -18,7 +18,7 @@ public class ControladorCreación : SyncScript
     public List<ElementoBloque> largos = new List<ElementoBloque> { };
 
     private ElementoBloque bloqueActual;
-
+    private bool moviendoCámara;
     private Texture backBuffer;
     private Viewport viewport;
 
@@ -37,7 +37,7 @@ public class ControladorCreación : SyncScript
         if (resultado.Succeeded)
         {
             bloqueBase.ActualizarPosición(resultado.Point);
-            bloqueActual.ActualizarPosición(resultado.Point, bloqueBase.ObtenerColisión());
+            bloqueActual.ActualizarPosición(resultado.Point, bloqueBase.ObtenerAltura());
         }
 
         // Rotación
@@ -48,8 +48,8 @@ public class ControladorCreación : SyncScript
 
         // Guardar
         if (Input.IsMouseButtonPressed(MouseButton.Left))
-        { 
-            if(bloqueActual.Colocar())
+        {
+            if (bloqueActual.Colocar())
                 bloqueActual = null;
         }
     }
@@ -63,18 +63,23 @@ public class ControladorCreación : SyncScript
         return resultado;
     }
 
-    public void AgregaCorto(int corto)
+    public void AgregarCorto(int corto)
     {
+        bloqueBase.ReiniciarCuerpo();
         bloqueActual = cortos[corto];
     }
 
     public void AgregarLargo(int largo)
     {
+        bloqueBase.ReiniciarCuerpo();
         bloqueActual = largos[largo];
     }
 
     public async void MoverCámara(bool derecha)
     {
+        if (moviendoCámara)
+            return;
+
         await MoverCámara(90, derecha);
     }
 
@@ -90,30 +95,32 @@ public class ControladorCreación : SyncScript
 
     private async Task MoverCámara(float YObjetivo, bool derecha)
     {
-        float duraciónLerp = 1f;
+        moviendoCámara = true;
+
+        float duraciónLerp = 0.5f;
         float tiempoLerp = 0;
         float tiempo = 0;
 
         var rotaciónInicial = ejeCámara.Rotation;
-        var rotaciónObjetivo = Quaternion.RotationY(MathUtil.DegreesToRadians(YObjetivo));
+        var rotaciónObjetivo = Quaternion.Identity;
 
-        // Ajusta dirección de movimiento
-        var direcciónObjetivo = rotaciónObjetivo;
         if (derecha)
-            direcciónObjetivo = Quaternion.RotationY(MathUtil.DegreesToRadians(YObjetivo - 0.01f));
+            rotaciónObjetivo = ejeCámara.Rotation * Quaternion.RotationY(MathUtil.DegreesToRadians(YObjetivo));
         else
-            direcciónObjetivo = Quaternion.RotationY(MathUtil.DegreesToRadians(YObjetivo + 0.01f));
+            rotaciónObjetivo = ejeCámara.Rotation * Quaternion.RotationY(MathUtil.DegreesToRadians(YObjetivo * -1));
 
         while (tiempoLerp < duraciónLerp)
         {
             tiempo = tiempoLerp / duraciónLerp;
-            ejeCámara.Rotation = Quaternion.Lerp(rotaciónInicial, direcciónObjetivo, tiempo);
+            ejeCámara.Rotation = Quaternion.Lerp(rotaciónInicial, rotaciónObjetivo, tiempo);
 
             tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            await Script.NextFrame();
+            await Task.Delay(1);
+            //await Script.NextFrame();
         }
 
         // Fin
         ejeCámara.Rotation = rotaciónObjetivo;
+        moviendoCámara = false;
     }
 }
