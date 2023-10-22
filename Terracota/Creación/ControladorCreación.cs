@@ -71,9 +71,14 @@ public class ControladorCreación : SyncScript
         await MoverCámara(90, derecha);
     }
 
-    public void SalirGuardar()
+    public void Guardar()
     {
+        // esperar a colocar todos los bloques
+        var bloques = new List<ElementoBloque>();
+        bloques.AddRange(cortos);
+        bloques.AddRange(largos);
 
+        SistemaMemoria.GuardarFortaleza(bloques.ToArray());
     }
 
     private async Task MoverCámara(float YObjetivo, bool derecha)

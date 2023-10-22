@@ -25,7 +25,7 @@ public class ElementoBloqueBase : AsyncScript
             else if (colisión.ColliderB.Entity.GetParent() != null && colisión.ColliderB.Entity.GetParent().Get<ElementoBloque>() != null)
                 bloque = colisión.ColliderB.Entity.GetParent().Get<ElementoBloque>();
 
-            if (!bloque.moviendo)
+            if (!bloque.ObtenerMoviendo())
             {
                 tocandoBloque = true;
                 await cuerpo.CollisionEnded();

@@ -1,21 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Stride.Core.Mathematics;
-using Stride.Input;
+﻿using System.Collections.Generic;
 using Stride.Engine;
+using Newtonsoft.Json;
+using System.IO;
 
-namespace Terracota
+namespace Terracota;
+using static Constantes;
+
+public class SistemaMemoria : StartupScript
 {
-    public class SistemaMemoria : StartupScript
+    public override void Start()
     {
-        // Declared public member fields and properties will show in the game studio
 
-        public override void Start()
+    }
+
+    public static void GuardarFortaleza(ElementoBloque[] bloques)
+    {
+        var listaElementos = new List<Bloque>();
+        for(int i=0; i < bloques.Length; i++)
         {
-            // Initialization of the script.
+            var bloque = new Bloque(bloques[i].ObtenerTipo(), bloques[i].ObtenerPosición(), bloques[i].ObtenerRotación());
+            listaElementos.Add(bloque);
         }
+
+        var json = JsonConvert.SerializeObject(listaElementos);
+        var encriptado = DesEncriptar(json);
+
+        //File.WriteAllText("C:\\Users\\YerkoAndrei\\Desktop\\algo.txt", json);
     }
 }

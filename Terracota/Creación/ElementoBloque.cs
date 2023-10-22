@@ -5,12 +5,14 @@ using Stride.Engine;
 using Stride.Physics;
 
 namespace Terracota;
+using static Constantes;
 
 public class ElementoBloque : AsyncScript
 {
+    public TipoBloque tipoBloque;
     public RigidbodyComponent cuerpo;
 
-    public bool moviendo;
+    private bool moviendo;
     private bool tocandoBloque;
 
     public override async Task Execute()
@@ -50,5 +52,26 @@ public class ElementoBloque : AsyncScript
     {
         moviendo = false;
         return !tocandoBloque;
+    }
+
+    public bool ObtenerMoviendo()
+    {
+        return moviendo;
+    }
+
+    // Guardado
+    public TipoBloque ObtenerTipo()
+    {
+        return tipoBloque;
+    }
+
+    public Vector3 ObtenerPosición()
+    {
+        return Entity.Transform.Position;
+    }
+
+    public Quaternion ObtenerRotación()
+    {
+        return Entity.Transform.Rotation;
     }
 }

@@ -15,8 +15,8 @@ public class ControladorInterfazCreación : StartupScript
         var página = Entity.Get<UIComponent>().Page.RootElement;
 
         // Guardado
-        var btnSalirGuardar = página.FindVisualChildOfType<Button>("btnSalirGuardar");
-        btnSalirGuardar.Click += (sender, e) => { SalirGuardar(); };
+        var btnGuardar = página.FindVisualChildOfType<Button>("btnGuardar");
+        btnGuardar.Click += (sender, e) => { Guardar(); };
 
         var btnSalir = página.FindVisualChildOfType<Button>("btnSalir");
         btnSalir.Click += (sender, e) => { Salir(); };
@@ -92,9 +92,9 @@ public class ControladorInterfazCreación : StartupScript
         controladorCreación.MoverCámara(derecha);
     }
 
-    private void SalirGuardar()
+    private void Guardar()
     {
-        controladorCreación.SalirGuardar();
+        controladorCreación.Guardar();
     }
 
     private void Salir()
