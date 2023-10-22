@@ -8,7 +8,7 @@ namespace Terracota;
 public class ElementoBloqueBase : AsyncScript
 {
     private RigidbodyComponent cuerpo;
-    private bool tocandoBloque;
+    private float altura;
 
     public override async Task Execute()
     {
@@ -26,22 +26,41 @@ public class ElementoBloqueBase : AsyncScript
 
             if (!bloque.ObtenerMoviendo())
             {
-                tocandoBloque = true;
+                CambiarCuerpo(true);
+
+                // Verificar nuevas colisiones
+                //await colisión.Ended();
                 await cuerpo.CollisionEnded();
-                tocandoBloque = false;
+                CambiarCuerpo(false);
             }
             await Script.NextFrame();
         }
     }
 
+    private void CambiarCuerpo(bool agrandar)
+    {
+        if (agrandar && altura < 3)
+            altura += 1;
+        else if(!agrandar && altura > 0)
+            altura -= 1;
+
+        Entity.Transform.Scale = new Vector3(1, altura, 1);
+    }
+
+    public void ReiniciarCuerpo()
+    {
+        altura = 0;
+        Entity.Transform.Scale = Vector3.One;
+    }
+
     public void ActualizarPosición(Vector3 nuevaPosición)
     {
-        nuevaPosición.Y = 0.5f;
+        nuevaPosición.Y = 0;
         Entity.Transform.Position = nuevaPosición;
     }
 
-    public bool ObtenerColisión()
+    public float ObtenerAltura()
     {
-        return tocandoBloque;
+        return altura;
     }
 }

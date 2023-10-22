@@ -79,7 +79,7 @@ public class ControladorInterfazCreación : StartupScript
 
     private void AgregaCorto(int corto)
     {
-        controladorCreación.AgregaCorto(corto);
+        controladorCreación.AgregarCorto(corto);
     }
 
     private void AgregarLargo(int largo)

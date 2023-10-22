@@ -37,13 +37,9 @@ public class ElementoBloque : AsyncScript
         }
     }
 
-    public void ActualizarPosición(Vector3 nuevaPosición, bool tocando)
+    public void ActualizarPosición(Vector3 nuevaPosición, float altura)
     {
         moviendo = true;
-        var altura = 0;
-        if (tocando)
-            altura = 1;
-
         Entity.Transform.Position = new Vector3(nuevaPosición.X, altura, nuevaPosición.Z);
     }
 
