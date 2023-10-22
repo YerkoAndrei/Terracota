@@ -59,9 +59,9 @@ public class ControladorMenú : StartupScript
     }
 
     private void EnClicCrear(object sender, RoutedEventArgs e)
-    {/*
+    {
         Content.Unload(SceneSystem.SceneInstance.RootScene);
-        SceneSystem.SceneInstance.RootScene = Content.Load(escenaCreación);*/
+        SceneSystem.SceneInstance.RootScene = Content.Load(escenaCreación);
     }
 
     private void EnClicOpciones(object sender, RoutedEventArgs e)
