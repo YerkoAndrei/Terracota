@@ -40,9 +40,8 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
+                            3bf5e490913295f9dd061c40bc11c5b4: ref!! 48128fb6-3c26-4e33-bd03-3fefdeb2d464
                             d22f48e1c3b8bf2a1e04183b56083dfb: ref!! 080539e1-7693-46a0-83b6-947f1cc8bef8
-                            68f45b8f8ca3a9d7be8269b934e84e76: ref!! 7e99b0a0-1633-4613-950c-911b9b50214a
-                            ebaf1d9d63ee8bb2702c68efc71c90e4: ref!! c44db87a-da0c-4447-bef9-cb4cc71cf42d
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: 027c3f95-051a-41f3-9747-be301c025113
                         Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
@@ -64,7 +63,7 @@ Hierarchy:
                         Children: {}
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
                         Id: 72f254af-92a4-420d-8cf0-cfca2650aba3
-                        CollisionGroup: SensorTrigger
+                        CollisionGroup: KinematicFilter
                         CanCollideWith: SensorTrigger
                         CanSleep: false
                         Restitution: 0.0
@@ -101,7 +100,7 @@ Hierarchy:
                         Children: {}
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
                         Id: cd94821e-9869-4520-9f95-b43a42c79344
-                        CollisionGroup: SensorTrigger
+                        CollisionGroup: KinematicFilter
                         CanCollideWith: SensorTrigger
                         CanSleep: false
                         Restitution: 0.0
@@ -132,7 +131,7 @@ Hierarchy:
                 Components:
                     c376e76ea8faadeb37730ecff53b7d5c: !TransformComponent
                         Id: 6fa866ee-df9b-4893-9c1f-084c9584e65d
-                        Position: {X: 0.0, Y: 1.9, Z: 0.65}
+                        Position: {X: 0.0, Y: 2.7, Z: 0.05}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -144,6 +143,26 @@ Hierarchy:
                 BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
                 BasePartId: af7d3fcd-d621-4c0c-80ed-20a356d32750
                 InstanceId: b5392c13-ffca-4bc1-b450-ad0ab1f23471
+        -   Entity:
+                Id: 1bf5ea5a-9f99-4059-a7b4-e88d45d52d0b
+                Name: Modelo Lanza
+                Components:
+                    ce491b1235ced4211f49d26b1c27d42d: !TransformComponent
+                        Id: 6cd4e49c-e7ff-4f3a-ac11-9bcc060414cd
+                        Position: {X: 0.0, Y: -0.8, Z: 0.6}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            f509043356606b60a87e774dabacd8a0: ref!! 5d40a4e2-5f25-461b-bf44-3c8ab64eac1c
+                            6e7e2ecc7c7af39e7c2a402a362036b1: ref!! 939e0a61-6585-496e-b987-220a106374bd
+                    8bb144e93510cbf705d04c9148ca913f: !ModelComponent
+                        Id: 3b467704-a9b4-4bf6-af4a-7b765a2dd05e
+                        Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Mono/Lanza
+                        Materials: {}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: ee47acaf-0873-4afd-b17d-c21feab51824
+                InstanceId: 2ea7b606-b280-4820-94ef-a541a887a219
         -   Entity:
                 Id: 28ae2379-0261-498e-b20f-acdbe262fa11
                 Name: "Cañón"
@@ -164,19 +183,18 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: 08868581-5001-468d-8f30-83fb352761d3
                 InstanceId: ce28e181-3d28-4000-89a6-ae77d7930396
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: 36e657c6-3ae7-4680-8acf-b5dc225fae3f
                 Name: Lanza
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: 7e99b0a0-1633-4613-950c-911b9b50214a
-                        Position: {X: -8.0910235E-07, Y: 1.9, Z: 0.6}
+                        Position: {X: -8.0910235E-07, Y: 2.7, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 0.2, Z: 1.0}
                         Children: {}
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
-                        Id: a2d84ab5-bb2f-40af-ba65-6490daba893d
+                        Id: d08b7e18-b3c2-48ab-a47c-59624e98e58d
                         CollisionGroup: KinematicFilter
                         CanCollideWith: StaticFilter
                         CanSleep: false
@@ -219,7 +237,7 @@ Hierarchy:
                 Components:
                     c376e76ea8faadeb37730ecff53b7d5c: !TransformComponent
                         Id: c44db87a-da0c-4447-bef9-cb4cc71cf42d
-                        Position: {X: 0.0, Y: 1.9, Z: 0.65}
+                        Position: {X: 0.0, Y: 2.7, Z: 0.05}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -268,6 +286,26 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: bc1ab3a9-6c59-4948-9a5b-691f36b94197
                 InstanceId: 88bb57af-9542-4a93-8bab-6863a55dad6d
+        -   Entity:
+                Id: 563c09c2-0356-4564-8a0c-fe279e4bb6ba
+                Name: Modelo Lanza
+                Components:
+                    ce491b1235ced4211f49d26b1c27d42d: !TransformComponent
+                        Id: abf10c20-521e-4287-92d3-5b9ea2f48adb
+                        Position: {X: 0.0, Y: -0.8, Z: 0.6}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            efa4b98bf04ec0e48af7d93cc76bb336: ref!! 22bf6bb4-a702-43df-b170-56bab7d40d1d
+                            82ceb621741d9360ce20df51ac53b78d: ref!! 6fa866ee-df9b-4893-9c1f-084c9584e65d
+                    8bb144e93510cbf705d04c9148ca913f: !ModelComponent
+                        Id: 42e60446-b983-4769-b894-dc86d20a5326
+                        Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Mono/Lanza
+                        Materials: {}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: ee47acaf-0873-4afd-b17d-c21feab51824
+                InstanceId: b5392c13-ffca-4bc1-b450-ad0ab1f23471
         -   Folder: null
             Entity:
                 Id: 58dcaca2-b517-4d13-b83f-e4160516fea6
@@ -314,7 +352,7 @@ Hierarchy:
                         Children: {}
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
                         Id: ecc21b98-05a8-44a2-bd1f-688e8af554bb
-                        CollisionGroup: SensorTrigger
+                        CollisionGroup: KinematicFilter
                         CanCollideWith: SensorTrigger
                         CanSleep: false
                         Restitution: 0.0
@@ -516,19 +554,18 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: d5365882-ad49-47ac-9c3a-d08c3cf53fd8
                 InstanceId: 88bb57af-9542-4a93-8bab-6863a55dad6d
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: 63b56a59-8f39-4d28-a2ec-b243def090d1
                 Name: Lanza
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: 52bcf030-006f-4d3c-a3b0-d6f91fd4df79
-                        Position: {X: -8.0910235E-07, Y: 1.9, Z: 0.6}
+                        Position: {X: -8.0910235E-07, Y: 2.7, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 0.2, Z: 1.0}
                         Children: {}
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
-                        Id: 9f2cecb8-b600-42db-a271-bc72ae033072
+                        Id: 9419bced-2d85-41c4-9fc1-3f4759581d6a
                         CollisionGroup: KinematicFilter
                         CanCollideWith: StaticFilter
                         CanSleep: false
@@ -560,7 +597,7 @@ Hierarchy:
                 Components:
                     c376e76ea8faadeb37730ecff53b7d5c: !TransformComponent
                         Id: ce9c69cf-244c-4642-86cd-5fa77c68ffdc
-                        Position: {X: 0.0, Y: 1.9, Z: 0.65}
+                        Position: {X: 0.0, Y: 2.7, Z: 0.05}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -600,7 +637,7 @@ Hierarchy:
                         Children: {}
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
                         Id: 35314548-71cb-4128-95a6-0b0fc488874c
-                        CollisionGroup: SensorTrigger
+                        CollisionGroup: KinematicFilter
                         CanCollideWith: SensorTrigger
                         CanSleep: false
                         Restitution: 0.0
@@ -631,7 +668,7 @@ Hierarchy:
                 Components:
                     c376e76ea8faadeb37730ecff53b7d5c: !TransformComponent
                         Id: c8b49a6b-fcef-4e24-aff7-c726cc6211d9
-                        Position: {X: 0.0, Y: 1.9, Z: 0.65}
+                        Position: {X: 0.0, Y: 2.7, Z: 0.05}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -649,7 +686,7 @@ Hierarchy:
                 Components:
                     c376e76ea8faadeb37730ecff53b7d5c: !TransformComponent
                         Id: 939e0a61-6585-496e-b987-220a106374bd
-                        Position: {X: 0.0, Y: 1.9, Z: 0.65}
+                        Position: {X: 0.0, Y: 2.7, Z: 0.05}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -739,9 +776,8 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
+                            0e85d34ded54a683d775deea81fd362f: ref!! 5507f2ca-89a0-4b51-8982-c080a434339d
                             d22f48e1c3b8bf2a1e04183b56083dfb: ref!! 04b87726-35ba-43d8-b3d6-a7665c6d3f6e
-                            2b6f4fdf3e86ab9b67290746956cd577: ref!! bd1130e1-a863-411c-b208-12e2ce6ca223
-                            ebaf1d9d63ee8bb2702c68efc71c90e4: ref!! 7e4112d7-efb3-4f91-a7b6-bb8871ae158d
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: 69e73010-8749-4d0b-9abd-f349cb96741c
                         Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
@@ -770,19 +806,38 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: bc1ab3a9-6c59-4948-9a5b-691f36b94197
                 InstanceId: ce28e181-3d28-4000-89a6-ae77d7930396
-        -   Folder: null
-            Entity:
+        -   Entity:
+                Id: 7d3b3948-a351-441a-8e5c-eae38af36a5c
+                Name: Modelo Lanza
+                Components:
+                    ce491b1235ced4211f49d26b1c27d42d: !TransformComponent
+                        Id: 76dd40dd-2aba-4956-9685-aa1f6694500b
+                        Position: {X: 0.0, Y: -0.8, Z: 0.6}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            f48900355c91c25b9085acc0ebbcb22f: ref!! 982f9f63-552a-46b8-8686-0dbd2358005e
+                            5006d5996d2762b6e0bb0d008db69127: ref!! ce9c69cf-244c-4642-86cd-5fa77c68ffdc
+                    8bb144e93510cbf705d04c9148ca913f: !ModelComponent
+                        Id: 5190a855-2b6a-442a-bfa5-7d37c766daee
+                        Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Mono/Lanza
+                        Materials: {}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: ee47acaf-0873-4afd-b17d-c21feab51824
+                InstanceId: de08a7b1-f27a-49a0-aa6f-8ff5ec699a8a
+        -   Entity:
                 Id: 7e0b9689-5b60-4eb2-8e43-2b95003ebb65
                 Name: Lanza
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: 22bf6bb4-a702-43df-b170-56bab7d40d1d
-                        Position: {X: -8.0910235E-07, Y: 1.9, Z: 0.6}
+                        Position: {X: -8.0910235E-07, Y: 2.7, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 0.2, Z: 1.0}
                         Children: {}
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
-                        Id: 7ff47967-75b9-4d03-b5a5-17f2364191ae
+                        Id: 92afbb81-7ffc-43a2-87e7-c227872edd8c
                         CollisionGroup: KinematicFilter
                         CanCollideWith: StaticFilter
                         CanSleep: false
@@ -808,19 +863,18 @@ Hierarchy:
                 BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
                 BasePartId: f7806c36-9b87-48a7-b4f6-d614ce7c93ab
                 InstanceId: b5392c13-ffca-4bc1-b450-ad0ab1f23471
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: 82dec9bc-5646-4fa7-b3a8-9092c5fcb346
                 Name: Lanza
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: 5d40a4e2-5f25-461b-bf44-3c8ab64eac1c
-                        Position: {X: -8.0910235E-07, Y: 1.9, Z: 0.6}
+                        Position: {X: -8.0910235E-07, Y: 2.7, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 0.2, Z: 1.0}
                         Children: {}
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
-                        Id: 2aea350c-3414-4e18-849b-0a0927ff5e22
+                        Id: 94a55d86-8846-4fe3-8dea-5781db205ce2
                         CollisionGroup: KinematicFilter
                         CanCollideWith: StaticFilter
                         CanSleep: false
@@ -879,9 +933,8 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
+                            36a19a9e9a57be9389e4de4e840dce76: ref!! 6cd4e49c-e7ff-4f3a-ac11-9bcc060414cd
                             d22f48e1c3b8bf2a1e04183b56083dfb: ref!! f0aaa65b-80aa-46f1-8103-680307d25b02
-                            dc479a9b369861b8a43d4f1afd1cb161: ref!! 5d40a4e2-5f25-461b-bf44-3c8ab64eac1c
-                            ebaf1d9d63ee8bb2702c68efc71c90e4: ref!! 939e0a61-6585-496e-b987-220a106374bd
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: bb5c6096-e6e0-4e66-be2f-d66262d842ed
                         Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
@@ -932,19 +985,18 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: f2b48e3a-68ee-4e2c-be7e-b0998925f257
                 InstanceId: ce28e181-3d28-4000-89a6-ae77d7930396
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: 99061be9-87a4-41d2-b031-dcb4538fcfdf
                 Name: Lanza
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: bd1130e1-a863-411c-b208-12e2ce6ca223
-                        Position: {X: -8.0910235E-07, Y: 1.9, Z: 0.6}
+                        Position: {X: -8.0910235E-07, Y: 2.7, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 0.2, Z: 1.0}
                         Children: {}
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
-                        Id: 720c7cf8-28e5-439f-9bb9-0c56bfe6c818
+                        Id: 9a2227c5-6cae-4299-bbaa-3385c5d9cb37
                         CollisionGroup: KinematicFilter
                         CanCollideWith: StaticFilter
                         CanSleep: false
@@ -986,19 +1038,18 @@ Hierarchy:
                 BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
                 BasePartId: 56f5ad60-3d77-4bf7-9c13-cbb046c76088
                 InstanceId: de08a7b1-f27a-49a0-aa6f-8ff5ec699a8a
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: 99d2d919-681b-46bb-a1e0-154892084d33
                 Name: Lanza
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: 982f9f63-552a-46b8-8686-0dbd2358005e
-                        Position: {X: -8.0910235E-07, Y: 1.9, Z: 0.6}
+                        Position: {X: -8.0910235E-07, Y: 2.7, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 0.2, Z: 1.0}
                         Children: {}
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
-                        Id: 14adf79e-5867-4d64-a312-19bdf2631462
+                        Id: 2d79e990-95a4-42fb-9b91-2a740a058f1b
                         CollisionGroup: KinematicFilter
                         CanCollideWith: StaticFilter
                         CanSleep: false
@@ -1041,6 +1092,26 @@ Hierarchy:
                 BasePartId: 56f5ad60-3d77-4bf7-9c13-cbb046c76088
                 InstanceId: 3a66ddc5-6084-42e9-8b57-8f0f64473e1c
         -   Entity:
+                Id: 9ef40cc5-8ee0-4ca7-b710-3f8c4123d617
+                Name: Modelo Lanza
+                Components:
+                    ce491b1235ced4211f49d26b1c27d42d: !TransformComponent
+                        Id: 5507f2ca-89a0-4b51-8982-c080a434339d
+                        Position: {X: 0.0, Y: -0.8, Z: 0.6}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            bbd9a9cc644e49f883d52719b7e8d3e4: ref!! bd1130e1-a863-411c-b208-12e2ce6ca223
+                            1388bec79cf5d38b950ca637c477f26b: ref!! 7e4112d7-efb3-4f91-a7b6-bb8871ae158d
+                    8bb144e93510cbf705d04c9148ca913f: !ModelComponent
+                        Id: 7047f5dd-137c-45fd-8497-234de7ab762e
+                        Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Mono/Lanza
+                        Materials: {}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: ee47acaf-0873-4afd-b17d-c21feab51824
+                InstanceId: dafad3b7-4aec-435c-b4cb-76032a613783
+        -   Entity:
                 Id: a3547ccd-2528-4e77-a41e-bf3ac3ce3883
                 Name: Entorno
                 Components:
@@ -1060,6 +1131,26 @@ Hierarchy:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
                 BasePartId: 4bff4cad-8d16-4606-8882-0d34fe8e309a
                 InstanceId: 8e464a2a-cba3-4fb8-93e5-341a4ecf45f7
+        -   Entity:
+                Id: a46cd117-d8f1-42f3-89a1-f4192038c549
+                Name: Modelo Lanza
+                Components:
+                    ce491b1235ced4211f49d26b1c27d42d: !TransformComponent
+                        Id: 48128fb6-3c26-4e33-bd03-3fefdeb2d464
+                        Position: {X: 0.0, Y: -0.8, Z: 0.6}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            2dcc7ab357ec94e2ff2d117f7826e3f7: ref!! 7e99b0a0-1633-4613-950c-911b9b50214a
+                            91bd4d01d5fdba910c4e70080942b898: ref!! c44db87a-da0c-4447-bef9-cb4cc71cf42d
+                    8bb144e93510cbf705d04c9148ca913f: !ModelComponent
+                        Id: 3bd95449-2559-4050-96b5-135bc81d7d33
+                        Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Mono/Lanza
+                        Materials: {}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: ee47acaf-0873-4afd-b17d-c21feab51824
+                InstanceId: 4b5bd711-9a65-41c1-ac54-2d4e414b0cd1
         -   Folder: null
             Entity:
                 Id: a51134ab-c3f4-451f-9c3d-bc1944780f5f
@@ -1071,9 +1162,8 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
+                            c7b9cdefdf29aefe063a4021c4aa5b39: ref!! 76dd40dd-2aba-4956-9685-aa1f6694500b
                             d22f48e1c3b8bf2a1e04183b56083dfb: ref!! 020c39cc-fde7-4850-a835-265469e721c2
-                            86326a0bbec81917086bff1305c1ce0d: ref!! 982f9f63-552a-46b8-8686-0dbd2358005e
-                            ebaf1d9d63ee8bb2702c68efc71c90e4: ref!! ce9c69cf-244c-4642-86cd-5fa77c68ffdc
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: 24f9dc70-d2c6-418b-b760-22cc5d275491
                         Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
@@ -1409,7 +1499,7 @@ Hierarchy:
                         Children: {}
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
                         Id: c6a0e4df-d105-414f-a6a7-0490b4b50654
-                        CollisionGroup: SensorTrigger
+                        CollisionGroup: KinematicFilter
                         CanCollideWith: SensorTrigger
                         CanSleep: false
                         Restitution: 0.0
@@ -1445,9 +1535,8 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
+                            04b55254c92b8cfab6c01798ecdcac8d: ref!! 20574342-ab75-4c4a-9ef8-eeca3f99be0e
                             d22f48e1c3b8bf2a1e04183b56083dfb: ref!! 57026331-cde6-4b4c-90c3-2ab2f80e28e1
-                            0de2054751c2afe3799b88bd071c4121: ref!! 52bcf030-006f-4d3c-a3b0-d6f91fd4df79
-                            ebaf1d9d63ee8bb2702c68efc71c90e4: ref!! c8b49a6b-fcef-4e24-aff7-c726cc6211d9
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: 592b1dda-5d83-4ef4-a2ab-ade652b7ec1a
                         Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
@@ -1506,7 +1595,7 @@ Hierarchy:
                         Children: {}
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
                         Id: c432c51b-c719-464e-98a2-ea7be1eb6c8b
-                        CollisionGroup: SensorTrigger
+                        CollisionGroup: KinematicFilter
                         CanCollideWith: SensorTrigger
                         CanSleep: false
                         Restitution: 0.0
@@ -1558,9 +1647,8 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
+                            1ffbe2ea795822c6a695b4653849af31: ref!! abf10c20-521e-4287-92d3-5b9ea2f48adb
                             d22f48e1c3b8bf2a1e04183b56083dfb: ref!! 39bd0025-59a4-48eb-a351-b18728d85d7a
-                            a6899b0f3ba2d420b905a5dce2628e62: ref!! 22bf6bb4-a702-43df-b170-56bab7d40d1d
-                            ebaf1d9d63ee8bb2702c68efc71c90e4: ref!! 6fa866ee-df9b-4893-9c1f-084c9584e65d
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: 671e082c-f6cb-435b-9abe-41eefe248d46
                         Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
@@ -1627,7 +1715,7 @@ Hierarchy:
                 Components:
                     c376e76ea8faadeb37730ecff53b7d5c: !TransformComponent
                         Id: 7e4112d7-efb3-4f91-a7b6-bb8871ae158d
-                        Position: {X: 0.0, Y: 1.9, Z: 0.65}
+                        Position: {X: 0.0, Y: 2.7, Z: 0.05}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -1657,6 +1745,26 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: f2b48e3a-68ee-4e2c-be7e-b0998925f257
                 InstanceId: 88bb57af-9542-4a93-8bab-6863a55dad6d
+        -   Entity:
+                Id: f21b6af7-b8bd-43df-8d7d-23dd663bcbc6
+                Name: Modelo Lanza
+                Components:
+                    ce491b1235ced4211f49d26b1c27d42d: !TransformComponent
+                        Id: 20574342-ab75-4c4a-9ef8-eeca3f99be0e
+                        Position: {X: 0.0, Y: -0.8, Z: 0.6}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            1ad6de84dd3827cdd85d086cff6463a6: ref!! 52bcf030-006f-4d3c-a3b0-d6f91fd4df79
+                            472c3e029aac9e3200a237220e489261: ref!! c8b49a6b-fcef-4e24-aff7-c726cc6211d9
+                    8bb144e93510cbf705d04c9148ca913f: !ModelComponent
+                        Id: 462ea335-243f-428e-8a24-4ae35da05d05
+                        Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Mono/Lanza
+                        Materials: {}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: ee47acaf-0873-4afd-b17d-c21feab51824
+                InstanceId: 3a66ddc5-6084-42e9-8b57-8f0f64473e1c
         -   Entity:
                 Id: faec6f7e-a15d-488b-8440-094c04ab82e4
                 Name: "ControladorCañón"

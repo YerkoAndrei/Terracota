@@ -29,7 +29,7 @@ Hierarchy:
                 Components:
                     c376e76ea8faadeb37730ecff53b7d5c: !TransformComponent
                         Id: 57f0536a-312a-4fc1-bb56-875a2df8477c
-                        Position: {X: 0.0, Y: 1.9, Z: 0.65}
+                        Position: {X: 0.0, Y: 2.7, Z: 0.05}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -48,9 +48,8 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
+                            5de0236c8c887a75fff772492bd1d350: ref!! 2b186912-7bfb-4759-b7d6-07e6f7d1eb45
                             d22f48e1c3b8bf2a1e04183b56083dfb: ref!! c2f262da-8b23-4e89-a4d4-119afb2144b3
-                            487a3a39c37027668accfbc72bbe8d69: ref!! aee247a5-2a13-4f06-9019-a06d3efff9b6
-                            ebaf1d9d63ee8bb2702c68efc71c90e4: ref!! 57f0536a-312a-4fc1-bb56-875a2df8477c
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: da1983ca-4fae-4c02-bcc6-9f118a4d2b93
                         Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
@@ -58,6 +57,7 @@ Hierarchy:
                     a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
                         Id: c47addce-fbb0-4105-a967-f909a0509bc9
                         CollisionGroup: CharacterFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
                         CanSleep: false
                         Restitution: 0.2
                         Friction: 0.5
@@ -75,6 +75,8 @@ Hierarchy:
                         ColliderShapes:
                             4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
                                 Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Mono/ColliderMono
+                            e38187895a8d962139393716e79d3658: !ColliderShapeAssetDesc
+                                Shape: e3b08848-da45-43fc-963b-201ca50f1b6b:Modelos/Mono/ColliderLanza
         -   Entity:
                 Id: d9a9e123-b76c-4584-beef-96a502353fcb
                 Name: Cabeza
@@ -87,7 +89,7 @@ Hierarchy:
                         Children: {}
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
                         Id: eb4fb358-ef62-4cdf-80fe-260d34eabd00
-                        CollisionGroup: SensorTrigger
+                        CollisionGroup: KinematicFilter
                         CanCollideWith: SensorTrigger
                         CanSleep: false
                         Restitution: 0.0
@@ -108,14 +110,29 @@ Hierarchy:
                                 Radius: 0.52
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-        -   Folder: null
-            Entity:
+        -   Entity:
+                Id: ee47acaf-0873-4afd-b17d-c21feab51824
+                Name: Modelo Lanza
+                Components:
+                    ce491b1235ced4211f49d26b1c27d42d: !TransformComponent
+                        Id: 2b186912-7bfb-4759-b7d6-07e6f7d1eb45
+                        Position: {X: 0.0, Y: -0.8, Z: 0.6}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            c1894bf175510506ca6a6e6c5eaa16f6: ref!! aee247a5-2a13-4f06-9019-a06d3efff9b6
+                            f6bdf2d1608c4617c3fe43f5da9f487f: ref!! 57f0536a-312a-4fc1-bb56-875a2df8477c
+                    8bb144e93510cbf705d04c9148ca913f: !ModelComponent
+                        Id: 138de63e-086a-40e2-83bd-a49a7da1f25b
+                        Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Mono/Lanza
+                        Materials: {}
+        -   Entity:
                 Id: f7806c36-9b87-48a7-b4f6-d614ce7c93ab
                 Name: Lanza
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: aee247a5-2a13-4f06-9019-a06d3efff9b6
-                        Position: {X: -8.0910235E-07, Y: 1.9, Z: 0.6}
+                        Position: {X: -8.0910235E-07, Y: 2.7, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 0.2, Z: 1.0}
                         Children: {}
