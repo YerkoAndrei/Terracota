@@ -70,11 +70,11 @@ Hierarchy:
                 Id: 02355854-c833-4889-9ca9-258050f1b1e5
                 Name: Juego
                 Components:
-                    70ef2b96dc5fa7fbc693fdbbf72fe5c5: !Terracota.ControladorInterfaz,Terracota
-                        Id: 5af9dbe3-239a-4e0f-b163-6a2e7576fd52
+                    70ef2b96dc5fa7fbc693fdbbf72fe5c5: !Terracota.ControladorInterfazJuego,Terracota
+                        Id: 60d2b3ab-b5fd-4a0a-8601-76094fe0ffa1
                         controladorPartida: ref!! 8467c665-6f6a-4e41-8353-b93fb0b8b0b1
                         escenaJuego: af761eff-0def-4e64-9185-a183866d2296:Escenas/Juego (Local)
-                        "escenaMenú": "bf45c4dd-f4db-4005-9135-dab8e0ef10ed:Escenas/Menú"
+                        "escenaMenú": null
                         spriteBola: d681f95d-d384-43f3-b287-8df74a534497:Texturas/Interfaz/Bola
                         spriteMetralla: 017a6458-410b-4810-9447-3254c0c8db29:Texturas/Interfaz/Metralla
                         "spriteAnfitrión": "8d986627-e68f-4481-a6c3-9ef06599ea85:Texturas/Interfaz/Anfitrión"
@@ -90,6 +90,7 @@ Hierarchy:
                         Page: cbaa0158-6796-41f4-a5f5-a699458ca406:Interfaz/Juego
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.28, Y: 0.72, Z: 1.0}
+                        ResolutionStretch: FixedHeightAdaptableWidth
                         RenderGroup: Group31
         -   Entity:
                 Id: 023a4f3e-459a-4776-b8e3-0edc74d00389

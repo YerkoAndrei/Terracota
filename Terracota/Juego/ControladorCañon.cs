@@ -29,7 +29,7 @@ public class ControladorCañon : SyncScript
     public Prefab metralla;
 
     private bool activo;
-    private ControladorInterfaz controladorInterfaz;
+    private ControladorInterfazJuego controladorInterfaz;
 
     public override void Start()
     {
@@ -37,7 +37,7 @@ public class ControladorCañon : SyncScript
         fuerzaMetralla *= 1000;
     }
 
-    public void Asignar(ControladorInterfaz _controladorInterfaz)
+    public void Asignar(ControladorInterfazJuego _controladorInterfaz)
     {
         controladorInterfaz = _controladorInterfaz;
     }

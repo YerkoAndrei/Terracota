@@ -14,7 +14,7 @@ public class ControladorPartidaLocal : AsyncScript
     public TransformComponent ejeCámara;
     public TransformComponent luzDireccional;
 
-    public ControladorInterfaz controladorInterfaz;
+    public ControladorInterfazJuego controladorInterfaz;
     public ControladorCámara controladorCámara;
 
     private ControladorCañon cañónActual;
