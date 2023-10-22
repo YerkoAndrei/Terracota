@@ -11,12 +11,13 @@ namespace Terracota;
 public class ControladorCreación : SyncScript
 {
     public TransformComponent ejeCámara;
+    public ElementoBloqueBase bloqueBase;
     public CameraComponent cámara;
 
-    public List<Entity> cortos = new List<Entity> { };
-    public List<Entity> largos = new List<Entity> { };
+    public List<ElementoBloque> cortos = new List<ElementoBloque> { };
+    public List<ElementoBloque> largos = new List<ElementoBloque> { };
 
-    private Entity bloqueActual;
+    private ElementoBloque bloqueActual;
 
     private Texture backBuffer;
     private Viewport viewport;
@@ -34,10 +35,16 @@ public class ControladorCreación : SyncScript
 
         var resultado = ObtienePosiciónCursor();
         if (resultado.Succeeded)
-            bloqueActual.Transform.Position = resultado.Point;
+        {
+            bloqueBase.ActualizarPosición(resultado.Point);
+            bloqueActual.ActualizarPosición(resultado.Point, bloqueBase.ObtenerColisión());
+        }
 
         if (Input.IsMouseButtonDown(MouseButton.Left))
-            bloqueActual = null;
+        { 
+            if(bloqueActual.Colocar())
+                bloqueActual = null;
+        }
     }
 
     public HitResult ObtienePosiciónCursor()

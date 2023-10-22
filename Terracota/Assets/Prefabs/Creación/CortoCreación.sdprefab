@@ -1,0 +1,59 @@
+!PrefabAsset
+Id: ca8a9afd-e763-41aa-97d2-bf8fe2d39937
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 670e7431-4482-412f-8d8b-83cb09f4b1b4
+    Parts:
+        -   Entity:
+                Id: 670e7431-4482-412f-8d8b-83cb09f4b1b4
+                Name: Corto
+                Components:
+                    e58f9403bfc4ac4d1a9891f9a2e0f555: !Terracota.ElementoBloque,Terracota
+                        Id: 013463ae-4729-4f74-9590-d8f72c853062
+                        cuerpo: ref!! 3a5dc20f-b1a0-4971-8443-b0f417423b22
+                        moviendo: false
+                    b37cecab06c5f1b5c51ef98207a3b138: !TransformComponent
+                        Id: 80d19411-e249-4e0e-b9e6-041b6302f6f3
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            fc38df4a5ae6491b197784693067739a: ref!! 0d07f6f9-a235-4aa4-8238-f8ff6276dd66
+        -   Entity:
+                Id: ea2f82d3-ec71-469a-a6c9-f4c58c6e5bee
+                Name: Modelo Corto
+                Components:
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: 0d07f6f9-a235-4aa4-8238-f8ff6276dd66
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: b8a2da0e-c12c-49d6-824e-fc39f318ccf7
+                        Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: 3a5dc20f-b1a0-4971-8443-b0f417423b22
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            11713a024b421a98fde2045acaefff43: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}

@@ -1,0 +1,59 @@
+!PrefabAsset
+Id: 04d961b7-0cd3-4059-814f-1cd131694b0c
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! f1b5042e-e1fd-4f4e-9bd3-0cde64dbbaeb
+    Parts:
+        -   Entity:
+                Id: efdcbda6-360e-41f6-acb2-bb962fba0578
+                Name: Modelo Largo
+                Components:
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: 5477eab3-3b67-4d18-ba58-2881c10d0a61
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: 2f27358c-d8f1-47f4-ae9c-947ba4e67d7a
+                        Model: 8376cd3c-bb86-4a2a-ae61-842d1cef88ab:Modelos/Largo/Largo
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: 5a6a144a-b91d-4df5-b940-b9feea7b624d
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            62b619db24d8af4914f1c13508892732: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 2.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: f1b5042e-e1fd-4f4e-9bd3-0cde64dbbaeb
+                Name: Largo
+                Components:
+                    5b64eea8c96ff07560c4595dec9f9468: !Terracota.ElementoBloque,Terracota
+                        Id: ba115fb9-c600-4b54-a3ce-4cf9e2af0d5e
+                        cuerpo: ref!! 5a6a144a-b91d-4df5-b940-b9feea7b624d
+                        moviendo: false
+                    fb6521e28c46a3ccda1c58adee930e63: !TransformComponent
+                        Id: 5591e0be-0835-45b8-a9ea-f42a953b43be
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            6d316b972fa1acf368049bc6b80c570a: ref!! 5477eab3-3b67-4d18-ba58-2881c10d0a61
