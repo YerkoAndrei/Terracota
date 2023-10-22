@@ -18,6 +18,9 @@ public class ControladorInterfazCreación : StartupScript
         var btnGuardar = página.FindVisualChildOfType<Button>("btnGuardar");
         btnGuardar.Click += (sender, e) => { Guardar(); };
 
+        var btnReiniciar = página.FindVisualChildOfType<Button>("btnReiniciar");
+        btnReiniciar.Click += (sender, e) => { Reiniciar(); };
+
         var btnSalir = página.FindVisualChildOfType<Button>("btnSalir");
         btnSalir.Click += (sender, e) => { Salir(); };
 
@@ -28,6 +31,8 @@ public class ControladorInterfazCreación : StartupScript
         var btnDerecha = página.FindVisualChildOfType<Button>("btnDerecha");
         btnDerecha.Click += (sender, e) => { MoverCámara(true); };
 
+        var btnGirar = página.FindVisualChildOfType<Button>("btnGirar");
+        btnGirar.Click += (sender, e) => { GirarPieza(); };
 
         // Corto
         var btnCorto_0 = página.FindVisualChildOfType<Button>("btnCorto_0");
@@ -92,9 +97,19 @@ public class ControladorInterfazCreación : StartupScript
         controladorCreación.MoverCámara(derecha);
     }
 
+    private void GirarPieza()
+    {
+        controladorCreación.GirarPieza();
+    }
+
     private void Guardar()
     {
         controladorCreación.Guardar();
+    }
+
+    private void Reiniciar()
+    {
+        controladorCreación.Reiniciar();
     }
 
     private void Salir()

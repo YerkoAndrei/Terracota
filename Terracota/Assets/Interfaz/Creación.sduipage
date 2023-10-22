@@ -13,7 +13,7 @@ Hierarchy:
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 1280.0
-                Height: 210.0
+                Height: 214.0
                 VerticalAlignment: Bottom
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
@@ -65,11 +65,11 @@ Hierarchy:
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 DrawLayerNumber: 2
-                Width: 100.0
+                Width: 200.0
                 Height: 100.0
                 HorizontalAlignment: Left
                 VerticalAlignment: Top
-                Margin: {Left: 163.0, Top: 18.5}
+                Margin: {Left: 299.0, Top: 18.5}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -225,7 +225,9 @@ Hierarchy:
                     44f9eb28f63f63fe8986d6659da2ad91: !Button ref!! fa20b825-161b-4e3e-8fa2-13730dbfaaad
                     41c7682f6024f5db54c3c363a882ce04: !Button ref!! 37588f34-6f6f-4c15-958b-da95263b97be
                     d3aed383ef4427670bbc8d285d5cc516: !Button ref!! 3e67519f-c0c0-4d31-9917-0870099c5dec
+                    7c2030814e1eab11913176bd52ae2e69: !Button ref!! d9c9abe6-8325-40db-8692-147ffb128727
                     d17c337905149123b7d1f7d81ce8b450: !Button ref!! 17db8efa-4d3d-40f9-a6b4-6d842dcd159a
+                    0fc96742d41f5591a6b739babb86f3cb: !Button ref!! d2f17ff8-f2a5-4862-859e-b91f9b22bcb8
                     9ed5d3828956a6816583aeb988fbef44: !Grid ref!! 1118128f-dbc3-4187-a90b-09670e36162c
                 RowDefinitions: {}
                 ColumnDefinitions: {}
@@ -398,6 +400,50 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: btnCorto_6
+                PressedImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 2
+                NotPressedImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 1
+                MouseOverImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+        -   UIElement: !Button
+                Id: d2f17ff8-f2a5-4862-859e-b91f9b22bcb8
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                Width: 100.0
+                Height: 100.0
+                HorizontalAlignment: Right
+                VerticalAlignment: Top
+                Margin: {Top: 28.5, Right: 36.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btnGirar
+                PressedImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 2
+                NotPressedImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 1
+                MouseOverImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+        -   UIElement: !Button
+                Id: d9c9abe6-8325-40db-8692-147ffb128727
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                Width: 100.0
+                Height: 100.0
+                HorizontalAlignment: Left
+                VerticalAlignment: Top
+                Margin: {Left: 163.0, Top: 18.5}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btnReiniciar
                 PressedImage: !SpriteFromSheet
                     Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
                     CurrentFrame: 2

@@ -43,7 +43,7 @@ public class ControladorCreación : SyncScript
         // Rotación
         if (Input.IsMouseButtonPressed(MouseButton.Right))
         {
-            bloqueActual.Entity.Transform.Rotation *= Quaternion.RotationY(MathUtil.DegreesToRadians(-45));
+            GirarPieza();
         }
 
         // Guardar
@@ -75,12 +75,9 @@ public class ControladorCreación : SyncScript
         bloqueActual = largos[largo];
     }
 
-    public async void MoverCámara(bool derecha)
+    public void Reiniciar()
     {
-        if (moviendoCámara)
-            return;
 
-        await MoverCámara(90, derecha);
     }
 
     public void Guardar()
@@ -91,6 +88,22 @@ public class ControladorCreación : SyncScript
         bloques.AddRange(largos);
 
         SistemaMemoria.GuardarFortaleza(bloques.ToArray());
+    }
+
+    public void GirarPieza()
+    {
+        if (bloqueActual == null)
+            return;
+
+        bloqueActual.Entity.Transform.Rotation *= Quaternion.RotationY(MathUtil.DegreesToRadians(-45));
+    }
+
+    public async void MoverCámara(bool derecha)
+    {
+        if (moviendoCámara)
+            return;
+
+        await MoverCámara(90, derecha);
     }
 
     private async Task MoverCámara(float YObjetivo, bool derecha)
