@@ -288,6 +288,7 @@ Hierarchy:
                             84740b1bff3c411b34af1ea98099aac8: ref!! e4e0e5ba-22cc-4dc5-b176-bc7b488a3dea
                             108f352a607968ca4ac0193815008379: ref!! 574e0261-5d49-4e35-87cd-a538f66a1d53
                             dd4534c9a527c1e490d5b24a381ba169: ref!! 35c38ac1-cbe4-48d6-b110-68511f0d65a2
+                            cc409fce67e5d608d624f95f07a34bf4: ref!! 5a2f4ff3-30cf-48f5-a4fb-8558e0dbc362
                             c319c92745bd1a660ac4b3adb8ee7600: ref!! 767232d0-75e7-4139-9252-1dba41a5e3a5
                             455d2f42baf16150ea0df286a294e197: ref!! 11573b4f-a660-47f6-a779-acc23c706d70
                             9a506e4494fcafd341581261af8c86aa: ref!! 8f0f11ef-49c1-4e00-96e2-7636d7e14052
@@ -771,6 +772,40 @@ Hierarchy:
                 BasePartAsset: "04d961b7-0cd3-4059-814f-1cd131694b0c:Prefabs/Creación/LargoCreación"
                 BasePartId: efdcbda6-360e-41f6-acb2-bb962fba0578
                 InstanceId: cc4fa82c-91cb-4402-a957-f775a0bd764d
+        -   Entity:
+                Id: 87da0686-61c0-4ea9-b643-2ad5d25ff6c8
+                Name: "Límite"
+                Components:
+                    0c519883321346e2be365e873ae7a774: !TransformComponent
+                        Id: 5a2f4ff3-30cf-48f5-a4fb-8558e0dbc362
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    ba85613aef20d7ca473d06e84270fb5d: !ModelComponent
+                        Id: 4552efa6-b0dd-4e53-99f7-c1a709da633b
+                        Model: "5c2e117b-28e2-4784-b518-46491d6823ad:Modelos/Entorno/Límite"
+                        IsShadowCaster: false
+                        Materials: {}
+                    d14ebfabf235f7985d37ef0e9f56e773*: !StaticColliderComponent
+                        Id: 58f2a264-3fdf-4c49-9ca7-52bb292714b3
+                        CollisionGroup: StaticFilter
+                        CanCollideWith: DefaultFilter, SensorTrigger
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            69e0a1df9239c91742f91acd5a3135f4: !StaticMeshColliderShapeDesc
+                                Model: "5c2e117b-28e2-4784-b518-46491d6823ad:Modelos/Entorno/Límite"
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: 5db5f6b9-1632-4b0b-9977-c89ec1c89a98
+                InstanceId: 0b20dfac-f72d-4089-847e-4db9e05813ca
         -   Entity:
                 Id: 958b267f-91d3-4112-9654-2fc522243de7
                 Name: Modelo Corto

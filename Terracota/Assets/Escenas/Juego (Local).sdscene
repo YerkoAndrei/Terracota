@@ -1340,12 +1340,32 @@ Hierarchy:
                             84740b1bff3c411b34af1ea98099aac8: ref!! cfa543c1-ce66-46a8-903b-7a9421fe0db8
                             108f352a607968ca4ac0193815008379: ref!! 296c5bce-d63b-4515-8905-5817d165abec
                             dd4534c9a527c1e490d5b24a381ba169: ref!! 04bb63e3-c8ae-4531-b167-abdbbd9d89da
+                            d1e7512c2a13c102ac90818a919858f8: ref!! 9da35cd2-7af4-4736-9ef0-1406e51250fd
                             c319c92745bd1a660ac4b3adb8ee7600: ref!! e3aba36a-537c-4860-9c53-bfba2715d7e1
                             455d2f42baf16150ea0df286a294e197: ref!! c4cea8fd-34a3-4117-9005-45250bef1958
                             9a506e4494fcafd341581261af8c86aa: ref!! 113316a5-85b1-47cf-aa7a-fe670ecca9f0
             Base:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
                 BasePartId: 4bff4cad-8d16-4606-8882-0d34fe8e309a
+                InstanceId: 542d16e6-720c-418e-831b-de378013b2ab
+        -   Entity:
+                Id: 67d7ae01-6318-4c0b-9cff-95d61e2dd48b
+                Name: "Límite"
+                Components:
+                    0c519883321346e2be365e873ae7a774: !TransformComponent
+                        Id: 9da35cd2-7af4-4736-9ef0-1406e51250fd
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    ba85613aef20d7ca473d06e84270fb5d: !ModelComponent
+                        Id: a70407ff-d5a5-43bc-8010-73a127d5d8cb
+                        Model: "5c2e117b-28e2-4784-b518-46491d6823ad:Modelos/Entorno/Límite"
+                        IsShadowCaster: false
+                        Materials: {}
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: 5db5f6b9-1632-4b0b-9977-c89ec1c89a98
                 InstanceId: 542d16e6-720c-418e-831b-de378013b2ab
         -   Folder: null
             Entity:

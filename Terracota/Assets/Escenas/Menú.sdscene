@@ -945,6 +945,25 @@ Hierarchy:
                 BasePartId: b846398e-bc6c-47ed-bb1c-425e4e5347fa
                 InstanceId: 2ea7b606-b280-4820-94ef-a541a887a219
         -   Entity:
+                Id: 8d8f3092-3393-4248-afff-21a6f8ad7842
+                Name: "Límite"
+                Components:
+                    0c519883321346e2be365e873ae7a774: !TransformComponent
+                        Id: 63d18743-be25-4c95-9b69-97752d1694de
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    ba85613aef20d7ca473d06e84270fb5d: !ModelComponent
+                        Id: 2a686be9-29b1-40ac-9a26-822caa0f1c7b
+                        Model: "5c2e117b-28e2-4784-b518-46491d6823ad:Modelos/Entorno/Límite"
+                        IsShadowCaster: false
+                        Materials: {}
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: 5db5f6b9-1632-4b0b-9977-c89ec1c89a98
+                InstanceId: 8e464a2a-cba3-4fb8-93e5-341a4ecf45f7
+        -   Entity:
                 Id: 94f201f2-25d2-4a5c-80c3-4e3787c11d66
                 Name: "Menú"
                 Components:
@@ -1124,6 +1143,7 @@ Hierarchy:
                             84740b1bff3c411b34af1ea98099aac8: ref!! f855078d-9b76-4462-8249-4cf5178e5f21
                             108f352a607968ca4ac0193815008379: ref!! a546e874-3c62-4d62-9edd-b059a3c205ce
                             dd4534c9a527c1e490d5b24a381ba169: ref!! 5da2e36f-d7cf-479b-9186-fa1f2ddf05d6
+                            5096f07438a389b577bf2c793661dc20: ref!! 63d18743-be25-4c95-9b69-97752d1694de
                             c319c92745bd1a660ac4b3adb8ee7600: ref!! 22bd8092-82ac-48d2-a47a-65fc8ae87ce0
                             455d2f42baf16150ea0df286a294e197: ref!! fc02fa0c-9bd8-4626-9ab0-424fccdc07b7
                             9a506e4494fcafd341581261af8c86aa: ref!! 0b5e642d-ceb3-4c54-a383-fd58ecc1bcdf
