@@ -9,6 +9,7 @@ using static Constantes;
 
 public class ElementoBloqueBase : StartupScript
 {
+    private ControladorCreación controladorCreación;
     private RigidbodyComponent cuerpo;
     private bool seleccionando;
     private float altura;
@@ -17,6 +18,11 @@ public class ElementoBloqueBase : StartupScript
     {
         cuerpo = Entity.Get<RigidbodyComponent>();
         cuerpo.Collisions.CollectionChanged += CalcularColisiones;
+    }
+
+    public void Inicializar(ControladorCreación _controladorCreación)
+    {
+        controladorCreación = _controladorCreación;
     }
 
     private void CalcularColisiones(object sender, TrackingCollectionChangedEventArgs args)
@@ -29,6 +35,7 @@ public class ElementoBloqueBase : StartupScript
         }
 
         // Verifica altura
+        var a = controladorCreación.ObtenerActual().EsPosibleColocar();
 
         // Ajusta trigger
         if (args.Action == NotifyCollectionChangedAction.Add)

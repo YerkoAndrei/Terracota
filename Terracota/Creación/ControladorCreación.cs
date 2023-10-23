@@ -31,6 +31,7 @@ public class ControladorCreación : SyncScript
         backBuffer = GraphicsDevice.Presenter.BackBuffer;
         viewport = new Viewport(0, 0, backBuffer.Width, backBuffer.Height);
 
+        bloqueBase.Inicializar(this);
         bloques = new List<ElementoBloque>();
         bloques.AddRange(cortos);
         bloques.AddRange(largos);
@@ -64,7 +65,7 @@ public class ControladorCreación : SyncScript
         // Rotación
         if (Input.IsMouseButtonPressed(MouseButton.Right))
         {
-            GirarPieza();
+            EnClicGirarPieza();
         }
 
         // Guardar
@@ -122,7 +123,12 @@ public class ControladorCreación : SyncScript
         bloqueBase.ReiniciarCuerpo(bloqueActual.tipoBloque, bloqueActual.ObtenerRotación());
     }
 
-    public void ReiniciarPosiciones()
+    public ElementoBloque ObtenerActual()
+    {
+        return bloqueActual;
+    }
+
+    public void EnClicReiniciarPosiciones()
     {
         for (int i=0; i < bloques.Count; i++)
         {
@@ -130,13 +136,13 @@ public class ControladorCreación : SyncScript
         }
     }
 
-    public void Guardar()
+    public void EnClicGuardar()
     {
         // esperar a colocar todos los bloques
         SistemaMemoria.GuardarFortaleza(bloques.ToArray());
     }
 
-    public void GirarPieza()
+    public void EnClicGirarPieza()
     {
         if (bloqueActual == null)
             return;
@@ -145,12 +151,7 @@ public class ControladorCreación : SyncScript
         bloqueActual.Entity.Transform.Rotation *= Quaternion.RotationY(MathUtil.DegreesToRadians(-45));
     }
 
-    public bool ObtenerMoviendo()
-    {
-        return (bloqueActual != null);
-    }
-
-    public async void MoverCámara(bool derecha)
+    public async void EnClicMoverCámara(bool derecha)
     {
         if (moviendoCámara)
             return;
