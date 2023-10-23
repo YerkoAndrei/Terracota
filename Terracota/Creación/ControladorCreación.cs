@@ -70,7 +70,7 @@ public class ControladorCreación : SyncScript
         // Guardar
         if (Input.IsMouseButtonPressed(MouseButton.Left))
         {
-            if (bloqueActual.Colocar())
+            if (bloqueActual.EsPosibleColocar())
                 bloqueActual = null;
         }
     }
@@ -80,7 +80,7 @@ public class ControladorCreación : SyncScript
         var posiciónInicio = viewport.Unproject(new Vector3(Input.AbsoluteMousePosition, 0.0f), cámara.ProjectionMatrix, cámara.ViewMatrix, Matrix.Identity);
         var pocisiónLejos = viewport.Unproject(new Vector3(Input.AbsoluteMousePosition, 1.0f), cámara.ProjectionMatrix, cámara.ViewMatrix, Matrix.Identity);
 
-        var resultado = this.GetSimulation().Raycast(posiciónInicio, pocisiónLejos, CollisionFilterGroups.DefaultFilter, CollisionFilterGroupFlags.StaticFilter);
+        var resultado = this.GetSimulation().Raycast(posiciónInicio, pocisiónLejos, CollisionFilterGroups.StaticFilter, CollisionFilterGroupFlags.StaticFilter);
         return resultado;
     }
 
@@ -143,6 +143,11 @@ public class ControladorCreación : SyncScript
 
         bloqueBase.Rotar();
         bloqueActual.Entity.Transform.Rotation *= Quaternion.RotationY(MathUtil.DegreesToRadians(-45));
+    }
+
+    public bool ObtenerMoviendo()
+    {
+        return (bloqueActual != null);
     }
 
     public async void MoverCámara(bool derecha)

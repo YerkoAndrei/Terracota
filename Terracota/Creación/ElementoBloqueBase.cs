@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Specialized;
+using Stride.Core.Collections;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
@@ -6,37 +7,34 @@ using Stride.Physics;
 namespace Terracota;
 using static Constantes;
 
-public class ElementoBloqueBase : AsyncScript
+public class ElementoBloqueBase : StartupScript
 {
     private RigidbodyComponent cuerpo;
+    private bool seleccionando;
     private float altura;
 
-    public override async Task Execute()
+    public override void Start()
     {
         cuerpo = Entity.Get<RigidbodyComponent>();
-        while (Game.IsRunning)
+        cuerpo.Collisions.CollectionChanged += CalcularColisiones;
+    }
+
+    private void CalcularColisiones(object sender, TrackingCollectionChangedEventArgs args)
+    {
+        // No cambia si acaba de seleccionar
+        if (seleccionando)
         {
-            var colisión = await cuerpo.NewCollision();
-            
-            // Identifica colisión
-            ElementoBloque bloque = null;
-            if (colisión.ColliderA.Entity.GetParent() != null && colisión.ColliderA.Entity.GetParent().Get<ElementoBloque>() != null)
-                bloque = colisión.ColliderA.Entity.GetParent().Get<ElementoBloque>();
-            else if (colisión.ColliderB.Entity.GetParent() != null && colisión.ColliderB.Entity.GetParent().Get<ElementoBloque>() != null)
-                bloque = colisión.ColliderB.Entity.GetParent().Get<ElementoBloque>();
-
-            if (!bloque.ObtenerMoviendo())
-            {
-                CambiarCuerpo(true);
-
-                // Verificar nuevas colisiones
-                //await colisión.Ended();
-
-                await cuerpo.CollisionEnded();
-                CambiarCuerpo(false);
-            }
-            await Script.NextFrame();
+            seleccionando = false;
+            return;
         }
+
+        // Verifica altura
+
+        // Ajusta trigger
+        if (args.Action == NotifyCollectionChangedAction.Add)
+            CambiarCuerpo(true);
+        else if (args.Action == NotifyCollectionChangedAction.Remove)
+            CambiarCuerpo(false);
     }
 
     private void CambiarCuerpo(bool agrandar)
@@ -57,6 +55,7 @@ public class ElementoBloqueBase : AsyncScript
     public void ReiniciarCuerpo(TipoBloque tipoBloque, Quaternion rotación)
     {
         altura = 0;
+        seleccionando = true;
 
         Entity.Transform.Rotation = rotación;
         switch (tipoBloque)

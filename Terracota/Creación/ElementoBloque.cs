@@ -1,64 +1,46 @@
-﻿using System.Threading.Tasks;
+﻿using Stride.Core.Collections;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
+using System.Linq;
 
 namespace Terracota;
 using static Constantes;
 
-public class ElementoBloque : AsyncScript
+public class ElementoBloque : StartupScript
 {
     public TipoBloque tipoBloque;
     public RigidbodyComponent cuerpo;
 
-    private bool moviendo;
-    private bool tocandoBloque;
-
-    public override async Task Execute()
+    public override void Start()
     {
-        while (Game.IsRunning)
-        {
-            var colisión = await cuerpo.NewCollision();
+        cuerpo.Collisions.CollectionChanged += CalcularColisiones;
+    }
 
-            // Identifica colisión
-            var tocandoBase = false;
-            if (colisión.ColliderA.Entity.Get<ElementoBloqueBase>() != null)
-                tocandoBase = true;
-            else if (colisión.ColliderB.Entity.Get<ElementoBloqueBase>() != null)
-                tocandoBase = true;
-
-            if (!tocandoBase)
-            {
-                tocandoBloque = true;
-                await cuerpo.CollisionEnded();
-                tocandoBloque = false;
-            }
-            await Script.NextFrame();
-        }
+    private void CalcularColisiones(object sender, TrackingCollectionChangedEventArgs args)
+    {/*
+        if (ObtenerPosibleColocar())
+            //efecto bueno
+        else
+            //efecto malo
+        */
     }
 
     public void ActualizarPosición(Vector3 nuevaPosición, float altura)
     {
-        moviendo = true;
         Entity.Transform.Position = new Vector3(nuevaPosición.X, altura, nuevaPosición.Z);
     }
 
     public void ForzarPosición(Vector3 nuevaPosición)
     {
-        moviendo = false;
         Entity.Transform.Rotation = Quaternion.Identity;
-        Entity.Transform.Position = new Vector3(nuevaPosición.X, 0, nuevaPosición.Z);
+        Entity.Transform.Position = nuevaPosición;
     }
 
-    public bool Colocar()
+    public bool EsPosibleColocar()
     {
-        moviendo = false;
-        return !tocandoBloque;
-    }
-
-    public bool ObtenerMoviendo()
-    {
-        return moviendo;
+        var colisionesSinBase = cuerpo.Collisions.Where(o => o.ColliderA.Entity.Get<ElementoBloqueBase>() == null && o.ColliderB.Entity.Get<ElementoBloqueBase>() == null).ToArray();
+        return (colisionesSinBase.Length <= 0);
     }
 
     // Guardado

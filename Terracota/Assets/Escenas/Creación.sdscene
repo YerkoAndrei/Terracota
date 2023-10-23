@@ -1033,7 +1033,7 @@ Hierarchy:
                         Id: bd5ad2dc-796b-416e-a2e3-a2ee5397db73
                         Enabled*: true
                         CollisionGroup*: StaticFilter
-                        CanCollideWith*: DefaultFilter, StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanCollideWith*: StaticFilter, KinematicFilter, DebrisFilter, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
                         CanSleep: false
                         Restitution: 0.5
                         Friction: 0.5
@@ -1135,6 +1135,7 @@ Hierarchy:
                 Components:
                     79e418fcc9f9c288769caa72eee8eba0: !Terracota.ElementoBloqueBase,Terracota
                         Id: 8a105187-4d86-4eb4-adc5-5427ff3e2308
+                        Priority: 1
                     2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
                         Id: 8be0db54-2fbb-4fde-bb50-e4d8853a3bc3
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
