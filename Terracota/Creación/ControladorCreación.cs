@@ -15,6 +15,7 @@ public class ControladorCreación : SyncScript
     public ElementoBloqueBase bloqueBase;
     public CameraComponent cámara;
 
+    public List<ElementoBloque> estatuas = new List<ElementoBloque> { };
     public List<ElementoBloque> cortos = new List<ElementoBloque> { };
     public List<ElementoBloque> largos = new List<ElementoBloque> { };
 
@@ -33,6 +34,7 @@ public class ControladorCreación : SyncScript
 
         bloqueBase.Inicializar(this);
         bloques = new List<ElementoBloque>();
+        bloques.AddRange(estatuas);
         bloques.AddRange(cortos);
         bloques.AddRange(largos);
 
@@ -99,6 +101,9 @@ public class ControladorCreación : SyncScript
             int número = int.Parse(númeroStr[^1].ToString());
             switch(tipoBloque)
             {
+                case TipoBloque.estatua:
+                    AgregarEstatua(número);
+                    break;
                 case TipoBloque.corto:
                     AgregarCorto(número);
                     break;
@@ -109,6 +114,12 @@ public class ControladorCreación : SyncScript
             return true;
         }
         return false;
+    }
+
+    public void AgregarEstatua(int estatua)
+    {
+        bloqueActual = estatuas[estatua];
+        bloqueBase.ReiniciarCuerpo(bloqueActual.tipoBloque, bloqueActual.ObtenerRotación());
     }
 
     public void AgregarCorto(int corto)

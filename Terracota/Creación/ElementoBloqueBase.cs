@@ -67,7 +67,9 @@ public class ElementoBloqueBase : StartupScript
         Entity.Transform.Rotation = rotación;
         switch (tipoBloque)
         {
-            case TipoBloque.nada:
+            case TipoBloque.estatua:
+                Entity.Transform.Scale = new Vector3(1.2f, 3, 1.2f);
+                break;
             case TipoBloque.corto:
                 Entity.Transform.Scale = new Vector3(1, 1, 1);
                 break;

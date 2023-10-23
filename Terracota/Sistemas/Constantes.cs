@@ -31,6 +31,7 @@ public static class Constantes
     public enum TipoBloque
     {
         nada,
+        estatua,
         corto,
         largo
     }
