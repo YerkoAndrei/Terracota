@@ -99,38 +99,27 @@ public class ControladorCreación : SyncScript
             var tipoBloque = resultado.Collider.Entity.GetParent().Get<ElementoBloque>().tipoBloque;
             var númeroStr = resultado.Collider.Entity.GetParent().Name;
             int número = int.Parse(númeroStr[^1].ToString());
-            switch(tipoBloque)
-            {
-                case TipoBloque.estatua:
-                    AgregarEstatua(número);
-                    break;
-                case TipoBloque.corto:
-                    AgregarCorto(número);
-                    break;
-                case TipoBloque.largo:
-                    AgregarLargo(número);
-                    break;
-            }
+
+            AgregarBloque(tipoBloque, número);
             return true;
         }
         return false;
     }
 
-    public void AgregarEstatua(int estatua)
+    public void AgregarBloque(TipoBloque tipoBloque, int id)
     {
-        bloqueActual = estatuas[estatua];
-        bloqueBase.ReiniciarCuerpo(bloqueActual.tipoBloque, bloqueActual.ObtenerRotación());
-    }
-
-    public void AgregarCorto(int corto)
-    {
-        bloqueActual = cortos[corto];
-        bloqueBase.ReiniciarCuerpo(bloqueActual.tipoBloque, bloqueActual.ObtenerRotación());
-    }
-
-    public void AgregarLargo(int largo)
-    {
-        bloqueActual = largos[largo];
+        switch(tipoBloque)
+        {
+            case TipoBloque.estatua:
+                bloqueActual = estatuas[id];
+                break;
+            case TipoBloque.corto:
+                bloqueActual = cortos[id];
+                break;
+            case TipoBloque.largo:
+                bloqueActual = largos[id];
+                break;
+        }
         bloqueBase.ReiniciarCuerpo(bloqueActual.tipoBloque, bloqueActual.ObtenerRotación());
     }
 
@@ -149,7 +138,7 @@ public class ControladorCreación : SyncScript
 
     public void EnClicGuardar()
     {
-        // esperar a colocar todos los bloques
+        // PENDIENTE: esperar a colocar todos los bloques
         SistemaMemoria.GuardarFortaleza(bloques.ToArray());
     }
 

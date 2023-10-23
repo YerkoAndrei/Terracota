@@ -4,6 +4,8 @@ using Stride.UI;
 using Stride.UI.Controls;
 
 namespace Terracota;
+using static Constantes;
+using static Terracota.Constantes;
 
 public class ControladorInterfazCreación : StartupScript
 {
@@ -33,6 +35,16 @@ public class ControladorInterfazCreación : StartupScript
 
         var btnGirar = página.FindVisualChildOfType<Button>("btnGirar");
         btnGirar.Click += (sender, e) => { EnClicGirarPieza(); };
+
+        // Estatua
+        var btnEstatua_0 = página.FindVisualChildOfType<Button>("btnEstatua_0");
+        btnEstatua_0.Click += (sender, e) => { EnClicAgregaEstatua(0); };
+
+        var btnEstatua_1 = página.FindVisualChildOfType<Button>("btnEstatua_1");
+        btnEstatua_1.Click += (sender, e) => { EnClicAgregaEstatua(1); };
+
+        var btnEstatua_2 = página.FindVisualChildOfType<Button>("btnEstatua_2");
+        btnEstatua_2.Click += (sender, e) => { EnClicAgregaEstatua(2); };
 
         // Corto
         var btnCorto_0 = página.FindVisualChildOfType<Button>("btnCorto_0");
@@ -82,14 +94,19 @@ public class ControladorInterfazCreación : StartupScript
         btnLargo_5.Click += (sender, e) => { EnClicAgregarLargo(5); };
     }
 
+    private void EnClicAgregaEstatua(int estatua)
+    {
+        controladorCreación.AgregarBloque(TipoBloque.estatua, estatua);
+    }
+
     private void EnClicAgregaCorto(int corto)
     {
-        controladorCreación.AgregarCorto(corto);
+        controladorCreación.AgregarBloque(TipoBloque.corto, corto);
     }
 
     private void EnClicAgregarLargo(int largo)
     {
-        controladorCreación.AgregarLargo(largo);
+        controladorCreación.AgregarBloque(TipoBloque.largo, largo);
     }
 
     private void EnClicMoverCámara(bool derecha)

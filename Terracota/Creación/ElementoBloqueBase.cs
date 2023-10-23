@@ -34,7 +34,7 @@ public class ElementoBloqueBase : StartupScript
             return;
         }
 
-        // Verifica altura
+        // PENDIENTE: Verifica altura
         var a = controladorCreación.ObtenerActual().EsPosibleColocar();
 
         // Ajusta trigger
