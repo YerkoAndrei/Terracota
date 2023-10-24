@@ -20,12 +20,12 @@ public class ControladorSensor : StartupScript
 
     public float ObtenerAltura()
     {
-        // PENDIENTE
-        if (sensores[2].Collisions.Count > 1)
+        // Controla posición
+        if ((sensores[2].Collisions.Count + sensores[3].Collisions.Count) > 1)
             return 3;
-        if (sensores[1].Collisions.Count > 1)
+        if ((sensores[1].Collisions.Count + sensores[2].Collisions.Count) > 1)
             return 2;
-        if (sensores[0].Collisions.Count > 1)
+        if ((sensores[0].Collisions.Count + sensores[1].Collisions.Count) > 1)
             return 1;
 
         return 0;
