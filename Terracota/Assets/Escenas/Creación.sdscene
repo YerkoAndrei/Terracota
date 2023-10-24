@@ -138,8 +138,8 @@ Hierarchy:
                         ColliderShapes:
                             11713a024b421a98fde2045acaefff43: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 1.01, Y: 1.99, Z: 1.01}
-                                LocalOffset: {X: 0.0, Y: 0.2, Z: 0.1}
+                                Size: {X: 1.01, Y: 2.99, Z: 1.01}
+                                LocalOffset: {X: 0.0, Y: 0.7, Z: 0.1}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
                 BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
@@ -155,7 +155,7 @@ Hierarchy:
                         cuerpo: ref!! 81b51f1a-5e85-4171-a0c9-3043a97f069c
                     fb6521e28c46a3ccda1c58adee930e63: !TransformComponent
                         Id: d37f7dcd-204d-4a0a-8677-15a41c8630b8
-                        Position*: {X: 6.5, Y: 0.5, Z: 7.5}
+                        Position*: {X: 6.5, Y: 0.0, Z: 7.5}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -382,6 +382,21 @@ Hierarchy:
                 BasePartId: 4bff4cad-8d16-4606-8882-0d34fe8e309a
                 InstanceId: 0b20dfac-f72d-4089-847e-4db9e05813ca
         -   Entity:
+                Id: 3d2ec768-f551-4c50-bc57-7876a6d885a5
+                Name: Corto
+                Components:
+                    0aa750a13389bc04edad5f2b8e76e92f: !TransformComponent
+                        Id: b31f6d7e-b0cc-4747-8206-744fce48bd21
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 0.1, Z: 1.0}
+                        Children: {}
+                    5bfa6870910ffd187ef881c7f704a97d: !ModelComponent
+                        Id: cc579357-4410-4978-8d80-cfaeb23ff1b3
+                        Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
+                        Materials:
+                            cc0378b1478048e5f6eee8aa4c460b01~0: f6e65983-3a29-45c2-8cb2-01725dc34a28:Materiales/Metal
+        -   Entity:
                 Id: 40428c05-72f6-47bd-8fd5-70da5e367464
                 Name: Modelo Corto
                 Components:
@@ -519,29 +534,49 @@ Hierarchy:
                         ColliderShapes:
                             11713a024b421a98fde2045acaefff43: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 1.01, Y: 1.99, Z: 1.01}
-                                LocalOffset: {X: 0.0, Y: 0.2, Z: 0.1}
+                                Size: {X: 1.01, Y: 2.99, Z: 1.01}
+                                LocalOffset: {X: 0.0, Y: 0.7, Z: 0.1}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
                 BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
                 BasePartId: 7a153f06-18f6-4c54-b030-04cac2e06f04
                 InstanceId: bc1a7b27-5dc5-4cd9-9df2-551c4eea62d5
-        -   Entity:
-                Id: 43ec4149-79e6-49ad-b147-04eee63dd2df
-                Name: Entity
+        -   Folder: null
+            Entity:
+                Id: 4cdc1980-406a-4653-a1ce-2317ecc1faf5
+                Name: Bloque_1
                 Components:
-                    bbfbc1db18698107b2b43fcdc1180b2a: !ModelComponent
-                        Id: be4a53b7-9f7b-4ea0-9193-cc99be2a1a14
-                        Enabled: false
-                        Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
-                        Materials:
-                            93e4fcc5d34067e7f8cdd74de69f62b4~0: f6e65983-3a29-45c2-8cb2-01725dc34a28:Materiales/Metal
-                    916c8cf1fa79a16cbcba6d10a1abf636: !TransformComponent
-                        Id: 39249e34-3a6f-433e-b699-f00e4e6f2cf6
-                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: 11a6f4f4-0560-4339-9aa6-87d5c117951c
+                        Position: {X: 0.0, Y: 1.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.1, Y: 1.1, Z: 1.1}
-                        Children: {}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            2b5549d6abf4c5125b4fc733614f60e4: ref!! b31f6d7e-b0cc-4747-8206-744fce48bd21
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: 640fcbf8-dbaa-4987-b015-21da414f9af5
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: DefaultFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            11713a024b421a98fde2045acaefff43: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 0.1, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Folder: null
             Entity:
                 Id: 4ffd16d8-fd02-4a37-aae2-2f33fa58d298
@@ -632,7 +667,7 @@ Hierarchy:
                         cuerpo: ref!! 4ccd581d-64a9-4afb-bb74-4c568a3de7a9
                     fb6521e28c46a3ccda1c58adee930e63: !TransformComponent
                         Id: ef7933f9-c038-4a91-9473-2107c3466177
-                        Position*: {X: -4.0, Y: 0.5, Z: 7.5}
+                        Position*: {X: -4.0, Y: 0.0, Z: 7.5}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -705,7 +740,7 @@ Hierarchy:
                     09d666fe569b6705e10ac0fd980915ae: !TransformComponent
                         Id: e4e0e5ba-22cc-4dc5-b176-bc7b488a3dea
                         Position: {X: 0.0, Y: 4.0, Z: 0.0}
-                        Rotation: {X: -0.18301268, Y: 0.68301266, Z: 0.18301268, W: 0.68301266}
+                        Rotation*: {X: -0.09904574, Y: 0.8923991, Z: 0.23911755, W: 0.3696438}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     d3bd436bb21fdc2fc472afaa3883cec3: !LightComponent
@@ -815,7 +850,7 @@ Hierarchy:
                         cuerpo: ref!! c5e50ed1-6c1c-4590-88a8-7975d66fbd46
                     fb6521e28c46a3ccda1c58adee930e63: !TransformComponent
                         Id: 317005a8-0bf8-47fa-885e-1c548c952fb2
-                        Position*: {X: -1.5, Y: 0.5, Z: 7.5}
+                        Position*: {X: -1.5, Y: 0.0, Z: 7.5}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -875,7 +910,7 @@ Hierarchy:
                         cuerpo: ref!! d83a8eb7-6076-4fc8-934e-b02f1855eb19
                     fb6521e28c46a3ccda1c58adee930e63: !TransformComponent
                         Id: 5f06fe6c-0805-412c-8dbb-f8656884a358
-                        Position*: {X: 4.0, Y: 0.5, Z: 7.5}
+                        Position*: {X: 4.0, Y: 0.0, Z: 7.5}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -1015,13 +1050,49 @@ Hierarchy:
                         ColliderShapes:
                             11713a024b421a98fde2045acaefff43: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 1.01, Y: 1.99, Z: 1.01}
-                                LocalOffset: {X: 0.0, Y: 0.2, Z: 0.1}
+                                Size: {X: 1.01, Y: 2.99, Z: 1.01}
+                                LocalOffset: {X: 0.0, Y: 0.7, Z: 0.1}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
                 BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
                 BasePartId: 7a153f06-18f6-4c54-b030-04cac2e06f04
                 InstanceId: bd235faf-9de2-4cdf-9bf1-cff65c8ff344
+        -   Folder: null
+            Entity:
+                Id: 9462a034-1029-4360-8a44-0bb1df8b677e
+                Name: Bloque_2
+                Components:
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: 42a04415-995d-4560-871e-0eb3411fa35c
+                        Position: {X: 0.0, Y: 2.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            1d31a6f37f531d8218e991997fcbd3ff: ref!! 045298c1-f00c-4cf1-a0a4-df95d9adc2c1
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: 8fac2d3d-d76d-4042-9336-88995abd4f92
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: DefaultFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            11713a024b421a98fde2045acaefff43: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 0.1, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: 958b267f-91d3-4112-9654-2fc522243de7
                 Name: Modelo Corto
@@ -1312,7 +1383,7 @@ Hierarchy:
                         cuerpo: ref!! 2f031a44-8dff-42e5-a2fd-240874e2d425
                     fb6521e28c46a3ccda1c58adee930e63: !TransformComponent
                         Id: 57474e1c-3667-461d-9873-c9d4af369e2e
-                        Position*: {X: 1.5, Y: 0.5, Z: 7.5}
+                        Position*: {X: 1.5, Y: 0.0, Z: 7.5}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -1321,6 +1392,21 @@ Hierarchy:
                 BasePartAsset: "04d961b7-0cd3-4059-814f-1cd131694b0c:Prefabs/Creación/LargoCreación"
                 BasePartId: f1b5042e-e1fd-4f4e-9bd3-0cde64dbbaeb
                 InstanceId: 6ecbefa3-11ee-4cb5-b918-0cbae6d4f302
+        -   Entity:
+                Id: cefed2c7-4fe4-45e6-8214-57a7153c39a1
+                Name: Corto
+                Components:
+                    0aa750a13389bc04edad5f2b8e76e92f: !TransformComponent
+                        Id: 534a1f8a-ac7f-4caa-928e-7dcd507aee6c
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 0.1, Z: 1.0}
+                        Children: {}
+                    5bfa6870910ffd187ef881c7f704a97d: !ModelComponent
+                        Id: 227e233b-9eca-4b4a-9501-dc4f81b802d4
+                        Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
+                        Materials:
+                            8168368230c03f0739f1d867b113d281~0: f6e65983-3a29-45c2-8cb2-01725dc34a28:Materiales/Metal
         -   Entity:
                 Id: dd3554cc-8561-47f8-82e1-48970f8db0bc
                 Name: Modelo Corto
@@ -1387,14 +1473,19 @@ Hierarchy:
                 Components:
                     79e418fcc9f9c288769caa72eee8eba0: !Terracota.ElementoBloqueBase,Terracota
                         Id: 8a105187-4d86-4eb4-adc5-5427ff3e2308
-                        Priority: 1
+                        bloquesBase:
+                            18c7918076de178446e71f1667bce179: ref!! c4e7fc8c-4052-4a39-a72d-ca5a169b9347
+                            368d7acb03bf5e387d802a565bb0bd83: ref!! 640fcbf8-dbaa-4987-b015-21da414f9af5
+                            fa96db2038639583839b72cc9f7869e2: ref!! 8fac2d3d-d76d-4042-9336-88995abd4f92
                     2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
                         Id: 8be0db54-2fbb-4fde-bb50-e4d8853a3bc3
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            bcb41c8e717732fd4c4849ca641c2411: ref!! 39249e34-3a6f-433e-b699-f00e4e6f2cf6
+                            1b60344ce946561007abaea4cb6dcbea: ref!! 4bc44a84-778d-4633-b30f-72fa898246f3
+                            c6626e57bdb4c8e5a97f1551685ae630: ref!! 11a6f4f4-0560-4339-9aa6-87d5c117951c
+                            8252a7fb8db1a9e3d8df06742d1cb978: ref!! 42a04415-995d-4560-871e-0eb3411fa35c
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: 14422040-c5f6-44e3-a689-d089e490b959
                         CollisionGroup: SensorTrigger
@@ -1416,8 +1507,43 @@ Hierarchy:
                         ColliderShapes:
                             11713a024b421a98fde2045acaefff43: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
+                                Size: {X: 1.0, Y: 3.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 1.5, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: e5aec11f-b127-495d-86ee-d8ece3309f2a
+                Name: Bloque_0
+                Components:
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: 4bc44a84-778d-4633-b30f-72fa898246f3
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            907b08c900521f2152e304d0fbd2113e: ref!! 534a1f8a-ac7f-4caa-928e-7dcd507aee6c
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: c4e7fc8c-4052-4a39-a72d-ca5a169b9347
+                        CollisionGroup: SensorTrigger
+                        CanCollideWith: DefaultFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            11713a024b421a98fde2045acaefff43: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 0.1, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Folder: null
             Entity:
@@ -1493,6 +1619,21 @@ Hierarchy:
                 BasePartId: 670e7431-4482-412f-8d8b-83cb09f4b1b4
                 InstanceId: 4f0184bc-d85f-4e5b-8da2-b36f11bbfb0b
         -   Entity:
+                Id: ec7874d6-534f-49a6-979d-a56ceb353879
+                Name: Corto
+                Components:
+                    0aa750a13389bc04edad5f2b8e76e92f: !TransformComponent
+                        Id: 045298c1-f00c-4cf1-a0a4-df95d9adc2c1
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 0.1, Z: 1.0}
+                        Children: {}
+                    5bfa6870910ffd187ef881c7f704a97d: !ModelComponent
+                        Id: eed7cad8-f1d7-4a15-940a-39b34048b24f
+                        Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
+                        Materials:
+                            9d240178ae7abc7b28f45c6e6c22e0c3~0: f6e65983-3a29-45c2-8cb2-01725dc34a28:Materiales/Metal
+        -   Entity:
                 Id: f4b8c88b-7e6a-49d3-a7c2-b8074acf3190
                 Name*: Corto_7
                 Components:
@@ -1543,7 +1684,7 @@ Hierarchy:
                         cuerpo: ref!! 1f063b16-7314-4f6f-90c0-89a160d86556
                     fb6521e28c46a3ccda1c58adee930e63: !TransformComponent
                         Id: 5aa6fb2d-0fa4-4e50-b801-2487271555bd
-                        Position*: {X: -6.5, Y: 0.5, Z: 7.5}
+                        Position*: {X: -6.5, Y: 0.0, Z: 7.5}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:

@@ -32,7 +32,6 @@ public class ControladorCreación : SyncScript
         backBuffer = GraphicsDevice.Presenter.BackBuffer;
         viewport = new Viewport(0, 0, backBuffer.Width, backBuffer.Height);
 
-        bloqueBase.Inicializar(this);
         bloques = new List<ElementoBloque>();
         bloques.AddRange(estatuas);
         bloques.AddRange(cortos);

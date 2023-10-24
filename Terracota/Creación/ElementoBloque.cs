@@ -18,8 +18,9 @@ public class ElementoBloque : StartupScript
     }
 
     private void CalcularColisiones(object sender, TrackingCollectionChangedEventArgs args)
-    {/*
-        if (ObtenerPosibleColocar())
+    {
+        /*
+        if (EsPosibleColocar())
             //efecto bueno
         else
             //efecto malo
@@ -39,7 +40,7 @@ public class ElementoBloque : StartupScript
 
     public bool EsPosibleColocar()
     {
-        var colisionesSinBase = cuerpo.Collisions.Where(o => o.ColliderA.Entity.Get<ElementoBloqueBase>() == null && o.ColliderB.Entity.Get<ElementoBloqueBase>() == null).ToArray();
+        var colisionesSinBase = cuerpo.Collisions.Where(o => !o.ColliderA.Entity.Name.Contains("Bloque") && !o.ColliderB.Entity.Name.Contains("Bloque")).ToArray();
         return (colisionesSinBase.Length <= 0);
     }
 

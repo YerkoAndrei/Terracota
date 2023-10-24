@@ -1,5 +1,4 @@
-﻿using System.Collections.Specialized;
-using Stride.Core.Collections;
+﻿using System.Collections.Generic;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
@@ -9,66 +8,35 @@ using static Constantes;
 
 public class ElementoBloqueBase : StartupScript
 {
-    private ControladorCreación controladorCreación;
-    private RigidbodyComponent cuerpo;
-    private bool seleccionando;
-    private float altura;
+    public List<RigidbodyComponent> bloquesBase = new List<RigidbodyComponent> { };
 
-    public override void Start()
+    public override void Start() { }
+
+    public void ActualizarPosición(Vector3 nuevaPosición)
     {
-        cuerpo = Entity.Get<RigidbodyComponent>();
-        cuerpo.Collisions.CollectionChanged += CalcularColisiones;
+        nuevaPosición.Y = 0;
+        Entity.Transform.Position = nuevaPosición;
     }
 
-    public void Inicializar(ControladorCreación _controladorCreación)
+    public float ObtenerAltura()
     {
-        controladorCreación = _controladorCreación;
-    }
-
-    private void CalcularColisiones(object sender, TrackingCollectionChangedEventArgs args)
-    {
-        // No cambia si acaba de seleccionar
-        if (seleccionando)
-        {
-            seleccionando = false;
-            return;
-        }
-
-        // PENDIENTE: Verifica altura
-        var a = controladorCreación.ObtenerActual().EsPosibleColocar();
-
-        // Ajusta trigger
-        if (args.Action == NotifyCollectionChangedAction.Add)
-            CambiarCuerpo(true);
-        else if (args.Action == NotifyCollectionChangedAction.Remove)
-            CambiarCuerpo(false);
-    }
-
-    private void CambiarCuerpo(bool agrandar)
-    {
-        if (agrandar && altura < 3)
-            altura += 1;
-        else if(!agrandar && altura > 0)
-            altura -= 1;
-
-        Entity.Transform.Scale = new Vector3(Entity.Transform.Scale.X, (altura + 1), Entity.Transform.Scale.Z);
-    }
-
-    public void Rotar()
-    {
-        Entity.Transform.Rotation *= Quaternion.RotationY(MathUtil.DegreesToRadians(-45));
+        if (bloquesBase[2].Collisions.Count > 1)
+            return 3;
+        if (bloquesBase[1].Collisions.Count > 1)
+            return 2;
+        if (bloquesBase[0].Collisions.Count > 1)
+            return 1;
+        
+        return 0;
     }
 
     public void ReiniciarCuerpo(TipoBloque tipoBloque, Quaternion rotación)
     {
-        altura = 0;
-        seleccionando = true;
-
         Entity.Transform.Rotation = rotación;
         switch (tipoBloque)
         {
             case TipoBloque.estatua:
-                Entity.Transform.Scale = new Vector3(1.2f, 3, 1.2f);
+                Entity.Transform.Scale = new Vector3(1.2f, 1, 1.2f);
                 break;
             case TipoBloque.corto:
                 Entity.Transform.Scale = new Vector3(1, 1, 1);
@@ -79,14 +47,8 @@ public class ElementoBloqueBase : StartupScript
         }
     }
 
-    public void ActualizarPosición(Vector3 nuevaPosición)
+    public void Rotar()
     {
-        nuevaPosición.Y = 0;
-        Entity.Transform.Position = nuevaPosición;
-    }
-
-    public float ObtenerAltura()
-    {
-        return altura;
+        Entity.Transform.Rotation *= Quaternion.RotationY(MathUtil.DegreesToRadians(-45));
     }
 }
