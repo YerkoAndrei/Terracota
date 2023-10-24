@@ -7,8 +7,8 @@ Offset: {X: 0.0, Y: 0.0, Z: 0.0}
 Hierarchy:
     RootParts:
         - ref!! 684ee097-7d99-4910-b6c4-c63360b39159
-        - ref!! b0429aeb-4ad7-45b1-96ac-8000ef0a61cd
         - ref!! e09c1e0a-8557-4625-8f92-7e622e4a2027
+        - ref!! b0429aeb-4ad7-45b1-96ac-8000ef0a61cd
         - ref!! 3ce5f97a-f1b7-4a5f-9f64-ae71634f0490
         - ref!! 69a8480b-06d8-425a-bcb3-357b3e12f0d1
         - ref!! 1426e5a2-387a-4553-9c38-8a8f431d6e13
@@ -382,21 +382,6 @@ Hierarchy:
                 BasePartId: 4bff4cad-8d16-4606-8882-0d34fe8e309a
                 InstanceId: 0b20dfac-f72d-4089-847e-4db9e05813ca
         -   Entity:
-                Id: 3d2ec768-f551-4c50-bc57-7876a6d885a5
-                Name: Corto
-                Components:
-                    0aa750a13389bc04edad5f2b8e76e92f: !TransformComponent
-                        Id: b31f6d7e-b0cc-4747-8206-744fce48bd21
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 0.1, Z: 1.0}
-                        Children: {}
-                    5bfa6870910ffd187ef881c7f704a97d: !ModelComponent
-                        Id: cc579357-4410-4978-8d80-cfaeb23ff1b3
-                        Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
-                        Materials:
-                            cc0378b1478048e5f6eee8aa4c460b01~0: f6e65983-3a29-45c2-8cb2-01725dc34a28:Materiales/Metal
-        -   Entity:
                 Id: 40428c05-72f6-47bd-8fd5-70da5e367464
                 Name: Modelo Corto
                 Components:
@@ -544,15 +529,14 @@ Hierarchy:
         -   Folder: null
             Entity:
                 Id: 4cdc1980-406a-4653-a1ce-2317ecc1faf5
-                Name: Bloque_1
+                Name: Sensor_1
                 Components:
                     2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
                         Id: 11a6f4f4-0560-4339-9aa6-87d5c117951c
                         Position: {X: 0.0, Y: 1.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            2b5549d6abf4c5125b4fc733614f60e4: ref!! b31f6d7e-b0cc-4747-8206-744fce48bd21
+                        Children: {}
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: 640fcbf8-dbaa-4987-b015-21da414f9af5
                         CollisionGroup: SensorTrigger
@@ -709,7 +693,7 @@ Hierarchy:
                     4ba411a0366d95c977e11c965700d39e: !Terracota.ControladorCreaci%25C3%25B3n,Terracota
                         Id: 4b8c5c1f-b8e9-4c88-a395-27acb72e79fd
                         "ejeCámara": ref!! 316b980e-8a89-4a88-9148-ae7f6be29aca
-                        bloqueBase: ref!! 8a105187-4d86-4eb4-adc5-5427ff3e2308
+                        sensor: ref!! b8170e19-971a-43c0-91fa-897159e8560d
                         "cámara": ref!! 88a207d7-1761-465f-950e-2f33b5c2cdc3
                         estatuas:
                             981b201882e12f5d3e5c8a99d288cf69: ref!! 4a579e2f-f706-4653-afc2-bf74eb6110a4
@@ -1060,15 +1044,14 @@ Hierarchy:
         -   Folder: null
             Entity:
                 Id: 9462a034-1029-4360-8a44-0bb1df8b677e
-                Name: Bloque_2
+                Name: Sensor_2
                 Components:
                     2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
                         Id: 42a04415-995d-4560-871e-0eb3411fa35c
                         Position: {X: 0.0, Y: 2.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            1d31a6f37f531d8218e991997fcbd3ff: ref!! 045298c1-f00c-4cf1-a0a4-df95d9adc2c1
+                        Children: {}
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: 8fac2d3d-d76d-4042-9336-88995abd4f92
                         CollisionGroup: SensorTrigger
@@ -1393,21 +1376,6 @@ Hierarchy:
                 BasePartId: f1b5042e-e1fd-4f4e-9bd3-0cde64dbbaeb
                 InstanceId: 6ecbefa3-11ee-4cb5-b918-0cbae6d4f302
         -   Entity:
-                Id: cefed2c7-4fe4-45e6-8214-57a7153c39a1
-                Name: Corto
-                Components:
-                    0aa750a13389bc04edad5f2b8e76e92f: !TransformComponent
-                        Id: 534a1f8a-ac7f-4caa-928e-7dcd507aee6c
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 0.1, Z: 1.0}
-                        Children: {}
-                    5bfa6870910ffd187ef881c7f704a97d: !ModelComponent
-                        Id: 227e233b-9eca-4b4a-9501-dc4f81b802d4
-                        Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
-                        Materials:
-                            8168368230c03f0739f1d867b113d281~0: f6e65983-3a29-45c2-8cb2-01725dc34a28:Materiales/Metal
-        -   Entity:
                 Id: dd3554cc-8561-47f8-82e1-48970f8db0bc
                 Name: Modelo Corto
                 Components:
@@ -1469,14 +1437,14 @@ Hierarchy:
                 InstanceId: d2ecd508-7bb6-4f2c-9c3e-ba0202365bc4
         -   Entity:
                 Id: e09c1e0a-8557-4625-8f92-7e622e4a2027
-                Name: BloqueBase
+                Name: ControladorSensor
                 Components:
-                    79e418fcc9f9c288769caa72eee8eba0: !Terracota.ElementoBloqueBase,Terracota
-                        Id: 8a105187-4d86-4eb4-adc5-5427ff3e2308
-                        bloquesBase:
-                            18c7918076de178446e71f1667bce179: ref!! c4e7fc8c-4052-4a39-a72d-ca5a169b9347
-                            368d7acb03bf5e387d802a565bb0bd83: ref!! 640fcbf8-dbaa-4987-b015-21da414f9af5
-                            fa96db2038639583839b72cc9f7869e2: ref!! 8fac2d3d-d76d-4042-9336-88995abd4f92
+                    49319f9ed6a22c849de78878761bf836: !Terracota.ControladorSensor,Terracota
+                        Id: b8170e19-971a-43c0-91fa-897159e8560d
+                        sensores:
+                            c35b81ed5f31fc85e1d4ad13e7166018: ref!! c4e7fc8c-4052-4a39-a72d-ca5a169b9347
+                            5668d66e70d801e0626fb5d92b07d2cd: ref!! 640fcbf8-dbaa-4987-b015-21da414f9af5
+                            0e25df672b5461dd92de7d78f458ac4a: ref!! 8fac2d3d-d76d-4042-9336-88995abd4f92
                     2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
                         Id: 8be0db54-2fbb-4fde-bb50-e4d8853a3bc3
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -1512,15 +1480,14 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: e5aec11f-b127-495d-86ee-d8ece3309f2a
-                Name: Bloque_0
+                Name: Sensor_0
                 Components:
                     2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
                         Id: 4bc44a84-778d-4633-b30f-72fa898246f3
                         Position: {X: 0.0, Y: 0.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            907b08c900521f2152e304d0fbd2113e: ref!! 534a1f8a-ac7f-4caa-928e-7dcd507aee6c
+                        Children: {}
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: c4e7fc8c-4052-4a39-a72d-ca5a169b9347
                         CollisionGroup: SensorTrigger
@@ -1618,21 +1585,6 @@ Hierarchy:
                 BasePartAsset: "ca8a9afd-e763-41aa-97d2-bf8fe2d39937:Prefabs/Creación/CortoCreación"
                 BasePartId: 670e7431-4482-412f-8d8b-83cb09f4b1b4
                 InstanceId: 4f0184bc-d85f-4e5b-8da2-b36f11bbfb0b
-        -   Entity:
-                Id: ec7874d6-534f-49a6-979d-a56ceb353879
-                Name: Corto
-                Components:
-                    0aa750a13389bc04edad5f2b8e76e92f: !TransformComponent
-                        Id: 045298c1-f00c-4cf1-a0a4-df95d9adc2c1
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 0.1, Z: 1.0}
-                        Children: {}
-                    5bfa6870910ffd187ef881c7f704a97d: !ModelComponent
-                        Id: eed7cad8-f1d7-4a15-940a-39b34048b24f
-                        Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
-                        Materials:
-                            9d240178ae7abc7b28f45c6e6c22e0c3~0: f6e65983-3a29-45c2-8cb2-01725dc34a28:Materiales/Metal
         -   Entity:
                 Id: f4b8c88b-7e6a-49d3-a7c2-b8074acf3190
                 Name*: Corto_7

@@ -40,7 +40,7 @@ public class ElementoBloque : StartupScript
 
     public bool EsPosibleColocar()
     {
-        var colisionesSinBase = cuerpo.Collisions.Where(o => !o.ColliderA.Entity.Name.Contains("Bloque") && !o.ColliderB.Entity.Name.Contains("Bloque")).ToArray();
+        var colisionesSinBase = cuerpo.Collisions.Where(o => !o.ColliderA.Entity.Name.Contains("Sensor") && !o.ColliderB.Entity.Name.Contains("Sensor")).ToArray();
         return (colisionesSinBase.Length <= 0);
     }
 

@@ -12,7 +12,7 @@ using static Constantes;
 public class ControladorCreación : SyncScript
 {
     public TransformComponent ejeCámara;
-    public ElementoBloqueBase bloqueBase;
+    public ControladorSensor sensor;
     public CameraComponent cámara;
 
     public List<ElementoBloque> estatuas = new List<ElementoBloque> { };
@@ -27,6 +27,8 @@ public class ControladorCreación : SyncScript
     private List<ElementoBloque> bloques;
     private List<Vector3> pocisionesIniciales;
 
+    private float rotaciónClic;
+
     public override void Start()
     {
         backBuffer = GraphicsDevice.Presenter.BackBuffer;
@@ -37,6 +39,7 @@ public class ControladorCreación : SyncScript
         bloques.AddRange(cortos);
         bloques.AddRange(largos);
 
+        rotaciónClic = -45;
         pocisionesIniciales = new List<Vector3>();
         foreach(var bloque in bloques)
         {
@@ -59,8 +62,8 @@ public class ControladorCreación : SyncScript
         var resultado = ObtienePosiciónCursor();
         if (resultado.Succeeded)
         {
-            bloqueBase.ActualizarPosición(resultado.Point);
-            bloqueActual.ActualizarPosición(resultado.Point, bloqueBase.ObtenerAltura());
+            sensor.ActualizarPosición(resultado.Point);
+            bloqueActual.ActualizarPosición(resultado.Point, sensor.ObtenerAltura());
         }
 
         // Rotación
@@ -119,7 +122,7 @@ public class ControladorCreación : SyncScript
                 bloqueActual = largos[id];
                 break;
         }
-        bloqueBase.ReiniciarCuerpo(bloqueActual.tipoBloque, bloqueActual.ObtenerRotación());
+        sensor.ReiniciarCuerpo(bloqueActual.tipoBloque, bloqueActual.ObtenerRotación());
     }
 
     public ElementoBloque ObtenerActual()
@@ -146,8 +149,8 @@ public class ControladorCreación : SyncScript
         if (bloqueActual == null)
             return;
 
-        bloqueBase.Rotar();
-        bloqueActual.Entity.Transform.Rotation *= Quaternion.RotationY(MathUtil.DegreesToRadians(-45));
+        sensor.Rotar(rotaciónClic);
+        bloqueActual.Entity.Transform.Rotation *= Quaternion.RotationY(MathUtil.DegreesToRadians(rotaciónClic));
     }
 
     public async void EnClicMoverCámara(bool derecha)

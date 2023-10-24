@@ -6,9 +6,9 @@ using Stride.Physics;
 namespace Terracota;
 using static Constantes;
 
-public class ElementoBloqueBase : StartupScript
+public class ControladorSensor : StartupScript
 {
-    public List<RigidbodyComponent> bloquesBase = new List<RigidbodyComponent> { };
+    public List<RigidbodyComponent> sensores = new List<RigidbodyComponent> { };
 
     public override void Start() { }
 
@@ -20,13 +20,13 @@ public class ElementoBloqueBase : StartupScript
 
     public float ObtenerAltura()
     {
-        if (bloquesBase[2].Collisions.Count > 1)
+        if (sensores[2].Collisions.Count > 1)
             return 3;
-        if (bloquesBase[1].Collisions.Count > 1)
+        if (sensores[1].Collisions.Count > 1)
             return 2;
-        if (bloquesBase[0].Collisions.Count > 1)
+        if (sensores[0].Collisions.Count > 1)
             return 1;
-        
+
         return 0;
     }
 
@@ -47,8 +47,8 @@ public class ElementoBloqueBase : StartupScript
         }
     }
 
-    public void Rotar()
+    public void Rotar(float rotación)
     {
-        Entity.Transform.Rotation *= Quaternion.RotationY(MathUtil.DegreesToRadians(-45));
+        Entity.Transform.Rotation *= Quaternion.RotationY(MathUtil.DegreesToRadians(rotación));
     }
 }
