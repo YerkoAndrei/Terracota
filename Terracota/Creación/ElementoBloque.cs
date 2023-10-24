@@ -20,6 +20,7 @@ public class ElementoBloque : StartupScript
     private void CalcularColisiones(object sender, TrackingCollectionChangedEventArgs args)
     {
         /*
+        // PENDIENTE: cambiar contorno o algo
         if (EsPosibleColocar())
             //efecto bueno
         else

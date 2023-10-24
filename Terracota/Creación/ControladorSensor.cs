@@ -20,6 +20,7 @@ public class ControladorSensor : StartupScript
 
     public float ObtenerAltura()
     {
+        // PENDIENTE
         if (sensores[2].Collisions.Count > 1)
             return 3;
         if (sensores[1].Collisions.Count > 1)
@@ -36,7 +37,7 @@ public class ControladorSensor : StartupScript
         switch (tipoBloque)
         {
             case TipoBloque.estatua:
-                Entity.Transform.Scale = new Vector3(1.2f, 1, 1.2f);
+                Entity.Transform.Scale = new Vector3(1.5f, 1, 1.5f);
                 break;
             case TipoBloque.corto:
                 Entity.Transform.Scale = new Vector3(1, 1, 1);
