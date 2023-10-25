@@ -1358,17 +1358,17 @@ Hierarchy:
                 InstanceId: 0b20dfac-f72d-4089-847e-4db9e05813ca
         -   Folder: null
             Entity:
-                Id: c5e8cabf-74c6-439a-a2f8-a4e58a2fc4b4
+                Id: c218ce67-50a0-416c-ac08-bcc2324030f3
                 Name: Sensor_3
                 Components:
                     2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
-                        Id: 29d1dda3-815e-4855-83bf-13764d86f6f7
+                        Id: 8305bc11-1eae-43e5-9752-049cbbbe88e0
                         Position: {X: 0.0, Y: 3.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
-                        Id: 9eb55c5f-3980-4174-9719-966eb16034bb
+                        Id: 181ba1ee-964b-48cb-8c0c-d091944dff67
                         CollisionGroup: SensorTrigger
                         CanCollideWith: DefaultFilter
                         CanSleep: false
@@ -1480,7 +1480,7 @@ Hierarchy:
                             c35b81ed5f31fc85e1d4ad13e7166018: ref!! c4e7fc8c-4052-4a39-a72d-ca5a169b9347
                             5668d66e70d801e0626fb5d92b07d2cd: ref!! 640fcbf8-dbaa-4987-b015-21da414f9af5
                             0e25df672b5461dd92de7d78f458ac4a: ref!! 8fac2d3d-d76d-4042-9336-88995abd4f92
-                            960cabf26738a3ff4f6a899f7adf3d68: ref!! 9eb55c5f-3980-4174-9719-966eb16034bb
+                            4a0fb014d1292c45c1b831212c1243ca: ref!! 181ba1ee-964b-48cb-8c0c-d091944dff67
                     2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
                         Id: 8be0db54-2fbb-4fde-bb50-e4d8853a3bc3
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -1490,7 +1490,7 @@ Hierarchy:
                             1b60344ce946561007abaea4cb6dcbea: ref!! 4bc44a84-778d-4633-b30f-72fa898246f3
                             c6626e57bdb4c8e5a97f1551685ae630: ref!! 11a6f4f4-0560-4339-9aa6-87d5c117951c
                             8252a7fb8db1a9e3d8df06742d1cb978: ref!! 42a04415-995d-4560-871e-0eb3411fa35c
-                            344fde53468fdc3d8c6f579a148a655d: ref!! 29d1dda3-815e-4855-83bf-13764d86f6f7
+                            b8f29396c3336a5733670a558b90b784: ref!! 8305bc11-1eae-43e5-9752-049cbbbe88e0
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: 14422040-c5f6-44e3-a689-d089e490b959
                         CollisionGroup: SensorTrigger
@@ -1513,7 +1513,7 @@ Hierarchy:
                             11713a024b421a98fde2045acaefff43: !BoxColliderShapeDesc
                                 Is2D: false
                                 Size: {X: 1.0, Y: 4.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 2.5, Z: 0.0}
+                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: e5aec11f-b127-495d-86ee-d8ece3309f2a
