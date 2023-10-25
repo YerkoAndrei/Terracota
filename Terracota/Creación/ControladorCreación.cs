@@ -14,6 +14,7 @@ public class ControladorCreación : SyncScript
     public TransformComponent ejeCámara;
     public ControladorSensor sensor;
     public CameraComponent cámara;
+    public ControladorInterfazCreación interfaz;
 
     public List<ElementoBloque> estatuas = new List<ElementoBloque> { };
     public List<ElementoBloque> cortos = new List<ElementoBloque> { };
@@ -138,10 +139,16 @@ public class ControladorCreación : SyncScript
         }
     }
 
-    public void EnClicGuardar()
+    public void EnClicGuardar(int ranura)
     {
         // PENDIENTE: esperar a colocar todos los bloques
-        SistemaMemoria.GuardarFortaleza(bloques.ToArray());
+        // PENDIENTE: sacar miniatura
+
+        if(SistemaMemoria.GuardarFortaleza(bloques.ToArray(), ranura, null))
+        {
+            interfaz.CerrarPanelGuardar();
+            EnClicReiniciarPosiciones();
+        }
     }
 
     public void EnClicGirarPieza()

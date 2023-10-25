@@ -1,4 +1,5 @@
 ﻿using Stride.Core.Mathematics;
+using System.Collections.Generic;
 using static Terracota.Constantes;
 
 public class Bloque
@@ -13,4 +14,11 @@ public class Bloque
         this.posición = posición;
         this.rotación = rotación;
     }
+}
+
+public class Fortaleza
+{
+    public int ranura { get; set; }
+    public string miniatura { get; set; }
+    public List<Bloque> bloques { get; set; }
 }

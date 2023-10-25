@@ -8,6 +8,7 @@ Hierarchy:
     RootParts:
         - ref!! 684ee097-7d99-4910-b6c4-c63360b39159
         - ref!! e09c1e0a-8557-4625-8f92-7e622e4a2027
+        - ref!! 3fb71f1a-6f94-4e91-883e-ceb672b0618c
         - ref!! b0429aeb-4ad7-45b1-96ac-8000ef0a61cd
         - ref!! 3ce5f97a-f1b7-4a5f-9f64-ae71634f0490
         - ref!! 69a8480b-06d8-425a-bcb3-357b3e12f0d1
@@ -382,6 +383,18 @@ Hierarchy:
                 BasePartId: 4bff4cad-8d16-4606-8882-0d34fe8e309a
                 InstanceId: 0b20dfac-f72d-4089-847e-4db9e05813ca
         -   Entity:
+                Id: 3fb71f1a-6f94-4e91-883e-ceb672b0618c
+                Name: SistemaMemoria
+                Components:
+                    20e692590809b35c667a49decf1f799a: !TransformComponent
+                        Id: ae3d3f35-cf61-4df8-a7b3-b2cd580adb93
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    5b01c480f7e6490b5974da8d05d01f61: !Terracota.SistemaMemoria,Terracota
+                        Id: c430364e-730c-457a-b33a-f1066e70e001
+        -   Entity:
                 Id: 40428c05-72f6-47bd-8fd5-70da5e367464
                 Name: Modelo Corto
                 Components:
@@ -695,6 +708,7 @@ Hierarchy:
                         "ejeCámara": ref!! 316b980e-8a89-4a88-9148-ae7f6be29aca
                         sensor: ref!! b8170e19-971a-43c0-91fa-897159e8560d
                         "cámara": ref!! 88a207d7-1761-465f-950e-2f33b5c2cdc3
+                        interfaz: ref!! 63f78276-a702-49e2-8ea7-5c77d893e342
                         estatuas:
                             981b201882e12f5d3e5c8a99d288cf69: ref!! 4a579e2f-f706-4653-afc2-bf74eb6110a4
                             32f97246de9a8482cf2925534bf49ce4: ref!! 2ebafb4d-fd40-4675-863d-0ee458c25793
@@ -1300,6 +1314,7 @@ Hierarchy:
                         Page: "2627cdce-8d02-4f70-afb6-1992eb67c84a:Interfaz/Creación"
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.28, Y: 0.72, Z: 1.0}
+                        RenderGroup: Group31
         -   Folder: null
             Entity:
                 Id: b5fe9535-58bc-4b18-99f0-cb6c45c9a595

@@ -1,5 +1,4 @@
 ﻿using Stride.Core.Mathematics;
-using System.Text;
 
 namespace Terracota;
 
@@ -7,8 +6,6 @@ public static class Constantes
 {
     public static int duraciónTurno = 3000;
     public static float multiplicadorMáximo = 1.5f;
-
-    private static int llave = 08021996;
 
     // Color botones
     public static Color colorNormal = new Color(255, 255, 255, 255);
@@ -41,21 +38,5 @@ public static class Constantes
         chimpancé,
         orangután,
         gorila
-    }
-
-    // XOR
-    public static string DesEncriptar(string texto)
-    {
-        var entrada = new StringBuilder(texto);
-        var salida = new StringBuilder(texto.Length);
-        char c;
-
-        for (int i = 0; i < texto.Length; i++)
-        {
-            c = entrada[i];
-            c = (char)(c ^ llave);
-            salida.Append(c);
-        }
-        return salida.ToString();
     }
 }

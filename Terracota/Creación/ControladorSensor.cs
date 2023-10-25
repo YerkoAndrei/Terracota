@@ -10,6 +10,8 @@ public class ControladorSensor : StartupScript
 {
     public List<RigidbodyComponent> sensores = new List<RigidbodyComponent> { };
 
+    private TipoBloque bloqueActual;
+
     public override void Start() { }
 
     public void ActualizarPosición(Vector3 nuevaPosición)
@@ -20,6 +22,11 @@ public class ControladorSensor : StartupScript
 
     public float ObtenerAltura()
     {
+        /*
+        // Fuerza posición 0
+        if (sensores[0].Collisions.Count <= 1 && (sensores[1].Collisions.Count + sensores[2].Collisions.Count + sensores[3].Collisions.Count) > 1)
+            return 0;
+        */
         // Controla posiciones
         if (sensores[2].Collisions.Count > 1)
             return 3;
@@ -41,6 +48,7 @@ public class ControladorSensor : StartupScript
     public void ReiniciarCuerpo(TipoBloque tipoBloque, Quaternion rotación)
     {
         Entity.Transform.Rotation = rotación;
+        bloqueActual = tipoBloque;
         switch (tipoBloque)
         {
             case TipoBloque.estatua:
