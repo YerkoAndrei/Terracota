@@ -8,7 +8,7 @@ using System;
 
 namespace Terracota;
 
-public class ControladorMenú : StartupScript
+public class InterfazMenú : StartupScript
 {
     public UrlReference<Scene> escenaLocal;
     public UrlReference<Scene> escenaRed;

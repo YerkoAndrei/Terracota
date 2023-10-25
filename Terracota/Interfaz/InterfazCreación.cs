@@ -7,7 +7,7 @@ using Stride.UI.Panels;
 namespace Terracota;
 using static Constantes;
 
-public class ControladorInterfazCreación : StartupScript
+public class InterfazCreación : StartupScript
 {
     public ControladorCreación controladorCreación;
     public UrlReference<Scene> escenaMenú;

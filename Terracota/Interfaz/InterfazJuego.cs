@@ -12,7 +12,7 @@ namespace Terracota;
 using static Sistema;
 using static Constantes;
 
-public class ControladorInterfazJuego : StartupScript
+public class InterfazJuego : StartupScript
 {
     public ControladorPartidaLocal controladorPartida;
     public UrlReference<Scene> escenaJuego;

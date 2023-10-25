@@ -14,7 +14,7 @@ public class ControladorCreación : SyncScript
     public TransformComponent ejeCámara;
     public ControladorSensor sensor;
     public CameraComponent cámara;
-    public ControladorInterfazCreación interfaz;
+    public InterfazCreación interfaz;
 
     public List<ElementoBloque> estatuas = new List<ElementoBloque> { };
     public List<ElementoBloque> cortos = new List<ElementoBloque> { };

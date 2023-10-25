@@ -14,7 +14,7 @@ public class ControladorPartidaLocal : AsyncScript
     public TransformComponent ejeCámara;
     public TransformComponent luzDireccional;
 
-    public ControladorInterfazJuego controladorInterfaz;
+    public InterfazJuego interfaz;
     public ControladorCámara controladorCámara;
 
     private ControladorCañon cañónActual;
@@ -39,8 +39,8 @@ public class ControladorPartidaLocal : AsyncScript
         cañónAnfitrión.Activar(true);
         cañónHuesped.Activar(false);
 
-        cañónAnfitrión.Asignar(controladorInterfaz);
-        cañónHuesped.Asignar(controladorInterfaz);
+        cañónAnfitrión.Asignar(interfaz);
+        cañónHuesped.Asignar(interfaz);
 
         turnoJugador = TipoJugador.anfitrión;
         cañónActual = cañónAnfitrión;
@@ -52,12 +52,12 @@ public class ControladorPartidaLocal : AsyncScript
         cantidadTurnos = 1;
         multiplicador = 1.0f;
 
-        controladorInterfaz.ActualizarTurno(cantidadTurnos, multiplicador);
+        interfaz.ActualizarTurno(cantidadTurnos, multiplicador);
 
         partidaActiva = true;
         while (Game.IsRunning)
         {
-            if (Input.IsKeyPressed(Keys.Space) && !controladorInterfaz.ObtenerPausa()
+            if (Input.IsKeyPressed(Keys.Space) && !interfaz.ObtenerPausa()
                 && partidaActiva && !cambiandoTurno)
             {
                 Disparar();
@@ -110,9 +110,9 @@ public class ControladorPartidaLocal : AsyncScript
     private async void CambiarTurno()
     {
         cambiandoTurno = true;
-        controladorInterfaz.PausarInterfaz();
+        interfaz.PausarInterfaz();
         await Task.Delay(duraciónTurno);
-        controladorInterfaz.ActivarTurno(false);
+        interfaz.ActivarTurno(false);
 
         if (!partidaActiva)
             return;
@@ -128,7 +128,7 @@ public class ControladorPartidaLocal : AsyncScript
             cañónActual = cañónHuesped;
 
             turnoJugador = TipoJugador.huesped;
-            controladorInterfaz.CambiarInterfaz(turnoJugador, proyectilHuesped);
+            interfaz.CambiarInterfaz(turnoJugador, proyectilHuesped);
         }
         else
         {
@@ -137,14 +137,14 @@ public class ControladorPartidaLocal : AsyncScript
             cañónActual = cañónAnfitrión;
 
             turnoJugador = TipoJugador.anfitrión;
-            controladorInterfaz.CambiarInterfaz(turnoJugador, proyectilAnfitrión);
+            interfaz.CambiarInterfaz(turnoJugador, proyectilAnfitrión);
 
             // Suma potencia despues de 4 turnos
             SumarPotencia();
         }
 
         cantidadTurnos++;
-        controladorInterfaz.ActualizarTurno(cantidadTurnos, multiplicador);
+        interfaz.ActualizarTurno(cantidadTurnos, multiplicador);
     }
 
     public void SumarPotencia()
@@ -159,12 +159,12 @@ public class ControladorPartidaLocal : AsyncScript
     {
         if (jugador == TipoJugador.anfitrión)
         {
-            controladorInterfaz.RestarAnfitrión(estatuasAnfitrión);
+            interfaz.RestarAnfitrión(estatuasAnfitrión);
             estatuasAnfitrión++;
         }
         else
         {
-            controladorInterfaz.RestarHuesped(estatuasHuesped);
+            interfaz.RestarHuesped(estatuasHuesped);
             estatuasHuesped++;
         }
         VerificarPartida();
@@ -192,7 +192,7 @@ public class ControladorPartidaLocal : AsyncScript
         {
             partidaActiva = false;
             MirarGanador(ganador);
-            controladorInterfaz.MostrarGanador(ganador, cantidadTurnos);
+            interfaz.MostrarGanador(ganador, cantidadTurnos);
         }
     }
 
