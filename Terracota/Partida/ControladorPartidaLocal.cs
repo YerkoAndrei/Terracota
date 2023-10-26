@@ -14,7 +14,6 @@ public class ControladorPartidaLocal : AsyncScript
     public TransformComponent luzDireccional;
 
     public InterfazJuego interfaz;
-    public UIComponent UIJuego;
     public UIComponent UIElección;
 
     private ControladorCañón cañónActual;
@@ -42,8 +41,8 @@ public class ControladorPartidaLocal : AsyncScript
         turnoJugador = TipoJugador.nada;
 
         // Comienza con elección
-        UIJuego.Enabled = false;
         UIElección.Enabled = true;
+        interfaz.Activar(false);
 
         // Espera que partida inicie
         while (turnoJugador == TipoJugador.nada && !partidaActiva)
@@ -108,10 +107,10 @@ public class ControladorPartidaLocal : AsyncScript
 
             await controladorCámara.RotarCámara(90, true);
         }
-        
-        UIJuego.Enabled = true;
-        interfaz.ActualizarTurno(cantidadTurnos, multiplicador);
 
+        // Recarga interfaz
+        interfaz.Activar(true);
+        interfaz.ActualizarTurno(cantidadTurnos, multiplicador);
         partidaActiva = true;
     }
 

@@ -173,7 +173,7 @@ public class InterfazElección : StartupScript
         fondoDerecha.Opacity = 0.5f;
 
         // Fin
-        await Task.Delay(4000);
+        await Task.Delay(3000);
     }
 
     private void ApagarRuleta()

@@ -104,6 +104,14 @@ public class InterfazJuego : StartupScript
         CambiarInterfaz(TipoJugador.anfitrión, TipoProyectil.bola);
     }
 
+    public void Activar(bool activar)
+    {
+        if(activar)
+            Entity.Get<UIComponent>().Page.RootElement.Visibility = Visibility.Visible;
+        else
+            Entity.Get<UIComponent>().Page.RootElement.Visibility = Visibility.Hidden;
+    }
+
     public bool ObtenerPausa()
     {
         return pausa;
