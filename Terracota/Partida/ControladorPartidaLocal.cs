@@ -58,7 +58,6 @@ public class ControladorPartidaLocal : SyncScript
 
     public async void ComenzarPartida(bool ganaAnfitrión)
     {
-        UIJuego.Enabled = true;
         UIElección.Enabled = false;
 
         proyectilAnfitrión = TipoProyectil.bola;
@@ -75,7 +74,7 @@ public class ControladorPartidaLocal : SyncScript
             turnoJugador = TipoJugador.anfitrión;
             cañónActual = cañónAnfitrión;
 
-            await MoverCámara(270, true);
+            await MoverCámara(0, false, false);
         }
         else
         {
@@ -85,9 +84,11 @@ public class ControladorPartidaLocal : SyncScript
             turnoJugador = TipoJugador.huesped;
             cañónActual = cañónHuesped;
 
-            await MoverCámara(450, true);
+            await MoverCámara(180, true, false);
         }
 
+        UIJuego.Enabled = true;
+        interfaz.PausarInterfaz();
         interfaz.ActualizarTurno(cantidadTurnos, multiplicador);
         partidaActiva = true;
     }
@@ -147,7 +148,7 @@ public class ControladorPartidaLocal : SyncScript
 
         if (turnoJugador == TipoJugador.anfitrión)
         {
-            await MoverCámara(180, true);
+            await MoverCámara(180, true, true);
             cañónHuesped.Activar(true);
             cañónActual = cañónHuesped;
 
@@ -156,7 +157,7 @@ public class ControladorPartidaLocal : SyncScript
         }
         else
         {
-            await MoverCámara(0, true);
+            await MoverCámara(0, true, true);
             cañónAnfitrión.Activar(true);
             cañónActual = cañónAnfitrión;
 
@@ -224,12 +225,12 @@ public class ControladorPartidaLocal : SyncScript
     {
         // En caso de que pierda el que tiene el turno
         if (ganador == TipoJugador.anfitrión && turnoJugador == TipoJugador.huesped)
-            await MoverCámara(0, true);
+            await MoverCámara(0, true, false);
         if (ganador == TipoJugador.huesped && turnoJugador == TipoJugador.anfitrión)
-            await MoverCámara(180, true);
+            await MoverCámara(180, true, false);
     }
 
-    private async Task MoverCámara(float YObjetivo, bool derecha)
+    private async Task MoverCámara(float YObjetivo, bool derecha, bool moverLuz)
     {
         float duraciónLerp = 1f;
         float tiempoLerp = 0;
@@ -250,11 +251,13 @@ public class ControladorPartidaLocal : SyncScript
             tiempo = tiempoLerp / duraciónLerp;
             ejeCámara.Rotation = Quaternion.Lerp(rotaciónInicial, direcciónObjetivo, tiempo);
 
-            // Mueve sol 45º
-            luzDireccional.Rotation *= Quaternion.RotationY(0.005f);
+            // Mueve sol 45º aprox.
+            if(moverLuz)
+                luzDireccional.Rotation *= Quaternion.RotationY(0.005f);
 
             tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            await Script.NextFrame();
+            await Task.Delay(1);
+            //await Script.NextFrame();
         }
 
         // Fin
