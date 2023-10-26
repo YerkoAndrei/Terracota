@@ -37,9 +37,9 @@ public class ControladorCañon : SyncScript
         fuerzaMetralla *= 1000;
     }
 
-    public void Asignar(InterfazJuego _interfaz)
+    public void Asignar(InterfazJuego _controladorInterfaz)
     {
-        interfaz = _interfaz;
+        interfaz = _controladorInterfaz;
     }
 
     public override void Update()

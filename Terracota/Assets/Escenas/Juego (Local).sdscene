@@ -8,6 +8,7 @@ Hierarchy:
     RootParts:
         - ref!! 017e0fa5-95bb-4f5e-9130-738e96c92a22
         - ref!! 02355854-c833-4889-9ca9-258050f1b1e5
+        - ref!! 4cb2a745-91a1-43e5-adf8-43eb6854728a
         - ref!! d364ee97-0b7f-446d-b8d1-e201ab0e2689
         - ref!! 036a9615-839b-4aef-bee6-6cc40d539b7b
         - ref!! 65bbced6-1eff-41bd-8480-9f351004702f
@@ -65,6 +66,8 @@ Hierarchy:
                         "ejeCámara": ref!! 215294be-ea30-42ae-aa9d-646ec7a45d55
                         luzDireccional: ref!! cfa543c1-ce66-46a8-903b-7a9421fe0db8
                         interfaz: ref!! ad15c0b7-f5e1-4a2e-8702-ded2e2195d0c
+                        UIJuego: ref!! 8df76c69-40d2-4800-87ff-e93a3a59f8f3
+                        "UIElección": ref!! 56e352d0-7364-413c-b3fe-ebe2156bbd7a
                         "controladorCámara": ref!! 2ddc581e-7adf-42aa-afab-88409cfd0e64
         -   Entity:
                 Id: 02355854-c833-4889-9ca9-258050f1b1e5
@@ -742,7 +745,7 @@ Hierarchy:
                     398519a3170320526b45e3a4b8f11d69: !TransformComponent
                         Id: 215294be-ea30-42ae-aa9d-646ec7a45d55
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             d8444a100efcce04e87fd19c11e0d9a9: ref!! b3bb83f2-5020-438d-bdee-6242dd68d627
@@ -1050,6 +1053,28 @@ Hierarchy:
                 BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
                 BasePartId: cba927cc-2354-4112-a312-644e88b8deda
                 InstanceId: fb9db244-7dcb-4a8e-b600-07c50733caa4
+        -   Folder: null
+            Entity:
+                Id: 4cb2a745-91a1-43e5-adf8-43eb6854728a
+                Name: "Elección"
+                Components:
+                    379530830342ba4134b4f068adb42693: !Terracota.InterfazElecci%25C3%25B3n,Terracota
+                        Id: c41ac520-d10f-4cfc-88b4-7c85bde36dd7
+                        controladorPartida: ref!! 8467c665-6f6a-4e41-8353-b93fb0b8b0b1
+                    d9134663cf65c4ff1e2f051b273a0936: !TransformComponent
+                        Id: 60e94728-1af1-4aaf-a39a-a61c81178f31
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1a24c41704f8422b77d7625af2a028f5: !UIComponent
+                        Id: 56e352d0-7364-413c-b3fe-ebe2156bbd7a
+                        Enabled: false
+                        Page: "8b929d74-116a-4c3f-880a-a37a36bc3d4f:Interfaz/Elección"
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.28, Y: 0.72, Z: 1.0}
+                        ResolutionStretch: FixedHeightAdaptableWidth
+                        RenderGroup: Group31
         -   Entity:
                 Id: 52ee6a72-3db2-49d5-b0bb-dee52f6c8098
                 Name: Modelo Lanza

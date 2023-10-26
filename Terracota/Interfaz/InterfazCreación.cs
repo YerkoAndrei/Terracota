@@ -58,7 +58,6 @@ public class InterfazCreación : StartupScript
         página.FindVisualChildOfType<Button>("btnLargo_5").Click += (sender, e) => { EnClicAgregarLargo(5); };
 
         // Ranuras
-        página.FindVisualChildOfType<Button>("btnRanura_0").Click += (sender, e) => { EnClicGuardarRanura(0); };
         página.FindVisualChildOfType<Button>("btnRanura_1").Click += (sender, e) => { EnClicGuardarRanura(1); };
         página.FindVisualChildOfType<Button>("btnRanura_2").Click += (sender, e) => { EnClicGuardarRanura(2); };
         página.FindVisualChildOfType<Button>("btnRanura_3").Click += (sender, e) => { EnClicGuardarRanura(3); };
@@ -66,6 +65,7 @@ public class InterfazCreación : StartupScript
         página.FindVisualChildOfType<Button>("btnRanura_5").Click += (sender, e) => { EnClicGuardarRanura(5); };
         página.FindVisualChildOfType<Button>("btnRanura_6").Click += (sender, e) => { EnClicGuardarRanura(6); };
         página.FindVisualChildOfType<Button>("btnRanura_7").Click += (sender, e) => { EnClicGuardarRanura(7); };
+        página.FindVisualChildOfType<Button>("btnRanura_8").Click += (sender, e) => { EnClicGuardarRanura(8); };
     }
 
     private void EnClicAgregaEstatua(int estatua)

@@ -57,6 +57,7 @@ public class ControladorCámara : StartupScript
             tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
             await Script.NextFrame();
         }
+
         // Fin
         cámara.Position = posiciónObjetivo;
     }

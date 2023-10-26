@@ -6,7 +6,7 @@ using Stride.Engine;
 namespace Terracota;
 using static Constantes;
 
-public class ControladorPartidaLocal : AsyncScript
+public class ControladorPartidaLocal : SyncScript
 {
     public ControladorCañon cañónAnfitrión;
     public ControladorCañon cañónHuesped;
@@ -15,6 +15,8 @@ public class ControladorPartidaLocal : AsyncScript
     public TransformComponent luzDireccional;
 
     public InterfazJuego interfaz;
+    public UIComponent UIJuego;
+    public UIComponent UIElección;
     public ControladorCámara controladorCámara;
 
     private ControladorCañon cañónActual;
@@ -33,38 +35,61 @@ public class ControladorPartidaLocal : AsyncScript
     private bool partidaActiva;
     private bool sumarMultiplicador;
 
-    public override async Task Execute()
+    public override void Start()
     {
         // Predeterminado
-        cañónAnfitrión.Activar(true);
-        cañónHuesped.Activar(false);
-
-        cañónAnfitrión.Asignar(interfaz);
-        cañónHuesped.Asignar(interfaz);
-
-        turnoJugador = TipoJugador.anfitrión;
-        cañónActual = cañónAnfitrión;
-
-        proyectilAnfitrión = TipoProyectil.bola;
-        proyectilHuesped = TipoProyectil.bola;
-
         maxEstatuas = 3;
         cantidadTurnos = 1;
         multiplicador = 1.0f;
 
-        interfaz.ActualizarTurno(cantidadTurnos, multiplicador);
+        // Comienza con elección
+        UIJuego.Enabled = false;
+        UIElección.Enabled = true;
+    }
 
-        partidaActiva = true;
-        while (Game.IsRunning)
+    public override void Update()
+    {
+        if (Input.IsKeyPressed(Keys.Space) && !interfaz.ObtenerPausa() && partidaActiva && !cambiandoTurno)
         {
-            if (Input.IsKeyPressed(Keys.Space) && !interfaz.ObtenerPausa()
-                && partidaActiva && !cambiandoTurno)
-            {
-                Disparar();
-                CambiarTurno();
-            }
-            await Script.NextFrame();
+            Disparar();
+            CambiarTurno();
         }
+    }
+
+    public async void ComenzarPartida(bool ganaAnfitrión)
+    {
+        UIJuego.Enabled = true;
+        UIElección.Enabled = false;
+
+        proyectilAnfitrión = TipoProyectil.bola;
+        proyectilHuesped = TipoProyectil.bola;
+
+        cañónAnfitrión.Asignar(interfaz);
+        cañónHuesped.Asignar(interfaz);
+
+        if (ganaAnfitrión)
+        {
+            cañónAnfitrión.Activar(true);
+            cañónHuesped.Activar(false);
+
+            turnoJugador = TipoJugador.anfitrión;
+            cañónActual = cañónAnfitrión;
+
+            await MoverCámara(270, true);
+        }
+        else
+        {
+            cañónAnfitrión.Activar(false);
+            cañónHuesped.Activar(true);
+
+            turnoJugador = TipoJugador.huesped;
+            cañónActual = cañónHuesped;
+
+            await MoverCámara(450, true);
+        }
+
+        interfaz.ActualizarTurno(cantidadTurnos, multiplicador);
+        partidaActiva = true;
     }
 
     private void Disparar()
@@ -123,7 +148,6 @@ public class ControladorPartidaLocal : AsyncScript
         if (turnoJugador == TipoJugador.anfitrión)
         {
             await MoverCámara(180, true);
-
             cañónHuesped.Activar(true);
             cañónActual = cañónHuesped;
 
