@@ -8,8 +8,8 @@ using static Constantes;
 
 public class ControladorPartidaLocal : SyncScript
 {
-    public ControladorCañon cañónAnfitrión;
-    public ControladorCañon cañónHuesped;
+    public ControladorCañón cañónAnfitrión;
+    public ControladorCañón cañónHuesped;
 
     public TransformComponent ejeCámara;
     public TransformComponent luzDireccional;
@@ -19,7 +19,7 @@ public class ControladorPartidaLocal : SyncScript
     public UIComponent UIElección;
     public ControladorCámara controladorCámara;
 
-    private ControladorCañon cañónActual;
+    private ControladorCañón cañónActual;
     private bool cambiandoTurno;
 
     private TipoJugador turnoJugador;

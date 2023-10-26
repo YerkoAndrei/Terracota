@@ -7,10 +7,10 @@ using static Constantes;
 
 public class ControladorPartidaP2P : AsyncScript
 {
-    public ControladorCañon cañónAnfitrión;
-    public ControladorCañon cañónHuesped;
+    public ControladorCañón cañónAnfitrión;
+    public ControladorCañón cañónHuesped;
 
-    private ControladorCañon cañónActual;
+    private ControladorCañón cañónActual;
     private TipoJugador turnoJugador;
     private bool cambiandoTurno;
 

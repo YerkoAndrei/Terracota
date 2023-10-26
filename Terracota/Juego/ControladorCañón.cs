@@ -8,7 +8,7 @@ namespace Terracota;
 using static Constantes;
 using static Sistema;
 
-public class ControladorCañon : SyncScript
+public class ControladorCañón : SyncScript
 {
     public float fuerzaBala;
     public float fuerzaMetralla;
