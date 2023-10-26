@@ -10,10 +10,6 @@ Hierarchy:
                 Id: 0ec69105-7267-4360-a7fb-f1edee1aee41
                 Name*: Estatua
                 Components:
-                    e58f9403bfc4ac4d1a9891f9a2e0f555: !Terracota.ElementoBloque,Terracota
-                        Id: 91e0ea33-9755-4b97-8b0c-9a1ffbcc19cc
-                        tipoBloque: estatua
-                        cuerpo: ref!! d5cbdf13-4994-46f1-8b41-199738fe2fd0
                     b37cecab06c5f1b5c51ef98207a3b138: !TransformComponent
                         Id: 5595c9cb-68b1-44b5-a09c-96f44eae1c97
                         Position*: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -21,6 +17,10 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             ff2bff364f6f466fdc2497f5fff7dd71: ref!! 40d01a10-7ead-4675-98ce-890d4edc07dc
+                    f180b8d4bd2ff5fd2e4f4f0698b689db: !Terracota.ElementoCreaci%25C3%25B3n,Terracota
+                        Id: 4d68357d-9889-4a82-b255-f70823809275
+                        tipoBloque: estatua
+                        cuerpo: ref!! d5cbdf13-4994-46f1-8b41-199738fe2fd0
         -   Folder: null
             Entity:
                 Id: 731c6ee1-4c72-463b-acc7-c905ea289509

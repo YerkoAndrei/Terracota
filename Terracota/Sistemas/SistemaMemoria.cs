@@ -27,9 +27,9 @@ public class SistemaMemoria : StartupScript
         rutaConfiguración = Path.Combine(carpetaPersistente, archivoConfiguración);
     }
 
-    public static bool GuardarFortaleza(ElementoBloque[] bloques, int ranura, string miniatura)
+    public static bool GuardarFortaleza(ElementoCreación[] bloques, int ranura, string miniatura)
     {
-        var fortalezas = ObtenerFortalezas();
+        var fortalezas = CargarFortalezas();
 
         // Crea nueva fortaleza
         var nuevaFortaleza = new Fortaleza();
@@ -61,7 +61,13 @@ public class SistemaMemoria : StartupScript
         catch { return false; }
     }
 
-    public static List<Fortaleza> ObtenerFortalezas()
+    public static Fortaleza ObtenerFortaleza(int ranura)
+    {
+        var fortalezas = CargarFortalezas();
+        return fortalezas.Where(o => o.ranura == ranura).FirstOrDefault();
+    }
+
+    public static List<Fortaleza> CargarFortalezas()
     {
         if (!Directory.Exists(carpetaPersistente))
             Directory.CreateDirectory(carpetaPersistente);

@@ -54,7 +54,8 @@ public class ControladorCámara : StartupScript
                 luzDireccional.Rotation *= Quaternion.RotationY(0.005f);
 
             tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            await Script.NextFrame();
+            await Task.Delay(1);
+            //await Script.NextFrame();
         }
 
         // Fin
@@ -76,7 +77,8 @@ public class ControladorCámara : StartupScript
             cámara.Position = Vector3.Lerp(posiciónInicial, posiciónObjetivo, tiempo);
 
             tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            await Script.NextFrame();
+            await Task.Delay(1);
+            //await Script.NextFrame();
         }
 
         // Fin

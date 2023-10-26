@@ -15,16 +15,16 @@ public class ControladorCreación : SyncScript
     public CameraComponent cámara;
     public InterfazCreación interfaz;
 
-    public List<ElementoBloque> estatuas = new List<ElementoBloque> { };
-    public List<ElementoBloque> cortos = new List<ElementoBloque> { };
-    public List<ElementoBloque> largos = new List<ElementoBloque> { };
+    public List<ElementoCreación> estatuas = new List<ElementoCreación> { };
+    public List<ElementoCreación> cortos = new List<ElementoCreación> { };
+    public List<ElementoCreación> largos = new List<ElementoCreación> { };
 
-    private ElementoBloque bloqueActual;
+    private ElementoCreación bloqueActual;
     private bool moviendoCámara;
     private Texture backBuffer;
     private Viewport viewport;
 
-    private List<ElementoBloque> bloques;
+    private List<ElementoCreación> bloques;
     private List<Vector3> pocisionesIniciales;
 
     private float rotaciónClic;
@@ -34,7 +34,7 @@ public class ControladorCreación : SyncScript
         backBuffer = GraphicsDevice.Presenter.BackBuffer;
         viewport = new Viewport(0, 0, backBuffer.Width, backBuffer.Height);
 
-        bloques = new List<ElementoBloque>();
+        bloques = new List<ElementoCreación>();
         bloques.AddRange(estatuas);
         bloques.AddRange(cortos);
         bloques.AddRange(largos);
@@ -96,9 +96,9 @@ public class ControladorCreación : SyncScript
 
         var resultado = this.GetSimulation().Raycast(posiciónInicio, pocisiónLejos, CollisionFilterGroups.SensorTrigger, CollisionFilterGroupFlags.DefaultFilter, true);
         if (resultado.Succeeded && bloqueActual == null &&
-            resultado.Collider.Entity.GetParent() != null && resultado.Collider.Entity.GetParent().Get<ElementoBloque>() != null)
+            resultado.Collider.Entity.GetParent() != null && resultado.Collider.Entity.GetParent().Get<ElementoCreación>() != null)
         {
-            var tipoBloque = resultado.Collider.Entity.GetParent().Get<ElementoBloque>().tipoBloque;
+            var tipoBloque = resultado.Collider.Entity.GetParent().Get<ElementoCreación>().tipoBloque;
             var númeroStr = resultado.Collider.Entity.GetParent().Name;
             int número = int.Parse(númeroStr[^1].ToString());
 
@@ -125,7 +125,7 @@ public class ControladorCreación : SyncScript
         sensor.ReiniciarCuerpo(bloqueActual.tipoBloque, bloqueActual.ObtenerRotación());
     }
 
-    public ElementoBloque ObtenerActual()
+    public ElementoCreación ObtenerActual()
     {
         return bloqueActual;
     }

@@ -10,10 +10,6 @@ Hierarchy:
                 Id: 670e7431-4482-412f-8d8b-83cb09f4b1b4
                 Name: Corto
                 Components:
-                    e58f9403bfc4ac4d1a9891f9a2e0f555: !Terracota.ElementoBloque,Terracota
-                        Id: 013463ae-4729-4f74-9590-d8f72c853062
-                        tipoBloque: corto
-                        cuerpo: ref!! 3a5dc20f-b1a0-4971-8443-b0f417423b22
                     b37cecab06c5f1b5c51ef98207a3b138: !TransformComponent
                         Id: 80d19411-e249-4e0e-b9e6-041b6302f6f3
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -21,6 +17,10 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             fc38df4a5ae6491b197784693067739a: ref!! 0d07f6f9-a235-4aa4-8238-f8ff6276dd66
+                    056f25a7bc028bb6d6210ca087271149: !Terracota.ElementoCreaci%25C3%25B3n,Terracota
+                        Id: d02cf9a0-cdaf-4f72-93c0-d2bcc8038a6b
+                        tipoBloque: corto
+                        cuerpo: ref!! 3a5dc20f-b1a0-4971-8443-b0f417423b22
         -   Entity:
                 Id: ea2f82d3-ec71-469a-a6c9-f4c58c6e5bee
                 Name: Modelo Corto

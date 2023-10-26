@@ -47,10 +47,6 @@ Hierarchy:
                 Id: f1b5042e-e1fd-4f4e-9bd3-0cde64dbbaeb
                 Name: Largo
                 Components:
-                    5b64eea8c96ff07560c4595dec9f9468: !Terracota.ElementoBloque,Terracota
-                        Id: ba115fb9-c600-4b54-a3ce-4cf9e2af0d5e
-                        tipoBloque: largo
-                        cuerpo: ref!! 5a6a144a-b91d-4df5-b940-b9feea7b624d
                     fb6521e28c46a3ccda1c58adee930e63: !TransformComponent
                         Id: 5591e0be-0835-45b8-a9ea-f42a953b43be
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -58,3 +54,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             6d316b972fa1acf368049bc6b80c570a: ref!! 5477eab3-3b67-4d18-ba58-2881c10d0a61
+                    5e14a2cc90f42208584267d37bd49eac: !Terracota.ElementoCreaci%25C3%25B3n,Terracota
+                        Id: ca68b5c3-050f-4666-9805-b8f6fc55d3ec
+                        tipoBloque: largo
+                        cuerpo: ref!! 5a6a144a-b91d-4df5-b940-b9feea7b624d

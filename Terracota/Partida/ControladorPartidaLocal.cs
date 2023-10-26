@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Input;
 
@@ -9,6 +10,9 @@ public class ControladorPartidaLocal : AsyncScript
 {
     public ControladorCañón cañónAnfitrión;
     public ControladorCañón cañónHuesped;
+
+    public ControladorFortaleza fortalezaAnfitrión;
+    public ControladorFortaleza fortalezaHuesped;
 
     public ControladorCámara controladorCámara;
     public TransformComponent luzDireccional;
@@ -66,7 +70,12 @@ public class ControladorPartidaLocal : AsyncScript
 
     public void CargarFortaleza(int ranura, bool anfitrión)
     {
+        var fortaleza = SistemaMemoria.ObtenerFortaleza(ranura);
 
+        if(anfitrión)
+            fortalezaAnfitrión.Inicializar(fortaleza, true);
+        else
+            fortalezaHuesped.Inicializar(fortaleza, false);
     }
 
     public void AsignarTurno(bool ganaAnfitrión)
@@ -206,7 +215,7 @@ public class ControladorPartidaLocal : AsyncScript
     }
 
     public void DesactivarEstatua(TipoJugador jugador)
-    {
+    {/*
         if (jugador == TipoJugador.anfitrión)
         {
             interfaz.RestarAnfitrión(estatuasAnfitrión);
@@ -217,7 +226,7 @@ public class ControladorPartidaLocal : AsyncScript
             interfaz.RestarHuesped(estatuasHuesped);
             estatuasHuesped++;
         }
-        VerificarPartida();
+        VerificarPartida();*/
     }
 
     private void VerificarPartida()

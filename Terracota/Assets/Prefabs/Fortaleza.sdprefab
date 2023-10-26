@@ -1,0 +1,1487 @@
+!PrefabAsset
+Id: 24adb94e-a437-4d14-b124-bd9e1fa01c91
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! c9fff448-0158-4954-9881-045109ff4699
+    Parts:
+        -   Folder: null
+            Entity:
+                Id: 0bd4bbcb-0dd0-42dd-b736-ac0a938882b4
+                Name: Bandera
+                Components:
+                    c376e76ea8faadeb37730ecff53b7d5c: !TransformComponent
+                        Id: db82b3f0-e1ea-460e-af8f-0fc7d4250e47
+                        Position: {X: 0.0, Y: 2.7, Z: 0.05}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fc40e600c10f9b65227ac0f836817c9c: !ModelComponent
+                        Id: eb222dbd-c7fd-4baa-885a-74af8b5f8daf
+                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Mono/Bandera
+                        Materials: {}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: af7d3fcd-d621-4c0c-80ed-20a356d32750
+                InstanceId: 551e0bee-17b0-421c-bc1a-480e1c95eb8f
+        -   Folder: null
+            Entity:
+                Id: 0f56fdde-c2fb-40bc-aabb-0663f4fe829c
+                Name: Lanza
+                Components:
+                    aae717941d47dadafb07fc74e51b757a: !TransformComponent
+                        Id: 0aad4596-0523-4407-b746-b44f2c936917
+                        Position: {X: -8.0910235E-07, Y: 2.7, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
+                        Children: {}
+                    a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
+                        Id: 1421efce-c48b-4b3a-8339-9922551a67b8
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: StaticFilter
+                        CanSleep: false
+                        Restitution: 10.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
+                                Radius: 0.25
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: f7806c36-9b87-48a7-b4f6-d614ce7c93ab
+                InstanceId: 551e0bee-17b0-421c-bc1a-480e1c95eb8f
+        -   Folder: null
+            Entity:
+                Id: 143b1618-49ed-4896-868a-84c35c03a54e
+                Name: Modelo Largo
+                Components:
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: 7ca16c87-1ee4-4407-b868-058d266aeb93
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: a8095eda-7001-48c7-9c1e-8953706b4063
+                        Model: 8376cd3c-bb86-4a2a-ae61-842d1cef88ab:Modelos/Largo/Largo
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: a774aeab-adc8-4dc1-8fdf-b1c5cbb55c8c
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.8
+                        RollingFriction: 0.8
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 150.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
+                                Shape: 1d299fda-7add-4645-8ecb-2cb8c515bcfc:Modelos/Largo/ColliderLargo
+            Base:
+                BasePartAsset: c3e1eb07-569c-4430-b6df-621730483430:Prefabs/Largo
+                BasePartId: 7aee0956-0800-4c88-93ee-0d281fcf29e6
+                InstanceId: ad82fa6e-5523-43df-967f-77e38ae00509
+        -   Folder: null
+            Entity:
+                Id: 15304aeb-13c2-4834-87f3-dd2be36565d9
+                Name: Modelo Largo
+                Components:
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: e749e0bd-c359-44c7-b227-11b6023a814a
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: 9e2d73dd-bc17-4fb9-8ebe-8ba28acf28c4
+                        Model: 8376cd3c-bb86-4a2a-ae61-842d1cef88ab:Modelos/Largo/Largo
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: d39e5ee6-c78a-450d-a4cc-80c7f9600190
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.8
+                        RollingFriction: 0.8
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 150.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
+                                Shape: 1d299fda-7add-4645-8ecb-2cb8c515bcfc:Modelos/Largo/ColliderLargo
+            Base:
+                BasePartAsset: c3e1eb07-569c-4430-b6df-621730483430:Prefabs/Largo
+                BasePartId: 7aee0956-0800-4c88-93ee-0d281fcf29e6
+                InstanceId: ac8536f0-6b68-4a4b-8a66-c7b0324c03f6
+        -   Folder: null
+            Entity:
+                Id: 17ed3142-88d5-4473-a77d-a299d2ce8237
+                Name*: Largo 5
+                Components:
+                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
+                        Id: fc739160-5ccf-4a91-b619-69bb041afa1e
+                        Position*: {X: 7.5, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            ab326f135d369e5d6e6e1086288f80a3: ref!! 81dac840-5097-4276-949a-4b2528732cb6
+                    47c776c90758944c8aa93b0dd9548ed8: !Terracota.ElementoBloque,Terracota
+                        Id: f66f2b33-7efd-433e-acd5-247c23519482
+                        tipoBloque: largo
+            Base:
+                BasePartAsset: c3e1eb07-569c-4430-b6df-621730483430:Prefabs/Largo
+                BasePartId: 4e261b7d-1476-4149-ae5a-e14dc2a812d1
+                InstanceId: 9bd92114-109f-4d8e-9151-a7b76d257884
+        -   Folder: null
+            Entity:
+                Id: 1913f40e-215d-48a8-9a56-94cde0e041f4
+                Name*: Corto 0
+                Components:
+                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
+                        Id: f959b3d7-04dc-4d3f-a417-b2ea4643c466
+                        Position*: {X: -6.0, Y: 0.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            e7504ae9c1f63fd886e8d100da9eeb2b: ref!! 18011249-1007-4648-a2b7-ca847155551c
+                    15b088ae1de7b53b1141ea0a122b4481: !Terracota.ElementoBloque,Terracota
+                        Id: 63033029-b9fb-4bf7-881b-815180a9d172
+                        tipoBloque: corto
+            Base:
+                BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
+                BasePartId: 7bfbc985-e878-49aa-948a-892caab395c5
+                InstanceId: 1aa98558-b9b9-4f20-817a-73c09aca6461
+        -   Folder: null
+            Entity:
+                Id: 1a61b322-b70e-43b4-bd5b-240afed26015
+                Name*: Corto 3
+                Components:
+                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
+                        Id: e653c4dd-0b32-4e12-984e-546fe471ce76
+                        Position*: {X: -1.5, Y: 0.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            74aaa2bfe8a91202475ecf7289d3e4c3: ref!! 70761da0-dcc9-42d3-8765-86f5b7e348ba
+                    15b088ae1de7b53b1141ea0a122b4481: !Terracota.ElementoBloque,Terracota
+                        Id: 6e8413ab-69a9-409b-8773-a7cca418628d
+                        tipoBloque: corto
+            Base:
+                BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
+                BasePartId: 7bfbc985-e878-49aa-948a-892caab395c5
+                InstanceId: 0a086c82-9866-4444-a801-3638d55b2892
+        -   Folder: null
+            Entity:
+                Id: 1ad6bc1a-f166-4a2c-a76c-dc97e34e97c0
+                Name*: Largo 1
+                Components:
+                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
+                        Id: 0cc11fc7-39cd-4feb-a399-64138790fc4c
+                        Position*: {X: -4.5, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            ab326f135d369e5d6e6e1086288f80a3: ref!! eb34c5b4-804d-4438-9075-f520aac97e3e
+                    47c776c90758944c8aa93b0dd9548ed8: !Terracota.ElementoBloque,Terracota
+                        Id: d0554128-3014-4a45-a06c-10652d24a8a1
+                        tipoBloque: largo
+            Base:
+                BasePartAsset: c3e1eb07-569c-4430-b6df-621730483430:Prefabs/Largo
+                BasePartId: 4e261b7d-1476-4149-ae5a-e14dc2a812d1
+                InstanceId: 304384c1-9b6d-4eee-9244-fc00e7fc9f00
+        -   Folder: null
+            Entity:
+                Id: 1e20473b-de4e-423c-8574-772616dc1d98
+                Name*: Largo 3
+                Components:
+                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
+                        Id: 31856de1-bf50-43b5-8815-84b329e72d99
+                        Position*: {X: 1.5, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            ab326f135d369e5d6e6e1086288f80a3: ref!! cd7148db-d0e1-43a6-bdf5-bfc08ae8ea2f
+                    47c776c90758944c8aa93b0dd9548ed8: !Terracota.ElementoBloque,Terracota
+                        Id: bfdcfa78-8897-47de-9a46-9a3d580e592e
+                        tipoBloque: largo
+            Base:
+                BasePartAsset: c3e1eb07-569c-4430-b6df-621730483430:Prefabs/Largo
+                BasePartId: 4e261b7d-1476-4149-ae5a-e14dc2a812d1
+                InstanceId: adcb92f4-9de0-4ca5-b56d-a48e947bfe52
+        -   Folder: null
+            Entity:
+                Id: 2105dae7-656b-4760-a139-e32a627c62cf
+                Name: Modelo Corto
+                Components:
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: a1728cbd-bf42-4b97-b4cf-e5ac45ca086c
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: f5e0e571-c2dd-4b11-b079-3be6e85eaed0
+                        Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: 3ff628a2-82e5-450f-a273-2457314b769e
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.8
+                        RollingFriction: 0.8
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
+                                Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/ColliderCorto
+            Base:
+                BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
+                BasePartId: cba927cc-2354-4112-a312-644e88b8deda
+                InstanceId: 46b84d1e-66b4-4e1e-94c4-ea19f82f170a
+        -   Folder: null
+            Entity:
+                Id: 2ef94795-7fcd-4dc8-b784-b1aee94f67c7
+                Name: Modelo Corto
+                Components:
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: 7a05660e-802b-4974-89a4-eb3551900c5d
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: 3582c79f-24ee-4a78-8044-eb8472a09d7d
+                        Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: 6ea07220-28cb-48e6-90a8-46bb59a3bb30
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.8
+                        RollingFriction: 0.8
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
+                                Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/ColliderCorto
+            Base:
+                BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
+                BasePartId: cba927cc-2354-4112-a312-644e88b8deda
+                InstanceId: 311e5b62-e4c3-498d-ace5-8f0616884945
+        -   Folder: null
+            Entity:
+                Id: 2fb859c9-4748-485f-a769-711e5e9ac687
+                Name*: Corto 1
+                Components:
+                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
+                        Id: b74e9a10-231d-4c39-8195-ecf90fccf257
+                        Position*: {X: -4.5, Y: 0.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            500381d0b56b8671feb3c6dcfcf7cfab: ref!! d7c7af29-e20b-405c-9c61-3505e67023db
+                    15b088ae1de7b53b1141ea0a122b4481: !Terracota.ElementoBloque,Terracota
+                        Id: b303d27c-5292-488a-a7ae-7cf9248bcc06
+                        tipoBloque: corto
+            Base:
+                BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
+                BasePartId: 7bfbc985-e878-49aa-948a-892caab395c5
+                InstanceId: 6a339d86-9f87-4bee-96b9-c0c18e22fbf4
+        -   Folder: null
+            Entity:
+                Id: 354c45d7-aba9-4032-b2b3-45bf3ce1bdda
+                Name*: Largo 4
+                Components:
+                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
+                        Id: 12b4e687-7238-4a38-b56c-d417125b940f
+                        Position*: {X: 4.5, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            ab326f135d369e5d6e6e1086288f80a3: ref!! e749e0bd-c359-44c7-b227-11b6023a814a
+                    47c776c90758944c8aa93b0dd9548ed8: !Terracota.ElementoBloque,Terracota
+                        Id: 304dda37-bcc6-448d-b45b-692e00fb99a6
+                        tipoBloque: largo
+            Base:
+                BasePartAsset: c3e1eb07-569c-4430-b6df-621730483430:Prefabs/Largo
+                BasePartId: 4e261b7d-1476-4149-ae5a-e14dc2a812d1
+                InstanceId: ac8536f0-6b68-4a4b-8a66-c7b0324c03f6
+        -   Folder: null
+            Entity:
+                Id: 36b316aa-9d4e-4f8f-a3a2-56ac244227d5
+                Name: Modelo Corto
+                Components:
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: d7c7af29-e20b-405c-9c61-3505e67023db
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: 3bef36da-2f13-42aa-abdf-16552de3f5b7
+                        Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: a06281c9-f4a9-4760-b3c1-5555f4598a30
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.8
+                        RollingFriction: 0.8
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
+                                Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/ColliderCorto
+            Base:
+                BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
+                BasePartId: cba927cc-2354-4112-a312-644e88b8deda
+                InstanceId: 6a339d86-9f87-4bee-96b9-c0c18e22fbf4
+        -   Folder: null
+            Entity:
+                Id: 389f8455-e1b5-42e2-848a-c7e426cd4e3d
+                Name*: Largo 2
+                Components:
+                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
+                        Id: fedc57a1-c326-426f-a585-54b442816491
+                        Position*: {X: -1.5, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            ab326f135d369e5d6e6e1086288f80a3: ref!! caf74b34-664f-4983-8bad-75c10d14db44
+                    47c776c90758944c8aa93b0dd9548ed8: !Terracota.ElementoBloque,Terracota
+                        Id: 1a161554-978b-49c8-96e0-28c34e5dcf11
+                        tipoBloque: largo
+            Base:
+                BasePartAsset: c3e1eb07-569c-4430-b6df-621730483430:Prefabs/Largo
+                BasePartId: 4e261b7d-1476-4149-ae5a-e14dc2a812d1
+                InstanceId: f9428539-cfb4-4d44-815e-0b3e7146390b
+        -   Folder: null
+            Entity:
+                Id: 3ed8f5bc-4da5-4515-914f-06dea1d87ed6
+                Name: Modelo Corto
+                Components:
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: 4f74a2b8-b510-4ed3-8828-d360c702dc9e
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: f3814c33-8cbe-43a1-a2e9-67ac5d3e3ec8
+                        Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: 5cad5f40-aedb-4340-a7cd-a135b8d080b0
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.8
+                        RollingFriction: 0.8
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
+                                Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/ColliderCorto
+            Base:
+                BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
+                BasePartId: cba927cc-2354-4112-a312-644e88b8deda
+                InstanceId: 2553de89-5a9d-49a1-b5e7-006810078657
+        -   Folder: null
+            Entity:
+                Id: 4e168fc0-231e-4d20-a3fd-2d6d511cc270
+                Name: Modelo Largo
+                Components:
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: caf74b34-664f-4983-8bad-75c10d14db44
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: f949e60d-307e-4b87-842f-6495b8b49798
+                        Model: 8376cd3c-bb86-4a2a-ae61-842d1cef88ab:Modelos/Largo/Largo
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: abf00b1d-0b1d-4739-b82f-730775dc356a
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.8
+                        RollingFriction: 0.8
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 150.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
+                                Shape: 1d299fda-7add-4645-8ecb-2cb8c515bcfc:Modelos/Largo/ColliderLargo
+            Base:
+                BasePartAsset: c3e1eb07-569c-4430-b6df-621730483430:Prefabs/Largo
+                BasePartId: 7aee0956-0800-4c88-93ee-0d281fcf29e6
+                InstanceId: f9428539-cfb4-4d44-815e-0b3e7146390b
+        -   Folder: null
+            Entity:
+                Id: 4ff27906-120f-4d39-9e2b-c7a82bac78aa
+                Name*: Corto 8
+                Components:
+                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
+                        Id: 894d72ad-3eeb-41ea-8e7a-5b27e1f8434a
+                        Position*: {X: 6.0, Y: 0.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            b3defb8b8cf7207d6489fda3bbccb326: ref!! 5a83f9ed-cbb3-4db9-bc8a-6cab2de709c0
+                    15b088ae1de7b53b1141ea0a122b4481: !Terracota.ElementoBloque,Terracota
+                        Id: 02f6a7be-5ff5-49a3-9081-f7548ada2bc7
+                        tipoBloque: corto
+            Base:
+                BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
+                BasePartId: 7bfbc985-e878-49aa-948a-892caab395c5
+                InstanceId: 3e40207d-000b-43b8-b4bb-562495ebbd30
+        -   Folder: null
+            Entity:
+                Id: 5094df51-633d-48b9-9b52-dc2eef9d3af6
+                Name*: Corto 6
+                Components:
+                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
+                        Id: 8717010b-27d8-460a-b61c-2898248210e1
+                        Position*: {X: 3.0, Y: 0.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            33e06d4d778f3c591db310b4f5034a66: ref!! 6ad13b82-b40c-489c-9c52-c5f03f1c8e3c
+                    15b088ae1de7b53b1141ea0a122b4481: !Terracota.ElementoBloque,Terracota
+                        Id: e798ec11-0f54-4c98-89ed-053c95a9a2bc
+                        tipoBloque: corto
+            Base:
+                BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
+                BasePartId: 7bfbc985-e878-49aa-948a-892caab395c5
+                InstanceId: 0eae2552-06b4-47b5-9beb-d6da3d1c1b2b
+        -   Folder: null
+            Entity:
+                Id: 5d2bf67e-41c6-4ca9-a613-5ecc9fbf5d39
+                Name: Modelo Estatua
+                Components:
+                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
+                        Id: 8d2faada-c9ff-450b-bf6b-13bf94f11008
+                        Position: {X: 0.0, Y: 0.8, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            284c31bb08ff0e41bf0fb2e98bf60d5f: ref!! 3914e48c-5054-4e43-b6b9-81e8257017f3
+                            703588278c1637f9917cb87be33b3661: ref!! a0d08850-883f-4a28-bdc1-f82b295a7fa5
+                    7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
+                        Id: 6125e9a2-cf80-42a2-8a96-24bd4ce1e4f6
+                        Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
+                        Materials: {}
+                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
+                        Id: 2ad9e193-ef3a-49b7-b5b5-039fdbfb5f7e
+                        CollisionGroup: CharacterFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.5
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 400.0
+                        LinearDamping: 0.2
+                        AngularDamping: 0.2
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
+                                Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Mono/ColliderMono
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: b846398e-bc6c-47ed-bb1c-425e4e5347fa
+                InstanceId: 907cb55d-37d7-4a9f-aa2d-5d9fb80dcf2b
+        -   Folder: null
+            Entity:
+                Id: 5f3bdce5-5352-4dcf-941f-8407495caa9b
+                Name: Modelo Lanza
+                Components:
+                    ce491b1235ced4211f49d26b1c27d42d: !TransformComponent
+                        Id: 3914e48c-5054-4e43-b6b9-81e8257017f3
+                        Position: {X: 0.0, Y: -0.8, Z: 0.6}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            735332be101c4d86459e6f308e11e07d: ref!! 5b640721-ad86-4d4d-b0fe-f0c706fff2c2
+                            38649db20b08001a933217225e4dbe3f: ref!! 1f2420e4-d4c6-4ae2-b01a-9e30ead83d8d
+                    8bb144e93510cbf705d04c9148ca913f: !ModelComponent
+                        Id: cb3e5140-bfca-4fe4-a533-6181dd986c95
+                        Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Mono/Lanza
+                        Materials: {}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: ee47acaf-0873-4afd-b17d-c21feab51824
+                InstanceId: 907cb55d-37d7-4a9f-aa2d-5d9fb80dcf2b
+        -   Folder: null
+            Entity:
+                Id: 6cea8752-964c-49e0-bfd6-d95f5db52aa1
+                Name*: Corto 4
+                Components:
+                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
+                        Id: 919a2e71-ae53-4961-ae11-71a79b6d4680
+                        Position*: {X: 0.0, Y: 0.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            bd79e4231338fcc132af826745438abf: ref!! a1728cbd-bf42-4b97-b4cf-e5ac45ca086c
+                    15b088ae1de7b53b1141ea0a122b4481: !Terracota.ElementoBloque,Terracota
+                        Id: e934df0c-8ac0-4dc2-8b40-5568618ba7d1
+                        tipoBloque: corto
+            Base:
+                BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
+                BasePartId: 7bfbc985-e878-49aa-948a-892caab395c5
+                InstanceId: 46b84d1e-66b4-4e1e-94c4-ea19f82f170a
+        -   Folder: null
+            Entity:
+                Id: 6d5c8925-72f2-4f64-840b-f650a8d99a01
+                Name*: Largo 0
+                Components:
+                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
+                        Id: 789545e4-f802-452d-9dbf-f6e12908ecb3
+                        Position*: {X: -7.5, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            ab326f135d369e5d6e6e1086288f80a3: ref!! 7ca16c87-1ee4-4407-b868-058d266aeb93
+                    47c776c90758944c8aa93b0dd9548ed8: !Terracota.ElementoBloque,Terracota
+                        Id: 146fb9cd-ac6b-4718-a440-a01a4a660fdf
+                        tipoBloque: largo
+            Base:
+                BasePartAsset: c3e1eb07-569c-4430-b6df-621730483430:Prefabs/Largo
+                BasePartId: 4e261b7d-1476-4149-ae5a-e14dc2a812d1
+                InstanceId: ad82fa6e-5523-43df-967f-77e38ae00509
+        -   Folder: null
+            Entity:
+                Id: 71357ac7-76a4-4b84-bf5c-4f3ff39a4893
+                Name*: Estatua 0
+                Components:
+                    1ff5b84f1e279da93224f2a5edcc3f59: !TransformComponent
+                        Id: cc3fb425-3929-4649-9d76-3e3c4ebc04d8
+                        Position*: {X: -4.0, Y: 0.0, Z: 2.0}
+                        Rotation*: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            b9a6de9d3e362d0511a1a20a34248d55: ref!! 139ba499-7c6f-4bf9-afd2-32424883e02e
+                    74bf11dd4dd7e8fa7f6dd5d9df36ec37: !Terracota.ElementoBloque,Terracota
+                        Id: 6bbc0e27-be18-4ba1-9857-a1b2955e760f
+                        tipoBloque: estatua
+                    fb06c492109ce5cf0499d7d8846d1f46: !Terracota.ControladorEstatua,Terracota
+                        Id: d3666f7d-82ec-4b19-8e31-e296d7009e6f
+                        jugador: nada
+                        estatua: ref!! 139ba499-7c6f-4bf9-afd2-32424883e02e
+                        cuerpo: ref!! 04be44dc-f1a6-46d1-b53c-783d03874f82
+                        cabeza: ref!! 6868a153-3d01-44d6-9cc0-22f68cebcdbc
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: 56f5ad60-3d77-4bf7-9c13-cbb046c76088
+                InstanceId: 7366682c-82f0-445d-8f00-19e340235152
+        -   Folder: null
+            Entity:
+                Id: 74fb447b-350f-4d49-bca6-2727fabc9d9f
+                Name: Modelo Largo
+                Components:
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: cd7148db-d0e1-43a6-bdf5-bfc08ae8ea2f
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: 775baf79-e314-4732-959e-5304699a7014
+                        Model: 8376cd3c-bb86-4a2a-ae61-842d1cef88ab:Modelos/Largo/Largo
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: 5ec2a448-0bde-4571-8cd3-979a90e93240
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.8
+                        RollingFriction: 0.8
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 150.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
+                                Shape: 1d299fda-7add-4645-8ecb-2cb8c515bcfc:Modelos/Largo/ColliderLargo
+            Base:
+                BasePartAsset: c3e1eb07-569c-4430-b6df-621730483430:Prefabs/Largo
+                BasePartId: 7aee0956-0800-4c88-93ee-0d281fcf29e6
+                InstanceId: adcb92f4-9de0-4ca5-b56d-a48e947bfe52
+        -   Folder: null
+            Entity:
+                Id: 766c7470-04d7-4f4f-aefa-2d19232ccc4a
+                Name: Modelo Corto
+                Components:
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: 5a83f9ed-cbb3-4db9-bc8a-6cab2de709c0
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: 0423eff6-c8ed-4375-9dfe-86bb2988bd8a
+                        Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: ac75f1a8-8f8a-4289-8608-2c7ce1fdb9f0
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.8
+                        RollingFriction: 0.8
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
+                                Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/ColliderCorto
+            Base:
+                BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
+                BasePartId: cba927cc-2354-4112-a312-644e88b8deda
+                InstanceId: 3e40207d-000b-43b8-b4bb-562495ebbd30
+        -   Folder: null
+            Entity:
+                Id: 7b2c87d6-7bb5-447a-9b27-601fce315106
+                Name: Largos
+                Components:
+                    a5b403a2a8b6441dc2182a3018221b1c: !TransformComponent
+                        Id: 9058f57c-4eaf-4217-a37f-7dac6ac98a54
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            6bb111c581908cab7657635be267f27e: ref!! 789545e4-f802-452d-9dbf-f6e12908ecb3
+                            f92d00f4238283e318aedd4f6a896273: ref!! 0cc11fc7-39cd-4feb-a399-64138790fc4c
+                            c0e3e12c742635b80f4b040d5cb71288: ref!! fedc57a1-c326-426f-a585-54b442816491
+                            9477684a48e400c6b6c755d2af89f3c9: ref!! 31856de1-bf50-43b5-8815-84b329e72d99
+                            eab20a432ddc341a84c6be22cf5b4cbb: ref!! 12b4e687-7238-4a38-b56c-d417125b940f
+                            bef01a726d161fdef780c2732c9c19a6: ref!! fc739160-5ccf-4a91-b619-69bb041afa1e
+        -   Folder: null
+            Entity:
+                Id: 8040b2a6-bc39-46a5-a946-e4cd5fdb35e3
+                Name: Modelo Corto
+                Components:
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: 18011249-1007-4648-a2b7-ca847155551c
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: 7d57b470-1e62-4da6-8474-5138ab68c9c4
+                        Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: 3b56134c-5fb5-4133-a9ec-e88e4ed4f28b
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.8
+                        RollingFriction: 0.8
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
+                                Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/ColliderCorto
+            Base:
+                BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
+                BasePartId: cba927cc-2354-4112-a312-644e88b8deda
+                InstanceId: 1aa98558-b9b9-4f20-817a-73c09aca6461
+        -   Folder: null
+            Entity:
+                Id: 82777100-440e-4c8f-aabd-d02f19715a6a
+                Name: Cabeza
+                Components:
+                    aae717941d47dadafb07fc74e51b757a: !TransformComponent
+                        Id: a0d08850-883f-4a28-bdc1-f82b295a7fa5
+                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
+                        Children: {}
+                    a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
+                        Id: 76198077-f0fc-4680-8a90-caa45fc999bf
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: SensorTrigger
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
+                                Radius: 0.52
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: d9a9e123-b76c-4584-beef-96a502353fcb
+                InstanceId: 907cb55d-37d7-4a9f-aa2d-5d9fb80dcf2b
+        -   Folder: null
+            Entity:
+                Id: 8be65bbb-fb13-45ae-816b-918a48f1da9c
+                Name*: Corto 7
+                Components:
+                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
+                        Id: 01b5abc6-2eb1-4c28-9299-946d48f57a7d
+                        Position*: {X: 4.5, Y: 0.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            f995c84c1823da50eeef2f47987d3356: ref!! 071c4b6a-2aea-4d64-8197-35c48aa00c68
+                    15b088ae1de7b53b1141ea0a122b4481: !Terracota.ElementoBloque,Terracota
+                        Id: f744480d-6bbc-43b4-a546-01cad6d626f6
+                        tipoBloque: corto
+            Base:
+                BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
+                BasePartId: 7bfbc985-e878-49aa-948a-892caab395c5
+                InstanceId: 9cb59251-bd14-40cb-9f21-31c8a2fe45c4
+        -   Folder: null
+            Entity:
+                Id: 8d47f885-f697-40bd-bd49-69be9510753e
+                Name: Bandera
+                Components:
+                    c376e76ea8faadeb37730ecff53b7d5c: !TransformComponent
+                        Id: 1f2420e4-d4c6-4ae2-b01a-9e30ead83d8d
+                        Position: {X: 0.0, Y: 2.7, Z: 0.05}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fc40e600c10f9b65227ac0f836817c9c: !ModelComponent
+                        Id: 2923df23-5ac7-4d37-bc3a-9e97564ca287
+                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Mono/Bandera
+                        Materials: {}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: af7d3fcd-d621-4c0c-80ed-20a356d32750
+                InstanceId: 907cb55d-37d7-4a9f-aa2d-5d9fb80dcf2b
+        -   Folder: null
+            Entity:
+                Id: 94440f63-9462-4ebd-bd52-08e1439096aa
+                Name: Modelo Corto
+                Components:
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: 70761da0-dcc9-42d3-8765-86f5b7e348ba
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: cf303c4c-5631-4cde-b972-850188698b80
+                        Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: 38d958b6-10fc-4387-a4f3-a3ecb0871ae0
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.8
+                        RollingFriction: 0.8
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
+                                Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/ColliderCorto
+            Base:
+                BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
+                BasePartId: cba927cc-2354-4112-a312-644e88b8deda
+                InstanceId: 0a086c82-9866-4444-a801-3638d55b2892
+        -   Folder: null
+            Entity:
+                Id: 9f9bc5f8-a762-4c49-8985-8b452425d1b3
+                Name: Modelo Lanza
+                Components:
+                    ce491b1235ced4211f49d26b1c27d42d: !TransformComponent
+                        Id: 4a766c49-03be-4c17-a1b9-704e4bbb370a
+                        Position: {X: 0.0, Y: -0.8, Z: 0.6}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            19e07f746ecc6784647525be1a0f4f3d: ref!! 0aad4596-0523-4407-b746-b44f2c936917
+                            f66204436139f5b77ac82a17c2423511: ref!! db82b3f0-e1ea-460e-af8f-0fc7d4250e47
+                    8bb144e93510cbf705d04c9148ca913f: !ModelComponent
+                        Id: 7a8dd283-a3ba-4376-9048-f55b6fcd5552
+                        Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Mono/Lanza
+                        Materials: {}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: ee47acaf-0873-4afd-b17d-c21feab51824
+                InstanceId: 551e0bee-17b0-421c-bc1a-480e1c95eb8f
+        -   Folder: null
+            Entity:
+                Id: a51cf7cc-0d83-48ee-9ee2-2274580ede1b
+                Name: Lanza
+                Components:
+                    aae717941d47dadafb07fc74e51b757a: !TransformComponent
+                        Id: 5b640721-ad86-4d4d-b0fe-f0c706fff2c2
+                        Position: {X: -8.0910235E-07, Y: 2.7, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
+                        Children: {}
+                    a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
+                        Id: 3ab139b7-db0c-44fa-ae20-c78bd8fb2270
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: StaticFilter
+                        CanSleep: false
+                        Restitution: 10.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
+                                Radius: 0.25
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: f7806c36-9b87-48a7-b4f6-d614ce7c93ab
+                InstanceId: 907cb55d-37d7-4a9f-aa2d-5d9fb80dcf2b
+        -   Folder: null
+            Entity:
+                Id: ab17e97e-9905-45b4-932e-be755c2f6b92
+                Name*: Corto 5
+                Components:
+                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
+                        Id: c93794a6-9ab7-4dcf-bf17-5ef846f7ebac
+                        Position*: {X: 1.5, Y: 0.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            0904042a1769949ca7bcec369231a336: ref!! 7a05660e-802b-4974-89a4-eb3551900c5d
+                    15b088ae1de7b53b1141ea0a122b4481: !Terracota.ElementoBloque,Terracota
+                        Id: bc22f17e-4cb9-4080-aed1-ee700c0fe26b
+                        tipoBloque: corto
+            Base:
+                BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
+                BasePartId: 7bfbc985-e878-49aa-948a-892caab395c5
+                InstanceId: 311e5b62-e4c3-498d-ace5-8f0616884945
+        -   Folder: null
+            Entity:
+                Id: af1abac3-e06a-4cf4-95b9-8622cb991366
+                Name*: Corto 2
+                Components:
+                    0eabf5bba933c7faa52215d1567d3275: !TransformComponent
+                        Id: 83be953b-e573-43b5-b77d-95ef65ad4c5a
+                        Position*: {X: -3.0, Y: 0.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            a299a6b1beb219396903c79b67b48f80: ref!! 4f74a2b8-b510-4ed3-8828-d360c702dc9e
+                    15b088ae1de7b53b1141ea0a122b4481: !Terracota.ElementoBloque,Terracota
+                        Id: 522700c4-8f13-4147-bb61-490b40786224
+                        tipoBloque: corto
+            Base:
+                BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
+                BasePartId: 7bfbc985-e878-49aa-948a-892caab395c5
+                InstanceId: 2553de89-5a9d-49a1-b5e7-006810078657
+        -   Folder: null
+            Entity:
+                Id: b37f9607-7bb2-4b22-adee-010950cda36b
+                Name: Cabeza
+                Components:
+                    aae717941d47dadafb07fc74e51b757a: !TransformComponent
+                        Id: 5d1eb70e-728c-42b2-9438-709e363b376f
+                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
+                        Children: {}
+                    a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
+                        Id: 11f58832-3376-4bf1-a49b-705f58b578eb
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: SensorTrigger
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
+                                Radius: 0.52
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: d9a9e123-b76c-4584-beef-96a502353fcb
+                InstanceId: 551e0bee-17b0-421c-bc1a-480e1c95eb8f
+        -   Folder: null
+            Entity:
+                Id: bad42029-ecb8-4e64-a8e7-a4302f3d1f95
+                Name: Modelo Corto
+                Components:
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: 071c4b6a-2aea-4d64-8197-35c48aa00c68
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: 635b4510-3503-4f85-920c-1132b0af7478
+                        Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: ad0dd86d-ed0b-4e89-9ca5-6811b189aa6f
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.8
+                        RollingFriction: 0.8
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
+                                Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/ColliderCorto
+            Base:
+                BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
+                BasePartId: cba927cc-2354-4112-a312-644e88b8deda
+                InstanceId: 9cb59251-bd14-40cb-9f21-31c8a2fe45c4
+        -   Folder: null
+            Entity:
+                Id: bb43e2b8-4f9c-4e85-88b1-ef1d6fe48747
+                Name*: Estatua 2
+                Components:
+                    1ff5b84f1e279da93224f2a5edcc3f59: !TransformComponent
+                        Id: 2fad52b8-2bfa-4d31-a5ff-c8bd5c30ed26
+                        Position*: {X: 4.0, Y: 0.0, Z: 2.0}
+                        Rotation*: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            b9a6de9d3e362d0511a1a20a34248d55: ref!! 397593d2-e5f1-4a52-a833-775341aa56cb
+                    74bf11dd4dd7e8fa7f6dd5d9df36ec37: !Terracota.ElementoBloque,Terracota
+                        Id: 943b85e1-f900-447b-99ba-982dd956ef11
+                        tipoBloque: estatua
+                    fb06c492109ce5cf0499d7d8846d1f46: !Terracota.ControladorEstatua,Terracota
+                        Id: fd0f84a3-b8c1-4d97-8018-8f6ee94d5291
+                        jugador: nada
+                        estatua: ref!! 397593d2-e5f1-4a52-a833-775341aa56cb
+                        cuerpo: ref!! 8773843d-9651-4552-bc32-04f1a62b86a4
+                        cabeza: ref!! 11f58832-3376-4bf1-a49b-705f58b578eb
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: 56f5ad60-3d77-4bf7-9c13-cbb046c76088
+                InstanceId: 551e0bee-17b0-421c-bc1a-480e1c95eb8f
+        -   Folder: null
+            Entity:
+                Id: c6af2aca-9b37-4c34-a01a-5ad9725bb99d
+                Name: Cabeza
+                Components:
+                    aae717941d47dadafb07fc74e51b757a: !TransformComponent
+                        Id: 2d27482e-3b29-47f7-8416-6eafc14d4aad
+                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
+                        Children: {}
+                    a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
+                        Id: 6868a153-3d01-44d6-9cc0-22f68cebcdbc
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: SensorTrigger
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
+                                Radius: 0.52
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: d9a9e123-b76c-4584-beef-96a502353fcb
+                InstanceId: 7366682c-82f0-445d-8f00-19e340235152
+        -   Entity:
+                Id: c9fff448-0158-4954-9881-045109ff4699
+                Name: Fortaleza
+                Components:
+                    5daf95322206bf8d422c5a6578a7e451: !TransformComponent
+                        Id: b471205b-2ceb-49b3-9d2d-3cd98080bd5f
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3bd4a81e34da8d0f5d0a980cbd642f4a: ref!! f8b554eb-0336-436b-bb79-81d20d16f44d
+                            f89320cd36c2ea4dac0117137925d2ea: ref!! 9058f57c-4eaf-4217-a37f-7dac6ac98a54
+                            33799457384ad6f2cb10db4eca630a2e: ref!! cc3fb425-3929-4649-9d76-3e3c4ebc04d8
+                            0d3882ad2fa9cafde13d644947014a8c: ref!! 59375fc9-e056-40d8-9ed7-c85dfff460bc
+                            b1b9f7c876004d748ddf107ec69a7c49: ref!! 2fad52b8-2bfa-4d31-a5ff-c8bd5c30ed26
+                    a2d5070b7aaa4565a677d8a7ee568d65: !Terracota.ControladorFortaleza,Terracota
+                        Id: fc307d75-a87d-49da-8f9e-c3bf9967baaf
+                        estatuas:
+                            775d2298c8797b09f29bfd8f0bbfcb46: ref!! 6bbc0e27-be18-4ba1-9857-a1b2955e760f
+                            9fb094d7568cffd83fd4e0fb4f3632d7: ref!! 662e3300-3c08-4596-82ba-9a69d21e71f3
+                            ed0f3d22e2a807f3b6e855ca9912649a: ref!! 943b85e1-f900-447b-99ba-982dd956ef11
+                        cortos:
+                            c65d8df449234113e218d04cf9c381eb: ref!! 63033029-b9fb-4bf7-881b-815180a9d172
+                            ca0c209eada0daead5aba445de5108da: ref!! b303d27c-5292-488a-a7ae-7cf9248bcc06
+                            3b4015df9cca4e0cc4523020845fa1ea: ref!! 522700c4-8f13-4147-bb61-490b40786224
+                            b562bd22b2c89e390e8765e25b9442aa: ref!! 6e8413ab-69a9-409b-8773-a7cca418628d
+                            1b550b366ba862824bcec0f1a945de51: ref!! e934df0c-8ac0-4dc2-8b40-5568618ba7d1
+                            8efe4b23a45ed7674477b6d7b2a90fbf: ref!! bc22f17e-4cb9-4080-aed1-ee700c0fe26b
+                            cc928686b48dfa4a30f5b5eb6d0775d9: ref!! e798ec11-0f54-4c98-89ed-053c95a9a2bc
+                            ddab4bc56ca645fedff31b704e05b09e: ref!! f744480d-6bbc-43b4-a546-01cad6d626f6
+                            e7d182133d8f531fde9dd05d658db357: ref!! 02f6a7be-5ff5-49a3-9081-f7548ada2bc7
+                        largos:
+                            b5c983e4e73c498dc1c2907a397be479: ref!! 146fb9cd-ac6b-4718-a440-a01a4a660fdf
+                            d42e81cdd3b3f23cea5def0fc1c4dfca: ref!! d0554128-3014-4a45-a06c-10652d24a8a1
+                            517c4e3f002435eb01d6a698b0118bd2: ref!! 1a161554-978b-49c8-96e0-28c34e5dcf11
+                            3dd6d4b82c7f025171374a7b53c55614: ref!! bfdcfa78-8897-47de-9a46-9a3d580e592e
+                            5581f617d6caf9f4c9064a852b9f1ca2: ref!! 304dda37-bcc6-448d-b45b-692e00fb99a6
+                            ad83bdb5e98ec793f3c84d774bb065ec: ref!! f66f2b33-7efd-433e-acd5-247c23519482
+        -   Folder: null
+            Entity:
+                Id: d1438f55-f3c0-4464-98c8-dc05497720f1
+                Name: Modelo Lanza
+                Components:
+                    ce491b1235ced4211f49d26b1c27d42d: !TransformComponent
+                        Id: 6aeb396e-1317-4624-bc3c-e44fc12a766c
+                        Position: {X: 0.0, Y: -0.8, Z: 0.6}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            5b302fc42dc76827d6b8f36805f9b9da: ref!! fa52b556-c5da-45ba-b939-220328039c55
+                            3d48eaf39327744dcac361c2b7ffdacc: ref!! ede38f45-3f43-4a1f-806b-1307d94b57d5
+                    8bb144e93510cbf705d04c9148ca913f: !ModelComponent
+                        Id: d8ed4aba-93ef-45b0-a517-ff29ec7d5267
+                        Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Mono/Lanza
+                        Materials: {}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: ee47acaf-0873-4afd-b17d-c21feab51824
+                InstanceId: 7366682c-82f0-445d-8f00-19e340235152
+        -   Folder: null
+            Entity:
+                Id: d185eeea-0cac-405c-934d-27d504f3c98c
+                Name: Modelo Corto
+                Components:
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: 6ad13b82-b40c-489c-9c52-c5f03f1c8e3c
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: 32dab611-9a4f-467a-b8fa-a19b4c6242b6
+                        Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: eebc076a-b0eb-4286-84dc-61afa475d27b
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.8
+                        RollingFriction: 0.8
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
+                                Shape: de9d15ca-af70-4d5c-b871-69bb333d0816:Modelos/Corto/ColliderCorto
+            Base:
+                BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
+                BasePartId: cba927cc-2354-4112-a312-644e88b8deda
+                InstanceId: 0eae2552-06b4-47b5-9beb-d6da3d1c1b2b
+        -   Folder: null
+            Entity:
+                Id: d702a0c1-1ce7-4fae-802b-42a70cdeee62
+                Name: Modelo Largo
+                Components:
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: eb34c5b4-804d-4438-9075-f520aac97e3e
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: 370fb3e3-60ab-484c-b236-23977b7ed39f
+                        Model: 8376cd3c-bb86-4a2a-ae61-842d1cef88ab:Modelos/Largo/Largo
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: 690e12cd-c916-49d7-a7ae-0df12b7fda2e
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.8
+                        RollingFriction: 0.8
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 150.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
+                                Shape: 1d299fda-7add-4645-8ecb-2cb8c515bcfc:Modelos/Largo/ColliderLargo
+            Base:
+                BasePartAsset: c3e1eb07-569c-4430-b6df-621730483430:Prefabs/Largo
+                BasePartId: 7aee0956-0800-4c88-93ee-0d281fcf29e6
+                InstanceId: 304384c1-9b6d-4eee-9244-fc00e7fc9f00
+        -   Folder: null
+            Entity:
+                Id: d7f92aff-625b-45a9-9c0e-9d4e4089ccb2
+                Name*: Estatua 1
+                Components:
+                    1ff5b84f1e279da93224f2a5edcc3f59: !TransformComponent
+                        Id: 59375fc9-e056-40d8-9ed7-c85dfff460bc
+                        Position*: {X: 0.0, Y: 0.0, Z: 2.0}
+                        Rotation*: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            b9a6de9d3e362d0511a1a20a34248d55: ref!! 8d2faada-c9ff-450b-bf6b-13bf94f11008
+                    74bf11dd4dd7e8fa7f6dd5d9df36ec37: !Terracota.ElementoBloque,Terracota
+                        Id: 662e3300-3c08-4596-82ba-9a69d21e71f3
+                        tipoBloque: estatua
+                    fb06c492109ce5cf0499d7d8846d1f46: !Terracota.ControladorEstatua,Terracota
+                        Id: 383363f8-3f28-4e9f-aefe-4535333af09b
+                        jugador: nada
+                        estatua: ref!! 8d2faada-c9ff-450b-bf6b-13bf94f11008
+                        cuerpo: ref!! 2ad9e193-ef3a-49b7-b5b5-039fdbfb5f7e
+                        cabeza: ref!! 76198077-f0fc-4680-8a90-caa45fc999bf
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: 56f5ad60-3d77-4bf7-9c13-cbb046c76088
+                InstanceId: 907cb55d-37d7-4a9f-aa2d-5d9fb80dcf2b
+        -   Folder: null
+            Entity:
+                Id: da7e8575-25ce-49dc-93ec-aa3342bde778
+                Name: Lanza
+                Components:
+                    aae717941d47dadafb07fc74e51b757a: !TransformComponent
+                        Id: fa52b556-c5da-45ba-b939-220328039c55
+                        Position: {X: -8.0910235E-07, Y: 2.7, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
+                        Children: {}
+                    a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
+                        Id: 29f59689-319c-4914-a328-6b5686d9f764
+                        CollisionGroup: KinematicFilter
+                        CanCollideWith: StaticFilter
+                        CanSleep: false
+                        Restitution: 10.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
+                                Radius: 0.25
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: f7806c36-9b87-48a7-b4f6-d614ce7c93ab
+                InstanceId: 7366682c-82f0-445d-8f00-19e340235152
+        -   Folder: null
+            Entity:
+                Id: e3d268d0-f79e-4e7b-8445-aea77685cdea
+                Name: Modelo Estatua
+                Components:
+                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
+                        Id: 139ba499-7c6f-4bf9-afd2-32424883e02e
+                        Position: {X: 0.0, Y: 0.8, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            f7b077a3ca3e6ba784f0d8ce42700ff0: ref!! 6aeb396e-1317-4624-bc3c-e44fc12a766c
+                            96e24b93d0e8fdb1b29ba0190a91165f: ref!! 2d27482e-3b29-47f7-8416-6eafc14d4aad
+                    7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
+                        Id: 14ae5d2b-3a23-4526-a690-f1ca1a2b1f31
+                        Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
+                        Materials: {}
+                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
+                        Id: 04be44dc-f1a6-46d1-b53c-783d03874f82
+                        CollisionGroup: CharacterFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.5
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 400.0
+                        LinearDamping: 0.2
+                        AngularDamping: 0.2
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
+                                Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Mono/ColliderMono
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: b846398e-bc6c-47ed-bb1c-425e4e5347fa
+                InstanceId: 7366682c-82f0-445d-8f00-19e340235152
+        -   Folder: null
+            Entity:
+                Id: e60f00de-76d5-4034-a3e3-f7f21a4c31cc
+                Name: Bandera
+                Components:
+                    c376e76ea8faadeb37730ecff53b7d5c: !TransformComponent
+                        Id: ede38f45-3f43-4a1f-806b-1307d94b57d5
+                        Position: {X: 0.0, Y: 2.7, Z: 0.05}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fc40e600c10f9b65227ac0f836817c9c: !ModelComponent
+                        Id: dfaf94d2-b676-4199-bc99-6d7c46f439b8
+                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Mono/Bandera
+                        Materials: {}
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: af7d3fcd-d621-4c0c-80ed-20a356d32750
+                InstanceId: 7366682c-82f0-445d-8f00-19e340235152
+        -   Folder: null
+            Entity:
+                Id: eced761e-7b80-48c2-8c8b-d72b04316a5b
+                Name: Modelo Estatua
+                Components:
+                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
+                        Id: 397593d2-e5f1-4a52-a833-775341aa56cb
+                        Position: {X: 0.0, Y: 0.8, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            fb820b5f97f86bdee9bc29ca87210a49: ref!! 4a766c49-03be-4c17-a1b9-704e4bbb370a
+                            ab378894df637d71b4266b1b4a495071: ref!! 5d1eb70e-728c-42b2-9438-709e363b376f
+                    7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
+                        Id: b6d77af8-a9b4-412b-8e81-4448e91397dc
+                        Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
+                        Materials: {}
+                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
+                        Id: 8773843d-9651-4552-bc32-04f1a62b86a4
+                        CollisionGroup: CharacterFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.5
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 400.0
+                        LinearDamping: 0.2
+                        AngularDamping: 0.2
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
+                                Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Mono/ColliderMono
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: b846398e-bc6c-47ed-bb1c-425e4e5347fa
+                InstanceId: 551e0bee-17b0-421c-bc1a-480e1c95eb8f
+        -   Folder: null
+            Entity:
+                Id: eef3e37b-e72c-4b99-8919-19db3f0862d0
+                Name: Modelo Largo
+                Components:
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: 81dac840-5097-4276-949a-4b2528732cb6
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: ea73689e-3eda-4918-98a0-7e1bd73d5e04
+                        Model: 8376cd3c-bb86-4a2a-ae61-842d1cef88ab:Modelos/Largo/Largo
+                        Materials: {}
+                    b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
+                        Id: f9b454f6-2116-40ab-b5b4-37dad40b7cc4
+                        CanSleep: true
+                        Restitution: 0.2
+                        Friction: 0.8
+                        RollingFriction: 0.8
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 150.0
+                        LinearDamping: 0.1
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
+                                Shape: 1d299fda-7add-4645-8ecb-2cb8c515bcfc:Modelos/Largo/ColliderLargo
+            Base:
+                BasePartAsset: c3e1eb07-569c-4430-b6df-621730483430:Prefabs/Largo
+                BasePartId: 7aee0956-0800-4c88-93ee-0d281fcf29e6
+                InstanceId: 9bd92114-109f-4d8e-9151-a7b76d257884
+        -   Folder: null
+            Entity:
+                Id: f610b0de-2a0c-4104-b835-286adf5ac8bb
+                Name: Cortos
+                Components:
+                    00a88d548d9c75891fb16d0e63e12a44: !TransformComponent
+                        Id: f8b554eb-0336-436b-bb79-81d20d16f44d
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            583902f1b7ceceb8f2bc88726ea15440: ref!! f959b3d7-04dc-4d3f-a417-b2ea4643c466
+                            a156f109e5b29fd502288da572657c8d: ref!! b74e9a10-231d-4c39-8195-ecf90fccf257
+                            88bc60ac0f4634e3dd8e062ec8ea7698: ref!! 83be953b-e573-43b5-b77d-95ef65ad4c5a
+                            534207359b7570f6d105ec83231b971a: ref!! e653c4dd-0b32-4e12-984e-546fe471ce76
+                            1ebd6fa300e821957943b82ae465b5b3: ref!! 919a2e71-ae53-4961-ae11-71a79b6d4680
+                            c985877e6cb2d4fcc79bdb8bcf3f4eff: ref!! c93794a6-9ab7-4dcf-bf17-5ef846f7ebac
+                            e56b70cdc07efccb7c95a0060aae0b15: ref!! 8717010b-27d8-460a-b61c-2898248210e1
+                            c6054b8e2fea0b973a1577674bae50d5: ref!! 01b5abc6-2eb1-4c28-9299-946d48f57a7d
+                            4fe257a3f03df94eb17b8bc8c0748700: ref!! 894d72ad-3eeb-41ea-8e7a-5b27e1f8434a

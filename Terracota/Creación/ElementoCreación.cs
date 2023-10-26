@@ -7,7 +7,7 @@ using System.Linq;
 namespace Terracota;
 using static Constantes;
 
-public class ElementoBloque : StartupScript
+public class ElementoCreación : StartupScript
 {
     public TipoBloque tipoBloque;
     public RigidbodyComponent cuerpo;
