@@ -80,7 +80,7 @@ public class ControladorCañón : SyncScript
 
     private void MoverCañónMóvil()
     {
-
+        // PENDIENTE: móvil
     }
 
     public void Disparar(TipoProyectil tipoProyectil, float multiplicador)

@@ -90,6 +90,7 @@ public class InterfazCreación : StartupScript
 
     private void EnClicGirarPieza()
     {
+        // PENDIENTE: móvil
         controladorCreación.EnClicGirarPieza();
     }
 
