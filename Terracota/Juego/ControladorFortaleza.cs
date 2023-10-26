@@ -47,4 +47,20 @@ public class ControladorFortaleza : StartupScript
         else
             Entity.Transform.Rotation = Quaternion.RotationY(MathUtil.DegreesToRadians(180));
     }
+
+    public void Activar()
+    {
+        foreach (var estatua in estatuas)
+        {
+            estatua.Activar();
+        }
+        foreach (var corto in cortos)
+        {
+            corto.Activar();
+        }
+        foreach (var largo in largos)
+        {
+            largo.Activar();
+        }
+    }
 }

@@ -117,6 +117,10 @@ public class ControladorPartidaLocal : AsyncScript
             await controladorCámara.RotarCámara(90, true);
         }
 
+        // Activa colisiones
+        fortalezaAnfitrión.Activar();
+        fortalezaHuesped.Activar();
+
         // Recarga interfaz
         interfaz.Activar(true);
         interfaz.ActualizarTurno(cantidadTurnos, multiplicador);

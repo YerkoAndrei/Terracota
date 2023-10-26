@@ -14,6 +14,7 @@ public class ControladorCreación : SyncScript
     public ControladorSensor sensor;
     public CameraComponent cámara;
     public InterfazCreación interfaz;
+    public TransformComponent fortaleza;
 
     public List<ElementoCreación> estatuas = new List<ElementoCreación> { };
     public List<ElementoCreación> cortos = new List<ElementoCreación> { };
@@ -62,8 +63,9 @@ public class ControladorCreación : SyncScript
         var resultado = ObtienePosiciónCursor();
         if (resultado.Succeeded)
         {
-            sensor.ActualizarPosición(resultado.Point);
-            bloqueActual.ActualizarPosición(resultado.Point, sensor.ObtenerAltura());
+            var posición = resultado.Point - fortaleza.Position;
+            sensor.ActualizarPosición(posición);
+            bloqueActual.ActualizarPosición(posición, sensor.ObtenerAltura());
         }
 
         // Rotación
