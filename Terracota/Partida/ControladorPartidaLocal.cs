@@ -1,23 +1,21 @@
 ﻿using System.Threading.Tasks;
-using Stride.Core.Mathematics;
-using Stride.Input;
 using Stride.Engine;
+using Stride.Input;
 
 namespace Terracota;
 using static Constantes;
 
-public class ControladorPartidaLocal : SyncScript
+public class ControladorPartidaLocal : AsyncScript
 {
     public ControladorCañón cañónAnfitrión;
     public ControladorCañón cañónHuesped;
 
-    public TransformComponent ejeCámara;
+    public ControladorCámara controladorCámara;
     public TransformComponent luzDireccional;
 
     public InterfazJuego interfaz;
     public UIComponent UIJuego;
     public UIComponent UIElección;
-    public ControladorCámara controladorCámara;
 
     private ControladorCañón cañónActual;
     private bool cambiandoTurno;
@@ -35,28 +33,52 @@ public class ControladorPartidaLocal : SyncScript
     private bool partidaActiva;
     private bool sumarMultiplicador;
 
-    public override void Start()
+    public override async Task Execute()
     {
         // Predeterminado
         maxEstatuas = 3;
         cantidadTurnos = 1;
         multiplicador = 1.0f;
+        turnoJugador = TipoJugador.nada;
 
         // Comienza con elección
         UIJuego.Enabled = false;
         UIElección.Enabled = true;
-    }
 
-    public override void Update()
-    {
-        if (Input.IsKeyPressed(Keys.Space) && !interfaz.ObtenerPausa() && partidaActiva && !cambiandoTurno)
+        // Espera que partida inicie
+        while (turnoJugador == TipoJugador.nada && !partidaActiva)
         {
-            Disparar();
-            CambiarTurno();
+            await Script.NextFrame();
+        }
+
+        // Start
+        ComenzarPartida();
+        while (Game.IsRunning)
+        {
+            // Entradas
+            if (Input.IsKeyPressed(Keys.Space) && !interfaz.ObtenerPausa() && partidaActiva && !cambiandoTurno)
+            {
+                Disparar();
+                CambiarTurno();
+            }
+            await Script.NextFrame();
         }
     }
 
-    public async void ComenzarPartida(bool ganaAnfitrión)
+    public void CargarFortaleza(int ranura, bool anfitrión)
+    {
+
+    }
+
+    public void AsignarTurno(bool ganaAnfitrión)
+    {
+        if (ganaAnfitrión)
+            turnoJugador = TipoJugador.anfitrión;
+        else
+            turnoJugador = TipoJugador.huesped;
+    }
+
+    private async void ComenzarPartida()
     {
         UIElección.Enabled = false;
 
@@ -66,7 +88,7 @@ public class ControladorPartidaLocal : SyncScript
         cañónAnfitrión.Asignar(interfaz);
         cañónHuesped.Asignar(interfaz);
 
-        if (ganaAnfitrión)
+        if (turnoJugador == TipoJugador.anfitrión)
         {
             cañónAnfitrión.Activar(true);
             cañónHuesped.Activar(false);
@@ -74,7 +96,7 @@ public class ControladorPartidaLocal : SyncScript
             turnoJugador = TipoJugador.anfitrión;
             cañónActual = cañónAnfitrión;
 
-            await MoverCámara(0, false, false);
+            await controladorCámara.RotarCámara(-90, false);
         }
         else
         {
@@ -84,12 +106,12 @@ public class ControladorPartidaLocal : SyncScript
             turnoJugador = TipoJugador.huesped;
             cañónActual = cañónHuesped;
 
-            await MoverCámara(180, true, false);
+            await controladorCámara.RotarCámara(90, true);
         }
-
+        
         UIJuego.Enabled = true;
-        interfaz.PausarInterfaz();
         interfaz.ActualizarTurno(cantidadTurnos, multiplicador);
+
         partidaActiva = true;
     }
 
@@ -148,7 +170,9 @@ public class ControladorPartidaLocal : SyncScript
 
         if (turnoJugador == TipoJugador.anfitrión)
         {
-            await MoverCámara(180, true, true);
+            await controladorCámara.RotarCámara(180, true, luzDireccional);
+            cambiandoTurno = false;
+
             cañónHuesped.Activar(true);
             cañónActual = cañónHuesped;
 
@@ -157,7 +181,9 @@ public class ControladorPartidaLocal : SyncScript
         }
         else
         {
-            await MoverCámara(0, true, true);
+            await controladorCámara.RotarCámara(180, true, luzDireccional);
+            cambiandoTurno = false;
+
             cañónAnfitrión.Activar(true);
             cañónActual = cañónAnfitrión;
 
@@ -225,43 +251,8 @@ public class ControladorPartidaLocal : SyncScript
     {
         // En caso de que pierda el que tiene el turno
         if (ganador == TipoJugador.anfitrión && turnoJugador == TipoJugador.huesped)
-            await MoverCámara(0, true, false);
+            await controladorCámara.RotarCámara(0, true);
         if (ganador == TipoJugador.huesped && turnoJugador == TipoJugador.anfitrión)
-            await MoverCámara(180, true, false);
-    }
-
-    private async Task MoverCámara(float YObjetivo, bool derecha, bool moverLuz)
-    {
-        float duraciónLerp = 1f;
-        float tiempoLerp = 0;
-        float tiempo = 0;
-
-        var rotaciónInicial = ejeCámara.Rotation;
-        var rotaciónObjetivo = Quaternion.RotationY(MathUtil.DegreesToRadians(YObjetivo));
-
-        // Ajusta dirección de movimiento
-        var direcciónObjetivo = rotaciónObjetivo;
-        if(derecha)
-            direcciónObjetivo = Quaternion.RotationY(MathUtil.DegreesToRadians(YObjetivo - 0.01f));
-        else
-            direcciónObjetivo = Quaternion.RotationY(MathUtil.DegreesToRadians(YObjetivo + 0.01f));
-
-        while (tiempoLerp < duraciónLerp)
-        {
-            tiempo = tiempoLerp / duraciónLerp;
-            ejeCámara.Rotation = Quaternion.Lerp(rotaciónInicial, direcciónObjetivo, tiempo);
-
-            // Mueve sol 45º aprox.
-            if(moverLuz)
-                luzDireccional.Rotation *= Quaternion.RotationY(0.005f);
-
-            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            await Task.Delay(1);
-            //await Script.NextFrame();
-        }
-
-        // Fin
-        ejeCámara.Rotation = rotaciónObjetivo;
-        cambiandoTurno = false;
+            await controladorCámara.RotarCámara(180, true);
     }
 }

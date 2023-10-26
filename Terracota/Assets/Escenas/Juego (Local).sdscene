@@ -63,12 +63,11 @@ Hierarchy:
                         Id: 8467c665-6f6a-4e41-8353-b93fb0b8b0b1
                         "cañónAnfitrión": ref!! a1f8de8f-5ba8-413f-819a-763808132e94
                         "cañónHuesped": ref!! c1c5840e-9f25-46e5-932f-4b2aa80bd91e
-                        "ejeCámara": ref!! 215294be-ea30-42ae-aa9d-646ec7a45d55
+                        "controladorCámara": ref!! ee3ad598-d4f0-41ab-8cbd-c94072b18069
                         luzDireccional: ref!! cfa543c1-ce66-46a8-903b-7a9421fe0db8
                         interfaz: ref!! ad15c0b7-f5e1-4a2e-8702-ded2e2195d0c
                         UIJuego: ref!! 8df76c69-40d2-4800-87ff-e93a3a59f8f3
                         "UIElección": ref!! 56e352d0-7364-413c-b3fe-ebe2156bbd7a
-                        "controladorCámara": ref!! 2ddc581e-7adf-42aa-afab-88409cfd0e64
         -   Entity:
                 Id: 02355854-c833-4889-9ca9-258050f1b1e5
                 Name: Interfaz
@@ -741,8 +740,12 @@ Hierarchy:
                 InstanceId: 3e1e7a73-769b-4bcf-895d-ae46d4685e2f
         -   Entity:
                 Id: 3095ddf0-c96c-4b07-bc4d-1de1341d5e0e
-                Name: "EjeCámara"
+                Name: "ControladorCámara"
                 Components:
+                    5e946de0b67966ed905ddb955e26a7bc: !Terracota.ControladorC%25C3%25A1mara,Terracota
+                        Id: ee3ad598-d4f0-41ab-8cbd-c94072b18069
+                        eje: ref!! 215294be-ea30-42ae-aa9d-646ec7a45d55
+                        "cámara": ref!! b3bb83f2-5020-438d-bdee-6242dd68d627
                     398519a3170320526b45e3a4b8f11d69: !TransformComponent
                         Id: 215294be-ea30-42ae-aa9d-646ec7a45d55
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -2397,8 +2400,6 @@ Hierarchy:
                 Id: adc923ed-eaae-4693-bb70-d48943f97e8c
                 Name: "Cámara"
                 Components:
-                    6cae0bb4e717151a72d506dfef2a32c7: !Terracota.ControladorC%25C3%25A1mara,Terracota
-                        Id: 2ddc581e-7adf-42aa-afab-88409cfd0e64
                     712b2eb1c77a9868ac5cef0b07912892: !TransformComponent
                         Id: b3bb83f2-5020-438d-bdee-6242dd68d627
                         Position: {X: 0.0, Y: 8.0, Z: 25.0}

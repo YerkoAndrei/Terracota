@@ -33,8 +33,12 @@ Hierarchy:
         -   Folder: null
             Entity:
                 Id: 04b3f270-87b8-454f-b96e-660a53f4c877
-                Name: "EjeCámara"
+                Name: "ControladorCámara"
                 Components:
+                    ae25c9be294a3f3f33e7929da1edf1e3: !Terracota.ControladorC%25C3%25A1mara,Terracota
+                        Id: 57d3ec2d-a252-45de-894d-9e8882533811
+                        eje: ref!! 316b980e-8a89-4a88-9148-ae7f6be29aca
+                        "cámara": ref!! 02556d2f-c70e-4604-b9e6-3e6d4f5f5889
                     398519a3170320526b45e3a4b8f11d69: !TransformComponent
                         Id: 316b980e-8a89-4a88-9148-ae7f6be29aca
                         Position: {X: 0.0, Y: 0.0, Z: 14.5}
@@ -189,8 +193,6 @@ Hierarchy:
                 Id: 207816db-b135-484d-849a-d42f83b3b277
                 Name: "Cámara"
                 Components:
-                    6cae0bb4e717151a72d506dfef2a32c7: !Terracota.ControladorC%25C3%25A1mara,Terracota
-                        Id: addb944e-35d3-49a4-89d1-a9af6f0e6f83
                     712b2eb1c77a9868ac5cef0b07912892: !TransformComponent
                         Id: 02556d2f-c70e-4604-b9e6-3e6d4f5f5889
                         Position: {X: 0.0, Y: 14.0, Z: 12.0}
@@ -705,7 +707,7 @@ Hierarchy:
                             e4db0740564c7cca70cdfa3dd36edfeb: ref!! 316b980e-8a89-4a88-9148-ae7f6be29aca
                     4ba411a0366d95c977e11c965700d39e: !Terracota.ControladorCreaci%25C3%25B3n,Terracota
                         Id: 4b8c5c1f-b8e9-4c88-a395-27acb72e79fd
-                        "ejeCámara": ref!! 316b980e-8a89-4a88-9148-ae7f6be29aca
+                        "controladorCámara": ref!! 57d3ec2d-a252-45de-894d-9e8882533811
                         sensor: ref!! b8170e19-971a-43c0-91fa-897159e8560d
                         "cámara": ref!! 88a207d7-1761-465f-950e-2f33b5c2cdc3
                         interfaz: ref!! 588e897b-48f7-4120-bb3c-f36f5c2538ed

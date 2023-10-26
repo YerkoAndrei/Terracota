@@ -23,8 +23,8 @@ public class InterfazElección : StartupScript
     private Grid fondoIzquierda;
     private Grid fondoDerecha;
 
-    private int selecciónIzquierda;
-    private int selecciónDerecha;
+    private bool izquierdaSeleccionada;
+    private bool derechaSeleccionada;
 
     private bool esperandoRuleta;
     private bool ganaIzquierda;
@@ -84,10 +84,9 @@ public class InterfazElección : StartupScript
         if (esperandoRuleta)
             return;
 
+        izquierdaSeleccionada = true;
         txtIzquierda.Text = ranura.ToString();
-        selecciónIzquierda = ranura;
-
-        CargarFortaleza(ranura, true);
+        controladorPartida.CargarFortaleza(ranura, true);
     }
 
     private void EnClicDerecha(int ranura)
@@ -95,37 +94,31 @@ public class InterfazElección : StartupScript
         if (esperandoRuleta)
             return;
 
+        derechaSeleccionada = true;
         txtDerecha.Text = ranura.ToString();
-        selecciónDerecha = ranura;
-
-        CargarFortaleza(ranura, false);
-    }
-
-    private void CargarFortaleza(int ranura, bool anfitrión)
-    {
-
+        controladorPartida.CargarFortaleza(ranura, false);
     }
 
     private async void EnClicComenzar()
     {
-        if (selecciónDerecha == 0 || selecciónIzquierda == 0)
+        if (!derechaSeleccionada || !izquierdaSeleccionada)
             return;
-
-        int aleatorio = (int)RangoAleatorio(30, 40);
+        
+        int aleatorio = (int)RangoAleatorio(40, 50);
 
         esperandoRuleta = true;
         ApagarRuleta();
         gridRuleta.Visibility = Visibility.Visible;
 
         await MoverRuleta(aleatorio);
-        controladorPartida.ComenzarPartida(ganaIzquierda);
+        controladorPartida.AsignarTurno(ganaIzquierda);
     }
 
     private async Task MoverRuleta(int toques)
     {
         int toqueActual = 0;
         int ruletaActual = 0;
-        int delay = 70;
+        int delay = 60;
 
         while (toqueActual < toques)
         {
@@ -141,12 +134,13 @@ public class InterfazElección : StartupScript
 
             // Últimos van más lento
             if (toqueActual >= 30)
-                delay += 20;
+                delay += 30;
 
             await Task.Delay(delay);
         }
 
         // Fin
+        await Task.Delay(500);
         gridRuleta.Visibility = Visibility.Hidden;
         ganaIzquierda = (ruletaActual > 3);
 
@@ -178,6 +172,7 @@ public class InterfazElección : StartupScript
         fondoIzquierda.Opacity = 0.5f;
         fondoDerecha.Opacity = 0.5f;
 
+        // Fin
         await Task.Delay(4000);
     }
 

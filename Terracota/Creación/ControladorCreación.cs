@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
@@ -11,7 +10,7 @@ using static Constantes;
 
 public class ControladorCreación : SyncScript
 {
-    public TransformComponent ejeCámara;
+    public ControladorCámara controladorCámara;
     public ControladorSensor sensor;
     public CameraComponent cámara;
     public InterfazCreación interfaz;
@@ -165,37 +164,7 @@ public class ControladorCreación : SyncScript
         if (moviendoCámara)
             return;
 
-        await MoverCámara(90, derecha);
-    }
-
-    private async Task MoverCámara(float YObjetivo, bool derecha)
-    {
-        moviendoCámara = true;
-
-        float duraciónLerp = 0.5f;
-        float tiempoLerp = 0;
-        float tiempo = 0;
-
-        var rotaciónInicial = ejeCámara.Rotation;
-        var rotaciónObjetivo = Quaternion.Identity;
-
-        if (derecha)
-            rotaciónObjetivo = ejeCámara.Rotation * Quaternion.RotationY(MathUtil.DegreesToRadians(YObjetivo));
-        else
-            rotaciónObjetivo = ejeCámara.Rotation * Quaternion.RotationY(MathUtil.DegreesToRadians(YObjetivo * -1));
-
-        while (tiempoLerp < duraciónLerp)
-        {
-            tiempo = tiempoLerp / duraciónLerp;
-            ejeCámara.Rotation = Quaternion.Lerp(rotaciónInicial, rotaciónObjetivo, tiempo);
-
-            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            await Task.Delay(1);
-            //await Script.NextFrame();
-        }
-
-        // Fin
-        ejeCámara.Rotation = rotaciónObjetivo;
+        await controladorCámara.RotarCámara(90, derecha);
         moviendoCámara = false;
     }
 }
