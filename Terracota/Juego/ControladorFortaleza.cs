@@ -11,10 +11,7 @@ public class ControladorFortaleza : StartupScript
     public List<ElementoBloque> cortos = new List<ElementoBloque> { };
     public List<ElementoBloque> largos = new List<ElementoBloque> { };
 
-    public override void Start()
-    {
-        Entity.Transform.Position = new Vector3(0, -10, 0);
-    }
+    public override void Start() { }
 
     public void Inicializar(Fortaleza fortaleza, bool anfitrión)
     {
