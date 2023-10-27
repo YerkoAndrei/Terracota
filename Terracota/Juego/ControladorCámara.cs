@@ -5,103 +5,148 @@ using Stride.Engine;
 
 namespace Terracota;
 
-public class ControladorCámara : StartupScript
+public class ControladorCámara : SyncScript
 {
     public TransformComponent eje;
     public TransformComponent cámara;
 
+    private bool rotando;
+    private bool moviendo;
+
+    // Lerp
+    private float duraciónLerp;
+    private float tiempoDelta;
+    private float tiempo;
+
+    // Rotación
+    private Quaternion rotaciónInicial;
+    private Quaternion rotaciónObjetivo;
+    private Quaternion direcciónObjetivo;
+    private float YObjetivo;
+    private bool derecha;
+    private TransformComponent luzDireccional;
+
+    // Efecto disparo
     private float ZInicial;
-    
+    private Vector3 posiciónInicial;
+    private Vector3 posiciónObjetivo;
+    private bool retrocediendo;
+
+    // Llamados
+    private Action enFin;
+
     public override void Start()
     {
         cámara = Entity.Get<TransformComponent>();
         ZInicial = cámara.Position.Z;
     }
-    
-    public async Task RotarCámara(float YObjetivo, bool derecha, TransformComponent luzDireccional = null)
+
+    public override void Update()
     {
-        await RotarEjeCámara(YObjetivo, derecha, luzDireccional);
+        if (rotando)
+            RotarEjeCámara();
+
+        if (moviendo)
+        {
+            MoverCámara();
+        }
     }
 
-    public async void ActivarEfectoDisparo()
+    public void RotarCámara(float _YObjetivo, bool _derecha, TransformComponent _luzDireccional = null, Action _enFin = null)
     {
-        await MoverCámara(0.8f);
-    }
+        // Referencias
+        YObjetivo = _YObjetivo;
+        derecha = _derecha;
+        luzDireccional = _luzDireccional;
+        enFin = _enFin;
 
-    private async Task RotarEjeCámara(float YObjetivo, bool derecha, TransformComponent luzDireccional = null)
-    {
-        float duraciónLerp = 1f;
-        float tiempoLerp = 0;
-        float tiempo = 0;
-
-        var rotaciónInicial = eje.Rotation;
-        var rotaciónObjetivo = rotaciónInicial * Quaternion.RotationY(MathUtil.DegreesToRadians(YObjetivo));
+        // Variables
+        duraciónLerp = 1f;
+        rotaciónInicial = eje.Rotation;
+        rotaciónObjetivo = rotaciónInicial * Quaternion.RotationY(MathUtil.DegreesToRadians(YObjetivo));
 
         // Ajusta dirección de movimiento
-        var direcciónObjetivo = rotaciónObjetivo;
         if (derecha)
             direcciónObjetivo = rotaciónInicial * Quaternion.RotationY(MathUtil.DegreesToRadians(YObjetivo - 0.01f));
         else
             direcciónObjetivo = rotaciónInicial * Quaternion.RotationY(MathUtil.DegreesToRadians(YObjetivo + 0.01f));
 
-        while (tiempoLerp < duraciónLerp)
-        {
-            tiempo = tiempoLerp / duraciónLerp;
-            eje.Rotation = Quaternion.Lerp(rotaciónInicial, direcciónObjetivo, tiempo);
+        rotando = true;
+    }
+    
+    public void ActivarEfectoDisparo()
+    {
+        var retroceso = 0.8f;
+        duraciónLerp = 0.03f;
 
-            // Mueve sol 45º aprox.
-            if (luzDireccional != null)
-                luzDireccional.Rotation *= Quaternion.RotationY(0.005f);
+        posiciónInicial = cámara.Position;
+        posiciónObjetivo = new Vector3(posiciónInicial.X, posiciónInicial.Y, (posiciónInicial.Z + retroceso));
 
-            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            await Task.Delay(1);
-            //await Script.NextFrame();
-        }
-
-        // Fin
-        eje.Rotation = rotaciónObjetivo;
+        retrocediendo = true;
+        moviendo = true;
     }
 
-    private async Task MoverCámara(float retroceso)
+    private void Reiniciar()
     {
-        float duraciónLerp = 0.03f;
-        float tiempoLerp = 0;
-        float tiempo = 0;
+        moviendo = false;
+        rotando = false;
+        tiempoDelta = 0;
+        tiempo = 0;
 
-        var posiciónInicial = cámara.Position;
-        var posiciónObjetivo = new Vector3(posiciónInicial.X, posiciónInicial.Y, (posiciónInicial.Z + retroceso));
-
-        while (tiempoLerp < duraciónLerp)
+        // Llamado
+        if(enFin != null)
         {
-            tiempo = tiempoLerp / duraciónLerp;
-            cámara.Position = Vector3.Lerp(posiciónInicial, posiciónObjetivo, tiempo);
-
-            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            await Task.Delay(1);
-            //await Script.NextFrame();
+            enFin.Invoke();
+            enFin = null;
         }
+    }
+
+    private void RotarEjeCámara()
+    {
+        tiempoDelta += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+        tiempo = tiempoDelta / duraciónLerp;
+
+        eje.Rotation = Quaternion.Lerp(rotaciónInicial, direcciónObjetivo, tiempo);
+
+        // Mueve sol 45º aprox.
+        if (luzDireccional != null)
+            luzDireccional.Rotation *= Quaternion.RotationY(0.005f);
 
         // Fin
-        cámara.Position = posiciónObjetivo;
+        if (tiempoDelta >= duraciónLerp)
+        {
+            eje.Rotation = rotaciónObjetivo;
+            Reiniciar();
+        }
+    }
 
+    private void MoverCámara()
+    {
+        tiempoDelta += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+        tiempo = tiempoDelta / duraciónLerp;
+
+        cámara.Position = Vector3.Lerp(posiciónInicial, posiciónObjetivo, tiempo);
+
+        // Fin
+        if (tiempoDelta >= duraciónLerp)
+        {
+            cámara.Position = posiciónObjetivo;
+            if (retrocediendo)
+                IniciarNormalidad();
+            else
+                Reiniciar();
+        }
+    }
+
+    private void IniciarNormalidad()
+    {
         // Retroceso
+        retrocediendo = false;
         duraciónLerp = 0.8f;
-        tiempoLerp = 0;
+        tiempoDelta = 0;
         tiempo = 0;
 
         posiciónInicial = cámara.Position;
         posiciónObjetivo = new Vector3(posiciónInicial.X, posiciónInicial.Y, ZInicial);
-
-        while (tiempoLerp < duraciónLerp)
-        {
-            tiempo = tiempoLerp / duraciónLerp;
-            cámara.Position = Vector3.Lerp(posiciónInicial, posiciónObjetivo, tiempo);
-
-            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            await Script.NextFrame();
-        }
-
-        // Fin
-        cámara.Position = posiciónObjetivo;
     }
 }

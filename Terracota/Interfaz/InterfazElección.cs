@@ -111,7 +111,7 @@ public class InterfazElección : StartupScript
         gridRuleta.Visibility = Visibility.Visible;
 
         await MoverRuleta(aleatorio);
-        controladorPartida.AsignarTurno(ganaIzquierda);
+        controladorPartida.ComenzarPartida(ganaIzquierda);
     }
 
     private async Task MoverRuleta(int toques)

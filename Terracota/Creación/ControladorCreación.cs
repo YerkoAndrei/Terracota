@@ -161,12 +161,14 @@ public class ControladorCreación : SyncScript
         bloqueActual.Entity.Transform.Rotation *= Quaternion.RotationY(MathUtil.DegreesToRadians(rotaciónClic));
     }
 
-    public async void EnClicMoverCámara(bool derecha)
+    public void EnClicMoverCámara(bool derecha)
     {
         if (moviendoCámara)
             return;
 
-        await controladorCámara.RotarCámara(90, derecha);
-        moviendoCámara = false;
+        controladorCámara.RotarCámara(90, derecha, null, () =>
+        {
+            moviendoCámara = false;
+        });
     }
 }
