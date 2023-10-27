@@ -12,6 +12,24 @@ Hierarchy:
         - ref!! b0429aeb-4ad7-45b1-96ac-8000ef0a61cd
         - ref!! 3ce5f97a-f1b7-4a5f-9f64-ae71634f0490
         - ref!! b7c9e74a-87fb-44f8-8f16-e979deb6c085
+        - ref!! 69a8480b-06d8-425a-bcb3-357b3e12f0d1
+        - ref!! 1426e5a2-387a-4553-9c38-8a8f431d6e13
+        - ref!! 42494ec6-2057-4be9-be12-0573534be91c
+        - ref!! 4ffd16d8-fd02-4a37-aae2-2f33fa58d298
+        - ref!! 5c296a78-e642-4420-95ec-050e8ce3b859
+        - ref!! e95451b7-58e7-46b4-9b9a-f810521eb443
+        - ref!! df920198-8f3d-42b6-9d2c-578805319647
+        - ref!! 3771cf54-2647-4247-8548-83108906affc
+        - ref!! 2bfd7bc5-88db-4263-af4b-c593587ca0ee
+        - ref!! 67c7533b-bd98-4ce5-8a26-a95c6ba182d9
+        - ref!! f4b8c88b-7e6a-49d3-a7c2-b8074acf3190
+        - ref!! ebb5e3ba-80ba-46cc-8d54-6a21a0c4cfc7
+        - ref!! fc9920f1-b75f-4d2f-89e7-7f656b98b5dd
+        - ref!! 643473c5-7f9a-4b8f-88c0-653192e33c20
+        - ref!! 7143b54d-b7fa-442a-b8df-065ff35d6419
+        - ref!! cb9a6831-d7fb-4b05-bc21-53b3a0f2009e
+        - ref!! 811bfb54-1213-4dc2-8e2d-86c8ddc458ba
+        - ref!! 1f20f127-84fa-459d-b60e-58989dd93853
     Parts:
         -   Folder: null
             Entity:
@@ -76,7 +94,7 @@ Hierarchy:
                 Components:
                     b37cecab06c5f1b5c51ef98207a3b138: !TransformComponent
                         Id: 93c3f992-19a5-4d1a-84bc-2d8ebac2ab79
-                        Position*: {X: 0.0, Y: 0.0, Z: -9.0}
+                        Position*: {X: 0.0, Y: 0.0, Z: 6.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -138,7 +156,7 @@ Hierarchy:
                 Components:
                     fb6521e28c46a3ccda1c58adee930e63: !TransformComponent
                         Id: d37f7dcd-204d-4a0a-8677-15a41c8630b8
-                        Position*: {X: 6.5, Y: 0.0, Z: -7.5}
+                        Position*: {X: 6.5, Y: 0.0, Z: 7.5}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -188,6 +206,21 @@ Hierarchy:
                         FarClipPlane: 100.0
                         Slot: 9f373eee-c85c-45b0-9b02-82451f709476
         -   Entity:
+                Id: 24ca3f53-ef7f-4fc3-a60c-9167bffbe259
+                Name: Corto
+                Components:
+                    944629b4e9c8a6931bf649907cce2412: !TransformComponent
+                        Id: ec594087-4262-4459-bfd3-c942c26831c5
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 0.1, Z: 1.0}
+                        Children: {}
+                    16525baa9cfe383940961ffedbc753ad: !ModelComponent
+                        Id: 474ccd14-c0d1-4223-ad59-63fe60b29226
+                        Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
+                        Materials:
+                            bb0e1a358c433a5a9b137fbf9f92d863~0: f6e65983-3a29-45c2-8cb2-01725dc34a28:Materiales/Metal
+        -   Entity:
                 Id: 2b352b04-ca08-4b7f-84cf-63b0fd2cd94c
                 Name: Modelo Corto
                 Components:
@@ -234,7 +267,7 @@ Hierarchy:
                 Components:
                     b37cecab06c5f1b5c51ef98207a3b138: !TransformComponent
                         Id: 77647cf8-bc30-45b1-8146-32da8f9ddd9c
-                        Position*: {X: 2.0, Y: 0.0, Z: -6.0}
+                        Position*: {X: 2.0, Y: 0.0, Z: 9.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -291,7 +324,7 @@ Hierarchy:
                 Components:
                     b37cecab06c5f1b5c51ef98207a3b138: !TransformComponent
                         Id: 5dfa6df1-a339-4de2-b533-0069a823023e
-                        Position*: {X: 0.0, Y: 0.0, Z: -6.0}
+                        Position*: {X: 0.0, Y: 0.0, Z: 9.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -366,6 +399,21 @@ Hierarchy:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
                 BasePartId: 4bff4cad-8d16-4606-8882-0d34fe8e309a
                 InstanceId: 0b20dfac-f72d-4089-847e-4db9e05813ca
+        -   Entity:
+                Id: 3d46b531-b5bf-4557-9019-8c16d0ae8e7a
+                Name: Corto
+                Components:
+                    944629b4e9c8a6931bf649907cce2412: !TransformComponent
+                        Id: f6fa3d4b-9f14-4e30-a3f4-09b2be8a40c8
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 0.1, Z: 1.0}
+                        Children: {}
+                    16525baa9cfe383940961ffedbc753ad: !ModelComponent
+                        Id: 4a615829-681d-4f81-b3d3-4cbdb0d891cb
+                        Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
+                        Materials:
+                            bb0e1a358c433a5a9b137fbf9f92d863~0: f6e65983-3a29-45c2-8cb2-01725dc34a28:Materiales/Metal
         -   Entity:
                 Id: 3fb71f1a-6f94-4e91-883e-ceb672b0618c
                 Name: SistemaMemoria
@@ -466,7 +514,7 @@ Hierarchy:
                 Components:
                     b37cecab06c5f1b5c51ef98207a3b138: !TransformComponent
                         Id: 1b1793be-d5b6-4c7d-9410-1dddb1a19d3c
-                        Position*: {X: 3.0, Y: 9.2378434E-07, Z: -9.0}
+                        Position*: {X: 3.0, Y: 9.2378434E-07, Z: 6.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -479,6 +527,21 @@ Hierarchy:
                 BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
                 BasePartId: 0ec69105-7267-4360-a7fb-f1edee1aee41
                 InstanceId: bc1a7b27-5dc5-4cd9-9df2-551c4eea62d5
+        -   Entity:
+                Id: 4388c42a-ed59-43fb-a14b-159461578a47
+                Name: Corto
+                Components:
+                    944629b4e9c8a6931bf649907cce2412: !TransformComponent
+                        Id: 342daa53-caeb-45e3-a6d4-1218e5fba451
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 0.1, Z: 1.0}
+                        Children: {}
+                    16525baa9cfe383940961ffedbc753ad: !ModelComponent
+                        Id: 96e41418-73a6-47b0-b698-6f5655787cba
+                        Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
+                        Materials:
+                            bb0e1a358c433a5a9b137fbf9f92d863~0: f6e65983-3a29-45c2-8cb2-01725dc34a28:Materiales/Metal
         -   Folder: null
             Entity:
                 Id: 43a7dc2e-045d-48de-b9c5-84e48b4a7c2a
@@ -532,7 +595,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 1.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            6becf6da162cc28104174eab4e2ddf0e: ref!! ec594087-4262-4459-bfd3-c942c26831c5
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: 640fcbf8-dbaa-4987-b015-21da414f9af5
                         CollisionGroup: SensorTrigger
@@ -563,7 +627,7 @@ Hierarchy:
                 Components:
                     b37cecab06c5f1b5c51ef98207a3b138: !TransformComponent
                         Id: 54d1f919-f928-4da4-9829-d357f45cd3a4
-                        Position*: {X: -8.0, Y: 0.0, Z: -6.0}
+                        Position*: {X: -8.0, Y: 0.0, Z: 9.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -623,7 +687,7 @@ Hierarchy:
                 Components:
                     b37cecab06c5f1b5c51ef98207a3b138: !TransformComponent
                         Id: d4553436-5f12-4dfe-86d3-aaf6b27a2545
-                        Position*: {X: -6.0, Y: 0.0, Z: -6.0}
+                        Position*: {X: -6.0, Y: 0.0, Z: 9.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -642,7 +706,7 @@ Hierarchy:
                 Components:
                     fb6521e28c46a3ccda1c58adee930e63: !TransformComponent
                         Id: ef7933f9-c038-4a91-9473-2107c3466177
-                        Position*: {X: -4.0, Y: 0.0, Z: -7.5}
+                        Position*: {X: -4.0, Y: 0.0, Z: 7.5}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -661,7 +725,7 @@ Hierarchy:
                 Components:
                     b37cecab06c5f1b5c51ef98207a3b138: !TransformComponent
                         Id: 7f046e10-1cf4-434f-85ee-78a01c0df9a1
-                        Position*: {X: 4.0, Y: 0.0, Z: -6.0}
+                        Position*: {X: 4.0, Y: 0.0, Z: 9.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -767,7 +831,7 @@ Hierarchy:
                 Components:
                     b37cecab06c5f1b5c51ef98207a3b138: !TransformComponent
                         Id: fa4ca169-db25-4e87-a69c-76dc04f9ef2a
-                        Position*: {X: -3.0, Y: 9.2378434E-07, Z: -9.0}
+                        Position*: {X: -3.0, Y: 9.2378434E-07, Z: 6.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -827,7 +891,7 @@ Hierarchy:
                 Components:
                     fb6521e28c46a3ccda1c58adee930e63: !TransformComponent
                         Id: 317005a8-0bf8-47fa-885e-1c548c952fb2
-                        Position*: {X: -1.5, Y: 0.0, Z: -7.5}
+                        Position*: {X: -1.5, Y: 0.0, Z: 7.5}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -887,7 +951,7 @@ Hierarchy:
                 Components:
                     fb6521e28c46a3ccda1c58adee930e63: !TransformComponent
                         Id: 5f06fe6c-0805-412c-8dbb-f8656884a358
-                        Position*: {X: 4.0, Y: 0.0, Z: -7.5}
+                        Position*: {X: 4.0, Y: 0.0, Z: 7.5}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -1048,7 +1112,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 2.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            03b9754f8e6b3d983fda87ed72efad9e: ref!! e46ce652-e77e-4236-87ae-6581168b7754
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: 8fac2d3d-d76d-4042-9336-88995abd4f92
                         CollisionGroup: SensorTrigger
@@ -1326,25 +1391,7 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.0, Z: 14.5}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            b908e556d300b1917708879e2e9ade17: ref!! fa4ca169-db25-4e87-a69c-76dc04f9ef2a
-                            dc801a9be26beae98c9e45c9a9673a45: ref!! 93c3f992-19a5-4d1a-84bc-2d8ebac2ab79
-                            e7281e101c0a603b4379fd8dce7d8210: ref!! 1b1793be-d5b6-4c7d-9410-1dddb1a19d3c
-                            be312151bca0449237947c3a8132b902: ref!! 54d1f919-f928-4da4-9829-d357f45cd3a4
-                            42f85a8d3e0fa81c1b9a2f5a35eb05ed: ref!! d4553436-5f12-4dfe-86d3-aaf6b27a2545
-                            04abee14742370414a691cf10da1ca65: ref!! df6b56f2-65b1-419c-a994-8585db881d65
-                            de4757f303a93ab763b5c20b617e7bd4: ref!! aaf05a86-1743-47cc-a912-04d99ba702d6
-                            aefcd58f030a534dee4dbfe34cabd30f: ref!! 5dfa6df1-a339-4de2-b533-0069a823023e
-                            1fc2d80dba0344af0321b61de6f038c5: ref!! 77647cf8-bc30-45b1-8146-32da8f9ddd9c
-                            2ce38e594f4f7192faab961e0bc9a701: ref!! 7f046e10-1cf4-434f-85ee-78a01c0df9a1
-                            4c48927ee7f1a86925388ed91051a863: ref!! 8f7f1f21-cfa4-4fab-b687-92f6c0c0a054
-                            f53abc25f079c0dfbc3a87ba231f51c4: ref!! 3b8c247a-da90-467d-86c3-d17e6bab3244
-                            99e96cdfa34159e16ac23cee5c182c8b: ref!! 5aa6fb2d-0fa4-4e50-b801-2487271555bd
-                            f99be3cfdaec62e3426af3c3d89afebd: ref!! ef7933f9-c038-4a91-9473-2107c3466177
-                            ba026f683c2fc4bb7a1eb3353c7e46bb: ref!! 317005a8-0bf8-47fa-885e-1c548c952fb2
-                            3bc5a9bd9d73004eea36fbf33d297dac: ref!! 57474e1c-3667-461d-9873-c9d4af369e2e
-                            6221d1657a6c074930e62d14caa792ee: ref!! 5f06fe6c-0805-412c-8dbb-f8656884a358
-                            d7ccf83adc6559787d4b14bd50bb556c: ref!! d37f7dcd-204d-4a0a-8677-15a41c8630b8
+                        Children: {}
         -   Folder: null
             Entity:
                 Id: bc842e07-7577-4db9-90da-ab0ed7547d08
@@ -1392,7 +1439,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 3.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            89f64be9e8f5b0084433e5e4346342ec: ref!! f6fa3d4b-9f14-4e30-a3f4-09b2be8a40c8
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: 181ba1ee-964b-48cb-8c0c-d091944dff67
                         CollisionGroup: SensorTrigger
@@ -1423,7 +1471,7 @@ Hierarchy:
                 Components:
                     fb6521e28c46a3ccda1c58adee930e63: !TransformComponent
                         Id: 57474e1c-3667-461d-9873-c9d4af369e2e
-                        Position*: {X: 1.5, Y: 0.0, Z: -7.5}
+                        Position*: {X: 1.5, Y: 0.0, Z: 7.5}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -1483,7 +1531,7 @@ Hierarchy:
                 Components:
                     b37cecab06c5f1b5c51ef98207a3b138: !TransformComponent
                         Id: aaf05a86-1743-47cc-a912-04d99ba702d6
-                        Position*: {X: -2.0, Y: 0.0, Z: -6.0}
+                        Position*: {X: -2.0, Y: 0.0, Z: 9.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -1550,7 +1598,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            f8eb297d859e9793b597e015f52550c3: ref!! 342daa53-caeb-45e3-a6d4-1218e5fba451
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: c4e7fc8c-4052-4a39-a72d-ca5a169b9347
                         CollisionGroup: SensorTrigger
@@ -1616,7 +1665,7 @@ Hierarchy:
                 Components:
                     b37cecab06c5f1b5c51ef98207a3b138: !TransformComponent
                         Id: df6b56f2-65b1-419c-a994-8585db881d65
-                        Position*: {X: -4.0, Y: 0.0, Z: -6.0}
+                        Position*: {X: -4.0, Y: 0.0, Z: 9.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -1635,7 +1684,7 @@ Hierarchy:
                 Components:
                     b37cecab06c5f1b5c51ef98207a3b138: !TransformComponent
                         Id: 3b8c247a-da90-467d-86c3-d17e6bab3244
-                        Position*: {X: 8.0, Y: 0.0, Z: -6.0}
+                        Position*: {X: 8.0, Y: 0.0, Z: 9.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -1649,12 +1698,27 @@ Hierarchy:
                 BasePartId: 670e7431-4482-412f-8d8b-83cb09f4b1b4
                 InstanceId: 4f0184bc-d85f-4e5b-8da2-b36f11bbfb0b
         -   Entity:
+                Id: f1265711-e273-4e19-9180-4eff934d5c61
+                Name: Corto
+                Components:
+                    944629b4e9c8a6931bf649907cce2412: !TransformComponent
+                        Id: e46ce652-e77e-4236-87ae-6581168b7754
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 0.1, Z: 1.0}
+                        Children: {}
+                    16525baa9cfe383940961ffedbc753ad: !ModelComponent
+                        Id: f2b4ab3e-5bed-4465-ae3f-87ebe40769c9
+                        Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
+                        Materials:
+                            bb0e1a358c433a5a9b137fbf9f92d863~0: f6e65983-3a29-45c2-8cb2-01725dc34a28:Materiales/Metal
+        -   Entity:
                 Id: f4b8c88b-7e6a-49d3-a7c2-b8074acf3190
                 Name*: Corto_7
                 Components:
                     b37cecab06c5f1b5c51ef98207a3b138: !TransformComponent
                         Id: 8f7f1f21-cfa4-4fab-b687-92f6c0c0a054
-                        Position*: {X: 6.0, Y: 0.0, Z: -6.0}
+                        Position*: {X: 6.0, Y: 0.0, Z: 9.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -1695,7 +1759,7 @@ Hierarchy:
                 Components:
                     fb6521e28c46a3ccda1c58adee930e63: !TransformComponent
                         Id: 5aa6fb2d-0fa4-4e50-b801-2487271555bd
-                        Position*: {X: -6.5, Y: 0.0, Z: -7.5}
+                        Position*: {X: -6.5, Y: 0.0, Z: 7.5}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:

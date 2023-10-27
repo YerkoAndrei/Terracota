@@ -12,9 +12,14 @@ public class ElementoCreación : StartupScript
     public TipoBloque tipoBloque;
     public RigidbodyComponent cuerpo;
 
+    private Vector3 posiciónInicial;
+    private Quaternion rotaciónInicial;
+
     public override void Start()
     {
         cuerpo.Collisions.CollectionChanged += CalcularColisiones;
+        posiciónInicial = ObtenerPosición();
+        rotaciónInicial = ObtenerRotación();
     }
 
     private void CalcularColisiones(object sender, TrackingCollectionChangedEventArgs args)
@@ -33,16 +38,21 @@ public class ElementoCreación : StartupScript
         Entity.Transform.Position = new Vector3(nuevaPosición.X, altura, nuevaPosición.Z);
     }
 
-    public void ForzarPosición(Vector3 nuevaPosición)
+    public void ReiniciarTransform()
     {
-        Entity.Transform.Rotation = Quaternion.Identity;
-        Entity.Transform.Position = nuevaPosición;
+        Entity.Transform.Position = posiciónInicial;
+        Entity.Transform.Rotation = rotaciónInicial;
     }
 
     public bool EsPosibleColocar()
     {
         var colisionesSinBase = cuerpo.Collisions.Where(o => !o.ColliderA.Entity.Name.Contains("Sensor") && !o.ColliderB.Entity.Name.Contains("Sensor")).ToArray();
         return (colisionesSinBase.Length <= 0);
+    }
+
+    public void PosicionarEnFortaleza(Vector3 fortaleza)
+    {
+        Entity.Transform.Position -= fortaleza;
     }
 
     // Guardado

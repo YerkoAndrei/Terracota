@@ -26,7 +26,6 @@ public class ControladorCreación : SyncScript
     private Viewport viewport;
 
     private List<ElementoCreación> bloques;
-    private List<Vector3> pocisionesIniciales;
 
     private float rotaciónClic;
 
@@ -41,11 +40,6 @@ public class ControladorCreación : SyncScript
         bloques.AddRange(largos);
 
         rotaciónClic = -45;
-        pocisionesIniciales = new List<Vector3>();
-        foreach(var bloque in bloques)
-        {
-            pocisionesIniciales.Add(bloque.ObtenerPosición());
-        }
     }
 
     public override void Update()
@@ -63,9 +57,8 @@ public class ControladorCreación : SyncScript
         var resultado = ObtienePosiciónCursor();
         if (resultado.Succeeded)
         {
-            var posición = resultado.Point - fortaleza.Position;
-            sensor.ActualizarPosición(posición);
-            bloqueActual.ActualizarPosición(posición, sensor.ObtenerAltura());
+            sensor.ActualizarPosición(resultado.Point);
+            bloqueActual.ActualizarPosición(resultado.Point, sensor.ObtenerAltura());
         }
 
         // Rotación
@@ -134,9 +127,9 @@ public class ControladorCreación : SyncScript
 
     public void EnClicReiniciarPosiciones()
     {
-        for (int i=0; i < bloques.Count; i++)
+        foreach (var bloque in bloques)
         {
-            bloques[i].ForzarPosición(pocisionesIniciales[i]);
+            bloque.ReiniciarTransform();
         }
     }
 
@@ -145,8 +138,16 @@ public class ControladorCreación : SyncScript
         // PENDIENTE: esperar a colocar todos los bloques
         // PENDIENTE: sacar miniatura
 
+        // Posición respecto a la fortaleza
+        foreach(var bloque in bloques)
+        {
+            bloque.PosicionarEnFortaleza(fortaleza.Position);
+        }
+
+        // Guardado
         if(SistemaMemoria.GuardarFortaleza(bloques.ToArray(), ranura, null))
         {
+            // PENDIENTE: mensaje
             interfaz.CerrarPanelGuardar();
             EnClicReiniciarPosiciones();
         }
