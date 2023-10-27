@@ -102,7 +102,7 @@ public class ControladorPartidaLocal : SyncScript
             turnoJugador = TipoJugador.anfitrión;
             cañónActual = cañónAnfitrión;
 
-            controladorCámara.RotarCámara(-90, false, null, enFin);
+            controladorCámara.RotarCámara(-90, false, enFin);
         }
         else
         {
@@ -112,7 +112,7 @@ public class ControladorPartidaLocal : SyncScript
             turnoJugador = TipoJugador.huesped;
             cañónActual = cañónHuesped;
 
-            controladorCámara.RotarCámara(90, true, null, enFin);
+            controladorCámara.RotarCámara(90, true, enFin);
         }
     }
 
@@ -171,7 +171,7 @@ public class ControladorPartidaLocal : SyncScript
 
         if (turnoJugador == TipoJugador.anfitrión)
         {
-            controladorCámara.RotarCámara(180, true, luzDireccional, () =>
+            controladorCámara.RotarCámara(180, true, () =>
             {
                 cambiandoTurno = false;
                 cañónHuesped.Activar(true);
@@ -179,11 +179,11 @@ public class ControladorPartidaLocal : SyncScript
 
                 turnoJugador = TipoJugador.huesped;
                 interfaz.CambiarInterfaz(turnoJugador, proyectilHuesped);
-            });
+            }, luzDireccional);
         }
         else
         {
-            controladorCámara.RotarCámara(180, true, luzDireccional, () =>
+            controladorCámara.RotarCámara(180, true, () =>
             {
                 cambiandoTurno = false;
                 cañónAnfitrión.Activar(true);
@@ -194,7 +194,7 @@ public class ControladorPartidaLocal : SyncScript
 
                 // Suma potencia despues de 4 turnos
                 SumarPotencia();
-            });
+            }, luzDireccional);
         }
 
         cantidadTurnos++;

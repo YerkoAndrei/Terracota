@@ -166,7 +166,7 @@ public class ControladorCreación : SyncScript
         if (moviendoCámara)
             return;
 
-        controladorCámara.RotarCámara(90, derecha, null, () =>
+        controladorCámara.RotarCámara(90, derecha, () =>
         {
             moviendoCámara = false;
         });

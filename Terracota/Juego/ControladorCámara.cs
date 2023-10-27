@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 
@@ -27,9 +26,9 @@ public class ControladorCámara : SyncScript
     private TransformComponent luzDireccional;
 
     // Efecto disparo
-    private float ZInicial;
     private Vector3 posiciónInicial;
     private Vector3 posiciónObjetivo;
+    private float ZInicial;
     private bool retrocediendo;
 
     // Llamados
@@ -47,12 +46,10 @@ public class ControladorCámara : SyncScript
             RotarEjeCámara();
 
         if (moviendo)
-        {
             MoverCámara();
-        }
     }
 
-    public void RotarCámara(float _YObjetivo, bool _derecha, TransformComponent _luzDireccional = null, Action _enFin = null)
+    public void RotarCámara(float _YObjetivo, bool _derecha, Action _enFin = null, TransformComponent _luzDireccional = null)
     {
         // Referencias
         YObjetivo = _YObjetivo;
@@ -86,7 +83,7 @@ public class ControladorCámara : SyncScript
         moviendo = true;
     }
 
-    private void Reiniciar()
+    private void TerminarLerp()
     {
         moviendo = false;
         rotando = false;
@@ -116,7 +113,7 @@ public class ControladorCámara : SyncScript
         if (tiempoDelta >= duraciónLerp)
         {
             eje.Rotation = rotaciónObjetivo;
-            Reiniciar();
+            TerminarLerp();
         }
     }
 
@@ -132,13 +129,13 @@ public class ControladorCámara : SyncScript
         {
             cámara.Position = posiciónObjetivo;
             if (retrocediendo)
-                IniciarNormalidad();
+                DevolverCámara();
             else
-                Reiniciar();
+                TerminarLerp();
         }
     }
 
-    private void IniciarNormalidad()
+    private void DevolverCámara()
     {
         // Retroceso
         retrocediendo = false;
