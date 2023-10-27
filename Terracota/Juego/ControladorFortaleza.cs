@@ -11,10 +11,24 @@ public class ControladorFortaleza : StartupScript
     public List<ElementoBloque> cortos = new List<ElementoBloque> { };
     public List<ElementoBloque> largos = new List<ElementoBloque> { };
 
-    public override void Start() { }
+    private bool inicializado;
+    private Vector3 posiciónInicial;
+
+    public override void Start() 
+    {
+        posiciónInicial = Entity.Transform.Position;
+        Entity.Transform.Position = new Vector3(posiciónInicial.X, -100, posiciónInicial.Z);
+    }
 
     public void Inicializar(Fortaleza fortaleza, bool anfitrión)
     {
+        if(!inicializado)
+        {
+            inicializado = true;
+            Entity.Transform.Position = posiciónInicial;
+        }
+
+        // Bloques
         var índieEstatuas = 0;
         var índieCortos = 0;
         var índieLargos = 0;
