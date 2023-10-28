@@ -33,7 +33,7 @@ public class ElementoCreación : StartupScript
         */
     }
 
-    public void ActualizarPosición(Vector3 nuevaPosición, float altura)
+    public void ActualizarPosición(Vector3 nuevaPosición, int altura)
     {
         Entity.Transform.Position = new Vector3(nuevaPosición.X, altura, nuevaPosición.Z);
     }
