@@ -24,17 +24,13 @@ public class ControladorSensor : StartupScript
     {
         if (bloqueActual == TipoBloque.estatua)
             return ObtenerAlturaEstatua();
-        /*
-        // Fuerza posición 0
-        if (sensores[0].Collisions.Count <= 1 && (sensores[1].Collisions.Count + sensores[2].Collisions.Count + sensores[3].Collisions.Count) > 1)
-            return 0;
-        */
-            // Controla posiciones
-        if (sensores[2].Collisions.Count > 1)
+
+        // Controla posiciones
+        if (sensores[2].Collisions.Count > 1 && sensores[3].Collisions.Count == 0)
             return 3;
-        if (sensores[1].Collisions.Count > 1)
+        if (sensores[1].Collisions.Count > 1 && sensores[2].Collisions.Count == 0)
             return 2;
-        if (sensores[0].Collisions.Count > 1)
+        if (sensores[0].Collisions.Count > 1 && sensores[1].Collisions.Count == 0)
             return 1;
         
         if (sensores[2].Collisions.Count > 0 && sensores[3].Collisions.Count > 0)
