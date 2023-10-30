@@ -58,7 +58,7 @@ public class ControladorCreación : SyncScript
         if (resultado.Succeeded)
         {
             sensor.ActualizarPosición(resultado.Point);
-            bloqueActual.ActualizarPosición(resultado.Point, sensor.ObtenerAltura());
+            bloqueActual.ActualizarPosición(resultado.Point, sensor.ObtenerAltura(bloqueActual.Entity));
         }
 
         // Rotación

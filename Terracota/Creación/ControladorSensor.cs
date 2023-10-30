@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
@@ -10,7 +11,7 @@ public class ControladorSensor : StartupScript
 {
     public List<RigidbodyComponent> sensores = new List<RigidbodyComponent> { };
 
-    private TipoBloque bloqueActual;
+    private TipoBloque tipoBloqueActual;
 
     public override void Start() { }
 
@@ -20,38 +21,44 @@ public class ControladorSensor : StartupScript
         Entity.Transform.Position = nuevaPosición;
     }
 
-    public int ObtenerAltura()
+    public int ObtenerAltura(Entity bloqueActual)
     {
-        if (bloqueActual == TipoBloque.estatua)
-            return ObtenerAlturaEstatua();
+        // Estatua solo toca piso
+        if (tipoBloqueActual == TipoBloque.estatua)
+            return 0;
 
         // Controla posiciones
         if (sensores[2].Collisions.Count > 1 && sensores[3].Collisions.Count == 0)
-            return 3;
+            return VerificarSuelo(bloqueActual, 3);
         if (sensores[1].Collisions.Count > 1 && sensores[2].Collisions.Count == 0)
-            return 2;
-        if (sensores[0].Collisions.Count > 1 && sensores[1].Collisions.Count == 0)
-            return 1;
+            return VerificarSuelo(bloqueActual, 2);
+        if (sensores[0].Collisions.Count > 1 && sensores[1].Collisions.Count == 0) 
+            return VerificarSuelo(bloqueActual, 1);
         
         if (sensores[2].Collisions.Count > 0 && sensores[3].Collisions.Count > 0)
-            return 3;
+            return VerificarSuelo(bloqueActual, 3);
         if (sensores[1].Collisions.Count > 0 && sensores[2].Collisions.Count > 0)
-            return 2;
-        if (sensores[0].Collisions.Count > 0 && sensores[1].Collisions.Count > 0)
-            return 1;
+            return VerificarSuelo(bloqueActual, 2);
+        if (sensores[0].Collisions.Count > 0 && sensores[1].Collisions.Count > 0) 
+            return VerificarSuelo(bloqueActual, 1);
         
         return 0;
     }
 
-    private int ObtenerAlturaEstatua()
+    public int VerificarSuelo(Entity bloqueActual, int altura)
     {
-        return 0;
+        // Revisa colisiones, excepto bloque actual, para forzar Y 0
+        var colisionesSinBase = sensores[0].Collisions.Where(o => o.ColliderA.Entity.GetParent() != bloqueActual && o.ColliderB.Entity.GetParent() != bloqueActual).ToArray();
+        if (colisionesSinBase.Length == 0)
+            return 0;
+        else
+            return altura;
     }
 
     public void ReiniciarCuerpo(TipoBloque tipoBloque, Quaternion rotación)
     {
         Entity.Transform.Rotation = rotación;
-        bloqueActual = tipoBloque;
+        tipoBloqueActual = tipoBloque;
         switch (tipoBloque)
         {
             case TipoBloque.estatua:

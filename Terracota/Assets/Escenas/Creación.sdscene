@@ -206,21 +206,6 @@ Hierarchy:
                         FarClipPlane: 100.0
                         Slot: 9f373eee-c85c-45b0-9b02-82451f709476
         -   Entity:
-                Id: 24ca3f53-ef7f-4fc3-a60c-9167bffbe259
-                Name: Corto
-                Components:
-                    944629b4e9c8a6931bf649907cce2412: !TransformComponent
-                        Id: ec594087-4262-4459-bfd3-c942c26831c5
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 0.1, Z: 1.0}
-                        Children: {}
-                    16525baa9cfe383940961ffedbc753ad: !ModelComponent
-                        Id: 474ccd14-c0d1-4223-ad59-63fe60b29226
-                        Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
-                        Materials:
-                            bb0e1a358c433a5a9b137fbf9f92d863~0: "f6e65983-3a29-45c2-8cb2-01725dc34a28:Modelos/Cañón/Metal"
-        -   Entity:
                 Id: 2b352b04-ca08-4b7f-84cf-63b0fd2cd94c
                 Name: Modelo Corto
                 Components:
@@ -400,21 +385,6 @@ Hierarchy:
                 BasePartId: 4bff4cad-8d16-4606-8882-0d34fe8e309a
                 InstanceId: 0b20dfac-f72d-4089-847e-4db9e05813ca
         -   Entity:
-                Id: 3d46b531-b5bf-4557-9019-8c16d0ae8e7a
-                Name: Corto
-                Components:
-                    944629b4e9c8a6931bf649907cce2412: !TransformComponent
-                        Id: f6fa3d4b-9f14-4e30-a3f4-09b2be8a40c8
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 0.1, Z: 1.0}
-                        Children: {}
-                    16525baa9cfe383940961ffedbc753ad: !ModelComponent
-                        Id: 4a615829-681d-4f81-b3d3-4cbdb0d891cb
-                        Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
-                        Materials:
-                            bb0e1a358c433a5a9b137fbf9f92d863~0: "f6e65983-3a29-45c2-8cb2-01725dc34a28:Modelos/Cañón/Metal"
-        -   Entity:
                 Id: 3fb71f1a-6f94-4e91-883e-ceb672b0618c
                 Name: SistemaMemoria
                 Components:
@@ -527,21 +497,6 @@ Hierarchy:
                 BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
                 BasePartId: 0ec69105-7267-4360-a7fb-f1edee1aee41
                 InstanceId: bc1a7b27-5dc5-4cd9-9df2-551c4eea62d5
-        -   Entity:
-                Id: 4388c42a-ed59-43fb-a14b-159461578a47
-                Name: Corto
-                Components:
-                    944629b4e9c8a6931bf649907cce2412: !TransformComponent
-                        Id: 342daa53-caeb-45e3-a6d4-1218e5fba451
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 0.1, Z: 1.0}
-                        Children: {}
-                    16525baa9cfe383940961ffedbc753ad: !ModelComponent
-                        Id: 96e41418-73a6-47b0-b698-6f5655787cba
-                        Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
-                        Materials:
-                            bb0e1a358c433a5a9b137fbf9f92d863~0: "f6e65983-3a29-45c2-8cb2-01725dc34a28:Modelos/Cañón/Metal"
         -   Folder: null
             Entity:
                 Id: 43a7dc2e-045d-48de-b9c5-84e48b4a7c2a
@@ -595,8 +550,7 @@ Hierarchy:
                         Position: {X: 0.0, Y: 1.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            6becf6da162cc28104174eab4e2ddf0e: ref!! ec594087-4262-4459-bfd3-c942c26831c5
+                        Children: {}
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: 640fcbf8-dbaa-4987-b015-21da414f9af5
                         CollisionGroup: SensorTrigger
@@ -1112,8 +1066,7 @@ Hierarchy:
                         Position: {X: 0.0, Y: 2.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            03b9754f8e6b3d983fda87ed72efad9e: ref!! e46ce652-e77e-4236-87ae-6581168b7754
+                        Children: {}
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: 8fac2d3d-d76d-4042-9336-88995abd4f92
                         CollisionGroup: SensorTrigger
@@ -1439,8 +1392,7 @@ Hierarchy:
                         Position: {X: 0.0, Y: 3.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            89f64be9e8f5b0084433e5e4346342ec: ref!! f6fa3d4b-9f14-4e30-a3f4-09b2be8a40c8
+                        Children: {}
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: 181ba1ee-964b-48cb-8c0c-d091944dff67
                         CollisionGroup: SensorTrigger
@@ -1598,8 +1550,7 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            f8eb297d859e9793b597e015f52550c3: ref!! 342daa53-caeb-45e3-a6d4-1218e5fba451
+                        Children: {}
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: c4e7fc8c-4052-4a39-a72d-ca5a169b9347
                         CollisionGroup: SensorTrigger
@@ -1697,21 +1648,6 @@ Hierarchy:
                 BasePartAsset: "ca8a9afd-e763-41aa-97d2-bf8fe2d39937:Prefabs/Creación/CortoCreación"
                 BasePartId: 670e7431-4482-412f-8d8b-83cb09f4b1b4
                 InstanceId: 4f0184bc-d85f-4e5b-8da2-b36f11bbfb0b
-        -   Entity:
-                Id: f1265711-e273-4e19-9180-4eff934d5c61
-                Name: Corto
-                Components:
-                    944629b4e9c8a6931bf649907cce2412: !TransformComponent
-                        Id: e46ce652-e77e-4236-87ae-6581168b7754
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 0.1, Z: 1.0}
-                        Children: {}
-                    16525baa9cfe383940961ffedbc753ad: !ModelComponent
-                        Id: f2b4ab3e-5bed-4465-ae3f-87ebe40769c9
-                        Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
-                        Materials:
-                            bb0e1a358c433a5a9b137fbf9f92d863~0: "f6e65983-3a29-45c2-8cb2-01725dc34a28:Modelos/Cañón/Metal"
         -   Entity:
                 Id: f4b8c88b-7e6a-49d3-a7c2-b8074acf3190
                 Name*: Corto_7

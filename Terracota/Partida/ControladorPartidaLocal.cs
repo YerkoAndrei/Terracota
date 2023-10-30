@@ -210,7 +210,7 @@ public class ControladorPartidaLocal : SyncScript
     }
 
     public void DesactivarEstatua(TipoJugador jugador)
-    {/*
+    {
         if (jugador == TipoJugador.anfitrión)
         {
             interfaz.RestarAnfitrión(estatuasAnfitrión);
@@ -221,7 +221,7 @@ public class ControladorPartidaLocal : SyncScript
             interfaz.RestarHuesped(estatuasHuesped);
             estatuasHuesped++;
         }
-        VerificarPartida();*/
+        VerificarPartida();
     }
 
     private void VerificarPartida()
