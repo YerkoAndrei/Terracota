@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Linq;
+using System.Collections.Generic;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
@@ -25,6 +27,7 @@ public class ControladorCreación : SyncScript
     private Texture backBuffer;
     private Viewport viewport;
 
+    private List<string> bloquesListos;
     private List<ElementoCreación> bloques;
 
     private float rotaciónClic;
@@ -34,6 +37,7 @@ public class ControladorCreación : SyncScript
         backBuffer = GraphicsDevice.Presenter.BackBuffer;
         viewport = new Viewport(0, 0, backBuffer.Width, backBuffer.Height);
 
+        bloquesListos = new List<string>();
         bloques = new List<ElementoCreación>();
         bloques.AddRange(estatuas);
         bloques.AddRange(cortos);
@@ -70,8 +74,11 @@ public class ControladorCreación : SyncScript
         // Guardar
         if (Input.IsMouseButtonPressed(MouseButton.Left))
         {
-            if (bloqueActual.EsPosibleColocar())
+            if (bloqueActual.EsPosibleColocar() && sensor.EsPosibleColocar())
+            {
+                AgregarBloque();
                 bloqueActual = null;
+            }
         }
     }
 
@@ -133,13 +140,27 @@ public class ControladorCreación : SyncScript
         }
     }
 
+    private void AgregarBloque()
+    {
+        // Agrega tipo + número
+        var código = bloqueActual.tipoBloque.ToString() + bloqueActual.ObtenerNúmero();
+        if (!bloquesListos.Contains(código))
+            bloquesListos.Add(código);
+    }
+
     public void EnClicGuardar(int ranura)
     {
-        // PENDIENTE: esperar a colocar todos los bloques
-        // PENDIENTE: sacar miniatura
+        if(bloquesListos.Count < bloques.Count)
+        {
+            // PENDIENTE: mensaje error
+            Log.Warning("no se puedeee");
+            return;
+        }
+
+        // PENDIENTE: crear o sacar miniatura
 
         // Posición respecto a la fortaleza
-        foreach(var bloque in bloques)
+        foreach (var bloque in bloques)
         {
             bloque.PosicionarEnFortaleza(fortaleza.Position);
         }
@@ -147,7 +168,7 @@ public class ControladorCreación : SyncScript
         // Guardado
         if(SistemaMemoria.GuardarFortaleza(bloques.ToArray(), ranura, null))
         {
-            // PENDIENTE: mensaje
+            // PENDIENTE: mensaje ok
             interfaz.CerrarPanelGuardar();
             EnClicReiniciarPosiciones();
         }

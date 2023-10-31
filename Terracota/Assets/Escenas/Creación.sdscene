@@ -107,6 +107,34 @@ Hierarchy:
                 BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
                 BasePartId: 0ec69105-7267-4360-a7fb-f1edee1aee41
                 InstanceId: bd235faf-9de2-4cdf-9bf1-cff65c8ff344
+        -   Entity:
+                Id: 171bdc29-2b08-4a63-8cb7-41088e7e9891
+                Name: "Límite_0"
+                Components:
+                    836bbdc7431eecb0ced0e22133d1a3d0: !TransformComponent
+                        Id: 387520dd-7c51-408a-953b-e3832ef7892b
+                        Position: {X: -13.5, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e99550084a6d2dd7f45e343dd7b75946: !StaticColliderComponent
+                        Id: fe171551-26fb-4252-84b2-5bc05616731d
+                        CollisionGroup: DebrisFilter
+                        CanCollideWith: SensorTrigger
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            d18309823c21613aed34c0674e539cac: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 10.0, Y: 4.0, Z: 8.0}
+                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Folder: null
             Entity:
                 Id: 1c81e2ba-0972-44e7-8a01-aa95c843c258
@@ -125,7 +153,7 @@ Hierarchy:
                         Materials: {}
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: ccc43702-720f-4612-bcce-255992d21711
-                        CanCollideWith: DefaultFilter, SensorTrigger
+                        CanCollideWith*: DefaultFilter, SensorTrigger
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -265,6 +293,35 @@ Hierarchy:
                 BasePartAsset: "ca8a9afd-e763-41aa-97d2-bf8fe2d39937:Prefabs/Creación/CortoCreación"
                 BasePartId: 670e7431-4482-412f-8d8b-83cb09f4b1b4
                 InstanceId: 2e639c75-a079-465e-92e1-c6d5ed0e7cbc
+        -   Folder: null
+            Entity:
+                Id: 35d49166-bdfb-45b3-8224-c6ca6db8d7ad
+                Name: "Límite_1"
+                Components:
+                    836bbdc7431eecb0ced0e22133d1a3d0: !TransformComponent
+                        Id: f366bc73-a6b4-4caf-8107-675d8169a14b
+                        Position: {X: 13.5, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e99550084a6d2dd7f45e343dd7b75946: !StaticColliderComponent
+                        Id: 96168f18-7522-4a3f-a314-bf375699c1b4
+                        CollisionGroup: DebrisFilter
+                        CanCollideWith: SensorTrigger
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            d18309823c21613aed34c0674e539cac: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 10.0, Y: 4.0, Z: 8.0}
+                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Folder: null
             Entity:
                 Id: 36ebdf29-07c3-4056-bc27-21f7586ee6cc
@@ -1341,10 +1398,14 @@ Hierarchy:
                 Components:
                     9952510b53cac874fc2ca4fa5293e96e: !TransformComponent
                         Id: 0d8f6b3e-a15e-4ac9-98cd-d6d50107e317
-                        Position: {X: 0.0, Y: 0.0, Z: 14.5}
+                        Position: {X: 0.0, Y: 0.0, Z: 14.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            24cec47401f7ac760b9779e0df0357c0: ref!! 387520dd-7c51-408a-953b-e3832ef7892b
+                            80d39b608a48742bbd005eb8e472bcf4: ref!! f366bc73-a6b4-4caf-8107-675d8169a14b
+                            8de2b81bf7ca85a96505762ef62aa785: ref!! 29e57a7a-51a1-4546-86a7-0e1445d0e283
+                            42a2ef3cb918db4edbb6aac4f89c52ec: ref!! c98ee291-9238-4010-919d-bf151e47feed
         -   Folder: null
             Entity:
                 Id: bc842e07-7577-4db9-90da-ab0ed7547d08
@@ -1520,7 +1581,7 @@ Hierarchy:
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: 14422040-c5f6-44e3-a689-d089e490b959
                         CollisionGroup: SensorTrigger
-                        CanCollideWith: DefaultFilter
+                        CanCollideWith: DefaultFilter, DebrisFilter
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
@@ -1689,6 +1750,64 @@ Hierarchy:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
                 BasePartId: d636c902-a785-4353-b5b4-1f6a1ee79ba9
                 InstanceId: 0b20dfac-f72d-4089-847e-4db9e05813ca
+        -   Folder: null
+            Entity:
+                Id: f946ff14-1a66-4ce5-8801-095d64deaded
+                Name: "Límite_2"
+                Components:
+                    836bbdc7431eecb0ced0e22133d1a3d0: !TransformComponent
+                        Id: 29e57a7a-51a1-4546-86a7-0e1445d0e283
+                        Position: {X: 0.0, Y: 0.0, Z: -13.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e99550084a6d2dd7f45e343dd7b75946: !StaticColliderComponent
+                        Id: 1c2211ae-5962-4f6e-b0a8-a5c8df0bef84
+                        CollisionGroup: DebrisFilter
+                        CanCollideWith: SensorTrigger
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            d18309823c21613aed34c0674e539cac: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 40.0, Y: 4.0, Z: 20.0}
+                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Folder: null
+            Entity:
+                Id: fbb75b79-2f73-4c0d-89bb-0e942a436405
+                Name: "Límite_3"
+                Components:
+                    836bbdc7431eecb0ced0e22133d1a3d0: !TransformComponent
+                        Id: c98ee291-9238-4010-919d-bf151e47feed
+                        Position: {X: 0.0, Y: 0.0, Z: 13.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e99550084a6d2dd7f45e343dd7b75946: !StaticColliderComponent
+                        Id: 1ebb3549-fee4-4b3e-a609-e644e3d4ba52
+                        CollisionGroup: DebrisFilter
+                        CanCollideWith: SensorTrigger
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            d18309823c21613aed34c0674e539cac: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 40.0, Y: 4.0, Z: 20.0}
+                                LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: fc9920f1-b75f-4d2f-89e7-7f656b98b5dd
                 Name*: Largo_0

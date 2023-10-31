@@ -1,8 +1,8 @@
-﻿using Stride.Core.Collections;
+﻿using System.Linq;
+using Stride.Core.Collections;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
-using System.Linq;
 
 namespace Terracota;
 using static Constantes;
@@ -12,11 +12,15 @@ public class ElementoCreación : StartupScript
     public TipoBloque tipoBloque;
     public RigidbodyComponent cuerpo;
 
+    private string número;
     private Vector3 posiciónInicial;
     private Quaternion rotaciónInicial;
 
     public override void Start()
     {
+        // Obtiene último dígito de la entidad
+        número = Entity.Name[^1].ToString();
+
         cuerpo.Collisions.CollectionChanged += CalcularColisiones;
         posiciónInicial = ObtenerPosición();
         rotaciónInicial = ObtenerRotación();
@@ -45,14 +49,22 @@ public class ElementoCreación : StartupScript
     }
 
     public bool EsPosibleColocar()
-    {
-        var colisionesSinBase = cuerpo.Collisions.Where(o => !o.ColliderA.Entity.Name.Contains("Sensor") && !o.ColliderB.Entity.Name.Contains("Sensor")).ToArray();
+    {        
+        var colisionesSinBase = cuerpo.Collisions.Where(o => !o.ColliderA.Entity.Name.Contains("Sensor") &&
+                                                             !o.ColliderB.Entity.Name.Contains("Sensor") &&
+                                                             !o.ColliderA.Entity.Name.Contains("Fortaleza") &&
+                                                             !o.ColliderB.Entity.Name.Contains("Fortaleza")).ToArray();
         return (colisionesSinBase.Length <= 0);
     }
 
     public void PosicionarEnFortaleza(Vector3 fortaleza)
     {
         Entity.Transform.Position -= fortaleza;
+    }
+
+    public string ObtenerNúmero()
+    {
+        return número;
     }
 
     // Guardado

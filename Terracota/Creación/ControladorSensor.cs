@@ -11,9 +11,13 @@ public class ControladorSensor : StartupScript
 {
     public List<RigidbodyComponent> sensores = new List<RigidbodyComponent> { };
 
+    private RigidbodyComponent cuerpo;
     private TipoBloque tipoBloqueActual;
 
-    public override void Start() { }
+    public override void Start()
+    {
+        cuerpo = Entity.Get<RigidbodyComponent>();
+    }
 
     public void ActualizarPosición(Vector3 nuevaPosición)
     {
@@ -82,6 +86,11 @@ public class ControladorSensor : StartupScript
                 Entity.Transform.Scale = new Vector3(2, 1, 1);
                 break;
         }
+    }
+
+    public bool EsPosibleColocar()
+    {
+        return !(cuerpo.Collisions.Where(o => o.ColliderA.Entity.Name.Contains("Límite") || o.ColliderB.Entity.Name.Contains("Límite")).Count() > 0);
     }
 
     public void Rotar(float rotación)
