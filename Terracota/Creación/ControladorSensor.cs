@@ -47,12 +47,23 @@ public class ControladorSensor : StartupScript
 
     public int VerificarSuelo(Entity bloqueActual, int altura)
     {
-        // Revisa colisiones, excepto bloque actual, para forzar Y 0
-        var colisionesSinBase = sensores[0].Collisions.Where(o => o.ColliderA.Entity.GetParent() != bloqueActual && o.ColliderB.Entity.GetParent() != bloqueActual).ToArray();
-        if (colisionesSinBase.Length == 0)
+        // Revisa colisiones, excepto bloque actual, para forzar altura actual
+        var colisiones0 = sensores[0].Collisions.Where(o => o.ColliderA.Entity.GetParent() != bloqueActual && o.ColliderB.Entity.GetParent() != bloqueActual).ToArray();
+        var colisiones1 = sensores[1].Collisions.Where(o => o.ColliderA.Entity.GetParent() != bloqueActual && o.ColliderB.Entity.GetParent() != bloqueActual).ToArray();
+        var colisiones2 = sensores[2].Collisions.Where(o => o.ColliderA.Entity.GetParent() != bloqueActual && o.ColliderB.Entity.GetParent() != bloqueActual).ToArray();
+        var colisiones3 = sensores[3].Collisions.Where(o => o.ColliderA.Entity.GetParent() != bloqueActual && o.ColliderB.Entity.GetParent() != bloqueActual).ToArray();
+
+        // ¿Optimizar?
+        if (colisiones0.Length == 0)
             return 0;
-        else
-            return altura;
+        if (colisiones1.Length == 0)
+            return 1;
+        if (colisiones2.Length == 0)
+            return 2;
+        if (colisiones3.Length == 0)
+            return 3;
+
+        return altura;
     }
 
     public void ReiniciarCuerpo(TipoBloque tipoBloque, Quaternion rotación)
