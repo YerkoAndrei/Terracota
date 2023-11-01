@@ -59,8 +59,12 @@ public static class Sistema
         return sprite;
     }
 
-    public static Button ConfigurarBotón(Button botón, ImageElement imagen)
+    public static Button ConfigurarBotón(Button botón, ImageElement imagen = null)
     {
+        // Si imagen es null busca dentro del botón
+        if(imagen == null)
+            imagen = botón.FindVisualChildOfType<ImageElement>();
+
         // Cambios color
         botón.MouseOverStateChanged += (sender, args) =>
         {

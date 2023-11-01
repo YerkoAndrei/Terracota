@@ -3,9 +3,11 @@ using Stride.Engine;
 using Stride.UI;
 using Stride.UI.Controls;
 using Stride.UI.Panels;
+using System.Linq;
 
 namespace Terracota;
 using static Constantes;
+using static Sistema;
 
 public class InterfazCreación : StartupScript
 {
@@ -34,38 +36,36 @@ public class InterfazCreación : StartupScript
         página.FindVisualChildOfType<Button>("btnGirar").Click += (sender, e) =>        { EnClicGirarPieza(); };
 
         // Estatua
-        página.FindVisualChildOfType<Button>("btnEstatua_0").Click += (sender, e) => { EnClicAgregaEstatua(0); };
-        página.FindVisualChildOfType<Button>("btnEstatua_1").Click += (sender, e) => { EnClicAgregaEstatua(1); };
-        página.FindVisualChildOfType<Button>("btnEstatua_2").Click += (sender, e) => { EnClicAgregaEstatua(2); };
+        var estatuas = página.FindVisualChildOfType<UniformGrid>("Estatuas").FindVisualChildrenOfType<Button>().ToArray();
+        for (int i = 0; i < estatuas.Length; i++)
+        {
+            //estatuas[i] = ConfigurarBotón(estatuas[i]);
+            estatuas[i].Click += (sender, e) => { EnClicAgregaEstatua(i); };
+        }
 
-        // Corto
-        página.FindVisualChildOfType<Button>("btnCorto_0").Click += (sender, e) => { EnClicAgregaCorto(0); };
-        página.FindVisualChildOfType<Button>("btnCorto_1").Click += (sender, e) => { EnClicAgregaCorto(1); };
-        página.FindVisualChildOfType<Button>("btnCorto_2").Click += (sender, e) => { EnClicAgregaCorto(2); };
-        página.FindVisualChildOfType<Button>("btnCorto_3").Click += (sender, e) => { EnClicAgregaCorto(3); };
-        página.FindVisualChildOfType<Button>("btnCorto_4").Click += (sender, e) => { EnClicAgregaCorto(4); };
-        página.FindVisualChildOfType<Button>("btnCorto_5").Click += (sender, e) => { EnClicAgregaCorto(5); };
-        página.FindVisualChildOfType<Button>("btnCorto_6").Click += (sender, e) => { EnClicAgregaCorto(6); };
-        página.FindVisualChildOfType<Button>("btnCorto_7").Click += (sender, e) => { EnClicAgregaCorto(7); };
-        página.FindVisualChildOfType<Button>("btnCorto_8").Click += (sender, e) => { EnClicAgregaCorto(8); };
+        // Cortos
+        var cortos = página.FindVisualChildOfType<UniformGrid>("Cortos").FindVisualChildrenOfType<Button>().ToArray();
+        for (int i = 0; i < cortos.Length; i++)
+        {
+            //cortos[i] = ConfigurarBotón(cortos[i]);
+            cortos[i].Click += (sender, e) => { EnClicAgregaCorto(i); };
+        }
 
-        // Largo
-        página.FindVisualChildOfType<Button>("btnLargo_0").Click += (sender, e) => { EnClicAgregarLargo(0); };
-        página.FindVisualChildOfType<Button>("btnLargo_1").Click += (sender, e) => { EnClicAgregarLargo(1); };
-        página.FindVisualChildOfType<Button>("btnLargo_2").Click += (sender, e) => { EnClicAgregarLargo(2); };
-        página.FindVisualChildOfType<Button>("btnLargo_3").Click += (sender, e) => { EnClicAgregarLargo(3); };
-        página.FindVisualChildOfType<Button>("btnLargo_4").Click += (sender, e) => { EnClicAgregarLargo(4); };
-        página.FindVisualChildOfType<Button>("btnLargo_5").Click += (sender, e) => { EnClicAgregarLargo(5); };
+        // Largos
+        var largos = página.FindVisualChildOfType<UniformGrid>("Largos").FindVisualChildrenOfType<Button>().ToArray();
+        for (int i = 0; i < largos.Length; i++)
+        {
+            //largos[i] = ConfigurarBotón(largos[i]);
+            largos[i].Click += (sender, e) => { EnClicAgregarLargo(i); };
+        }
 
         // Ranuras
-        página.FindVisualChildOfType<Button>("btnRanura_1").Click += (sender, e) => { EnClicGuardarRanura(1); };
-        página.FindVisualChildOfType<Button>("btnRanura_2").Click += (sender, e) => { EnClicGuardarRanura(2); };
-        página.FindVisualChildOfType<Button>("btnRanura_3").Click += (sender, e) => { EnClicGuardarRanura(3); };
-        página.FindVisualChildOfType<Button>("btnRanura_4").Click += (sender, e) => { EnClicGuardarRanura(4); };
-        página.FindVisualChildOfType<Button>("btnRanura_5").Click += (sender, e) => { EnClicGuardarRanura(5); };
-        página.FindVisualChildOfType<Button>("btnRanura_6").Click += (sender, e) => { EnClicGuardarRanura(6); };
-        página.FindVisualChildOfType<Button>("btnRanura_7").Click += (sender, e) => { EnClicGuardarRanura(7); };
-        página.FindVisualChildOfType<Button>("btnRanura_8").Click += (sender, e) => { EnClicGuardarRanura(8); };
+        var ranuras = página.FindVisualChildOfType<UniformGrid>("Ranuras").FindVisualChildrenOfType<Button>().ToArray();
+        for(int i=0; i< ranuras.Length; i++)
+        {
+            //ranuras[i] = ConfigurarBotón(ranuras[i]);
+            ranuras[i].Click += (sender, e) => { EnClicGuardarRanura(i+ 1); };
+        }
     }
 
     private void EnClicAgregaEstatua(int estatua)
