@@ -31,6 +31,43 @@ Hierarchy:
         - ref!! 811bfb54-1213-4dc2-8e2d-86c8ddc458ba
         - ref!! 1f20f127-84fa-459d-b60e-58989dd93853
     Parts:
+        -   Entity:
+                Id: 0398d4b7-114f-4dc4-8519-e3877a2c67f3
+                Name: Bloqueador
+                Components:
+                    01c8a07ed49dcf8ce73f44a4963d4865: !TransformComponent
+                        Id: f50bb3a3-b84d-485b-82e2-b2a2e896b0d7
+                        Position: {X: 0.0, Y: 2.2, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    bc3263355b3a2d723e7e0b0252b25f69: !RigidbodyComponent
+                        Id: ff547c47-940d-4764-a643-2dd78d3dfae1
+                        CanCollideWith: 0
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            7d1fca906aaf08c1f2974838b1ee8772: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.5, Y: 2.0, Z: 1.5}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.1}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
+                BasePartId: 6520dadf-3e27-4a7d-8718-297a9d00ebcf
+                InstanceId: 45424c53-595e-447b-866d-aa3e01b100d1
         -   Folder: null
             Entity:
                 Id: 04b3f270-87b8-454f-b96e-660a53f4c877
@@ -98,6 +135,7 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
+                            ef0e6b9e1201d4bcea57ac83d377f34a: ref!! 1d1cc7da-389c-4d2b-8f3f-b8fad8091bcb
                             ff2bff364f6f466fdc2497f5fff7dd71: ref!! 3b69bc38-4a38-432f-aeb4-ec4368f9a922
                     f180b8d4bd2ff5fd2e4f4f0698b689db: !Terracota.ElementoCreaci%25C3%25B3n,Terracota
                         Id: 78250d31-08db-4e8a-9986-f0a4502e84b9
@@ -147,6 +185,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             ab94c1a1f9ae1783c4948328339944ae: ref!! e1e3ff38-6546-4c18-9526-cbc5be87b0c7
+                            7d4186f9b2d14447dcc24862267d29e5: ref!! f50bb3a3-b84d-485b-82e2-b2a2e896b0d7
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
                         Id: af34574e-da69-4d93-997a-64cf9afca19b
                         Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
@@ -171,8 +210,8 @@ Hierarchy:
                         ColliderShapes:
                             11713a024b421a98fde2045acaefff43: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 1.5, Y: 2.99, Z: 1.5}
-                                LocalOffset: {X: 0.0, Y: 0.7, Z: 0.1}
+                                Size: {X: 1.5, Y: 1.99, Z: 1.5}
+                                LocalOffset: {X: 0.0, Y: 0.2, Z: 0.1}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
                 BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
@@ -545,6 +584,7 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
+                            bb93e2e25b8c0b21ea50269c2ee80ade: ref!! ec1320df-57fc-4d1f-81e8-33d8384c6862
                             ff2bff364f6f466fdc2497f5fff7dd71: ref!! 675ae5da-ff0c-418a-bb90-d8bc30a9f50d
                     f180b8d4bd2ff5fd2e4f4f0698b689db: !Terracota.ElementoCreaci%25C3%25B3n,Terracota
                         Id: e4e70409-8862-4b65-9993-13799b973696
@@ -566,6 +606,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             ab94c1a1f9ae1783c4948328339944ae: ref!! 0bc743c3-9579-42d8-8729-2f32d3b52673
+                            4be0adc85b16933fdcaee153434a6203: ref!! c75a4fc8-b3f3-45e3-bc60-990d45029249
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
                         Id: 350a7d29-2455-42d0-a2f9-9523e00b5ab2
                         Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
@@ -590,8 +631,8 @@ Hierarchy:
                         ColliderShapes:
                             11713a024b421a98fde2045acaefff43: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 1.5, Y: 2.99, Z: 1.5}
-                                LocalOffset: {X: 0.0, Y: 0.7, Z: 0.1}
+                                Size: {X: 1.5, Y: 1.99, Z: 1.5}
+                                LocalOffset: {X: 0.0, Y: 0.2, Z: 0.1}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
                 BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
@@ -846,6 +887,7 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
+                            56b1e6b962bd34cc9a6a55e00b46c5a6: ref!! 96305ffa-24d8-4b71-ae7f-dce18862a93b
                             ff2bff364f6f466fdc2497f5fff7dd71: ref!! c27dc147-118f-41f2-9b63-e9b1ca0dee0f
                     f180b8d4bd2ff5fd2e4f4f0698b689db: !Terracota.ElementoCreaci%25C3%25B3n,Terracota
                         Id: 0302b05f-895c-4006-bd12-42f32c1f37aa
@@ -855,6 +897,26 @@ Hierarchy:
                 BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
                 BasePartId: 0ec69105-7267-4360-a7fb-f1edee1aee41
                 InstanceId: 45424c53-595e-447b-866d-aa3e01b100d1
+        -   Entity:
+                Id: 6a365f5d-7547-459d-bbc5-57a63de6a2dc
+                Name: Borde
+                Components:
+                    e5de3f1121044d7e2df40f62b620544e: !TransformComponent
+                        Id: 1d1cc7da-389c-4d2b-8f3f-b8fad8091bcb
+                        Position: {X: 0.0, Y: 0.001, Z: -0.1}
+                        Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 0.147, Y: 0.147, Z: 1.0}
+                        Children: {}
+                    c4f31429f5bbc00ddbd41a8fb5e55987: !SpriteComponent
+                        Id: ae40e762-74f5-4ed7-8687-bf9bd4d5bf78
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: d443d4ad-012d-4a2f-a65d-3cff5a93fb39:Sprites/SpriteCuadrado
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        PremultipliedAlpha: false
+            Base:
+                BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
+                BasePartId: f01dcc8c-5b11-4dcc-a120-7cbeb0706426
+                InstanceId: bd235faf-9de2-4cdf-9bf1-cff65c8ff344
         -   Entity:
                 Id: 7066368a-de15-44df-9b3f-764bbf8e05b0
                 Name: Modelo Corto
@@ -1070,6 +1132,26 @@ Hierarchy:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
                 BasePartId: 5db5f6b9-1632-4b0b-9977-c89ec1c89a98
                 InstanceId: 0b20dfac-f72d-4089-847e-4db9e05813ca
+        -   Entity:
+                Id: 881b9aee-021d-45f8-afba-43ef22d737d3
+                Name: Borde
+                Components:
+                    e5de3f1121044d7e2df40f62b620544e: !TransformComponent
+                        Id: ec1320df-57fc-4d1f-81e8-33d8384c6862
+                        Position: {X: 0.0, Y: 0.001, Z: -0.1}
+                        Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 0.147, Y: 0.147, Z: 1.0}
+                        Children: {}
+                    c4f31429f5bbc00ddbd41a8fb5e55987: !SpriteComponent
+                        Id: 83045063-c446-4c2a-b1b9-b7cec340772d
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: d443d4ad-012d-4a2f-a65d-3cff5a93fb39:Sprites/SpriteCuadrado
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        PremultipliedAlpha: false
+            Base:
+                BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
+                BasePartId: f01dcc8c-5b11-4dcc-a120-7cbeb0706426
+                InstanceId: bc1a7b27-5dc5-4cd9-9df2-551c4eea62d5
         -   Folder: null
             Entity:
                 Id: 932ce889-aa09-4874-bbb4-8d8d47fef8c9
@@ -1082,6 +1164,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             ab94c1a1f9ae1783c4948328339944ae: ref!! 87941cbf-4d51-4f22-93c1-87e68463cc17
+                            891911a84f6b63b67d4796d9baf7183b: ref!! 76969af2-225a-45dc-9100-d3036ebff60f
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
                         Id: 2a597ea3-fb0e-4cc9-bfd0-bd0b767f4157
                         Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
@@ -1106,8 +1189,8 @@ Hierarchy:
                         ColliderShapes:
                             11713a024b421a98fde2045acaefff43: !BoxColliderShapeDesc
                                 Is2D: false
-                                Size: {X: 1.5, Y: 2.99, Z: 1.5}
-                                LocalOffset: {X: 0.0, Y: 0.7, Z: 0.1}
+                                Size: {X: 1.5, Y: 1.99, Z: 1.5}
+                                LocalOffset: {X: 0.0, Y: 0.2, Z: 0.1}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
                 BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
@@ -1603,6 +1686,63 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 2.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
+                Id: e41d96f0-a35f-4f23-8b94-f11ae891e90a
+                Name: Borde
+                Components:
+                    e5de3f1121044d7e2df40f62b620544e: !TransformComponent
+                        Id: 96305ffa-24d8-4b71-ae7f-dce18862a93b
+                        Position: {X: 0.0, Y: 0.001, Z: -0.1}
+                        Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 0.147, Y: 0.147, Z: 1.0}
+                        Children: {}
+                    c4f31429f5bbc00ddbd41a8fb5e55987: !SpriteComponent
+                        Id: ed91bf45-a057-4252-96a2-fe71072643de
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: d443d4ad-012d-4a2f-a65d-3cff5a93fb39:Sprites/SpriteCuadrado
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        PremultipliedAlpha: false
+            Base:
+                BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
+                BasePartId: f01dcc8c-5b11-4dcc-a120-7cbeb0706426
+                InstanceId: 45424c53-595e-447b-866d-aa3e01b100d1
+        -   Entity:
+                Id: e4779eb9-9086-4720-a13c-1c52db7981dd
+                Name: Bloqueador
+                Components:
+                    01c8a07ed49dcf8ce73f44a4963d4865: !TransformComponent
+                        Id: 76969af2-225a-45dc-9100-d3036ebff60f
+                        Position: {X: 0.0, Y: 2.2, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    bc3263355b3a2d723e7e0b0252b25f69: !RigidbodyComponent
+                        Id: 3d64548f-e615-43b1-95fb-ce09bedac1c5
+                        CanCollideWith: 0
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            7d1fca906aaf08c1f2974838b1ee8772: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.5, Y: 2.0, Z: 1.5}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.1}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
+                BasePartId: 6520dadf-3e27-4a7d-8718-297a9d00ebcf
+                InstanceId: bd235faf-9de2-4cdf-9bf1-cff65c8ff344
+        -   Entity:
                 Id: e5aec11f-b127-495d-86ee-d8ece3309f2a
                 Name: Sensor_0
                 Components:
@@ -1709,6 +1849,43 @@ Hierarchy:
                 BasePartAsset: "ca8a9afd-e763-41aa-97d2-bf8fe2d39937:Prefabs/Creación/CortoCreación"
                 BasePartId: 670e7431-4482-412f-8d8b-83cb09f4b1b4
                 InstanceId: 4f0184bc-d85f-4e5b-8da2-b36f11bbfb0b
+        -   Entity:
+                Id: eef13962-6e75-4d62-8ea0-2578fd82964f
+                Name: Bloqueador
+                Components:
+                    01c8a07ed49dcf8ce73f44a4963d4865: !TransformComponent
+                        Id: c75a4fc8-b3f3-45e3-bc60-990d45029249
+                        Position: {X: 0.0, Y: 2.2, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    bc3263355b3a2d723e7e0b0252b25f69: !RigidbodyComponent
+                        Id: 04b08816-c147-428d-9583-7eb58a10dddf
+                        CanCollideWith: 0
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 0.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            7d1fca906aaf08c1f2974838b1ee8772: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.5, Y: 2.0, Z: 1.5}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.1}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
+                BasePartId: 6520dadf-3e27-4a7d-8718-297a9d00ebcf
+                InstanceId: bc1a7b27-5dc5-4cd9-9df2-551c4eea62d5
         -   Entity:
                 Id: f4b8c88b-7e6a-49d3-a7c2-b8074acf3190
                 Name*: Corto_7
