@@ -20,51 +20,49 @@ public class InterfazCreación : StartupScript
     {
         var página = Entity.Get<UIComponent>().Page.RootElement;
 
+        // Panel Guardar
         gridGuardar = página.FindVisualChildOfType<Grid>("Guardar");
         gridGuardar.Visibility = Visibility.Hidden;
         página.FindVisualChildOfType<Button>("PanelOscuro").Click += (sender, e) =>     { EnClicGuardar(); };
-        página.FindVisualChildOfType<Button>("btnVolver").Click += (sender, e) =>       { EnClicGuardar(); };
+
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVolver"), EnClicGuardar);
 
         // Guardado
-        página.FindVisualChildOfType<Button>("btnGuardar").Click += (sender, e) =>      { EnClicGuardar(); };
-        página.FindVisualChildOfType<Button>("btnReiniciar").Click += (sender, e) =>    { EnClicReiniciarPosiciones(); };
-        página.FindVisualChildOfType<Button>("btnSalir").Click += (sender, e) =>        { EnClicSalir(); };
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnGuardar"), EnClicGuardar);
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnReiniciar"), EnClicReiniciarPosiciones);
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnSalir"), EnClicSalir);
 
         // Cámara
-        página.FindVisualChildOfType<Button>("btnIzquierda").Click += (sender, e) =>    { EnClicMoverCámara(false); };
-        página.FindVisualChildOfType<Button>("btnDerecha").Click += (sender, e) =>      { EnClicMoverCámara(true); };
-        página.FindVisualChildOfType<Button>("btnGirar").Click += (sender, e) =>        { EnClicGirarPieza(); };
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnIzquierda"), () => EnClicMoverCámara(false));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnDerecha"), () => EnClicMoverCámara(true));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnGirar"), EnClicGirarPieza);
 
         // Estatua
-        var estatuas = página.FindVisualChildOfType<UniformGrid>("Estatuas").FindVisualChildrenOfType<Button>().ToArray();
+        var estatuas = página.FindVisualChildOfType<UniformGrid>("Estatuas").FindVisualChildrenOfType<Grid>().ToArray();
         for (int i = 0; i < estatuas.Length; i++)
         {
-            //estatuas[i] = ConfigurarBotón(estatuas[i]);
-            estatuas[i].Click += (sender, e) => { EnClicAgregaEstatua(i); };
+            ConfigurarBotón(estatuas[i], () => EnClicAgregaEstatua(i));
         }
 
         // Cortos
-        var cortos = página.FindVisualChildOfType<UniformGrid>("Cortos").FindVisualChildrenOfType<Button>().ToArray();
+        var cortos = página.FindVisualChildOfType<UniformGrid>("Cortos").FindVisualChildrenOfType<Grid>().ToArray();
         for (int i = 0; i < cortos.Length; i++)
         {
-            //cortos[i] = ConfigurarBotón(cortos[i]);
-            cortos[i].Click += (sender, e) => { EnClicAgregaCorto(i); };
+            ConfigurarBotón(cortos[i], () => EnClicAgregaCorto(i));
         }
 
         // Largos
-        var largos = página.FindVisualChildOfType<UniformGrid>("Largos").FindVisualChildrenOfType<Button>().ToArray();
+        var largos = página.FindVisualChildOfType<UniformGrid>("Largos").FindVisualChildrenOfType<Grid>().ToArray();
         for (int i = 0; i < largos.Length; i++)
         {
-            //largos[i] = ConfigurarBotón(largos[i]);
-            largos[i].Click += (sender, e) => { EnClicAgregarLargo(i); };
+            ConfigurarBotón(largos[i], () => EnClicAgregarLargo(i));
         }
 
         // Ranuras
-        var ranuras = página.FindVisualChildOfType<UniformGrid>("Ranuras").FindVisualChildrenOfType<Button>().ToArray();
+        var ranuras = página.FindVisualChildOfType<UniformGrid>("Ranuras").FindVisualChildrenOfType<Grid>().ToArray();
         for(int i=0; i< ranuras.Length; i++)
         {
-            //ranuras[i] = ConfigurarBotón(ranuras[i]);
-            ranuras[i].Click += (sender, e) => { EnClicGuardarRanura(i+ 1); };
+            ConfigurarBotón(estatuas[i], () => EnClicGuardarRanura(i+1));
         }
     }
 

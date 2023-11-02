@@ -6,6 +6,7 @@ using Stride.Graphics;
 using Stride.Rendering.Sprites;
 using Stride.UI;
 using Stride.UI.Controls;
+using Stride.UI.Panels;
 
 namespace Terracota;
 using static Constantes;
@@ -59,11 +60,49 @@ public static class Sistema
         return sprite;
     }
 
-    public static Button ConfigurarBotón(Button botón, ImageElement imagen = null)
+    public static void ConfigurarBotón(Grid grid, Action action)
     {
-        // Si imagen es null busca dentro del botón
-        if(imagen == null)
-            imagen = botón.FindVisualChildOfType<ImageElement>();
+        try
+        {
+            // Busca contenido dentro del "grid botón"
+            var imagen = grid.FindVisualChildOfType<ImageElement>("img");
+            var botón = grid.FindVisualChildOfType<Button>("btn");
+
+            // En clic
+            botón.Click += (s, a) => { action.Invoke(); };
+        
+            // Cambios color
+            botón.MouseOverStateChanged += (s, a) =>
+            {
+                switch (a.NewValue)
+                {
+                    case MouseOverState.MouseOverElement:
+                        imagen.Color = colorEnCursor;
+                        break;
+                    case MouseOverState.MouseOverNone:
+                        imagen.Color = colorNormal;
+                        break;
+                }
+            };
+            botón.TouchDown += (s, a) =>
+            {
+                imagen.Color = colorEnClic;
+            };
+            botón.TouchUp += (s, a) =>
+            {
+                imagen.Color = colorEnCursor;
+            };
+        }
+        catch
+        {
+            Console.WriteLine("Error botón: " + grid.Name);
+        }
+    }
+
+    public static void ConfigurarBotónConImagen(Button botón, ImageElement imagen, Action action)
+    {
+        // En clic
+        botón.Click += (sender, e) => { action.Invoke(); };
 
         // Cambios color
         botón.MouseOverStateChanged += (sender, args) =>
@@ -86,6 +125,5 @@ public static class Sistema
         {
             imagen.Color = colorEnCursor;
         };
-        return botón;
     }
 }

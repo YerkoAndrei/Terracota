@@ -63,9 +63,7 @@ public class InterfazJuego : StartupScript
         imgTurno = página.FindVisualChildOfType<ImageElement>("imgTurno");
 
         imgProyectil = página.FindVisualChildOfType<ImageElement>("imgProyectil");
-        var btnProyectil = página.FindVisualChildOfType<Button>("btnProyectil");
-        btnProyectil = ConfigurarBotón(btnProyectil, imgProyectil);
-        btnProyectil.Click += EnClicProyectil;
+        ConfigurarBotónConImagen(página.FindVisualChildOfType<Button>("btnProyectil"), imgProyectil, EnClicProyectil);
 
         estadoAnfitrión = new List<ImageElement>
         {
@@ -85,9 +83,9 @@ public class InterfazJuego : StartupScript
         biPausa = página.FindVisualChildOfType<Grid>("BI_Pausa");
         gridPausa = página.FindVisualChildOfType<Grid>("Pausa");
 
-        var btnPausa = página.FindVisualChildOfType<Button>("btnPausa");
-        btnPausa = ConfigurarBotón(btnPausa, página.FindVisualChildOfType<ImageElement>("imgPausa"));
-        btnPausa.Click += EnClicPausa;
+        ConfigurarBotónConImagen(página.FindVisualChildOfType<Button>("btnPausa"),
+                                 página.FindVisualChildOfType<ImageElement>("imgPausa"),
+                                 EnPausa);
 
         var btnPanelOscuro = página.FindVisualChildOfType<Button>("PanelOscuro");
         btnPanelOscuro.Click += EnClicPausa;
@@ -117,6 +115,12 @@ public class InterfazJuego : StartupScript
         return pausa;
     }
 
+    private void EnPausa()
+    {
+        // PENDIENTE: limpiar
+        EnClicPausa(null, null);
+    }
+
     private void EnClicPausa(object sender, RoutedEventArgs e)
     {
         pausa = !pausa;
@@ -143,7 +147,7 @@ public class InterfazJuego : StartupScript
         SceneSystem.SceneInstance.RootScene = Content.Load(escenaMenú);
     }
 
-    private void EnClicProyectil(object sender, RoutedEventArgs e)
+    private void EnClicProyectil()
     {
         CambiarProyectil(controladorPartida.CambiarProyectil());
     }
