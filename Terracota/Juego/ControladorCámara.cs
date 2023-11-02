@@ -60,13 +60,13 @@ public class ControladorCámara : SyncScript
         // Variables
         duraciónLerp = 1f;
         rotaciónInicial = eje.Rotation;
-        rotaciónObjetivo = rotaciónInicial * Quaternion.RotationY(MathUtil.DegreesToRadians(YObjetivo));
 
         // Ajusta dirección de movimiento
-        if (derecha)
-            direcciónObjetivo = rotaciónInicial * Quaternion.RotationY(MathUtil.DegreesToRadians(YObjetivo - 0.01f));
-        else
-            direcciónObjetivo = rotaciónInicial * Quaternion.RotationY(MathUtil.DegreesToRadians(YObjetivo + 0.01f));
+        if (!derecha)
+            YObjetivo = (YObjetivo * -1);
+
+        rotaciónObjetivo = rotaciónInicial * Quaternion.RotationY(MathUtil.DegreesToRadians(YObjetivo));
+        direcciónObjetivo = rotaciónInicial * Quaternion.RotationY(MathUtil.DegreesToRadians(YObjetivo));
 
         rotando = true;
     }

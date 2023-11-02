@@ -102,7 +102,7 @@ public class ControladorPartidaLocal : SyncScript
             turnoJugador = TipoJugador.anfitrión;
             cañónActual = cañónAnfitrión;
 
-            controladorCámara.RotarCámara(-90, false, enFin);
+            controladorCámara.RotarCámara(90, false, enFin);
         }
         else
         {
