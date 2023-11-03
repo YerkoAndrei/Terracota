@@ -101,9 +101,15 @@ public class InterfazCreación : StartupScript
     private void EnClicFortalezas()
     {
         if (gridFortalezas.Visibility == Visibility.Visible)
+        {
             gridFortalezas.Visibility = Visibility.Hidden;
+            controladorCreación.AbrirMenú(false);
+        }
         else
+        {
             gridFortalezas.Visibility = Visibility.Visible;
+            controladorCreación.AbrirMenú(true);
+        }
     }
 
     private void EnClicGuardarNueva()

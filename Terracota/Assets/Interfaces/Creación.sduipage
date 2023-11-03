@@ -114,21 +114,13 @@ Hierarchy:
         -   UIElement: !Button
                 Id: 35560a9b-8494-4e10-a233-4496d8f2694d
                 DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 100}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 200}
                 DrawLayerNumber: 2
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: PanelOscuro
-                PressedImage: !SpriteFromSheet
-                    Sheet: null
-                    CurrentFrame: 2
-                NotPressedImage: !SpriteFromSheet
-                    Sheet: null
-                    CurrentFrame: 1
-                MouseOverImage: !SpriteFromSheet
-                    Sheet: null
         -   UIElement: !TextBlock
                 Id: 37790c34-1c96-44b1-a242-85e299db21bb
                 DependencyProperties: {}
@@ -272,6 +264,7 @@ Hierarchy:
                 Id: 599f7c65-46a9-4bf7-ba23-07664e3135cb
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 200}
+                CanBeHitByUser: true
                 Width: 660.0
                 Height: 650.0
                 Margin: {}

@@ -28,6 +28,7 @@ public class ControladorCreación : SyncScript
     private List<string> bloquesListos;
     private List<ElementoCreación> bloques;
 
+    private bool menúAbierto;
     private float rotaciónClic;
 
     public override void Start()
@@ -46,6 +47,9 @@ public class ControladorCreación : SyncScript
 
     public override void Update()
     {
+        if (menúAbierto)
+            return;
+
         // Intenta encontrar bloque
         if (Input.IsMouseButtonPressed(MouseButton.Left))
         {
@@ -69,7 +73,7 @@ public class ControladorCreación : SyncScript
             EnClicGirarPieza();
         }
 
-        // Guardar
+        // Colocar
         if (Input.IsMouseButtonPressed(MouseButton.Left))
         {
             if (bloqueActual.EsPosibleColocar() && sensor.EsPosibleColocar())
@@ -219,9 +223,15 @@ public class ControladorCreación : SyncScript
         if (moviendoCámara)
             return;
 
+        moviendoCámara = true;
         controladorCámara.RotarCámara(90, derecha, () =>
         {
             moviendoCámara = false;
         });
+    }
+
+    public void AbrirMenú(bool abrir)
+    {
+        menúAbierto = abrir;
     }
 }
