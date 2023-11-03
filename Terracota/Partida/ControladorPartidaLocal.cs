@@ -43,6 +43,12 @@ public class ControladorPartidaLocal : SyncScript
         multiplicador = 1.0f;
         turnoJugador = TipoJugador.nada;
 
+        proyectilAnfitrión = TipoProyectil.bola;
+        proyectilHuesped = TipoProyectil.bola;
+
+        cañónAnfitrión.Iniciar(interfaz);
+        cañónHuesped.Iniciar(interfaz);
+
         // Comienza con elección
         UIElección.Enabled = true;
         interfaz.Activar(false);
@@ -74,12 +80,6 @@ public class ControladorPartidaLocal : SyncScript
     public void ComenzarPartida(bool ganaAnfitrión)
     {
         UIElección.Enabled = false;
-
-        proyectilAnfitrión = TipoProyectil.bola;
-        proyectilHuesped = TipoProyectil.bola;
-
-        cañónAnfitrión.Asignar(interfaz);
-        cañónHuesped.Asignar(interfaz);
 
         // Al finalizar rotación
         var enFin = () =>

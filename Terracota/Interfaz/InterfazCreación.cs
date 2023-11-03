@@ -19,11 +19,11 @@ public class InterfazCreación : StartupScript
     public override void Start()
     {
         var página = Entity.Get<UIComponent>().Page.RootElement;
+        ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("PanelOscuro"), EnClicGuardar);
 
         // Panel Guardar
         gridGuardar = página.FindVisualChildOfType<Grid>("Guardar");
         gridGuardar.Visibility = Visibility.Hidden;
-        página.FindVisualChildOfType<Button>("PanelOscuro").Click += (sender, e) =>     { EnClicGuardar(); };
 
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVolver"), EnClicGuardar);
 

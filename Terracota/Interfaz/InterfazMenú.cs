@@ -1,12 +1,12 @@
-﻿using Stride.Core.Mathematics;
-using Stride.Core.Serialization;
+﻿using Stride.Core.Serialization;
 using Stride.Engine;
 using Stride.UI;
 using Stride.UI.Controls;
-using Stride.UI.Events;
+using Stride.UI.Panels;
 using System;
 
 namespace Terracota;
+using static Sistema;
 
 public class InterfazMenú : StartupScript
 {
@@ -23,53 +23,50 @@ public class InterfazMenú : StartupScript
 
         var página = Entity.Get<UIComponent>().Page.RootElement;
 
-        var btnLocal = página.FindVisualChildOfType<Button>("btnLocal");
-        var btnRed = página.FindVisualChildOfType<Button>("btnRed");
-        var btnP2P = página.FindVisualChildOfType<Button>("btnP2P");
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnLocal"), EnClicLocal);
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnLAN"), EnClicLAN);
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnP2P"), EnClicP2P);
 
-        var btnCrear = página.FindVisualChildOfType<Button>("btnCrear");
-        var btnOpciones = página.FindVisualChildOfType<Button>("btnOpciones");
-        var btnSalir = página.FindVisualChildOfType<Button>("btnSalir");
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnCrear"), EnClicCrear);
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnOpciones"), EnClicOpciones);
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnSalir"), EnClicSalir);
 
-        var btnCréditos = página.FindVisualChildOfType<Button>("btnCréditos");
-
-        btnLocal.Click += EnClicLocal;
-        btnRed.Click += EnClicRed;
-        btnP2P.Click += EnClicP2P;
-
-        btnCrear.Click += EnClicCrear;
-        btnOpciones.Click += EnClicOpciones;
-        btnSalir.Click += EnClicSalir;
+        ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("btnCréditos"), EnClicCréditos);
     }
 
-    private void EnClicLocal(object sender, RoutedEventArgs e)
+    private void EnClicLocal()
     {
         Content.Unload(SceneSystem.SceneInstance.RootScene);
         SceneSystem.SceneInstance.RootScene = Content.Load(escenaLocal);
     }
 
-    private void EnClicRed(object sender, RoutedEventArgs e)
+    private void EnClicLAN()
     {
         // Abrir menú correspondiente
     }
 
-    private void EnClicP2P(object sender, RoutedEventArgs e)
+    private void EnClicP2P()
     {
         // Abrir menú correspondiente
     }
 
-    private void EnClicCrear(object sender, RoutedEventArgs e)
+    private void EnClicCrear()
     {
         Content.Unload(SceneSystem.SceneInstance.RootScene);
         SceneSystem.SceneInstance.RootScene = Content.Load(escenaCreación);
     }
 
-    private void EnClicOpciones(object sender, RoutedEventArgs e)
+    private void EnClicOpciones()
     {
-        // Abrir menú correspondiente
+        // Abrir panel
     }
 
-    private void EnClicSalir(object sender, RoutedEventArgs e)
+    private void EnClicCréditos()
+    {
+        // Abrir panel
+    }
+
+    private void EnClicSalir()
     {
         Environment.Exit(0);
     }

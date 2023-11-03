@@ -3,7 +3,7 @@ using Stride.Engine;
 using Stride.UI;
 using Stride.UI.Controls;
 using Stride.UI.Panels;
-using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Terracota;
@@ -14,7 +14,7 @@ public class InterfazElección : StartupScript
 {
     public ControladorPartidaLocal controladorPartida;
 
-    private List<ImageElement> ruleta;
+    private ImageElement[] ruleta;
 
     private Grid gridRuleta;
     private TextBlock txtIzquierda;
@@ -35,6 +35,7 @@ public class InterfazElección : StartupScript
 
         gridRuleta = página.FindVisualChildOfType<Grid>("Ruleta");
         gridRuleta.Visibility = Visibility.Hidden;
+        ruleta = gridRuleta.FindVisualChildrenOfType<ImageElement>().ToArray();
 
         txtIzquierda = página.FindVisualChildOfType<TextBlock>("SelecciónIzquierda");
         txtDerecha = página.FindVisualChildOfType<TextBlock>("SelecciónDerecha");
@@ -45,19 +46,7 @@ public class InterfazElección : StartupScript
         fondoIzquierda.Opacity = 0;
         fondoDerecha.Opacity = 0;
 
-        página.FindVisualChildOfType<Button>("btnComenzar").Click += (sender, e) => { EnClicComenzar(); };
-
-        ruleta = new List<ImageElement>
-        {
-            página.FindVisualChildOfType<ImageElement>("tope_0"),
-            página.FindVisualChildOfType<ImageElement>("tope_1"),
-            página.FindVisualChildOfType<ImageElement>("tope_2"),
-            página.FindVisualChildOfType<ImageElement>("tope_3"),
-            página.FindVisualChildOfType<ImageElement>("tope_4"),
-            página.FindVisualChildOfType<ImageElement>("tope_5"),
-            página.FindVisualChildOfType<ImageElement>("tope_6"),
-            página.FindVisualChildOfType<ImageElement>("tope_7"),
-        };
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnComenzar"), EnClicComenzar);
 
         // Botones
         página.FindVisualChildOfType<Button>("btnRanuraIzquierda_1").Click += (sender, e) => { EnClicIzquierda(1); };
@@ -125,7 +114,7 @@ public class InterfazElección : StartupScript
             toqueActual++;
             ruletaActual++;
 
-            if (ruletaActual >= ruleta.Count)
+            if (ruletaActual >= ruleta.Length)
                 ruletaActual = 0;
 
             // Cambia colores
@@ -178,7 +167,7 @@ public class InterfazElección : StartupScript
 
     private void ApagarRuleta()
     {
-        for(int i=0; i < ruleta.Count; i++)
+        for(int i=0; i < ruleta.Length; i++)
         {
             ruleta[i].Color = Color.White;
         }

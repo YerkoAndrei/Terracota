@@ -1,0 +1,508 @@
+!UIPageAsset
+Id: 47fe3e54-569f-408c-802d-c1a4227f381c
+SerializedVersion: {Stride: 2.1.0.1}
+Tags: []
+Design:
+    Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+Hierarchy:
+    RootParts:
+        - !Grid ref!! afede330-ce9c-459c-944e-efc54d037d6f
+    Parts:
+        -   UIElement: !Grid
+                Id: 0149fb44-f510-4e86-8b6a-43f12c09f1db
+                DependencyProperties:
+                    ca89d46c00c9322876211f4164274fdf~GridBase.RowPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btnLAN
+                Children:
+                    9e4f3d586d651661bc416c7d7505fbd6: !Button ref!! e71d85f1-03ea-45a5-9247-902c8e7e0a86
+                    206771363d0d25f2f9c37e43d48351c9: !ImageElement ref!! 3fd7d498-4f38-4bc2-bd63-ff4d03523e82
+                    6f1fcb58ef99790f1a18084c89e80de1: !TextBlock ref!! e9ad8dd5-669d-4e02-8bc7-5705565834c9
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !TextBlock
+                Id: 08d61025-ced9-4b7e-b0f3-300e87feaa9b
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 35.0
+                DepthAlignment: Stretch
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txt
+                Text: Local
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 30.0
+                TextColor: {R: 0, G: 0, B: 0, A: 255}
+                TextAlignment: Center
+        -   UIElement: !Button
+                Id: 1c913f37-6b34-46f2-b181-71131da9cc42
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                DepthAlignment: Stretch
+                Margin: {Top: 10.0, Bottom: 10.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btn
+                Padding: {Left: 0.0, Top: 0.0, Right: 0.0, Bottom: 0.0}
+        -   UIElement: !Grid
+                Id: 1fb2488f-f87e-4a6c-8159-61f0b192863c
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btnLocal
+                Children:
+                    9e4f3d586d651661bc416c7d7505fbd6: !Button ref!! f54d2a57-e4f7-4fab-927c-a34f6107f740
+                    206771363d0d25f2f9c37e43d48351c9: !ImageElement ref!! ce1a41f6-7c8b-40f1-9a7f-bc3127154a60
+                    94c7813953de9dee968560a35babcaf8: !TextBlock ref!! 08d61025-ced9-4b7e-b0f3-300e87feaa9b
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !UniformGrid
+                Id: 27bafef7-85e3-492d-a81c-f570313715fc
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 500.0
+                Height: 250.0
+                HorizontalAlignment: Right
+                Margin: {Top: 325.0, Right: 50.0, Bottom: 175.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: Opciones
+                Children:
+                    94fb286de46f5401f10a516b0bb54160: !Grid ref!! f809a82b-9fe8-4a52-abeb-b735d127b861
+                    193300bccf704fd8be009ce525eeb89e: !Grid ref!! 2d026c19-f8c4-4f52-9373-e679c85898a6
+                    9e33f65006c916ce8b19a14149505c7f: !Grid ref!! d9c8338d-2783-4a4a-a867-639efd1e8301
+                Rows: 3
+        -   UIElement: !Grid
+                Id: 2d026c19-f8c4-4f52-9373-e679c85898a6
+                DependencyProperties:
+                    ca89d46c00c9322876211f4164274fdf~GridBase.RowPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btnOpciones
+                Children:
+                    9e4f3d586d651661bc416c7d7505fbd6: !Button ref!! b13762ec-879c-4955-af26-9f6fff96ca7a
+                    206771363d0d25f2f9c37e43d48351c9: !ImageElement ref!! 99591bc7-13b6-4da3-bfb5-499ef021ed45
+                    6f1fcb58ef99790f1a18084c89e80de1: !TextBlock ref!! d2c1ff85-58e5-48de-8c81-b592ace7d583
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !TextBlock
+                Id: 330167d0-129c-442d-b03f-aa3a66efc5fa
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 35.0
+                DepthAlignment: Stretch
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txt
+                Text: Crear fortaleza
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 30.0
+                TextColor: {R: 0, G: 0, B: 0, A: 255}
+                TextAlignment: Center
+        -   UIElement: !TextBlock
+                Id: 3700845e-b7c0-4da8-878c-2025671e1a1a
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 60.0
+                HorizontalAlignment: Right
+                DepthAlignment: Stretch
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: "txtVersión"
+                Text: 0.1
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 25.0
+                TextColor: {R: 255, G: 255, B: 255, A: 255}
+                TextAlignment: Center
+        -   UIElement: !ImageElement
+                Id: 3fd7d498-4f38-4bc2-bd63-ff4d03523e82
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DepthAlignment: Stretch
+                Margin: {Top: 10.0, Bottom: 10.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: img
+                Source: !SpriteFromTexture
+                    Texture: 66d859f6-5dbf-4782-bf1c-a7fdc0806448:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 255, A: 255}
+                StretchType: Fill
+        -   UIElement: !TextBlock
+                Id: 517726bb-1003-4227-ae66-efbedb7a083d
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 150.0
+                VerticalAlignment: Top
+                Margin: {Top: 40.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: "txtTítulo"
+                Text: Terracota
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 100.0
+                TextColor: {R: 190, G: 89, B: 70, A: 255}
+                TextAlignment: Center
+        -   UIElement: !ImageElement
+                Id: 5288a2dc-13c1-4bde-b781-3294cf5938f7
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DepthAlignment: Stretch
+                Margin: {Top: 10.0, Bottom: 10.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: img
+                Source: !SpriteFromTexture
+                    Texture: 66d859f6-5dbf-4782-bf1c-a7fdc0806448:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 255, A: 255}
+                StretchType: Fill
+        -   UIElement: !TextBlock
+                Id: 56f02e30-ab7a-44a2-b701-35979312ca4b
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 240.0
+                HorizontalAlignment: Left
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtAutor
+                Text: YerkoAndrei
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 25.0
+                TextColor: {R: 255, G: 255, B: 200, A: 255}
+                TextAlignment: Center
+        -   UIElement: !ImageElement
+                Id: 6ad90abf-3b98-4347-a8d6-e1db3da16533
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DepthAlignment: Stretch
+                Margin: {Top: 10.0, Bottom: 10.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: img
+                Source: !SpriteFromTexture
+                    Texture: 66d859f6-5dbf-4782-bf1c-a7fdc0806448:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 255, A: 255}
+                StretchType: Fill
+        -   UIElement: !ImageElement
+                Id: 6c5511d0-ea3d-480f-a31a-049e7c4ef70b
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DepthAlignment: Stretch
+                Margin: {Top: 10.0, Bottom: 10.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: img
+                Source: !SpriteFromTexture
+                    Texture: 66d859f6-5dbf-4782-bf1c-a7fdc0806448:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 255, A: 255}
+                StretchType: Fill
+        -   UIElement: !UniformGrid
+                Id: 80bf0937-e247-4b4e-bf74-0858ea36d95f
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 500.0
+                Height: 250.0
+                HorizontalAlignment: Left
+                VerticalAlignment: Center
+                Margin: {Left: 50.0, Top: 150.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: Partidas
+                Children:
+                    94fb286de46f5401f10a516b0bb54160: !Grid ref!! 1fb2488f-f87e-4a6c-8159-61f0b192863c
+                    193300bccf704fd8be009ce525eeb89e: !Grid ref!! 0149fb44-f510-4e86-8b6a-43f12c09f1db
+                    9e33f65006c916ce8b19a14149505c7f: !Grid ref!! abe7e385-f303-406c-aab2-6c811618799d
+                Rows: 3
+        -   UIElement: !TextBlock
+                Id: 8ee3d453-5286-44b1-aeb7-634ef73fdf16
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 35.0
+                DepthAlignment: Stretch
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txt
+                Text: Salir
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 30.0
+                TextColor: {R: 0, G: 0, B: 0, A: 255}
+                TextAlignment: Center
+        -   UIElement: !Grid
+                Id: 935f400b-eb50-4246-8d02-e00ecd98449c
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 300.0
+                Height: 35.0
+                HorizontalAlignment: Right
+                VerticalAlignment: Bottom
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: "Créditos"
+                Children:
+                    9f39e586aca63cd2cb3121367e6ecfeb: !Button ref!! d8c828d6-ef49-4eab-82e2-d91c67b4a653
+                    e68eba3cd36b412b3d7e761a17fdfddc: !TextBlock ref!! 56f02e30-ab7a-44a2-b701-35979312ca4b
+                    6c79d6b915112179dd17218eba5907b9: !TextBlock ref!! 3700845e-b7c0-4da8-878c-2025671e1a1a
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !ImageElement
+                Id: 99591bc7-13b6-4da3-bfb5-499ef021ed45
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DepthAlignment: Stretch
+                Margin: {Top: 10.0, Bottom: 10.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: img
+                Source: !SpriteFromTexture
+                    Texture: 66d859f6-5dbf-4782-bf1c-a7fdc0806448:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 255, A: 255}
+                StretchType: Fill
+        -   UIElement: !Grid
+                Id: abe7e385-f303-406c-aab2-6c811618799d
+                DependencyProperties:
+                    eef7fabe2fbfce065e2af6e52df0b5e4~GridBase.RowPropertyKey: 2
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btnP2P
+                Children:
+                    9e4f3d586d651661bc416c7d7505fbd6: !Button ref!! 1c913f37-6b34-46f2-b181-71131da9cc42
+                    206771363d0d25f2f9c37e43d48351c9: !ImageElement ref!! 6ad90abf-3b98-4347-a8d6-e1db3da16533
+                    6f1fcb58ef99790f1a18084c89e80de1: !TextBlock ref!! c33f1f00-2ed7-46ef-b120-93a48d03afab
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !Grid
+                Id: afede330-ce9c-459c-944e-efc54d037d6f
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Children:
+                    d8e967dc7ca4192027db01bcb0e5f0a6: !TextBlock ref!! 517726bb-1003-4227-ae66-efbedb7a083d
+                    dd35e0f9b3e50eb3b9223a680136902d: !UniformGrid ref!! 80bf0937-e247-4b4e-bf74-0858ea36d95f
+                    527d35fb0c5130e01b10c934fceb7c4e: !UniformGrid ref!! 27bafef7-85e3-492d-a81c-f570313715fc
+                    e230a9b00343be28bc4b250380fb2eb7: !Grid ref!! 935f400b-eb50-4246-8d02-e00ecd98449c
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !Button
+                Id: b13762ec-879c-4955-af26-9f6fff96ca7a
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                DepthAlignment: Stretch
+                Margin: {Top: 10.0, Bottom: 10.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btn
+                Padding: {Left: 0.0, Top: 0.0, Right: 0.0, Bottom: 0.0}
+        -   UIElement: !Button
+                Id: b33159f7-0bf3-42dc-afec-25f7c35e2ddc
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                DepthAlignment: Stretch
+                Margin: {Top: 10.0, Bottom: 10.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btn
+                Padding: {Left: 0.0, Top: 0.0, Right: 0.0, Bottom: 0.0}
+        -   UIElement: !Button
+                Id: b9ed5218-a9e2-435e-8061-6e2a64ce363f
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                DepthAlignment: Stretch
+                Margin: {Top: 10.0, Bottom: 10.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btn
+                Padding: {Left: 0.0, Top: 0.0, Right: 0.0, Bottom: 0.0}
+        -   UIElement: !TextBlock
+                Id: c33f1f00-2ed7-46ef-b120-93a48d03afab
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 35.0
+                DepthAlignment: Stretch
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txt
+                Text: P2P
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 30.0
+                TextColor: {R: 255, G: 0, B: 0, A: 255}
+                TextAlignment: Center
+        -   UIElement: !ImageElement
+                Id: ce1a41f6-7c8b-40f1-9a7f-bc3127154a60
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DepthAlignment: Stretch
+                Margin: {Top: 10.0, Bottom: 10.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: img
+                Source: !SpriteFromTexture
+                    Texture: 66d859f6-5dbf-4782-bf1c-a7fdc0806448:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 255, A: 255}
+                StretchType: Fill
+        -   UIElement: !TextBlock
+                Id: d2c1ff85-58e5-48de-8c81-b592ace7d583
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 35.0
+                DepthAlignment: Stretch
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txt
+                Text: Opciones
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 30.0
+                TextColor: {R: 255, G: 0, B: 0, A: 255}
+                TextAlignment: Center
+        -   UIElement: !Button
+                Id: d8c828d6-ef49-4eab-82e2-d91c67b4a653
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Opacity: 0.0
+                DrawLayerNumber: 2
+                DepthAlignment: Stretch
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: "btnCréditos"
+                PressedImage: !SpriteFromSheet
+                    Sheet: null
+                    CurrentFrame: 2
+                NotPressedImage: !SpriteFromSheet
+                    Sheet: null
+                    CurrentFrame: 1
+                MouseOverImage: !SpriteFromSheet
+                    Sheet: null
+        -   UIElement: !Grid
+                Id: d9c8338d-2783-4a4a-a867-639efd1e8301
+                DependencyProperties:
+                    eef7fabe2fbfce065e2af6e52df0b5e4~GridBase.RowPropertyKey: 2
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btnSalir
+                Children:
+                    9e4f3d586d651661bc416c7d7505fbd6: !Button ref!! b9ed5218-a9e2-435e-8061-6e2a64ce363f
+                    206771363d0d25f2f9c37e43d48351c9: !ImageElement ref!! 5288a2dc-13c1-4bde-b781-3294cf5938f7
+                    6f1fcb58ef99790f1a18084c89e80de1: !TextBlock ref!! 8ee3d453-5286-44b1-aeb7-634ef73fdf16
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !Button
+                Id: e71d85f1-03ea-45a5-9247-902c8e7e0a86
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                DepthAlignment: Stretch
+                Margin: {Top: 10.0, Bottom: 10.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btn
+                Padding: {Left: 0.0, Top: 0.0, Right: 0.0, Bottom: 0.0}
+        -   UIElement: !TextBlock
+                Id: e9ad8dd5-669d-4e02-8bc7-5705565834c9
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 35.0
+                DepthAlignment: Stretch
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txt
+                Text: LAN
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 30.0
+                TextColor: {R: 255, G: 0, B: 0, A: 255}
+                TextAlignment: Center
+        -   UIElement: !Button
+                Id: f54d2a57-e4f7-4fab-927c-a34f6107f740
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                DepthAlignment: Stretch
+                Margin: {Top: 10.0, Bottom: 10.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btn
+                Padding: {Left: 0.0, Top: 0.0, Right: 0.0, Bottom: 0.0}
+        -   UIElement: !Grid
+                Id: f809a82b-9fe8-4a52-abeb-b735d127b861
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btnCrear
+                Children:
+                    9e4f3d586d651661bc416c7d7505fbd6: !Button ref!! b33159f7-0bf3-42dc-afec-25f7c35e2ddc
+                    206771363d0d25f2f9c37e43d48351c9: !ImageElement ref!! 6c5511d0-ea3d-480f-a31a-049e7c4ef70b
+                    6f1fcb58ef99790f1a18084c89e80de1: !TextBlock ref!! 330167d0-129c-442d-b03f-aa3a66efc5fa
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}

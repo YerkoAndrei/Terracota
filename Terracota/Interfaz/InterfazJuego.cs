@@ -1,7 +1,6 @@
 ﻿using Stride.Engine;
 using Stride.UI.Controls;
 using Stride.UI;
-using Stride.UI.Events;
 using Stride.Graphics;
 using Stride.UI.Panels;
 using System.Collections.Generic;
@@ -26,7 +25,7 @@ public class InterfazJuego : StartupScript
 
     private Grid gridProyectil;
     private Grid gridGanador;
-    private Grid biPausa;
+    private Grid btnPausa;
 
     private TextBlock txtTurno;
     private ImageElement imgTurno;
@@ -49,6 +48,7 @@ public class InterfazJuego : StartupScript
     public override void Start()
     {
         var página = Entity.Get<UIComponent>().Page.RootElement;
+        ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("PanelOscuro"), EnClicPausa);
 
         gridGanador = página.FindVisualChildOfType<Grid>("Ganador");
         gridProyectil = página.FindVisualChildOfType<Grid>("Proyectil");
@@ -80,20 +80,14 @@ public class InterfazJuego : StartupScript
         };
 
         // Menú pausa
-        biPausa = página.FindVisualChildOfType<Grid>("BI_Pausa");
         gridPausa = página.FindVisualChildOfType<Grid>("Pausa");
+        btnPausa = página.FindVisualChildOfType<Grid>("btnPausa");
+        ConfigurarBotón(btnPausa, EnClicPausa);
 
-        ConfigurarBotónConImagen(página.FindVisualChildOfType<Button>("btnPausa"),
-                                 página.FindVisualChildOfType<ImageElement>("imgPausa"),
-                                 EnPausa);
-
-        var btnPanelOscuro = página.FindVisualChildOfType<Button>("PanelOscuro");
-        btnPanelOscuro.Click += EnClicPausa;
-
-        página.FindVisualChildOfType<Button>("btnReanudar").Click += EnClicPausa;
-        página.FindVisualChildOfType<Button>("btnReiniciar").Click += EnClicReiniciar;
-        página.FindVisualChildOfType<Button>("btnOpciones").Click += EnClicOpciones;
-        página.FindVisualChildOfType<Button>("btnSalir").Click += EnClicSalir;
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnReanudar"), EnClicPausa);
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnReiniciar"), EnClicReiniciar);
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnOpciones"), EnClicOpciones);
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnSalir"), EnClicSalir);
 
         // Predeterminado
         pausa = false;
@@ -115,13 +109,7 @@ public class InterfazJuego : StartupScript
         return pausa;
     }
 
-    private void EnPausa()
-    {
-        // PENDIENTE: limpiar
-        EnClicPausa(null, null);
-    }
-
-    private void EnClicPausa(object sender, RoutedEventArgs e)
+    private void EnClicPausa()
     {
         pausa = !pausa;
         if (pausa)
@@ -130,18 +118,18 @@ public class InterfazJuego : StartupScript
             gridPausa.Visibility = Visibility.Hidden;
     }
 
-    private void EnClicReiniciar(object sender, RoutedEventArgs e)
+    private void EnClicReiniciar()
     {
         Content.Unload(SceneSystem.SceneInstance.RootScene);
         SceneSystem.SceneInstance.RootScene = Content.Load(escenaJuego);
     }
 
-    private void EnClicOpciones(object sender, RoutedEventArgs e)
+    private void EnClicOpciones()
     {
 
     }
 
-    private void EnClicSalir(object sender, RoutedEventArgs e)
+    private void EnClicSalir()
     {
         Content.Unload(SceneSystem.SceneInstance.RootScene);
         SceneSystem.SceneInstance.RootScene = Content.Load(escenaMenú);
@@ -157,7 +145,7 @@ public class InterfazJuego : StartupScript
         txtProyectil.Text = string.Empty;
         txtCantidadTurnos.Text = string.Empty;
 
-        biPausa.Visibility = Visibility.Hidden;
+        btnPausa.Visibility = Visibility.Hidden;
         gridProyectil.Visibility = Visibility.Hidden;
     }
 
@@ -179,7 +167,7 @@ public class InterfazJuego : StartupScript
 
         imgTurno.Visibility = Visibility.Visible;
         gridProyectil.Visibility = Visibility.Visible;
-        biPausa.Visibility = Visibility.Visible;
+        btnPausa.Visibility = Visibility.Visible;
 
         CambiarProyectil(proyectil);
     }
@@ -241,7 +229,7 @@ public class InterfazJuego : StartupScript
         txtCantidadTurnos.Text = turno.ToString();
         gridGanador.Visibility = Visibility.Visible;
         gridProyectil.Visibility = Visibility.Hidden;
-        biPausa.Visibility = Visibility.Visible;
+        btnPausa.Visibility = Visibility.Visible;
 
         switch (jugador)
         {

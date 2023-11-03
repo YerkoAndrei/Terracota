@@ -62,41 +62,34 @@ public static class Sistema
 
     public static void ConfigurarBotón(Grid grid, Action action)
     {
-        try
-        {
-            // Busca contenido dentro del "grid botón"
-            var imagen = grid.FindVisualChildOfType<ImageElement>("img");
-            var botón = grid.FindVisualChildOfType<Button>("btn");
+        // Busca contenido dentro del "grid botón"
+        var imagen = grid.FindVisualChildOfType<ImageElement>("img");
+        var botón = grid.FindVisualChildOfType<Button>("btn");
 
-            // En clic
-            botón.Click += (s, a) => { action.Invoke(); };
+        // En clic
+        botón.Click += (s, a) => { action.Invoke(); };
         
-            // Cambios color
-            botón.MouseOverStateChanged += (s, a) =>
-            {
-                switch (a.NewValue)
-                {
-                    case MouseOverState.MouseOverElement:
-                        imagen.Color = colorEnCursor;
-                        break;
-                    case MouseOverState.MouseOverNone:
-                        imagen.Color = colorNormal;
-                        break;
-                }
-            };
-            botón.TouchDown += (s, a) =>
-            {
-                imagen.Color = colorEnClic;
-            };
-            botón.TouchUp += (s, a) =>
-            {
-                imagen.Color = colorEnCursor;
-            };
-        }
-        catch
+        // Cambios color
+        botón.MouseOverStateChanged += (s, a) =>
         {
-            Console.WriteLine("Error botón: " + grid.Name);
-        }
+            switch (a.NewValue)
+            {
+                case MouseOverState.MouseOverElement:
+                    imagen.Color = colorEnCursor;
+                    break;
+                case MouseOverState.MouseOverNone:
+                    imagen.Color = colorNormal;
+                    break;
+            }
+        };
+        botón.TouchDown += (s, a) =>
+        {
+            imagen.Color = colorEnClic;
+        };
+        botón.TouchUp += (s, a) =>
+        {
+            imagen.Color = colorEnCursor;
+        };
     }
 
     public static void ConfigurarBotónConImagen(Button botón, ImageElement imagen, Action action)
@@ -125,5 +118,10 @@ public static class Sistema
         {
             imagen.Color = colorEnCursor;
         };
+    }
+
+    public static void ConfigurarBotónOculto(Button botón, Action action)
+    {
+        botón.Click += (sender, e) => { action.Invoke(); };
     }
 }

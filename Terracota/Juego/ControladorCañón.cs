@@ -31,14 +31,13 @@ public class ControladorCañón : SyncScript
     private bool activo;
     private InterfazJuego interfaz;
 
-    public override void Start()
+    public override void Start() { }
+
+    public void Iniciar(InterfazJuego _controladorInterfaz)
     {
         fuerzaBala *= 1000;
         fuerzaMetralla *= 1000;
-    }
 
-    public void Asignar(InterfazJuego _controladorInterfaz)
-    {
         interfaz = _controladorInterfaz;
     }
 
