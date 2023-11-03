@@ -11,7 +11,7 @@ public class ControladorFortaleza : StartupScript
     public List<ElementoBloque> cortos = new List<ElementoBloque> { };
     public List<ElementoBloque> largos = new List<ElementoBloque> { };
 
-    public List<ControladorEstatua> controladoresEstatuas;
+    private List<ControladorEstatua> controladoresEstatuas;
     private bool inicializado;
     private Vector3 posiciónInicial;
 

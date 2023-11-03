@@ -15,6 +15,7 @@ public class ElementoCreación : StartupScript
     private string número;
     private Vector3 posiciónInicial;
     private Quaternion rotaciónInicial;
+    private Vector3 posiciónFortaleza;
 
     public override void Start()
     {
@@ -57,9 +58,9 @@ public class ElementoCreación : StartupScript
         return (colisionesSinBase.Length <= 0);
     }
 
-    public void PosicionarEnFortaleza(Vector3 fortaleza)
+    public void AsignarFortaleza(Vector3 fortaleza)
     {
-        Entity.Transform.Position -= fortaleza;
+        posiciónFortaleza = fortaleza;
     }
 
     public string ObtenerNúmero()
@@ -76,6 +77,12 @@ public class ElementoCreación : StartupScript
     public Vector3 ObtenerPosición()
     {
         return Entity.Transform.Position;
+    }
+
+    public Vector3 ObtenerPosiciónRelativa()
+    {
+        // Posición relativa a posición fortaleza
+        return Entity.Transform.Position - posiciónFortaleza;
     }
 
     public Quaternion ObtenerRotación()

@@ -27,6 +27,26 @@ public class SistemaMemoria : StartupScript
         rutaConfiguración = Path.Combine(carpetaPersistente, archivoConfiguración);
     }
 
+    public static List<Fortaleza> CargarFortalezas()
+    {
+        if (!Directory.Exists(carpetaPersistente))
+            Directory.CreateDirectory(carpetaPersistente);
+
+        var fortalezas = new List<Fortaleza>();
+
+        // Lee archivo
+        if (File.Exists(rutaFortalezas))
+        {
+            var archivo = File.ReadAllText(rutaFortalezas);
+            var desencriptado = DesEncriptar(archivo);
+            fortalezas = JsonConvert.DeserializeObject<List<Fortaleza>>(desencriptado);
+
+            // Orden
+            fortalezas = fortalezas.OrderBy(o => o.ranura).ToList();
+        }
+        return fortalezas;
+    }
+
     public static bool GuardarFortaleza(ElementoCreación[] bloques, int ranura, string miniatura)
     {
         var fortalezas = CargarFortalezas();
@@ -38,7 +58,7 @@ public class SistemaMemoria : StartupScript
         nuevaFortaleza.miniatura = miniatura;
         for (int i = 0; i < bloques.Length; i++)
         {
-            var bloque = new Bloque(bloques[i].ObtenerTipo(), bloques[i].ObtenerPosición(), bloques[i].ObtenerRotación());
+            var bloque = new Bloque(bloques[i].ObtenerTipo(), bloques[i].ObtenerPosiciónRelativa(), bloques[i].ObtenerRotación());
             nuevaFortaleza.bloques.Add(bloque);
         }
 
@@ -67,21 +87,25 @@ public class SistemaMemoria : StartupScript
         return fortalezas.Where(o => o.ranura == ranura).FirstOrDefault();
     }
 
-    public static List<Fortaleza> CargarFortalezas()
+    public static bool EliminarFortaleza(int ranura)
     {
-        if (!Directory.Exists(carpetaPersistente))
-            Directory.CreateDirectory(carpetaPersistente);
+        var fortalezas = CargarFortalezas();
+        var fortaleza = fortalezas.Where(o => o.ranura == ranura).FirstOrDefault();
 
-        var fortalezas = new List<Fortaleza>();
+        if (fortaleza == null)
+            return false;
 
-        // Lee archivo
-        if (File.Exists(rutaFortalezas))
+        fortalezas.Remove(fortaleza);
+
+        // Guarda archivo
+        try
         {
-            var archivo = File.ReadAllText(rutaFortalezas);
-            var desencriptado = DesEncriptar(archivo);
-            fortalezas = JsonConvert.DeserializeObject<List<Fortaleza>>(desencriptado);
+            var json = JsonConvert.SerializeObject(fortalezas);
+            var encriptado = DesEncriptar(json);
+            File.WriteAllText(rutaFortalezas, encriptado);
+            return true;
         }
-        return fortalezas;
+        catch { return false; }
     }
 
     public static void GuardarConfiguración(List<string> nuevasConfiguraciones)

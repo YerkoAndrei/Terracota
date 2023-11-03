@@ -124,4 +124,35 @@ public static class Sistema
     {
         botón.Click += (sender, e) => { action.Invoke(); };
     }
+
+    public static void ConfigurarRanura(Grid grid, int fila, int ranura, string miniaturaB64, Action enClic, Action enElminar)
+    {
+        // Busca contenido dentro del "grid botón"
+        ConfigurarBotón(grid, enClic);
+        var miniatura = grid.FindVisualChildOfType<ImageElement>("Miniatura");
+        var texto = grid.FindVisualChildOfType<TextBlock>("txt");
+
+        // Botón eliminar
+        var btnEliminar = grid.FindVisualChildOfType<Grid>("btnEliminar");
+        ConfigurarBotón(btnEliminar, () =>
+        {
+            if(SistemaMemoria.EliminarFortaleza(ranura))
+                enElminar.Invoke();
+        });
+
+        // Visual
+        texto.Text = ranura.ToString();
+        grid.SetGridRow(fila);
+
+        // Miniatura
+        //miniatura.Source = ConvertirB64(miniaturaB64);
+    }
+
+    private static ISpriteProvider ConvertirB64(string B64)
+    {
+        var sprite = new SpriteFromTexture();
+        // PENDIENTE: miniatura
+
+        return sprite;
+    }
 }

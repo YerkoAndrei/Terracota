@@ -146,30 +146,25 @@ public class ControladorCreación : SyncScript
             bloquesListos.Add(código);
     }
 
-    public void EnClicGuardar(int ranura)
+    public bool EnClicGuardar(int ranura)
     {
         if(bloquesListos.Count < bloques.Count)
         {
             // PENDIENTE: mensaje error
             Log.Warning("no se puedeee");
-            return;
+            return false;
         }
-
-        // PENDIENTE: crear o sacar miniatura
 
         // Posición respecto a la fortaleza
         foreach (var bloque in bloques)
         {
-            bloque.PosicionarEnFortaleza(fortaleza.Position);
+            bloque.AsignarFortaleza(fortaleza.Position);
         }
 
+        // PENDIENTE: crear o sacar miniatura
+
         // Guardado
-        if(SistemaMemoria.GuardarFortaleza(bloques.ToArray(), ranura, null))
-        {
-            // PENDIENTE: mensaje ok
-            interfaz.CerrarPanelGuardar();
-            EnClicReiniciarPosiciones();
-        }
+        return SistemaMemoria.GuardarFortaleza(bloques.ToArray(), ranura, null);
     }
 
     public void EnClicGirarPieza()

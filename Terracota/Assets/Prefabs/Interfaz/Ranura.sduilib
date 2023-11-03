@@ -1,0 +1,131 @@
+!UILibraryAsset
+Id: 84558ab1-6c4a-4e3c-883e-6fed9365cef0
+SerializedVersion: {Stride: 2.1.0.1}
+Tags: []
+Design:
+    Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+PublicUIElements:
+    32d086f5-a905-4423-993f-9b91100884c7: Ranura
+Hierarchy:
+    RootParts:
+        - !Grid ref!! 32d086f5-a905-4423-993f-9b91100884c7
+    Parts:
+        -   UIElement: !Grid
+                Id: 32d086f5-a905-4423-993f-9b91100884c7
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 110.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: Ranura
+                Children:
+                    4cc2aa296fd55a1409d4a4053a134de9: !Button ref!! 7e2609a2-0a2b-4a15-825e-8595800cf340
+                    219b0415f2292ab9cc3af6fda3858a8b: !ImageElement ref!! f6509b79-6aaa-41c2-ac55-f2b2257a2dde
+                    c72ca101be7d5a7b0664f5a8c4766c7c: !TextBlock ref!! f1f42a8e-2df5-4419-853c-144f81d89f30
+                    b713325a816a7bb8387d16b065fffafa: !Grid ref!! 42b906d9-93a7-4ae0-bc36-543bfd20eb8e
+                    4acdbf24e8ead51b19636970460faccb: !ImageElement ref!! 86af9c85-ecae-4bb7-8638-058d00a80793
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !Grid
+                Id: 42b906d9-93a7-4ae0-bc36-543bfd20eb8e
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 40.0
+                Height: 40.0
+                HorizontalAlignment: Left
+                Margin: {Left: 10.0, Top: 10.0, Bottom: 10.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btnEliminar
+                Children:
+                    c4b37dd54e2390d5ad3200d8e4271c26: !Button ref!! 7697eacf-06af-4cea-91d0-a7f1c9ea341a
+                    56709eb4bd894340587024d07f6a21b8: !ImageElement ref!! 61c69ad8-b35d-45a6-941c-dca163a00f57
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !ImageElement
+                Id: 61c69ad8-b35d-45a6-941c-dca163a00f57
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: img
+                Source: !SpriteFromTexture
+                    Texture: 66d859f6-5dbf-4782-bf1c-a7fdc0806448:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 0, B: 0, A: 255}
+                StretchType: Fill
+        -   UIElement: !Button
+                Id: 7697eacf-06af-4cea-91d0-a7f1c9ea341a
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btn
+        -   UIElement: !Button
+                Id: 7e2609a2-0a2b-4a15-825e-8595800cf340
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btn
+        -   UIElement: !ImageElement
+                Id: 86af9c85-ecae-4bb7-8638-058d00a80793
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 150.0
+                Height: 100.0
+                HorizontalAlignment: Left
+                Margin: {Left: 60.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: Miniatura
+                Source: !SpriteFromTexture
+                    Texture: 66d859f6-5dbf-4782-bf1c-a7fdc0806448:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 0, G: 255, B: 0, A: 255}
+                StretchType: Fill
+        -   UIElement: !TextBlock
+                Id: f1f42a8e-2df5-4419-853c-144f81d89f30
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 60.0
+                Height: 45.0
+                HorizontalAlignment: Right
+                Margin: {Right: 20.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txt
+                Text: 00
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 40.0
+                TextColor: {R: 0, G: 0, B: 0, A: 255}
+                TextAlignment: Center
+        -   UIElement: !ImageElement
+                Id: f6509b79-6aaa-41c2-ac55-f2b2257a2dde
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: img
+                Source: !SpriteFromTexture
+                    Texture: 66d859f6-5dbf-4782-bf1c-a7fdc0806448:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 255, A: 255}
+                StretchType: Fill
