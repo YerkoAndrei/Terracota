@@ -11,11 +11,29 @@ Hierarchy:
         - !Grid ref!! 32d086f5-a905-4423-993f-9b91100884c7
     Parts:
         -   UIElement: !Grid
+                Id: 04fe1672-22e8-4d6f-b2af-eca62d92190a
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 40.0
+                Height: 40.0
+                HorizontalAlignment: Left
+                Margin: {Left: 60.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btnCargar
+                Children:
+                    c4b37dd54e2390d5ad3200d8e4271c26: !Button ref!! e9817252-1a86-4071-86c9-bc6589abb726
+                    56709eb4bd894340587024d07f6a21b8: !ImageElement ref!! 6463ec38-0df6-47c1-9c8c-2d015302a211
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !Grid
                 Id: 32d086f5-a905-4423-993f-9b91100884c7
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 110.0
-                Margin: {}
+                Margin: {Right: 12.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -25,6 +43,7 @@ Hierarchy:
                     219b0415f2292ab9cc3af6fda3858a8b: !ImageElement ref!! f6509b79-6aaa-41c2-ac55-f2b2257a2dde
                     c72ca101be7d5a7b0664f5a8c4766c7c: !TextBlock ref!! f1f42a8e-2df5-4419-853c-144f81d89f30
                     b713325a816a7bb8387d16b065fffafa: !Grid ref!! 42b906d9-93a7-4ae0-bc36-543bfd20eb8e
+                    9ca1fdded85b9a01c1b25450ae551daa: !Grid ref!! 04fe1672-22e8-4d6f-b2af-eca62d92190a
                     4acdbf24e8ead51b19636970460faccb: !ImageElement ref!! 86af9c85-ecae-4bb7-8638-058d00a80793
                 RowDefinitions: {}
                 ColumnDefinitions: {}
@@ -61,6 +80,20 @@ Hierarchy:
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 0, B: 0, A: 255}
                 StretchType: Fill
+        -   UIElement: !ImageElement
+                Id: 6463ec38-0df6-47c1-9c8c-2d015302a211
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: img
+                Source: !SpriteFromTexture
+                    Texture: 66d859f6-5dbf-4782-bf1c-a7fdc0806448:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 0, G: 0, B: 255, A: 255}
+                StretchType: Fill
         -   UIElement: !Button
                 Id: 7697eacf-06af-4cea-91d0-a7f1c9ea341a
                 DependencyProperties: {}
@@ -88,7 +121,7 @@ Hierarchy:
                 Width: 150.0
                 Height: 100.0
                 HorizontalAlignment: Left
-                Margin: {Left: 60.0}
+                Margin: {Left: 110.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -98,6 +131,16 @@ Hierarchy:
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 0, G: 255, B: 0, A: 255}
                 StretchType: Fill
+        -   UIElement: !Button
+                Id: e9817252-1a86-4071-86c9-bc6589abb726
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btn
         -   UIElement: !TextBlock
                 Id: f1f42a8e-2df5-4419-853c-144f81d89f30
                 DependencyProperties: {}
@@ -105,7 +148,7 @@ Hierarchy:
                 Width: 60.0
                 Height: 45.0
                 HorizontalAlignment: Right
-                Margin: {Right: 20.0}
+                Margin: {Right: 10.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38

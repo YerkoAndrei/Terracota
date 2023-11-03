@@ -554,8 +554,7 @@ Hierarchy:
                 Width: 100.0
                 Height: 100.0
                 HorizontalAlignment: Left
-                VerticalAlignment: Center
-                Margin: {Left: 100.0}
+                Margin: {Left: 125.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -661,7 +660,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: Guardar
+                Name: Fortalezas
                 Children:
                     9e7b5a5437efbeb11ee6672c9f5b8087: !Button ref!! 35560a9b-8494-4e10-a233-4496d8f2694d
                     cc2ffc1b59ee9beb200fd845e3d0fa79: !Grid ref!! 599f7c65-46a9-4bf7-ba23-07664e3135cb
@@ -741,13 +740,13 @@ Hierarchy:
                 Id: 599f7c65-46a9-4bf7-ba23-07664e3135cb
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 200}
-                Width: 600.0
+                Width: 660.0
                 Height: 650.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: PanelGuardar
+                Name: PanelFortalezas
                 Children:
                     1ed6c957c5b0e29e9b0e4c6c2e7576ea: !TextBlock ref!! 5d026efe-f6d4-4cf1-90e5-3cd5a3958d10
                     f71c5f983b6092f3ffaf70bb7286a9fa: !ImageElement ref!! 4d34760e-a098-4030-82fe-84456417ffc2
@@ -1059,9 +1058,10 @@ Hierarchy:
                 Id: 959d248c-ab7b-470b-9358-714377887574
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 300.0
+                Width: 330.0
                 Height: 580.0
-                Margin: {Left: 10.0, Right: 290.0}
+                HorizontalAlignment: Left
+                Margin: {Left: 10.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -1114,7 +1114,7 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: txt
-                Text: Guardar
+                Text: Fortalezas
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
                 TextSize: 30.0
                 TextColor: {R: 0, G: 0, B: 0, A: 255}

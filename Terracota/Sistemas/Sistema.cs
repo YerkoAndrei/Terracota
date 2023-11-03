@@ -125,20 +125,23 @@ public static class Sistema
         botón.Click += (sender, e) => { action.Invoke(); };
     }
 
-    public static void ConfigurarRanura(Grid grid, int fila, int ranura, string miniaturaB64, Action enClic, Action enElminar)
+    public static void ConfigurarRanura(Grid grid, int fila, int ranura, string miniaturaB64, Action enClic, Action enCargar, Action enElminar)
     {
         // Busca contenido dentro del "grid botón"
         ConfigurarBotón(grid, enClic);
         var miniatura = grid.FindVisualChildOfType<ImageElement>("Miniatura");
         var texto = grid.FindVisualChildOfType<TextBlock>("txt");
 
-        // Botón eliminar
+        // Botones
         var btnEliminar = grid.FindVisualChildOfType<Grid>("btnEliminar");
         ConfigurarBotón(btnEliminar, () =>
         {
             if(SistemaMemoria.EliminarFortaleza(ranura))
                 enElminar.Invoke();
         });
+
+        var btnCargar = grid.FindVisualChildOfType<Grid>("btnCargar");
+        ConfigurarBotón(btnCargar, enCargar);
 
         // Visual
         texto.Text = ranura.ToString();

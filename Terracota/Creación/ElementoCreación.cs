@@ -43,6 +43,12 @@ public class ElementoCreación : StartupScript
         Entity.Transform.Position = new Vector3(nuevaPosición.X, altura, nuevaPosición.Z);
     }
 
+    public void ForzarPosición(Vector3 posición, Quaternion rotación)
+    {
+        Entity.Transform.Position = posición;
+        Entity.Transform.Rotation = rotación;
+    }
+
     public void ReiniciarTransform()
     {
         Entity.Transform.Position = posiciónInicial;

@@ -125,6 +125,43 @@ public class ControladorCreación : SyncScript
         sensor.ReiniciarCuerpo(bloqueActual.tipoBloque, bloqueActual.ObtenerRotación());
     }
 
+    public void EnClicCargarFortaleza(int ranura)
+    {
+        var fortalezaCargada = SistemaMemoria.ObtenerFortaleza(ranura);
+
+        // Bloques
+        var índieEstatuas = 0;
+        var índieCortos = 0;
+        var índieLargos = 0;
+
+        foreach (var bloque in fortalezaCargada.bloques)
+        {
+            switch (bloque.tipoBloque)
+            {
+                case TipoBloque.estatua:
+                    estatuas[índieEstatuas].ForzarPosición((bloque.posición + fortaleza.Position), bloque.rotación);
+                    índieEstatuas++;
+                    break;
+                case TipoBloque.corto:
+                    cortos[índieCortos].ForzarPosición((bloque.posición + fortaleza.Position), bloque.rotación);
+                    índieCortos++;
+                    break;
+                case TipoBloque.largo:
+                    largos[índieLargos].ForzarPosición((bloque.posición + fortaleza.Position), bloque.rotación);
+                    índieLargos++;
+                    break;
+            }
+        }
+
+        // Agrega todos los bloques
+        bloquesListos.Clear();
+        foreach (var bloque in bloques)
+        {
+            var código = bloque.tipoBloque.ToString() + bloque.ObtenerNúmero();
+            bloquesListos.Add(código);
+        }
+    }
+
     public ElementoCreación ObtenerActual()
     {
         return bloqueActual;
@@ -132,6 +169,7 @@ public class ControladorCreación : SyncScript
 
     public void EnClicReiniciarPosiciones()
     {
+        bloquesListos.Clear();
         foreach (var bloque in bloques)
         {
             bloque.ReiniciarTransform();
