@@ -21,17 +21,17 @@ public class InterfazCreación : StartupScript
     public override void Start()
     {
         página = Entity.Get<UIComponent>().Page.RootElement;
-        ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("PanelOscuro"), EnClicGuardar);
+        ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("PanelOscuro"), EnClicFortalezas);
 
         // Panel Guardar
         gridFortalezas = página.FindVisualChildOfType<Grid>("Fortalezas");
         gridFortalezas.Visibility = Visibility.Hidden;
 
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnNuevo"), EnClicNuevaRanura);
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVolver"), EnClicGuardar);
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnNuevo"), EnClicGuardarNueva);
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVolver"), EnClicFortalezas);
 
         // Guardado
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnGuardar"), EnClicGuardar);
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnFortalezas"), EnClicFortalezas);
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnReiniciar"), EnClicReiniciarPosiciones);
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnSalir"), EnClicSalir);
 
@@ -39,30 +39,6 @@ public class InterfazCreación : StartupScript
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnIzquierda"), () => EnClicMoverCámara(false));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnDerecha"), () => EnClicMoverCámara(true));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnGirar"), EnClicGirarPieza);
-
-        // Estatua
-        var estatuas = página.FindVisualChildOfType<UniformGrid>("Estatuas").FindVisualChildrenOfType<Grid>().ToArray();
-        for (int i = 0; i < estatuas.Length; i++)
-        {
-            var iTemp = i;
-            ConfigurarBotón(estatuas[i], () => EnClicAgregaEstatua(iTemp));
-        }
-
-        // Cortos
-        var cortos = página.FindVisualChildOfType<UniformGrid>("Cortos").FindVisualChildrenOfType<Grid>().ToArray();
-        for (int i = 0; i < cortos.Length; i++)
-        {
-            var iTemp = i;
-            ConfigurarBotón(cortos[i], () => EnClicAgregaCorto(iTemp));
-        }
-
-        // Largos
-        var largos = página.FindVisualChildOfType<UniformGrid>("Largos").FindVisualChildrenOfType<Grid>().ToArray();
-        for (int i = 0; i < largos.Length; i++)
-        {
-            var iTemp = i;
-            ConfigurarBotón(largos[i], () => EnClicAgregarLargo(iTemp));
-        }
 
         // Instanciando fortalezas guardadas
         CargarFortalezas();
@@ -93,7 +69,7 @@ public class InterfazCreación : StartupScript
             var fortalezaTemp = fortalezas[i];
 
             ConfigurarRanura(nuevaRanura, i, fortalezaTemp.ranura, fortalezaTemp.miniatura,
-                () => EnClicGuardarRanura(fortalezaTemp.ranura),
+                () => EnClicGuardar(fortalezaTemp.ranura),
                 () => EnClicCargarFortaleza(fortalezaTemp.ranura), 
                 CargarFortalezas);
             padreRanuras.Height += (nuevaRanura.Height + 10);
@@ -104,21 +80,6 @@ public class InterfazCreación : StartupScript
     private void EnClicCargarFortaleza(int ranura)
     {
         controladorCreación.EnClicCargarFortaleza(ranura);
-    }
-
-    private void EnClicAgregaEstatua(int estatua)
-    {
-        controladorCreación.AgregarBloque(TipoBloque.estatua, estatua);
-    }
-
-    private void EnClicAgregaCorto(int corto)
-    {
-        controladorCreación.AgregarBloque(TipoBloque.corto, corto);
-    }
-
-    private void EnClicAgregarLargo(int largo)
-    {
-        controladorCreación.AgregarBloque(TipoBloque.largo, largo);
     }
 
     private void EnClicMoverCámara(bool derecha)
@@ -137,7 +98,7 @@ public class InterfazCreación : StartupScript
         controladorCreación.EnClicReiniciarPosiciones();
     }
 
-    private void EnClicGuardar()
+    private void EnClicFortalezas()
     {
         if (gridFortalezas.Visibility == Visibility.Visible)
             gridFortalezas.Visibility = Visibility.Hidden;
@@ -145,7 +106,7 @@ public class InterfazCreación : StartupScript
             gridFortalezas.Visibility = Visibility.Visible;
     }
 
-    private void EnClicNuevaRanura()
+    private void EnClicGuardarNueva()
     {
         // PENDIENTE: mensaje ok
         var ranura = SistemaMemoria.CargarFortalezas().Count;
@@ -156,7 +117,7 @@ public class InterfazCreación : StartupScript
         }
     }
 
-    private void EnClicGuardarRanura(int ranura)
+    private void EnClicGuardar(int ranura)
     {
         // PENDIENTE: pop up sobreescribir
         if (controladorCreación.EnClicGuardar(ranura))
