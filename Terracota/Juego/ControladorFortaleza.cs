@@ -11,6 +11,7 @@ public class ControladorFortaleza : StartupScript
     public List<ElementoBloque> cortos = new List<ElementoBloque> { };
     public List<ElementoBloque> largos = new List<ElementoBloque> { };
 
+    public List<ControladorEstatua> controladoresEstatuas;
     private bool inicializado;
     private Vector3 posiciónInicial;
 
@@ -18,6 +19,12 @@ public class ControladorFortaleza : StartupScript
     {
         posiciónInicial = Entity.Transform.Position;
         Entity.Transform.Position = new Vector3(posiciónInicial.X, -100, posiciónInicial.Z);
+
+        controladoresEstatuas = new List<ControladorEstatua>();
+        foreach (var estatua in estatuas)
+        {
+            controladoresEstatuas.Add(estatua.Entity.Get<ControladorEstatua>());
+        }
     }
 
     public void Inicializar(Fortaleza fortaleza, bool anfitrión)
@@ -72,6 +79,11 @@ public class ControladorFortaleza : StartupScript
         foreach (var largo in largos)
         {
             largo.Activar();
+        }
+
+        foreach (var estatua in controladoresEstatuas)
+        {
+            estatua.Iniciar();
         }
     }
 }

@@ -15,10 +15,14 @@ public class ControladorEstatua : AsyncScript
     private ControladorPartidaLocal controladorPartida;
     private bool activo;
 
+    public void Iniciar()
+    {
+        activo = true;
+    }
+
     public override async Task Execute()
     {
         controladorPartida = Sistema.EncontrarEntidad(SceneSystem.SceneInstance, "ControladorPartida").Get<ControladorPartidaLocal>();
-        activo = true;
 
         while (Game.IsRunning)
         {
