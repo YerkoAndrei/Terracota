@@ -8,7 +8,6 @@ Hierarchy:
     RootParts:
         - ref!! 684ee097-7d99-4910-b6c4-c63360b39159
         - ref!! e09c1e0a-8557-4625-8f92-7e622e4a2027
-        - ref!! 3fb71f1a-6f94-4e91-883e-ceb672b0618c
         - ref!! b0429aeb-4ad7-45b1-96ac-8000ef0a61cd
         - ref!! 3ce5f97a-f1b7-4a5f-9f64-ae71634f0490
         - ref!! b7c9e74a-87fb-44f8-8f16-e979deb6c085
@@ -480,18 +479,6 @@ Hierarchy:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
                 BasePartId: 4bff4cad-8d16-4606-8882-0d34fe8e309a
                 InstanceId: 0b20dfac-f72d-4089-847e-4db9e05813ca
-        -   Entity:
-                Id: 3fb71f1a-6f94-4e91-883e-ceb672b0618c
-                Name: SistemaMemoria
-                Components:
-                    20e692590809b35c667a49decf1f799a: !TransformComponent
-                        Id: ae3d3f35-cf61-4df8-a7b3-b2cd580adb93
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    5b01c480f7e6490b5974da8d05d01f61: !Terracota.SistemaMemoria,Terracota
-                        Id: c430364e-730c-457a-b33a-f1066e70e001
         -   Entity:
                 Id: 40428c05-72f6-47bd-8fd5-70da5e367464
                 Name: Modelo Corto

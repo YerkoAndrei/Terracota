@@ -68,7 +68,7 @@ public class InterfazCreación : StartupScript
             var nuevaRanura = prefabRanura.InstantiateElement<Grid>("Ranura");
             var fortalezaTemp = fortalezas[i];
 
-            ConfigurarRanura(nuevaRanura, i, fortalezaTemp.ranura, fortalezaTemp.miniatura,
+            ConfigurarRanuraCreación(nuevaRanura, i, fortalezaTemp.ranura, fortalezaTemp.miniatura,
                 () => EnClicGuardar(fortalezaTemp.ranura),
                 () => EnClicCargarFortaleza(fortalezaTemp.ranura), 
                 CargarFortalezas);

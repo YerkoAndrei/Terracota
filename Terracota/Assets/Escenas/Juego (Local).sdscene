@@ -15,7 +15,6 @@ Hierarchy:
         - ref!! feb5e8a9-3ac2-49fe-ba91-3c77b1ae9699
         - ref!! b9b2b39d-59cf-49f6-9cf1-a6952d1e2fb6
         - ref!! 187add89-ab40-4047-a7f5-294617942d41
-        - ref!! 8859b321-fed6-45ff-861e-03b2b076a5af
     Parts:
         -   Entity:
                 Id: 017e0fa5-95bb-4f5e-9130-738e96c92a22
@@ -1287,6 +1286,8 @@ Hierarchy:
                     379530830342ba4134b4f068adb42693: !Terracota.InterfazElecci%25C3%25B3n,Terracota
                         Id: c41ac520-d10f-4cfc-88b4-7c85bde36dd7
                         controladorPartida: ref!! 8467c665-6f6a-4e41-8353-b93fb0b8b0b1
+                        "escenaMenú": "bf45c4dd-f4db-4005-9135-dab8e0ef10ed:Escenas/Menú"
+                        prefabRanura: "db6c1792-d472-4911-9e4b-3ec596fe2493:Prefabs/Interfaz/RanuraElección"
                     d9134663cf65c4ff1e2f051b273a0936: !TransformComponent
                         Id: 60e94728-1af1-4aaf-a39a-a61c81178f31
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -2207,18 +2208,6 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 6cea8752-964c-49e0-bfd6-d95f5db52aa1
                 InstanceId: a5ce5142-0667-4fef-b8b0-cfc7c94f2025
-        -   Entity:
-                Id: 8859b321-fed6-45ff-861e-03b2b076a5af
-                Name: SistemaMemoria
-                Components:
-                    9dccbf1142f714cdef03ab3c19c725a9: !TransformComponent
-                        Id: 9fbd3b7b-7e58-4d9e-8f91-d3508b209756
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    fa1cf4681f8beb7ec87c4f3521a2603c: !Terracota.SistemaMemoria,Terracota
-                        Id: a25532fe-001c-4d1b-9111-bcaab158f1df
         -   Entity:
                 Id: 8cb3e94f-5c74-4819-a965-c429570ae445
                 Name: "PartículasHumo"

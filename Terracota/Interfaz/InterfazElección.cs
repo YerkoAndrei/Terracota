@@ -1,10 +1,11 @@
-﻿using Stride.Core.Mathematics;
+﻿using System.Linq;
+using System.Threading.Tasks;
+using Stride.Core.Mathematics;
+using Stride.Core.Serialization;
 using Stride.Engine;
 using Stride.UI;
 using Stride.UI.Controls;
 using Stride.UI.Panels;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Terracota;
 using static Sistema;
@@ -13,6 +14,8 @@ using static Constantes;
 public class InterfazElección : StartupScript
 {
     public ControladorPartidaLocal controladorPartida;
+    public UrlReference<Scene> escenaMenú;
+    public UILibrary prefabRanura;
 
     private ImageElement[] ruleta;
 
@@ -47,25 +50,50 @@ public class InterfazElección : StartupScript
         fondoDerecha.Opacity = 0;
 
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnComenzar"), EnClicComenzar);
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVolver"), EnClicVolver);
 
-        // Botones
-        página.FindVisualChildOfType<Button>("btnRanuraIzquierda_1").Click += (sender, e) => { EnClicIzquierda(1); };
-        página.FindVisualChildOfType<Button>("btnRanuraIzquierda_2").Click += (sender, e) => { EnClicIzquierda(2); };
-        página.FindVisualChildOfType<Button>("btnRanuraIzquierda_3").Click += (sender, e) => { EnClicIzquierda(3); };
-        página.FindVisualChildOfType<Button>("btnRanuraIzquierda_4").Click += (sender, e) => { EnClicIzquierda(4); };
-        página.FindVisualChildOfType<Button>("btnRanuraIzquierda_5").Click += (sender, e) => { EnClicIzquierda(5); };
-        página.FindVisualChildOfType<Button>("btnRanuraIzquierda_6").Click += (sender, e) => { EnClicIzquierda(6); };
-        página.FindVisualChildOfType<Button>("btnRanuraIzquierda_7").Click += (sender, e) => { EnClicIzquierda(7); };
-        página.FindVisualChildOfType<Button>("btnRanuraIzquierda_8").Click += (sender, e) => { EnClicIzquierda(8); };
+        // Fortalezas
+        var padreRanurasIzquierda = página.FindVisualChildOfType<UniformGrid>("RanurasIzquierda");
+        var padreRanurasDerecha = página.FindVisualChildOfType<UniformGrid>("RanurasDerecha");
+        var fortalezas = SistemaMemoria.CargarFortalezas();
 
-        página.FindVisualChildOfType<Button>("btnRanuraDerecha_1").Click += (sender, e) => { EnClicDerecha(1); };
-        página.FindVisualChildOfType<Button>("btnRanuraDerecha_2").Click += (sender, e) => { EnClicDerecha(2); };
-        página.FindVisualChildOfType<Button>("btnRanuraDerecha_3").Click += (sender, e) => { EnClicDerecha(3); };
-        página.FindVisualChildOfType<Button>("btnRanuraDerecha_4").Click += (sender, e) => { EnClicDerecha(4); };
-        página.FindVisualChildOfType<Button>("btnRanuraDerecha_5").Click += (sender, e) => { EnClicDerecha(5); };
-        página.FindVisualChildOfType<Button>("btnRanuraDerecha_6").Click += (sender, e) => { EnClicDerecha(6); };
-        página.FindVisualChildOfType<Button>("btnRanuraDerecha_7").Click += (sender, e) => { EnClicDerecha(7); };
-        página.FindVisualChildOfType<Button>("btnRanuraDerecha_8").Click += (sender, e) => { EnClicDerecha(8); };
+        padreRanurasIzquierda.Children.Clear();
+        padreRanurasDerecha.Children.Clear();
+
+        padreRanurasIzquierda.Rows = fortalezas.Count;
+        padreRanurasDerecha.Rows = fortalezas.Count;
+
+        padreRanurasIzquierda.Height = 0;
+        padreRanurasDerecha.Height = 0;
+
+        // Agrega fortaleza vacía
+
+
+        for (int i = 0; i < fortalezas.Count; i++)
+        {
+            var fortalezaTemp = fortalezas[i];
+
+            // Izquierda
+            var nuevaRanuraIzquierda = prefabRanura.InstantiateElement<Grid>("RanuraIzquierda");
+             ConfigurarRanuraElección(nuevaRanuraIzquierda, i, fortalezaTemp.ranura, fortalezaTemp.miniatura, () => EnClicIzquierda(fortalezaTemp.ranura));
+            padreRanurasIzquierda.Height += (nuevaRanuraIzquierda.Height + 10);
+            padreRanurasIzquierda.Children.Add(nuevaRanuraIzquierda);
+
+            // Derecha
+            var nuevaRanuraDerecha = prefabRanura.InstantiateElement<Grid>("RanuraDerecha");
+            ConfigurarRanuraElección(nuevaRanuraDerecha, i, fortalezaTemp.ranura, fortalezaTemp.miniatura, () => EnClicDerecha(fortalezaTemp.ranura));
+            padreRanurasDerecha.Children.Add(nuevaRanuraDerecha);
+            padreRanurasDerecha.Height += (nuevaRanuraDerecha.Height + 10);
+        }
+    }
+
+    private void EnClicVolver()
+    {
+        if (esperandoRuleta)
+            return;
+
+        Content.Unload(SceneSystem.SceneInstance.RootScene);
+        SceneSystem.SceneInstance.RootScene = Content.Load(escenaMenú);
     }
 
     private void EnClicIzquierda(int ranura)
@@ -90,15 +118,14 @@ public class InterfazElección : StartupScript
 
     private async void EnClicComenzar()
     {
-        if (!derechaSeleccionada || !izquierdaSeleccionada)
+        if (esperandoRuleta || !derechaSeleccionada || !izquierdaSeleccionada)
             return;
-        
-        int aleatorio = (int)RangoAleatorio(40, 50);
 
-        esperandoRuleta = true;
         ApagarRuleta();
+        esperandoRuleta = true;
         gridRuleta.Visibility = Visibility.Visible;
 
+        var aleatorio = (int)RangoAleatorio(40, 48);
         await MoverRuleta(aleatorio);
         controladorPartida.ComenzarPartida(ganaIzquierda);
     }
@@ -123,7 +150,7 @@ public class InterfazElección : StartupScript
 
             // Últimos van más lento
             if (toqueActual >= 30)
-                delay += 30;
+                delay += 40;
 
             await Task.Delay(delay);
         }

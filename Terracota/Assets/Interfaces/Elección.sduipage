@@ -8,48 +8,6 @@ Hierarchy:
     RootParts:
         - !Grid ref!! 2f9c1a70-03b2-47eb-b1b5-35567a588a9a
     Parts:
-        -   UIElement: !TextBlock
-                Id: 0ff9be1c-a6ed-4f88-a6f7-62f6fc86f794
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                HorizontalAlignment: Center
-                VerticalAlignment: Center
-                Margin: {Left: 200.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Text: 3
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 40.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
-        -   UIElement: !TextBlock
-                Id: 112fbe44-b9a1-4ec2-9f1f-550bd0825304
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                HorizontalAlignment: Center
-                VerticalAlignment: Center
-                Margin: {Left: 200.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Text: 2
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 40.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
-        -   UIElement: !TextBlock
-                Id: 127af45a-6c1e-4e9c-a83b-444d3880dfa3
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                HorizontalAlignment: Center
-                VerticalAlignment: Center
-                Margin: {Left: 200.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Text: 8
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 40.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
         -   UIElement: !ImageElement
                 Id: 1296f665-4b59-4694-aa39-e0dd40b0267e
                 DependencyProperties: {}
@@ -67,69 +25,6 @@ Hierarchy:
                     Texture: "03c66b25-d2c7-4121-86d9-4e5f7b912b87:Texturas/Círculo"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
-        -   UIElement: !Button
-                Id: 1b1ea039-4ebb-4005-b2b1-87ec249f3a94
-                DependencyProperties:
-                    dee140864c94548c6d49d8820859b134~GridBase.RowPropertyKey: 6
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                DrawLayerNumber: 2
-                Height: 60.0
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: btnRanuraDerecha_7
-                Content: !TextBlock ref!! d8b7fc95-0c26-4f06-80fb-f2ff59a02817
-                PressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 2
-                NotPressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 1
-                MouseOverImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-        -   UIElement: !Button
-                Id: 1cd1a7e0-e9c2-49a5-a0ad-9fe68f80f2b5
-                DependencyProperties:
-                    86b673af1dccc6a960aaa8c790a0eb90~GridBase.RowPropertyKey: 3
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                DrawLayerNumber: 2
-                Height: 60.0
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: btnRanuraIzquierda_4
-                Content: !TextBlock ref!! 3f54551d-3204-49bf-a52e-ef9af61b0641
-                PressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 2
-                NotPressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 1
-                MouseOverImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-        -   UIElement: !Button
-                Id: 1cd4e998-9af4-4f2f-b2d8-71a2752250d0
-                DependencyProperties:
-                    12e79dc9ac17718161ab2925d8b043bc~GridBase.RowPropertyKey: 4
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                DrawLayerNumber: 2
-                Height: 60.0
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: btnRanuraIzquierda_5
-                Content: !TextBlock ref!! 4a7462b5-7a00-40c7-b44c-3793b2211807
-                PressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 2
-                NotPressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 1
-                MouseOverImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
         -   UIElement: !ImageElement
                 Id: 2075a301-c68d-45cf-b513-2d505a74ce8d
                 DependencyProperties: {}
@@ -144,20 +39,20 @@ Hierarchy:
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
                 StretchType: Fill
-        -   UIElement: !TextBlock
-                Id: 2180eeae-d063-44e3-9578-e02529c61947
+        -   UIElement: !ImageElement
+                Id: 2b0e5eff-6475-4556-b134-b1f1744ba24f
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                HorizontalAlignment: Center
-                VerticalAlignment: Center
-                Margin: {Left: 200.0}
+                Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Text: 4
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 40.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
+                Name: img
+                Source: !SpriteFromTexture
+                    Texture: 66d859f6-5dbf-4782-bf1c-a7fdc0806448:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 255, A: 255}
+                StretchType: Fill
         -   UIElement: !Grid
                 Id: 2e4f5f71-2287-4363-af12-d5991d5fc314
                 DependencyProperties: {}
@@ -188,54 +83,23 @@ Hierarchy:
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
                 Children:
                     8ebe0c9b32804fa9cb50a663b5d77422: !Grid ref!! dfd2cc47-e68a-406a-ae8f-0cac02af0857
                     ca5ef0fb743f0f6ead8ba9376f938692: !Grid ref!! 7b0a6f5c-7d03-49b5-a249-63ad4313e3c6
                     d7a63a52da61f9008d60c28e5a70b5dd: !TextBlock ref!! 3faba244-f115-4ac8-ba6c-2f527a54cb9a
                     e2e5a43dd60bedeb6e95166429976e10: !TextBlock ref!! 776db029-0205-4525-b958-1278efdcbdd9
                     a4f4a6735bd190c101ff4d6ece4b4f6c: !TextBlock ref!! 818f37f3-2735-4cf4-abdb-68106039c03d
-                    f761ac7c405fbf713affeb42dde26a3c: !UniformGrid ref!! 5bada7e5-0dea-44c7-942c-979d5e85ffc6
-                    4144e17dd4598a6e443b058080b34c8c: !UniformGrid ref!! cc952f5d-7548-4991-b580-e9a27feb7707
+                    c0c803aac823e673e472cb0e63696ef3: !ScrollViewer ref!! 4cb02c42-25f8-41ef-9769-3a8cf33cff2c
+                    53a62da54d55f4d60d313daa8458fa3e: !ScrollViewer ref!! f6b483df-c46f-4774-a940-736288ff92ee
                     481c00c68734093d4267f107f873e0b9: !Grid ref!! 9513e819-4077-48cd-8492-b6297e6b60a2
+                    e1aba5f735fcb0c8cda7820f765ab42b: !Grid ref!! 43b3dda6-4834-492b-bde3-6e39eb21286d
                     6fc007f794f6f45bdab06c219522202b: !Grid ref!! 2e4f5f71-2287-4363-af12-d5991d5fc314
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
-        -   UIElement: !Button
-                Id: 35e57641-cf9a-4db8-aa96-c2e9c8b6adaa
-                DependencyProperties:
-                    af65dd93aae6735fbbe41d66d1ea59a3~GridBase.RowPropertyKey: 1
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                DrawLayerNumber: 2
-                Height: 60.0
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: btnRanuraIzquierda_2
-                Content: !TextBlock ref!! 112fbe44-b9a1-4ec2-9f1f-550bd0825304
-                PressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 2
-                NotPressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 1
-                MouseOverImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-        -   UIElement: !TextBlock
-                Id: 3f54551d-3204-49bf-a52e-ef9af61b0641
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                HorizontalAlignment: Center
-                VerticalAlignment: Center
-                Margin: {Left: 200.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Text: 4
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 40.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
         -   UIElement: !TextBlock
                 Id: 3faba244-f115-4ac8-ba6c-2f527a54cb9a
                 DependencyProperties: {}
@@ -271,76 +135,52 @@ Hierarchy:
                     Texture: "03c66b25-d2c7-4121-86d9-4e5f7b912b87:Texturas/Círculo"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
-        -   UIElement: !TextBlock
-                Id: 4a7462b5-7a00-40c7-b44c-3793b2211807
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                HorizontalAlignment: Center
-                VerticalAlignment: Center
-                Margin: {Left: 200.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Text: 5
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 40.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
-        -   UIElement: !Button
-                Id: 4b05c818-6deb-40af-993d-e2e87c44be00
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                DrawLayerNumber: 2
-                Height: 60.0
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: btnRanuraDerecha_1
-                Content: !TextBlock ref!! 8e459f70-1805-4210-bf63-acf38b369cfb
-                PressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 2
-                NotPressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 1
-                MouseOverImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-        -   UIElement: !TextBlock
-                Id: 51ad201d-40fa-4ad6-915e-b265ab366e03
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                HorizontalAlignment: Center
-                VerticalAlignment: Center
-                Margin: {Left: 200.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Text: 1
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 40.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
-        -   UIElement: !UniformGrid
-                Id: 5bada7e5-0dea-44c7-942c-979d5e85ffc6
+        -   UIElement: !Grid
+                Id: 43b3dda6-4834-492b-bde3-6e39eb21286d
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 300.0
-                Height: 720.0
+                Height: 50.0
+                VerticalAlignment: Bottom
+                Margin: {Bottom: 20.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btnVolver
+                Children:
+                    3c91b8c528c11adcbc25fb66ff49f70f: !Button ref!! 61070b80-b187-40d7-8714-6155eac2b31d
+                    328460bcf6a98e89f3de0ae4251291db: !ImageElement ref!! 2b0e5eff-6475-4556-b134-b1f1744ba24f
+                    1d54a99f16e0fae8a6d98bf0278db631: !TextBlock ref!! 8ee2288e-c7f4-4799-ab7a-d237694d3a6e
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !ScrollViewer
+                Id: 4cb02c42-25f8-41ef-9769-3a8cf33cff2c
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 300.0
+                Height: 580.0
                 HorizontalAlignment: Left
                 Margin: {Left: 10.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: RanurasIzquierda
-                Children:
-                    7171def99fdc119f619b96948af1270c: !Button ref!! afeab284-f8ca-4aec-bdcc-727ebac606ca
-                    043766d95b8b79aeb974cacbb62c51a0: !Button ref!! 35e57641-cf9a-4db8-aa96-c2e9c8b6adaa
-                    bd1ff96f7369c32df4ea80038686af9d: !Button ref!! 6c2f37e6-6695-4c6f-ae96-2aa12825fb7d
-                    0a04d4fb4cb3972f957b9116db457831: !Button ref!! 1cd1a7e0-e9c2-49a5-a0ad-9fe68f80f2b5
-                    12afbc857bcf3e41f6f82066077036b4: !Button ref!! 1cd4e998-9af4-4f2f-b2d8-71a2752250d0
-                    ba74f738b989fd9113217fd10bef7627: !Button ref!! b8b83b83-b558-42b2-8efb-c691f58a5e6c
-                    b6becab8a91d42dae1a03789bd0fedae: !Button ref!! e5647570-afff-4e7b-8f21-3d9855c43a03
-                    9f96713adf6fc7b3173de9a8078c0b40: !Button ref!! 7e4515a5-6ff2-4b0a-b8fd-4d77340c3655
-                Rows: 8
+                Name: VisorRanurasIzquierda
+                Padding: {}
+                ScrollBarColor: {R: 0, G: 0, B: 255, A: 255}
+                ScrollBarThickness: 10.0
+                ScrollMode: Vertical
+                Content: !UniformGrid ref!! 919c5f87-8910-4a5a-a8dd-1e48751e6256
+        -   UIElement: !Button
+                Id: 61070b80-b187-40d7-8714-6155eac2b31d
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btn
         -   UIElement: !ImageElement
                 Id: 6577f251-9bf4-401d-a3e7-517c93dfe8cd
                 DependencyProperties: {}
@@ -368,27 +208,6 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: btn
-        -   UIElement: !Button
-                Id: 6c2f37e6-6695-4c6f-ae96-2aa12825fb7d
-                DependencyProperties:
-                    1017fb1fd6458de3ea84f3102bb9e0e4~GridBase.RowPropertyKey: 2
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                DrawLayerNumber: 2
-                Height: 60.0
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: btnRanuraIzquierda_3
-                Content: !TextBlock ref!! e0d0edcd-322c-4536-87dc-9bee21fc8e14
-                PressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 2
-                NotPressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 1
-                MouseOverImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
         -   UIElement: !TextBlock
                 Id: 776db029-0205-4525-b958-1278efdcbdd9
                 DependencyProperties: {}
@@ -424,27 +243,6 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
-        -   UIElement: !Button
-                Id: 7e4515a5-6ff2-4b0a-b8fd-4d77340c3655
-                DependencyProperties:
-                    dee140864c94548c6d49d8820859b134~GridBase.RowPropertyKey: 7
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                DrawLayerNumber: 2
-                Height: 60.0
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: btnRanuraIzquierda_8
-                Content: !TextBlock ref!! bc2b543e-7523-4f17-ac02-efd838b4fbe9
-                PressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 2
-                NotPressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 1
-                MouseOverImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
         -   UIElement: !TextBlock
                 Id: 818f37f3-2735-4cf4-abdb-68106039c03d
                 DependencyProperties: {}
@@ -464,68 +262,32 @@ Hierarchy:
                 TextColor: {R: 255, G: 255, B: 255, A: 255}
                 TextAlignment: Center
         -   UIElement: !TextBlock
-                Id: 81d0440b-c00b-4746-a775-cdd18b81fc96
+                Id: 8ee2288e-c7f4-4799-ab7a-d237694d3a6e
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                HorizontalAlignment: Center
-                VerticalAlignment: Center
-                Margin: {Left: 200.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Text: 2
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 40.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
-        -   UIElement: !TextBlock
-                Id: 8e459f70-1805-4210-bf63-acf38b369cfb
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                HorizontalAlignment: Center
-                VerticalAlignment: Center
-                Margin: {Left: 200.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Text: 1
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 40.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
-        -   UIElement: !TextBlock
-                Id: 8e540779-c336-4dc2-8408-544aaf1e1a51
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                HorizontalAlignment: Center
-                VerticalAlignment: Center
-                Margin: {Left: 200.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Text: 7
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 40.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
-        -   UIElement: !Button
-                Id: 8f7cc923-2b70-4373-9375-601b0ccaf775
-                DependencyProperties:
-                    12e79dc9ac17718161ab2925d8b043bc~GridBase.RowPropertyKey: 4
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                DrawLayerNumber: 2
-                Height: 60.0
+                Height: 40.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: btnRanuraDerecha_5
-                Content: !TextBlock ref!! a3458d15-d642-404f-8461-1c2e6436c157
-                PressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 2
-                NotPressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 1
-                MouseOverImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                Name: txt
+                Text: Volver
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 35.0
+                TextColor: {R: 0, G: 0, B: 0, A: 255}
+                TextAlignment: Center
+        -   UIElement: !UniformGrid
+                Id: 919c5f87-8910-4a5a-a8dd-1e48751e6256
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 110.0
+                VerticalAlignment: Top
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: RanurasIzquierda
+                Children: {}
         -   UIElement: !Grid
                 Id: 9513e819-4077-48cd-8492-b6297e6b60a2
                 DependencyProperties: {}
@@ -533,7 +295,7 @@ Hierarchy:
                 Width: 600.0
                 Height: 100.0
                 VerticalAlignment: Bottom
-                Margin: {Left: 340.0, Right: 340.0, Bottom: 20.0}
+                Margin: {Bottom: 90.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -562,27 +324,6 @@ Hierarchy:
                     Texture: "03c66b25-d2c7-4121-86d9-4e5f7b912b87:Texturas/Círculo"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
-        -   UIElement: !Button
-                Id: a0e3e2e9-1b8e-4332-8aed-f3b25924e3b8
-                DependencyProperties:
-                    86b673af1dccc6a960aaa8c790a0eb90~GridBase.RowPropertyKey: 3
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                DrawLayerNumber: 2
-                Height: 60.0
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: btnRanuraDerecha_4
-                Content: !TextBlock ref!! 2180eeae-d063-44e3-9578-e02529c61947
-                PressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 2
-                NotPressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 1
-                MouseOverImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
         -   UIElement: !ImageElement
                 Id: a16dd6fb-5cec-4f00-88a5-9a26c384fdc4
                 DependencyProperties: {}
@@ -600,75 +341,6 @@ Hierarchy:
                     Texture: "03c66b25-d2c7-4121-86d9-4e5f7b912b87:Texturas/Círculo"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
-        -   UIElement: !TextBlock
-                Id: a3458d15-d642-404f-8461-1c2e6436c157
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                HorizontalAlignment: Center
-                VerticalAlignment: Center
-                Margin: {Left: 200.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Text: 5
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 40.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
-        -   UIElement: !TextBlock
-                Id: a401323c-431c-418f-a121-aab0f7a7bfa7
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                HorizontalAlignment: Center
-                VerticalAlignment: Center
-                Margin: {Left: 200.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Text: 6
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 40.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
-        -   UIElement: !Button
-                Id: afeab284-f8ca-4aec-bdcc-727ebac606ca
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                DrawLayerNumber: 2
-                Height: 60.0
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: btnRanuraIzquierda_1
-                Content: !TextBlock ref!! 51ad201d-40fa-4ad6-915e-b265ab366e03
-                PressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 2
-                NotPressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 1
-                MouseOverImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-        -   UIElement: !Button
-                Id: b0015c55-0cf9-46be-a6f2-bc829c232fc4
-                DependencyProperties:
-                    dee140864c94548c6d49d8820859b134~GridBase.RowPropertyKey: 7
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                DrawLayerNumber: 2
-                Height: 60.0
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: btnRanuraDerecha_8
-                Content: !TextBlock ref!! 127af45a-6c1e-4e9c-a83b-444d3880dfa3
-                PressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 2
-                NotPressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 1
-                MouseOverImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
         -   UIElement: !ImageElement
                 Id: b123e528-3d49-49fa-ad5f-c6c6978f5b11
                 DependencyProperties: {}
@@ -703,139 +375,6 @@ Hierarchy:
                     Texture: "03c66b25-d2c7-4121-86d9-4e5f7b912b87:Texturas/Círculo"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
-        -   UIElement: !TextBlock
-                Id: b34c45a0-4c84-44ef-bb44-dcc19c9ebd05
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                HorizontalAlignment: Center
-                VerticalAlignment: Center
-                Margin: {Left: 200.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Text: 6
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 40.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
-        -   UIElement: !Button
-                Id: b8b83b83-b558-42b2-8efb-c691f58a5e6c
-                DependencyProperties:
-                    dee140864c94548c6d49d8820859b134~GridBase.RowPropertyKey: 5
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                DrawLayerNumber: 2
-                Height: 60.0
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: btnRanuraIzquierda_6
-                Content: !TextBlock ref!! a401323c-431c-418f-a121-aab0f7a7bfa7
-                PressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 2
-                NotPressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 1
-                MouseOverImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-        -   UIElement: !TextBlock
-                Id: bc2b543e-7523-4f17-ac02-efd838b4fbe9
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                HorizontalAlignment: Center
-                VerticalAlignment: Center
-                Margin: {Left: 200.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Text: 8
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 40.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
-        -   UIElement: !Button
-                Id: bee25d32-1ef5-419d-95e2-3648b64bfc8a
-                DependencyProperties:
-                    af65dd93aae6735fbbe41d66d1ea59a3~GridBase.RowPropertyKey: 1
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                DrawLayerNumber: 2
-                Height: 60.0
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: btnRanuraDerecha_2
-                Content: !TextBlock ref!! 81d0440b-c00b-4746-a775-cdd18b81fc96
-                PressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 2
-                NotPressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 1
-                MouseOverImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-        -   UIElement: !Button
-                Id: c877ec14-ff61-4b97-8da7-b640cff72027
-                DependencyProperties:
-                    1017fb1fd6458de3ea84f3102bb9e0e4~GridBase.RowPropertyKey: 2
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                DrawLayerNumber: 2
-                Height: 60.0
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: btnRanuraDerecha_3
-                Content: !TextBlock ref!! 0ff9be1c-a6ed-4f88-a6f7-62f6fc86f794
-                PressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 2
-                NotPressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 1
-                MouseOverImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-        -   UIElement: !Button
-                Id: cc0d40be-9abb-4395-87da-c37d3369d91d
-                DependencyProperties:
-                    dee140864c94548c6d49d8820859b134~GridBase.RowPropertyKey: 5
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                DrawLayerNumber: 2
-                Height: 60.0
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: btnRanuraDerecha_6
-                Content: !TextBlock ref!! b34c45a0-4c84-44ef-bb44-dcc19c9ebd05
-                PressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 2
-                NotPressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 1
-                MouseOverImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-        -   UIElement: !UniformGrid
-                Id: cc952f5d-7548-4991-b580-e9a27feb7707
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 300.0
-                HorizontalAlignment: Right
-                Margin: {Right: 10.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: RanurasDerecha
-                Children:
-                    7171def99fdc119f619b96948af1270c: !Button ref!! 4b05c818-6deb-40af-993d-e2e87c44be00
-                    043766d95b8b79aeb974cacbb62c51a0: !Button ref!! bee25d32-1ef5-419d-95e2-3648b64bfc8a
-                    bd1ff96f7369c32df4ea80038686af9d: !Button ref!! c877ec14-ff61-4b97-8da7-b640cff72027
-                    0a04d4fb4cb3972f957b9116db457831: !Button ref!! a0e3e2e9-1b8e-4332-8aed-f3b25924e3b8
-                    12afbc857bcf3e41f6f82066077036b4: !Button ref!! 8f7cc923-2b70-4373-9375-601b0ccaf775
-                    ba74f738b989fd9113217fd10bef7627: !Button ref!! cc0d40be-9abb-4395-87da-c37d3369d91d
-                    b6becab8a91d42dae1a03789bd0fedae: !Button ref!! 1b1ea039-4ebb-4005-b2b1-87ec249f3a94
-                    9f96713adf6fc7b3173de9a8078c0b40: !Button ref!! b0015c55-0cf9-46be-a6f2-bc829c232fc4
-                Rows: 8
         -   UIElement: !ImageElement
                 Id: d36c51ef-4db1-4b96-9eac-ba3f14b91bcb
                 DependencyProperties: {}
@@ -853,20 +392,6 @@ Hierarchy:
                     Texture: "03c66b25-d2c7-4121-86d9-4e5f7b912b87:Texturas/Círculo"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
-        -   UIElement: !TextBlock
-                Id: d8b7fc95-0c26-4f06-80fb-f2ff59a02817
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                HorizontalAlignment: Center
-                VerticalAlignment: Center
-                Margin: {Left: 200.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Text: 7
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 40.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
         -   UIElement: !TextBlock
                 Id: d9b0f271-56a8-4b99-8226-e463dacfe2db
                 DependencyProperties: {}
@@ -899,38 +424,32 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
-        -   UIElement: !TextBlock
-                Id: e0d0edcd-322c-4536-87dc-9bee21fc8e14
+        -   UIElement: !UniformGrid
+                Id: f647c038-64eb-486b-862d-4249c180faf3
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                HorizontalAlignment: Center
-                VerticalAlignment: Center
-                Margin: {Left: 200.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Text: 3
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 40.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
-        -   UIElement: !Button
-                Id: e5647570-afff-4e7b-8f21-3d9855c43a03
-                DependencyProperties:
-                    dee140864c94548c6d49d8820859b134~GridBase.RowPropertyKey: 6
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                DrawLayerNumber: 2
-                Height: 60.0
+                Height: 110.0
+                VerticalAlignment: Top
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: btnRanuraIzquierda_7
-                Content: !TextBlock ref!! 8e540779-c336-4dc2-8408-544aaf1e1a51
-                PressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 2
-                NotPressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 1
-                MouseOverImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                Name: RanurasDerecha
+                Children: {}
+        -   UIElement: !ScrollViewer
+                Id: f6b483df-c46f-4774-a940-736288ff92ee
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 300.0
+                Height: 580.0
+                HorizontalAlignment: Right
+                Margin: {Right: 10.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: VisorRanurasDerecha
+                Padding: {}
+                ScrollBarColor: {R: 0, G: 0, B: 255, A: 255}
+                ScrollBarThickness: 10.0
+                ScrollMode: Vertical
+                Content: !UniformGrid ref!! f647c038-64eb-486b-862d-4249c180faf3
