@@ -42,6 +42,7 @@ RenderStages:
         Id: 45dffc0d-b245-40a0-b901-1d171d872112
         Name: UI
         EffectSlotName: Main
+        SortMode: !FrontToBackSortMode {}
 RenderFeatures:
     d8fb80b0e7995140a46bca8dc36ee8a2: !Stride.Rendering.MeshRenderFeature,Stride.Rendering
         RenderStageSelectors:
@@ -111,11 +112,11 @@ RenderFeatures:
     93933ad00d0c357d4915ad462cbfd04c: !Stride.Rendering.UI.UIRenderFeature,Stride.UI
         RenderStageSelectors:
             14a071694411235038a102ac3794bb4d: !Stride.Rendering.SimpleGroupToRenderStageSelector,Stride.Rendering
-                RenderGroup*: Group0, Group1, Group2, Group3, Group4, Group5, Group6, Group7, Group8, Group9, Group10, Group11, Group12, Group13, Group14, Group15, Group16, Group17, Group18, Group19, Group20, Group21, Group22, Group23, Group24, Group25, Group26, Group27, Group28, Group29, Group30
+                RenderGroup*: Group0, Group1, Group2, Group3, Group4, Group5, Group6, Group7, Group8, Group9, Group10, Group11, Group12, Group13, Group14, Group15, Group16, Group17, Group18, Group19, Group20, Group21, Group22, Group23, Group24, Group25, Group26, Group27, Group28, Group29
                 RenderStage*: ref!! 0c18fde9-2246-4be3-99f4-124103292b0d
                 EffectName: Test
             d7e5d97f23388562f5501b9caed60c79*: !Stride.Rendering.SimpleGroupToRenderStageSelector,Stride.Rendering
-                RenderGroup: Group31
+                RenderGroup: Group30, Group31
                 RenderStage: ref!! 45dffc0d-b245-40a0-b901-1d171d872112
                 EffectName: null
     9013eab3ea0ef6c98bf133b86c173d45: !Stride.Particles.Rendering.ParticleEmitterRenderFeature,Stride.Particles
@@ -221,14 +222,14 @@ Game*: !Stride.Rendering.Compositing.SceneRendererCollection,Stride.Rendering
             Id: 9f9ebe98-de6b-44d1-afc8-e5bca249535b
             Camera: ref!! 9f373eee-c85c-45b0-9b02-82451f709476
             Child: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! 5aa54f67-d745-4edf-bd62-22592caae259
-            RenderMask: Group0, Group1, Group2, Group3, Group4, Group5, Group6, Group7, Group8, Group9, Group10, Group11, Group12, Group13, Group14, Group15, Group16, Group17, Group18, Group19, Group20, Group21, Group22, Group23, Group24, Group25, Group26, Group27, Group28, Group29, Group30
+            RenderMask: Group0, Group1, Group2, Group3, Group4, Group5, Group6, Group7, Group8, Group9, Group10, Group11, Group12, Group13, Group14, Group15, Group16, Group17, Group18, Group19, Group20, Group21, Group22, Group23, Group24, Group25, Group26, Group27, Group28, Group29
         3c1007aa23b81248e1377430c9d539c4: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
             Id: 9ffb25cd-f31e-461b-b3ec-1a42c6e86b30
             Camera: ref!! 9f373eee-c85c-45b0-9b02-82451f709476
             Child: !Stride.Rendering.Compositing.SingleStageRenderer,Stride.Rendering
                 Id: 94ae2a4c-3d9c-4f09-96ec-772790a9fd89
                 RenderStage: ref!! 45dffc0d-b245-40a0-b901-1d171d872112
-            RenderMask: Group31
+            RenderMask: Group30, Group31
 SingleView: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! 308699fb-6328-424e-9357-633dce9efd04
 Editor*: !Stride.Rendering.Compositing.SceneRendererCollection,Stride.Rendering
     Id: c0120f52-cf13-4663-b84b-0329386e8960

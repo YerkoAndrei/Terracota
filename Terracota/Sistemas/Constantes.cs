@@ -13,6 +13,15 @@ public static class Constantes
     public static Color colorEnClic = new Color(155, 155, 155, 255);
     public static Color colorBloqueado = new Color(155, 155, 155, 155);
 
+    public enum Escenas
+    {
+        menú,
+        creación,
+        local,
+        LAN,
+        P2P
+    }
+
     public enum TipoJugador
     {
         nada,

@@ -14,7 +14,6 @@ using static Constantes;
 public class InterfazElección : StartupScript
 {
     public ControladorPartidaLocal controladorPartida;
-    public UrlReference<Scene> escenaMenú;
     public UILibrary prefabRanura;
 
     private ImageElement[] ruleta;
@@ -92,8 +91,7 @@ public class InterfazElección : StartupScript
         if (esperandoRuleta)
             return;
 
-        Content.Unload(SceneSystem.SceneInstance.RootScene);
-        SceneSystem.SceneInstance.RootScene = Content.Load(escenaMenú);
+        SistemaEscenas.CambiarEscena(Escenas.menú);
     }
 
     private void EnClicIzquierda(int ranura)

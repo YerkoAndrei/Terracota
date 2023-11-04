@@ -7,15 +7,10 @@ using System;
 
 namespace Terracota;
 using static Sistema;
+using static Constantes;
 
 public class InterfazMenú : StartupScript
 {
-    public UrlReference<Scene> escenaLocal;
-    public UrlReference<Scene> escenaRed;
-    public UrlReference<Scene> escenaP2P;
-
-    public UrlReference<Scene> escenaCreación;
-
     public override void Start()
     {
         //Game.Window.PreferredFullscreenSize = new Int2(1920, 1080);
@@ -36,24 +31,24 @@ public class InterfazMenú : StartupScript
 
     private void EnClicLocal()
     {
-        Content.Unload(SceneSystem.SceneInstance.RootScene);
-        SceneSystem.SceneInstance.RootScene = Content.Load(escenaLocal);
+        SistemaEscenas.CambiarEscena(Escenas.local);
     }
 
     private void EnClicLAN()
     {
         // Abrir menú correspondiente
+        //SistemaEscenas.CambiarEscena(Escenas.LAN);
     }
 
     private void EnClicP2P()
     {
         // Abrir menú correspondiente
+        //SistemaEscenas.CambiarEscena(Escenas.P2P);
     }
 
     private void EnClicCrear()
     {
-        Content.Unload(SceneSystem.SceneInstance.RootScene);
-        SceneSystem.SceneInstance.RootScene = Content.Load(escenaCreación);
+        SistemaEscenas.CambiarEscena(Escenas.creación);
     }
 
     private void EnClicOpciones()

@@ -14,8 +14,6 @@ using static Constantes;
 public class InterfazJuego : StartupScript
 {
     public ControladorPartidaLocal controladorPartida;
-    public UrlReference<Scene> escenaJuego;
-    public UrlReference<Scene> escenaMenú;
 
     public Texture spriteBola;
     public Texture spriteMetralla;
@@ -120,8 +118,7 @@ public class InterfazJuego : StartupScript
 
     private void EnClicReiniciar()
     {
-        Content.Unload(SceneSystem.SceneInstance.RootScene);
-        SceneSystem.SceneInstance.RootScene = Content.Load(escenaJuego);
+        SistemaEscenas.CambiarEscena(Escenas.local);
     }
 
     private void EnClicOpciones()
@@ -131,8 +128,7 @@ public class InterfazJuego : StartupScript
 
     private void EnClicSalir()
     {
-        Content.Unload(SceneSystem.SceneInstance.RootScene);
-        SceneSystem.SceneInstance.RootScene = Content.Load(escenaMenú);
+        SistemaEscenas.CambiarEscena(Escenas.menú);
     }
 
     private void EnClicProyectil()

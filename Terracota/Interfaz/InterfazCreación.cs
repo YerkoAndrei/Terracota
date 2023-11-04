@@ -1,9 +1,7 @@
-﻿using Stride.Core.Serialization;
-using Stride.Engine;
+﻿using Stride.Engine;
 using Stride.UI;
 using Stride.UI.Controls;
 using Stride.UI.Panels;
-using System.Linq;
 
 namespace Terracota;
 using static Constantes;
@@ -13,7 +11,6 @@ public class InterfazCreación : StartupScript
 {
     public ControladorCreación controladorCreación;
     public UILibrary prefabRanura;
-    public UrlReference<Scene> escenaMenú;
 
     private UIElement página;
     private Grid gridFortalezas;
@@ -135,8 +132,7 @@ public class InterfazCreación : StartupScript
 
     private void EnClicSalir()
     {
-        Content.Unload(SceneSystem.SceneInstance.RootScene);
-        SceneSystem.SceneInstance.RootScene = Content.Load(escenaMenú);
+        SistemaEscenas.CambiarEscena(Escenas.menú);
     }
 
     public void CerrarPanelGuardar()

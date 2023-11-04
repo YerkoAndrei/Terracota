@@ -9,7 +9,6 @@ Hierarchy:
         - ref!! 8515cc8d-8e8b-423a-aa91-0a077d6dc0bc
         - ref!! 7293a8a3-667d-4967-ada2-4cee0d7b6929
         - ref!! 94f201f2-25d2-4a5c-80c3-4e3787c11d66
-        - ref!! 33d618d6-8280-4f5d-88ad-f26a5f89794a
     Parts:
         -   Folder: null
             Entity:
@@ -184,18 +183,6 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: 08868581-5001-468d-8f30-83fb352761d3
                 InstanceId: ce28e181-3d28-4000-89a6-ae77d7930396
-        -   Entity:
-                Id: 33d618d6-8280-4f5d-88ad-f26a5f89794a
-                Name: SistemaMemoria
-                Components:
-                    9cf327e9f2d690b004a48e6e6f67dd58: !TransformComponent
-                        Id: 4606b115-15da-477b-b170-a991b8b10d56
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    998c2cddd6df5ae99ddb454a28cd76e8: !Terracota.SistemaMemoria,Terracota
-                        Id: 92c42954-e8c2-489e-a3ff-31b5c18fa967
         -   Entity:
                 Id: 36e657c6-3ae7-4680-8acf-b5dc225fae3f
                 Name: Lanza
@@ -983,10 +970,6 @@ Hierarchy:
                 Components:
                     5dbf89daee6e47fa72ae603f514f3407: !Terracota.InterfazMen%25C3%25BA,Terracota
                         Id: 8c122d34-6128-4a93-a2c8-3ba606df8fe4
-                        escenaLocal: af761eff-0def-4e64-9185-a183866d2296:Escenas/Juego (Local)
-                        escenaRed: null
-                        escenaP2P: ffbba4ff-025e-4071-af06-8e046bd6fa9f:Escenas/Juego (P2P)
-                        "escenaCreación": "df77ba21-ef07-4f57-94a0-cfa4117accf5:Escenas/Creación"
                     2666011d2b1dda9258dbe3635b1fa833: !TransformComponent
                         Id: 807ff794-4d83-40ec-91ff-b965f7459804
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
