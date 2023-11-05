@@ -14,7 +14,6 @@ Hierarchy:
         - ref!! 65bbced6-1eff-41bd-8480-9f351004702f
         - ref!! feb5e8a9-3ac2-49fe-ba91-3c77b1ae9699
         - ref!! b9b2b39d-59cf-49f6-9cf1-a6952d1e2fb6
-        - ref!! 187add89-ab40-4047-a7f5-294617942d41
     Parts:
         -   Entity:
                 Id: 017e0fa5-95bb-4f5e-9130-738e96c92a22
@@ -60,7 +59,7 @@ Hierarchy:
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.28, Y: 0.72, Z: 1.0}
                         ResolutionStretch: FixedHeightAdaptableWidth
-                        RenderGroup: Group31
+                        RenderGroup: Group30
         -   Folder: null
             Entity:
                 Id: 032c5266-8f7c-4b1e-8019-3b61b0c8ba69
@@ -464,24 +463,6 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 8be65bbb-fb13-45ae-816b-918a48f1da9c
                 InstanceId: a5ce5142-0667-4fef-b8b0-cfc7c94f2025
-        -   Entity:
-                Id: 187add89-ab40-4047-a7f5-294617942d41
-                Name: Profiler
-                Components:
-                    68df50e9fdb138c79ddc5ebb0f02ee73: !TransformComponent
-                        Id: 92c867ce-bb2d-4363-8e50-41cb5a6e779b
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    f7ac26501f17cd6383460a18d17a0180: !Terracota.GameProfiler,Terracota
-                        Id: 82c8afeb-e52b-40a2-bc48-10b2f93b32c3
-                        Enabled: false
-                        TextColor: {R: 0, G: 238, B: 0, A: 255}
-                        RefreshTime: 500.0
-                        SortingMode: ByTime
-                        FilteringMode: Fps
-                        ResultPage: 1
         -   Folder: null
             Entity:
                 Id: 19c23751-358c-416d-ae15-66e5fd08ffaf
@@ -1298,7 +1279,7 @@ Hierarchy:
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.28, Y: 0.72, Z: 1.0}
                         ResolutionStretch: FixedHeightAdaptableWidth
-                        RenderGroup: Group31
+                        RenderGroup: Group30
         -   Folder: null
             Entity:
                 Id: 4fa71fc4-b0c2-49f7-92e7-53b8faa55cdf
