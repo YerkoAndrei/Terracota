@@ -39,7 +39,7 @@ public class SistemaEscenas : SyncScript
         panelOscuro = página.FindVisualChildOfType<ImageElement>("PanelOscuro");
 
         escenaActual = Content.Load(escenaMenú);
-        SceneSystem.SceneInstance.RootScene.Children.Add(escenaActual);
+        Entity.Scene.Children.Add(escenaActual);
     }
 
     public override void Update()
@@ -99,7 +99,7 @@ public class SistemaEscenas : SyncScript
     private void CambiarEscena()
     {
         Content.Unload(escenaActual);
-        SceneSystem.SceneInstance.RootScene.Children.Remove(escenaActual);
+        Entity.Scene.Children.Remove(escenaActual);
 
         switch (siguienteEscena)
         {
@@ -120,7 +120,7 @@ public class SistemaEscenas : SyncScript
                 break;
         }
 
-        SceneSystem.SceneInstance.RootScene.Children.Add(escenaActual);
+        Entity.Scene.Children.Add(escenaActual);
         ocultando = false;
         abriendo = true;
     }

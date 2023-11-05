@@ -67,6 +67,6 @@ public class ControladorBola : AsyncScript
 
         // Fin
         cuerpo.Enabled = false;
-        SceneSystem.SceneInstance.RootScene.Entities.Remove(Entity);
+        Entity.Scene.Entities.Remove(Entity);
     }
 }

@@ -91,7 +91,7 @@ public class ControladorCañón : SyncScript
                 nuevaBala.Transform.Position = origenProyectil.Transform.WorldMatrix.TranslationVector;
                 nuevaBala.Transform.RotationEulerXYZ = EulerAleatorio();
 
-                SceneSystem.SceneInstance.RootScene.Entities.Add(nuevaBala);
+                Entity.Scene.Entities.Add(nuevaBala);
 
                 // Impulso
                 var cuerpo = nuevaBala.Get<RigidbodyComponent>();
@@ -102,7 +102,7 @@ public class ControladorCañón : SyncScript
                 nuevaMetralla.Transform.Position = origenProyectil.Transform.WorldMatrix.TranslationVector;
                 nuevaMetralla.Transform.RotationEulerXYZ = EulerAleatorio();
 
-                SceneSystem.SceneInstance.RootScene.Entities.Add(nuevaMetralla);
+                Entity.Scene.Entities.Add(nuevaMetralla);
 
                 var cuerposMetralla = nuevaMetralla.GetChildren();
                 foreach (var metralla in cuerposMetralla)
