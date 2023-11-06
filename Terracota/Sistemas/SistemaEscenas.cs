@@ -33,7 +33,7 @@ public class SistemaEscenas : SyncScript
     public override void Start()
     {
         instancia = this;
-        duraciónLerp = 1.2f;
+        duraciónLerp = 0.2f;
 
         var página = Entity.Get<UIComponent>().Page.RootElement;
         panelOscuro = página.FindVisualChildOfType<Grid>("PanelOscuro");
