@@ -2,8 +2,8 @@
 using Stride.Core.Serialization;
 using Stride.Engine;
 using Stride.UI;
-using Stride.UI.Controls;
 using Stride.UI.Panels;
+using System.Threading.Tasks;
 
 namespace Terracota;
 using static Constantes;
@@ -28,7 +28,7 @@ public class SistemaEscenas : SyncScript
     private float tiempoDelta;
     private float tiempo;
 
-    private ImageElement panelOscuro;
+    private Grid panelOscuro;
 
     public override void Start()
     {
@@ -36,7 +36,7 @@ public class SistemaEscenas : SyncScript
         duraciónLerp = 1.2f;
 
         var página = Entity.Get<UIComponent>().Page.RootElement;
-        panelOscuro = página.FindVisualChildOfType<ImageElement>("PanelOscuro");
+        panelOscuro = página.FindVisualChildOfType<Grid>("PanelOscuro");
 
         escenaActual = Content.Load(escenaMenú);
         Entity.Scene.Children.Add(escenaActual);
@@ -48,35 +48,24 @@ public class SistemaEscenas : SyncScript
         {
             tiempoDelta += (float)Game.UpdateTime.Elapsed.TotalSeconds;
             tiempo = tiempoDelta / duraciónLerp;
-
-            //Log.Warning(panelOscuro.Opacity.ToString());
-            //panelOscuro.Opacity = (float)MathUtil.Lerp(0, 1, tiempo);
-            panelOscuro.Opacity = 1;
-            panelOscuro.Color = Color.Lerp(Color.White, Color.Black, tiempo);
+            panelOscuro.BackgroundColor = Color.Lerp(Color.Transparent, Color.Black, tiempo);
 
             // Fin
             if (tiempoDelta >= duraciónLerp)
-            {
-                panelOscuro.Opacity = 1;
-                CambiarEscena();
-                ocultando = false;
-            }
+                CargarEscena();
         }
 
         if (abriendo)
         {
             tiempoDelta += (float)Game.UpdateTime.Elapsed.TotalSeconds;
             tiempo = tiempoDelta / duraciónLerp;
-
-            //panelOscuro.Opacity = MathUtil.Lerp(1, 0, tiempo);
-            panelOscuro.Opacity = 1;
-            panelOscuro.Color = Color.Lerp(Color.White, Color.Black, tiempo);
+            panelOscuro.BackgroundColor = Color.Lerp(Color.Black, Color.Transparent, tiempo);
 
             // Fin
             if (tiempoDelta >= duraciónLerp)
             {
-                panelOscuro.Opacity = 0;
-                panelOscuro.IsEnabled = false;
+                panelOscuro.BackgroundColor = Color.Transparent;
+                panelOscuro.CanBeHitByUser = false;
                 abriendo = false;
             }
         }
@@ -89,16 +78,23 @@ public class SistemaEscenas : SyncScript
 
         instancia.tiempo = 0;
         instancia.tiempoDelta = 0;
-        instancia.panelOscuro.IsEnabled = true;
+        instancia.panelOscuro.BackgroundColor = Color.Transparent;
+        instancia.panelOscuro.CanBeHitByUser = true;
 
         siguienteEscena = escena;
         ocultando = true;
         abriendo = false;
     }
 
-    private void CambiarEscena()
+    private async void CargarEscena()
     {
-        Content.Unload(escenaActual);
+        ocultando = false;
+
+        tiempo = 0;
+        tiempoDelta = 0;
+        panelOscuro.BackgroundColor = Color.Black;
+
+        // Descarga
         Entity.Scene.Children.Remove(escenaActual);
 
         switch (siguienteEscena)
@@ -120,8 +116,11 @@ public class SistemaEscenas : SyncScript
                 break;
         }
 
+        // Carga
         Entity.Scene.Children.Add(escenaActual);
-        ocultando = false;
+
+        // Retraso por carga de interfaces
+        await Task.Delay(10);
         abriendo = true;
     }
 }

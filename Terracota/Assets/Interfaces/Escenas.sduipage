@@ -11,34 +11,17 @@ Hierarchy:
         -   UIElement: !Grid
                 Id: 08c8903e-c396-4c67-a2c8-e7c3a6689178
                 DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 255}
-                Opacity: 0.0
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 CanBeHitByUser: true
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: 
+                Name: PanelOscuro
                 Children: {}
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
-        -   UIElement: !ImageElement
-                Id: 1f4ba737-a4cd-4fdd-87ef-68e9b83f9c1c
-                DependencyProperties:
-                    2da3673f6cae34ed039394902b695136~Panel.ZIndexPropertyKey: 0
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                DepthAlignment: Front
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: PanelOscuro
-                Source: !SpriteFromTexture
-                    Texture: 66d859f6-5dbf-4782-bf1c-a7fdc0806448:Texturas/Cuadrado
-                    Center: {X: 0.0, Y: 0.0}
-                Color: {R: 0, G: 0, B: 0, A: 0}
-                StretchType: Fill
         -   UIElement: !Grid
                 Id: 339563c3-7dba-4d4a-ae27-3f521d77323c
                 DependencyProperties: {}
@@ -50,7 +33,6 @@ Hierarchy:
                 Name: 
                 Children:
                     5f2295848e79dce9107556bd0a3daae5: !Grid ref!! 08c8903e-c396-4c67-a2c8-e7c3a6689178
-                    c0f7fb5fbc10e6977d004ca4a6249170: !ImageElement ref!! 1f4ba737-a4cd-4fdd-87ef-68e9b83f9c1c
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
