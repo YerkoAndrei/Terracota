@@ -191,11 +191,7 @@ public class ControladorCreación : SyncScript
     public bool EnClicGuardar(int ranura)
     {
         if(bloquesListos.Count < bloques.Count)
-        {
-            // PENDIENTE: mensaje error
-            Log.Warning("no se puedeee");
             return false;
-        }
 
         // Posición respecto a la fortaleza
         foreach (var bloque in bloques)

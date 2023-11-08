@@ -113,11 +113,7 @@ public static class Sistema
 
         // Botones
         var btnEliminar = grid.FindVisualChildOfType<Grid>("btnEliminar");
-        ConfigurarBotón(btnEliminar, () =>
-        {
-            if(SistemaMemoria.EliminarFortaleza(ranura))
-                enElminar.Invoke();
-        });
+        ConfigurarBotón(btnEliminar, enElminar);
 
         var btnCargar = grid.FindVisualChildOfType<Grid>("btnCargar");
         ConfigurarBotón(btnCargar, enCargar);
@@ -171,5 +167,12 @@ public static class Sistema
         // PENDIENTE: miniatura
 
         return sprite;
+    }
+
+    public static void ConfigurarPop(Grid grid, string pregunta, Action enClicSí, Action enClicNo)
+    {
+        grid.FindVisualChildOfType<TextBlock>("txtPregunta").Text = pregunta;
+        ConfigurarBotón(grid.FindVisualChildOfType<Grid>("btnSí"), enClicSí);
+        ConfigurarBotón(grid.FindVisualChildOfType<Grid>("btnNo"), enClicNo);
     }
 }

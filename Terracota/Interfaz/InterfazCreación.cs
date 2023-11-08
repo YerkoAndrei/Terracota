@@ -14,11 +14,16 @@ public class InterfazCreación : StartupScript
 
     private UIElement página;
     private Grid gridFortalezas;
+    private Grid popup;
 
     public override void Start()
     {
         página = Entity.Get<UIComponent>().Page.RootElement;
         ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("PanelOscuro"), EnClicFortalezas);
+
+        // Popup
+        popup = página.FindVisualChildOfType<Grid>("Popup");
+        popup.Visibility = Visibility.Hidden;
 
         // Panel Guardar
         gridFortalezas = página.FindVisualChildOfType<Grid>("Fortalezas");
@@ -76,7 +81,7 @@ public class InterfazCreación : StartupScript
                 ConfigurarRanuraCreación(nuevaRanura, i, fortalezaTemp.ranura, fortalezaTemp.miniatura,
                     () => EnClicGuardar(fortalezaTemp.ranura),
                     () => EnClicCargarFortaleza(fortalezaTemp.ranura),
-                    CargarFortalezas);
+                    () => EnClicEliminar(fortalezaTemp.ranura));
             }
             padreRanuras.Height += (nuevaRanura.Height + 10);
             padreRanuras.Children.Add(nuevaRanura);
@@ -120,23 +125,68 @@ public class InterfazCreación : StartupScript
 
     private void EnClicGuardarNueva()
     {
-        // PENDIENTE: mensaje ok
-        var ranura = SistemaMemoria.CargarFortalezas(false).Count;
-        if (controladorCreación.EnClicGuardar(ranura + 1))
+        if (controladorCreación.EnClicGuardar(SistemaMemoria.ObtenerRanuraMásAlta() + 1))
         {
-            // PENDIENTE: mensaje ok
             CargarFortalezas();
+            MostrarMensaje("OK");
         }
+        else
+            MostrarMensaje("Todas las piezas deben estar listas.");
     }
 
     private void EnClicGuardar(int ranura)
     {
-        // PENDIENTE: pop up sobreescribir
-        if (controladorCreación.EnClicGuardar(ranura))
+        var pregunta = string.Format("¿Desea sobreescribir fortaleza {0}?", ranura.ToString());
+        ConfigurarPop(popup, pregunta, () =>
         {
-            // PENDIENTE: mensaje ok
-            CargarFortalezas();
-        }
+            // Sí
+            if (controladorCreación.EnClicGuardar(ranura))
+            {
+                CargarFortalezas();
+                popup.Visibility = Visibility.Hidden;
+                MostrarMensaje("OK");
+            }
+            else
+            {
+                MostrarMensaje("Error");
+                popup.Visibility = Visibility.Hidden;
+            }
+        }, () =>
+        {
+            // No
+            popup.Visibility = Visibility.Hidden;
+        });
+        popup.Visibility = Visibility.Visible;
+    }
+
+    private void EnClicEliminar(int ranura)
+    {
+        var pregunta = string.Format("¿Desea eliminar fortaleza {0}?", ranura.ToString());
+        ConfigurarPop(popup, pregunta, () =>
+        {
+            // Sí
+            if(SistemaMemoria.EliminarFortaleza(ranura))
+            {
+                CargarFortalezas();
+                popup.Visibility = Visibility.Hidden;
+                MostrarMensaje("OK");
+            }
+            else
+            {
+                MostrarMensaje("Error");
+                popup.Visibility = Visibility.Hidden;
+            }
+        }, () =>
+        {
+            // No
+            popup.Visibility = Visibility.Hidden;
+        });
+        popup.Visibility = Visibility.Visible;
+    }
+
+    private void MostrarMensaje(string mensaje)
+    {
+        // PENDIENTE: mensaje ok
     }
 
     private void EnClicSalir()

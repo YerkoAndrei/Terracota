@@ -1,0 +1,194 @@
+!UILibraryAsset
+Id: 7f35ca8b-cbcd-4ecc-a84d-33893ef71984
+SerializedVersion: {Stride: 2.1.0.1}
+Tags: []
+Design:
+    Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+PublicUIElements:
+    f8153af7-3971-4b7f-be00-0a5ecfd050eb: Popup
+Hierarchy:
+    RootParts:
+        - !Grid ref!! f8153af7-3971-4b7f-be00-0a5ecfd050eb
+    Parts:
+        -   UIElement: !Grid
+                Id: 03114cfe-4694-4a69-bf36-863c974cea1c
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 300.0
+                Height: 60.0
+                HorizontalAlignment: Left
+                VerticalAlignment: Bottom
+                Margin: {Left: 80.0, Bottom: 20.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btnNo
+                Children:
+                    af86630b7bbb5cd78730f0f7921bd5ce: !Button ref!! 40fd7c28-f723-4587-a8f2-5584a9ec6616
+                    d25c083913a154b8d7a550e2b7e819d0: !ImageElement ref!! ef9a07bf-ddce-4fe5-8031-68caa233de5d
+                    2897a10402aa82f8676b4e3410a9aba4: !TextBlock ref!! 4b901eb8-2599-4397-8f7f-9c1e65589d2b
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !ImageElement
+                Id: 13f7d0d2-aa1a-40e0-898d-5ca8ede0a9f8
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: img
+                Source: !SpriteFromTexture
+                    Texture: 66d859f6-5dbf-4782-bf1c-a7fdc0806448:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 255, A: 255}
+                StretchType: Fill
+        -   UIElement: !Grid
+                Id: 2f83d833-9976-4b88-9580-b5a6a38e78c3
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 300.0
+                Height: 60.0
+                HorizontalAlignment: Right
+                VerticalAlignment: Bottom
+                Margin: {Right: 80.0, Bottom: 20.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: "btnSí"
+                Children:
+                    af86630b7bbb5cd78730f0f7921bd5ce: !Button ref!! 6798d2e9-4ff0-452c-acc4-69b5623a84b3
+                    d25c083913a154b8d7a550e2b7e819d0: !ImageElement ref!! 13f7d0d2-aa1a-40e0-898d-5ca8ede0a9f8
+                    2897a10402aa82f8676b4e3410a9aba4: !TextBlock ref!! ffb9ca17-19d0-4d6c-b485-5218c03b3f79
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !Button
+                Id: 40fd7c28-f723-4587-a8f2-5584a9ec6616
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btn
+        -   UIElement: !TextBlock
+                Id: 4b901eb8-2599-4397-8f7f-9c1e65589d2b
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 35.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txt
+                Text: No
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 30.0
+                TextColor: {R: 0, G: 0, B: 0, A: 255}
+                TextAlignment: Center
+        -   UIElement: !Button
+                Id: 6798d2e9-4ff0-452c-acc4-69b5623a84b3
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btn
+        -   UIElement: !ImageElement
+                Id: 7e17dcbe-7ac8-462a-96bf-f71e27d7c282
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: PanelOscuro
+                Source: !SpriteFromTexture
+                    Texture: 66d859f6-5dbf-4782-bf1c-a7fdc0806448:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 0, G: 0, B: 0, A: 255}
+                StretchType: Fill
+        -   UIElement: !Grid
+                Id: 84b1d09d-9326-46f7-bf0c-69861650dbab
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                CanBeHitByUser: true
+                Width: 800.0
+                Height: 200.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Children:
+                    0e198908c0c289c473ca8f9ca85b6574: !ImageElement ref!! 7e17dcbe-7ac8-462a-96bf-f71e27d7c282
+                    7847b36344c714c109575c881823e7bf: !TextBlock ref!! 8fa27a09-529b-4035-b887-524582c9a718
+                    6ee234c63312b436b21cd7d716405daa: !Grid ref!! 03114cfe-4694-4a69-bf36-863c974cea1c
+                    84dbbdab93961dc9d18e0d885fc9235d: !Grid ref!! 2f83d833-9976-4b88-9580-b5a6a38e78c3
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !TextBlock
+                Id: 8fa27a09-529b-4035-b887-524582c9a718
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 35.0
+                Margin: {Bottom: 100.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtPregunta
+                Text: pregunta lorem ipsum dolor sit amet
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 30.0
+                TextColor: {R: 255, G: 255, B: 255, A: 255}
+                TextAlignment: Center
+                WrapText: true
+        -   UIElement: !ImageElement
+                Id: ef9a07bf-ddce-4fe5-8031-68caa233de5d
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: img
+                Source: !SpriteFromTexture
+                    Texture: 66d859f6-5dbf-4782-bf1c-a7fdc0806448:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 255, A: 255}
+                StretchType: Fill
+        -   UIElement: !Grid
+                Id: f8153af7-3971-4b7f-be00-0a5ecfd050eb
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 200}
+                CanBeHitByUser: true
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: Popup
+                Children:
+                    3be6250ca6505936bb15dd5d849dcac0: !Grid ref!! 84b1d09d-9326-46f7-bf0c-69861650dbab
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !TextBlock
+                Id: ffb9ca17-19d0-4d6c-b485-5218c03b3f79
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 35.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txt
+                Text: "Sí"
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 30.0
+                TextColor: {R: 0, G: 0, B: 0, A: 255}
+                TextAlignment: Center

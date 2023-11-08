@@ -91,6 +91,17 @@ public class SistemaMemoria : StartupScript
         return fortalezas.Where(o => o.ranura == ranura).FirstOrDefault();
     }
 
+    public static int ObtenerRanuraMásAlta()
+    {
+        var fortalezas = CargarFortalezas(false);
+        fortalezas = fortalezas.OrderBy(o => o.ranura).ToList();
+
+        if(fortalezas.Count > 0)
+            return fortalezas[^1].ranura;
+        else
+            return 0;
+    }
+
     public static bool EliminarFortaleza(int ranura)
     {
         var fortalezas = CargarFortalezas(false);
