@@ -38,7 +38,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            7ba956d0989665e8eaf2ed3cbf073cf8: ref!! 7ed55d9e-bdc1-49ee-ad0b-0e87dfdfe407
                     2ac4ee813038fd891476ad95954f239a: !UIComponent
                         Id: 52a47db9-a0b2-4a83-bef5-ccd52813fcf5
                         Page: d15820d2-f91f-4321-9431-92f02516cf60:Interfaces/Escenas
@@ -59,3 +60,21 @@ Hierarchy:
                     2ab201454e38ddf4d9e05dc760d65317: !Terracota.SistemaAnimaci%25C3%25B3n,Terracota
                         Id: bb69a818-1ae1-4f24-be96-189ef55853fb
                         curvaEstandar: null
+        -   Entity:
+                Id: 53d9f9c7-8af3-450b-8bb0-84aa749d94b6
+                Name: "CámaraSobretodo"
+                Components:
+                    9c9c82553a8a44d6988e7f469e136072: !TransformComponent
+                        Id: 7ed55d9e-bdc1-49ee-ad0b-0e87dfdfe407
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    a46598cb5bedbece5503c8f0b6d0028f: !CameraComponent
+                        Id: 88d9f52c-605e-48b6-b1da-3dca69f42217
+                        Name: null
+                        Projection: Orthographic
+                        OrthographicSize: 1.0
+                        NearClipPlane: 0.0
+                        FarClipPlane: 0.1
+                        Slot: 22e7a61e-940b-4bf3-8332-c0b9074cd7f5

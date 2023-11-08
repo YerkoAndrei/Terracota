@@ -7,6 +7,9 @@ Cameras:
     de2e75c3b2b23e54162686363f3f138e:
         Id: 9f373eee-c85c-45b0-9b02-82451f709476
         Name: Main
+    67ec89596939e9a9cff7747bc80073ce*:
+        Id: 22e7a61e-940b-4bf3-8332-c0b9074cd7f5
+        Name: Sobretodo
 RenderStages:
     47116750c1a5d449b4ad3625f71439b3:
         Id: 72fed79e-ddf4-4888-8e79-157d1047bbdd
@@ -42,6 +45,11 @@ RenderStages:
         Id: 45dffc0d-b245-40a0-b901-1d171d872112
         Name: UI
         EffectSlotName: Main
+        SortMode: !FrontToBackSortMode {}
+    44add979e3551e29317718c9cd4fed6f*:
+        Id: 523dc835-32df-4ae8-8ba4-67677bd42611
+        Name: Sobretodo
+        EffectSlotName: Sobretodo
         SortMode: !FrontToBackSortMode {}
 RenderFeatures:
     d8fb80b0e7995140a46bca8dc36ee8a2: !Stride.Rendering.MeshRenderFeature,Stride.Rendering
@@ -116,8 +124,12 @@ RenderFeatures:
                 RenderStage*: ref!! 0c18fde9-2246-4be3-99f4-124103292b0d
                 EffectName: Test
             d7e5d97f23388562f5501b9caed60c79*: !Stride.Rendering.SimpleGroupToRenderStageSelector,Stride.Rendering
-                RenderGroup: Group30, Group31
+                RenderGroup: Group30
                 RenderStage: ref!! 45dffc0d-b245-40a0-b901-1d171d872112
+                EffectName: null
+            cb1c0c2f75cd2ea6384e62517a3231a7*: !Stride.Rendering.SimpleGroupToRenderStageSelector,Stride.Rendering
+                RenderGroup: Group31
+                RenderStage: ref!! 523dc835-32df-4ae8-8ba4-67677bd42611
                 EffectName: null
     9013eab3ea0ef6c98bf133b86c173d45: !Stride.Particles.Rendering.ParticleEmitterRenderFeature,Stride.Particles
         RenderStageSelectors:
@@ -229,7 +241,14 @@ Game*: !Stride.Rendering.Compositing.SceneRendererCollection,Stride.Rendering
             Child: !Stride.Rendering.Compositing.SingleStageRenderer,Stride.Rendering
                 Id: 94ae2a4c-3d9c-4f09-96ec-772790a9fd89
                 RenderStage: ref!! 45dffc0d-b245-40a0-b901-1d171d872112
-            RenderMask: Group30, Group31
+            RenderMask: Group30
+        fcaa314a4fdce4fcf6168ef95b811077: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
+            Id: eb4d18fa-27b0-4650-bf8e-cf92d4fcc0f8
+            Camera: ref!! 22e7a61e-940b-4bf3-8332-c0b9074cd7f5
+            Child: !Stride.Rendering.Compositing.SingleStageRenderer,Stride.Rendering
+                Id: 5947f92e-3539-4e67-9adf-6922c2c0dd15
+                RenderStage: ref!! 523dc835-32df-4ae8-8ba4-67677bd42611
+            RenderMask: Group31
 SingleView: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! 308699fb-6328-424e-9357-633dce9efd04
 Editor*: !Stride.Rendering.Compositing.SceneRendererCollection,Stride.Rendering
     Id: c0120f52-cf13-4663-b84b-0329386e8960

@@ -120,7 +120,7 @@ public class SistemaEscenas : SyncScript
         Entity.Scene.Children.Add(escenaActual);
 
         // Retraso por carga de interfaces
-        await Task.Delay(10);
+        await Task.Delay(100);
         abriendo = true;
     }
 }
