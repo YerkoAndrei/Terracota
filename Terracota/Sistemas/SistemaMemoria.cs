@@ -7,6 +7,7 @@ using Stride.Engine;
 using Newtonsoft.Json;
 
 namespace Terracota;
+using static Constantes;
 
 public class SistemaMemoria : StartupScript
 {
@@ -27,19 +28,22 @@ public class SistemaMemoria : StartupScript
         rutaConfiguración = Path.Combine(carpetaPersistente, archivoConfiguración);
     }
 
-    public static List<Fortaleza> CargarFortalezas()
+    public static List<Fortaleza> CargarFortalezas(bool crearVacía)
     {
         if (!Directory.Exists(carpetaPersistente))
             Directory.CreateDirectory(carpetaPersistente);
 
+        // Agrega fortaleza vacía
         var fortalezas = new List<Fortaleza>();
+        if (crearVacía)
+            fortalezas.Add(GenerarFortalezaVacía());
 
         // Lee archivo
         if (File.Exists(rutaFortalezas))
         {
             var archivo = File.ReadAllText(rutaFortalezas);
             var desencriptado = DesEncriptar(archivo);
-            fortalezas = JsonConvert.DeserializeObject<List<Fortaleza>>(desencriptado);
+            fortalezas.AddRange(JsonConvert.DeserializeObject<List<Fortaleza>>(desencriptado));
 
             // Orden
             fortalezas = fortalezas.OrderBy(o => o.ranura).ToList();
@@ -49,7 +53,7 @@ public class SistemaMemoria : StartupScript
 
     public static bool GuardarFortaleza(ElementoCreación[] bloques, int ranura, string miniatura)
     {
-        var fortalezas = CargarFortalezas();
+        var fortalezas = CargarFortalezas(false);
 
         // Crea nueva fortaleza
         var nuevaFortaleza = new Fortaleza();
@@ -83,13 +87,13 @@ public class SistemaMemoria : StartupScript
 
     public static Fortaleza ObtenerFortaleza(int ranura)
     {
-        var fortalezas = CargarFortalezas();
+        var fortalezas = CargarFortalezas(true);
         return fortalezas.Where(o => o.ranura == ranura).FirstOrDefault();
     }
 
     public static bool EliminarFortaleza(int ranura)
     {
-        var fortalezas = CargarFortalezas();
+        var fortalezas = CargarFortalezas(false);
         var fortaleza = fortalezas.Where(o => o.ranura == ranura).FirstOrDefault();
 
         if (fortaleza == null)

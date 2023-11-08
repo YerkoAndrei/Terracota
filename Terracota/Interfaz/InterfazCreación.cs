@@ -48,7 +48,7 @@ public class InterfazCreación : StartupScript
         var vacío = página.FindVisualChildOfType<ImageElement>("imgVacío");
         vacío.Visibility = Visibility.Hidden;
 
-        var fortalezas = SistemaMemoria.CargarFortalezas();
+        var fortalezas = SistemaMemoria.CargarFortalezas(true);
         if (fortalezas.Count == 0)
             vacío.Visibility = Visibility.Visible;
 
@@ -65,10 +65,19 @@ public class InterfazCreación : StartupScript
             var nuevaRanura = prefabRanura.InstantiateElement<Grid>("Ranura");
             var fortalezaTemp = fortalezas[i];
 
-            ConfigurarRanuraCreación(nuevaRanura, i, fortalezaTemp.ranura, fortalezaTemp.miniatura,
-                () => EnClicGuardar(fortalezaTemp.ranura),
-                () => EnClicCargarFortaleza(fortalezaTemp.ranura), 
-                CargarFortalezas);
+            // Fortaleza vacía
+            if (i == 0)
+            {
+                ConfigurarRanuraVacíaCreación(nuevaRanura, i, fortalezaTemp.ranura, fortalezaTemp.miniatura,
+                    () => EnClicCargarFortaleza(fortalezaTemp.ranura));
+            }
+            else
+            {
+                ConfigurarRanuraCreación(nuevaRanura, i, fortalezaTemp.ranura, fortalezaTemp.miniatura,
+                    () => EnClicGuardar(fortalezaTemp.ranura),
+                    () => EnClicCargarFortaleza(fortalezaTemp.ranura),
+                    CargarFortalezas);
+            }
             padreRanuras.Height += (nuevaRanura.Height + 10);
             padreRanuras.Children.Add(nuevaRanura);
         }
@@ -112,7 +121,7 @@ public class InterfazCreación : StartupScript
     private void EnClicGuardarNueva()
     {
         // PENDIENTE: mensaje ok
-        var ranura = SistemaMemoria.CargarFortalezas().Count;
+        var ranura = SistemaMemoria.CargarFortalezas(false).Count;
         if (controladorCreación.EnClicGuardar(ranura + 1))
         {
             // PENDIENTE: mensaje ok

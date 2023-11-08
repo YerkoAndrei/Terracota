@@ -1,7 +1,6 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
 using Stride.Core.Mathematics;
-using Stride.Core.Serialization;
 using Stride.Engine;
 using Stride.UI;
 using Stride.UI.Controls;
@@ -54,7 +53,7 @@ public class InterfazElección : StartupScript
         // Fortalezas
         var padreRanurasIzquierda = página.FindVisualChildOfType<UniformGrid>("RanurasIzquierda");
         var padreRanurasDerecha = página.FindVisualChildOfType<UniformGrid>("RanurasDerecha");
-        var fortalezas = SistemaMemoria.CargarFortalezas();
+        var fortalezas = SistemaMemoria.CargarFortalezas(true);
 
         padreRanurasIzquierda.Children.Clear();
         padreRanurasDerecha.Children.Clear();
@@ -64,9 +63,6 @@ public class InterfazElección : StartupScript
 
         padreRanurasIzquierda.Height = 0;
         padreRanurasDerecha.Height = 0;
-
-        // Agrega fortaleza vacía
-
 
         for (int i = 0; i < fortalezas.Count; i++)
         {

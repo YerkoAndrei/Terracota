@@ -1,4 +1,5 @@
 ﻿using Stride.Core.Mathematics;
+using System.Collections.Generic;
 
 namespace Terracota;
 
@@ -48,5 +49,39 @@ public static class Constantes
         chimpancé,
         orangután,
         gorila
+    }
+
+    public static Fortaleza GenerarFortalezaVacía()
+    {
+        var bloques = new List<Bloque>
+        {
+            new Bloque(TipoBloque.estatua, new Vector3(4,0,2), Quaternion.RotationY(MathUtil.DegreesToRadians(180))),
+            new Bloque(TipoBloque.estatua, new Vector3(0,0, 2), Quaternion.RotationY(MathUtil.DegreesToRadians(180))),
+            new Bloque(TipoBloque.estatua, new Vector3(-4,0,2), Quaternion.RotationY(MathUtil.DegreesToRadians(180))),
+
+            new Bloque(TipoBloque.corto, new Vector3(-6,    0,-2), Quaternion.Identity),
+            new Bloque(TipoBloque.corto, new Vector3(-4.5f, 0,-2), Quaternion.Identity),
+            new Bloque(TipoBloque.corto, new Vector3(-3,    0,-2), Quaternion.Identity),
+            new Bloque(TipoBloque.corto, new Vector3(-1.5f, 0,-2), Quaternion.Identity),
+            new Bloque(TipoBloque.corto, new Vector3(0,     0,-2), Quaternion.Identity),
+            new Bloque(TipoBloque.corto, new Vector3(1.5f,  0,-2), Quaternion.Identity),
+            new Bloque(TipoBloque.corto, new Vector3(3,     0,-2), Quaternion.Identity),
+            new Bloque(TipoBloque.corto, new Vector3(4.5f,  0,-2), Quaternion.Identity),
+            new Bloque(TipoBloque.corto, new Vector3(6,     0,-2), Quaternion.Identity),
+
+            new Bloque(TipoBloque.largo, new Vector3(-7.5f, 0,0), Quaternion.Identity),
+            new Bloque(TipoBloque.largo, new Vector3(-4.5f, 0,0), Quaternion.Identity),
+            new Bloque(TipoBloque.largo, new Vector3(-1.5f, 0,0), Quaternion.Identity),
+            new Bloque(TipoBloque.largo, new Vector3(1.5f,  0,0), Quaternion.Identity),
+            new Bloque(TipoBloque.largo, new Vector3(4.5f,  0,0), Quaternion.Identity),
+            new Bloque(TipoBloque.largo, new Vector3(7.5f,  0,0), Quaternion.Identity)
+        };
+        var fortaleza = new Fortaleza
+        {
+            ranura = 0,
+            miniatura = string.Empty,
+            bloques = bloques
+        };
+        return fortaleza;
     }
 }

@@ -151,6 +151,26 @@ public static class Sistema
         //miniatura.Source = ConvertirB64(miniaturaB64);
     }
 
+    public static void ConfigurarRanuraVacíaCreación(Grid grid, int fila, int ranura, string miniaturaB64, Action enCargar)
+    {
+        // Busca contenido dentro del "grid botón"
+        var miniatura = grid.FindVisualChildOfType<ImageElement>("Miniatura");
+        var texto = grid.FindVisualChildOfType<TextBlock>("txt");
+
+        // Botones
+        grid.FindVisualChildOfType<Grid>("btnEliminar").Visibility = Visibility.Hidden;
+
+        var btnCargar = grid.FindVisualChildOfType<Grid>("btnCargar");
+        ConfigurarBotón(btnCargar, enCargar);
+
+        // Visual
+        texto.Text = ranura.ToString();
+        grid.SetGridRow(fila);
+
+        // Miniatura
+        //miniatura.Source = ConvertirB64(miniaturaB64);
+    }
+
     public static void ConfigurarRanuraElección(Grid grid, int fila, int ranura, string miniaturaB64, Action enClic)
     {
         // Busca contenido dentro del "grid botón"
