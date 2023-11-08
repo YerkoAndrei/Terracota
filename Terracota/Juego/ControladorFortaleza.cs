@@ -36,25 +36,25 @@ public class ControladorFortaleza : StartupScript
         }
 
         // Bloques
-        var índieEstatuas = 0;
-        var índieCortos = 0;
-        var índieLargos = 0;
+        var índiceEstatuas = 0;
+        var índiceCortos = 0;
+        var índiceLargos = 0;
 
         foreach (var bloque in fortaleza.bloques)
         {
             switch(bloque.tipoBloque)
             {
                 case TipoBloque.estatua:
-                    estatuas[índieEstatuas].Posicionar(bloque.posición, bloque.rotación);
-                    índieEstatuas++;
+                    estatuas[índiceEstatuas].Posicionar(bloque.posición, bloque.rotación);
+                    índiceEstatuas++;
                     break;
                 case TipoBloque.corto:
-                    cortos[índieCortos].Posicionar(bloque.posición, bloque.rotación);
-                    índieCortos++;
+                    cortos[índiceCortos].Posicionar(bloque.posición, bloque.rotación);
+                    índiceCortos++;
                     break;
                 case TipoBloque.largo:
-                    largos[índieLargos].Posicionar(bloque.posición, bloque.rotación);
-                    índieLargos++;
+                    largos[índiceLargos].Posicionar(bloque.posición, bloque.rotación);
+                    índiceLargos++;
                     break;
             }
         }

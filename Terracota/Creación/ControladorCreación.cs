@@ -134,25 +134,25 @@ public class ControladorCreación : SyncScript
         var fortalezaCargada = SistemaMemoria.ObtenerFortaleza(ranura);
 
         // Bloques
-        var índieEstatuas = 0;
-        var índieCortos = 0;
-        var índieLargos = 0;
+        var índiceEstatuas = 0;
+        var índiceCortos = 0;
+        var índiceLargos = 0;
 
         foreach (var bloque in fortalezaCargada.bloques)
         {
             switch (bloque.tipoBloque)
             {
                 case TipoBloque.estatua:
-                    estatuas[índieEstatuas].ForzarPosición((bloque.posición + fortaleza.Position), bloque.rotación);
-                    índieEstatuas++;
+                    estatuas[índiceEstatuas].ForzarPosición((bloque.posición + fortaleza.Position), bloque.rotación);
+                    índiceEstatuas++;
                     break;
                 case TipoBloque.corto:
-                    cortos[índieCortos].ForzarPosición((bloque.posición + fortaleza.Position), bloque.rotación);
-                    índieCortos++;
+                    cortos[índiceCortos].ForzarPosición((bloque.posición + fortaleza.Position), bloque.rotación);
+                    índiceCortos++;
                     break;
                 case TipoBloque.largo:
-                    largos[índieLargos].ForzarPosición((bloque.posición + fortaleza.Position), bloque.rotación);
-                    índieLargos++;
+                    largos[índiceLargos].ForzarPosición((bloque.posición + fortaleza.Position), bloque.rotación);
+                    índiceLargos++;
                     break;
             }
         }
