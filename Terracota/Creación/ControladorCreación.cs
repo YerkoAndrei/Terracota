@@ -98,7 +98,7 @@ public class ControladorCreación : SyncScript
         var posiciónInicio = viewport.Unproject(new Vector3(Input.AbsoluteMousePosition, 0.0f), cámara.ProjectionMatrix, cámara.ViewMatrix, Matrix.Identity);
         var pocisiónLejos = viewport.Unproject(new Vector3(Input.AbsoluteMousePosition, 1.0f), cámara.ProjectionMatrix, cámara.ViewMatrix, Matrix.Identity);
 
-        var resultado = this.GetSimulation().Raycast(posiciónInicio, pocisiónLejos, CollisionFilterGroups.SensorTrigger, CollisionFilterGroupFlags.DefaultFilter, true);
+        var resultado = this.GetSimulation().Raycast(posiciónInicio, pocisiónLejos, CollisionFilterGroups.KinematicFilter, CollisionFilterGroupFlags.DefaultFilter, true);
         if (resultado.Succeeded && bloqueActual == null &&
             resultado.Collider.Entity.GetParent() != null && resultado.Collider.Entity.GetParent().Get<ElementoCreación>() != null)
         {

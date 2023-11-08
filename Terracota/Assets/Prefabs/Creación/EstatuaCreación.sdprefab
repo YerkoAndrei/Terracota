@@ -18,10 +18,6 @@ Hierarchy:
                         Children:
                             1bef98566e7a8897d1fc5f9ff4e57932: ref!! 70b1a91b-6287-4cb3-afe9-1bfd18eb9984
                             ff2bff364f6f466fdc2497f5fff7dd71: ref!! 40d01a10-7ead-4675-98ce-890d4edc07dc
-                    f180b8d4bd2ff5fd2e4f4f0698b689db: !Terracota.ElementoCreaci%25C3%25B3n,Terracota
-                        Id: 4d68357d-9889-4a82-b255-f70823809275
-                        tipoBloque: estatua
-                        cuerpo: ref!! d5cbdf13-4994-46f1-8b41-199738fe2fd0
         -   Entity:
                 Id: 6520dadf-3e27-4a7d-8718-297a9d00ebcf
                 Name: Bloqueador
@@ -89,7 +85,7 @@ Hierarchy:
                         Materials: {}
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: d5cbdf13-4994-46f1-8b41-199738fe2fd0
-                        CanCollideWith: DefaultFilter, SensorTrigger
+                        CanCollideWith: DefaultFilter, KinematicFilter, SensorTrigger
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0

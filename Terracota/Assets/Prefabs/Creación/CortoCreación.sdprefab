@@ -17,10 +17,6 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             fc38df4a5ae6491b197784693067739a: ref!! 0d07f6f9-a235-4aa4-8238-f8ff6276dd66
-                    056f25a7bc028bb6d6210ca087271149: !Terracota.ElementoCreaci%25C3%25B3n,Terracota
-                        Id: d02cf9a0-cdaf-4f72-93c0-d2bcc8038a6b
-                        tipoBloque: corto
-                        cuerpo: ref!! 3a5dc20f-b1a0-4971-8443-b0f417423b22
         -   Entity:
                 Id: ea2f82d3-ec71-469a-a6c9-f4c58c6e5bee
                 Name: Modelo Corto
@@ -37,7 +33,7 @@ Hierarchy:
                         Materials: {}
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: 3a5dc20f-b1a0-4971-8443-b0f417423b22
-                        CanCollideWith: DefaultFilter, SensorTrigger
+                        CanCollideWith: DefaultFilter, KinematicFilter, SensorTrigger
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.0
