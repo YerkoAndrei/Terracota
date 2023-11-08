@@ -17,12 +17,14 @@ public class ElementoBloque : StartupScript
     {
         posiciónCuerpo = cuerpo.Entity.Transform.Position;
         cuerpo.IsKinematic = true;
+        cuerpo.Enabled = false;
     }
 
     public void Activar()
     {
         cuerpo.Entity.Transform.Position = posiciónCuerpo;
         cuerpo.IsKinematic = false;
+        cuerpo.Enabled = true;
     }
 
     public void Posicionar(Vector3 posición, Quaternion rotación)

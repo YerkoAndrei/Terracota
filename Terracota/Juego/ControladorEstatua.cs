@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Threading.Tasks;
 using Stride.Engine;
 using Stride.Physics;
 
@@ -22,7 +23,7 @@ public class ControladorEstatua : AsyncScript
 
     public override async Task Execute()
     {
-        controladorPartida = Sistema.EncontrarEntidad(SceneSystem.SceneInstance, "ControladorPartida").Get<ControladorPartidaLocal>();
+        controladorPartida = Entity.Scene.Entities.FirstOrDefault(e => e.Name == "ControladorPartida").Get<ControladorPartidaLocal>();
 
         while (Game.IsRunning)
         {

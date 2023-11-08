@@ -31,27 +31,6 @@ public static class Sistema
         return new Vector3(x, y, z);
     }
 
-    // Solo encuenta en primeros hijos
-    public static Entity EncontrarEntidad(SceneInstance escena, string nombre)
-    {
-        var entidades = escena.RootScene.Entities;
-        var entidad = entidades.FirstOrDefault(e => e.Name == nombre);
-
-        if (entidad != null)
-            return entidad;
-        else
-        {
-            for(int i=0; i< entidades.Count; i++)
-            {
-                entidades[i].FindChild(nombre);
-
-                if(entidades[i] != null)
-                    return entidades[i];
-            }
-            return null;
-        }
-    }
-
     public static ISpriteProvider ObtenerSprite(Texture textura)
     {
         var sprite = new SpriteFromTexture();
