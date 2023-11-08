@@ -19,7 +19,7 @@ public class ControladorBola : AsyncScript
         cuerpo = Entity.Get<RigidbodyComponent>();
 
         // Tiempo de vida
-        ContarVida();
+        var contarVida = ContarVida();
 
         while (Game.IsRunning)
         {
@@ -67,7 +67,6 @@ public class ControladorBola : AsyncScript
 
         // Fin
         cuerpo.Enabled = false;
-        Content.Unload(Entity);
         Entity.Scene.Entities.Remove(Entity);
     }
 }
