@@ -95,6 +95,7 @@ public class SistemaEscenas : SyncScript
         panelOscuro.BackgroundColor = Color.Black;
 
         // Descarga
+        Content.Unload(escenaActual);
         Entity.Scene.Children.Remove(escenaActual);
 
         switch (siguienteEscena)
