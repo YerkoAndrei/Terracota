@@ -79,8 +79,8 @@ public class InterfazCreación : StartupScript
             else
             {
                 ConfigurarRanuraCreación(nuevaRanura, i, fortalezaTemp.ranura, fortalezaTemp.miniatura,
-                    () => EnClicGuardar(fortalezaTemp.ranura),
                     () => EnClicCargarFortaleza(fortalezaTemp.ranura),
+                    () => EnClicGuardar(fortalezaTemp.ranura),
                     () => EnClicEliminar(fortalezaTemp.ranura));
             }
             padreRanuras.Height += (nuevaRanura.Height + 10);

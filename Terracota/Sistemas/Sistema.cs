@@ -104,10 +104,10 @@ public static class Sistema
         botón.Click += (sender, e) => { action.Invoke(); };
     }
 
-    public static void ConfigurarRanuraCreación(Grid grid, int fila, int ranura, string miniaturaB64, Action enClic, Action enCargar, Action enElminar)
+    public static void ConfigurarRanuraCreación(Grid grid, int fila, int ranura, string miniaturaB64, Action enCargar, Action enSobreescribir, Action enElminar)
     {
         // Busca contenido dentro del "grid botón"
-        ConfigurarBotón(grid, enClic);
+        ConfigurarBotón(grid, enCargar);
         var miniatura = grid.FindVisualChildOfType<ImageElement>("Miniatura");
         var texto = grid.FindVisualChildOfType<TextBlock>("txt");
 
@@ -115,8 +115,8 @@ public static class Sistema
         var btnEliminar = grid.FindVisualChildOfType<Grid>("btnEliminar");
         ConfigurarBotón(btnEliminar, enElminar);
 
-        var btnCargar = grid.FindVisualChildOfType<Grid>("btnCargar");
-        ConfigurarBotón(btnCargar, enCargar);
+        var btnSobreescribir = grid.FindVisualChildOfType<Grid>("btnSobreescribir");
+        ConfigurarBotón(btnSobreescribir, enSobreescribir);
 
         // Visual
         texto.Text = ranura.ToString();
@@ -129,14 +129,13 @@ public static class Sistema
     public static void ConfigurarRanuraVacíaCreación(Grid grid, int fila, int ranura, string miniaturaB64, Action enCargar)
     {
         // Busca contenido dentro del "grid botón"
+        ConfigurarBotón(grid, enCargar);
         var miniatura = grid.FindVisualChildOfType<ImageElement>("Miniatura");
         var texto = grid.FindVisualChildOfType<TextBlock>("txt");
 
         // Botones
         grid.FindVisualChildOfType<Grid>("btnEliminar").Visibility = Visibility.Hidden;
-
-        var btnCargar = grid.FindVisualChildOfType<Grid>("btnCargar");
-        ConfigurarBotón(btnCargar, enCargar);
+        grid.FindVisualChildOfType<Grid>("btnSobreescribir").Visibility = Visibility.Hidden;
 
         // Visual
         texto.Text = ranura.ToString();
