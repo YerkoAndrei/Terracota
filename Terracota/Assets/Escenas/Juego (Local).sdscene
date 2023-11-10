@@ -14,6 +14,8 @@ Hierarchy:
         - ref!! 65bbced6-1eff-41bd-8480-9f351004702f
         - ref!! feb5e8a9-3ac2-49fe-ba91-3c77b1ae9699
         - ref!! b9b2b39d-59cf-49f6-9cf1-a6952d1e2fb6
+        - ref!! 95bf6a81-3a2e-458a-adfa-69ba7815b8f0
+        - ref!! cf373d4e-8302-4f3e-9c31-4f8ff25db816
     Parts:
         -   Entity:
                 Id: 017e0fa5-95bb-4f5e-9130-738e96c92a22
@@ -55,6 +57,7 @@ Hierarchy:
                         Children: {}
                     1a24c41704f8422b77d7625af2a028f5: !UIComponent
                         Id: 8df76c69-40d2-4800-87ff-e93a3a59f8f3
+                        Enabled: false
                         Page: cbaa0158-6796-41f4-a5f5-a699458ca406:Interfaces/Juego
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.28, Y: 0.72, Z: 1.0}
@@ -498,7 +501,7 @@ Hierarchy:
                             3d48eaf39327744dcac361c2b7ffdacc: ref!! b36e5f85-b9b9-430f-9844-821fb51c9dff
                     8bb144e93510cbf705d04c9148ca913f: !ModelComponent
                         Id: bf211cd8-73cb-4ec3-9d52-2e93e563b5f6
-                        Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Mono/Lanza
+                        Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Estatua/Lanza
                         Materials: {}
             Base:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
@@ -1075,7 +1078,7 @@ Hierarchy:
                             f66204436139f5b77ac82a17c2423511: ref!! 02c1e947-1143-4c26-8938-25658a0645f2
                     8bb144e93510cbf705d04c9148ca913f: !ModelComponent
                         Id: 3bf0cc0e-410f-4a2b-a209-a02c73ca366c
-                        Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Mono/Lanza
+                        Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Estatua/Lanza
                         Materials: {}
             Base:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
@@ -1146,7 +1149,7 @@ Hierarchy:
                 Components:
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
                         Id: 28e65c86-e2e2-4433-b2f5-9ac606d31bbf
-                        Position: {X: 0.0, Y: 0.8, Z: 0.0}
+                        Position*: {X: 0.5284201, Y: 0.8, Z: -0.87747276}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -1154,7 +1157,7 @@ Hierarchy:
                             96e24b93d0e8fdb1b29ba0190a91165f: ref!! 852e47fe-eea5-4b77-929a-b74792a7d9fb
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: e43a1a1e-5e86-4b54-a4d0-377154914ebd
-                        Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
+                        Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Estatua/Mono
                         Materials: {}
                     a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
                         Id: 57da5044-4fb8-498c-a4e0-df3a91ce7bac
@@ -1176,7 +1179,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
-                                Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Mono/ColliderMono
+                                Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Estatua/ColliderEstatua
             Base:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: e3d268d0-f79e-4e7b-8445-aea77685cdea
@@ -1274,6 +1277,7 @@ Hierarchy:
                         Children: {}
                     1a24c41704f8422b77d7625af2a028f5: !UIComponent
                         Id: 56e352d0-7364-413c-b3fe-ebe2156bbd7a
+                        Enabled: false
                         Page: "8b929d74-116a-4c3f-880a-a37a36bc3d4f:Interfaces/Elección"
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.28, Y: 0.72, Z: 1.0}
@@ -1524,7 +1528,7 @@ Hierarchy:
                             f66204436139f5b77ac82a17c2423511: ref!! 4c15ad0c-df03-4bde-b29c-26e2b61f4ee1
                     8bb144e93510cbf705d04c9148ca913f: !ModelComponent
                         Id: 89f0ab49-77d5-466e-bbb8-d3c0881c239a
-                        Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Mono/Lanza
+                        Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Estatua/Lanza
                         Materials: {}
             Base:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
@@ -1625,7 +1629,7 @@ Hierarchy:
                             703588278c1637f9917cb87be33b3661: ref!! 918a7913-da61-4109-aeb2-e3ba2407e50e
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: eafa74fe-30c3-45d0-866a-4deefb330230
-                        Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
+                        Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Estatua/Mono
                         Materials: {}
                     a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
                         Id: 50f1abed-c95a-42fb-9a76-dca8d38fc48f
@@ -1647,7 +1651,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
-                                Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Mono/ColliderMono
+                                Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Estatua/ColliderEstatua
             Base:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 5d2bf67e-41c6-4ca9-a613-5ecc9fbf5d39
@@ -1890,7 +1894,7 @@ Hierarchy:
                             96e24b93d0e8fdb1b29ba0190a91165f: ref!! f0855273-438e-43fc-83b7-365fa4409e93
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: 1a6d14b8-abb8-47f2-956d-23131a3cb620
-                        Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
+                        Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Estatua/Mono
                         Materials: {}
                     a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
                         Id: 47af9177-4d18-422a-8fb3-f6f4dcfd8026
@@ -1912,7 +1916,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
-                                Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Mono/ColliderMono
+                                Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Estatua/ColliderEstatua
             Base:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: e3d268d0-f79e-4e7b-8445-aea77685cdea
@@ -2066,7 +2070,7 @@ Hierarchy:
                         Children: {}
                     fc40e600c10f9b65227ac0f836817c9c: !ModelComponent
                         Id: 809036d9-f888-482c-8942-489508773fcc
-                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Mono/Bandera
+                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Estatua/Bandera
                         Materials: {}
             Base:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
@@ -2139,7 +2143,7 @@ Hierarchy:
                             38649db20b08001a933217225e4dbe3f: ref!! 4ea5e874-dfe3-49d6-9acb-7aca09aa6fdd
                     8bb144e93510cbf705d04c9148ca913f: !ModelComponent
                         Id: 73683806-f4c4-4735-8984-ec1f3b63be41
-                        Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Mono/Lanza
+                        Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Estatua/Lanza
                         Materials: {}
             Base:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
@@ -2457,6 +2461,20 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 4e168fc0-231e-4d20-a3fd-2d6d511cc270
                 InstanceId: b3114b21-f0fa-4511-a04e-44eebbf152d2
+        -   Entity:
+                Id: 95bf6a81-3a2e-458a-adfa-69ba7815b8f0
+                Name: Estatua
+                Components:
+                    39dbd5c4a7fa270db123a637c855bc58: !TransformComponent
+                        Id: 83ff69e4-b2fa-4794-82b0-56c49bd9c176
+                        Position: {X: -3.2130814, Y: 0.0, Z: 17.591873}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    6631817ed0754cd6f7ac1462158a2fca: !ModelComponent
+                        Id: e54ba076-8d89-4507-86cd-70e101728a58
+                        Model: 4504bc3d-56bd-4752-af76-a6fb0f75b742:Modelos/Estatua/Estatua
+                        Materials: {}
         -   Folder: null
             Entity:
                 Id: 97313ee6-7365-4977-93c3-899219eaabe1
@@ -2695,7 +2713,7 @@ Hierarchy:
                         Children: {}
                     fc40e600c10f9b65227ac0f836817c9c: !ModelComponent
                         Id: 577e0197-00d0-4c80-824d-0e1deabfba2c
-                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Mono/Bandera
+                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Estatua/Bandera
                         Materials: {}
             Base:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
@@ -2716,7 +2734,7 @@ Hierarchy:
                             3d48eaf39327744dcac361c2b7ffdacc: ref!! 37fd3c56-eadb-4cb1-9bdb-cfcf6efaaafc
                     8bb144e93510cbf705d04c9148ca913f: !ModelComponent
                         Id: f6689d55-48d5-40dd-ad9b-af06ac60a43b
-                        Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Mono/Lanza
+                        Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Estatua/Lanza
                         Materials: {}
             Base:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
@@ -2966,7 +2984,7 @@ Hierarchy:
                             ab378894df637d71b4266b1b4a495071: ref!! 6abdb0ab-bc53-4d89-ad62-0956a2dfd7e4
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: cc7e1294-2d10-4ee1-87b6-4d0818892b5f
-                        Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
+                        Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Estatua/Mono
                         Materials: {}
                     a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
                         Id: 19ccb17d-0fa1-4eda-bd8d-ac25d2bcf60f
@@ -2988,7 +3006,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
-                                Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Mono/ColliderMono
+                                Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Estatua/ColliderEstatua
             Base:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: eced761e-7b80-48c2-8c8b-d72b04316a5b
@@ -3225,7 +3243,7 @@ Hierarchy:
                         Children: {}
                     fc40e600c10f9b65227ac0f836817c9c: !ModelComponent
                         Id: 47088c4e-f181-40eb-a1cc-1b05d84d6c6e
-                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Mono/Bandera
+                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Estatua/Bandera
                         Materials: {}
             Base:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
@@ -3244,7 +3262,7 @@ Hierarchy:
                         Children: {}
                     fc40e600c10f9b65227ac0f836817c9c: !ModelComponent
                         Id: e3e12d04-8399-4464-817a-9d38d57192c4
-                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Mono/Bandera
+                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Estatua/Bandera
                         Materials: {}
             Base:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
@@ -3265,7 +3283,7 @@ Hierarchy:
                             703588278c1637f9917cb87be33b3661: ref!! 902c0f00-1915-4898-9f6c-eca5b5bfa5d3
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: e078a404-5260-45cf-9b0a-236c560ef65e
-                        Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
+                        Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Estatua/Mono
                         Materials: {}
                     a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
                         Id: f9a9ee72-042b-4a9c-a289-3343db337bf6
@@ -3287,7 +3305,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
-                                Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Mono/ColliderMono
+                                Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Estatua/ColliderEstatua
             Base:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 5d2bf67e-41c6-4ca9-a613-5ecc9fbf5d39
@@ -3318,6 +3336,20 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: bb43e2b8-4f9c-4e85-88b1-ef1d6fe48747
                 InstanceId: b3114b21-f0fa-4511-a04e-44eebbf152d2
+        -   Entity:
+                Id: cf373d4e-8302-4f3e-9c31-4f8ff25db816
+                Name: Lanza
+                Components:
+                    9cd1661e9cbec01fdb06a5b63d0983ab: !TransformComponent
+                        Id: 606116e4-7e0f-4a26-bab2-0ed87b2f1d8f
+                        Position: {X: -3.212864, Y: 0.0, Z: 17.044086}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7eff11deb5051f9adf67d605447098cd: !ModelComponent
+                        Id: d54340dc-e821-4ed8-b8c6-9fb19044fd4c
+                        Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Estatua/Lanza
+                        Materials: {}
         -   Entity:
                 Id: cfadc0ae-3718-4e55-a237-d12c6668a408
                 Name: "Cañón"
@@ -3353,7 +3385,7 @@ Hierarchy:
                             ab378894df637d71b4266b1b4a495071: ref!! 80e90461-b9b3-4065-a109-398c39fefa63
                     7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
                         Id: 776bb7cf-d37d-4eff-b114-010bba82bfaa
-                        Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Mono/Mono
+                        Model: 25dd953c-9f2d-4de4-a068-ecc929a847f9:Modelos/Estatua/Mono
                         Materials: {}
                     a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
                         Id: 5c3e46a9-66ad-477f-a1ef-b9c8874d8d79
@@ -3375,7 +3407,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
-                                Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Mono/ColliderMono
+                                Shape: 4c204aa6-d201-4f7f-b88b-138f3dbbab66:Modelos/Estatua/ColliderEstatua
             Base:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: eced761e-7b80-48c2-8c8b-d72b04316a5b
@@ -3439,7 +3471,7 @@ Hierarchy:
                         Children: {}
                     fc40e600c10f9b65227ac0f836817c9c: !ModelComponent
                         Id: 5db0a7ac-c86b-4f6c-993f-dbc6a8f04cd2
-                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Mono/Bandera
+                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Estatua/Bandera
                         Materials: {}
             Base:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
@@ -3620,7 +3652,7 @@ Hierarchy:
                             38649db20b08001a933217225e4dbe3f: ref!! c7749eec-657f-49f9-b53d-a601ea6399e1
                     8bb144e93510cbf705d04c9148ca913f: !ModelComponent
                         Id: 22dc6198-ea5c-48d8-8026-72d86a1ef433
-                        Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Mono/Lanza
+                        Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Estatua/Lanza
                         Materials: {}
             Base:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
@@ -3754,7 +3786,7 @@ Hierarchy:
                         Children: {}
                     fc40e600c10f9b65227ac0f836817c9c: !ModelComponent
                         Id: 45ee5052-9369-416d-9478-c04248a5291f
-                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Mono/Bandera
+                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Estatua/Bandera
                         Materials: {}
             Base:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
