@@ -1513,6 +1513,20 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 36b316aa-9d4e-4f8f-a3a2-56ac244227d5
                 InstanceId: b3114b21-f0fa-4511-a04e-44eebbf152d2
+        -   Entity:
+                Id: 55a2e69d-be2c-4d04-a962-3c1de844af57
+                Name: "Chimpancé"
+                Components:
+                    dfc8ccb924eb4df1c82d45af2d700d1d: !TransformComponent
+                        Id: 14e7ea4b-fcaa-440f-ac16-682bf020cd0a
+                        Position: {X: 0.0, Y: 0.9, Z: 0.01}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    945b13d865f9a030b31a7ebd3d4c7290: !ModelComponent
+                        Id: 88579a82-6ab9-4e4e-bcd9-21ebe5efbf22
+                        Model: "6a0770d0-5e69-4d2c-95e9-aa85a56916ca:Modelos/Estatua/Chimpancé"
+                        Materials: {}
         -   Folder: null
             Entity:
                 Id: 577a106e-1c05-4846-adfc-265d222a988a
@@ -2467,10 +2481,11 @@ Hierarchy:
                 Components:
                     39dbd5c4a7fa270db123a637c855bc58: !TransformComponent
                         Id: 83ff69e4-b2fa-4794-82b0-56c49bd9c176
-                        Position: {X: -3.2130814, Y: 0.0, Z: 17.591873}
+                        Position: {X: -3.2130814, Y: 0.8, Z: 17.591873}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            8e4747c0d8df143f4c84a941c4bd19cb: ref!! 14e7ea4b-fcaa-440f-ac16-682bf020cd0a
                     6631817ed0754cd6f7ac1462158a2fca: !ModelComponent
                         Id: e54ba076-8d89-4507-86cd-70e101728a58
                         Model: 4504bc3d-56bd-4752-af76-a6fb0f75b742:Modelos/Estatua/Estatua
