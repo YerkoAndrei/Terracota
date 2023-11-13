@@ -45,7 +45,18 @@ public class ControladorFortaleza : StartupScript
             switch(bloque.tipoBloque)
             {
                 case TipoBloque.estatua:
-                    estatuas[índiceEstatuas].Posicionar(bloque.posición, bloque.rotación);
+                    switch (bloque.tipoEstatua)
+                    {
+                        case TipoEstatua.chimpancé: // 0
+                            estatuas[índiceEstatuas].Posicionar(bloque.posición, bloque.rotación);
+                            break;
+                        case TipoEstatua.gorila:    // 1
+                            estatuas[índiceEstatuas].Posicionar(bloque.posición, bloque.rotación);
+                            break;
+                        case TipoEstatua.orangután: // 2
+                            estatuas[índiceEstatuas].Posicionar(bloque.posición, bloque.rotación);
+                            break;
+                    }
                     índiceEstatuas++;
                     break;
                 case TipoBloque.corto:

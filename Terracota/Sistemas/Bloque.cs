@@ -5,12 +5,14 @@ using static Terracota.Constantes;
 public class Bloque
 {
     public TipoBloque tipoBloque { get; set; }
+    public TipoEstatua tipoEstatua { get; set; }
     public Vector3 posición { get; set; }
     public Quaternion rotación { get; set; }
 
-    public Bloque (TipoBloque tipoBloque, Vector3 posición, Quaternion rotación)
+    public Bloque (TipoBloque tipoBloque, TipoEstatua tipoEstatua, Vector3 posición, Quaternion rotación)
     {
         this.tipoBloque = tipoBloque;
+        this.tipoEstatua = tipoEstatua;
         this.posición = posición;
         this.rotación = rotación;
     }

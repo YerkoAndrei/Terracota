@@ -62,7 +62,7 @@ public class SistemaMemoria : StartupScript
         nuevaFortaleza.miniatura = miniatura;
         for (int i = 0; i < bloques.Length; i++)
         {
-            var bloque = new Bloque(bloques[i].ObtenerTipo(), bloques[i].ObtenerPosiciónRelativa(), bloques[i].ObtenerRotación());
+            var bloque = new Bloque(bloques[i].ObtenerTipo(), bloques[i].ObtenerEstatua(), bloques[i].ObtenerPosiciónRelativa(), bloques[i].ObtenerRotación());
             nuevaFortaleza.bloques.Add(bloque);
         }
 
