@@ -166,7 +166,7 @@ Hierarchy:
                 Components:
                     b2b0bf1d60b3fc31afd4f21fa78fdfaa: !TransformComponent
                         Id: dbbb9ef8-ed9f-48b2-a33a-60b976c5d71d
-                        Position*: {X: 0.0, Y: 4.0, Z: -21.0}
+                        Position*: {X: 0.0, Y: 4.0, Z: -21.2}
                         Rotation*: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -528,7 +528,7 @@ Hierarchy:
                         cuerpo: ref!! a39a6648-571b-4425-a2f5-89f299c15295
                     fb06c492109ce5cf0499d7d8846d1f46: !Terracota.ControladorEstatua,Terracota
                         Id: ee63278f-db2f-4640-b69e-02a03b9b05ba
-                        jugador: nada
+                        jugador*: huesped
                         estatua: "orangután"
                         cuerpo: ref!! a39a6648-571b-4425-a2f5-89f299c15295
                         cabeza: ref!! b927cf51-19f2-44db-a649-b533cf0319ed
@@ -2168,7 +2168,7 @@ Hierarchy:
                         cuerpo: ref!! dd28904e-7754-40c1-930f-6e72716afeb1
                     fb06c492109ce5cf0499d7d8846d1f46: !Terracota.ControladorEstatua,Terracota
                         Id: 3051b1df-193e-494e-9a97-2d0531bb5b51
-                        jugador: nada
+                        jugador*: huesped
                         estatua: gorila
                         cuerpo: ref!! dd28904e-7754-40c1-930f-6e72716afeb1
                         cabeza: ref!! a359e7c8-16dc-48d7-873b-a8bb60a0fcfc
@@ -2632,7 +2632,7 @@ Hierarchy:
                         cuerpo: ref!! a7121947-3d95-4989-82b5-88ec9d3aa0ab
                     fb06c492109ce5cf0499d7d8846d1f46: !Terracota.ControladorEstatua,Terracota
                         Id: 4be8c0d3-1d5a-4a19-a47c-c2646bd50d03
-                        jugador: nada
+                        jugador*: "anfitrión"
                         estatua: gorila
                         cuerpo: ref!! a7121947-3d95-4989-82b5-88ec9d3aa0ab
                         cabeza: ref!! e4b3807f-ecc1-4c2a-b34d-ff0f4f31fa24
@@ -3980,7 +3980,7 @@ Hierarchy:
                         cuerpo: ref!! ef1198e1-216c-46b0-bf81-88b1ba5ea78e
                     fb06c492109ce5cf0499d7d8846d1f46: !Terracota.ControladorEstatua,Terracota
                         Id: 1bc451d6-301e-4fcc-a16e-a66b378203e6
-                        jugador: nada
+                        jugador*: "anfitrión"
                         estatua: "orangután"
                         cuerpo: ref!! ef1198e1-216c-46b0-bf81-88b1ba5ea78e
                         cabeza: ref!! ab46782b-b550-4cfd-9de8-d2c4bf6d78a3
@@ -5971,7 +5971,7 @@ Hierarchy:
                         cuerpo: ref!! 45924755-88b8-40e2-b288-760ab152a8df
                     fb06c492109ce5cf0499d7d8846d1f46: !Terracota.ControladorEstatua,Terracota
                         Id: ef20c350-d691-46ed-a435-eb73c86a8f34
-                        jugador: nada
+                        jugador*: huesped
                         estatua: "chimpancé"
                         cuerpo: ref!! 45924755-88b8-40e2-b288-760ab152a8df
                         cabeza: ref!! 2814a886-a973-477d-b4a9-f07be97665e7
@@ -6370,13 +6370,13 @@ Hierarchy:
                 Components:
                     392ac170602ecc7334f1dfc12f9ed7d3: !TransformComponent
                         Id: c4cea8fd-34a3-4117-9005-45250bef1958
-                        Position: {X: 0.0, Y: 0.0, Z: 21.3}
+                        Position: {X: 0.0, Y: 0.0, Z: 21.4}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     fa9b5c7cc3073381354db58123c39f41: !ModelComponent
                         Id: 79ab8fee-b8c9-44f2-83a3-46114fc0ea65
-                        Model: fa1024de-7206-4892-881b-9afd692c1c8e:Modelos/Entorno/Cilindro
+                        Model: fa1024de-7206-4892-881b-9afd692c1c8e:Modelos/Entorno/Soporte
                         Materials: {}
                     d35b92e1319dda4cbd28b69080d7a4a7: !StaticColliderComponent
                         Id: d515c7e7-84b8-4886-af37-98b80de7eee5
@@ -7439,7 +7439,7 @@ Hierarchy:
                 Components:
                     b2b0bf1d60b3fc31afd4f21fa78fdfaa: !TransformComponent
                         Id: 42eef011-4642-4103-af03-4f917bf27f04
-                        Position*: {X: 0.0, Y: 4.0, Z: 21.0}
+                        Position*: {X: 0.0, Y: 4.0, Z: 21.2}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -7747,13 +7747,13 @@ Hierarchy:
                 Components:
                     392ac170602ecc7334f1dfc12f9ed7d3: !TransformComponent
                         Id: 113316a5-85b1-47cf-aa7a-fe670ecca9f0
-                        Position: {X: 0.0, Y: 0.0, Z: -21.3}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Position: {X: 0.0, Y: 0.0, Z: -21.4}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     fa9b5c7cc3073381354db58123c39f41: !ModelComponent
                         Id: b6cee852-f7ca-455a-958f-183c90e6c647
-                        Model: fa1024de-7206-4892-881b-9afd692c1c8e:Modelos/Entorno/Cilindro
+                        Model: fa1024de-7206-4892-881b-9afd692c1c8e:Modelos/Entorno/Soporte
                         Materials: {}
                     d35b92e1319dda4cbd28b69080d7a4a7: !StaticColliderComponent
                         Id: 6018ea0f-6664-4c75-8f60-6d01762d8952
@@ -8596,7 +8596,7 @@ Hierarchy:
                         cuerpo: ref!! ac6557be-532f-4a1d-904e-e0dd4d691668
                     fb06c492109ce5cf0499d7d8846d1f46: !Terracota.ControladorEstatua,Terracota
                         Id: 9561000b-ffc7-4eb5-b0bb-1cb223fa1726
-                        jugador: nada
+                        jugador*: "anfitrión"
                         estatua: "chimpancé"
                         cuerpo: ref!! ac6557be-532f-4a1d-904e-e0dd4d691668
                         cabeza: ref!! 60fbfaff-258a-4a71-bc79-357d86021f3e
