@@ -66,6 +66,8 @@ Hierarchy:
                     9e4f3d586d651661bc416c7d7505fbd6: !Button ref!! f54d2a57-e4f7-4fab-927c-a34f6107f740
                     206771363d0d25f2f9c37e43d48351c9: !ImageElement ref!! ce1a41f6-7c8b-40f1-9a7f-bc3127154a60
                     94c7813953de9dee968560a35babcaf8: !TextBlock ref!! 08d61025-ced9-4b7e-b0f3-300e87feaa9b
+                    14da9a7d196686a543ee381c0d0edc36: !ImageElement ref!! 305bd277-0bb3-4415-a338-da20c7154d65
+                    5bcbcf3a1c3e8cea514bcafabfbc6332: !ImageElement ref!! 604f1bd5-af84-469d-8d98-0d03f1de104f
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -103,6 +105,20 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
+        -   UIElement: !ImageElement
+                Id: 305bd277-0bb3-4415-a338-da20c7154d65
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                HorizontalAlignment: Left
+                VerticalAlignment: Top
+                Margin: {Left: -5.0, Top: 5.0, Bottom: 5.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Source: !SpriteFromTexture
+                    Texture: ea98b005-6780-4cde-af39-366fda18929d:Texturas/Deco
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 0, B: 0, A: 255}
         -   UIElement: !TextBlock
                 Id: 330167d0-129c-442d-b03f-aa3a66efc5fa
                 DependencyProperties: {}
@@ -198,6 +214,19 @@ Hierarchy:
                 TextSize: 25.0
                 TextColor: {R: 255, G: 255, B: 200, A: 255}
                 TextAlignment: Center
+        -   UIElement: !ImageElement
+                Id: 604f1bd5-af84-469d-8d98-0d03f1de104f
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                HorizontalAlignment: Right
+                Margin: {Left: 5.0, Top: 5.0, Bottom: 5.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Source: !SpriteFromTexture
+                    Texture: ea98b005-6780-4cde-af39-366fda18929d:Texturas/Deco
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 0, B: 0, A: 255}
         -   UIElement: !ImageElement
                 Id: 6ad90abf-3b98-4347-a8d6-e1db3da16533
                 DependencyProperties: {}
