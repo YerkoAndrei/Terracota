@@ -11,9 +11,6 @@ Hierarchy:
         - ref!! 5d48884c-5bdd-4f6b-bd88-41d2e7cd7a77
         - ref!! a3547ccd-2528-4e77-a41e-bf3ac3ce3883
         - ref!! 8515cc8d-8e8b-423a-aa91-0a077d6dc0bc
-        - ref!! 95da2764-160e-4a15-b5b5-f57a93e4c586
-        - ref!! 7406f4d1-681e-485d-bf4d-ee6b49fabcb7
-        - ref!! 257a5c60-bb74-4869-a5f6-fded3ed32398
     Parts:
         -   Folder: null
             Entity:
@@ -263,25 +260,6 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 18203439-b32c-438b-8194-621dbbfe2f79
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 1186da4b-36ea-42d9-87a3-d103b6148788
-                Name: Modelo Cabeza
-                Components:
-                    9ec59b0d37e9cb5593d325e653ddb6cf: !TransformComponent
-                        Id: e5a3b50e-18eb-4b77-a81f-06201db8d98c
-                        Position: {X: 0.0, Y: 0.75, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    e1a4032bfb8ca34a91ef6453f0a94d7d: !ModelComponent
-                        Id: 97b0cd2e-28ff-424c-8719-27052d4682da
-                        Model: "6a0770d0-5e69-4d2c-95e9-aa85a56916ca:Modelos/Estatua/Chimpancé"
-                        Materials: {}
-            Base:
-                BasePartAsset: "46987841-938b-49c8-8290-d86c2f39823c:Prefabs/Estatuas/EstatuaChimpancé"
-                BasePartId: a170b54a-533b-47ce-aa85-56c0b533d9a4
-                InstanceId: 20829c29-5a1f-4ed9-ac27-57db3b69d39f
         -   Entity:
                 Id: 12ccf58e-d7c5-4d14-942f-7fd1857a8548
                 Name: "Bambú 0"
@@ -778,49 +756,6 @@ Hierarchy:
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
-                Id: 229a6806-e633-4674-ab74-2fad237d6313
-                Name: Modelo Estatua
-                Components:
-                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
-                        Id: dc90b094-d702-419d-97c9-3a008fede40c
-                        Position: {X: 0.0, Y: 0.8, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            8b06b5cdb081779064882c7ae991fe6e: ref!! 11c85445-64f3-4195-bf8e-6b8f0c4db2b0
-                            5de0236c8c887a75fff772492bd1d350: ref!! eb336ee3-2d24-48d8-9fcb-aa25a7c52aa5
-                            d22f48e1c3b8bf2a1e04183b56083dfb: ref!! b92d72ea-5739-487d-9642-3df3d9481a40
-                    7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
-                        Id: 87dd2e9e-b181-40b3-bfb3-e3be90358760
-                        Model: 4504bc3d-56bd-4752-af76-a6fb0f75b742:Modelos/Estatua/Estatua
-                        Materials: {}
-                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
-                        Id: 9f530a05-d3eb-4b42-a181-77e194197428
-                        CollisionGroup: CharacterFilter
-                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
-                        CanSleep: false
-                        Restitution: 0.2
-                        Friction: 0.5
-                        RollingFriction: 0.5
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 400.0
-                        LinearDamping: 0.2
-                        AngularDamping: 0.2
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
-                                Shape: "eeb3301f-bea7-42dd-bdf3-71e77515c3b2:Modelos/Estatua/ColliderEstatuaOrangután"
-            Base:
-                BasePartAsset: "99853308-0f4c-476c-9987-ced83d337764:Prefabs/Estatuas/EstatuaOrangután"
-                BasePartId: 0c004198-306f-4150-90e6-66b7d1d84fb9
-                InstanceId: 290878ca-f53c-447c-993e-9c3436510449
-        -   Folder: null
-            Entity:
                 Id: 2335ce12-5d5d-422a-8084-1afa3eb1fe35
                 Name: Modelo Estatua
                 Components:
@@ -899,23 +834,6 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 13aafa7a-82d6-4657-93d6-f746d70ca51f
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Entity:
-                Id: 257a5c60-bb74-4869-a5f6-fded3ed32398
-                Name: Estatua
-                Components:
-                    1ff5b84f1e279da93224f2a5edcc3f59: !TransformComponent
-                        Id: 4bdafc7d-b405-466c-8c13-d5930e422d07
-                        Position*: {X: 2.267375, Y: 0.0, Z: 0.0}
-                        Rotation*: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            b9a6de9d3e362d0511a1a20a34248d55: ref!! dc90b094-d702-419d-97c9-3a008fede40c
-                    fb06c492109ce5cf0499d7d8846d1f46: ~(Deleted)
-                    74bf11dd4dd7e8fa7f6dd5d9df36ec37: ~(Deleted)
-            Base:
-                BasePartAsset: "99853308-0f4c-476c-9987-ced83d337764:Prefabs/Estatuas/EstatuaOrangután"
-                BasePartId: 0c0e383b-802f-490c-bc06-a3870bb14c60
-                InstanceId: 290878ca-f53c-447c-993e-9c3436510449
         -   Entity:
                 Id: 2650a7ac-cf9b-4393-8f68-d2c52fa7bfcf
                 Name: "Bambú 0"
@@ -1163,26 +1081,6 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 37dd6833-f14b-446a-a0b6-701b43e2d396
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 315777c9-5079-4bf6-b8d9-73d0ec628ce0
-                Name: Bandera
-                Components:
-                    c376e76ea8faadeb37730ecff53b7d5c: !TransformComponent
-                        Id: 4eec259c-31a5-41ff-9450-b497120fe7fd
-                        Position: {X: 0.0, Y: 2.7, Z: 0.05}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    fc40e600c10f9b65227ac0f836817c9c: !ModelComponent
-                        Id: 0f03293b-80e9-43cf-812c-a5713e238660
-                        Enabled*: false
-                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Estatua/Bandera
-                        Materials: {}
-            Base:
-                BasePartAsset: "99853308-0f4c-476c-9987-ced83d337764:Prefabs/Estatuas/EstatuaOrangután"
-                BasePartId: 7ce31fe8-63bb-418f-87ed-ecaa5def4152
-                InstanceId: 290878ca-f53c-447c-993e-9c3436510449
         -   Entity:
                 Id: 32335488-55e5-4fd0-930c-280f25e056ca
                 Name: "Bambú 0"
@@ -1523,44 +1421,6 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 803b503f-b985-466b-a4a6-d52d518cd961
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 3c2a694f-4f51-42ad-81ce-0a3386d8f3e5
-                Name: Lanza
-                Components:
-                    aae717941d47dadafb07fc74e51b757a: !TransformComponent
-                        Id: 43d9a2cc-cb4d-4da3-8a38-32c7c6e5f336
-                        Position: {X: -8.0910235E-07, Y: 2.7, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
-                        Children: {}
-                    a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
-                        Id: 11b53f35-c4af-40d7-8442-92446d43a925
-                        CollisionGroup: KinematicFilter
-                        CanCollideWith: StaticFilter
-                        CanSleep: false
-                        Restitution: 10.0
-                        Friction: 0.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 0.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.25
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-            Base:
-                BasePartAsset: "99853308-0f4c-476c-9987-ced83d337764:Prefabs/Estatuas/EstatuaOrangután"
-                BasePartId: 9dbea486-df72-4f5f-8c73-8d8f94983d93
-                InstanceId: 290878ca-f53c-447c-993e-9c3436510449
         -   Folder: null
             Entity:
                 Id: 3ccd7a86-6625-4127-ab49-ddb1b7a96124
@@ -2142,25 +2002,6 @@ Hierarchy:
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
-                Id: 4f2b08d0-079c-4c86-9538-bd9f462340cb
-                Name: Modelo Cabeza
-                Components:
-                    9ec59b0d37e9cb5593d325e653ddb6cf: !TransformComponent
-                        Id: bbfcbbc7-7dec-4575-8b49-fba13bfc2e3a
-                        Position: {X: 0.0, Y: 0.75, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    e1a4032bfb8ca34a91ef6453f0a94d7d: !ModelComponent
-                        Id: af04732d-29d0-4a9e-a619-b97294e6c5a9
-                        Model: 433cc7a7-c2cd-412e-81e0-be82f8bfd718:Modelos/Estatua/Gorila
-                        Materials: {}
-            Base:
-                BasePartAsset: 41ca5cfd-b972-493a-9b64-b3263ab527b6:Prefabs/Estatuas/EstatuaGorila
-                BasePartId: a0f6ce37-957a-4172-8199-cb3b72291cd2
-                InstanceId: cb75a19d-c754-4afb-920b-2fc077733379
-        -   Folder: null
-            Entity:
                 Id: 50e22f47-2492-49b9-99c4-fd32f2c6cd6e
                 Name: "Orquídea 2 3"
                 Components:
@@ -2327,26 +2168,6 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: cc2c98fd-8438-4e13-9aa0-8d48513fc739
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 57f22b6d-92c2-4d4b-8430-2e906d8b6460
-                Name: Bandera
-                Components:
-                    c376e76ea8faadeb37730ecff53b7d5c: !TransformComponent
-                        Id: 254c1afe-efdc-4ace-ae76-346598f46a60
-                        Position: {X: 0.0, Y: 2.7, Z: 0.05}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    fc40e600c10f9b65227ac0f836817c9c: !ModelComponent
-                        Id: 35724daa-dffc-4646-82ae-6fbaffaf5b49
-                        Enabled*: false
-                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Estatua/Bandera
-                        Materials: {}
-            Base:
-                BasePartAsset: "46987841-938b-49c8-8290-d86c2f39823c:Prefabs/Estatuas/EstatuaChimpancé"
-                BasePartId: cb586dab-0cde-419c-aef3-88459750ff5d
-                InstanceId: 20829c29-5a1f-4ed9-ac27-57db3b69d39f
         -   Folder: null
             Entity:
                 Id: 580f6756-a41a-4a36-bf8f-bc089e460060
@@ -3397,23 +3218,6 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: b1e3dd4b-e127-4d5c-91f4-5da6de0221b4
                 InstanceId: ce28e181-3d28-4000-89a6-ae77d7930396
-        -   Entity:
-                Id: 7406f4d1-681e-485d-bf4d-ee6b49fabcb7
-                Name: Estatua
-                Components:
-                    1ff5b84f1e279da93224f2a5edcc3f59: !TransformComponent
-                        Id: 9484a96b-2e64-4d57-8f71-ab5a7cf2cd1b
-                        Position*: {X: 1.2290064, Y: 0.0, Z: 0.0}
-                        Rotation*: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            b9a6de9d3e362d0511a1a20a34248d55: ref!! 764ec03d-f3c7-4b36-957e-3905b18eabfb
-                    fb06c492109ce5cf0499d7d8846d1f46: ~(Deleted)
-                    74bf11dd4dd7e8fa7f6dd5d9df36ec37: ~(Deleted)
-            Base:
-                BasePartAsset: 41ca5cfd-b972-493a-9b64-b3263ab527b6:Prefabs/Estatuas/EstatuaGorila
-                BasePartId: 51df1284-7b19-4d2e-a52c-bb41c9ce1134
-                InstanceId: cb75a19d-c754-4afb-920b-2fc077733379
         -   Folder: null
             Entity:
                 Id: 745541ff-14f7-492f-9511-27608f1cff57
@@ -3738,27 +3542,6 @@ Hierarchy:
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
-                Id: 810b12f4-4554-4849-a3f4-81ebf33a1e3f
-                Name: Modelo Lanza
-                Components:
-                    ce491b1235ced4211f49d26b1c27d42d: !TransformComponent
-                        Id: eb336ee3-2d24-48d8-9fcb-aa25a7c52aa5
-                        Position: {X: 0.0, Y: -0.8, Z: 0.55}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            c1894bf175510506ca6a6e6c5eaa16f6: ref!! 43d9a2cc-cb4d-4da3-8a38-32c7c6e5f336
-                            f6bdf2d1608c4617c3fe43f5da9f487f: ref!! 4eec259c-31a5-41ff-9450-b497120fe7fd
-                    8bb144e93510cbf705d04c9148ca913f: !ModelComponent
-                        Id: 64c3dd6c-16fb-4d2c-96e2-76b0480cb66c
-                        Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Estatua/Lanza
-                        Materials: {}
-            Base:
-                BasePartAsset: "99853308-0f4c-476c-9987-ced83d337764:Prefabs/Estatuas/EstatuaOrangután"
-                BasePartId: 3b7b189d-255e-4d33-add0-0811089f7e05
-                InstanceId: 290878ca-f53c-447c-993e-9c3436510449
-        -   Folder: null
-            Entity:
                 Id: 81402e25-fc25-468f-b098-92c1fa925a46
                 Name: "Bambú 1"
                 Components:
@@ -3776,44 +3559,6 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: be1dd6ef-3a74-417a-9db9-87b9a57ed7d9
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 82808f39-4c89-4264-ab99-a4632b57eb29
-                Name: Lanza
-                Components:
-                    aae717941d47dadafb07fc74e51b757a: !TransformComponent
-                        Id: 23823c0a-3829-44e6-a01a-6ed5f4ba436f
-                        Position: {X: -8.0910235E-07, Y: 2.7, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
-                        Children: {}
-                    a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
-                        Id: 7e929d91-a188-4b17-9a73-a61416d299b1
-                        CollisionGroup: KinematicFilter
-                        CanCollideWith: StaticFilter
-                        CanSleep: false
-                        Restitution: 10.0
-                        Friction: 0.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 0.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.25
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-            Base:
-                BasePartAsset: 41ca5cfd-b972-493a-9b64-b3263ab527b6:Prefabs/Estatuas/EstatuaGorila
-                BasePartId: 5432f79b-f14d-49c9-8f1f-542985ca1a82
-                InstanceId: cb75a19d-c754-4afb-920b-2fc077733379
         -   Folder: null
             Entity:
                 Id: 831ca2b9-d215-4fda-b8bf-e3a305011371
@@ -4157,44 +3902,6 @@ Hierarchy:
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
-                Id: 9141c872-639c-4081-a4d2-439ea2859930
-                Name: Lanza
-                Components:
-                    aae717941d47dadafb07fc74e51b757a: !TransformComponent
-                        Id: 0e1e18ff-e489-45c7-b63c-f95385d84152
-                        Position: {X: -8.0910235E-07, Y: 2.7, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
-                        Children: {}
-                    a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
-                        Id: 598171c1-a64a-47e2-b919-8bc3dcf79b57
-                        CollisionGroup: KinematicFilter
-                        CanCollideWith: StaticFilter
-                        CanSleep: false
-                        Restitution: 10.0
-                        Friction: 0.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 0.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.25
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-            Base:
-                BasePartAsset: "46987841-938b-49c8-8290-d86c2f39823c:Prefabs/Estatuas/EstatuaChimpancé"
-                BasePartId: 4cf140f4-6f8b-4c0f-8e5b-73258c04295f
-                InstanceId: 20829c29-5a1f-4ed9-ac27-57db3b69d39f
-        -   Folder: null
-            Entity:
                 Id: 916ee0ff-81f5-4682-91f4-a043b775a261
                 Name: Crisantemo 2 2
                 Components:
@@ -4304,7 +4011,6 @@ Hierarchy:
                         Children: {}
                     a20ece3741fb41a95529880d36d38bd4: !UIComponent
                         Id: b464d7eb-3179-4f5b-b666-1d009a15c437
-                        Enabled: false
                         Page: "47fe3e54-569f-408c-802d-c1a4227f381c:Interfaces/Menú"
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.28, Y: 0.72, Z: 1.0}
@@ -4328,23 +4034,6 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: f2b48e3a-68ee-4e2c-be7e-b0998925f257
                 InstanceId: ce28e181-3d28-4000-89a6-ae77d7930396
-        -   Entity:
-                Id: 95da2764-160e-4a15-b5b5-f57a93e4c586
-                Name: Estatua
-                Components:
-                    1ff5b84f1e279da93224f2a5edcc3f59: !TransformComponent
-                        Id: 7ae417d8-c168-4cd4-b849-d7679c246a9d
-                        Position*: {X: 0.21864653, Y: 0.0, Z: 0.0}
-                        Rotation*: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            b9a6de9d3e362d0511a1a20a34248d55: ref!! e6aaf84f-eaa8-4b48-aa52-1174fd2cc609
-                    fb06c492109ce5cf0499d7d8846d1f46: ~(Deleted)
-                    74bf11dd4dd7e8fa7f6dd5d9df36ec37: ~(Deleted)
-            Base:
-                BasePartAsset: "46987841-938b-49c8-8290-d86c2f39823c:Prefabs/Estatuas/EstatuaChimpancé"
-                BasePartId: 9d861f93-36c7-4310-835e-2aa46ddd85d4
-                InstanceId: 20829c29-5a1f-4ed9-ac27-57db3b69d39f
         -   Entity:
                 Id: 95e25216-df72-4cb3-afd7-754d3e7c9cc5
                 Name: Bandera
@@ -4396,49 +4085,6 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 8a74a123-8c74-40f4-afbf-e67c1d7e2676
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 9680bfa2-9723-43c4-b340-153349ec8324
-                Name: Modelo Estatua
-                Components:
-                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
-                        Id: e6aaf84f-eaa8-4b48-aa52-1174fd2cc609
-                        Position: {X: 0.0, Y: 0.8, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            8b06b5cdb081779064882c7ae991fe6e: ref!! e5a3b50e-18eb-4b77-a81f-06201db8d98c
-                            5de0236c8c887a75fff772492bd1d350: ref!! 8ee26dcc-4066-43fa-9f33-e3a5d1b37974
-                            d22f48e1c3b8bf2a1e04183b56083dfb: ref!! 3d29d5ab-a352-4a07-84fe-378de7f8ed04
-                    7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
-                        Id: d51accee-568e-49ae-9ed2-82122b67d2a6
-                        Model: 4504bc3d-56bd-4752-af76-a6fb0f75b742:Modelos/Estatua/Estatua
-                        Materials: {}
-                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
-                        Id: a0951b7d-8b26-4df7-96fb-970b3792797e
-                        CollisionGroup: CharacterFilter
-                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
-                        CanSleep: false
-                        Restitution: 0.2
-                        Friction: 0.5
-                        RollingFriction: 0.5
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 400.0
-                        LinearDamping: 0.2
-                        AngularDamping: 0.2
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
-                                Shape: "65af9b85-2cc6-4dcb-9772-d9395b9d5a55:Modelos/Estatua/ColliderEstatuaChimpancé"
-            Base:
-                BasePartAsset: "46987841-938b-49c8-8290-d86c2f39823c:Prefabs/Estatuas/EstatuaChimpancé"
-                BasePartId: 6b85e603-9316-49d9-ae17-4fa5933060a1
-                InstanceId: 20829c29-5a1f-4ed9-ac27-57db3b69d39f
         -   Folder: null
             Entity:
                 Id: 9773ddd9-501f-4f63-ba17-e1e17d05bf32
@@ -4572,27 +4218,6 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: a41f411b-e288-4d5f-be7e-1a15da528b5c
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 9c9dcfbb-1b14-47f2-8139-b2919453f11b
-                Name: Modelo Lanza
-                Components:
-                    ce491b1235ced4211f49d26b1c27d42d: !TransformComponent
-                        Id: 8ee26dcc-4066-43fa-9f33-e3a5d1b37974
-                        Position: {X: 0.0, Y: -0.8, Z: 0.55}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            c1894bf175510506ca6a6e6c5eaa16f6: ref!! 0e1e18ff-e489-45c7-b63c-f95385d84152
-                            f6bdf2d1608c4617c3fe43f5da9f487f: ref!! 254c1afe-efdc-4ace-ae76-346598f46a60
-                    8bb144e93510cbf705d04c9148ca913f: !ModelComponent
-                        Id: 1df4bb0f-4f71-4d38-9fdf-8927b6606abe
-                        Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Estatua/Lanza
-                        Materials: {}
-            Base:
-                BasePartAsset: "46987841-938b-49c8-8290-d86c2f39823c:Prefabs/Estatuas/EstatuaChimpancé"
-                BasePartId: 9c0befe5-6ace-4838-bf09-b29012dfd9e3
-                InstanceId: 20829c29-5a1f-4ed9-ac27-57db3b69d39f
         -   Folder: null
             Entity:
                 Id: 9cd61337-f711-46bd-8424-182fc3b5c2ba
@@ -5204,26 +4829,6 @@ Hierarchy:
                 InstanceId: ce28e181-3d28-4000-89a6-ae77d7930396
         -   Folder: null
             Entity:
-                Id: afbe4ee2-6bcb-46c5-86d0-afce69c05f61
-                Name: Bandera
-                Components:
-                    c376e76ea8faadeb37730ecff53b7d5c: !TransformComponent
-                        Id: cbaa2810-cd9c-4687-a7ba-9bc64876f194
-                        Position: {X: 0.0, Y: 2.7, Z: 0.05}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    fc40e600c10f9b65227ac0f836817c9c: !ModelComponent
-                        Id: 4570b691-9933-460c-b268-f48cf5e9fdcd
-                        Enabled*: false
-                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Estatua/Bandera
-                        Materials: {}
-            Base:
-                BasePartAsset: 41ca5cfd-b972-493a-9b64-b3263ab527b6:Prefabs/Estatuas/EstatuaGorila
-                BasePartId: c53099b9-a2f6-4954-9d1d-2ffc93d63526
-                InstanceId: cb75a19d-c754-4afb-920b-2fc077733379
-        -   Folder: null
-            Entity:
                 Id: b0bf2947-f723-4298-9392-07d9969d5fcb
                 Name: Lanza
                 Components:
@@ -5549,25 +5154,6 @@ Hierarchy:
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
-                Id: ba9185d0-902d-4f10-af34-1f2bea4029f4
-                Name: Modelo Cabeza
-                Components:
-                    9ec59b0d37e9cb5593d325e653ddb6cf: !TransformComponent
-                        Id: 11c85445-64f3-4195-bf8e-6b8f0c4db2b0
-                        Position: {X: 0.0, Y: 0.75, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    e1a4032bfb8ca34a91ef6453f0a94d7d: !ModelComponent
-                        Id: 1bf65389-91aa-4acd-bab7-41b6743ca578
-                        Model: "1a92715b-43de-40d9-abba-9544e886e49d:Modelos/Estatua/Orangután"
-                        Materials: {}
-            Base:
-                BasePartAsset: "99853308-0f4c-476c-9987-ced83d337764:Prefabs/Estatuas/EstatuaOrangután"
-                BasePartId: 195f9ab5-dc59-46e2-b766-1dd4271765e1
-                InstanceId: 290878ca-f53c-447c-993e-9c3436510449
-        -   Folder: null
-            Entity:
                 Id: bacf5918-3c58-4248-8cdf-a35d90a3b889
                 Name: Crisantemo 0 4
                 Components:
@@ -5777,44 +5363,6 @@ Hierarchy:
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
-                Id: c590aeaf-4eb5-4960-ae4b-85323ab3ef90
-                Name: Cabeza
-                Components:
-                    aae717941d47dadafb07fc74e51b757a: !TransformComponent
-                        Id: 3d29d5ab-a352-4a07-84fe-378de7f8ed04
-                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
-                        Children: {}
-                    a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
-                        Id: 7716732f-9996-41e7-8ea9-84e508428201
-                        CollisionGroup: KinematicFilter
-                        CanCollideWith: SensorTrigger
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: true
-                        IsKinematic: true
-                        Mass: 0.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.52
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-            Base:
-                BasePartAsset: "46987841-938b-49c8-8290-d86c2f39823c:Prefabs/Estatuas/EstatuaChimpancé"
-                BasePartId: 28df664e-3580-48dd-8a6a-eccc4f99193e
-                InstanceId: 20829c29-5a1f-4ed9-ac27-57db3b69d39f
-        -   Folder: null
-            Entity:
                 Id: c5e0835c-98c9-4e93-bb23-7d948a3725e7
                 Name: "Bambú 2"
                 Components:
@@ -5988,44 +5536,6 @@ Hierarchy:
                 BasePartAsset: "99853308-0f4c-476c-9987-ced83d337764:Prefabs/Estatuas/EstatuaOrangután"
                 BasePartId: 0c004198-306f-4150-90e6-66b7d1d84fb9
                 InstanceId: e60f1f53-f146-409d-bc10-fa766984333d
-        -   Folder: null
-            Entity:
-                Id: cbeebd44-cf73-43c6-b149-a66ed189cf19
-                Name: Cabeza
-                Components:
-                    aae717941d47dadafb07fc74e51b757a: !TransformComponent
-                        Id: 82a29c3a-85fc-49b0-8db5-e550bbe928b0
-                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
-                        Children: {}
-                    a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
-                        Id: 0bbd7742-ee64-4be5-b913-6ca42dab1aa4
-                        CollisionGroup: KinematicFilter
-                        CanCollideWith: SensorTrigger
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: true
-                        IsKinematic: true
-                        Mass: 0.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.52
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-            Base:
-                BasePartAsset: 41ca5cfd-b972-493a-9b64-b3263ab527b6:Prefabs/Estatuas/EstatuaGorila
-                BasePartId: d66f5386-948d-4010-8348-05a4b4bc87e5
-                InstanceId: cb75a19d-c754-4afb-920b-2fc077733379
         -   Folder: null
             Entity:
                 Id: cc795214-e233-4a22-a6b7-2cd4610a7413
@@ -6296,49 +5806,6 @@ Hierarchy:
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
-                Id: d6601c5f-7404-4faf-9bc9-d117b206c65f
-                Name: Modelo Estatua
-                Components:
-                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
-                        Id: 764ec03d-f3c7-4b36-957e-3905b18eabfb
-                        Position: {X: 0.0, Y: 0.8, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            8b06b5cdb081779064882c7ae991fe6e: ref!! bbfcbbc7-7dec-4575-8b49-fba13bfc2e3a
-                            5de0236c8c887a75fff772492bd1d350: ref!! ae4b56eb-601d-4e10-aaf4-e6f7b6f1c0ac
-                            d22f48e1c3b8bf2a1e04183b56083dfb: ref!! 82a29c3a-85fc-49b0-8db5-e550bbe928b0
-                    7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
-                        Id: f9946b2b-ac9c-4c89-8176-8a498a26090a
-                        Model: 4504bc3d-56bd-4752-af76-a6fb0f75b742:Modelos/Estatua/Estatua
-                        Materials: {}
-                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
-                        Id: 678674e1-732c-445c-b051-9c1daca853fc
-                        CollisionGroup: CharacterFilter
-                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
-                        CanSleep: false
-                        Restitution: 0.2
-                        Friction: 0.5
-                        RollingFriction: 0.5
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 400.0
-                        LinearDamping: 0.2
-                        AngularDamping: 0.2
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
-                                Shape: f0ba97bf-da03-4d07-a592-0e3b91f15abd:Modelos/Estatua/ColliderEstatuaGorila
-            Base:
-                BasePartAsset: 41ca5cfd-b972-493a-9b64-b3263ab527b6:Prefabs/Estatuas/EstatuaGorila
-                BasePartId: ceff8796-3fea-4177-ac4f-41922dae91b4
-                InstanceId: cb75a19d-c754-4afb-920b-2fc077733379
-        -   Folder: null
-            Entity:
                 Id: d6c4ecfd-efe5-4c0f-97c2-8f153c53fba3
                 Name: "Bambú 1"
                 Components:
@@ -6356,44 +5823,6 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: d0380108-61f2-49e5-883a-fa9834b6fe01
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: d8873287-4257-4571-8d9c-0838a2daf4a0
-                Name: Cabeza
-                Components:
-                    aae717941d47dadafb07fc74e51b757a: !TransformComponent
-                        Id: b92d72ea-5739-487d-9642-3df3d9481a40
-                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
-                        Children: {}
-                    a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
-                        Id: bd6e2268-208e-4ca1-b370-5bf8ae3ef072
-                        CollisionGroup: KinematicFilter
-                        CanCollideWith: SensorTrigger
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.0
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: true
-                        IsKinematic: true
-                        Mass: 0.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.52
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-            Base:
-                BasePartAsset: "99853308-0f4c-476c-9987-ced83d337764:Prefabs/Estatuas/EstatuaOrangután"
-                BasePartId: 281741a7-169d-42c1-8d1a-62a599ad755b
-                InstanceId: 290878ca-f53c-447c-993e-9c3436510449
         -   Folder: null
             Entity:
                 Id: d897bbc2-5fb9-48d3-b3c1-18fc85fbf4cb
@@ -7116,27 +6545,6 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: d3d41492-b7b2-4ead-b165-71c663729f07
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: f813333e-3c6c-4378-a6a4-6e7160b89ed2
-                Name: Modelo Lanza
-                Components:
-                    ce491b1235ced4211f49d26b1c27d42d: !TransformComponent
-                        Id: ae4b56eb-601d-4e10-aaf4-e6f7b6f1c0ac
-                        Position: {X: 0.0, Y: -0.8, Z: 0.55}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            c1894bf175510506ca6a6e6c5eaa16f6: ref!! 23823c0a-3829-44e6-a01a-6ed5f4ba436f
-                            f6bdf2d1608c4617c3fe43f5da9f487f: ref!! cbaa2810-cd9c-4687-a7ba-9bc64876f194
-                    8bb144e93510cbf705d04c9148ca913f: !ModelComponent
-                        Id: e5cdd2c9-9505-4bcf-9d98-bbbe916251b6
-                        Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Estatua/Lanza
-                        Materials: {}
-            Base:
-                BasePartAsset: 41ca5cfd-b972-493a-9b64-b3263ab527b6:Prefabs/Estatuas/EstatuaGorila
-                BasePartId: 0f69eb2f-4a98-442a-989e-c83e5aec201b
-                InstanceId: cb75a19d-c754-4afb-920b-2fc077733379
         -   Folder: null
             Entity:
                 Id: f93657c2-b4fa-418c-981b-a3070f48b76b
