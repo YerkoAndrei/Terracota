@@ -340,6 +340,25 @@ Hierarchy:
                 BasePartId: 445be5e6-4595-4385-a0ea-f976289d857c
                 InstanceId: 4d19e7d8-75a7-4e53-82c8-5df2fc9ec627
         -   Entity:
+                Id: 096c1e23-cb5d-48f8-ac99-f79fdd568ef9
+                Name: Bandera
+                Components:
+                    228f32bcc3fb3a06f60a6898f4340451: !TransformComponent
+                        Id: 5e5c485c-494d-4429-9246-f971956a2a82
+                        Position: {X: 0.0, Y: 1.95, Z: 0.15}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d1c41bbd19121ee1576b560d0f0f7993: !ModelComponent
+                        Id: cb23d36e-f00f-4c69-a33c-b39c2faffe0d
+                        Model: d14e2640-00d2-45df-b0d9-a6a05bd3486b:Modelos/Estandarte/Bandera
+                        Materials:
+                            b97241dc069165c8409f3a1bd5299e62~0: 5ddf7ec7-4060-490a-8222-b4d5b2f603d4:Modelos/Estandarte/Materiales/BanderaHuesped
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: 80e42b2a-aa30-4735-915c-10ae2dcaf1bc
+                InstanceId: 0b20dfac-f72d-4089-847e-4db9e05813ca
+        -   Entity:
                 Id: 0a0b0093-7265-4cd5-9958-63f97ed4d868
                 Name: Modelo Cabeza
                 Components:
@@ -472,6 +491,46 @@ Hierarchy:
                 InstanceId: 4d19e7d8-75a7-4e53-82c8-5df2fc9ec627
         -   Folder: null
             Entity:
+                Id: 0ec655b0-d731-477a-b5c9-98db74200646
+                Name: Estandarte (4)
+                Components:
+                    71b24a6b13ea5390b46df08c32749ade: !TransformComponent
+                        Id: 8cdc9dee-37b5-4a95-aad1-737f4e68bb11
+                        Position: {X: 6.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            246ac2863eb689baaf08e5c9a1645114: ref!! 0d8bea26-c5e7-4eb5-96ef-34e21ebc3d4d
+                    eff9d5d82a3130d8c3566888235a3b1d: !ModelComponent
+                        Id: 34eaba84-4b32-41e5-91ad-e52bf8ebbe74
+                        Model: 60bfed58-810f-4797-94a3-76f99c0a87e9:Modelos/Estandarte/Estandarte
+                        Materials: {}
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: e2312019-0c85-4902-a088-deedd46d439d
+                InstanceId: 0b20dfac-f72d-4089-847e-4db9e05813ca
+        -   Folder: null
+            Entity:
+                Id: 10010f11-dd16-4eac-9f9b-4e24ad0b8a56
+                Name: Estandarte (2)
+                Components:
+                    71b24a6b13ea5390b46df08c32749ade: !TransformComponent
+                        Id: beee434b-07c5-4ad8-8ad2-8bdf2d1061d2
+                        Position: {X: -3.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            246ac2863eb689baaf08e5c9a1645114: ref!! 6f401241-8777-4f4e-8726-915ea817c001
+                    eff9d5d82a3130d8c3566888235a3b1d: !ModelComponent
+                        Id: 16785c88-59dc-47e9-a25c-9d8941c2ab22
+                        Model: 60bfed58-810f-4797-94a3-76f99c0a87e9:Modelos/Estandarte/Estandarte
+                        Materials: {}
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: 4a41543e-99be-4dbe-81cd-00804e8deefa
+                InstanceId: 0b20dfac-f72d-4089-847e-4db9e05813ca
+        -   Folder: null
+            Entity:
                 Id: 11731c97-a474-4b4a-8905-09a68527302c
                 Name: Crisantemo 0 9
                 Components:
@@ -584,6 +643,25 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 2cc2d081-71d1-4f34-9e27-b7fee014ef5c
                 InstanceId: 4d19e7d8-75a7-4e53-82c8-5df2fc9ec627
+        -   Entity:
+                Id: 15741b63-9aad-4fd5-a238-82f2c38b0809
+                Name: Bandera
+                Components:
+                    228f32bcc3fb3a06f60a6898f4340451: !TransformComponent
+                        Id: f6aef06b-b80f-4cd1-b021-89a479382e22
+                        Position: {X: 0.0, Y: 1.95, Z: 0.15}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d1c41bbd19121ee1576b560d0f0f7993: !ModelComponent
+                        Id: 6fda5002-bd34-48c3-9489-08be9a085183
+                        Model: d14e2640-00d2-45df-b0d9-a6a05bd3486b:Modelos/Estandarte/Bandera
+                        Materials:
+                            57bade70b5f96a8613643d3139fda528~0: 5ddf7ec7-4060-490a-8222-b4d5b2f603d4:Modelos/Estandarte/Materiales/BanderaHuesped
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: 2d68ac37-e7fe-468c-8a6c-0fe6689f6ab2
+                InstanceId: 0b20dfac-f72d-4089-847e-4db9e05813ca
         -   Entity:
                 Id: 15e0a04c-dd2f-4d8e-b342-77b084c7b9b9
                 Name: "Bambú 0"
@@ -1623,6 +1701,7 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
+                            7b594b753e5e1472630b9472a879c62f: ref!! 4136f1e1-c39f-46fa-a3ca-05ab51677043
                             84740b1bff3c411b34af1ea98099aac8: ref!! e4e0e5ba-22cc-4dc5-b176-bc7b488a3dea
                             108f352a607968ca4ac0193815008379: ref!! 574e0261-5d49-4e35-87cd-a538f66a1d53
                             dd4534c9a527c1e490d5b24a381ba169: ref!! 35c38ac1-cbe4-48d6-b110-68511f0d65a2
@@ -1926,6 +2005,26 @@ Hierarchy:
                 InstanceId: 4d19e7d8-75a7-4e53-82c8-5df2fc9ec627
         -   Folder: null
             Entity:
+                Id: 42632639-abf5-4b00-b91f-fa1acc237ea7
+                Name: Estandarte (5)
+                Components:
+                    71b24a6b13ea5390b46df08c32749ade: !TransformComponent
+                        Id: ffd971f5-3643-4092-b3df-f0c16abfa5c7
+                        Position: {X: 9.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            246ac2863eb689baaf08e5c9a1645114: ref!! f6aef06b-b80f-4cd1-b021-89a479382e22
+                    eff9d5d82a3130d8c3566888235a3b1d: !ModelComponent
+                        Id: ff471da5-5a31-4310-a82d-7e0bbdc003bc
+                        Model: 60bfed58-810f-4797-94a3-76f99c0a87e9:Modelos/Estandarte/Estandarte
+                        Materials: {}
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: 8b1f6ae4-31fb-4fea-a8b0-8dc6e82c27ae
+                InstanceId: 0b20dfac-f72d-4089-847e-4db9e05813ca
+        -   Folder: null
+            Entity:
                 Id: 436bd8e5-4531-4956-9dee-60a4240ea899
                 Name: "Bambú 2"
                 Components:
@@ -2186,6 +2285,25 @@ Hierarchy:
                 BasePartId: df8b3cdb-5c43-4e21-ac20-9274fe64700c
                 InstanceId: 4d19e7d8-75a7-4e53-82c8-5df2fc9ec627
         -   Entity:
+                Id: 5367e007-7480-43fe-95a8-54512501a36c
+                Name: Estandarte (0)
+                Components:
+                    7535ffce3210a312b4943eeac7c25e00: !TransformComponent
+                        Id: 3804e10f-1af8-493f-8b31-73801044b67a
+                        Position: {X: -9.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            36bcfc2fe80391f899c691ff8fb1b07b: ref!! 9bf925eb-f7e4-4825-a683-6889fb6aae0a
+                    2039819f69b403f29aae41a965407195: !ModelComponent
+                        Id: d0680172-d6aa-44e7-94b9-f78bbfb36a16
+                        Model: 60bfed58-810f-4797-94a3-76f99c0a87e9:Modelos/Estandarte/Estandarte
+                        Materials: {}
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: dcfb94dc-9b38-425b-a49b-99037ef13f3f
+                InstanceId: 0b20dfac-f72d-4089-847e-4db9e05813ca
+        -   Entity:
                 Id: 537e23d9-45eb-408a-8422-bab83955c44c
                 Name: "Bambú 0"
                 Components:
@@ -2241,6 +2359,25 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: eb056f7e-a601-4f43-8d37-925abde8b3fb
                 InstanceId: 4d19e7d8-75a7-4e53-82c8-5df2fc9ec627
+        -   Entity:
+                Id: 551944d0-e38e-4612-90cc-39c1bdb141be
+                Name: Bandera
+                Components:
+                    228f32bcc3fb3a06f60a6898f4340451: !TransformComponent
+                        Id: 0d8bea26-c5e7-4eb5-96ef-34e21ebc3d4d
+                        Position: {X: 0.0, Y: 1.95, Z: 0.15}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d1c41bbd19121ee1576b560d0f0f7993: !ModelComponent
+                        Id: 0d77b79d-a5fa-4080-b9ae-26365c45efc3
+                        Model: d14e2640-00d2-45df-b0d9-a6a05bd3486b:Modelos/Estandarte/Bandera
+                        Materials:
+                            57bade70b5f96a8613643d3139fda528~0: 5ddf7ec7-4060-490a-8222-b4d5b2f603d4:Modelos/Estandarte/Materiales/BanderaHuesped
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: 72e2b6f2-5226-4dcd-870b-e7b92ab0961e
+                InstanceId: 0b20dfac-f72d-4089-847e-4db9e05813ca
         -   Entity:
                 Id: 555b6f05-9b07-43aa-8aa4-a20016f1b8ff
                 Name: Crisantemo 0 1
@@ -2754,7 +2891,7 @@ Hierarchy:
                 Components:
                     85cef6dc2fcfe825412540d710aa0cc4: !TransformComponent
                         Id: 557e4834-fb79-4e7e-84e0-bf98a21a9abf
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: -10.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -2805,6 +2942,25 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: f62c90d2-5559-48f1-a7b5-bca854b92f86
                 InstanceId: 4d19e7d8-75a7-4e53-82c8-5df2fc9ec627
+        -   Entity:
+                Id: 6605b97e-a05b-461c-81da-28f9a52de443
+                Name: Estandarte (1)
+                Components:
+                    71b24a6b13ea5390b46df08c32749ade: !TransformComponent
+                        Id: 60733a6c-20d4-4c73-b4ad-10d9c2dda91f
+                        Position: {X: -6.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            246ac2863eb689baaf08e5c9a1645114: ref!! 5e5c485c-494d-4429-9246-f971956a2a82
+                    eff9d5d82a3130d8c3566888235a3b1d: !ModelComponent
+                        Id: 1a1aa8e0-8db9-40f6-96ec-a1917296eec7
+                        Model: 60bfed58-810f-4797-94a3-76f99c0a87e9:Modelos/Estandarte/Estandarte
+                        Materials: {}
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: b9499dac-f163-46de-a0a6-a7c51d1c1b24
+                InstanceId: 0b20dfac-f72d-4089-847e-4db9e05813ca
         -   Entity:
                 Id: 67c7533b-bd98-4ce5-8a26-a95c6ba182d9
                 Name*: Corto_6
@@ -2880,7 +3036,7 @@ Hierarchy:
                         Type: !LightDirectional
                             Color: !ColorRgbProvider
                                 Value: {R: 1.0, G: 1.0, B: 0.9411765}
-                            Shadow:
+                            Shadow: !LightDirectionalShadowMap
                                 Enabled: true
                                 Filter: !LightShadowMapFilterTypePcf {}
                                 Size: XLarge
@@ -3392,6 +3548,25 @@ Hierarchy:
                 BasePartAsset: "445ed196-e62c-451f-b0e1-9cb4bd94572c:Prefabs/Creación/EstatuaCreaciónChimpancé"
                 BasePartId: cbf78534-1d15-40d4-9c68-2e18ecd3a3a1
                 InstanceId: 8030b0d2-ecb9-4363-9a58-8eaf58e21646
+        -   Entity:
+                Id: 7cdb6e46-e4c4-4efe-a369-915cb27d2c44
+                Name: Bandera
+                Components:
+                    228f32bcc3fb3a06f60a6898f4340451: !TransformComponent
+                        Id: 9bf925eb-f7e4-4825-a683-6889fb6aae0a
+                        Position: {X: 0.0, Y: 1.95, Z: 0.15}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d1c41bbd19121ee1576b560d0f0f7993: !ModelComponent
+                        Id: 64ce8007-b42e-4e9b-9b5b-db64eac17d97
+                        Model: d14e2640-00d2-45df-b0d9-a6a05bd3486b:Modelos/Estandarte/Bandera
+                        Materials:
+                            579a429d7925bc7296a56b7da44d6272~0: 5ddf7ec7-4060-490a-8222-b4d5b2f603d4:Modelos/Estandarte/Materiales/BanderaHuesped
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: 632e239c-6388-4671-a6d7-175ce9cef4dc
+                InstanceId: 0b20dfac-f72d-4089-847e-4db9e05813ca
         -   Folder: null
             Entity:
                 Id: 7d01cc8a-44eb-41a7-9bd4-a8cb5b0180c4
@@ -3455,7 +3630,7 @@ Hierarchy:
                 Components:
                     85cef6dc2fcfe825412540d710aa0cc4: !TransformComponent
                         Id: 9af0795d-cc63-489d-a7f4-4c7ca6a9d841
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: -10.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -3914,6 +4089,25 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 43c862d1-34e8-4df4-a7e7-17f1d875c3da
                 InstanceId: 4d19e7d8-75a7-4e53-82c8-5df2fc9ec627
+        -   Entity:
+                Id: 9239e56e-e221-4a25-b6c5-333623b20168
+                Name: Bandera
+                Components:
+                    228f32bcc3fb3a06f60a6898f4340451: !TransformComponent
+                        Id: 6f401241-8777-4f4e-8726-915ea817c001
+                        Position: {X: 0.0, Y: 1.95, Z: 0.15}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d1c41bbd19121ee1576b560d0f0f7993: !ModelComponent
+                        Id: e3259540-9286-4929-883c-131d1685ae79
+                        Model: d14e2640-00d2-45df-b0d9-a6a05bd3486b:Modelos/Estandarte/Bandera
+                        Materials:
+                            c9cb34893b035eb918c1df5ac7bae754~0: 5ddf7ec7-4060-490a-8222-b4d5b2f603d4:Modelos/Estandarte/Materiales/BanderaHuesped
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: 055543b1-edfd-470f-b981-dd0d56265d8f
+                InstanceId: 0b20dfac-f72d-4089-847e-4db9e05813ca
         -   Entity:
                 Id: 93735b7a-7c31-478e-a443-95feb2a525d6
                 Name: "Bambú 0"
@@ -4961,6 +5155,26 @@ Hierarchy:
                 InstanceId: 4d19e7d8-75a7-4e53-82c8-5df2fc9ec627
         -   Folder: null
             Entity:
+                Id: b4212f52-23e0-4aca-8cb6-afa3034be30d
+                Name: Estandarte (3)
+                Components:
+                    71b24a6b13ea5390b46df08c32749ade: !TransformComponent
+                        Id: 0bbb4d9d-d06f-4872-b98c-c1dedbebab8f
+                        Position: {X: 3.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            246ac2863eb689baaf08e5c9a1645114: ref!! 742d9db8-af07-4ba5-af69-b1c9cde4b421
+                    eff9d5d82a3130d8c3566888235a3b1d: !ModelComponent
+                        Id: 046d784d-fad0-4224-903f-33c12e38b8c5
+                        Model: 60bfed58-810f-4797-94a3-76f99c0a87e9:Modelos/Estandarte/Estandarte
+                        Materials: {}
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: ba5f4d87-5c60-4f89-8a14-25a43dddfd1b
+                InstanceId: 0b20dfac-f72d-4089-847e-4db9e05813ca
+        -   Folder: null
+            Entity:
                 Id: b491ffd4-3747-4d44-b3cc-402789645295
                 Name: Crisantemo 0 7
                 Components:
@@ -5453,6 +5667,25 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 79623bfb-2e2f-41b3-b9ba-8cb5b8a6c616
                 InstanceId: 4d19e7d8-75a7-4e53-82c8-5df2fc9ec627
+        -   Entity:
+                Id: c9ccf11d-bfa6-4946-8fec-cb3ada56c172
+                Name: Bandera
+                Components:
+                    228f32bcc3fb3a06f60a6898f4340451: !TransformComponent
+                        Id: 742d9db8-af07-4ba5-af69-b1c9cde4b421
+                        Position: {X: 0.0, Y: 1.95, Z: 0.15}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d1c41bbd19121ee1576b560d0f0f7993: !ModelComponent
+                        Id: cb15823b-4ed6-411b-b4a6-24b8bf579ac8
+                        Model: d14e2640-00d2-45df-b0d9-a6a05bd3486b:Modelos/Estandarte/Bandera
+                        Materials:
+                            57bade70b5f96a8613643d3139fda528~0: 5ddf7ec7-4060-490a-8222-b4d5b2f603d4:Modelos/Estandarte/Materiales/BanderaHuesped
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: 47c8a478-b64b-4339-945c-8b9a2a9ebcb8
+                InstanceId: 0b20dfac-f72d-4089-847e-4db9e05813ca
         -   Folder: null
             Entity:
                 Id: cb765f36-6a6c-4125-8918-75189ab413f8
@@ -6004,6 +6237,27 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: bd7ac38a-3a12-4e67-95b9-80c894f9af02
                 InstanceId: 4d19e7d8-75a7-4e53-82c8-5df2fc9ec627
+        -   Folder: null
+            Entity:
+                Id: e34c07e6-bd2a-47d9-a4aa-e58e1aa12a0b
+                Name: Banderas (Huesped)
+                Components:
+                    1de8d92ccb2039213aef3379983ee1b3: !TransformComponent
+                        Id: 4136f1e1-c39f-46fa-a3ca-05ab51677043
+                        Position: {X: 0.0, Y: 3.0, Z: -23.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            0a68567dbc8e835e73efeaf174478ece: ref!! 3804e10f-1af8-493f-8b31-73801044b67a
+                            77caa84a3d8a566350293b4916f2cd97: ref!! 60733a6c-20d4-4c73-b4ad-10d9c2dda91f
+                            aecd389c7d81e377c0706573c21d328d: ref!! beee434b-07c5-4ad8-8ad2-8bdf2d1061d2
+                            3e48ecb40fea387a9fa78711e502d836: ref!! 0bbb4d9d-d06f-4872-b98c-c1dedbebab8f
+                            417ceea0e18f2b49f946a4fe7648f105: ref!! 8cdc9dee-37b5-4a95-aad1-737f4e68bb11
+                            95d593274e746935f98ee7a2f5c04f8c: ref!! ffd971f5-3643-4092-b3df-f0c16abfa5c7
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: f5522d4e-6db2-479f-b9c8-138f89caf54d
+                InstanceId: 0b20dfac-f72d-4089-847e-4db9e05813ca
         -   Entity:
                 Id: e3783c5c-170a-43aa-a06c-f5fbbc177849
                 Name: "Orquídea 2 2"
