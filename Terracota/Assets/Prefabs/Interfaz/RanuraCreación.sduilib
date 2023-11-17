@@ -17,7 +17,7 @@ Hierarchy:
                 Width: 40.0
                 Height: 40.0
                 HorizontalAlignment: Left
-                Margin: {Left: 60.0}
+                Margin: {Left: 80.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -28,6 +28,23 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
+        -   UIElement: !ImageElement
+                Id: 0a72c475-2c44-4901-aa21-ceec977f5009
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                HorizontalAlignment: Left
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Source: !SpriteFromTexture
+                    Texture: 866d8278-7633-481e-9f57-fc567f503176:Texturas/Interfaz/EsquinaIzquierda
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 0, B: 0, A: 255}
+            Base:
+                BasePartAsset: ec94a22e-f511-4b8e-a71e-bc8c7df21ba9:Prefabs/Interfaz/Botones
+                BasePartId: 5135e116-4a3a-4640-b38b-9af44c38e492
+                InstanceId: 08ff812a-e125-442f-8c25-208801c0cc62
         -   UIElement: !Grid
                 Id: 32d086f5-a905-4423-993f-9b91100884c7
                 DependencyProperties: {}
@@ -45,6 +62,7 @@ Hierarchy:
                     b713325a816a7bb8387d16b065fffafa: !Grid ref!! 42b906d9-93a7-4ae0-bc36-543bfd20eb8e
                     9ca1fdded85b9a01c1b25450ae551daa: !Grid ref!! 04fe1672-22e8-4d6f-b2af-eca62d92190a
                     4acdbf24e8ead51b19636970460faccb: !ImageElement ref!! 86af9c85-ecae-4bb7-8638-058d00a80793
+                    799bfa2f5747900dcfdecf1581fe7ab5: !Grid ref!! f44ec420-e8cc-4f09-8d85-878af294d956
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -55,7 +73,7 @@ Hierarchy:
                 Width: 40.0
                 Height: 40.0
                 HorizontalAlignment: Left
-                Margin: {Left: 10.0, Top: 10.0, Bottom: 10.0}
+                Margin: {Left: 30.0, Top: 10.0, Bottom: 10.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -94,6 +112,24 @@ Hierarchy:
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 0, G: 0, B: 255, A: 255}
                 StretchType: Fill
+        -   UIElement: !ImageElement
+                Id: 6853b3ae-ec13-4844-a4e0-2d280e9bc88e
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                HorizontalAlignment: Center
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Source: !SpriteFromTexture
+                    Texture: "7e1b453f-bdd3-4d5d-8844-601313a775f4:Texturas/Interfaz/BaseBotón"
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 0, B: 0, A: 255}
+                StretchType: Fill
+            Base:
+                BasePartAsset: ec94a22e-f511-4b8e-a71e-bc8c7df21ba9:Prefabs/Interfaz/Botones
+                BasePartId: 80cae4d6-68bf-4f50-82f4-05bcf2f75ce7
+                InstanceId: 08ff812a-e125-442f-8c25-208801c0cc62
         -   UIElement: !Button
                 Id: 7697eacf-06af-4cea-91d0-a7f1c9ea341a
                 DependencyProperties: {}
@@ -121,7 +157,7 @@ Hierarchy:
                 Width: 150.0
                 Height: 100.0
                 HorizontalAlignment: Left
-                Margin: {Left: 110.0}
+                Margin: {Left: 130.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -148,16 +184,32 @@ Hierarchy:
                 Width: 60.0
                 Height: 45.0
                 HorizontalAlignment: Right
-                Margin: {}
+                Margin: {Right: 20.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: txt
-                Text: 00
+                Text: 000
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
                 TextSize: 40.0
                 TextColor: {R: 0, G: 0, B: 0, A: 255}
                 TextAlignment: Center
+        -   UIElement: !Grid
+                Id: f44ec420-e8cc-4f09-8d85-878af294d956
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: Deco
+                Children:
+                    1c482db9e487eabcfafa8de228094ddd: !ImageElement ref!! 6853b3ae-ec13-4844-a4e0-2d280e9bc88e
+                    99b2f9927202752e765e01936deb39aa: !ImageElement ref!! 0a72c475-2c44-4901-aa21-ceec977f5009
+                    5566bcf02628b13fbd4b62cf4b2f7d7d: !ImageElement ref!! fd9a9ade-35ac-4b22-9c68-691ab30fd4c9
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
         -   UIElement: !ImageElement
                 Id: f6509b79-6aaa-41c2-ac55-f2b2257a2dde
                 DependencyProperties: {}
@@ -170,5 +222,22 @@ Hierarchy:
                 Source: !SpriteFromTexture
                     Texture: 66d859f6-5dbf-4782-bf1c-a7fdc0806448:Texturas/Cuadrado
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 255, G: 255, B: 255, A: 255}
+                Color: {R: 240, G: 220, B: 200, A: 240}
                 StretchType: Fill
+        -   UIElement: !ImageElement
+                Id: fd9a9ade-35ac-4b22-9c68-691ab30fd4c9
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                HorizontalAlignment: Right
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Source: !SpriteFromTexture
+                    Texture: fa2fa398-4898-4c4b-8568-a4ca9eb60567:Texturas/Interfaz/EsquinaDerecha
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 0, B: 0, A: 255}
+            Base:
+                BasePartAsset: ec94a22e-f511-4b8e-a71e-bc8c7df21ba9:Prefabs/Interfaz/Botones
+                BasePartId: e0335d05-ef36-4ac9-be60-6ba8b4da63e9
+                InstanceId: 08ff812a-e125-442f-8c25-208801c0cc62
