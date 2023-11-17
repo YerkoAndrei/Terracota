@@ -10,8 +10,8 @@ public static class Constantes
 
     // Color botones
     public static Color colorNormal = new Color(255, 255, 255, 255);
-    public static Color colorEnCursor = new Color(200, 200, 200, 255);
-    public static Color colorEnClic = new Color(155, 155, 155, 255);
+    public static Color colorEnCursor = new Color(200, 200, 200, 250);
+    public static Color colorEnClic = new Color(155, 155, 155, 250);
     public static Color colorBloqueado = new Color(155, 155, 155, 155);
 
     public enum Escenas

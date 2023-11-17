@@ -47,27 +47,28 @@ public static class Sistema
 
         // En clic
         botón.Click += (s, a) => { action.Invoke(); };
-        
+
         // Cambios color
+        var colorBase = imagen.Color;
         botón.MouseOverStateChanged += (s, a) =>
         {
             switch (a.NewValue)
             {
                 case MouseOverState.MouseOverElement:
-                    imagen.Color = colorEnCursor;
+                    imagen.Color = colorBase * colorEnCursor;
                     break;
                 case MouseOverState.MouseOverNone:
-                    imagen.Color = colorNormal;
+                    imagen.Color = colorBase * colorNormal;
                     break;
             }
         };
         botón.TouchDown += (s, a) =>
         {
-            imagen.Color = colorEnClic;
+            imagen.Color = colorBase * colorEnClic;
         };
         botón.TouchUp += (s, a) =>
         {
-            imagen.Color = colorEnCursor;
+            imagen.Color = colorBase * colorEnCursor;
         };
     }
 
