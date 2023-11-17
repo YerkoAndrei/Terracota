@@ -53,7 +53,8 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            1bef98566e7a8897d1fc5f9ff4e57932: ref!! 96a15e80-84ae-4976-afc5-ced496c86be4
+                            c6ac971935ebfd383170ffebc156890a: ref!! 96a15e80-84ae-4976-afc5-ced496c86be4
+                            3b68fd112d901b02aded5254aef10dd7: ref!! 36877705-c69f-4fb9-ac92-ddae85f0b2ed
                             ff2bff364f6f466fdc2497f5fff7dd71: ref!! eb8d7753-d5b9-42c4-b950-9a5d86e134e8
                     f180b8d4bd2ff5fd2e4f4f0698b689db: !Terracota.ElementoCreaci%25C3%25B3n,Terracota
                         Id: 35e83587-7000-4841-baa2-528df6fc890d
@@ -127,6 +128,26 @@ Hierarchy:
                 BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
                 BasePartId: bd525eef-c098-4376-a5c2-0e64059fab3a
                 InstanceId: b98d104d-61c8-4c84-bd52-341ec024bec4
+        -   Entity:
+                Id: 95979756-c56a-40ea-a135-0e51d4352221
+                Name: Deco
+                Components:
+                    e5de3f1121044d7e2df40f62b620544e: !TransformComponent
+                        Id: 36877705-c69f-4fb9-ac92-ddae85f0b2ed
+                        Position: {X: 0.0, Y: 0.002, Z: 0.1}
+                        Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 0.293, Y: 0.293, Z: 1.0}
+                        Children: {}
+                    c4f31429f5bbc00ddbd41a8fb5e55987: !SpriteComponent
+                        Id: ca249843-b7b5-4fc4-9dc0-1883e09f1c92
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: bb0de3de-51f5-4f2c-a029-09d6bfbc6b81:Sprites/SpriteDeco
+                        Color: {R: 1.0, G: 0.0, B: 0.0, A: 1.0}
+                        PremultipliedAlpha: false
+            Base:
+                BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
+                BasePartId: 7255adc5-5755-4df8-a989-1ef77344b67b
+                InstanceId: b98d104d-61c8-4c84-bd52-341ec024bec4
         -   Folder: null
             Entity:
                 Id: 98c42d7a-befc-4fbe-9709-b3137ba63c1b
@@ -154,14 +175,15 @@ Hierarchy:
                         Id: 96a15e80-84ae-4976-afc5-ced496c86be4
                         Position: {X: 0.0, Y: 0.001, Z: 0.1}
                         Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 0.293, Y: 0.293, Z: 1.0}
+                        Scale: {X: 0.14, Y: 0.14, Z: 1.0}
                         Children: {}
                     c4f31429f5bbc00ddbd41a8fb5e55987: !SpriteComponent
                         Id: c8a13e6c-c06f-427f-ab01-e975b53e85bd
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: bb0de3de-51f5-4f2c-a029-09d6bfbc6b81:Sprites/SpriteDeco
-                        Color: {R: 1.0, G: 0.0, B: 0.0, A: 1.0}
+                            Sheet: 662e9a78-b82a-4336-a0d7-744bcc48de5a:Sprites/SpriteCuadrado
+                        Color: {R: 0.0, G: 1.0, B: 0.0, A: 0.78431374}
                         PremultipliedAlpha: false
+                        BlendMode: AlphaBlend
             Base:
                 BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
                 BasePartId: f01dcc8c-5b11-4dcc-a120-7cbeb0706426

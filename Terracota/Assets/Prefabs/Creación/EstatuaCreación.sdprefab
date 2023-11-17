@@ -16,7 +16,8 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            1bef98566e7a8897d1fc5f9ff4e57932: ref!! 70b1a91b-6287-4cb3-afe9-1bfd18eb9984
+                            bfad568dabe50bb43ec5e048f31ca790: ref!! 70b1a91b-6287-4cb3-afe9-1bfd18eb9984
+                            7965260b48c46a99367fa66e7326a221: ref!! 71f92290-942a-4545-91e2-f1a2deb17a33
                             ff2bff364f6f466fdc2497f5fff7dd71: ref!! 40d01a10-7ead-4675-98ce-890d4edc07dc
                     f180b8d4bd2ff5fd2e4f4f0698b689db: !Terracota.ElementoCreaci%25C3%25B3n,Terracota
                         Id: 4d68357d-9889-4a82-b255-f70823809275
@@ -56,6 +57,22 @@ Hierarchy:
                                 Size: {X: 1.5, Y: 2.0, Z: 1.5}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.1}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: 7255adc5-5755-4df8-a989-1ef77344b67b
+                Name: Deco
+                Components:
+                    e5de3f1121044d7e2df40f62b620544e: !TransformComponent
+                        Id: 71f92290-942a-4545-91e2-f1a2deb17a33
+                        Position: {X: 0.0, Y: 0.002, Z: 0.1}
+                        Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 0.293, Y: 0.293, Z: 1.0}
+                        Children: {}
+                    c4f31429f5bbc00ddbd41a8fb5e55987: !SpriteComponent
+                        Id: 4705e5df-9267-4448-926e-1cc3bc4184ca
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: bb0de3de-51f5-4f2c-a029-09d6bfbc6b81:Sprites/SpriteDeco
+                        Color: {R: 1.0, G: 0.0, B: 0.0, A: 1.0}
+                        PremultipliedAlpha: false
         -   Folder: null
             Entity:
                 Id: 731c6ee1-4c72-463b-acc7-c905ea289509
@@ -134,11 +151,12 @@ Hierarchy:
                         Id: 70b1a91b-6287-4cb3-afe9-1bfd18eb9984
                         Position: {X: 0.0, Y: 0.001, Z: 0.1}
                         Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 0.293, Y: 0.293, Z: 1.0}
+                        Scale: {X: 0.14, Y: 0.14, Z: 1.0}
                         Children: {}
                     c4f31429f5bbc00ddbd41a8fb5e55987: !SpriteComponent
                         Id: d4cc5b8f-fc33-4d7e-ab33-320357b39e2a
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: bb0de3de-51f5-4f2c-a029-09d6bfbc6b81:Sprites/SpriteDeco
-                        Color: {R: 1.0, G: 0.0, B: 0.0, A: 1.0}
+                            Sheet: 662e9a78-b82a-4336-a0d7-744bcc48de5a:Sprites/SpriteCuadrado
+                        Color: {R: 0.0, G: 1.0, B: 0.0, A: 0.78431374}
                         PremultipliedAlpha: false
+                        BlendMode: AlphaBlend
