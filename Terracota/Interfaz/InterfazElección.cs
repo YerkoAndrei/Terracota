@@ -24,6 +24,9 @@ public class InterfazElección : StartupScript
     private Grid fondoIzquierda;
     private Grid fondoDerecha;
 
+    private ScrollViewer visorIzquierda;
+    private ScrollViewer visorDerecha;
+
     private bool izquierdaSeleccionada;
     private bool derechaSeleccionada;
 
@@ -44,6 +47,10 @@ public class InterfazElección : StartupScript
         fondoIzquierda = página.FindVisualChildOfType<Grid>("FondoIzquierda");
         fondoDerecha = página.FindVisualChildOfType<Grid>("FondoDerecha");
 
+        visorIzquierda = página.FindVisualChildOfType<ScrollViewer>("VisorRanurasIzquierda");
+        visorDerecha = página.FindVisualChildOfType<ScrollViewer>("VisorRanurasDerecha");
+
+        gridRuleta.Visibility = Visibility.Hidden;
         fondoIzquierda.Opacity = 0;
         fondoDerecha.Opacity = 0;
 
@@ -84,9 +91,8 @@ public class InterfazElección : StartupScript
 
     private void EnClicVolver()
     {
-        if (esperandoRuleta)
-            return;
-
+        esperandoRuleta = false;
+        gridRuleta.Visibility = Visibility.Hidden;
         SistemaEscenas.CambiarEscena(Escenas.menú);
     }
 
@@ -119,6 +125,9 @@ public class InterfazElección : StartupScript
         esperandoRuleta = true;
         gridRuleta.Visibility = Visibility.Visible;
 
+        visorIzquierda.Visibility = Visibility.Hidden;
+        visorDerecha.Visibility = Visibility.Hidden;
+
         var aleatorio = (int)RangoAleatorio(40, 48);
         await MoverRuleta(aleatorio);
         controladorPartida.ComenzarPartida(ganaIzquierda);
@@ -130,7 +139,7 @@ public class InterfazElección : StartupScript
         int ruletaActual = 0;
         int delay = 60;
 
-        while (toqueActual < toques)
+        while (toqueActual < toques && esperandoRuleta)
         {
             toqueActual++;
             ruletaActual++;
@@ -157,9 +166,6 @@ public class InterfazElección : StartupScript
         if (ganaIzquierda)
         {
             // Gana izquierda
-            txtIzquierda.TextSize = 100;
-            txtDerecha.TextSize = 30;
-
             txtIzquierda.TextColor = Color.White;
             txtDerecha.TextColor = Color.Red;
 
@@ -169,9 +175,6 @@ public class InterfazElección : StartupScript
         else
         {
             // Gana derecha
-            txtIzquierda.TextSize = 30;
-            txtDerecha.TextSize = 100;
-
             txtIzquierda.TextColor = Color.Red;
             txtDerecha.TextColor = Color.White;
 
