@@ -497,6 +497,25 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 1fb08753-70ad-4ec7-b0a1-e17276cf1817
                 InstanceId: a5ce5142-0667-4fef-b8b0-cfc7c94f2025
+        -   Entity:
+                Id: 0ad6c8fa-1c65-44b4-a38d-82f566f60a23
+                Name: Logo
+                Components:
+                    58de12e8a8c1f82ba7b3cebbead9ab6a: !TransformComponent
+                        Id: 5a53ebde-6300-4500-b3f1-9c45e84e34e0
+                        Position: {X: 0.0, Y: 1.4, Z: 0.17}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 1.0}
+                        Children: {}
+                    427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
+                        Id: 90480d3a-205f-444f-b610-2ac3d940e298
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 5b4b3a2d-6278-4802-a035-c825c6d80641:Sprites/LogoHuesped
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Base:
+                BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
+                BasePartId: ba234f4e-05d8-486c-b416-3448d88a1e28
+                InstanceId: 4180dfb2-b204-43ee-a6d7-042dab3df14c
         -   Folder: null
             Entity:
                 Id: 0afc4b61-e436-4a7c-b753-b41bdc8be345
@@ -901,6 +920,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             36bcfc2fe80391f899c691ff8fb1b07b: ref!! a2f1a5a2-c2ab-4137-83df-4800b5b420e2
+                            479c5bba0437f703cb63ab4b7c64334e: ref!! e97b3399-03e1-4063-a8c3-86d2905977b7
                     2039819f69b403f29aae41a965407195: !ModelComponent
                         Id: 22a83deb-fd78-4f58-b07a-5900a3fd1427
                         Model: 60bfed58-810f-4797-94a3-76f99c0a87e9:Modelos/Estandarte/Estandarte
@@ -986,6 +1006,25 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 8be65bbb-fb13-45ae-816b-918a48f1da9c
                 InstanceId: a5ce5142-0667-4fef-b8b0-cfc7c94f2025
+        -   Entity:
+                Id: 177ba3ac-5444-488d-9890-c7597bcbbdf3
+                Name: Logo
+                Components:
+                    58de12e8a8c1f82ba7b3cebbead9ab6a: !TransformComponent
+                        Id: c3bf1f0e-9879-476f-82e2-13cd5521ffad
+                        Position: {X: 0.0, Y: 1.4, Z: 0.17}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 1.0}
+                        Children: {}
+                    427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
+                        Id: 50d54667-8552-4834-be2c-9d3947c587be
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 5b4b3a2d-6278-4802-a035-c825c6d80641:Sprites/LogoHuesped
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Base:
+                BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
+                BasePartId: 012f43df-6cb3-4551-a847-291894047d66
+                InstanceId: 4180dfb2-b204-43ee-a6d7-042dab3df14c
         -   Folder: null
             Entity:
                 Id: 17c2ee2c-459a-4a56-9377-df55c030279e
@@ -1394,6 +1433,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             246ac2863eb689baaf08e5c9a1645114: ref!! a30c45ca-048d-4e61-a48f-32eb407a309a
+                            100f0990fbd67a8820ca095c3403afc7: ref!! 5a53ebde-6300-4500-b3f1-9c45e84e34e0
                     eff9d5d82a3130d8c3566888235a3b1d: !ModelComponent
                         Id: 1f754a25-900d-4c36-9177-13c21e15f1a7
                         Model: 60bfed58-810f-4797-94a3-76f99c0a87e9:Modelos/Estandarte/Estandarte
@@ -1470,6 +1510,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             246ac2863eb689baaf08e5c9a1645114: ref!! c72c8f7a-1bbc-4f58-89bd-740e5c417704
+                            c36b1d49c9f4f8af95e299303997a595: ref!! c3bf1f0e-9879-476f-82e2-13cd5521ffad
                     eff9d5d82a3130d8c3566888235a3b1d: !ModelComponent
                         Id: a98f8865-0cb8-4a59-8abe-a33b9ebc5759
                         Model: 60bfed58-810f-4797-94a3-76f99c0a87e9:Modelos/Estandarte/Estandarte
@@ -1601,6 +1642,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             36bcfc2fe80391f899c691ff8fb1b07b: ref!! 847458f2-7768-496e-bcb5-07759b105e7f
+                            f006664f03180037e07c83ea5da64fa3: ref!! 0dc7fb7c-94bf-485f-bc66-002245260d06
                     2039819f69b403f29aae41a965407195: !ModelComponent
                         Id: 58f974f3-30ee-4b1e-ac22-c03fa380a915
                         Model: 60bfed58-810f-4797-94a3-76f99c0a87e9:Modelos/Estandarte/Estandarte
@@ -2085,6 +2127,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             246ac2863eb689baaf08e5c9a1645114: ref!! e1df1ec4-f16a-4158-ae19-6912793cbe90
+                            617f67a3ffdaafef9bd1abba901c9dd4: ref!! 22523d7c-3af4-436c-8d99-c09bbd36ba56
                     eff9d5d82a3130d8c3566888235a3b1d: !ModelComponent
                         Id: afa06fcf-4290-4910-a94b-125fee8d260b
                         Model: 60bfed58-810f-4797-94a3-76f99c0a87e9:Modelos/Estandarte/Estandarte
@@ -2169,6 +2212,25 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 564ec326-a3ea-4b5c-b7fc-03f385b0c8e9
                 InstanceId: 5db0cc0d-4462-4c3b-a06b-e1c728e4f9df
+        -   Entity:
+                Id: 3870523e-0524-4977-8006-140b1b281d5a
+                Name: Logo
+                Components:
+                    58de12e8a8c1f82ba7b3cebbead9ab6a: !TransformComponent
+                        Id: 22523d7c-3af4-436c-8d99-c09bbd36ba56
+                        Position: {X: 0.0, Y: 1.4, Z: 0.17}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 1.0}
+                        Children: {}
+                    427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
+                        Id: 90f4b549-a604-4311-8597-2cfb9e634c5b
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 5b4b3a2d-6278-4802-a035-c825c6d80641:Sprites/LogoHuesped
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: 2a288ad8-738d-4a82-bec1-0921889f1fd0
+                InstanceId: 542d16e6-720c-418e-831b-de378013b2ab
         -   Folder: null
             Entity:
                 Id: 39cd3130-0f91-4ceb-abd6-63d394492439
@@ -2835,6 +2897,25 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: eb056f7e-a601-4f43-8d37-925abde8b3fb
                 InstanceId: 5db0cc0d-4462-4c3b-a06b-e1c728e4f9df
+        -   Entity:
+                Id: 4db4034a-dc01-4d19-ac40-c1f8c7ccb068
+                Name: Logo
+                Components:
+                    58de12e8a8c1f82ba7b3cebbead9ab6a: !TransformComponent
+                        Id: 6a063132-ddc7-4bdf-a63b-c5b0054509c3
+                        Position: {X: 0.0, Y: 1.4, Z: 0.17}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 1.0}
+                        Children: {}
+                    427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
+                        Id: 4c7cbf20-d1b1-4fb0-a6c5-1c4a364ae9e3
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: "5d7b42d2-7282-490c-9969-b68306267129:Sprites/LogoAnfitrión"
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Base:
+                BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
+                BasePartId: 99b37088-760c-4970-92ca-9c6e3376c46e
+                InstanceId: 4180dfb2-b204-43ee-a6d7-042dab3df14c
         -   Folder: null
             Entity:
                 Id: 4eb50878-2afb-40e8-9756-bfcdddab57d8
@@ -3430,6 +3511,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             246ac2863eb689baaf08e5c9a1645114: ref!! 759fe4d9-8646-4fdd-91d5-7d8de11380f9
+                            3893560aea8f0e177838d6cbc4356d9f: ref!! ebd3c291-e6ae-47f6-a27a-a56190cceb25
                     eff9d5d82a3130d8c3566888235a3b1d: !ModelComponent
                         Id: cad12731-4b77-4588-a5cf-220e51a858b9
                         Model: 60bfed58-810f-4797-94a3-76f99c0a87e9:Modelos/Estandarte/Estandarte
@@ -3513,6 +3595,25 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: a12a748e-994a-4612-a4d0-c2a147aec0f9
                 InstanceId: 5db0cc0d-4462-4c3b-a06b-e1c728e4f9df
+        -   Entity:
+                Id: 60c9e15f-b136-4864-9ca7-45eb1c40f340
+                Name: Logo
+                Components:
+                    58de12e8a8c1f82ba7b3cebbead9ab6a: !TransformComponent
+                        Id: 2f490209-d0f7-4253-aad7-56b6747378ae
+                        Position: {X: 0.0, Y: 1.4, Z: 0.17}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 1.0}
+                        Children: {}
+                    427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
+                        Id: 98b0898d-46ed-4888-8e8e-1a092b7d99e6
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: "5d7b42d2-7282-490c-9969-b68306267129:Sprites/LogoAnfitrión"
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Base:
+                BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
+                BasePartId: dd4be522-07ea-48aa-bbdc-47ca10b6ae52
+                InstanceId: 4180dfb2-b204-43ee-a6d7-042dab3df14c
         -   Folder: null
             Entity:
                 Id: 60cee69b-8133-4568-9c52-e77d4a880a41
@@ -3784,6 +3885,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             246ac2863eb689baaf08e5c9a1645114: ref!! 1ddcf90c-20ce-4f1d-b1af-71c62d4b1c70
+                            3b083a8be80dda4347e6040e337728b9: ref!! 2f490209-d0f7-4253-aad7-56b6747378ae
                     eff9d5d82a3130d8c3566888235a3b1d: !ModelComponent
                         Id: 097d168a-b46b-476c-a796-979e10f6b3f4
                         Model: 60bfed58-810f-4797-94a3-76f99c0a87e9:Modelos/Estandarte/Estandarte
@@ -3830,6 +3932,25 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 74fb447b-350f-4d49-bca6-2727fabc9d9f
                 InstanceId: a5ce5142-0667-4fef-b8b0-cfc7c94f2025
+        -   Entity:
+                Id: 69fa9497-63bf-4ebe-b214-6cfbc67ddba4
+                Name: Logo
+                Components:
+                    58de12e8a8c1f82ba7b3cebbead9ab6a: !TransformComponent
+                        Id: 0dc7fb7c-94bf-485f-bc66-002245260d06
+                        Position: {X: 0.0, Y: 1.4, Z: 0.17}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 1.0}
+                        Children: {}
+                    427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
+                        Id: 85d3dd9a-305a-44e8-b9ee-d01942c8c10f
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: "5d7b42d2-7282-490c-9969-b68306267129:Sprites/LogoAnfitrión"
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Base:
+                BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
+                BasePartId: c4ef5670-babe-4b75-824d-acc6d0f1371d
+                InstanceId: 4180dfb2-b204-43ee-a6d7-042dab3df14c
         -   Folder: null
             Entity:
                 Id: 6a3d1cbf-2ed2-4e9b-a32a-053cf2375c34
@@ -3961,6 +4082,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             36bcfc2fe80391f899c691ff8fb1b07b: ref!! 34b66d0a-30e2-431a-856e-238cc94c7e05
+                            c20be03fd8acb8d62b71bcaee11b63da: ref!! 2bd3d26a-205f-44a2-b4d7-37509c06daad
                     2039819f69b403f29aae41a965407195: !ModelComponent
                         Id: 24cd5479-3c1f-466a-a1c6-e46f11a32f65
                         Model: 60bfed58-810f-4797-94a3-76f99c0a87e9:Modelos/Estandarte/Estandarte
@@ -4229,6 +4351,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             246ac2863eb689baaf08e5c9a1645114: ref!! d723c4f9-0c6c-4ed9-a944-348153d60583
+                            284e086fac80a996902ee0462015dd39: ref!! 061c3022-95b7-4e7d-a970-6532cdb880d0
                     eff9d5d82a3130d8c3566888235a3b1d: !ModelComponent
                         Id: 149f56fb-4dc5-405a-8b86-3396a392456f
                         Model: 60bfed58-810f-4797-94a3-76f99c0a87e9:Modelos/Estandarte/Estandarte
@@ -4237,6 +4360,25 @@ Hierarchy:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
                 BasePartId: b9499dac-f163-46de-a0a6-a7c51d1c1b24
                 InstanceId: 542d16e6-720c-418e-831b-de378013b2ab
+        -   Entity:
+                Id: 76a31fd2-89d9-47ff-b896-98f2b029fa15
+                Name: Logo
+                Components:
+                    58de12e8a8c1f82ba7b3cebbead9ab6a: !TransformComponent
+                        Id: e97b3399-03e1-4063-a8c3-86d2905977b7
+                        Position: {X: 0.0, Y: 1.4, Z: 0.17}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 1.0}
+                        Children: {}
+                    427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
+                        Id: b7eafad5-12f6-49c0-87f3-b8a39a3e1bfa
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 5b4b3a2d-6278-4802-a035-c825c6d80641:Sprites/LogoHuesped
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Base:
+                BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
+                BasePartId: 5dc56436-ba66-4194-8efa-2d7391049727
+                InstanceId: 4180dfb2-b204-43ee-a6d7-042dab3df14c
         -   Folder: null
             Entity:
                 Id: 78b06abf-a9dc-46b3-ab6f-88358f7dbc81
@@ -4249,6 +4391,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             246ac2863eb689baaf08e5c9a1645114: ref!! 608f3003-5fb3-45f7-aca8-079ce1d39a58
+                            3d278c0d5e495e8ec1dd2448c9359293: ref!! 0bfb0dbe-6827-487e-9db3-7f2eaa32fac5
                     eff9d5d82a3130d8c3566888235a3b1d: !ModelComponent
                         Id: c89b8412-387d-4fc2-95c7-e8ac0de614da
                         Model: 60bfed58-810f-4797-94a3-76f99c0a87e9:Modelos/Estandarte/Estandarte
@@ -4371,6 +4514,25 @@ Hierarchy:
                 BasePartId: 44e680a7-1c38-4b06-8fca-f57980c6ea8e
                 InstanceId: a5ce5142-0667-4fef-b8b0-cfc7c94f2025
         -   Entity:
+                Id: 7abf4e31-a3e0-486b-a587-63865769cefa
+                Name: Logo
+                Components:
+                    58de12e8a8c1f82ba7b3cebbead9ab6a: !TransformComponent
+                        Id: ab1ece9c-4e37-4e3c-960e-bdcd004fb0c2
+                        Position: {X: 0.0, Y: 1.4, Z: 0.17}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 1.0}
+                        Children: {}
+                    427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
+                        Id: 5bf25374-a17a-4644-a7a2-55c7b1eaae41
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: "5d7b42d2-7282-490c-9969-b68306267129:Sprites/LogoAnfitrión"
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Base:
+                BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
+                BasePartId: c8388db7-cf23-492e-9ed7-7e346a8aee0a
+                InstanceId: 4180dfb2-b204-43ee-a6d7-042dab3df14c
+        -   Entity:
                 Id: 7b576aaf-e6d0-47d8-8e04-44ec5836cd41
                 Name: Paisaje
                 Components:
@@ -4466,6 +4628,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             246ac2863eb689baaf08e5c9a1645114: ref!! 7798d2d8-bdb6-447d-be08-7337e0b57323
+                            dcbd820876de37e1f5df8dcdfdb7b13a: ref!! e52c74ac-5995-4b17-a6fb-2c8392b8d939
                     eff9d5d82a3130d8c3566888235a3b1d: !ModelComponent
                         Id: 92393bd3-bdf3-4501-8732-e27d17390b25
                         Model: 60bfed58-810f-4797-94a3-76f99c0a87e9:Modelos/Estandarte/Estandarte
@@ -4626,6 +4789,25 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: af612f0d-4347-4de6-89dd-450d3297a97f
                 InstanceId: 5db0cc0d-4462-4c3b-a06b-e1c728e4f9df
+        -   Entity:
+                Id: 810c70ce-45c4-46aa-84ac-0bd75944392e
+                Name: Logo
+                Components:
+                    58de12e8a8c1f82ba7b3cebbead9ab6a: !TransformComponent
+                        Id: 061c3022-95b7-4e7d-a970-6532cdb880d0
+                        Position: {X: 0.0, Y: 1.4, Z: 0.17}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 1.0}
+                        Children: {}
+                    427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
+                        Id: aafb600d-8197-43f4-b866-e1fbbdb5639b
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 5b4b3a2d-6278-4802-a035-c825c6d80641:Sprites/LogoHuesped
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: 38bf789e-b8b0-42c3-8d74-196b118107b0
+                InstanceId: 542d16e6-720c-418e-831b-de378013b2ab
         -   Folder: null
             Entity:
                 Id: 821b0b71-ae5d-4899-9d0b-050e06a30005
@@ -5184,6 +5366,25 @@ Hierarchy:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
                 BasePartId: ba62acbb-daed-4df6-bf4e-99ec214eed87
                 InstanceId: 4180dfb2-b204-43ee-a6d7-042dab3df14c
+        -   Entity:
+                Id: 910c46ee-f9d5-4674-bbd0-eccc034a9ba1
+                Name: Logo
+                Components:
+                    58de12e8a8c1f82ba7b3cebbead9ab6a: !TransformComponent
+                        Id: a9f2aff1-a10d-4f25-988e-b7153bea2287
+                        Position: {X: 0.0, Y: 1.4, Z: 0.17}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 1.0}
+                        Children: {}
+                    427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
+                        Id: b313e678-a551-4cb4-a340-1656a27e2ec1
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: "5d7b42d2-7282-490c-9969-b68306267129:Sprites/LogoAnfitrión"
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Base:
+                BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
+                BasePartId: d4f6e3c4-44f1-4db8-9cc9-8ae265f7bf2f
+                InstanceId: 4180dfb2-b204-43ee-a6d7-042dab3df14c
         -   Folder: null
             Entity:
                 Id: 927653da-24b3-4516-9718-af15f71537fa
@@ -5203,6 +5404,25 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: 7e222b09-5877-449d-a77d-140653edf2e7
                 InstanceId: 72952ed6-a3df-48ba-bebc-63c28a5ed472
+        -   Entity:
+                Id: 928e7cc0-2276-4a56-8ef5-83faff0f9cdb
+                Name: Logo
+                Components:
+                    58de12e8a8c1f82ba7b3cebbead9ab6a: !TransformComponent
+                        Id: 157bdd26-ebc3-4a7e-ba60-117089d0ff84
+                        Position: {X: 0.0, Y: 1.4, Z: 0.17}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 1.0}
+                        Children: {}
+                    427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
+                        Id: 3712d684-ee63-44e9-bca1-266e1da7815d
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 5b4b3a2d-6278-4802-a035-c825c6d80641:Sprites/LogoHuesped
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: c3636607-761e-4e52-ad89-7d13348b8788
+                InstanceId: 542d16e6-720c-418e-831b-de378013b2ab
         -   Folder: null
             Entity:
                 Id: 92c17c2d-eddb-48f2-82d8-438158f75505
@@ -5318,6 +5538,25 @@ Hierarchy:
                 BasePartId: 4e168fc0-231e-4d20-a3fd-2d6d511cc270
                 InstanceId: b3114b21-f0fa-4511-a04e-44eebbf152d2
         -   Entity:
+                Id: 94bd98a1-6c27-4731-a3a0-345ca2c24288
+                Name: Logo
+                Components:
+                    58de12e8a8c1f82ba7b3cebbead9ab6a: !TransformComponent
+                        Id: 312abe63-50f4-4036-8ca7-4a4166f7700b
+                        Position: {X: 0.0, Y: 1.4, Z: 0.17}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 1.0}
+                        Children: {}
+                    427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
+                        Id: 6b5a63ad-0fb8-4c66-83bc-5652e5cf964d
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 5b4b3a2d-6278-4802-a035-c825c6d80641:Sprites/LogoHuesped
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: 4e129061-abde-4dbf-87b5-f0010c42b7e5
+                InstanceId: 542d16e6-720c-418e-831b-de378013b2ab
+        -   Entity:
                 Id: 9540def6-0315-4a60-b577-75242339c420
                 Name: Modelo Lanza
                 Components:
@@ -5386,6 +5625,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             246ac2863eb689baaf08e5c9a1645114: ref!! 099c7d05-e04b-4c6a-af0f-eed3838f9455
+                            dd2785d41f8b9091f8c3222cb4089f97: ref!! 3470390f-0ada-4fd8-abbb-81b27cf61f11
                     eff9d5d82a3130d8c3566888235a3b1d: !ModelComponent
                         Id: a4a8f82c-78f8-488f-a337-9233335b858f
                         Model: 60bfed58-810f-4797-94a3-76f99c0a87e9:Modelos/Estandarte/Estandarte
@@ -5702,6 +5942,25 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 2a5ce70b-76a8-4707-98f7-cb4542b4b9b5
                 InstanceId: 5db0cc0d-4462-4c3b-a06b-e1c728e4f9df
+        -   Entity:
+                Id: a39d5ee6-4635-41a1-9763-faf985d1bc5e
+                Name: Logo
+                Components:
+                    58de12e8a8c1f82ba7b3cebbead9ab6a: !TransformComponent
+                        Id: e52c74ac-5995-4b17-a6fb-2c8392b8d939
+                        Position: {X: 0.0, Y: 1.4, Z: 0.17}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 1.0}
+                        Children: {}
+                    427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
+                        Id: 895cce42-98f7-47f2-b238-cc3bcdb83b5c
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 5b4b3a2d-6278-4802-a035-c825c6d80641:Sprites/LogoHuesped
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Base:
+                BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
+                BasePartId: 5bdca665-cbd0-42b5-82d9-a075f9cb4cfd
+                InstanceId: 4180dfb2-b204-43ee-a6d7-042dab3df14c
         -   Folder: null
             Entity:
                 Id: a434026b-18ca-4e7c-86ac-c0a408a76faf
@@ -6133,6 +6392,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             246ac2863eb689baaf08e5c9a1645114: ref!! 5924fa64-7c84-4198-9cff-61118b1f096a
+                            3b67ce1ccd4bd4bdffe8e122db41069b: ref!! ebf71815-dd21-4b03-b6ba-178e6ade88fe
                     eff9d5d82a3130d8c3566888235a3b1d: !ModelComponent
                         Id: 8e3becce-3669-4986-8483-3bac2502fce0
                         Model: 60bfed58-810f-4797-94a3-76f99c0a87e9:Modelos/Estandarte/Estandarte
@@ -6199,6 +6459,25 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: bad42029-ecb8-4e64-a8e7-a4302f3d1f95
                 InstanceId: a5ce5142-0667-4fef-b8b0-cfc7c94f2025
+        -   Entity:
+                Id: b44eca40-21ab-468d-a731-55b180f4a1b4
+                Name: Logo
+                Components:
+                    58de12e8a8c1f82ba7b3cebbead9ab6a: !TransformComponent
+                        Id: 0bfb0dbe-6827-487e-9db3-7f2eaa32fac5
+                        Position: {X: 0.0, Y: 1.4, Z: 0.17}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 1.0}
+                        Children: {}
+                    427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
+                        Id: 4777baaa-f945-4b0a-8790-87f457e3c574
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 5b4b3a2d-6278-4802-a035-c825c6d80641:Sprites/LogoHuesped
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Base:
+                BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
+                BasePartId: d3c776e2-533a-4ccc-8a3e-cd7a09658dd0
+                InstanceId: 4180dfb2-b204-43ee-a6d7-042dab3df14c
         -   Folder: null
             Entity:
                 Id: b45807ea-6fa6-4700-a478-a8033a7ec588
@@ -6211,6 +6490,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             246ac2863eb689baaf08e5c9a1645114: ref!! 9136b100-e33d-4a72-b493-199bdc912d11
+                            15c0008d2efe24bce16b22d06a3ab72a: ref!! 312abe63-50f4-4036-8ca7-4a4166f7700b
                     eff9d5d82a3130d8c3566888235a3b1d: !ModelComponent
                         Id: b68fe071-7388-48a2-b74b-c35c72aa0936
                         Model: 60bfed58-810f-4797-94a3-76f99c0a87e9:Modelos/Estandarte/Estandarte
@@ -6243,6 +6523,25 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: f610b0de-2a0c-4104-b835-286adf5ac8bb
                 InstanceId: a5ce5142-0667-4fef-b8b0-cfc7c94f2025
+        -   Entity:
+                Id: b70a69c2-5323-443b-a314-5a3744cdc4c5
+                Name: Logo
+                Components:
+                    58de12e8a8c1f82ba7b3cebbead9ab6a: !TransformComponent
+                        Id: 3470390f-0ada-4fd8-abbb-81b27cf61f11
+                        Position: {X: 0.0, Y: 1.4, Z: 0.17}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 1.0}
+                        Children: {}
+                    427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
+                        Id: adf31477-f819-4a1b-ba9a-b03fb355dfb7
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: "5d7b42d2-7282-490c-9969-b68306267129:Sprites/LogoAnfitrión"
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Base:
+                BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
+                BasePartId: 5fa31bf8-32d3-4630-b1e6-02b2bd3bf1e7
+                InstanceId: 4180dfb2-b204-43ee-a6d7-042dab3df14c
         -   Folder: null
             Entity:
                 Id: b76a3338-e7c4-4936-9122-e333784de7d5
@@ -6774,6 +7073,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             246ac2863eb689baaf08e5c9a1645114: ref!! 2d2a4bdc-5ae5-47bb-adf7-aa24b0610722
+                            d0619f243deb2d7cd8aa14351684855b: ref!! a9f2aff1-a10d-4f25-988e-b7153bea2287
                     eff9d5d82a3130d8c3566888235a3b1d: !ModelComponent
                         Id: e256f471-b46f-45ec-a0e4-9fd74a8d5651
                         Model: 60bfed58-810f-4797-94a3-76f99c0a87e9:Modelos/Estandarte/Estandarte
@@ -6794,6 +7094,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             246ac2863eb689baaf08e5c9a1645114: ref!! 3f0a0e43-339a-4963-a633-2108bfa5f396
+                            545f151dda27e0d0972daada8ab165e9: ref!! ab1ece9c-4e37-4e3c-960e-bdcd004fb0c2
                     eff9d5d82a3130d8c3566888235a3b1d: !ModelComponent
                         Id: 62914feb-7213-451d-9b96-f2b25463cc77
                         Model: 60bfed58-810f-4797-94a3-76f99c0a87e9:Modelos/Estandarte/Estandarte
@@ -6930,6 +7231,25 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 8a237e79-5317-4bc2-aeb3-695db00f7703
                 InstanceId: 5db0cc0d-4462-4c3b-a06b-e1c728e4f9df
+        -   Entity:
+                Id: cdfda54c-474b-4ce3-a7a8-477e58cfc113
+                Name: Logo
+                Components:
+                    58de12e8a8c1f82ba7b3cebbead9ab6a: !TransformComponent
+                        Id: ebf71815-dd21-4b03-b6ba-178e6ade88fe
+                        Position: {X: 0.0, Y: 1.4, Z: 0.17}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 1.0}
+                        Children: {}
+                    427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
+                        Id: d7556683-8efc-4d87-960d-d09123d6583d
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 5b4b3a2d-6278-4802-a035-c825c6d80641:Sprites/LogoHuesped
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: 9a18ce32-d4a9-4a48-8429-0c523cb707af
+                InstanceId: 542d16e6-720c-418e-831b-de378013b2ab
         -   Entity:
                 Id: ce31ff01-31f1-4b0c-9bf5-790ea14f76d6
                 Name: "Bambú 0"
@@ -7307,6 +7627,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             246ac2863eb689baaf08e5c9a1645114: ref!! 285cbcf8-34bf-48ee-aa14-a538ca6117b0
+                            7ca5ec603cfefb61305e2e76902af23c: ref!! 157bdd26-ebc3-4a7e-ba60-117089d0ff84
                     eff9d5d82a3130d8c3566888235a3b1d: !ModelComponent
                         Id: 13400151-1fb0-4f2f-b989-4b6c4899d3a8
                         Model: 60bfed58-810f-4797-94a3-76f99c0a87e9:Modelos/Estandarte/Estandarte
@@ -7620,6 +7941,25 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: b9afe2be-fce7-47ab-9669-a0b6591e6497
                 InstanceId: 5db0cc0d-4462-4c3b-a06b-e1c728e4f9df
+        -   Entity:
+                Id: e4542fc6-f5d2-4d37-a85a-da838652ec3b
+                Name: Logo
+                Components:
+                    58de12e8a8c1f82ba7b3cebbead9ab6a: !TransformComponent
+                        Id: 2bd3d26a-205f-44a2-b4d7-37509c06daad
+                        Position: {X: 0.0, Y: 1.4, Z: 0.17}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 1.0}
+                        Children: {}
+                    427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
+                        Id: 83563fcb-1dbb-497f-a4a0-28c647da8ac1
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 5b4b3a2d-6278-4802-a035-c825c6d80641:Sprites/LogoHuesped
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: ffe6df82-0e22-42d5-9b13-a1a5fd89c370
+                InstanceId: 542d16e6-720c-418e-831b-de378013b2ab
         -   Folder: null
             Entity:
                 Id: e57d4a0d-7fc9-4df4-a956-26ee4ce31fdc
@@ -7858,6 +8198,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             246ac2863eb689baaf08e5c9a1645114: ref!! 42d1ed72-991f-415d-acba-d94e044f4b58
+                            86babcc9efe33f04df2f82b01ca49db4: ref!! 6a063132-ddc7-4bdf-a63b-c5b0054509c3
                     eff9d5d82a3130d8c3566888235a3b1d: !ModelComponent
                         Id: 46a69f05-cbb8-43a0-b547-efd70cc3c7fe
                         Model: 60bfed58-810f-4797-94a3-76f99c0a87e9:Modelos/Estandarte/Estandarte
@@ -8251,6 +8592,25 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: 07aa2fbf-15fd-445b-9cc0-019214e795bc
                 InstanceId: 72952ed6-a3df-48ba-bebc-63c28a5ed472
+        -   Entity:
+                Id: fa4542a6-e7b5-4150-b3db-9501cf317dc9
+                Name: Logo
+                Components:
+                    58de12e8a8c1f82ba7b3cebbead9ab6a: !TransformComponent
+                        Id: ebd3c291-e6ae-47f6-a27a-a56190cceb25
+                        Position: {X: 0.0, Y: 1.4, Z: 0.17}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 0.1, Z: 1.0}
+                        Children: {}
+                    427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
+                        Id: 57034db8-6b12-41eb-a923-11e5349e7eef
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 5b4b3a2d-6278-4802-a035-c825c6d80641:Sprites/LogoHuesped
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Base:
+                BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
+                BasePartId: d496e505-d867-4470-9c18-765e9804a972
+                InstanceId: 4180dfb2-b204-43ee-a6d7-042dab3df14c
         -   Entity:
                 Id: fde794a4-3ee5-49b7-a952-de994d3015bf
                 Name: "Bambú 0"
