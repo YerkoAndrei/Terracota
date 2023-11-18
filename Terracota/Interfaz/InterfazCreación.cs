@@ -50,12 +50,7 @@ public class InterfazCreación : StartupScript
     {
         // Instanciando fortalezas guardadas
         var padreRanuras = página.FindVisualChildOfType<UniformGrid>("Ranuras");
-        var vacío = página.FindVisualChildOfType<ImageElement>("imgVacío");
-        vacío.Visibility = Visibility.Hidden;
-
         var fortalezas = SistemaMemoria.CargarFortalezas(true);
-        if (fortalezas.Count == 0)
-            vacío.Visibility = Visibility.Visible;
 
         // Limpieza
         padreRanuras.Children.Clear();
