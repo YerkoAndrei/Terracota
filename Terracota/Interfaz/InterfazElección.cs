@@ -27,6 +27,8 @@ public class InterfazElección : StartupScript
     private ScrollViewer visorIzquierda;
     private ScrollViewer visorDerecha;
 
+    private Button btnComenzar;
+
     private bool izquierdaSeleccionada;
     private bool derechaSeleccionada;
 
@@ -54,6 +56,7 @@ public class InterfazElección : StartupScript
         fondoIzquierda.Opacity = 0;
         fondoDerecha.Opacity = 0;
 
+        btnComenzar = página.FindVisualChildOfType<Grid>("btnComenzar").FindVisualChildOfType<Button>("btn");
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnComenzar"), EnClicComenzar);
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVolver"), EnClicVolver);
 
@@ -123,6 +126,7 @@ public class InterfazElección : StartupScript
 
         ApagarRuleta();
         esperandoRuleta = true;
+        btnComenzar.CanBeHitByUser = false;
         gridRuleta.Visibility = Visibility.Visible;
 
         visorIzquierda.Visibility = Visibility.Hidden;

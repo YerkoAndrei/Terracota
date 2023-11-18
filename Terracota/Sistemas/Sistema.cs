@@ -45,6 +45,12 @@ public static class Sistema
         var imagen = grid.FindVisualChildOfType<ImageElement>("img");
         var botón = grid.FindVisualChildOfType<Button>("btn");
 
+        // Texto
+        var texto = grid.FindVisualChildOfType<TextBlock>("txt");
+        var colorTexto = Color.White;
+        if (texto != null)
+            colorTexto = texto.TextColor;
+
         // En clic
         botón.Click += (s, a) => { action.Invoke(); };
 
@@ -52,6 +58,13 @@ public static class Sistema
         var colorBase = imagen.Color;
         botón.MouseOverStateChanged += (s, a) =>
         {
+            if (!botón.CanBeHitByUser)
+            {
+                imagen.Color = colorBase * colorBloqueado;
+                if (texto != null)
+                    texto.TextColor = colorTexto * colorBloqueado;
+                return;
+            }
             switch (a.NewValue)
             {
                 case MouseOverState.MouseOverElement:
@@ -64,10 +77,24 @@ public static class Sistema
         };
         botón.TouchDown += (s, a) =>
         {
+            if (!botón.CanBeHitByUser)
+            {
+                imagen.Color = colorBase * colorBloqueado;
+                if (texto != null)
+                    texto.TextColor = colorTexto * colorBloqueado;
+                return;
+            }
             imagen.Color = colorBase * colorEnClic;
         };
         botón.TouchUp += (s, a) =>
         {
+            if (!botón.CanBeHitByUser)
+            {
+                imagen.Color = colorBase * colorBloqueado;
+                if (texto != null)
+                    texto.TextColor = colorTexto * colorBloqueado;
+                return;
+            }
             imagen.Color = colorBase * colorEnCursor;
         };
     }
