@@ -25,6 +25,7 @@ public class InterfazJuego : StartupScript
     private Grid gridGanador;
     private Grid btnPausa;
 
+    private Grid gridTurno;
     private TextBlock txtTurno;
     private ImageElement imgTurno;
 
@@ -51,13 +52,15 @@ public class InterfazJuego : StartupScript
         gridGanador = página.FindVisualChildOfType<Grid>("Ganador");
         gridProyectil = página.FindVisualChildOfType<Grid>("Proyectil");
 
-        txtTurno = página.FindVisualChildOfType<TextBlock>("txtTurno");
         txtProyectil = página.FindVisualChildOfType<TextBlock>("txtProyectil");
         txtCantidadTurnos = página.FindVisualChildOfType<TextBlock>("txtCantidadTurnos");
         txtMultiplicador = página.FindVisualChildOfType<TextBlock>("txtMultiplicador");
 
         txtGanador = página.FindVisualChildOfType<TextBlock>("txtGanador");
         imgGanador = página.FindVisualChildOfType<ImageElement>("imgGanador");
+
+        gridTurno = página.FindVisualChildOfType<Grid>("Turno");
+        txtTurno = página.FindVisualChildOfType<TextBlock>("txtTurno");
         imgTurno = página.FindVisualChildOfType<ImageElement>("imgTurno");
 
         imgProyectil = página.FindVisualChildOfType<ImageElement>("imgProyectil");
@@ -148,12 +151,9 @@ public class InterfazJuego : StartupScript
     public void ActivarTurno(bool activar)
     {
         if (activar)
-            imgTurno.Visibility = Visibility.Visible;
+            gridTurno.Visibility = Visibility.Visible;
         else
-        {
-            imgTurno.Visibility = Visibility.Hidden;
-            txtTurno.Text = string.Empty;
-        }
+            gridTurno.Visibility = Visibility.Hidden;
     }
 
     public void CambiarInterfaz(TipoJugador jugador, TipoProyectil proyectil)
@@ -161,7 +161,7 @@ public class InterfazJuego : StartupScript
         ActivarTurno(false);
         CambiarTurno(jugador);
 
-        imgTurno.Visibility = Visibility.Visible;
+        gridTurno.Visibility = Visibility.Visible;
         gridProyectil.Visibility = Visibility.Visible;
         btnPausa.Visibility = Visibility.Visible;
 
