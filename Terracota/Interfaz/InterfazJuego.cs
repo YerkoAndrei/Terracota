@@ -1,9 +1,9 @@
-﻿using Stride.Engine;
+﻿using System.Collections.Generic;
+using Stride.Engine;
 using Stride.UI.Controls;
 using Stride.UI;
 using Stride.Graphics;
 using Stride.UI.Panels;
-using System.Collections.Generic;
 using Stride.Core.Mathematics;
 
 namespace Terracota;
@@ -33,7 +33,8 @@ public class InterfazJuego : StartupScript
     private ImageElement fondoTurno;
 
     private TextBlock txtGanador;
-    private ImageElement imgGanador;
+    private List<ImageElement> imgsGanador;
+    private List<ImageElement> fondosGanador;
 
     private TextBlock txtProyectil;
     private TextBlock txtCantidadTurnos;
@@ -60,7 +61,16 @@ public class InterfazJuego : StartupScript
         txtMultiplicador = página.FindVisualChildOfType<TextBlock>("txtMultiplicador");
 
         txtGanador = página.FindVisualChildOfType<TextBlock>("txtGanador");
-        imgGanador = página.FindVisualChildOfType<ImageElement>("imgGanador");
+        imgsGanador = new List<ImageElement>
+        {
+            página.FindVisualChildOfType<ImageElement>("imgGanador 0"),
+            página.FindVisualChildOfType<ImageElement>("imgGanador 1"),
+        };
+        fondosGanador = new List<ImageElement>
+        {
+            página.FindVisualChildOfType<ImageElement>("FondoÍcono 0"),
+            página.FindVisualChildOfType<ImageElement>("FondoÍcono 1"),
+        };
 
         gridTurno = página.FindVisualChildOfType<Grid>("Turno");
         txtTurno = página.FindVisualChildOfType<TextBlock>("txtTurno");
@@ -225,23 +235,36 @@ public class InterfazJuego : StartupScript
 
     public void MostrarGanador(TipoJugador jugador, int turno)
     {
-        CambiarTurno(jugador);
-        ActivarTurno(true);
-
         txtCantidadTurnos.Text = turno.ToString();
-        gridGanador.Visibility = Visibility.Visible;
         gridProyectil.Visibility = Visibility.Hidden;
+        gridTurno.Visibility = Visibility.Hidden;
+
+        gridGanador.Visibility = Visibility.Visible;
         btnPausa.Visibility = Visibility.Visible;
 
         switch (jugador)
         {
             case TipoJugador.anfitrión:
-                imgGanador.Source = ObtenerSprite(spriteAnfitrión);
                 txtGanador.Text = "Ganador: " + "Anfitrión";
+                foreach(var img in imgsGanador)
+                {
+                    img.Source = ObtenerSprite(spriteAnfitrión);
+                }
+                foreach (var fondo in fondosGanador)
+                {
+                    fondo.Color = colorAnfitrión;
+                }
                 break;
             case TipoJugador.huesped:
-                imgGanador.Source = ObtenerSprite(spriteHuesped);
                 txtGanador.Text = "Ganador: " + "Huesped";
+                foreach (var img in imgsGanador)
+                {
+                    img.Source = ObtenerSprite(spriteHuesped);
+                }
+                foreach (var fondo in fondosGanador)
+                {
+                    fondo.Color = colorHuesped;
+                }
                 break;
         }
     }

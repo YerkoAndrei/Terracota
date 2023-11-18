@@ -51,6 +51,12 @@ public class ControladorCámara : SyncScript
 
     public void RotarCámara(float _YObjetivo, bool _derecha, Action _enFin = null, TransformComponent _luzDireccional = null)
     {
+        if (rotando)
+        {
+            eje.Rotation = rotaciónObjetivo;
+            TerminarLerp();
+        }
+
         // Referencias
         YObjetivo = _YObjetivo;
         derecha = _derecha;

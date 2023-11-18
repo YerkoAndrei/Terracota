@@ -254,9 +254,7 @@ public class ControladorPartidaLocal : SyncScript
     private void MirarGanador(TipoJugador ganador)
     {
         // En caso de que pierda el que tiene el turno
-        if (ganador == TipoJugador.anfitrión && turnoJugador == TipoJugador.huesped)
-            controladorCámara.RotarCámara(0, true);
-        if (ganador == TipoJugador.huesped && turnoJugador == TipoJugador.anfitrión)
+        if (ganador != turnoJugador)
             controladorCámara.RotarCámara(180, true);
     }
 }
