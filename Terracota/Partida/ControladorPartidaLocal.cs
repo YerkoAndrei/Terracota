@@ -91,6 +91,7 @@ public class ControladorPartidaLocal : SyncScript
             // Recarga interfaz
             interfaz.Activar(true);
             interfaz.ActualizarTurno(cantidadTurnos, multiplicador);
+            interfaz.CambiarInterfaz(turnoJugador, TipoProyectil.bola);
             partidaActiva = true;
         };
 

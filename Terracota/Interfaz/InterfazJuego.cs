@@ -5,7 +5,6 @@ using Stride.Graphics;
 using Stride.UI.Panels;
 using System.Collections.Generic;
 using Stride.Core.Mathematics;
-using Stride.Core.Serialization;
 
 namespace Terracota;
 using static Sistema;
@@ -21,6 +20,9 @@ public class InterfazJuego : StartupScript
     public Texture spriteAnfitrión;
     public Texture spriteHuesped;
 
+    public Color colorAnfitrión;
+    public Color colorHuesped;
+
     private Grid gridProyectil;
     private Grid gridGanador;
     private Grid btnPausa;
@@ -28,6 +30,7 @@ public class InterfazJuego : StartupScript
     private Grid gridTurno;
     private TextBlock txtTurno;
     private ImageElement imgTurno;
+    private ImageElement fondoTurno;
 
     private TextBlock txtGanador;
     private ImageElement imgGanador;
@@ -62,6 +65,7 @@ public class InterfazJuego : StartupScript
         gridTurno = página.FindVisualChildOfType<Grid>("Turno");
         txtTurno = página.FindVisualChildOfType<TextBlock>("txtTurno");
         imgTurno = página.FindVisualChildOfType<ImageElement>("imgTurno");
+        fondoTurno = página.FindVisualChildOfType<ImageElement>("FondoTurno");
 
         imgProyectil = página.FindVisualChildOfType<ImageElement>("imgProyectil");
         ConfigurarBotónConImagen(página.FindVisualChildOfType<Button>("btnProyectil"), imgProyectil, EnClicProyectil);
@@ -184,10 +188,12 @@ public class InterfazJuego : StartupScript
             case TipoJugador.anfitrión:
                 txtTurno.Text = "Anfitrión";
                 imgTurno.Source = ObtenerSprite(spriteAnfitrión);
+                fondoTurno.Color = colorAnfitrión;
                 break;
             case TipoJugador.huesped:
                 txtTurno.Text = "Huesped";
                 imgTurno.Source = ObtenerSprite(spriteHuesped);
+                fondoTurno.Color = colorHuesped;
                 break;
         }
     }
