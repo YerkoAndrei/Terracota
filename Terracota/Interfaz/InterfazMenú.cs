@@ -13,9 +13,6 @@ public class InterfazMenú : StartupScript
 {
     public override void Start()
     {
-        //Game.Window.PreferredFullscreenSize = new Int2(1920, 1080);
-        //Game.Window.IsFullscreen = true;
-
         var página = Entity.Get<UIComponent>().Page.RootElement;
 
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnLocal"), EnClicLocal);

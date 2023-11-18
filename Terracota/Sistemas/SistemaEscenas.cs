@@ -32,6 +32,9 @@ public class SistemaEscenas : SyncScript
 
     public override void Start()
     {
+        //Game.Window.PreferredFullscreenSize = new Int2(1920, 1080);
+        //Game.Window.IsFullscreen = true;
+
         instancia = this;
         duraciónLerp = 0.2f;
 
