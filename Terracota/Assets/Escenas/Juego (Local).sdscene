@@ -68,6 +68,8 @@ Hierarchy:
                         spriteMetralla: 017a6458-410b-4810-9447-3254c0c8db29:Texturas/Interfaz/Metralla
                         "spriteAnfitrión": "8d986627-e68f-4481-a6c3-9ef06599ea85:Texturas/Interfaz/Anfitrión"
                         spriteHuesped: 976e2b48-5f94-437c-91e9-b29ecf29da95:Texturas/Interfaz/Huesped
+                        "colorAnfitrión": {R: 255, G: 0, B: 0, A: 255}
+                        colorHuesped: {R: 0, G: 0, B: 255, A: 255}
                     d9134663cf65c4ff1e2f051b273a0936: !TransformComponent
                         Id: 973c3c82-a892-4ee0-914a-36ffe7ff1aa7
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -76,7 +78,7 @@ Hierarchy:
                         Children: {}
                     1a24c41704f8422b77d7625af2a028f5: !UIComponent
                         Id: 8df76c69-40d2-4800-87ff-e93a3a59f8f3
-                        Page: cbaa0158-6796-41f4-a5f5-a699458ca406:Interfaces/Juego
+                        Page: 49e77c4c-f47a-4340-9a41-5e0e27f8083b:Interfaces/Juego
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.28, Y: 0.72, Z: 1.0}
                         ResolutionStretch: FixedHeightAdaptableWidth
@@ -510,7 +512,7 @@ Hierarchy:
                     427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
                         Id: 90480d3a-205f-444f-b610-2ac3d940e298
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: 5b4b3a2d-6278-4802-a035-c825c6d80641:Sprites/LogoHuesped
+                            Sheet: 0876167d-b4b2-4ff8-9c2f-61a08e4d336c:Sprites/Huesped
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Base:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
@@ -1019,7 +1021,7 @@ Hierarchy:
                     427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
                         Id: 50d54667-8552-4834-be2c-9d3947c587be
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: 5b4b3a2d-6278-4802-a035-c825c6d80641:Sprites/LogoHuesped
+                            Sheet: 0876167d-b4b2-4ff8-9c2f-61a08e4d336c:Sprites/Huesped
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Base:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
@@ -2225,7 +2227,7 @@ Hierarchy:
                     427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
                         Id: 90f4b549-a604-4311-8597-2cfb9e634c5b
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: 5b4b3a2d-6278-4802-a035-c825c6d80641:Sprites/LogoHuesped
+                            Sheet: 0876167d-b4b2-4ff8-9c2f-61a08e4d336c:Sprites/Huesped
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Base:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
@@ -2910,7 +2912,7 @@ Hierarchy:
                     427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
                         Id: 4c7cbf20-d1b1-4fb0-a6c5-1c4a364ae9e3
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: "5d7b42d2-7282-490c-9969-b68306267129:Sprites/LogoAnfitrión"
+                            Sheet: "c5ba2069-0d99-45b8-986d-36807cfe3e7e:Sprites/Anfitrión"
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Base:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
@@ -3608,7 +3610,7 @@ Hierarchy:
                     427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
                         Id: 98b0898d-46ed-4888-8e8e-1a092b7d99e6
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: "5d7b42d2-7282-490c-9969-b68306267129:Sprites/LogoAnfitrión"
+                            Sheet: "c5ba2069-0d99-45b8-986d-36807cfe3e7e:Sprites/Anfitrión"
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Base:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
@@ -3945,7 +3947,7 @@ Hierarchy:
                     427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
                         Id: 85d3dd9a-305a-44e8-b9ee-d01942c8c10f
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: "5d7b42d2-7282-490c-9969-b68306267129:Sprites/LogoAnfitrión"
+                            Sheet: "c5ba2069-0d99-45b8-986d-36807cfe3e7e:Sprites/Anfitrión"
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Base:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
@@ -4373,7 +4375,7 @@ Hierarchy:
                     427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
                         Id: b7eafad5-12f6-49c0-87f3-b8a39a3e1bfa
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: 5b4b3a2d-6278-4802-a035-c825c6d80641:Sprites/LogoHuesped
+                            Sheet: 0876167d-b4b2-4ff8-9c2f-61a08e4d336c:Sprites/Huesped
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Base:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
@@ -4526,7 +4528,7 @@ Hierarchy:
                     427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
                         Id: 5bf25374-a17a-4644-a7a2-55c7b1eaae41
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: "5d7b42d2-7282-490c-9969-b68306267129:Sprites/LogoAnfitrión"
+                            Sheet: "c5ba2069-0d99-45b8-986d-36807cfe3e7e:Sprites/Anfitrión"
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Base:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
@@ -4802,7 +4804,7 @@ Hierarchy:
                     427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
                         Id: aafb600d-8197-43f4-b866-e1fbbdb5639b
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: 5b4b3a2d-6278-4802-a035-c825c6d80641:Sprites/LogoHuesped
+                            Sheet: 0876167d-b4b2-4ff8-9c2f-61a08e4d336c:Sprites/Huesped
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Base:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
@@ -5379,7 +5381,7 @@ Hierarchy:
                     427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
                         Id: b313e678-a551-4cb4-a340-1656a27e2ec1
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: "5d7b42d2-7282-490c-9969-b68306267129:Sprites/LogoAnfitrión"
+                            Sheet: "c5ba2069-0d99-45b8-986d-36807cfe3e7e:Sprites/Anfitrión"
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Base:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
@@ -5417,7 +5419,7 @@ Hierarchy:
                     427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
                         Id: 3712d684-ee63-44e9-bca1-266e1da7815d
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: 5b4b3a2d-6278-4802-a035-c825c6d80641:Sprites/LogoHuesped
+                            Sheet: 0876167d-b4b2-4ff8-9c2f-61a08e4d336c:Sprites/Huesped
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Base:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
@@ -5550,7 +5552,7 @@ Hierarchy:
                     427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
                         Id: 6b5a63ad-0fb8-4c66-83bc-5652e5cf964d
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: 5b4b3a2d-6278-4802-a035-c825c6d80641:Sprites/LogoHuesped
+                            Sheet: 0876167d-b4b2-4ff8-9c2f-61a08e4d336c:Sprites/Huesped
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Base:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
@@ -5955,7 +5957,7 @@ Hierarchy:
                     427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
                         Id: 895cce42-98f7-47f2-b238-cc3bcdb83b5c
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: 5b4b3a2d-6278-4802-a035-c825c6d80641:Sprites/LogoHuesped
+                            Sheet: 0876167d-b4b2-4ff8-9c2f-61a08e4d336c:Sprites/Huesped
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Base:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
@@ -6472,7 +6474,7 @@ Hierarchy:
                     427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
                         Id: 4777baaa-f945-4b0a-8790-87f457e3c574
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: 5b4b3a2d-6278-4802-a035-c825c6d80641:Sprites/LogoHuesped
+                            Sheet: 0876167d-b4b2-4ff8-9c2f-61a08e4d336c:Sprites/Huesped
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Base:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
@@ -6536,7 +6538,7 @@ Hierarchy:
                     427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
                         Id: adf31477-f819-4a1b-ba9a-b03fb355dfb7
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: "5d7b42d2-7282-490c-9969-b68306267129:Sprites/LogoAnfitrión"
+                            Sheet: "c5ba2069-0d99-45b8-986d-36807cfe3e7e:Sprites/Anfitrión"
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Base:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
@@ -7244,7 +7246,7 @@ Hierarchy:
                     427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
                         Id: d7556683-8efc-4d87-960d-d09123d6583d
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: 5b4b3a2d-6278-4802-a035-c825c6d80641:Sprites/LogoHuesped
+                            Sheet: 0876167d-b4b2-4ff8-9c2f-61a08e4d336c:Sprites/Huesped
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Base:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
@@ -7954,7 +7956,7 @@ Hierarchy:
                     427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
                         Id: 83563fcb-1dbb-497f-a4a0-28c647da8ac1
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: 5b4b3a2d-6278-4802-a035-c825c6d80641:Sprites/LogoHuesped
+                            Sheet: 0876167d-b4b2-4ff8-9c2f-61a08e4d336c:Sprites/Huesped
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Base:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
@@ -8605,7 +8607,7 @@ Hierarchy:
                     427788c11b6fdd0ec7292b06f24675f5: !SpriteComponent
                         Id: 57034db8-6b12-41eb-a923-11e5349e7eef
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: 5b4b3a2d-6278-4802-a035-c825c6d80641:Sprites/LogoHuesped
+                            Sheet: 0876167d-b4b2-4ff8-9c2f-61a08e4d336c:Sprites/Huesped
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Base:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
