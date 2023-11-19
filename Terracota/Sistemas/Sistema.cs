@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Graphics;
@@ -16,8 +15,14 @@ public static class Sistema
     public static float RangoAleatorio(float min, float max)
     {
         var aleatorio = new Random();
-        double val = (aleatorio.NextDouble() * (max - min) + min);
-        return (float)val;
+        double valor = (aleatorio.NextDouble() * (max - min) + min);
+        return (float)valor;
+    }
+
+    public static int RangoAleatorio(int min, int max)
+    {
+        var aleatorio = new Random();
+        return aleatorio.Next(min, max);
     }
 
     public static Vector3 EulerAleatorio()
@@ -56,15 +61,11 @@ public static class Sistema
 
         // Cambios color
         var colorBase = imagen.Color;
+        VerificarBloqueo(botón, imagen, texto, colorBase, colorTexto);
+
         botón.MouseOverStateChanged += (s, a) =>
         {
-            if (!botón.CanBeHitByUser)
-            {
-                imagen.Color = colorBase * colorBloqueado;
-                if (texto != null)
-                    texto.TextColor = colorTexto * colorBloqueado;
-                return;
-            }
+            VerificarBloqueo(botón, imagen, texto, colorBase, colorTexto);
             switch (a.NewValue)
             {
                 case MouseOverState.MouseOverElement:
@@ -77,24 +78,12 @@ public static class Sistema
         };
         botón.TouchDown += (s, a) =>
         {
-            if (!botón.CanBeHitByUser)
-            {
-                imagen.Color = colorBase * colorBloqueado;
-                if (texto != null)
-                    texto.TextColor = colorTexto * colorBloqueado;
-                return;
-            }
+            VerificarBloqueo(botón, imagen, texto, colorBase, colorTexto);
             imagen.Color = colorBase * colorEnClic;
         };
         botón.TouchUp += (s, a) =>
         {
-            if (!botón.CanBeHitByUser)
-            {
-                imagen.Color = colorBase * colorBloqueado;
-                if (texto != null)
-                    texto.TextColor = colorTexto * colorBloqueado;
-                return;
-            }
+            VerificarBloqueo(botón, imagen, texto, colorBase, colorTexto);
             imagen.Color = colorBase * colorEnCursor;
         };
     }
@@ -125,6 +114,40 @@ public static class Sistema
         {
             imagen.Color = colorEnCursor;
         };
+    }
+
+    public static void BloquearBotón(Grid grid, bool bloquear)
+    {
+        // Busca contenido dentro del "grid botón"
+        var imagen = grid.FindVisualChildOfType<ImageElement>("img");
+        var botón = grid.FindVisualChildOfType<Button>("btn");
+
+        // Texto
+        var texto = grid.FindVisualChildOfType<TextBlock>("txt");
+        var colorTexto = Color.White;
+        if (texto != null)
+            colorTexto = texto.TextColor;
+
+        botón.CanBeHitByUser = !bloquear;
+        var colorBase = imagen.Color;
+        VerificarBloqueo(botón, imagen, texto, colorBase, colorTexto);
+    }
+
+    private static void VerificarBloqueo(Button botón, ImageElement imagen, TextBlock texto, Color colorBase, Color colorTexto)
+    {
+        if (!botón.CanBeHitByUser)
+        {
+            imagen.Color = colorBase * colorBloqueado;
+            if (texto != null)
+                texto.TextColor = colorTexto * colorBloqueado;
+            return;
+        }
+        else
+        {
+            imagen.Color = colorBase * colorNormal;
+            if (texto != null)
+                texto.TextColor = colorTexto * colorNormal;
+        }
     }
 
     public static void ConfigurarBotónOculto(Button botón, Action action)

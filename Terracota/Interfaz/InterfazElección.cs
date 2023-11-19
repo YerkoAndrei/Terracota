@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
+using Stride.Graphics;
 using Stride.UI;
 using Stride.UI.Controls;
 using Stride.UI.Panels;
@@ -15,80 +16,107 @@ public class InterfazElección : StartupScript
     public ControladorPartidaLocal controladorPartida;
     public UILibrary prefabRanura;
 
+    public Texture spriteAnfitrión;
+    public Texture spriteHuesped;
+
+    public Color colorAnfitrión;
+    public Color colorHuesped;
+
     private ImageElement[] ruleta;
 
     private Grid gridRuleta;
-    private TextBlock txtIzquierda;
-    private TextBlock txtDerecha;
+    private TextBlock txtAnfitrión;
+    private TextBlock txtHuesped;
 
-    private Grid fondoIzquierda;
-    private Grid fondoDerecha;
+    private ScrollViewer visorAnfitrión;
+    private ScrollViewer visorHuesped;
 
-    private ScrollViewer visorIzquierda;
-    private ScrollViewer visorDerecha;
+    private Grid gridGanador;
+    private ImageElement fondoGanador;
+    private ImageElement imgGanador;
+    private ImageElement imgFlechaIzquierda;
+    private ImageElement imgFlechaDerecha;
 
-    private Button btnComenzar;
+    private Grid btnComenzar;
+    private Grid btnVolver;
+    private Grid btnAleatorio;
 
-    private bool izquierdaSeleccionada;
-    private bool derechaSeleccionada;
+    private bool anfitriónSeleccionado;
+    private bool huespedSeleccionado;
 
     private bool esperandoRuleta;
-    private bool ganaIzquierda;
+    private bool ganaAnfitrión;
 
     public override void Start()
     {
         var página = Entity.Get<UIComponent>().Page.RootElement;
 
+        // Ruleta
         gridRuleta = página.FindVisualChildOfType<Grid>("Ruleta");
         gridRuleta.Visibility = Visibility.Hidden;
         ruleta = gridRuleta.FindVisualChildrenOfType<ImageElement>().ToArray();
 
-        txtIzquierda = página.FindVisualChildOfType<TextBlock>("SelecciónIzquierda");
-        txtDerecha = página.FindVisualChildOfType<TextBlock>("SelecciónDerecha");
+        // Elecciones
+        txtAnfitrión = página.FindVisualChildOfType<TextBlock>("txtAnfitrión");
+        txtHuesped = página.FindVisualChildOfType<TextBlock>("txtHuesped");
+        txtAnfitrión.Text = string.Empty;
+        txtHuesped.Text = string.Empty;
 
-        fondoIzquierda = página.FindVisualChildOfType<Grid>("FondoIzquierda");
-        fondoDerecha = página.FindVisualChildOfType<Grid>("FondoDerecha");
+        // Visor
+        visorAnfitrión = página.FindVisualChildOfType<ScrollViewer>("VisorAnfitrión");
+        visorHuesped = página.FindVisualChildOfType<ScrollViewer>("VisorHuesped");
 
-        visorIzquierda = página.FindVisualChildOfType<ScrollViewer>("VisorRanurasIzquierda");
-        visorDerecha = página.FindVisualChildOfType<ScrollViewer>("VisorRanurasDerecha");
+        // Ganador
+        gridGanador = página.FindVisualChildOfType<Grid>("Ganador");
+        gridGanador.Visibility = Visibility.Hidden;
 
-        gridRuleta.Visibility = Visibility.Hidden;
-        fondoIzquierda.Opacity = 0;
-        fondoDerecha.Opacity = 0;
+        fondoGanador = página.FindVisualChildOfType<ImageElement>("FondoGanador");
+        imgGanador = página.FindVisualChildOfType<ImageElement>("imgGanador");
+        imgFlechaIzquierda = página.FindVisualChildOfType<ImageElement>("imgFlechaIzquierda");
+        imgFlechaDerecha = página.FindVisualChildOfType<ImageElement>("imgFlechaDerecha");
+        imgFlechaIzquierda.Visibility = Visibility.Hidden;
+        imgFlechaDerecha.Visibility = Visibility.Hidden;
 
-        btnComenzar = página.FindVisualChildOfType<Grid>("btnComenzar").FindVisualChildOfType<Button>("btn");
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnComenzar"), EnClicComenzar);
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVolver"), EnClicVolver);
+        // Botones
+        btnComenzar = página.FindVisualChildOfType<Grid>("btnComenzar");
+        btnVolver = página.FindVisualChildOfType<Grid>("btnVolver");
+        btnAleatorio = página.FindVisualChildOfType<Grid>("btnAleatorio");
+
+        ConfigurarBotón(btnComenzar, EnClicComenzar);
+        ConfigurarBotón(btnVolver, EnClicVolver);
+        ConfigurarBotón(btnAleatorio, EnClicAleatorio);
+
+        //BloquearBotón(btnComenzar, true);
 
         // Fortalezas
-        var padreRanurasIzquierda = página.FindVisualChildOfType<UniformGrid>("RanurasIzquierda");
-        var padreRanurasDerecha = página.FindVisualChildOfType<UniformGrid>("RanurasDerecha");
+        var padreRanurasAnfitrión = página.FindVisualChildOfType<UniformGrid>("RanurasAnfitrión");
+        var padreRanurasHuesped = página.FindVisualChildOfType<UniformGrid>("RanurasHuesped");
         var fortalezas = SistemaMemoria.CargarFortalezas(true);
 
-        padreRanurasIzquierda.Children.Clear();
-        padreRanurasDerecha.Children.Clear();
+        padreRanurasAnfitrión.Children.Clear();
+        padreRanurasHuesped.Children.Clear();
 
-        padreRanurasIzquierda.Rows = fortalezas.Count;
-        padreRanurasDerecha.Rows = fortalezas.Count;
+        padreRanurasAnfitrión.Rows = fortalezas.Count;
+        padreRanurasHuesped.Rows = fortalezas.Count;
 
-        padreRanurasIzquierda.Height = 0;
-        padreRanurasDerecha.Height = 0;
+        padreRanurasAnfitrión.Height = 0;
+        padreRanurasHuesped.Height = 0;
 
         for (int i = 0; i < fortalezas.Count; i++)
         {
             var fortalezaTemp = fortalezas[i];
 
             // Izquierda
-            var nuevaRanuraIzquierda = prefabRanura.InstantiateElement<Grid>("RanuraIzquierda");
-             ConfigurarRanuraElección(nuevaRanuraIzquierda, i, fortalezaTemp.ranura, fortalezaTemp.miniatura, () => EnClicIzquierda(fortalezaTemp.ranura));
-            padreRanurasIzquierda.Height += (nuevaRanuraIzquierda.Height + 10);
-            padreRanurasIzquierda.Children.Add(nuevaRanuraIzquierda);
+            var nuevaRanuraAnfitrión = prefabRanura.InstantiateElement<Grid>("RanuraIzquierda");
+             ConfigurarRanuraElección(nuevaRanuraAnfitrión, i, fortalezaTemp.ranura, fortalezaTemp.miniatura, () => EnClicAnfitrión(fortalezaTemp.ranura));
+            padreRanurasAnfitrión.Height += (nuevaRanuraAnfitrión.Height + 10);
+            padreRanurasAnfitrión.Children.Add(nuevaRanuraAnfitrión);
 
             // Derecha
-            var nuevaRanuraDerecha = prefabRanura.InstantiateElement<Grid>("RanuraDerecha");
-            ConfigurarRanuraElección(nuevaRanuraDerecha, i, fortalezaTemp.ranura, fortalezaTemp.miniatura, () => EnClicDerecha(fortalezaTemp.ranura));
-            padreRanurasDerecha.Children.Add(nuevaRanuraDerecha);
-            padreRanurasDerecha.Height += (nuevaRanuraDerecha.Height + 10);
+            var nuevaRanuraHuesped = prefabRanura.InstantiateElement<Grid>("RanuraDerecha");
+            ConfigurarRanuraElección(nuevaRanuraHuesped, i, fortalezaTemp.ranura, fortalezaTemp.miniatura, () => EnClicHuesped(fortalezaTemp.ranura));
+            padreRanurasHuesped.Children.Add(nuevaRanuraHuesped);
+            padreRanurasHuesped.Height += (nuevaRanuraHuesped.Height + 10);
         }
     }
 
@@ -99,42 +127,82 @@ public class InterfazElección : StartupScript
         SistemaEscenas.CambiarEscena(Escenas.menú);
     }
 
-    private void EnClicIzquierda(int ranura)
+    private async void EnClicAleatorio()
+    {
+        gridRuleta.Visibility = Visibility.Hidden;
+        btnComenzar.Visibility = Visibility.Hidden;
+        visorAnfitrión.Visibility = Visibility.Hidden;
+        visorHuesped.Visibility = Visibility.Hidden;
+
+        // Anfitrión
+        var ranuraAnfitrión = ObtenerRanuraAleatoria();
+        EnClicAnfitrión(ranuraAnfitrión);
+
+        // Huesped
+        var ranuraHuesped = ObtenerRanuraAleatoria(); 
+        EnClicHuesped(ranuraHuesped);
+
+        // Ganador
+        ganaAnfitrión = RangoAleatorio(0,2) == 1;
+
+        await FinalizarRuleta();
+        controladorPartida.ComenzarPartida(ganaAnfitrión);
+    }
+
+    private int ObtenerRanuraAleatoria()
+    {
+        // Aleatorio no devuelve fortaleza vacía
+        var fortalezas = SistemaMemoria.CargarFortalezas(false);
+        if (fortalezas.Count <= 0)
+            return 0;
+
+        var aleatorio = RangoAleatorio(0, fortalezas.Count);
+        return fortalezas[aleatorio].ranura;
+    }
+
+    private void EnClicAnfitrión(int ranura)
     {
         if (esperandoRuleta)
             return;
 
-        izquierdaSeleccionada = true;
-        txtIzquierda.Text = ranura.ToString();
+        //if (huespedSeleccionado)
+        //    BloquearBotón(btnComenzar, false);
+
+        anfitriónSeleccionado = true;
+        txtAnfitrión.Text = ranura.ToString();
         controladorPartida.CargarFortaleza(ranura, true);
     }
 
-    private void EnClicDerecha(int ranura)
+    private void EnClicHuesped(int ranura)
     {
         if (esperandoRuleta)
             return;
 
-        derechaSeleccionada = true;
-        txtDerecha.Text = ranura.ToString();
+        //if(anfitriónSeleccionado)
+        //    BloquearBotón(btnComenzar, false);
+
+        huespedSeleccionado = true;
+        txtHuesped.Text = ranura.ToString();
         controladorPartida.CargarFortaleza(ranura, false);
     }
 
     private async void EnClicComenzar()
     {
-        if (esperandoRuleta || !derechaSeleccionada || !izquierdaSeleccionada)
+        if (esperandoRuleta || !huespedSeleccionado || !anfitriónSeleccionado)
             return;
 
         ApagarRuleta();
         esperandoRuleta = true;
-        btnComenzar.CanBeHitByUser = false;
         gridRuleta.Visibility = Visibility.Visible;
 
-        visorIzquierda.Visibility = Visibility.Hidden;
-        visorDerecha.Visibility = Visibility.Hidden;
+        btnComenzar.Visibility = Visibility.Hidden;
+        visorAnfitrión.Visibility = Visibility.Hidden;
+        visorHuesped.Visibility = Visibility.Hidden;
 
-        var aleatorio = (int)RangoAleatorio(40, 48);
+        var aleatorio = RangoAleatorio(40, 48);
         await MoverRuleta(aleatorio);
-        controladorPartida.ComenzarPartida(ganaIzquierda);
+        await FinalizarRuleta();
+        controladorPartida.ComenzarPartida(ganaAnfitrión);
     }
 
     private async Task MoverRuleta(int toques)
@@ -162,32 +230,35 @@ public class InterfazElección : StartupScript
             await Task.Delay(delay);
         }
 
+        // Ganador
+        ganaAnfitrión = (ruletaActual > 3);
+
         // Fin
         await Task.Delay(500);
+    }
+
+    private async Task FinalizarRuleta()
+    {
+        btnVolver.Visibility = Visibility.Hidden;
+        btnAleatorio.Visibility = Visibility.Hidden;
         gridRuleta.Visibility = Visibility.Hidden;
-        ganaIzquierda = (ruletaActual > 3);
 
-        if (ganaIzquierda)
+        if (ganaAnfitrión)
         {
-            // Gana izquierda
-            txtIzquierda.TextColor = Color.White;
-            txtDerecha.TextColor = Color.Red;
-
-            fondoIzquierda.BackgroundColor = Color.Green;
-            fondoDerecha.BackgroundColor = Color.Red;
+            // Gana anfitrión / izquierda
+            fondoGanador.Color = colorAnfitrión;
+            imgGanador.Source = ObtenerSprite(spriteAnfitrión);
+            imgFlechaIzquierda.Visibility = Visibility.Visible;
         }
         else
         {
-            // Gana derecha
-            txtIzquierda.TextColor = Color.Red;
-            txtDerecha.TextColor = Color.White;
+            // Gana huesped / derecha
+            fondoGanador.Color = colorHuesped;
+            imgGanador.Source = ObtenerSprite(spriteHuesped);
+            imgFlechaDerecha.Visibility = Visibility.Visible;
 
-            fondoIzquierda.BackgroundColor = Color.Red;
-            fondoDerecha.BackgroundColor = Color.Green;
         }
-
-        fondoIzquierda.Opacity = 0.5f;
-        fondoDerecha.Opacity = 0.5f;
+        gridGanador.Visibility = Visibility.Visible;
 
         // Fin
         await Task.Delay(3000);
