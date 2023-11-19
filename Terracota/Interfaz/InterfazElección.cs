@@ -86,7 +86,7 @@ public class InterfazElección : StartupScript
         ConfigurarBotón(btnVolver, EnClicVolver);
         ConfigurarBotón(btnAleatorio, EnClicAleatorio);
 
-        //BloquearBotón(btnComenzar, true);
+        BloquearBotón(btnComenzar, true);
 
         // Fortalezas
         var padreRanurasAnfitrión = página.FindVisualChildOfType<UniformGrid>("RanurasAnfitrión");
@@ -165,8 +165,8 @@ public class InterfazElección : StartupScript
         if (esperandoRuleta)
             return;
 
-        //if (huespedSeleccionado)
-        //    BloquearBotón(btnComenzar, false);
+        if (huespedSeleccionado)
+            BloquearBotón(btnComenzar, false);
 
         anfitriónSeleccionado = true;
         txtAnfitrión.Text = ranura.ToString();
@@ -178,8 +178,8 @@ public class InterfazElección : StartupScript
         if (esperandoRuleta)
             return;
 
-        //if(anfitriónSeleccionado)
-        //    BloquearBotón(btnComenzar, false);
+        if(anfitriónSeleccionado)
+            BloquearBotón(btnComenzar, false);
 
         huespedSeleccionado = true;
         txtHuesped.Text = ranura.ToString();

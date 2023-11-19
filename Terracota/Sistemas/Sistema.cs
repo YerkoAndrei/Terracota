@@ -61,11 +61,25 @@ public static class Sistema
 
         // Cambios color
         var colorBase = imagen.Color;
-        VerificarBloqueo(botón, imagen, texto, colorBase, colorTexto);
+
+        // Guarda colores iniciales. Se usa en bloqueo. Podría mejorar.
+        grid.Children.Add(new Grid()
+        {
+            Name = "colorInicialBotón",
+            BackgroundColor = colorBase,
+            Opacity = 0
+        });
+        grid.Children.Add(new Grid()
+        {
+            Name = "colorInicialTexto",
+            BackgroundColor = colorTexto,
+            Opacity = 0
+        });
 
         botón.MouseOverStateChanged += (s, a) =>
         {
-            VerificarBloqueo(botón, imagen, texto, colorBase, colorTexto);
+            if (VerificarBloqueo(botón, imagen, texto, colorBase, colorTexto))
+                return;
             switch (a.NewValue)
             {
                 case MouseOverState.MouseOverElement:
@@ -78,12 +92,14 @@ public static class Sistema
         };
         botón.TouchDown += (s, a) =>
         {
-            VerificarBloqueo(botón, imagen, texto, colorBase, colorTexto);
+            if (VerificarBloqueo(botón, imagen, texto, colorBase, colorTexto))
+                return;
             imagen.Color = colorBase * colorEnClic;
         };
         botón.TouchUp += (s, a) =>
         {
-            VerificarBloqueo(botón, imagen, texto, colorBase, colorTexto);
+            if (VerificarBloqueo(botón, imagen, texto, colorBase, colorTexto))
+                return;
             imagen.Color = colorBase * colorEnCursor;
         };
     }
@@ -94,59 +110,64 @@ public static class Sistema
         botón.Click += (sender, e) => { action.Invoke(); };
 
         // Cambios color
+        var colorBase = imagen.Color;
         botón.MouseOverStateChanged += (sender, args) =>
         {
             switch (args.NewValue)
             {
                 case MouseOverState.MouseOverElement:
-                    imagen.Color = colorEnCursor;
+                    imagen.Color = colorBase * colorEnCursor;
                     break;
                 case MouseOverState.MouseOverNone:
-                    imagen.Color = colorNormal;
+                    imagen.Color = colorBase * colorNormal;
                     break;
             }
         };
         botón.TouchDown += (sender, args) =>
         {
-            imagen.Color = colorEnClic;
+            imagen.Color = colorBase * colorEnClic;
         };
         botón.TouchUp += (sender, args) =>
         {
-            imagen.Color = colorEnCursor;
+            imagen.Color = colorBase * colorEnCursor;
         };
     }
 
+    private static bool VerificarBloqueo(Button botón, ImageElement imagen, TextBlock texto, Color colorBase, Color colorTexto)
+    {
+        if (botón.CanBeHitByUser)
+            return false;
+
+        // Bloqueo
+        imagen.Color = colorBase * colorBloqueado;
+        if (texto != null)
+            texto.TextColor = colorTexto * colorBloqueado;
+
+        return true;
+    }
+
+    // Debe llamarse después de configurar botón
     public static void BloquearBotón(Grid grid, bool bloquear)
     {
         // Busca contenido dentro del "grid botón"
         var imagen = grid.FindVisualChildOfType<ImageElement>("img");
+        var texto = grid.FindVisualChildOfType<TextBlock>("txt");
         var botón = grid.FindVisualChildOfType<Button>("btn");
 
-        // Texto
-        var texto = grid.FindVisualChildOfType<TextBlock>("txt");
-        var colorTexto = Color.White;
-        if (texto != null)
-            colorTexto = texto.TextColor;
-
         botón.CanBeHitByUser = !bloquear;
-        var colorBase = imagen.Color;
-        VerificarBloqueo(botón, imagen, texto, colorBase, colorTexto);
-    }
 
-    private static void VerificarBloqueo(Button botón, ImageElement imagen, TextBlock texto, Color colorBase, Color colorTexto)
-    {
-        if (!botón.CanBeHitByUser)
+        // Colores
+        if (bloquear)
         {
-            imagen.Color = colorBase * colorBloqueado;
+            imagen.Color = grid.FindVisualChildOfType<Grid>("colorInicialBotón").BackgroundColor * colorBloqueado;
             if (texto != null)
-                texto.TextColor = colorTexto * colorBloqueado;
-            return;
+                texto.TextColor = grid.FindVisualChildOfType<Grid>("colorInicialTexto").BackgroundColor * colorBloqueado;
         }
         else
         {
-            imagen.Color = colorBase * colorNormal;
+            imagen.Color = grid.FindVisualChildOfType<Grid>("colorInicialBotón").BackgroundColor * colorNormal;
             if (texto != null)
-                texto.TextColor = colorTexto * colorNormal;
+                texto.TextColor = grid.FindVisualChildOfType<Grid>("colorInicialTexto").BackgroundColor * colorNormal;
         }
     }
 
