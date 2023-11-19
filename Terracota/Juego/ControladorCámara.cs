@@ -36,7 +36,6 @@ public class ControladorCámara : SyncScript
 
     public override void Start()
     {
-        cámara = Entity.Get<TransformComponent>();
         ZInicial = cámara.Position.Z;
     }
 
