@@ -23,6 +23,9 @@ public class InterfazMenú : StartupScript
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnOpciones"), EnClicOpciones);
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnSalir"), EnClicSalir);
 
+        BloquearBotón(página.FindVisualChildOfType<Grid>("btnLAN"), true);
+        BloquearBotón(página.FindVisualChildOfType<Grid>("btnP2P"), true);
+
         ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("btnCréditos"), EnClicCréditos);
     }
 

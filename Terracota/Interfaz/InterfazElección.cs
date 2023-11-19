@@ -195,7 +195,11 @@ public class InterfazElección : StartupScript
         esperandoRuleta = true;
         gridRuleta.Visibility = Visibility.Visible;
 
+        btnVolver.HorizontalAlignment = HorizontalAlignment.Center;
+        btnVolver.Margin = new Thickness(0,0,0,30);
+
         btnComenzar.Visibility = Visibility.Hidden;
+        btnAleatorio.Visibility = Visibility.Hidden;
         visorAnfitrión.Visibility = Visibility.Hidden;
         visorHuesped.Visibility = Visibility.Hidden;
 
@@ -261,7 +265,7 @@ public class InterfazElección : StartupScript
         gridGanador.Visibility = Visibility.Visible;
 
         // Fin
-        await Task.Delay(3000);
+        await Task.Delay(2000);
     }
 
     private void ApagarRuleta()
