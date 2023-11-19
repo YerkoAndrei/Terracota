@@ -21,6 +21,23 @@ Hierarchy:
                     Texture: "8d986627-e68f-4481-a6c3-9ef06599ea85:Texturas/Interfaz/Anfitrión"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 99, A: 255}
+        -   UIElement: !ImageElement
+                Id: 09958c7b-1943-40e8-90ae-7df2b9126d86
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 60.0
+                Height: 60.0
+                HorizontalAlignment: Left
+                VerticalAlignment: Top
+                Margin: {Left: 19.0, Top: 37.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: tope_8
+                Source: !SpriteFromTexture
+                    Texture: "544f8ec8-cb8e-46d6-8873-ba73ab7cef86:Texturas/Interfaz/BaseHexágono"
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 255, A: 255}
         -   UIElement: !Grid
                 Id: 0a72d273-d858-4d8f-9f9f-3443da11ad59
                 DependencyProperties: {}
@@ -67,15 +84,15 @@ Hierarchy:
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 60.0
                 Height: 60.0
-                HorizontalAlignment: Left
+                HorizontalAlignment: Center
                 VerticalAlignment: Bottom
-                Margin: {Bottom: 60.0}
+                Margin: {Right: 60.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: tope_5
                 Source: !SpriteFromTexture
-                    Texture: "03c66b25-d2c7-4121-86d9-4e5f7b912b87:Texturas/Círculo"
+                    Texture: "544f8ec8-cb8e-46d6-8873-ba73ab7cef86:Texturas/Interfaz/BaseHexágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
         -   UIElement: !ImageElement
@@ -109,6 +126,24 @@ Hierarchy:
                     Texture: "ad498f2e-9e92-46b3-a8ef-9b75cf038835:Texturas/Interfaz/Hexágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 99, A: 255}
+        -   UIElement: !ImageElement
+                Id: 1e7ca5da-f5dd-4824-a625-0100086dfc2a
+                DependencyProperties:
+                    50c55a9c41f47ab1f0ce34eb40296c93~Panel.ZIndexPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 60.0
+                Height: 60.0
+                HorizontalAlignment: Center
+                VerticalAlignment: Top
+                Margin: {Left: 60.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: 
+                Source: !SpriteFromTexture
+                    Texture: "ad498f2e-9e92-46b3-a8ef-9b75cf038835:Texturas/Interfaz/Hexágono"
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 99, A: 255}
         -   UIElement: !Grid
                 Id: 1f7275a2-4dc9-48e4-8a39-e80058d09266
                 DependencyProperties: {}
@@ -130,6 +165,24 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
+        -   UIElement: !ImageElement
+                Id: 25e888ea-9dd2-4ea1-9ff6-38050c13b042
+                DependencyProperties:
+                    f10445eea8e1a9d7276c86192b0d0a02~Panel.ZIndexPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 60.0
+                Height: 60.0
+                HorizontalAlignment: Right
+                VerticalAlignment: Top
+                Margin: {Top: 37.0, Right: 19.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: 
+                Source: !SpriteFromTexture
+                    Texture: "ad498f2e-9e92-46b3-a8ef-9b75cf038835:Texturas/Interfaz/Hexágono"
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 99, A: 255}
         -   UIElement: !Grid
                 Id: 2893a16f-6786-4156-99a6-354b335a5e38
                 DependencyProperties: {}
@@ -204,6 +257,8 @@ Hierarchy:
                     c3d66a859433c5669beb7168319a5107: !ImageElement ref!! 1296f665-4b59-4694-aa39-e0dd40b0267e
                     f7b4ee1a1021f45e36a679859eb335b0: !ImageElement ref!! d36c51ef-4db1-4b96-9eac-ba3f14b91bcb
                     fcbf269b404dd81afaf4f972b75b671f: !ImageElement ref!! 9e8f3901-112a-43cd-9840-c7d82ed9c917
+                    98ef58636026953a9410aa7ad8d47bb2: !ImageElement ref!! 09958c7b-1943-40e8-90ae-7df2b9126d86
+                    9284dbe42d158a5b705c527e49a98ad8: !ImageElement ref!! 5d795353-2e44-4827-a168-91e775069937
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -229,10 +284,29 @@ Hierarchy:
                     a3c0bea66096c273db38cbecf88bddee: !Grid ref!! 10b2dd4e-c96f-4ec8-85dc-4351e8c76dd8
                     04551f06f86d1e387d0319f7ababc16f: !Grid ref!! 1f7275a2-4dc9-48e4-8a39-e80058d09266
                     e18dfee43c08b3eca8273c813dacea46: !Grid ref!! e3db4c95-5126-4d5d-afb5-7a72e7ac4c5a
-                    6fc007f794f6f45bdab06c219522202b: !Grid ref!! 2e4f5f71-2287-4363-af12-d5991d5fc314
+                    6e4a879d08be575db7acb994ef748100: !Grid ref!! 2e4f5f71-2287-4363-af12-d5991d5fc314
+                    4ce24d05c7e62d2f9518e9bb2b8f469e: !Grid ref!! 419eb6b4-df36-468e-aa93-473fc92dd777
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
+        -   UIElement: !ImageElement
+                Id: 33078bb5-f118-4408-a10e-44fc39c59381
+                DependencyProperties:
+                    72285d4557ad1b2d9c0f2d6b08285f05~Panel.ZIndexPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 60.0
+                Height: 60.0
+                HorizontalAlignment: Right
+                VerticalAlignment: Bottom
+                Margin: {Right: 19.0, Bottom: 37.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: 
+                Source: !SpriteFromTexture
+                    Texture: "ad498f2e-9e92-46b3-a8ef-9b75cf038835:Texturas/Interfaz/Hexágono"
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 99, A: 255}
         -   UIElement: !Grid
                 Id: 332e034c-3e1b-4886-aaa1-e237affc5afd
                 DependencyProperties: {}
@@ -249,6 +323,23 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
+        -   UIElement: !ImageElement
+                Id: 3905fcec-9d80-4b8b-a5a1-a6db943d501d
+                DependencyProperties:
+                    25f9e68d546e591883ce112484a27dde~Panel.ZIndexPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 60.0
+                Height: 60.0
+                HorizontalAlignment: Left
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: 
+                Source: !SpriteFromTexture
+                    Texture: "ad498f2e-9e92-46b3-a8ef-9b75cf038835:Texturas/Interfaz/Hexágono"
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 99, A: 255}
         -   UIElement: !TextBlock
                 Id: 3faba244-f115-4ac8-ba6c-2f527a54cb9a
                 DependencyProperties: {}
@@ -264,6 +355,33 @@ Hierarchy:
                 TextSize: 40.0
                 TextColor: {R: 0, G: 0, B: 0, A: 255}
                 TextAlignment: Center
+        -   UIElement: !Grid
+                Id: 419eb6b4-df36-468e-aa93-473fc92dd777
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 250.0
+                Height: 250.0
+                HorizontalAlignment: Center
+                VerticalAlignment: Center
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: DecoRuleta
+                Children:
+                    308d6532a500da0a65bba2edbceba9de: !ImageElement ref!! 1e7ca5da-f5dd-4824-a625-0100086dfc2a
+                    4e429b3ec29dc25db1e82c89e57276d4: !ImageElement ref!! 25e888ea-9dd2-4ea1-9ff6-38050c13b042
+                    7d12dafb232a0519ec0c1e4f5dd4c613: !ImageElement ref!! b796c609-b0f8-4732-82a0-52c97bfc6ef2
+                    ecd5a6ea92022f42c2cb5da79bd21881: !ImageElement ref!! 33078bb5-f118-4408-a10e-44fc39c59381
+                    4f0a3e53f9036505b797344d60457a6e: !ImageElement ref!! eafe2207-14b6-4f20-a4ea-02c252acb45a
+                    c3d66a859433c5669beb7168319a5107: !ImageElement ref!! c1da7b82-a818-4b05-b75e-f7d81f394744
+                    f7b4ee1a1021f45e36a679859eb335b0: !ImageElement ref!! f603571c-f0bd-40e8-8bb0-0f0be6cc6a6e
+                    fcbf269b404dd81afaf4f972b75b671f: !ImageElement ref!! 3905fcec-9d80-4b8b-a5a1-a6db943d501d
+                    98ef58636026953a9410aa7ad8d47bb2: !ImageElement ref!! da418966-c01f-4c84-96a9-356d0c5472be
+                    9284dbe42d158a5b705c527e49a98ad8: !ImageElement ref!! a0e655f6-26b7-4d08-b1cf-165709ab7fbb
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
         -   UIElement: !ImageElement
                 Id: 437a8d90-8f15-4711-b5c0-325b49658374
                 DependencyProperties: {}
@@ -272,13 +390,13 @@ Hierarchy:
                 Height: 60.0
                 HorizontalAlignment: Right
                 VerticalAlignment: Bottom
-                Margin: {Right: 60.0, Bottom: 10.0}
+                Margin: {Right: 19.0, Bottom: 37.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: tope_3
                 Source: !SpriteFromTexture
-                    Texture: "03c66b25-d2c7-4121-86d9-4e5f7b912b87:Texturas/Círculo"
+                    Texture: "544f8ec8-cb8e-46d6-8873-ba73ab7cef86:Texturas/Interfaz/BaseHexágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
         -   UIElement: !ImageElement
@@ -389,6 +507,23 @@ Hierarchy:
                     Texture: "544f8ec8-cb8e-46d6-8873-ba73ab7cef86:Texturas/Interfaz/BaseHexágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 0, G: 0, B: 255, A: 255}
+        -   UIElement: !ImageElement
+                Id: 5d795353-2e44-4827-a168-91e775069937
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 60.0
+                Height: 60.0
+                HorizontalAlignment: Center
+                VerticalAlignment: Top
+                Margin: {Right: 60.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: tope_9
+                Source: !SpriteFromTexture
+                    Texture: "544f8ec8-cb8e-46d6-8873-ba73ab7cef86:Texturas/Interfaz/BaseHexágono"
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 255, A: 255}
         -   UIElement: !Grid
                 Id: 5e965bb6-3ca8-4af8-917a-ac5df369cba0
                 DependencyProperties: {}
@@ -433,15 +568,15 @@ Hierarchy:
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 60.0
                 Height: 60.0
-                HorizontalAlignment: Right
+                HorizontalAlignment: Center
                 VerticalAlignment: Top
-                Margin: {Right: 60.0}
+                Margin: {Left: 60.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: tope_0
                 Source: !SpriteFromTexture
-                    Texture: "03c66b25-d2c7-4121-86d9-4e5f7b912b87:Texturas/Círculo"
+                    Texture: "544f8ec8-cb8e-46d6-8873-ba73ab7cef86:Texturas/Interfaz/BaseHexágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
         -   UIElement: !ImageElement
@@ -685,16 +820,33 @@ Hierarchy:
                 Width: 60.0
                 Height: 60.0
                 HorizontalAlignment: Left
-                VerticalAlignment: Top
-                Margin: {Left: 60.0}
+                Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: tope_7
                 Source: !SpriteFromTexture
-                    Texture: "03c66b25-d2c7-4121-86d9-4e5f7b912b87:Texturas/Círculo"
+                    Texture: "544f8ec8-cb8e-46d6-8873-ba73ab7cef86:Texturas/Interfaz/BaseHexágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
+        -   UIElement: !ImageElement
+                Id: a0e655f6-26b7-4d08-b1cf-165709ab7fbb
+                DependencyProperties:
+                    914e5f21e06093412de3151de7c09fee~Panel.ZIndexPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 60.0
+                Height: 60.0
+                HorizontalAlignment: Center
+                VerticalAlignment: Top
+                Margin: {Right: 60.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: 
+                Source: !SpriteFromTexture
+                    Texture: "ad498f2e-9e92-46b3-a8ef-9b75cf038835:Texturas/Interfaz/Hexágono"
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 99, A: 255}
         -   UIElement: !ImageElement
                 Id: a16dd6fb-5cec-4f00-88a5-9a26c384fdc4
                 DependencyProperties: {}
@@ -702,14 +854,13 @@ Hierarchy:
                 Width: 60.0
                 Height: 60.0
                 HorizontalAlignment: Right
-                VerticalAlignment: Bottom
-                Margin: {Right: 10.0, Bottom: 60.0}
+                Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: tope_2
                 Source: !SpriteFromTexture
-                    Texture: "03c66b25-d2c7-4121-86d9-4e5f7b912b87:Texturas/Círculo"
+                    Texture: "544f8ec8-cb8e-46d6-8873-ba73ab7cef86:Texturas/Interfaz/BaseHexágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
         -   UIElement: !ImageElement
@@ -758,13 +909,13 @@ Hierarchy:
                 Height: 60.0
                 HorizontalAlignment: Right
                 VerticalAlignment: Top
-                Margin: {Top: 50.0, Right: 10.0}
+                Margin: {Top: 37.0, Right: 19.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: tope_1
                 Source: !SpriteFromTexture
-                    Texture: "03c66b25-d2c7-4121-86d9-4e5f7b912b87:Texturas/Círculo"
+                    Texture: "544f8ec8-cb8e-46d6-8873-ba73ab7cef86:Texturas/Interfaz/BaseHexágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
         -   UIElement: !ImageElement
@@ -786,17 +937,34 @@ Hierarchy:
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 60.0
                 Height: 60.0
-                HorizontalAlignment: Left
+                HorizontalAlignment: Center
                 VerticalAlignment: Bottom
-                Margin: {Left: 60.0, Bottom: 10.0}
+                Margin: {Left: 60.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: tope_4
                 Source: !SpriteFromTexture
-                    Texture: "03c66b25-d2c7-4121-86d9-4e5f7b912b87:Texturas/Círculo"
+                    Texture: "544f8ec8-cb8e-46d6-8873-ba73ab7cef86:Texturas/Interfaz/BaseHexágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
+        -   UIElement: !ImageElement
+                Id: b796c609-b0f8-4732-82a0-52c97bfc6ef2
+                DependencyProperties:
+                    35f84d8374923dfd1684041073556f00~Panel.ZIndexPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 60.0
+                Height: 60.0
+                HorizontalAlignment: Right
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: 
+                Source: !SpriteFromTexture
+                    Texture: "ad498f2e-9e92-46b3-a8ef-9b75cf038835:Texturas/Interfaz/Hexágono"
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 99, A: 255}
         -   UIElement: !ImageElement
                 Id: b9815ee2-1563-4c0c-946f-00634208ca7a
                 DependencyProperties: {}
@@ -866,6 +1034,24 @@ Hierarchy:
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
         -   UIElement: !ImageElement
+                Id: c1da7b82-a818-4b05-b75e-f7d81f394744
+                DependencyProperties:
+                    b41263b70ff62e632959f4513f7a5581~Panel.ZIndexPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 60.0
+                Height: 60.0
+                HorizontalAlignment: Center
+                VerticalAlignment: Bottom
+                Margin: {Right: 60.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: 
+                Source: !SpriteFromTexture
+                    Texture: "ad498f2e-9e92-46b3-a8ef-9b75cf038835:Texturas/Interfaz/Hexágono"
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 99, A: 255}
+        -   UIElement: !ImageElement
                 Id: cef0585d-3ff2-434d-87e3-9a612506ba5d
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
@@ -899,14 +1085,14 @@ Hierarchy:
                 Width: 60.0
                 Height: 60.0
                 HorizontalAlignment: Left
-                VerticalAlignment: Top
-                Margin: {Top: 60.0}
+                VerticalAlignment: Bottom
+                Margin: {Left: 19.0, Bottom: 37.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: tope_6
                 Source: !SpriteFromTexture
-                    Texture: "03c66b25-d2c7-4121-86d9-4e5f7b912b87:Texturas/Círculo"
+                    Texture: "544f8ec8-cb8e-46d6-8873-ba73ab7cef86:Texturas/Interfaz/BaseHexágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
         -   UIElement: !ImageElement
@@ -942,6 +1128,24 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
+        -   UIElement: !ImageElement
+                Id: da418966-c01f-4c84-96a9-356d0c5472be
+                DependencyProperties:
+                    4a7905fe6417454d5579129c8d0b7e17~Panel.ZIndexPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 60.0
+                Height: 60.0
+                HorizontalAlignment: Left
+                VerticalAlignment: Top
+                Margin: {Left: 19.0, Top: 37.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: 
+                Source: !SpriteFromTexture
+                    Texture: "ad498f2e-9e92-46b3-a8ef-9b75cf038835:Texturas/Interfaz/Hexágono"
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 99, A: 255}
         -   UIElement: !Grid
                 Id: db3775bf-afdc-4626-b6aa-145189c6867c
                 DependencyProperties: {}
@@ -1069,6 +1273,24 @@ Hierarchy:
                 BasePartAsset: ec94a22e-f511-4b8e-a71e-bc8c7df21ba9:Interfaces/Librerias/Botones
                 BasePartId: e0335d05-ef36-4ac9-be60-6ba8b4da63e9
                 InstanceId: bd39051b-c8c4-4af1-8bda-c21e54bc6e46
+        -   UIElement: !ImageElement
+                Id: eafe2207-14b6-4f20-a4ea-02c252acb45a
+                DependencyProperties:
+                    74b16e9eaace6277ec94bc35fd0a6872~Panel.ZIndexPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 60.0
+                Height: 60.0
+                HorizontalAlignment: Center
+                VerticalAlignment: Bottom
+                Margin: {Left: 60.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: 
+                Source: !SpriteFromTexture
+                    Texture: "ad498f2e-9e92-46b3-a8ef-9b75cf038835:Texturas/Interfaz/Hexágono"
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 99, A: 255}
         -   UIElement: !Button
                 Id: ee1b339a-5046-4012-a449-3227bde22628
                 DependencyProperties: {}
@@ -1115,6 +1337,24 @@ Hierarchy:
                 BasePartAsset: ec94a22e-f511-4b8e-a71e-bc8c7df21ba9:Interfaces/Librerias/Botones
                 BasePartId: e91e7db3-8872-4dee-9d83-b09bc3ae5510
                 InstanceId: f4b0e085-e9e6-4558-b363-cd460381bf66
+        -   UIElement: !ImageElement
+                Id: f603571c-f0bd-40e8-8bb0-0f0be6cc6a6e
+                DependencyProperties:
+                    aa37f7adde5be7ea371dc03c8bfff631~Panel.ZIndexPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 60.0
+                Height: 60.0
+                HorizontalAlignment: Left
+                VerticalAlignment: Bottom
+                Margin: {Left: 19.0, Bottom: 37.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: 
+                Source: !SpriteFromTexture
+                    Texture: "ad498f2e-9e92-46b3-a8ef-9b75cf038835:Texturas/Interfaz/Hexágono"
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 99, A: 255}
         -   UIElement: !UniformGrid
                 Id: f647c038-64eb-486b-862d-4249c180faf3
                 DependencyProperties: {}

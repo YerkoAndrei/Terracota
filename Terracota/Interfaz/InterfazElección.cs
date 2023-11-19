@@ -21,10 +21,13 @@ public class InterfazElección : StartupScript
 
     public Color colorAnfitrión;
     public Color colorHuesped;
+    public Color colorRuletaVacía;
+    public Color colorRuletaActiva;
 
     private ImageElement[] ruleta;
 
     private Grid gridRuleta;
+    private Grid decoRuleta;
     private TextBlock txtAnfitrión;
     private TextBlock txtHuesped;
 
@@ -53,7 +56,9 @@ public class InterfazElección : StartupScript
 
         // Ruleta
         gridRuleta = página.FindVisualChildOfType<Grid>("Ruleta");
+        decoRuleta = página.FindVisualChildOfType<Grid>("DecoRuleta");
         gridRuleta.Visibility = Visibility.Hidden;
+        decoRuleta.Visibility = Visibility.Hidden;
         ruleta = gridRuleta.FindVisualChildrenOfType<ImageElement>().ToArray();
 
         // Elecciones
@@ -124,6 +129,7 @@ public class InterfazElección : StartupScript
     {
         esperandoRuleta = false;
         gridRuleta.Visibility = Visibility.Hidden;
+        decoRuleta.Visibility = Visibility.Hidden;
         SistemaEscenas.CambiarEscena(Escenas.menú);
     }
 
@@ -194,6 +200,7 @@ public class InterfazElección : StartupScript
         ApagarRuleta();
         esperandoRuleta = true;
         gridRuleta.Visibility = Visibility.Visible;
+        decoRuleta.Visibility = Visibility.Visible;
 
         btnVolver.HorizontalAlignment = HorizontalAlignment.Center;
         btnVolver.Margin = new Thickness(0,0,0,30);
@@ -203,7 +210,7 @@ public class InterfazElección : StartupScript
         visorAnfitrión.Visibility = Visibility.Hidden;
         visorHuesped.Visibility = Visibility.Hidden;
 
-        var aleatorio = RangoAleatorio(40, 48);
+        var aleatorio = RangoAleatorio(40, 51);
         await MoverRuleta(aleatorio);
         await FinalizarRuleta();
         controladorPartida.ComenzarPartida(ganaAnfitrión);
@@ -211,9 +218,10 @@ public class InterfazElección : StartupScript
 
     private async Task MoverRuleta(int toques)
     {
+        int diezAntes = toques - 10;
         int toqueActual = 0;
         int ruletaActual = 0;
-        int delay = 60;
+        int delay = 45;
 
         while (toqueActual < toques && esperandoRuleta)
         {
@@ -225,17 +233,17 @@ public class InterfazElección : StartupScript
 
             // Cambia colores
             ApagarRuleta();
-            ruleta[ruletaActual].Color = Color.Green;
+            ruleta[ruletaActual].Color = colorRuletaActiva;
 
             // Últimos van más lento
-            if (toqueActual >= 30)
+            if (toqueActual >= diezAntes)
                 delay += 40;
 
             await Task.Delay(delay);
         }
 
         // Ganador
-        ganaAnfitrión = (ruletaActual > 3);
+        ganaAnfitrión = (ruletaActual > ((ruleta.Length / 2) - 1));
 
         // Fin
         await Task.Delay(500);
@@ -246,6 +254,7 @@ public class InterfazElección : StartupScript
         btnVolver.Visibility = Visibility.Hidden;
         btnAleatorio.Visibility = Visibility.Hidden;
         gridRuleta.Visibility = Visibility.Hidden;
+        decoRuleta.Visibility = Visibility.Hidden;
 
         if (ganaAnfitrión)
         {
@@ -272,7 +281,7 @@ public class InterfazElección : StartupScript
     {
         for(int i=0; i < ruleta.Length; i++)
         {
-            ruleta[i].Color = Color.White;
+            ruleta[i].Color = colorRuletaVacía;
         }
     }
 }
