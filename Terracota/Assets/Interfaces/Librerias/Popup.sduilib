@@ -201,6 +201,7 @@ Hierarchy:
                 Children:
                     eb9c6a17c60a854de710aadd64311cf4: !ImageElement ref!! 2f31916d-b73d-4995-85f0-c307bcac2d10
                     c1c659c917e0565b8058b2e2a13db88a: !TextBlock ref!! 3e8e7108-6857-488c-846a-76b7f803cd78
+                    a850874a8dbb484738a2e704af35f756: !TextBlock ref!! 5b51525b-9f8b-4f74-b946-6b43b6208ed0
                     f68549e47739107ede848bacb2fd9b74: !Grid ref!! 6fe20f17-b072-4ee4-9aa2-018964f26a8d
                     1a2977f7d7e60aa7c66fed0cd38ba94e: !Grid ref!! 9527647e-0237-4bb6-9c1b-f4e3b84f72a7
                     d7d477cb94167431e7492d6b1cc07b3c: !Grid ref!! 61d31776-4f15-45b3-b916-6af8df6291cb
@@ -216,7 +217,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: txtPregunta
+                Name: txtPregunta 0
                 Text: pregunta lorem ipsum dolor sit amet
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
                 TextSize: 30.0
@@ -241,6 +242,23 @@ Hierarchy:
                 BasePartAsset: ec94a22e-f511-4b8e-a71e-bc8c7df21ba9:Interfaces/Librerias/Botones
                 BasePartId: 80cae4d6-68bf-4f50-82f4-05bcf2f75ce7
                 InstanceId: 9d5e889a-6061-46d8-a356-675c0ec90c93
+        -   UIElement: !TextBlock
+                Id: 5b51525b-9f8b-4f74-b946-6b43b6208ed0
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 800.0
+                Height: 35.0
+                Margin: {Top: 67.5, Bottom: 97.5}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtPregunta 1
+                Text: 00
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 30.0
+                TextColor: {R: 255, G: 255, B: 255, A: 255}
+                TextAlignment: Center
+                WrapText: true
         -   UIElement: !Grid
                 Id: 61d31776-4f15-45b3-b916-6af8df6291cb
                 DependencyProperties: {}

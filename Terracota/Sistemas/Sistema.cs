@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Graphics;
@@ -12,6 +13,8 @@ using static Constantes;
 
 public static class Sistema
 {
+    private static string ISO8006 = "yyyy-MM-ddThh:mm:ss";
+
     public static float RangoAleatorio(float min, float max)
     {
         var aleatorio = new Random();
@@ -176,7 +179,7 @@ public static class Sistema
         botón.Click += (sender, e) => { action.Invoke(); };
     }
 
-    public static void ConfigurarRanuraCreación(Grid grid, int fila, int ranura, string miniaturaB64, Action enCargar, Action enSobreescribir, Action enElminar)
+    public static void ConfigurarRanuraCreación(Grid grid, int fila, string nombre, string miniaturaB64, Action enCargar, Action enSobreescribir, Action enElminar)
     {
         // Busca contenido dentro del "grid botón"
         ConfigurarBotón(grid, enCargar);
@@ -191,14 +194,14 @@ public static class Sistema
         ConfigurarBotón(btnSobreescribir, enSobreescribir);
 
         // Visual
-        texto.Text = ranura.ToString();
+        texto.Text = nombre;
         grid.SetGridRow(fila);
 
         // Miniatura
         //miniatura.Source = ConvertirB64(miniaturaB64);
     }
 
-    public static void ConfigurarRanuraVacíaCreación(Grid grid, int fila, int ranura, string miniaturaB64, Action enCargar)
+    public static void ConfigurarRanuraVacíaCreación(Grid grid, int fila, string nombre, string miniaturaB64, Action enCargar)
     {
         // Busca contenido dentro del "grid botón"
         ConfigurarBotón(grid, enCargar);
@@ -210,14 +213,14 @@ public static class Sistema
         grid.FindVisualChildOfType<Grid>("btnSobreescribir").Visibility = Visibility.Hidden;
 
         // Visual
-        texto.Text = ranura.ToString();
+        texto.Text = nombre;
         grid.SetGridRow(fila);
 
         // Miniatura
         //miniatura.Source = ConvertirB64(miniaturaB64);
     }
 
-    public static void ConfigurarRanuraElección(Grid grid, int fila, int ranura, string miniaturaB64, Action enClic)
+    public static void ConfigurarRanuraElección(Grid grid, int fila, string nombre, string miniaturaB64, Action enClic)
     {
         // Busca contenido dentro del "grid botón"
         ConfigurarBotón(grid, enClic);
@@ -225,7 +228,7 @@ public static class Sistema
         var texto = grid.FindVisualChildOfType<TextBlock>("txt");
 
         // Visual
-        texto.Text = ranura.ToString();
+        texto.Text = nombre;
         grid.SetGridRow(fila);
 
         // Miniatura
@@ -240,10 +243,17 @@ public static class Sistema
         return sprite;
     }
 
-    public static void ConfigurarPop(Grid grid, string pregunta, Action enClicSí, Action enClicNo)
+    public static void ConfigurarPopup(Grid grid, string pregunta0, string pregunta1, Action enClicSí, Action enClicNo)
     {
-        grid.FindVisualChildOfType<TextBlock>("txtPregunta").Text = pregunta;
+        grid.FindVisualChildOfType<TextBlock>("txtPregunta 0").Text = pregunta0;
+        grid.FindVisualChildOfType<TextBlock>("txtPregunta 1").Text = pregunta1;
         ConfigurarBotón(grid.FindVisualChildOfType<Grid>("btnSí"), enClicSí);
         ConfigurarBotón(grid.FindVisualChildOfType<Grid>("btnNo"), enClicNo);
+    }
+
+    public static string FormatearFechaEstándar(DateTime fecha)
+    {
+        var fechaHora = fecha.ToString(ISO8006);
+        return fechaHora;
     }
 }

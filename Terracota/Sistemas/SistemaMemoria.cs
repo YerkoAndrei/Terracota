@@ -7,6 +7,7 @@ using Stride.Engine;
 using Newtonsoft.Json;
 
 namespace Terracota;
+using static Sistema;
 using static Constantes;
 
 public class SistemaMemoria : StartupScript
@@ -46,30 +47,36 @@ public class SistemaMemoria : StartupScript
             fortalezas.AddRange(JsonConvert.DeserializeObject<List<Fortaleza>>(desencriptado));
 
             // Orden
-            fortalezas = fortalezas.OrderBy(o => o.ranura).ToList();
+            fortalezas = fortalezas.OrderBy(o => o.Fecha).ToList();
         }
         return fortalezas;
     }
 
-    public static bool GuardarFortaleza(ElementoCreación[] bloques, int ranura, string miniatura)
+    public static bool GuardarFortaleza(bool sobreescribir, ElementoCreación[] bloques, string nombre, string miniatura)
     {
         var fortalezas = CargarFortalezas(false);
 
+        // sobreescribe o niega escritura
+        var fortalezaEnRanura = fortalezas.Where(o => o.Nombre == nombre).FirstOrDefault();
+        if (fortalezaEnRanura != null)
+        {
+            if (sobreescribir)
+                fortalezas.Remove(fortalezaEnRanura);
+            else
+                return false;
+        }
+
         // Crea nueva fortaleza
         var nuevaFortaleza = new Fortaleza();
-        nuevaFortaleza.bloques = new List<Bloque>();
-        nuevaFortaleza.ranura = ranura;
-        nuevaFortaleza.miniatura = miniatura;
+        nuevaFortaleza.Nombre = nombre;
+        nuevaFortaleza.Fecha = FormatearFechaEstándar(DateTime.Now);
+        nuevaFortaleza.Miniatura = miniatura;
+        nuevaFortaleza.Bloques = new List<Bloque>();
         for (int i = 0; i < bloques.Length; i++)
         {
             var bloque = new Bloque(bloques[i].ObtenerTipo(), bloques[i].ObtenerEstatua(), bloques[i].ObtenerPosiciónRelativa(), bloques[i].ObtenerRotación());
-            nuevaFortaleza.bloques.Add(bloque);
+            nuevaFortaleza.Bloques.Add(bloque);
         }
-
-        // Elimina ranura si existe
-        var fortalezaEnRanura = fortalezas.Where(o => o.ranura == ranura).FirstOrDefault();
-        if (fortalezaEnRanura != null)
-            fortalezas.Remove(fortalezaEnRanura);
 
         // Agrega nueva fortaleza
         fortalezas.Add(nuevaFortaleza);
@@ -85,27 +92,16 @@ public class SistemaMemoria : StartupScript
         catch { return false; }
     }
 
-    public static Fortaleza ObtenerFortaleza(int ranura)
+    public static Fortaleza ObtenerFortaleza(string nombre)
     {
         var fortalezas = CargarFortalezas(true);
-        return fortalezas.Where(o => o.ranura == ranura).FirstOrDefault();
+        return fortalezas.Where(o => o.Nombre == nombre).FirstOrDefault();
     }
 
-    public static int ObtenerRanuraMásAlta()
+    public static bool EliminarFortaleza(string nombre)
     {
         var fortalezas = CargarFortalezas(false);
-        fortalezas = fortalezas.OrderBy(o => o.ranura).ToList();
-
-        if(fortalezas.Count > 0)
-            return fortalezas[^1].ranura;
-        else
-            return 0;
-    }
-
-    public static bool EliminarFortaleza(int ranura)
-    {
-        var fortalezas = CargarFortalezas(false);
-        var fortaleza = fortalezas.Where(o => o.ranura == ranura).FirstOrDefault();
+        var fortaleza = fortalezas.Where(o => o.Nombre == nombre).FirstOrDefault();
 
         if (fortaleza == null)
             return false;

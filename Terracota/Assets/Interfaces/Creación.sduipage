@@ -154,6 +154,22 @@ Hierarchy:
                 BasePartAsset: c5c6bedf-79c4-4adf-93db-78418f43e546:Interfaces/Librerias/Popup
                 BasePartId: 41702464-64d0-4ebb-9bbe-3e3bc8fb070a
                 InstanceId: 422e8f80-0da9-4b55-8c56-4b858d3c994a
+        -   UIElement: !TextBlock
+                Id: 2100892c-2fb5-4f72-98ec-08ab6c077588
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 25.0
+                VerticalAlignment: Bottom
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtMensaje
+                Text: mensaje
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 20.0
+                TextColor: {R: 255, G: 0, B: 0, A: 255}
+                TextAlignment: Center
         -   UIElement: !Grid
                 Id: 21f2eb3e-19d2-4a18-8954-5dc6b221d3b5
                 DependencyProperties: {}
@@ -170,6 +186,7 @@ Hierarchy:
                     f68549e47739107ede848bacb2fd9b74: !Grid ref!! 8d9f1443-4f47-483e-a832-7fa04ad0b597
                     1a2977f7d7e60aa7c66fed0cd38ba94e: !Grid ref!! b9eaa1dd-29bf-45a0-a5ac-8e7be893b6d4
                     d7d477cb94167431e7492d6b1cc07b3c: !Grid ref!! 127343f9-1948-40a8-9061-6e658f930091
+                    b33742183d1c8469f0bff4ffedf0eba8: !TextBlock ref!! 2963005d-5b52-4b0f-9c38-e2530628eba3
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -262,6 +279,27 @@ Hierarchy:
             Base:
                 BasePartAsset: c5c6bedf-79c4-4adf-93db-78418f43e546:Interfaces/Librerias/Popup
                 BasePartId: a872467a-f9e0-4d16-ad71-0b32b031f5ef
+                InstanceId: 422e8f80-0da9-4b55-8c56-4b858d3c994a
+        -   UIElement: !TextBlock
+                Id: 2963005d-5b52-4b0f-9c38-e2530628eba3
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 800.0
+                Height: 35.0
+                Margin: {Top: 67.5, Bottom: 97.5}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtPregunta 1
+                Text: 00
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 30.0
+                TextColor: {R: 255, G: 255, B: 255, A: 255}
+                TextAlignment: Center
+                WrapText: true
+            Base:
+                BasePartAsset: c5c6bedf-79c4-4adf-93db-78418f43e546:Interfaces/Librerias/Popup
+                BasePartId: 5b51525b-9f8b-4f74-b946-6b43b6208ed0
                 InstanceId: 422e8f80-0da9-4b55-8c56-4b858d3c994a
         -   UIElement: !ImageElement
                 Id: 2b3cb0ed-c9a8-4e02-b1b7-6f271dd2e622
@@ -521,6 +559,8 @@ Hierarchy:
                 Name: PanelFortalezas
                 Children:
                     1ed6c957c5b0e29e9b0e4c6c2e7576ea: !TextBlock ref!! 825e3657-9362-4bd8-a859-832152b9daa0
+                    f206eb2060ea60118b21a5ac15632fd4: !EditText ref!! 61fc0459-4335-4929-9fbb-6765d50f40ec
+                    54a5860ffd48e90433ab7026d134fbd0: !TextBlock ref!! 2100892c-2fb5-4f72-98ec-08ab6c077588
                     cacdf8d20411034f8b053bcc26ede3a9: !Grid ref!! cd86b783-c7ac-4741-8753-a6c2b5aef91c
                     b00eef565768f70ec768ca9b1982b19e: !Grid ref!! e8b47d6f-e5e8-4787-ac73-377637cb0e68
                     87758235c36e4cdae9162d7f86672171: !ScrollViewer ref!! ad7a21a4-28af-44b0-997c-90f96c891f66
@@ -677,6 +717,43 @@ Hierarchy:
                 BasePartAsset: ec94a22e-f511-4b8e-a71e-bc8c7df21ba9:Interfaces/Librerias/Botones
                 BasePartId: e0335d05-ef36-4ac9-be60-6ba8b4da63e9
                 InstanceId: 87718ceb-931d-41f4-9a46-cac94fe31d46
+        -   UIElement: !EditText
+                Id: 61fc0459-4335-4929-9fbb-6765d50f40ec
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 5
+                CanBeHitByUser: true
+                Width: 200.0
+                Height: 60.0
+                HorizontalAlignment: Right
+                VerticalAlignment: Center
+                Margin: {Right: 20.0, Bottom: 80.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtNuevoNombre
+                Padding: {Bottom: 24.0}
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 30.0
+                TextColor: {R: 255, G: 255, B: 255, A: 255}
+                TextAlignment: Center
+                ActiveImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 3
+                InactiveImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 4
+                MouseOverImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 5
+                CaretColor: {R: 240, G: 240, B: 240, A: 255}
+                CaretWidth: 1.0
+                SelectionColor: {R: 240, G: 240, B: 240, A: 255}
+                IMESelectionColor: {R: 240, G: 255, B: 240, A: 255}
+                MaxLength: 2
+                MaxLines: 1
+                CaretFrequency: 1.0
+                Text: 00
         -   UIElement: !TextBlock
                 Id: 68ea3684-6cda-437d-8a74-60bfeb96d10c
                 DependencyProperties: {}
@@ -965,7 +1042,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: txtPregunta
+                Name: txtPregunta 0
                 Text: pregunta lorem ipsum dolor sit amet
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
                 TextSize: 30.0
@@ -1270,7 +1347,7 @@ Hierarchy:
                 Height*: 60.0
                 HorizontalAlignment: Right
                 VerticalAlignment: Center
-                Margin: {Right: 20.0}
+                Margin: {Top: 80.0, Right: 20.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38

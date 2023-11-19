@@ -79,9 +79,10 @@ public static class Constantes
         };
         var fortaleza = new Fortaleza
         {
-            ranura = 0,
-            miniatura = string.Empty,
-            bloques = bloques
+            Nombre = string.Empty,
+            Fecha = "1996-02-08T00:00:00",
+            Miniatura = string.Empty,
+            Bloques = bloques
         };
         return fortaleza;
     }

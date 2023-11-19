@@ -40,31 +40,31 @@ public class ControladorFortaleza : StartupScript
         var índiceCortos = 0;
         var índiceLargos = 0;
 
-        foreach (var bloque in fortaleza.bloques)
+        foreach (var bloque in fortaleza.Bloques)
         {
-            switch(bloque.tipoBloque)
+            switch(bloque.TipoBloque)
             {
                 case TipoBloque.estatua:
-                    switch (bloque.tipoEstatua)
+                    switch (bloque.TipoEstatua)
                     {
                         case TipoEstatua.chimpancé: // 0
-                            estatuas[índiceEstatuas].Posicionar(bloque.posición, bloque.rotación);
+                            estatuas[índiceEstatuas].Posicionar(bloque.Posición, bloque.Rotación);
                             break;
                         case TipoEstatua.gorila:    // 1
-                            estatuas[índiceEstatuas].Posicionar(bloque.posición, bloque.rotación);
+                            estatuas[índiceEstatuas].Posicionar(bloque.Posición, bloque.Rotación);
                             break;
                         case TipoEstatua.orangután: // 2
-                            estatuas[índiceEstatuas].Posicionar(bloque.posición, bloque.rotación);
+                            estatuas[índiceEstatuas].Posicionar(bloque.Posición, bloque.Rotación);
                             break;
                     }
                     índiceEstatuas++;
                     break;
                 case TipoBloque.corto:
-                    cortos[índiceCortos].Posicionar(bloque.posición, bloque.rotación);
+                    cortos[índiceCortos].Posicionar(bloque.Posición, bloque.Rotación);
                     índiceCortos++;
                     break;
                 case TipoBloque.largo:
-                    largos[índiceLargos].Posicionar(bloque.posición, bloque.rotación);
+                    largos[índiceLargos].Posicionar(bloque.Posición, bloque.Rotación);
                     índiceLargos++;
                     break;
             }

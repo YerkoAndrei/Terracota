@@ -129,40 +129,40 @@ public class ControladorCreación : SyncScript
         sensor.ReiniciarCuerpo(bloqueActual.tipoBloque, bloqueActual.ObtenerRotación());
     }
 
-    public void EnClicCargarFortaleza(int ranura)
+    public void EnClicCargarFortaleza(string nombre)
     {
-        var fortalezaCargada = SistemaMemoria.ObtenerFortaleza(ranura);
+        var fortalezaCargada = SistemaMemoria.ObtenerFortaleza(nombre);
 
         // Bloques
         var índiceEstatuas = 0;
         var índiceCortos = 0;
         var índiceLargos = 0;
 
-        foreach (var bloque in fortalezaCargada.bloques)
+        foreach (var bloque in fortalezaCargada.Bloques)
         {
-            switch (bloque.tipoBloque)
+            switch (bloque.TipoBloque)
             {
                 case TipoBloque.estatua:
-                    switch (bloque.tipoEstatua)
+                    switch (bloque.TipoEstatua)
                     {
                         case TipoEstatua.chimpancé: // 0
-                            estatuas[índiceEstatuas].ForzarPosición((bloque.posición + fortaleza.Position), bloque.rotación);
+                            estatuas[índiceEstatuas].ForzarPosición((bloque.Posición + fortaleza.Position), bloque.Rotación);
                             break;
                         case TipoEstatua.gorila:    // 1
-                            estatuas[índiceEstatuas].ForzarPosición((bloque.posición + fortaleza.Position), bloque.rotación);
+                            estatuas[índiceEstatuas].ForzarPosición((bloque.Posición + fortaleza.Position), bloque.Rotación);
                             break;
                         case TipoEstatua.orangután: // 2
-                            estatuas[índiceEstatuas].ForzarPosición((bloque.posición + fortaleza.Position), bloque.rotación);
+                            estatuas[índiceEstatuas].ForzarPosición((bloque.Posición + fortaleza.Position), bloque.Rotación);
                             break;
                     }
                     índiceEstatuas++;
                     break;
                 case TipoBloque.corto:
-                    cortos[índiceCortos].ForzarPosición((bloque.posición + fortaleza.Position), bloque.rotación);
+                    cortos[índiceCortos].ForzarPosición((bloque.Posición + fortaleza.Position), bloque.Rotación);
                     índiceCortos++;
                     break;
                 case TipoBloque.largo:
-                    largos[índiceLargos].ForzarPosición((bloque.posición + fortaleza.Position), bloque.rotación);
+                    largos[índiceLargos].ForzarPosición((bloque.Posición + fortaleza.Position), bloque.Rotación);
                     índiceLargos++;
                     break;
             }
@@ -199,11 +199,13 @@ public class ControladorCreación : SyncScript
             bloquesListos.Add(código);
     }
 
-    public bool EnClicGuardar(int ranura)
+    public bool VerificarPosibleGuardar()
     {
-        if(bloquesListos.Count < bloques.Count)
-            return false;
+        return (bloquesListos.Count == bloques.Count);
+    }
 
+    public bool EnClicGuardar(string nombre, bool sobreescribir)
+    {
         // Posición respecto a la fortaleza
         foreach (var bloque in bloques)
         {
@@ -213,7 +215,7 @@ public class ControladorCreación : SyncScript
         // PENDIENTE: crear o sacar miniatura
 
         // Guardado
-        return SistemaMemoria.GuardarFortaleza(bloques.ToArray(), ranura, null);
+        return SistemaMemoria.GuardarFortaleza(sobreescribir, bloques.ToArray(), nombre, null);
     }
 
     public void EnClicGirarPieza()

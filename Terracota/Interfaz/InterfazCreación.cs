@@ -1,4 +1,5 @@
-﻿using Stride.Engine;
+﻿using System.Threading.Tasks;
+using Stride.Engine;
 using Stride.UI;
 using Stride.UI.Controls;
 using Stride.UI.Panels;
@@ -13,6 +14,8 @@ public class InterfazCreación : StartupScript
     public UILibrary prefabRanura;
 
     private UIElement página;
+    private TextBlock txtMensaje;
+    private EditText txtNuevoNombre;
     private Grid gridFortalezas;
     private Grid popup;
 
@@ -20,6 +23,12 @@ public class InterfazCreación : StartupScript
     {
         página = Entity.Get<UIComponent>().Page.RootElement;
         ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("PanelOscuro"), EnClicFortalezas);
+
+        // Textos
+        txtMensaje = página.FindVisualChildOfType<TextBlock>("txtMensaje");
+        txtNuevoNombre = página.FindVisualChildOfType<EditText>("txtNuevoNombre");
+        txtMensaje.Text = string.Empty;
+        txtNuevoNombre.Text = string.Empty;
 
         // Popup
         popup = página.FindVisualChildOfType<Grid>("Popup");
@@ -68,24 +77,24 @@ public class InterfazCreación : StartupScript
             // Fortaleza vacía
             if (i == 0)
             {
-                ConfigurarRanuraVacíaCreación(nuevaRanura, i, fortalezaTemp.ranura, fortalezaTemp.miniatura,
-                    () => EnClicCargarFortaleza(fortalezaTemp.ranura));
+                ConfigurarRanuraVacíaCreación(nuevaRanura, i, fortalezaTemp.Nombre, fortalezaTemp.Miniatura,
+                    () => EnClicCargarFortaleza(fortalezaTemp.Nombre));
             }
             else
             {
-                ConfigurarRanuraCreación(nuevaRanura, i, fortalezaTemp.ranura, fortalezaTemp.miniatura,
-                    () => EnClicCargarFortaleza(fortalezaTemp.ranura),
-                    () => EnClicGuardar(fortalezaTemp.ranura),
-                    () => EnClicEliminar(fortalezaTemp.ranura));
+                ConfigurarRanuraCreación(nuevaRanura, i, fortalezaTemp.Nombre, fortalezaTemp.Miniatura,
+                    () => EnClicCargarFortaleza(fortalezaTemp.Nombre),
+                    () => EnClicGuardar(fortalezaTemp.Nombre),
+                    () => EnClicEliminar(fortalezaTemp.Nombre));
             }
             padreRanuras.Height += (nuevaRanura.Height + 10);
             padreRanuras.Children.Add(nuevaRanura);
         }
     }
 
-    private void EnClicCargarFortaleza(int ranura)
+    private void EnClicCargarFortaleza(string nombre)
     {
-        controladorCreación.EnClicCargarFortaleza(ranura);
+        controladorCreación.EnClicCargarFortaleza(nombre);
     }
 
     private void EnClicMoverCámara(bool derecha)
@@ -120,30 +129,43 @@ public class InterfazCreación : StartupScript
 
     private void EnClicGuardarNueva()
     {
-        if (controladorCreación.EnClicGuardar(SistemaMemoria.ObtenerRanuraMásAlta() + 1))
+        var nombre = txtNuevoNombre.Text;
+        if (string.IsNullOrEmpty(nombre))
         {
+            MostrarMensaje("Nombre no puede estar vacío");
+            return;
+        }
+
+        if (!controladorCreación.VerificarPosibleGuardar())
+        {
+            MostrarMensaje("Falta colocar piezas");
+            return;
+        }
+
+        if (controladorCreación.EnClicGuardar(nombre, false))
+        {
+            txtNuevoNombre.Text = string.Empty;
             CargarFortalezas();
-            MostrarMensaje("OK");
         }
         else
-            MostrarMensaje("Todas las piezas deben estar listas.");
+            MostrarMensaje("Error al guardar");
     }
 
-    private void EnClicGuardar(int ranura)
+    private void EnClicGuardar(string nombre)
     {
-        var pregunta = string.Format("¿Desea sobreescribir fortaleza {0}?", ranura.ToString());
-        ConfigurarPop(popup, pregunta, () =>
+        var pregunta0 ="¿Desea sobreescribir fortaleza";
+        var pregunta1 = string.Format("{0}?", nombre);
+        ConfigurarPopup(popup, pregunta0, pregunta1, () =>
         {
             // Sí
-            if (controladorCreación.EnClicGuardar(ranura))
+            if (controladorCreación.EnClicGuardar(nombre, true))
             {
                 CargarFortalezas();
                 popup.Visibility = Visibility.Hidden;
-                MostrarMensaje("OK");
             }
             else
             {
-                MostrarMensaje("Error");
+                MostrarMensaje("Error al sobreescribir");
                 popup.Visibility = Visibility.Hidden;
             }
         }, () =>
@@ -154,21 +176,21 @@ public class InterfazCreación : StartupScript
         popup.Visibility = Visibility.Visible;
     }
 
-    private void EnClicEliminar(int ranura)
+    private void EnClicEliminar(string nombre)
     {
-        var pregunta = string.Format("¿Desea eliminar fortaleza {0}?", ranura.ToString());
-        ConfigurarPop(popup, pregunta, () =>
+        var pregunta0 = "¿Desea eliminar fortaleza";
+        var pregunta1 = string.Format("{0}?", nombre);
+        ConfigurarPopup(popup, pregunta0, pregunta1, () =>
         {
             // Sí
-            if(SistemaMemoria.EliminarFortaleza(ranura))
+            if(SistemaMemoria.EliminarFortaleza(nombre))
             {
                 CargarFortalezas();
                 popup.Visibility = Visibility.Hidden;
-                MostrarMensaje("OK");
             }
             else
             {
-                MostrarMensaje("Error");
+                MostrarMensaje("Error al eliminar");
                 popup.Visibility = Visibility.Hidden;
             }
         }, () =>
@@ -179,9 +201,11 @@ public class InterfazCreación : StartupScript
         popup.Visibility = Visibility.Visible;
     }
 
-    private void MostrarMensaje(string mensaje)
+    private async void MostrarMensaje(string mensaje)
     {
-        // PENDIENTE: mensaje ok
+        txtMensaje.Text = mensaje;
+        await Task.Delay(1000);
+        txtMensaje.Text = string.Empty;
     }
 
     private void EnClicSalir()

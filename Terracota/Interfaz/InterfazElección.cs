@@ -113,13 +113,13 @@ public class InterfazElección : StartupScript
 
             // Izquierda
             var nuevaRanuraAnfitrión = prefabRanura.InstantiateElement<Grid>("RanuraIzquierda");
-             ConfigurarRanuraElección(nuevaRanuraAnfitrión, i, fortalezaTemp.ranura, fortalezaTemp.miniatura, () => EnClicAnfitrión(fortalezaTemp.ranura));
+             ConfigurarRanuraElección(nuevaRanuraAnfitrión, i, fortalezaTemp.Nombre, fortalezaTemp.Miniatura, () => EnClicAnfitrión(fortalezaTemp.Nombre));
             padreRanurasAnfitrión.Height += (nuevaRanuraAnfitrión.Height + 10);
             padreRanurasAnfitrión.Children.Add(nuevaRanuraAnfitrión);
 
             // Derecha
             var nuevaRanuraHuesped = prefabRanura.InstantiateElement<Grid>("RanuraDerecha");
-            ConfigurarRanuraElección(nuevaRanuraHuesped, i, fortalezaTemp.ranura, fortalezaTemp.miniatura, () => EnClicHuesped(fortalezaTemp.ranura));
+            ConfigurarRanuraElección(nuevaRanuraHuesped, i, fortalezaTemp.Nombre, fortalezaTemp.Miniatura, () => EnClicHuesped(fortalezaTemp.Nombre));
             padreRanurasHuesped.Children.Add(nuevaRanuraHuesped);
             padreRanurasHuesped.Height += (nuevaRanuraHuesped.Height + 10);
         }
@@ -155,18 +155,18 @@ public class InterfazElección : StartupScript
         controladorPartida.ComenzarPartida(ganaAnfitrión);
     }
 
-    private int ObtenerRanuraAleatoria()
+    private string ObtenerRanuraAleatoria()
     {
         // Aleatorio no devuelve fortaleza vacía
         var fortalezas = SistemaMemoria.CargarFortalezas(false);
         if (fortalezas.Count <= 0)
-            return 0;
+            return string.Empty;
 
         var aleatorio = RangoAleatorio(0, fortalezas.Count);
-        return fortalezas[aleatorio].ranura;
+        return fortalezas[aleatorio].Nombre;
     }
 
-    private void EnClicAnfitrión(int ranura)
+    private void EnClicAnfitrión(string nombre)
     {
         if (esperandoRuleta)
             return;
@@ -175,11 +175,11 @@ public class InterfazElección : StartupScript
             BloquearBotón(btnComenzar, false);
 
         anfitriónSeleccionado = true;
-        txtAnfitrión.Text = ranura.ToString();
-        controladorPartida.CargarFortaleza(ranura, true);
+        txtAnfitrión.Text = nombre;
+        controladorPartida.CargarFortaleza(nombre, true);
     }
 
-    private void EnClicHuesped(int ranura)
+    private void EnClicHuesped(string nombre)
     {
         if (esperandoRuleta)
             return;
@@ -188,8 +188,8 @@ public class InterfazElección : StartupScript
             BloquearBotón(btnComenzar, false);
 
         huespedSeleccionado = true;
-        txtHuesped.Text = ranura.ToString();
-        controladorPartida.CargarFortaleza(ranura, false);
+        txtHuesped.Text = nombre;
+        controladorPartida.CargarFortaleza(nombre, false);
     }
 
     private async void EnClicComenzar()

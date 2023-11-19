@@ -67,9 +67,9 @@ public class ControladorPartidaLocal : SyncScript
         }
     }
 
-    public void CargarFortaleza(int ranura, bool anfitrión)
+    public void CargarFortaleza(string nombre, bool anfitrión)
     {
-        var fortaleza = SistemaMemoria.ObtenerFortaleza(ranura);
+        var fortaleza = SistemaMemoria.ObtenerFortaleza(nombre);
 
         if(anfitrión)
             fortalezaAnfitrión.Inicializar(fortaleza, true);

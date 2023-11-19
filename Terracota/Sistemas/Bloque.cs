@@ -4,23 +4,24 @@ using static Terracota.Constantes;
 
 public class Bloque
 {
-    public TipoBloque tipoBloque { get; set; }
-    public TipoEstatua tipoEstatua { get; set; }
-    public Vector3 posición { get; set; }
-    public Quaternion rotación { get; set; }
+    public TipoBloque TipoBloque { get; set; }
+    public TipoEstatua TipoEstatua { get; set; }
+    public Vector3 Posición { get; set; }
+    public Quaternion Rotación { get; set; }
 
     public Bloque (TipoBloque tipoBloque, TipoEstatua tipoEstatua, Vector3 posición, Quaternion rotación)
     {
-        this.tipoBloque = tipoBloque;
-        this.tipoEstatua = tipoEstatua;
-        this.posición = posición;
-        this.rotación = rotación;
+        TipoBloque = tipoBloque;
+        TipoEstatua = tipoEstatua;
+        Posición = posición;
+        Rotación = rotación;
     }
 }
 
 public class Fortaleza
 {
-    public int ranura { get; set; }
-    public string miniatura { get; set; }
-    public List<Bloque> bloques { get; set; }
+    public string Nombre { get; set; }
+    public string Fecha { get; set; }
+    public string Miniatura { get; set; }
+    public List<Bloque> Bloques { get; set; }
 }
