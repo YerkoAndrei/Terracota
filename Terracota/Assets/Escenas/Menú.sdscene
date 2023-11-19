@@ -15,13 +15,32 @@ Hierarchy:
     Parts:
         -   Folder: null
             Entity:
+                Id: 006fab2e-3284-44db-9783-980966bdb26a
+                Name: "Bambú 1"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: 2f8417be-52a9-4603-9f18-785bc0d92565
+                        Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
+                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
+                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: 6c89958c-bc79-45f7-9821-bd76054b784b
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: 3d29eb87-e3ff-437a-aa7d-5c92bd86eb45
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Folder: null
+            Entity:
                 Id: 031737ce-3914-49f7-98ed-2b20b43a21f4
                 Name: Bambues 1
                 Components:
                     e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
                         Id: 34a78410-db0c-474d-9c77-8606962d53ae
-                        Position: {X: -10.332775, Y: 0.0, Z: -50.85431}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Position: {X: -7.0291185, Y: 0.0, Z: -36.617207}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             3459e6065a1cb4f8e26b40f2c920a69b: ref!! 1e86b7f7-8f96-4315-aa51-aede04c50d9b
@@ -89,43 +108,6 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: 7e222b09-5877-449d-a77d-140653edf2e7
                 InstanceId: ce28e181-3d28-4000-89a6-ae77d7930396
-        -   Entity:
-                Id: 08511f29-4ac0-488f-a2b8-22fdc41dbd2e
-                Name: "Bambú 0"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 54b29328-3918-4fa8-b268-a4fbc99fd657
-                        Position: {X: -4.467354, Y: 1.9073486E-06, Z: -2.5294545}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.1, Y: 1.1, Z: 1.1}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: d3aed768-2465-42a4-9942-179fc0ccc938
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: f5f64171-29c7-4dd7-8765-1a51dfc1d73b
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 088222f1-072a-4bc0-8fbc-8582be9be415
-                Name: Bambues 28
-                Components:
-                    e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
-                        Id: bbddf2b5-3fe6-41c0-9ef5-684e3a04e8ae
-                        Position: {X: -47.50313, Y: 0.0, Z: 3.4062214}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! 08f7afa2-40e9-4576-878a-41cf6127f7eb
-                            f85ecce74adab0363728f1996ba9e779: ref!! 4711af84-128e-41f8-8374-cf3f36204b1a
-                            e30ee0499b772da2813f008470e23b27: ref!! b3daf1bb-5dd5-45c2-a673-9f019f86e95d
-                            69e4d8e6fbe4a83d889e68d31849286a: ref!! e96e793a-7d7c-4694-9ea0-7ea44911520f
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: f2108cc6-997f-4bd7-a44b-a97a1b853eb2
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
                 Id: 0a3a5e1b-82b9-406b-8212-e48854bdb5d1
@@ -133,9 +115,9 @@ Hierarchy:
                 Components:
                     3af33bf9195999601df8b7be11d8881b: !TransformComponent
                         Id: 3665a2e1-31b4-452c-8f59-6a8b1468fe34
-                        Position: {X: 52.186085, Y: 9.756144E-06, Z: 57.94571}
+                        Position: {X: -28.57082, Y: 0.0, Z: 14.092845}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Scale: {X: 0.9, Y: 0.9, Z: 0.9}
                         Children: {}
                     cc1b978ca68e9b9acee30e6d9bdb6d41: !ModelComponent
                         Id: ccdd5faa-fa67-4f36-a42e-3d7eb682e004
@@ -144,6 +126,25 @@ Hierarchy:
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: d674e1df-03b4-4709-bc64-747f54a3b7ee
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Folder: null
+            Entity:
+                Id: 0c64a39c-1e36-4973-b10f-7710eeea110f
+                Name: "Bambú 2"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: f3721ee9-89cf-42d2-9e46-955661b20517
+                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
+                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
+                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: 4e3acb3c-e866-4707-97e4-2c9444cdda39
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: 7f496b0d-586f-4e0b-9c87-4295a397ba31
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 0d3215f1-785e-4a9c-8922-0b59284f8899
@@ -171,8 +172,8 @@ Hierarchy:
                 Components:
                     e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
                         Id: c0a75740-4fa0-4517-bcd2-be71d09c9859
-                        Position: {X: 48.007523, Y: 0.0, Z: 12.96002}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Position: {X: -8.192165, Y: 0.0, Z: 38.16514}
+                        Rotation: {X: 0.0, Y: 0.6427876, Z: 0.0, W: 0.76604444}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             3459e6065a1cb4f8e26b40f2c920a69b: ref!! afb9d9af-491a-4576-84e8-174b52ca0fc1
@@ -182,6 +183,25 @@ Hierarchy:
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 8bd0b234-7ce1-4ba3-8408-e8097e8c1a70
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Folder: null
+            Entity:
+                Id: 0ef03bf3-63d9-4688-aa79-299a9f8971b3
+                Name: "Bambú 1"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: 7cc0c4ef-1241-425d-9b39-5bd9edab68e8
+                        Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
+                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
+                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: 6825f0f7-b1f5-4ee6-8058-b931a29cedce
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: 4e575a51-a57b-48af-8e1c-5c5129fc3188
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
@@ -313,32 +333,13 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 53a9d7bd-da26-48da-b926-e3ee97e5a081
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 16fe3d67-8574-485b-a65b-b183a812c002
-                Name: "Bambú 1"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: b233473d-4b67-44a4-96be-1c4a718e730d
-                        Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 7d31e55e-4f0f-4b21-a02c-3f05d5afb194
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: a93cea17-35cf-4b06-aad3-5f6f66ec3b8e
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 1755a6b3-3fb7-4871-9f54-dcb3d140adcd
                 Name: Ciruelo 3
                 Components:
                     3af33bf9195999601df8b7be11d8881b: !TransformComponent
                         Id: b380c629-21ff-4abb-bd95-fe764b4f4e84
-                        Position: {X: -33.787346, Y: 2.0, Z: 34.931526}
+                        Position: {X: 4.38881, Y: 0.0, Z: 37.21989}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -369,25 +370,6 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 07e569cd-5323-4a59-bb44-c4e15987beb8
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 1871c5d0-f9a1-4bc0-b210-64dca7d9747b
-                Name: "Bambú 3"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: a9e1fb56-2aa3-4cb3-b529-6ce353c3ce4f
-                        Position: {X: 3.197174, Y: 1.9073486E-06, Z: 2.4452407}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 36e35897-411f-4d3c-a760-5f1a26a8487e
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 4bd500cd-b07e-4ab5-88eb-84fac5d41339
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 18f9c6c2-9d44-40aa-a173-9c260eef0de2
                 Name: Ciruelos
@@ -412,60 +394,41 @@ Hierarchy:
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
-                Id: 190294e8-687b-46a5-bd82-ca64b3c291b6
-                Name: "Bambú 2"
+                Id: 19161bd4-31ea-4a68-8deb-942db0f19a71
+                Name: "Bambú 3"
                 Components:
                     067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: f2943ac7-2236-45b7-affa-b878e554b6d6
-                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: f768b4d7-3b3f-43fe-824f-ef45f7b59518
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 7bc8d13a-4416-496a-9a00-e8c2da2eefd8
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 1990bac2-4915-4529-90d3-142d1f51952c
-                Name: "Bambú 2"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 223a57cd-0425-4bf9-a40c-b303b2b1dee9
-                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: e438f03f-edf4-4825-8fa6-7b24d91b6540
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 4a6d8e72-20a3-400e-a828-9c8748cb15d5
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 19a96a4e-89b7-466a-8560-5b7e816d24d3
-                Name: Bambues 21
-                Components:
-                    e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
-                        Id: 70dd50b3-291b-4b3f-b3d9-c01b4a3c58f0
-                        Position: {X: -34.44866, Y: 0.0, Z: 57.375237}
+                        Id: 046a437e-99e5-49c3-a6ce-26b21c22fbea
+                        Position: {X: 3.197174, Y: 1.9073486E-06, Z: 2.4452407}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! 60e8b47c-23c3-42e2-9875-4f12e013662f
-                            f85ecce74adab0363728f1996ba9e779: ref!! b233473d-4b67-44a4-96be-1c4a718e730d
-                            e30ee0499b772da2813f008470e23b27: ref!! 783f203f-20f6-4c88-bc42-8eba93f65102
-                            69e4d8e6fbe4a83d889e68d31849286a: ref!! bc9572eb-2678-476a-a223-9f9b11a9346c
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: b6308bac-75fa-4460-b262-d3d10b6ee925
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 2a5ce70b-76a8-4707-98f7-cb4542b4b9b5
+                BasePartId: d5cb902c-1b08-4acd-a3ec-68d5e56fd051
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Folder: null
+            Entity:
+                Id: 1a46cf6a-e924-4eeb-a69d-60a0bf42c0cf
+                Name: "Bambú 2"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: d2b4fbe3-13a6-41c8-b68b-a27892b274a4
+                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
+                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
+                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: 0da4513f-cc18-4b94-91f6-9b92d49eb049
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: fb92a572-70f6-4790-a171-c94357f946b3
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 1ac649a8-157a-4a60-9d0c-9c4dd4254602
@@ -484,6 +447,24 @@ Hierarchy:
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: e9adb3d4-0f80-47e9-9881-ac3f0a540380
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Entity:
+                Id: 1b3cf3db-bc0d-42ef-91dd-00dedcc88434
+                Name: "Bambú 0"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: 72c0cce5-acf9-4e00-af00-074ea4464a2e
+                        Position: {X: -4.467354, Y: 1.9073486E-06, Z: -2.5294545}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.1, Y: 1.1, Z: 1.1}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: 95913ed4-78be-4554-917a-b629b1bef699
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: 72dee90f-808c-489b-b440-73f1df2fe8ef
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
@@ -523,6 +504,44 @@ Hierarchy:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
                 BasePartId: ee886422-7d41-435f-957f-79f5d52015f6
                 InstanceId: 6755a4c8-3259-4ad0-9fcc-7de2fc50db67
+        -   Folder: null
+            Entity:
+                Id: 1beb06d0-bb9a-4851-8024-d9ae128589cb
+                Name: "Bambú 3"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: 092ab2b9-224c-4d22-b40e-518f7f44bd8f
+                        Position: {X: 3.197174, Y: 1.9073486E-06, Z: 2.4452407}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: fa48dc18-13fc-4560-8764-edc6a9e69f23
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: 09ae9fef-e633-48f7-a30e-77206676de33
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Folder: null
+            Entity:
+                Id: 1bf4e691-c21a-443c-b16f-be4cd0170ad1
+                Name: "Bambú 2"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: 5f604932-dc6e-45cf-b05d-2500358db13d
+                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
+                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
+                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: dcb7d070-ff9c-4e6e-9a95-0028cfbb4030
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: 45cd45b9-77e0-4488-8607-de16840551c0
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 1d8ef40e-22fa-4976-b5e6-b9a62bc79be8
                 Name: "Ícono"
@@ -581,41 +600,22 @@ Hierarchy:
                 InstanceId: fbeb3d4c-64a1-4daa-b0be-16269248d2f8
         -   Folder: null
             Entity:
-                Id: 1fb91d79-8dcb-401e-ae0f-6bd8a5184d98
+                Id: 215c05e8-b844-408e-91ae-41193c879533
                 Name: "Bambú 3"
                 Components:
                     067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: cdecfb89-5eed-42af-915d-0d81e2d18ebf
+                        Id: a938ed86-8e4b-48e3-90b7-ad146253ff7e
                         Position: {X: 3.197174, Y: 1.9073486E-06, Z: 2.4452407}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: f3ae5de2-cf68-46e6-87ce-d8409ab27fb8
+                        Id: 893f8095-ae11-4bc6-936c-83a78e7759e9
                         Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
                         Materials: {}
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 866a4511-489f-4325-81b1-fd7bf08f6b8e
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 20dfc0dc-0b35-4414-b46c-32ff6a5cab41
-                Name: "Bambú 3"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 2675c878-f276-4960-b86f-6fa194b7413f
-                        Position: {X: 3.197174, Y: 1.9073486E-06, Z: 2.4452407}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 1c2b5f34-6599-4493-8d43-a4df5b44a1e3
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: cc0b9731-e08f-40ac-a686-88cc29d83bc2
+                BasePartId: 684da816-da09-46c6-b842-29ec760e53ce
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
@@ -661,43 +661,6 @@ Hierarchy:
                 BasePartId: ceff8796-3fea-4177-ac4f-41922dae91b4
                 InstanceId: bbccd65b-f1ad-40c5-967c-c8b7c6cc9bde
         -   Entity:
-                Id: 23518aec-503f-4d27-87e8-bf4b915f8458
-                Name: "Bambú 0"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: df1746da-883d-4356-80fb-fbeb96ce3be8
-                        Position: {X: -4.467354, Y: 1.9073486E-06, Z: -2.5294545}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.1, Y: 1.1, Z: 1.1}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 58212119-9232-478d-a9c6-ae304ace1ab3
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: e54c4d65-80c1-4356-a8ae-fdab4d3cc8be
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 23a5d93f-c733-4cbc-91de-1830ce9e2f38
-                Name: "Bambú 3"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 2c13a28a-d98b-4611-82a5-f911cf96db1f
-                        Position: {X: 3.197174, Y: 1.9073486E-06, Z: 2.4452407}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 2e240ba0-4171-4391-8665-99b83b4e79e7
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 13aafa7a-82d6-4657-93d6-f746d70ca51f
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Entity:
                 Id: 2650a7ac-cf9b-4393-8f68-d2c52fa7bfcf
                 Name: "Bambú 0"
                 Components:
@@ -733,24 +696,23 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 46f55ecf-708e-482a-9d5e-dca640c09bdb
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 2687fe58-f2ce-4c89-bcc7-aa3b4b8e4bd3
-                Name: "Bambú 1"
+        -   Entity:
+                Id: 26989758-fcd1-4278-8cfc-2f8304e31926
+                Name: "Bambú 0"
                 Components:
                     067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 812e1c55-0d4d-4b2a-bb87-71de7d4cd328
-                        Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
+                        Id: 72967860-cdf3-4b25-bc48-b36dc06e9bfc
+                        Position: {X: -4.467354, Y: 1.9073486E-06, Z: -2.5294545}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.1, Y: 1.1, Z: 1.1}
                         Children: {}
                     3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: f00add3f-023c-4865-ba85-d4ea2871fbee
+                        Id: f7c1eb32-2d58-4363-8cbc-4c421b6160bf
                         Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
                         Materials: {}
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: b29d58de-5e12-4587-889e-d72216620718
+                BasePartId: 062e912f-0182-4779-a955-5907b2bfe9f0
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 27509864-3bbd-4577-9f31-4aa5b665b6b6
@@ -811,41 +773,41 @@ Hierarchy:
                 InstanceId: ce28e181-3d28-4000-89a6-ae77d7930396
         -   Folder: null
             Entity:
-                Id: 2915cb9f-ecbd-4c40-9b96-1c187dafbe2f
-                Name: Bambues 26
+                Id: 2b9abeb6-d367-47df-9eed-699105369daa
+                Name: Bambues 31
                 Components:
                     e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
-                        Id: adb9fc0f-c2eb-40a1-8d08-c5a09e52e8eb
-                        Position: {X: -47.02552, Y: 0.0, Z: 16.619873}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Id: 1193e3fc-bd9a-4922-9f57-c4e6753ca315
+                        Position: {X: 54.696335, Y: 0.9999849, Z: 0.9687958}
+                        Rotation: {X: 0.0, Y: 0.6427876, Z: 0.0, W: 0.76604444}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! 6d069bcf-73c8-4240-9f07-3bdc4140892c
-                            f85ecce74adab0363728f1996ba9e779: ref!! f077ab6d-6b0f-40c0-b83a-4efecf677896
-                            e30ee0499b772da2813f008470e23b27: ref!! 2aea2115-d6b3-4872-8f51-9ce711473e7e
-                            69e4d8e6fbe4a83d889e68d31849286a: ref!! d3d5e7e4-c777-4d88-bc78-77b328708449
+                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! ba2b43d9-0604-46ba-b887-7bbc38385e38
+                            f85ecce74adab0363728f1996ba9e779: ref!! d5a2772e-43b9-476e-ac47-cf6a9389a35d
+                            e30ee0499b772da2813f008470e23b27: ref!! d2b4fbe3-13a6-41c8-b68b-a27892b274a4
+                            69e4d8e6fbe4a83d889e68d31849286a: ref!! 57864a12-8373-4fe7-a2e0-dee72ac09f1c
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 17682a31-679d-47c1-b482-22d7f7e73727
+                BasePartId: b029ece7-75b8-49ce-8a4b-2cbfe40fe6c7
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
-                Id: 2bef2042-bd45-4141-a015-ff144f6aba6f
-                Name: Bambues 34
+                Id: 2c974f39-6088-4fb5-ad7e-714491c85e87
+                Name: "Bambú 3"
                 Components:
-                    e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
-                        Id: 97bc4b07-a51d-43da-807a-ff768df533ce
-                        Position: {X: -55.46317, Y: 0.0, Z: -55.816414}
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: e2d5936e-f757-41f9-a673-8dd274ebf227
+                        Position: {X: 3.197174, Y: 1.9073486E-06, Z: 2.4452407}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! 978dc970-4599-4bda-9db7-bfc788a8947d
-                            f85ecce74adab0363728f1996ba9e779: ref!! 9a5e74a1-d950-49d5-9499-4592b0849781
-                            e30ee0499b772da2813f008470e23b27: ref!! f2943ac7-2236-45b7-affa-b878e554b6d6
-                            69e4d8e6fbe4a83d889e68d31849286a: ref!! 2c13a28a-d98b-4611-82a5-f911cf96db1f
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: 42bd4bcb-e6b5-447d-a64a-2530c38773df
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 2a12bd5d-a8d7-4f9a-ae05-a9463b5965ae
+                BasePartId: bc5324d5-587a-407c-95dd-345327d78cb5
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 2cf75133-6f09-4f03-805e-df017e43e62e
@@ -892,17 +854,34 @@ Hierarchy:
                 Components:
                     e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
                         Id: e3a46fba-1353-4551-84ed-6d3bd18d5c40
-                        Position: {X: 35.918022, Y: 0.0, Z: 56.89762}
+                        Position: {X: -26.284645, Y: 0.0, Z: -27.150244}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             3459e6065a1cb4f8e26b40f2c920a69b: ref!! 67034eab-9c0a-474d-9347-69638d9f0f84
-                            f85ecce74adab0363728f1996ba9e779: ref!! b5e279b6-c193-4665-8dc0-b1bdc88aa5f8
                             e30ee0499b772da2813f008470e23b27: ref!! e576e02a-2ec6-48dc-a47e-2025233c73c3
                             69e4d8e6fbe4a83d889e68d31849286a: ref!! e36f0c5c-57c6-411e-b0aa-0b9455c3bdd6
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: fb00498b-02c4-4007-8627-f1840051c607
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Entity:
+                Id: 3063a4d6-dc7b-4a9c-9f9b-a90f505b0bf9
+                Name: "Bambú 0"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: ba2b43d9-0604-46ba-b887-7bbc38385e38
+                        Position: {X: -4.467354, Y: 1.9073486E-06, Z: -2.5294545}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.1, Y: 1.1, Z: 1.1}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: bedecd74-0694-4595-9974-ab707dabaf38
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: 72cd040d-906b-475e-9b3e-ce2013d3fd3d
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
@@ -922,25 +901,6 @@ Hierarchy:
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: e1cfa403-8457-4521-8e3d-c20a030d3b76
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 31183fed-4758-413c-b7ff-2b5add5fa4cb
-                Name: Bambues 23
-                Components:
-                    e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
-                        Id: 060c462e-c6c3-4903-9c62-f73baf8e7ef9
-                        Position: {X: -54.66714, Y: 0.0, Z: 45.912796}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! 88183493-11b2-48d7-b837-56cdf7335528
-                            f85ecce74adab0363728f1996ba9e779: ref!! b44c2361-5e40-48d1-8411-593ddbab7f92
-                            e30ee0499b772da2813f008470e23b27: ref!! 17fe1dd1-ac94-4ea3-9695-16d8eb71d032
-                            69e4d8e6fbe4a83d889e68d31849286a: ref!! cdecfb89-5eed-42af-915d-0d81e2d18ebf
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 37dd6833-f14b-446a-a0b6-701b43e2d396
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 32335488-55e5-4fd0-930c-280f25e056ca
@@ -962,14 +922,33 @@ Hierarchy:
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
+                Id: 32fd7949-ad48-4295-a3a5-f1d916505937
+                Name: "Bambú 1"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: 2c0d40f9-06ac-49bb-973f-1e68075dc25e
+                        Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
+                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
+                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: da1e2b4e-ef72-41a5-b127-db7b956e1cc8
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: 53212cc7-aa10-43ae-8f9d-6efed85e4de8
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Folder: null
+            Entity:
                 Id: 330a66f0-277f-4749-8fde-354aaf8a7669
                 Name: Ciruelo 7
                 Components:
                     3af33bf9195999601df8b7be11d8881b: !TransformComponent
                         Id: 15c58c93-a884-4c24-99f7-d5fe504b78a9
-                        Position: {X: 75.30995, Y: 4.0, Z: -76.38986}
+                        Position: {X: -23.35619, Y: 0.0, Z: -34.75341}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Scale: {X: 1.1, Y: 1.1, Z: 1.1}
                         Children: {}
                     cc1b978ca68e9b9acee30e6d9bdb6d41: !ModelComponent
                         Id: f1d222ea-41bd-4dc0-8128-9c15b70e7e0a
@@ -1024,7 +1003,7 @@ Hierarchy:
                 Components:
                     e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
                         Id: d05b9c68-4059-4b28-ae3a-0a0ac3ac19e7
-                        Position: {X: 61.056908, Y: 0.0, Z: -17.025826}
+                        Position: {X: 30.360401, Y: 0.0, Z: 29.436543}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -1035,25 +1014,6 @@ Hierarchy:
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 314380fe-3b44-4c64-8ed1-15a296e57504
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 33bce7c0-6608-4c06-8246-33be5a8afcc8
-                Name: Bambues 29
-                Components:
-                    e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
-                        Id: 826bb1d4-6dfc-498b-8e75-d0e911b26a6d
-                        Position: {X: -62.467995, Y: 0.0, Z: -5.19061}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! 2e537216-47c7-46c0-a984-53b00a1b16d9
-                            f85ecce74adab0363728f1996ba9e779: ref!! fbe6d6ad-abde-45ad-9251-1d60e00b3a6b
-                            e30ee0499b772da2813f008470e23b27: ref!! e48a009f-e98e-4c25-9819-26ea6a22d97c
-                            69e4d8e6fbe4a83d889e68d31849286a: ref!! a9e1fb56-2aa3-4cb3-b529-6ce353c3ce4f
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: e78a5683-e499-46f2-950a-b612e78f6b16
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
@@ -1073,25 +1033,6 @@ Hierarchy:
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 938f8135-79db-44cf-b25a-c6d03b66f6f6
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 351e9f8b-8ecd-4d02-b031-c22408b390db
-                Name: "Bambú 2"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 0a51dd66-9ba5-4c0b-9470-8cdf5b0a76f9
-                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: a62cda7e-3aab-4d34-bd50-13f2b6808bf0
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: f07d8c26-a0ed-4078-8201-4c820bd809dc
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
@@ -1138,8 +1079,8 @@ Hierarchy:
                 Components:
                     e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
                         Id: 7c24c022-a342-42d8-807d-76aed59a7bf3
-                        Position: {X: 22.863571, Y: 0.0, Z: 63.26565}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Position: {X: 37.685783, Y: 0.0, Z: -38.341618}
+                        Rotation: {X: 0.0, Y: 0.6427876, Z: 0.0, W: 0.76604444}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             3459e6065a1cb4f8e26b40f2c920a69b: ref!! d6c554ef-7e2c-498f-b8a0-eb697d2bfc63
@@ -1152,32 +1093,13 @@ Hierarchy:
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
-                Id: 38fc0738-163e-4023-ba8e-991a531e255c
-                Name: "Bambú 3"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: d3d5e7e4-c777-4d88-bc78-77b328708449
-                        Position: {X: 3.197174, Y: 1.9073486E-06, Z: 2.4452407}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: df1dd3dc-f454-4150-b544-3ce5c3ce0c6f
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 7d45d12e-ae3f-463b-8803-abe05c519b2c
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
                 Id: 38fc522c-6acf-4cf1-bce8-5ff44a7b7193
                 Name: Bambues 15
                 Components:
                     e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
                         Id: 0895a14f-c5e8-45bb-b992-8208434fb99d
-                        Position: {X: 53.38823, Y: 0.0, Z: 71.073425}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Position: {X: -39.501945, Y: 0.7477553, Z: -9.913579}
+                        Rotation: {X: 0.0, Y: 0.6427876, Z: 0.0, W: 0.76604444}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             3459e6065a1cb4f8e26b40f2c920a69b: ref!! 9cea89b0-0e58-4b4c-bb72-b4e4c7fc5a68
@@ -1285,6 +1207,25 @@ Hierarchy:
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
+                Id: 3b7deb61-c7fd-4407-acfb-1f6abf4b2d25
+                Name: Bambues 21
+                Components:
+                    e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
+                        Id: 51bdba5b-3c9f-43c2-8ea1-d4bd1b11de68
+                        Position: {X: -46.988804, Y: 1.0132987, Z: 3.7364326}
+                        Rotation: {X: 0.0, Y: 0.6427876, Z: 0.0, W: 0.76604444}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! 72c0cce5-acf9-4e00-af00-074ea4464a2e
+                            f85ecce74adab0363728f1996ba9e779: ref!! dbb907a0-19a7-405e-8606-f57f93142b12
+                            e30ee0499b772da2813f008470e23b27: ref!! 982088dd-cf59-460a-96c5-e09c0ee3f908
+                            69e4d8e6fbe4a83d889e68d31849286a: ref!! 6c66d35a-d68d-476b-927a-38c377b2b254
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: 442efdc2-3827-47cc-97cd-977082b9242f
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Folder: null
+            Entity:
                 Id: 3bea475a-a800-4690-8f04-e89059ca1b66
                 Name: "Bambú 3"
                 Components:
@@ -1301,63 +1242,6 @@ Hierarchy:
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 803b503f-b985-466b-a4a6-d52d518cd961
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 3ccd7a86-6625-4127-ab49-ddb1b7a96124
-                Name: "Bambú 2"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 002af93b-9e14-4615-88df-20d403197848
-                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 0e0a9898-a2d8-44ff-8a69-7eb76607e2c1
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 14779530-262e-401b-9fb1-949c56783249
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 3d156f9f-1d28-4194-aef0-42294660e353
-                Name: "Bambú 1"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: b5e279b6-c193-4665-8dc0-b1bdc88aa5f8
-                        Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: b1631aef-8ec0-42cc-af12-430770c69be4
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 4d8c3a0a-2e1b-4ff1-a2a9-e63bf275e0d6
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 3e661c96-78ac-4331-8986-106cf085f8e0
-                Name: "Bambú 1"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 9a5e74a1-d950-49d5-9499-4592b0849781
-                        Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: f757cbf4-bbcb-48d8-9120-b55c0f2c592e
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 335d4a92-1c03-48b9-a03d-14452a3e2d6a
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 3ec79078-6afc-4d02-924b-6215a6511534
@@ -1377,63 +1261,6 @@ Hierarchy:
                 BasePartAsset: "46987841-938b-49c8-8290-d86c2f39823c:Prefabs/Estatuas/EstatuaChimpancé"
                 BasePartId: a170b54a-533b-47ce-aa85-56c0b533d9a4
                 InstanceId: 66a8111e-f4ee-4ade-b8cc-6e890142bf75
-        -   Folder: null
-            Entity:
-                Id: 3f1a4051-febf-41be-b0ea-8a93448098ef
-                Name: Bambues 25
-                Components:
-                    e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
-                        Id: aa86fe86-c08d-4e49-aad6-6e5c5ca29557
-                        Position: {X: -61.194374, Y: 0.0, Z: 22.191896}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! 54b29328-3918-4fa8-b268-a4fbc99fd657
-                            f85ecce74adab0363728f1996ba9e779: ref!! ae436573-ece9-4ad0-a6df-7fc836860d8b
-                            e30ee0499b772da2813f008470e23b27: ref!! 002af93b-9e14-4615-88df-20d403197848
-                            69e4d8e6fbe4a83d889e68d31849286a: ref!! 794aa72f-0e62-48a7-b394-5796966a5a0b
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: cafd5cc8-19c2-4460-abf7-65437e8389b0
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 3f1f38cd-a4fe-477d-b02a-f313fd6e6415
-                Name: "Bambú 2"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 3231ef9a-4157-4092-813c-98ff9f81e5e2
-                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 5666fe05-6c48-407a-84ab-40a5469168f3
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 5c7c92b5-f9fe-4664-bf42-e202a6e92420
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 3f49d572-c215-48e1-b5eb-f77cb3cdffb7
-                Name: "Bambú 3"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: c918bd8e-3f1f-42a5-8d55-3385390f27a1
-                        Position: {X: 3.197174, Y: 1.9073486E-06, Z: 2.4452407}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 30910e45-c071-401a-b13e-cfa2ddadc1e3
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 5fee188d-fdaa-461c-b05f-0a9975862816
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 401b2a03-f1d3-433a-b812-b230fa1fa0b6
                 Name: Bandera
@@ -1491,22 +1318,22 @@ Hierarchy:
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
-                Id: 4188a34f-bd31-4d40-962b-f5fe3aec08e1
-                Name: Bambues 22
+                Id: 41da6fb8-1945-4fda-93ff-edfbe00547c3
+                Name: "Bambú 2"
                 Components:
-                    e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
-                        Id: 1ce6207b-68e2-40f6-adfb-e278aa403da7
-                        Position: {X: -49.572723, Y: 0.0, Z: 60.08165}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! 9a1e613e-ad51-4996-b714-fd74d26f08a3
-                            f85ecce74adab0363728f1996ba9e779: ref!! e27b899f-ddc5-484d-b013-c557e5721fd9
-                            e30ee0499b772da2813f008470e23b27: ref!! 0a51dd66-9ba5-4c0b-9470-8cdf5b0a76f9
-                            69e4d8e6fbe4a83d889e68d31849286a: ref!! c918bd8e-3f1f-42a5-8d55-3385390f27a1
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: d1b071de-15a4-45b8-97a2-29979f51cbe6
+                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
+                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
+                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: 3ddd8bd5-60b9-4202-8122-9c82d94ef6ea
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 79623bfb-2e2f-41b3-b9ba-8cb5b8a6c616
+                BasePartId: 1bd6f469-8c2a-47ce-9ada-c896b21b7e46
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 41f8d7ee-1058-48a4-8a77-f60e1c2f955c
@@ -1545,25 +1372,6 @@ Hierarchy:
                 BasePartAsset: 41ca5cfd-b972-493a-9b64-b3263ab527b6:Prefabs/Estatuas/EstatuaGorila
                 BasePartId: 5432f79b-f14d-49c9-8f1f-542985ca1a82
                 InstanceId: bbccd65b-f1ad-40c5-967c-c8b7c6cc9bde
-        -   Folder: null
-            Entity:
-                Id: 42934445-6e2f-4485-87f4-9e4bdb8f1434
-                Name: "Bambú 2"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 17fe1dd1-ac94-4ea3-9695-16d8eb71d032
-                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: a28ea9a1-ed14-4f86-9d8e-ba7e98214d1f
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 8f5f0328-9a84-46e6-aa83-1bb141165a5e
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 42eda054-cbe8-44c5-a73c-528a95845789
                 Name: "ControladorCañón"
@@ -1594,25 +1402,6 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 49900dbf-a3d7-406e-8c56-e5baf06e885f
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 45a5b890-d01f-45cf-97f3-c30ea226815e
-                Name: "Bambú 2"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 6b72c853-fc2f-45fa-a917-cbeca047d174
-                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 75e7c0b2-4099-48ff-8240-160f2df81185
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 7cf9c094-cf87-4b77-91cd-c88f8b38437a
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 466d1c26-6693-44f7-87ad-dd87eb5cc964
                 Name: Modelo Lanza
@@ -1633,24 +1422,23 @@ Hierarchy:
                 BasePartAsset: "99853308-0f4c-476c-9987-ced83d337764:Prefabs/Estatuas/EstatuaOrangután"
                 BasePartId: 3b7b189d-255e-4d33-add0-0811089f7e05
                 InstanceId: e60f1f53-f146-409d-bc10-fa766984333d
-        -   Folder: null
-            Entity:
-                Id: 46970e2e-78a6-4aa6-a6ff-4c782bf69b47
-                Name: "Bambú 3"
+        -   Entity:
+                Id: 469ff0db-6f89-407c-ac8a-a9071f462439
+                Name: "Bambú 0"
                 Components:
                     067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: f75ea929-b4b3-4894-a879-a2ff2fd77bbb
-                        Position: {X: 3.197174, Y: 1.9073486E-06, Z: 2.4452407}
+                        Id: 366e71d6-c4ee-402d-b8c5-91ac9591d1da
+                        Position: {X: -4.467354, Y: 1.9073486E-06, Z: -2.5294545}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Scale: {X: 1.1, Y: 1.1, Z: 1.1}
                         Children: {}
                     3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: be7fcbb6-0f8b-4ce5-b895-e3434cffa7c7
+                        Id: fd0036ce-9ce3-4bf1-91bf-c29f2e99c506
                         Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
                         Materials: {}
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 3debf234-a521-449a-82fe-4a865cc7759b
+                BasePartId: b4073f7f-eb6d-4eac-a4c6-09e2e781f997
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 46a8d994-b896-42d7-ba5f-22caa7ae3688
@@ -1658,7 +1446,7 @@ Hierarchy:
                 Components:
                     e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
                         Id: bcd0afc3-724c-4fc5-9ae7-cbcf9262998f
-                        Position: {X: -25.474222, Y: 0.0, Z: -55.827774}
+                        Position: {X: -31.622038, Y: 1.0, Z: -45.145557}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -1709,6 +1497,25 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: 07aa2fbf-15fd-445b-9cc0-019214e795bc
                 InstanceId: ce28e181-3d28-4000-89a6-ae77d7930396
+        -   Folder: null
+            Entity:
+                Id: 47c7aac5-007e-4057-84a2-51c92dfc1a53
+                Name: Bambues 31
+                Components:
+                    e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
+                        Id: 57e47fce-c4d2-4c75-919a-e7b5ffc8c50d
+                        Position: {X: -38.627335, Y: 2.222413, Z: -22.778376}
+                        Rotation: {X: 0.0, Y: 0.6427876, Z: 0.0, W: 0.76604444}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! 984a06d7-5905-4089-aef8-d53dc53eb0a8
+                            f85ecce74adab0363728f1996ba9e779: ref!! 464a969b-0f96-4cff-8165-fb1f440cac25
+                            e30ee0499b772da2813f008470e23b27: ref!! ec2ae74a-80e9-4e66-9233-9c02f5592238
+                            69e4d8e6fbe4a83d889e68d31849286a: ref!! 3306d7fc-cc38-47d2-8711-6f4a7a83b676
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: 3652a8ea-5fb2-4336-a994-b2d284470380
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
                 Id: 47cd4de8-19d8-4049-a128-8764f3009a31
@@ -1790,24 +1597,6 @@ Hierarchy:
                 BasePartId: 22db057c-7ba0-46d7-a9e7-c40256c2dae3
                 InstanceId: 6755a4c8-3259-4ad0-9fcc-7de2fc50db67
         -   Entity:
-                Id: 4a2144ed-a5ed-416c-8015-30774c9b927f
-                Name: "Bambú 0"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 147801ef-9f87-45ed-a9fa-df96cd14c6b7
-                        Position: {X: -4.467354, Y: 1.9073486E-06, Z: -2.5294545}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.1, Y: 1.1, Z: 1.1}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 8c303679-aca7-403e-8d3c-27a715047a64
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 460a2464-f49b-4802-922c-b7df608d971f
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Entity:
                 Id: 4a3bb5ff-46ec-49d4-a29c-debeec63dd02
                 Name: Cabeza
                 Components:
@@ -1863,61 +1652,80 @@ Hierarchy:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
                 BasePartId: 7bb5e535-ee94-4a7f-9167-f56ed89d1916
                 InstanceId: 6755a4c8-3259-4ad0-9fcc-7de2fc50db67
+        -   Folder: null
+            Entity:
+                Id: 4c3ef8f3-ab5b-4ca7-a8bb-2aedeb8a62b3
+                Name: "Bambú 3"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: 57864a12-8373-4fe7-a2e0-dee72ac09f1c
+                        Position: {X: 3.197174, Y: 1.9073486E-06, Z: 2.4452407}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: 37e74dc0-0af3-4ec6-9c83-e9ed199972ac
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: 691410ce-deb6-4577-865f-cc84a2fa7a52
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Folder: null
+            Entity:
+                Id: 50cfd25c-aa98-4175-9cdf-6cfd29f344be
+                Name: Bambues 28
+                Components:
+                    e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
+                        Id: ac6ab851-f751-4984-87c0-1b8877916585
+                        Position: {X: 45.37552, Y: 0.9999849, Z: -10.984413}
+                        Rotation: {X: 0.0, Y: 0.6427876, Z: 0.0, W: 0.76604444}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! 1eaecf52-6623-4229-9070-55e2883e9ff0
+                            f85ecce74adab0363728f1996ba9e779: ref!! 2f8417be-52a9-4603-9f18-785bc0d92565
+                            e30ee0499b772da2813f008470e23b27: ref!! a4f4c729-5bd1-49c7-946d-cbd0810e0a85
+                            69e4d8e6fbe4a83d889e68d31849286a: ref!! 154b403a-7453-4eb2-8d3c-f89c001d53b7
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: f766d7fb-bc5c-40e9-9b3f-103b7bf9654b
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
-                Id: 4b6ccb4a-932f-450d-a831-6d568bd78a79
+                Id: 515c0b22-8503-439c-8e2c-303ff03a2813
                 Name: "Bambú 0"
                 Components:
                     067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 88183493-11b2-48d7-b837-56cdf7335528
+                        Id: ce559d3c-4705-4f7b-a143-f7eed7d5f8d0
                         Position: {X: -4.467354, Y: 1.9073486E-06, Z: -2.5294545}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.1, Y: 1.1, Z: 1.1}
                         Children: {}
                     3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: f2a417f6-199c-49ba-bb2b-4ad5622c1e78
+                        Id: 2920f41f-bce6-4e27-9c43-0a3a1be8e978
                         Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
                         Materials: {}
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 0b620dea-8039-4301-a203-d87228e1fcc0
+                BasePartId: eee54760-a35d-425a-9c49-56bea0256200
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
-                Id: 4c8de588-6595-4223-82c3-b385b28a1abf
-                Name: "Bambú 2"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 7aed63a4-a42e-4727-a371-4c9714a39eaa
-                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: a883d978-da4f-4198-ba03-7e422733932b
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 127361c8-ce79-4b66-b8cd-b25ab1b8ecc3
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 5430968a-7419-432e-a4ff-58a7401380ae
-                Name: Bambues 33
+                Id: 53c50fa5-80ec-4fc0-906e-3d34fec90292
+                Name: Bambues 20
                 Components:
                     e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
-                        Id: a5cdaa5e-17be-46ce-b14c-95f4a7302e01
-                        Position: {X: -45.911133, Y: 0.0, Z: -41.010757}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Id: 490e38ad-c33e-430b-93c7-20a55cdf09c3
+                        Position: {X: -16.961662, Y: 1.0, Z: 53.269337}
+                        Rotation: {X: 0.0, Y: 0.6427876, Z: 0.0, W: 0.76604444}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! 2c24451c-5468-4d56-85a0-5e4395516a41
-                            f85ecce74adab0363728f1996ba9e779: ref!! dbadeece-a451-4e97-aa41-8f0d2d42962c
-                            e30ee0499b772da2813f008470e23b27: ref!! 223a57cd-0425-4bf9-a40c-b303b2b1dee9
-                            69e4d8e6fbe4a83d889e68d31849286a: ref!! b223f42c-ac33-4d4a-a67a-df3f8deafba5
+                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! 4396dd93-9e3b-4196-903a-38ebb62cb2d6
+                            f85ecce74adab0363728f1996ba9e779: ref!! 7c62b448-f1c1-4016-b5d0-dd685b7d4d05
+                            e30ee0499b772da2813f008470e23b27: ref!! f3721ee9-89cf-42d2-9e46-955661b20517
+                            69e4d8e6fbe4a83d889e68d31849286a: ref!! e2d5936e-f757-41f9-a673-8dd274ebf227
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 514d9ca6-b7ca-44b8-a3ec-ea2434446b41
+                BasePartId: 4d50a490-50b9-4d53-a8f1-e37b782f607c
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 54a98bea-7159-47d5-ade8-c67abb072ad9
@@ -1944,8 +1752,8 @@ Hierarchy:
                 Components:
                     e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
                         Id: d7e460b7-fda7-4de5-adb4-b5f88cda05f7
-                        Position: {X: 52.86632, Y: 0.0, Z: -47.428143}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Position: {X: 31.32235, Y: 0.0, Z: -11.275551}
+                        Rotation: {X: 0.0, Y: 0.6427876, Z: 0.0, W: 0.76604444}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             3459e6065a1cb4f8e26b40f2c920a69b: ref!! 8a86b4ad-d14a-4f35-9d64-2fa9dee55cee
@@ -1999,7 +1807,7 @@ Hierarchy:
                 Components:
                     3af33bf9195999601df8b7be11d8881b: !TransformComponent
                         Id: fd25e619-f8df-4991-8c9a-5abdf3828fe5
-                        Position: {X: 34.37534, Y: 3.0, Z: -44.442787}
+                        Position: {X: 8.299309, Y: 0.0, Z: -34.84305}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -2037,8 +1845,8 @@ Hierarchy:
                 Components:
                     e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
                         Id: d28d9605-5648-4cdf-83f7-c552983e83cc
-                        Position: {X: 45.647514, Y: 0.0, Z: -19.663467}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Position: {X: 44.431797, Y: 1.0, Z: 14.45966}
+                        Rotation: {X: 0.0, Y: 0.6427876, Z: 0.0, W: 0.76604444}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             3459e6065a1cb4f8e26b40f2c920a69b: ref!! 65b6318b-8a61-4002-b67a-4a864de28075
@@ -2056,7 +1864,7 @@ Hierarchy:
                 Components:
                     e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
                         Id: eb5a7b59-909b-462d-ac79-83fd23212a11
-                        Position: {X: 53.838085, Y: 0.0, Z: -34.101097}
+                        Position: {X: 35.07565, Y: 0.0, Z: 2.3358946}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -2068,6 +1876,24 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 5eac06b8-d90c-4916-88b2-df1f422efc93
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Entity:
+                Id: 583e7273-2030-4dc3-8468-06ad4e0278bd
+                Name: "Bambú 0"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: 4396dd93-9e3b-4196-903a-38ebb62cb2d6
+                        Position: {X: -4.467354, Y: 1.9073486E-06, Z: -2.5294545}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.1, Y: 1.1, Z: 1.1}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: 81ab909b-a598-424b-b408-5eff44031b0b
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: 9e7e4ce2-8842-4006-a906-7606dbcc6746
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
                 Id: 587967e3-a566-4dea-8343-1ca9dbf53287
@@ -2075,8 +1901,8 @@ Hierarchy:
                 Components:
                     e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
                         Id: 5e97fd81-cd9f-4983-ae73-4c6a00b0a5e9
-                        Position: {X: 20.392227, Y: 0.0, Z: -54.280476}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Position: {X: 22.70446, Y: 0.0, Z: -36.34575}
+                        Rotation: {X: 0.0, Y: 0.6427876, Z: 0.0, W: 0.76604444}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             3459e6065a1cb4f8e26b40f2c920a69b: ref!! e5cc136f-db06-43d7-b081-fb9cfa849eb4
@@ -2141,34 +1967,15 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 89cd37a2-94d8-47a7-a05e-106effecee3e
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 5b95d4cd-d04b-4b4b-ab7e-29e2adcfeaef
-                Name: "Bambú 3"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: e96e793a-7d7c-4694-9ea0-7ea44911520f
-                        Position: {X: 3.197174, Y: 1.9073486E-06, Z: 2.4452407}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: ab63f9f0-fbd1-49a3-bd05-f046b11ade74
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: eefed0ef-55c4-4fac-a800-4424e26da4e5
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 5c4cd356-3499-41b3-9280-c84e97e09376
                 Name: Ciruelo 4
                 Components:
                     3af33bf9195999601df8b7be11d8881b: !TransformComponent
                         Id: 09a188dd-bde9-4132-9fee-311717aa4aad
-                        Position: {X: -9.170208, Y: 4.0, Z: 73.02935}
+                        Position: {X: -20.837738, Y: 0.0, Z: 40.112686}
                         Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Scale: {X: 1.1, Y: 1.1, Z: 1.1}
                         Children: {}
                     cc1b978ca68e9b9acee30e6d9bdb6d41: !ModelComponent
                         Id: 729465af-1b10-4aea-8f62-2624b9d168bc
@@ -2231,21 +2038,18 @@ Hierarchy:
                             9f5baa8211836cec6af8535a6d07c52b: ref!! 7c24c022-a342-42d8-807d-76aed59a7bf3
                             caa2e74301d5e2563587e3dcb9a0210a: ref!! ca383b56-43f3-40cf-ad4e-c648e3b63c77
                             415bf3c47820db86ed39211f4755c953: ref!! 5885893e-f9b6-4484-93d2-5cd77b4e2f05
-                            a0cf037e6ca968e1884cbb97dac79e00: ref!! 6b32b53b-7407-4b62-9a7d-0217fd75f6e0
-                            062dd01770c41948977e1e3f6bf42838: ref!! 70dd50b3-291b-4b3f-b3d9-c01b4a3c58f0
-                            2675933a7a0f6092a671eb556eceb815: ref!! 1ce6207b-68e2-40f6-adfb-e278aa403da7
-                            b3f6562b8242a3f1e45a38d72ffda754: ref!! 060c462e-c6c3-4903-9c62-f73baf8e7ef9
-                            ed2706426fc44c4a40f0ce66dd7b803a: ref!! 795dedc0-5442-4bf0-a52b-9392515ac797
-                            0b974b33a4676ed4fd99f3c956d9ca70: ref!! aa86fe86-c08d-4e49-aad6-6e5c5ca29557
-                            1aa80f311a46b35aa4be5648ace4fd41: ref!! adb9fc0f-c2eb-40a1-8d08-c5a09e52e8eb
-                            04fa8c72db855448b1e0f63ba960b037: ref!! 11ef2fed-d6e1-46e6-ba2b-c0cd8f987598
-                            54f3fdea18d23da01f12eb357c1956cb: ref!! bbddf2b5-3fe6-41c0-9ef5-684e3a04e8ae
-                            edc2a06a6a1d6d5ad87bb0299fa48ade: ref!! 826bb1d4-6dfc-498b-8e75-d0e911b26a6d
-                            46e84cfa54fb5c73d2541fea12e4095a: ref!! 16865487-cf10-4a74-b40a-2494e202b038
-                            d723ecde46b80ac2900a9e7170e00d5f: ref!! 0b3109fe-2192-4c9e-b601-0b50b5ab419a
-                            c80441dbffe778c55a01a46c7bf6489f: ref!! 44aa6297-82fe-4b15-b392-958731ca7a1e
-                            29a056e14e7baff0245f2992ee7a085a: ref!! a5cdaa5e-17be-46ce-b14c-95f4a7302e01
-                            7bf95219c9e189b8f8bb7ef1d7b5d2e0: ref!! 97bc4b07-a51d-43da-807a-ff768df533ce
+                            f7f64987e4904c5e52a7d187f7095451: ref!! 490e38ad-c33e-430b-93c7-20a55cdf09c3
+                            9ae7a5a0cef94287431ff8e498265b28: ref!! 51bdba5b-3c9f-43c2-8ea1-d4bd1b11de68
+                            171e38f15a4e7e84d3fffbd7cd860b4a: ref!! 8b1a2e55-cfba-4cd0-9e1f-22bdac3bdf21
+                            0cd66c7b1e8ccbd6cb83e3b532dce08a: ref!! c7e5275e-6679-421e-9649-41ce72db5c43
+                            20fb051e3fac1549c8cf42b10d0e6593: ref!! 7510f51a-c6a1-4294-b1bd-9aec35ad197f
+                            9824f67734a8936e82c7082100c90626: ref!! f99bfcc7-15ae-4e86-a929-5f37b9e6b723
+                            d3f72a825c8aa2a50ddab5c4d9784aa3: ref!! 456de22a-a720-46d2-bd37-c6d91d0a3c14
+                            d46ef3fc2d3ee106909e71ef37cf8b52: ref!! ac6ab851-f751-4984-87c0-1b8877916585
+                            6d4f9e6dece42f05f4931714034d3a8c: ref!! 9c88d67e-53ce-4758-8eb3-f1b11787b19f
+                            da4fe9fb8f8c695cc70d4e709d16f9a0: ref!! 535b33cb-2825-4f32-b682-748e2b8677db
+                            6a9c8f65d8c6e4fa31f999ddb593516c: ref!! 1193e3fc-bd9a-4922-9f57-c4e6753ca315
+                            e02a955ad2ec8d61df33ed332b91d270: ref!! 57e47fce-c4d2-4c75-919a-e7b5ffc8c50d
         -   Folder: null
             Entity:
                 Id: 5e421ea8-92c1-4f38-b6d4-fea1cf70bc44
@@ -2284,44 +2088,6 @@ Hierarchy:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
                 BasePartId: ba62acbb-daed-4df6-bf4e-99ec214eed87
                 InstanceId: 6755a4c8-3259-4ad0-9fcc-7de2fc50db67
-        -   Folder: null
-            Entity:
-                Id: 5edfda56-04a6-47de-b276-8997a8e91cb0
-                Name: "Bambú 2"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: e48a009f-e98e-4c25-9819-26ea6a22d97c
-                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 2b5fa8ae-26ee-40c2-8004-1331ba4be6a8
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: cbb3ee10-32e5-40d8-8422-4627b453d223
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 61657862-7d8d-4077-b8f5-efedeb7b2e8a
-                Name: "Bambú 3"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 3d4bc6e6-9e5d-4b4b-b729-e7ad5c9b01d5
-                        Position: {X: 3.197174, Y: 1.9073486E-06, Z: 2.4452407}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: a62fa330-1c49-4f2a-9bad-0a5380bc26b1
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 314671eb-4020-4136-a4c7-0a56fe7e2185
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
                 Id: 6271899c-cdb1-4eba-b51e-32af93a21190
@@ -2539,25 +2305,6 @@ Hierarchy:
                 InstanceId: 88bb57af-9542-4a93-8bab-6863a55dad6d
         -   Folder: null
             Entity:
-                Id: 6390cd29-7adb-4f3e-b847-060dd14556a9
-                Name: "Bambú 1"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: c3fffabd-3c42-48b9-970a-b65f04cbbb3a
-                        Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 7425f2b2-a4a1-46d6-9d7a-7444470fe106
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 9f4b8c1c-bb9b-4810-8a2f-8767769d2555
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
                 Id: 64969250-87f6-49f0-8359-871df6d0bcfa
                 Name: "Bambú 2"
                 Components:
@@ -2594,15 +2341,34 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 1e3baf06-ad0a-4c01-a8fc-6966c30654e7
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Folder: null
+            Entity:
+                Id: 64ce20d5-a54e-491e-b099-51da3e1e6dcd
+                Name: "Bambú 1"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: 7c62b448-f1c1-4016-b5d0-dd685b7d4d05
+                        Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
+                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
+                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: 110287bf-ebf2-4eaf-9a8b-e2d42e964a1f
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: d197b394-5d7b-4cc3-811c-daf7999fc368
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 652a4ac7-0802-424b-923c-1bc0752586fb
                 Name: Ciruelo 1
                 Components:
                     3af33bf9195999601df8b7be11d8881b: !TransformComponent
                         Id: 50a97afe-a9bb-4c26-a177-280b9df67391
-                        Position: {X: -39.97726, Y: 1.0, Z: -54.53381}
+                        Position: {X: 27.220623, Y: 0.0, Z: -24.049953}
                         Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Scale: {X: 1.1, Y: 1.1, Z: 1.1}
                         Children: {}
                     cc1b978ca68e9b9acee30e6d9bdb6d41: !ModelComponent
                         Id: d1d857d8-ac0c-444d-8d9b-6cc484174a23
@@ -2614,22 +2380,22 @@ Hierarchy:
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
-                Id: 65cb688f-65e6-473b-bdeb-23dbbd8b9c47
+                Id: 670929ff-2f73-477d-b74b-72e56c7744b2
                 Name: "Bambú 1"
                 Components:
                     067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: ae436573-ece9-4ad0-a6df-7fc836860d8b
+                        Id: 7665b1c3-50bd-48ad-b70c-347cf3f495cf
                         Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
                         Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
                         Scale: {X: 1.2, Y: 1.2, Z: 1.2}
                         Children: {}
                     3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 6b1c7e08-6403-4ab8-aba0-0c48319858a0
+                        Id: 9d08831d-5c6e-484a-bc2a-0913c56b6bb5
                         Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
                         Materials: {}
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 96052f3a-72e6-450f-a731-d1255a555046
+                BasePartId: 95e96d59-af9d-4f05-a814-adfe2a8d42c8
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
@@ -2785,43 +2551,6 @@ Hierarchy:
                 InstanceId: fbeb3d4c-64a1-4daa-b0be-16269248d2f8
         -   Folder: null
             Entity:
-                Id: 6b953aa2-52b0-4885-b28c-5f89be2a14cf
-                Name: Bambues 32
-                Components:
-                    e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
-                        Id: 44aa6297-82fe-4b15-b392-958731ca7a1e
-                        Position: {X: -61.67201, Y: 0.0, Z: -39.100357}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! 606365cb-25a4-457b-81fb-8f240da68684
-                            f85ecce74adab0363728f1996ba9e779: ref!! 63dafd12-c628-4ed1-bdde-32ac384de93e
-                            e30ee0499b772da2813f008470e23b27: ref!! 3231ef9a-4157-4092-813c-98ff9f81e5e2
-                            69e4d8e6fbe4a83d889e68d31849286a: ref!! e6814336-df5a-4ca7-b1e5-56811049780b
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: dd8154a4-c080-4dbd-af28-d6bcf66850e0
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Entity:
-                Id: 6be53426-5d7d-46ea-b088-c8a275ffa68b
-                Name: "Bambú 0"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 978dc970-4599-4bda-9db7-bfc788a8947d
-                        Position: {X: -4.467354, Y: 1.9073486E-06, Z: -2.5294545}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.1, Y: 1.1, Z: 1.1}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: ef7f4047-05ff-492f-b47e-b99a4c20c000
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 445be5e6-4595-4385-a0ea-f976289d857c
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
                 Id: 6cd35841-1b18-437f-b636-41e48385eeb5
                 Name: "Bambú 1"
                 Components:
@@ -2838,25 +2567,6 @@ Hierarchy:
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 1dac9b00-862f-4f53-8da0-8091e303bfb0
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 6d225ec9-5618-4524-9664-4f5e568a8dfd
-                Name: "Bambú 1"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: e27b899f-ddc5-484d-b013-c557e5721fd9
-                        Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 46e6540f-3102-490f-8851-f21cd8c83000
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 69d5db85-b4a6-4e97-9dcc-2ab39afb626c
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 6d75b570-215d-4a22-a341-416a2d71d579
@@ -2883,8 +2593,8 @@ Hierarchy:
                 Components:
                     e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
                         Id: 5885893e-f9b6-4484-93d2-5cd77b4e2f05
-                        Position: {X: -9.135763, Y: 0.0, Z: 61.832855}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Position: {X: -31.821297, Y: 1.0, Z: 50.910652}
+                        Rotation: {X: 0.0, Y: 0.6427876, Z: 0.0, W: 0.76604444}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             3459e6065a1cb4f8e26b40f2c920a69b: ref!! d385b3db-e651-4c0d-a70d-f810c8170b1c
@@ -2894,6 +2604,44 @@ Hierarchy:
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 2fd33ceb-2883-4b11-b42d-3ef922be645c
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Folder: null
+            Entity:
+                Id: 6f0ba4c8-3ca7-4b94-817b-a3cf691de2b1
+                Name: "Bambú 1"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: dbb907a0-19a7-405e-8606-f57f93142b12
+                        Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
+                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
+                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: 7c2315f4-601c-4eee-9dbc-6c97fb6de2c4
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: a9ac42e5-b494-4be9-b366-04327d2c216b
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Folder: null
+            Entity:
+                Id: 6f7e5bbf-3803-4910-ba4e-b5badc651ff6
+                Name: Bambues 26
+                Components:
+                    e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
+                        Id: 456de22a-a720-46d2-bd37-c6d91d0a3c14
+                        Position: {X: 21.677294, Y: 0.9999849, Z: -51.67832}
+                        Rotation: {X: 0.0, Y: 0.6427876, Z: 0.0, W: 0.76604444}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! 2a16fde5-14b6-43d2-936e-e90416f0b8dc
+                            f85ecce74adab0363728f1996ba9e779: ref!! 73a5901b-3d87-49bf-bf02-921398f76a60
+                            e30ee0499b772da2813f008470e23b27: ref!! bd886e52-aabf-4d83-98fa-d5b9ae8714bc
+                            69e4d8e6fbe4a83d889e68d31849286a: ref!! 07c38f84-a7e3-462e-a51c-a5fbe838fba5
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: 026b067a-ad5e-4dc7-99e4-e4779d7a94c2
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 7165f536-7780-4599-add3-3a05126568e6
@@ -2950,25 +2698,6 @@ Hierarchy:
                 BasePartAsset: "99853308-0f4c-476c-9987-ced83d337764:Prefabs/Estatuas/EstatuaOrangután"
                 BasePartId: 281741a7-169d-42c1-8d1a-62a599ad755b
                 InstanceId: cd01ec1e-905b-400d-926e-a954242c5493
-        -   Folder: null
-            Entity:
-                Id: 71fa5c4c-6de5-4f90-8b67-26b30dff9d78
-                Name: "Bambú 2"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 2aea2115-d6b3-4872-8f51-9ce711473e7e
-                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: a32989b5-4d8c-4648-9169-8fa85c4a4a43
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 2ec045dc-4a0e-4887-9ad5-d44d2ed48eac
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
                 Id: 7204f273-e5e1-4881-becc-fb71c52e0f25
@@ -3028,24 +2757,6 @@ Hierarchy:
                         Projection: Perspective
                         FarClipPlane: 200.0
                         Slot: 9f373eee-c85c-45b0-9b02-82451f709476
-        -   Entity:
-                Id: 7298b2fe-2635-4531-a86c-2cc2ff3490f6
-                Name: "Bambú 0"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: a47b420a-3d56-4667-b228-1ae1ff16d6be
-                        Position: {X: -4.467354, Y: 1.9073486E-06, Z: -2.5294545}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.1, Y: 1.1, Z: 1.1}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: ea072be4-bb7e-41b8-a025-b2cdcc34bf90
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 4aaedfd8-29f3-4116-8954-6a6ad403187d
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
                 Id: 72f18b7e-6f22-484b-956f-8d813e91ccbe
@@ -3085,24 +2796,6 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: 08868581-5001-468d-8f30-83fb352761d3
                 InstanceId: 88bb57af-9542-4a93-8bab-6863a55dad6d
-        -   Entity:
-                Id: 7398a697-d1c1-43a6-8220-7aea1c089129
-                Name: "Bambú 0"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 2c24451c-5468-4d56-85a0-5e4395516a41
-                        Position: {X: -4.467354, Y: 1.9073486E-06, Z: -2.5294545}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.1, Y: 1.1, Z: 1.1}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 8d74fba3-dd47-4de9-bd77-393ae6d1609a
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 646445af-d33c-4644-b0cb-deafbafd4a61
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 73f3de31-77a1-4bc3-8da8-4db15655ee11
                 Name: Origen
@@ -3157,25 +2850,6 @@ Hierarchy:
                 InstanceId: 6755a4c8-3259-4ad0-9fcc-7de2fc50db67
         -   Folder: null
             Entity:
-                Id: 7546f61e-556e-4400-9033-fbf0217a6ec3
-                Name: "Bambú 3"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: b223f42c-ac33-4d4a-a67a-df3f8deafba5
-                        Position: {X: 3.197174, Y: 1.9073486E-06, Z: 2.4452407}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: f2aee8cf-2b1b-476b-8118-dcee347d8023
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: c8f6bba7-eb15-4235-b766-68c0d4788cfe
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
                 Id: 767a1682-4655-4cba-9e59-59473fb13b9d
                 Name: "Bambú 3"
                 Components:
@@ -3192,25 +2866,6 @@ Hierarchy:
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 0d6150b1-d1db-4b79-a1fb-332e854bd77a
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 770235e0-6702-4ed7-aba7-41c1d2f1e7fd
-                Name: "Bambú 3"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: e6814336-df5a-4ca7-b1e5-56811049780b
-                        Position: {X: 3.197174, Y: 1.9073486E-06, Z: 2.4452407}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 7a5e87ff-3a9a-4413-b0f0-b9502c266506
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: b9afe2be-fce7-47ab-9669-a0b6591e6497
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 773208e9-1cb0-4c14-b35b-925d54012423
@@ -3250,25 +2905,6 @@ Hierarchy:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
                 BasePartId: 01c26840-711c-4d04-9df0-4caa40523f71
                 InstanceId: 6755a4c8-3259-4ad0-9fcc-7de2fc50db67
-        -   Folder: null
-            Entity:
-                Id: 7937dd18-6e0b-4714-bd35-46c246dc336e
-                Name: "Bambú 2"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 783f203f-20f6-4c88-bc42-8eba93f65102
-                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 86eb4d2c-e1d1-44e6-a287-b837842bb224
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: c93a5962-675c-4807-94ee-c175f0e8a220
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
                 Id: 79e52a0b-b50b-4b9e-9fac-16b7bd578d6e
@@ -3328,6 +2964,25 @@ Hierarchy:
                 InstanceId: 6755a4c8-3259-4ad0-9fcc-7de2fc50db67
         -   Folder: null
             Entity:
+                Id: 7bb367bb-c95f-42b9-a3f3-6acce5080ba8
+                Name: "Bambú 3"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: f7cfa103-c0ac-46a2-b82b-274c9dff064f
+                        Position: {X: 3.197174, Y: 1.9073486E-06, Z: 2.4452407}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: e96a1a02-4770-4553-9275-e77b8e73ec8b
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: a08b2a79-da71-441a-88de-82dc219b8870
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Folder: null
+            Entity:
                 Id: 7c3c1e5e-61b1-46fe-b650-ca0f59e8b850
                 Name: "Bambú 1"
                 Components:
@@ -3382,6 +3037,25 @@ Hierarchy:
                 BasePartAsset: "99853308-0f4c-476c-9987-ced83d337764:Prefabs/Estatuas/EstatuaOrangután"
                 BasePartId: 7ce31fe8-63bb-418f-87ed-ecaa5def4152
                 InstanceId: cd01ec1e-905b-400d-926e-a954242c5493
+        -   Folder: null
+            Entity:
+                Id: 7e14cdc9-a2e9-4883-88ef-adf6ef8422ab
+                Name: "Bambú 1"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: 707029dc-93fe-4996-8964-c08fc6cae2bf
+                        Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
+                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
+                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: cbd17f3a-2c68-45bc-abee-40a4f1d48698
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: 2854e4ca-4438-4932-b8ec-39da2ad4a8ef
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 7e17a96f-8e24-423d-b0a6-ae45c7745225
                 Name: "Banderas (Anfitrión)"
@@ -3423,6 +3097,25 @@ Hierarchy:
                 BasePartAsset: "46987841-938b-49c8-8290-d86c2f39823c:Prefabs/Estatuas/EstatuaChimpancé"
                 BasePartId: 9c0befe5-6ace-4838-bf09-b29012dfd9e3
                 InstanceId: f56df825-d73b-46ca-9d80-03a89de1f108
+        -   Folder: null
+            Entity:
+                Id: 7f4069a4-e99d-4a1b-bfc2-4b0db684b062
+                Name: "Bambú 1"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: 73a5901b-3d87-49bf-bf02-921398f76a60
+                        Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
+                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
+                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: 578b66d1-0c20-4926-8e47-23156c1fafe6
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: 4d3d400f-a92b-45de-adf5-07ea33bfaddc
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 806f7bea-5476-43a5-877b-611390b45036
                 Name: "Ícono"
@@ -3448,9 +3141,9 @@ Hierarchy:
                 Components:
                     3af33bf9195999601df8b7be11d8881b: !TransformComponent
                         Id: 1be3dd04-8c37-4173-8e2b-ce6f1d478e4e
-                        Position: {X: -75.02814, Y: 9.756144E-06, Z: -25.642857}
+                        Position: {X: 31.041677, Y: 0.0, Z: 15.495382}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Scale: {X: 0.9, Y: 0.9, Z: 0.9}
                         Children: {}
                     cc1b978ca68e9b9acee30e6d9bdb6d41: !ModelComponent
                         Id: c5faacf3-287c-4010-9031-a39148834bc8
@@ -3481,25 +3174,6 @@ Hierarchy:
                 InstanceId: 6755a4c8-3259-4ad0-9fcc-7de2fc50db67
         -   Folder: null
             Entity:
-                Id: 81402e25-fc25-468f-b098-92c1fa925a46
-                Name: "Bambú 1"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: fbe6d6ad-abde-45ad-9251-1d60e00b3a6b
-                        Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: e1f99c4b-f326-4a85-9da2-b578fca31cf6
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: be1dd6ef-3a74-417a-9db9-87b9a57ed7d9
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
                 Id: 82ae4186-b7a8-4b70-9e94-1583c4b2d634
                 Name: Estandarte (4)
                 Components:
@@ -3521,22 +3195,22 @@ Hierarchy:
                 InstanceId: 6755a4c8-3259-4ad0-9fcc-7de2fc50db67
         -   Folder: null
             Entity:
-                Id: 831ca2b9-d215-4fda-b8bf-e3a305011371
-                Name: Bambues 30
+                Id: 82eb4cbc-e299-4508-8341-1d546afd7596
+                Name: "Bambú 1"
                 Components:
-                    e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
-                        Id: 16865487-cf10-4a74-b40a-2494e202b038
-                        Position: {X: -47.50314, Y: 0.0, Z: -12.832241}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! 2466d8e8-4120-43bd-9deb-7ec08afe3619
-                            f85ecce74adab0363728f1996ba9e779: ref!! cb1160ea-aa1e-433f-bfc5-2e97b5921a3a
-                            e30ee0499b772da2813f008470e23b27: ref!! d789090a-5cea-465c-92db-3c3ed8d4ce53
-                            69e4d8e6fbe4a83d889e68d31849286a: ref!! c095a5b0-7aae-4a6e-a8f8-83b6aecdafc6
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: d5a2772e-43b9-476e-ac47-cf6a9389a35d
+                        Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
+                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
+                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: 3c2c9bad-e308-43af-97b2-6f4b8ba40d4e
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 083f1439-ae6c-4e5b-8acb-33f453bb6fa1
+                BasePartId: 15e02e61-a56f-4cd5-8148-ee90cc71df99
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 83358299-7b04-4e3b-bf91-a0c34f9a86ae
@@ -3555,24 +3229,6 @@ Hierarchy:
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 82f3ff53-f893-4724-a4cc-f7d362efe89f
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Entity:
-                Id: 83981a60-dfb0-473f-b252-4826e79a8834
-                Name: "Bambú 0"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 606365cb-25a4-457b-81fb-8f240da68684
-                        Position: {X: -4.467354, Y: 1.9073486E-06, Z: -2.5294545}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.1, Y: 1.1, Z: 1.1}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 95077150-b520-4cca-8f38-1ad98a0882c5
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: c3486e38-57da-4fb2-a6a6-fcdc01ed6f7d
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 8515cc8d-8e8b-423a-aa91-0a077d6dc0bc
@@ -3599,7 +3255,7 @@ Hierarchy:
                 Components:
                     e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
                         Id: b02932b1-27ea-4c7b-8061-9e0d7dee4d80
-                        Position: {X: 54.67626, Y: 0.0, Z: 45.098083}
+                        Position: {X: -31.539663, Y: -0.1191448, Z: 2.622942}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -3629,44 +3285,6 @@ Hierarchy:
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 683d3ac9-0420-4b66-bb72-4847a40ad318
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 88173791-3037-4999-a408-d21a6767d690
-                Name: "Bambú 2"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: b3daf1bb-5dd5-45c2-a673-9f019f86e95d
-                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: b6ef15ab-8876-4774-9f32-aaa5ab77b312
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 43c862d1-34e8-4df4-a7e7-17f1d875c3da
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: 88266b15-c0a4-45b2-8538-cac91b5184c3
-                Name: Bambues 27
-                Components:
-                    e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
-                        Id: 11ef2fed-d6e1-46e6-ba2b-c0cd8f987598
-                        Position: {X: -61.831184, Y: 0.0, Z: 8.659842}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! a47b420a-3d56-4667-b228-1ae1ff16d6be
-                            f85ecce74adab0363728f1996ba9e779: ref!! 812e1c55-0d4d-4b2a-bb87-71de7d4cd328
-                            e30ee0499b772da2813f008470e23b27: ref!! 6b72c853-fc2f-45fa-a917-cbeca047d174
-                            69e4d8e6fbe4a83d889e68d31849286a: ref!! 2675c878-f276-4960-b86f-6fa194b7413f
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: fb7b33ec-e8f5-4d4d-bee5-64e941ee935a
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
@@ -3847,7 +3465,7 @@ Hierarchy:
                 Components:
                     e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
                         Id: 11f101bd-6d1e-437f-8a2a-6ca0bc02215b
-                        Position: {X: 4.3665953, Y: 0.0, Z: -53.948914}
+                        Position: {X: 7.3536468, Y: 1.0, Z: -46.876778}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -3858,6 +3476,25 @@ Hierarchy:
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 564ec326-a3ea-4b5c-b7fc-03f385b0c8e9
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Folder: null
+            Entity:
+                Id: 8ec6eb33-19e3-4296-809e-897c37b42b25
+                Name: Bambues 30
+                Components:
+                    e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
+                        Id: 535b33cb-2825-4f32-b682-748e2b8677db
+                        Position: {X: 19.044132, Y: 0.9999849, Z: 52.68959}
+                        Rotation: {X: 0.0, Y: 0.6427876, Z: 0.0, W: 0.76604444}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! 366e71d6-c4ee-402d-b8c5-91ac9591d1da
+                            f85ecce74adab0363728f1996ba9e779: ref!! 707029dc-93fe-4996-8964-c08fc6cae2bf
+                            e30ee0499b772da2813f008470e23b27: ref!! 5f604932-dc6e-45cf-b05d-2500358db13d
+                            69e4d8e6fbe4a83d889e68d31849286a: ref!! 4ff44d27-b6d1-4e9d-8b3f-0d01c471c748
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: 04eceb93-21c4-44fc-ba3d-caed866be4a6
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 8fe714d3-b432-41e3-9705-1be4f57b7dd5
@@ -3898,6 +3535,63 @@ Hierarchy:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
                 BasePartId: 85c997fb-589e-47c2-bc9c-d7f38bf3229b
                 InstanceId: 6755a4c8-3259-4ad0-9fcc-7de2fc50db67
+        -   Folder: null
+            Entity:
+                Id: 92323563-3242-4c01-b6ac-43baeb9c7926
+                Name: Bambues 25
+                Components:
+                    e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
+                        Id: f99bfcc7-15ae-4e86-a929-5f37b9e6b723
+                        Position: {X: -2.4996758, Y: 0.9999849, Z: -52.396446}
+                        Rotation: {X: 0.0, Y: 0.6427876, Z: 0.0, W: 0.76604444}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! ce559d3c-4705-4f7b-a143-f7eed7d5f8d0
+                            f85ecce74adab0363728f1996ba9e779: ref!! 171fca1c-c7ed-44a3-9e45-393635065762
+                            e30ee0499b772da2813f008470e23b27: ref!! 894c33b4-129e-4de6-9d6d-ed4351f195cb
+                            69e4d8e6fbe4a83d889e68d31849286a: ref!! 092ab2b9-224c-4d22-b40e-518f7f44bd8f
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: a96c1c3c-5b0e-4560-a058-907cbb483aea
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Folder: null
+            Entity:
+                Id: 92c19687-62c2-45f8-9b2d-e80f75ce1657
+                Name: "Bambú 1"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: 171fca1c-c7ed-44a3-9e45-393635065762
+                        Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
+                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
+                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: 61fb4bb5-8ce3-4387-94c5-f5112290934a
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: ffc0463b-24f4-4a54-92c6-fee2e10b77d6
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Folder: null
+            Entity:
+                Id: 92c5491a-e30b-4da7-b91a-25e685a3693d
+                Name: Bambues 29
+                Components:
+                    e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
+                        Id: 9c88d67e-53ce-4758-8eb3-f1b11787b19f
+                        Position: {X: 45.375504, Y: 0.9999849, Z: 28.512619}
+                        Rotation: {X: 0.0, Y: 0.6427876, Z: 0.0, W: 0.76604444}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! 72967860-cdf3-4b25-bc48-b36dc06e9bfc
+                            f85ecce74adab0363728f1996ba9e779: ref!! 7665b1c3-50bd-48ad-b70c-347cf3f495cf
+                            e30ee0499b772da2813f008470e23b27: ref!! b18aa7d9-1c27-4dd6-89de-0361ab1e4675
+                            69e4d8e6fbe4a83d889e68d31849286a: ref!! 046a437e-99e5-49c3-a6ce-26b21c22fbea
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: afd3122f-37ca-4187-b125-45a2782573bc
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
                 Id: 94114723-5629-4588-a282-5d0157dc332b
@@ -3986,6 +3680,25 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             1b0d8ae952205fc80fd625ab647c7188: ref!! 50eaadae-6533-4915-9cff-692329fb2b90
+        -   Folder: null
+            Entity:
+                Id: 97ed6115-cd39-45a5-941d-5616f8f833f8
+                Name: "Bambú 2"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: 1dcee68c-2256-42df-ac92-52ce34d238ec
+                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
+                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
+                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: b01a3555-903f-4134-bcf6-6581d5bb84d1
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: e34ce6ff-92ee-4fe3-a2f1-8edf5c0c117d
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 983fe095-1f03-4ace-88a5-36ab52080630
                 Name: Estatua
@@ -4043,25 +3756,6 @@ Hierarchy:
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
-                Id: 9bf055a5-ccbd-422b-938d-0f00d950f156
-                Name: "Bambú 3"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: ac99467a-8e7b-438c-b2b8-ff11eb241788
-                        Position: {X: 3.197174, Y: 1.9073486E-06, Z: 2.4452407}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 4494d3bb-cfea-4faa-98ed-c28c1cba1161
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 893310bb-bfc9-4282-9776-1097ca5229ff
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
                 Id: 9c840b9c-b883-430a-9524-4f68a10ee95b
                 Name: "Bambú 1"
                 Components:
@@ -4096,6 +3790,25 @@ Hierarchy:
                 BasePartAsset: 41ca5cfd-b972-493a-9b64-b3263ab527b6:Prefabs/Estatuas/EstatuaGorila
                 BasePartId: 51df1284-7b19-4d2e-a52c-bb41c9ce1134
                 InstanceId: bbccd65b-f1ad-40c5-967c-c8b7c6cc9bde
+        -   Folder: null
+            Entity:
+                Id: 9e24aea9-8bdd-4856-86ac-92b6c26e1736
+                Name: "Bambú 2"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: b18aa7d9-1c27-4dd6-89de-0361ab1e4675
+                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
+                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
+                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: 66b03fee-28c2-4fec-b716-3b86ec87d0e6
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: a7a05f6e-936a-4664-a8a5-0bfd27156f73
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: 9eb2f88c-6123-475c-8ead-dfccfa5a7472
                 Name: Cabeza
@@ -4163,44 +3876,6 @@ Hierarchy:
                         Children:
                             7d20fd56628ef491dd9db87dad39913a: ref!! 4fc21206-515f-41f6-96ab-2bcc867390e7
                             6ae7b54e3a2c0bf72ab554e2ba0a8be8: ref!! 233549ba-4a03-470b-8d7d-e587010ce3e7
-        -   Folder: null
-            Entity:
-                Id: 9f950623-2e7d-4f55-8386-f7826bad821f
-                Name: "Bambú 1"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: b44c2361-5e40-48d1-8411-593ddbab7f92
-                        Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 1b49bc8f-e49c-432d-8046-9532fe873dcc
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: eb5407b6-a5d6-435d-b59d-ff27288b521e
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: a27b061c-983a-4097-a032-2d3409249600
-                Name: "Bambú 3"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 794aa72f-0e62-48a7-b394-5796966a5a0b
-                        Position: {X: 3.197174, Y: 1.9073486E-06, Z: 2.4452407}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: b21e3c3f-4459-478e-817f-610e927bf4f0
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: ff2914ad-b265-4f36-aa43-bce157ac7942
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: a3547ccd-2528-4e77-a41e-bf3ac3ce3883
                 Name: Entorno
@@ -4229,8 +3904,8 @@ Hierarchy:
                 Components:
                     e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
                         Id: 7cf99a4b-8cd5-46ad-878f-7e85e1463283
-                        Position: {X: 48.97928, Y: 0.0, Z: -5.364664}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Position: {X: 16.600285, Y: 0.0, Z: 38.107132}
+                        Rotation: {X: 0.0, Y: 0.6427876, Z: 0.0, W: 0.76604444}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             3459e6065a1cb4f8e26b40f2c920a69b: ref!! 75f5cd39-6de6-46c4-afe0-61064b189065
@@ -4240,6 +3915,25 @@ Hierarchy:
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 2a2471d1-99d9-4294-87ef-be14f4ae0ff2
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Folder: null
+            Entity:
+                Id: a400f5e6-54ff-45bf-bc84-841dc69f0c68
+                Name: "Bambú 2"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: 445b5ae3-9365-4a50-8f11-b82c5e3e5b10
+                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
+                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
+                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: 5ea0dea1-4a3f-42d3-87b8-b10ab6259d2e
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: 9a7f9b31-e20e-4ec5-87c4-ce54ce572d8b
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: a534bc51-0499-4cf8-92f7-aebfd7b9df08
@@ -4261,12 +3955,31 @@ Hierarchy:
                 InstanceId: fbeb3d4c-64a1-4daa-b0be-16269248d2f8
         -   Folder: null
             Entity:
+                Id: a5a2e2e2-30a0-460a-80e7-1aaf38577f7f
+                Name: "Bambú 2"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: ec2ae74a-80e9-4e66-9233-9c02f5592238
+                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
+                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
+                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: b47fc845-cac1-4554-a287-b7a5843dbd1e
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: 6b192722-81f2-42f7-a359-02e35ad6e558
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Folder: null
+            Entity:
                 Id: a62e257f-367b-4b3e-b3ff-d77eed1a31a5
                 Name: Bambues 4
                 Components:
                     e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
                         Id: 5d30eb86-f53e-4d76-9d53-c266d4ae51c0
-                        Position: {X: 38.296722, Y: 0.0, Z: -58.480293}
+                        Position: {X: 40.92568, Y: 1.0, Z: -23.853342}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -4296,6 +4009,25 @@ Hierarchy:
                 BasePartAsset: 41ca5cfd-b972-493a-9b64-b3263ab527b6:Prefabs/Estatuas/EstatuaGorila
                 BasePartId: c53099b9-a2f6-4954-9d1d-2ffc93d63526
                 InstanceId: bbccd65b-f1ad-40c5-967c-c8b7c6cc9bde
+        -   Folder: null
+            Entity:
+                Id: a6fe383d-2ec1-4879-901a-a36633a431c6
+                Name: Bambues 23
+                Components:
+                    e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
+                        Id: c7e5275e-6679-421e-9649-41ce72db5c43
+                        Position: {X: -15.782324, Y: 0.99998504, Z: -48.62529}
+                        Rotation: {X: 0.0, Y: 0.6427876, Z: 0.0, W: 0.76604444}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! a76b66f9-60ea-4252-9d29-598908186fce
+                            f85ecce74adab0363728f1996ba9e779: ref!! 7f352cae-fba2-4aa6-b3c9-718c55a4740d
+                            e30ee0499b772da2813f008470e23b27: ref!! d1b071de-15a4-45b8-97a2-29979f51cbe6
+                            69e4d8e6fbe4a83d889e68d31849286a: ref!! 9c48cd46-eb79-4dd4-b3d7-8fce2f0c188f
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: efa71b0c-d885-4b91-9e46-5f977d995ea5
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: a72d57b0-5ce3-4095-831e-70f62000f5eb
                 Name: Estatua
@@ -4336,43 +4068,6 @@ Hierarchy:
                 InstanceId: 6755a4c8-3259-4ad0-9fcc-7de2fc50db67
         -   Folder: null
             Entity:
-                Id: a89c2451-c7ac-4a05-82b0-cec07f643aac
-                Name: "Bambú 1"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: cb1160ea-aa1e-433f-bfc5-2e97b5921a3a
-                        Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 32d4de03-eb5f-42a7-b1f9-a3f90379e90a
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 147ae481-c527-4f92-abc5-732fca2247fc
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Entity:
-                Id: aa9a9ee8-05ce-4c4e-a50f-c3c35784595e
-                Name: "Bambú 0"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 6d069bcf-73c8-4240-9f07-3bdc4140892c
-                        Position: {X: -4.467354, Y: 1.9073486E-06, Z: -2.5294545}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.1, Y: 1.1, Z: 1.1}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: f4f6b165-80e0-4bb2-a2fc-bc5d9d1fccd1
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 0406cca9-1240-4968-902c-4c92e40d6cee
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
                 Id: aaf2ab7f-694e-4fe2-86b8-871972af4143
                 Name: Estandarte (5)
                 Components:
@@ -4394,6 +4089,25 @@ Hierarchy:
                 InstanceId: 6755a4c8-3259-4ad0-9fcc-7de2fc50db67
         -   Folder: null
             Entity:
+                Id: ab679996-2c4b-4cab-bc83-304d49ebb4fd
+                Name: "Bambú 1"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: 7f352cae-fba2-4aa6-b3c9-718c55a4740d
+                        Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
+                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
+                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: 84d897bd-a5b9-40f7-97f0-9d5255a859db
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: beaec808-4cc4-49a4-a713-6d2db711b695
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Folder: null
+            Entity:
                 Id: abebb088-59c8-44da-946d-e8dc589a3616
                 Name: "Bambú 1"
                 Components:
@@ -4410,6 +4124,63 @@ Hierarchy:
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 86ef6a44-b228-419e-9755-e6e53940fb53
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Folder: null
+            Entity:
+                Id: ac56eefd-b661-478c-a128-a3c55362d124
+                Name: "Bambú 2"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: 894c33b4-129e-4de6-9d6d-ed4351f195cb
+                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
+                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
+                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: 0749f2ab-2633-4253-a83a-399f5fef5d21
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: 2542b4e4-3600-499e-a67d-e4b3c275b1b0
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Folder: null
+            Entity:
+                Id: ac5be4b8-39d3-49e9-acfa-1482986ccaba
+                Name: "Bambú 3"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: 07c38f84-a7e3-462e-a51c-a5fbe838fba5
+                        Position: {X: 3.197174, Y: 1.9073486E-06, Z: 2.4452407}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: f8fc3ca9-e40f-4761-ab35-cf9c503b1e1c
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: 0c738010-05ee-444e-a9b4-61ac344a851e
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Folder: null
+            Entity:
+                Id: ad3cc0de-2d40-49a2-bcd5-712870700df4
+                Name: "Bambú 3"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: 6c66d35a-d68d-476b-927a-38c377b2b254
+                        Position: {X: 3.197174, Y: 1.9073486E-06, Z: 2.4452407}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: 47dc32d7-cf0f-41e1-b660-a3c23095d0c7
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: 293194a9-80b5-450f-832e-1c6da4087d03
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
@@ -4466,25 +4237,6 @@ Hierarchy:
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: becc89ac-9516-457f-bbb5-6a24aa6ea325
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: aebf6407-e003-4804-8ae1-c4481da408d4
-                Name: Bambues 24
-                Components:
-                    e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
-                        Id: 795dedc0-5442-4bf0-a52b-9392515ac797
-                        Position: {X: -48.29912, Y: 0.0, Z: 31.903135}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! 0ee7e4d9-7c2d-4f2e-bb52-a4356644a062
-                            f85ecce74adab0363728f1996ba9e779: ref!! 8c3e4565-ff8d-496f-a3c4-5b35324d797c
-                            e30ee0499b772da2813f008470e23b27: ref!! b2b623eb-54e2-4c8f-a8f6-22c87f0a53f9
-                            69e4d8e6fbe4a83d889e68d31849286a: ref!! f75ea929-b4b3-4894-a879-a2ff2fd77bbb
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: c0d2dfa1-42f7-405f-9c12-fe2cc9bd05fa
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: af03e5da-b7a4-47f1-b427-ceb766938ada
@@ -4663,6 +4415,24 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: d5365882-ad49-47ac-9c3a-d08c3cf53fd8
                 InstanceId: ce28e181-3d28-4000-89a6-ae77d7930396
+        -   Entity:
+                Id: b046f018-0c7a-4df9-8f9e-304cbf2e8aa5
+                Name: "Bambú 0"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: 2a16fde5-14b6-43d2-936e-e90416f0b8dc
+                        Position: {X: -4.467354, Y: 1.9073486E-06, Z: -2.5294545}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.1, Y: 1.1, Z: 1.1}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: 5b4f909c-ab0d-4a29-af64-cc945867a1e2
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: f02cfbfe-7445-46ee-8def-66de812fe2cc
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
                 Id: b0bf2947-f723-4298-9392-07d9969d5fcb
@@ -4772,22 +4542,22 @@ Hierarchy:
                 BasePartId: 99b37088-760c-4970-92ca-9c6e3376c46e
                 InstanceId: 6755a4c8-3259-4ad0-9fcc-7de2fc50db67
         -   Entity:
-                Id: b4b62926-6e73-4a7c-9d16-e27eb0ea639c
+                Id: b542b069-3efd-4870-8638-1ec0ee3a33b3
                 Name: "Bambú 0"
                 Components:
                     067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 2e537216-47c7-46c0-a984-53b00a1b16d9
+                        Id: a6f231a2-821a-4e04-bba4-bc56ea07728f
                         Position: {X: -4.467354, Y: 1.9073486E-06, Z: -2.5294545}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.1, Y: 1.1, Z: 1.1}
                         Children: {}
                     3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: f2412f9b-8bb9-4a4d-b725-3e87c91751ac
+                        Id: a033ed8c-9535-4ee4-9b7f-0fced3b808a6
                         Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
                         Materials: {}
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 2c132406-a835-4a3b-a2b4-a359c1c4a4de
+                BasePartId: 3bd0ae7a-7e64-4380-b8a0-53b65f7e6069
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
@@ -4797,7 +4567,7 @@ Hierarchy:
                     09d666fe569b6705e10ac0fd980915ae: !TransformComponent
                         Id: f855078d-9b76-4462-8249-4cf5178e5f21
                         Position: {X: 0.0, Y: 4.0, Z: 0.0}
-                        Rotation: {X: -0.18301268, Y: 0.68301266, Z: 0.18301268, W: 0.68301266}
+                        Rotation: {X: -0.21850802, Y: -0.6724985, Z: -0.21850802, W: 0.6724985}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     d3bd436bb21fdc2fc472afaa3883cec3: !LightComponent
@@ -4818,24 +4588,6 @@ Hierarchy:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
                 BasePartId: 2bb12672-64e7-4c41-bb2c-23f9e7330029
                 InstanceId: 8e464a2a-cba3-4fb8-93e5-341a4ecf45f7
-        -   Entity:
-                Id: b5e23c34-d409-4469-973b-63af710c317d
-                Name: "Bambú 0"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 08f7afa2-40e9-4576-878a-41cf6127f7eb
-                        Position: {X: -4.467354, Y: 1.9073486E-06, Z: -2.5294545}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.1, Y: 1.1, Z: 1.1}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: f372c65a-8f4e-4a05-b07a-9af0a78ffd8f
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 169f4791-f55f-4009-8432-c96ac2452fb9
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: b61a8902-62ce-4b08-89fb-220e2cfcf424
                 Name: Estatua
@@ -4917,8 +4669,8 @@ Hierarchy:
                 Components:
                     e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
                         Id: 768cd1a4-afb6-4b98-8e13-14dc5d87ec5e
-                        Position: {X: 46.690754, Y: 0.0, Z: 32.084652}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Position: {X: -40.938717, Y: 1.0, Z: 16.366543}
+                        Rotation: {X: 0.0, Y: 0.6427876, Z: 0.0, W: 0.76604444}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             3459e6065a1cb4f8e26b40f2c920a69b: ref!! 4ca01a54-8470-4e6c-9c0a-da44c16c778b
@@ -5057,6 +4809,24 @@ Hierarchy:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
                 BasePartId: b181d6af-f519-49f5-b1ef-861190338f57
                 InstanceId: 6755a4c8-3259-4ad0-9fcc-7de2fc50db67
+        -   Entity:
+                Id: c001f698-cef1-48ab-bde1-e4a19d581894
+                Name: "Bambú 0"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: a76b66f9-60ea-4252-9d29-598908186fce
+                        Position: {X: -4.467354, Y: 1.9073486E-06, Z: -2.5294545}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.1, Y: 1.1, Z: 1.1}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: e12bee56-395f-48b0-b570-91e499452a3d
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: d8cd6753-3db7-4411-82c3-197cd57e023b
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
                 Id: c096594d-7fce-405e-b283-77a27afab0cc
@@ -5081,60 +4851,78 @@ Hierarchy:
                 InstanceId: 8e464a2a-cba3-4fb8-93e5-341a4ecf45f7
         -   Folder: null
             Entity:
-                Id: c0a38d88-5fd9-4a24-b8d1-2d3f4273d617
-                Name: "Bambú 1"
+                Id: c0eacbf7-1a3c-4096-95bb-0c7f98db2b32
+                Name: "Bambú 3"
                 Components:
                     067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: f077ab6d-6b0f-40c0-b83a-4efecf677896
-                        Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
+                        Id: 9c48cd46-eb79-4dd4-b3d7-8fce2f0c188f
+                        Position: {X: 3.197174, Y: 1.9073486E-06, Z: 2.4452407}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 3f9ceea9-932b-43fa-ae8e-f306e7c05dcf
+                        Id: d46e8bca-71f6-4256-a721-3ac902e2a79d
                         Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
                         Materials: {}
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: c6afa660-8f60-494f-b138-8101da3ca968
+                BasePartId: fbb0f6ee-8e73-4ab4-b945-fc45c11d905e
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Entity:
+                Id: c1d67b16-dfc1-425f-913a-122ca7294557
+                Name: "Bambú 0"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: 984a06d7-5905-4089-aef8-d53dc53eb0a8
+                        Position: {X: -4.467354, Y: 1.9073486E-06, Z: -2.5294545}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.1, Y: 1.1, Z: 1.1}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: 8580115f-800d-4d8e-bbcf-c97a3841e616
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: 16bbeccf-56fd-43db-8852-900c92a3a227
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
-                Id: c5e0835c-98c9-4e93-bb23-7d948a3725e7
-                Name: "Bambú 2"
+                Id: c347fe50-f6b7-49e2-981a-6d82462f4499
+                Name: Bambues 22
                 Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: b2b623eb-54e2-4c8f-a8f6-22c87f0a53f9
-                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 13dc4cf6-9f35-4264-b00c-15993118ad4b
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
+                    e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
+                        Id: 8b1a2e55-cfba-4cd0-9e1f-22bdac3bdf21
+                        Position: {X: -42.485256, Y: 1.1649231, Z: -35.62358}
+                        Rotation: {X: 0.0, Y: 0.6427876, Z: 0.0, W: 0.76604444}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! a6f231a2-821a-4e04-bba4-bc56ea07728f
+                            f85ecce74adab0363728f1996ba9e779: ref!! 2c0d40f9-06ac-49bb-973f-1e68075dc25e
+                            e30ee0499b772da2813f008470e23b27: ref!! 1dcee68c-2256-42df-ac92-52ce34d238ec
+                            69e4d8e6fbe4a83d889e68d31849286a: ref!! a938ed86-8e4b-48e3-90b7-ad146253ff7e
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 9e7445b1-cb2b-4343-967f-601656646329
+                BasePartId: 044f8038-e253-4800-b94a-d7381c30fa95
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
-                Id: c6abcad7-a7ad-4acd-9324-00ec17f84994
-                Name: "Bambú 1"
+                Id: c3fd68d1-3c6a-4c61-b36b-a55742a49b07
+                Name: "Bambú 3"
                 Components:
                     067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 63dafd12-c628-4ed1-bdde-32ac384de93e
-                        Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
+                        Id: 4ff44d27-b6d1-4e9d-8b3f-0d01c471c748
+                        Position: {X: 3.197174, Y: 1.9073486E-06, Z: 2.4452407}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: acb513ca-4ff9-4d3c-9e5e-c8022ff7a032
+                        Id: 8dec4edb-2bfd-4e25-a337-33f2f3234935
                         Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
                         Materials: {}
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 20edcb4d-0a82-4c5e-89ff-dbd48bc0ed89
+                BasePartId: cdcac20c-cccc-45a4-bf4b-d063ae74c8f7
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
@@ -5156,24 +4944,6 @@ Hierarchy:
                 BasePartId: 0cb62dae-9100-4764-ba32-7370c7b44027
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
-                Id: c770d562-06b0-45b1-97db-96bd30703a70
-                Name: "Bambú 0"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 60e8b47c-23c3-42e2-9875-4f12e013662f
-                        Position: {X: -4.467354, Y: 1.9073486E-06, Z: -2.5294545}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.1, Y: 1.1, Z: 1.1}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 7c072904-30d0-4f41-9558-8be9b46dff3f
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: f1d31727-7b3f-4d55-8c92-bdb21080129b
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Entity:
                 Id: c94b49cd-3ba4-49ce-b03e-e4c1198044a8
                 Name: Modelo Cabeza
                 Components:
@@ -5191,6 +4961,25 @@ Hierarchy:
                 BasePartAsset: "99853308-0f4c-476c-9987-ced83d337764:Prefabs/Estatuas/EstatuaOrangután"
                 BasePartId: 195f9ab5-dc59-46e2-b766-1dd4271765e1
                 InstanceId: e60f1f53-f146-409d-bc10-fa766984333d
+        -   Folder: null
+            Entity:
+                Id: ca983f09-2f89-48fd-8bfb-98fb2f517065
+                Name: "Bambú 1"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: 464a969b-0f96-4cff-8165-fb1f440cac25
+                        Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
+                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
+                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: bbe53d92-2b98-4f5a-ab16-7ea9ed020279
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: f487fbba-0281-4b03-9644-693d7e613aa8
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
                 Id: cbb0c525-b2ad-4a35-929f-4c2d95359365
@@ -5234,6 +5023,25 @@ Hierarchy:
                 BasePartAsset: "99853308-0f4c-476c-9987-ced83d337764:Prefabs/Estatuas/EstatuaOrangután"
                 BasePartId: 0c004198-306f-4150-90e6-66b7d1d84fb9
                 InstanceId: e60f1f53-f146-409d-bc10-fa766984333d
+        -   Folder: null
+            Entity:
+                Id: cbed0626-b691-497a-b829-6bd96f3571d6
+                Name: "Bambú 2"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: 982088dd-cf59-460a-96c5-e09c0ee3f908
+                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
+                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
+                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: f3959fed-1079-4c90-9898-59c89ac14710
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: f63289b4-39b5-4bb7-8b3a-09465c1a62f5
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
                 Id: cc795214-e233-4a22-a6b7-2cd4610a7413
@@ -5290,6 +5098,25 @@ Hierarchy:
                 BasePartAsset: "46987841-938b-49c8-8290-d86c2f39823c:Prefabs/Estatuas/EstatuaChimpancé"
                 BasePartId: cb586dab-0cde-419c-aef3-88459750ff5d
                 InstanceId: f56df825-d73b-46ca-9d80-03a89de1f108
+        -   Folder: null
+            Entity:
+                Id: cf2642f0-7f1f-4d50-a2a9-fac0a01e31c3
+                Name: "Bambú 2"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: a4f4c729-5bd1-49c7-946d-cbd0810e0a85
+                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
+                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
+                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: 4193fffd-905c-4f1c-b0b8-f6a7a0beb66b
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: 349d2f60-16b4-4f9a-b7a0-b896c2e52e03
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
                 Id: cfde128f-b6c5-47dd-a770-5e0c7b5c9b06
@@ -5390,22 +5217,22 @@ Hierarchy:
                 BasePartId: d66f5386-948d-4010-8348-05a4b4bc87e5
                 InstanceId: bbccd65b-f1ad-40c5-967c-c8b7c6cc9bde
         -   Entity:
-                Id: d27f8777-1d46-43f8-8c0a-46c96840e356
+                Id: d0beb984-8696-4c12-b26b-3112798ef6fe
                 Name: "Bambú 0"
                 Components:
                     067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 0ee7e4d9-7c2d-4f2e-bb52-a4356644a062
+                        Id: 4e869f26-1ca6-4c6b-afaa-8b16b6c5e9e4
                         Position: {X: -4.467354, Y: 1.9073486E-06, Z: -2.5294545}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.1, Y: 1.1, Z: 1.1}
                         Children: {}
                     3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 4029589b-07f1-4448-8306-64db0836ab49
+                        Id: d1552f35-bdcc-41b4-81b6-05c3c84a0cb9
                         Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
                         Materials: {}
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: eb19088b-23b5-472c-8f17-0014b1ced11f
+                BasePartId: 7dc7de24-e16f-4017-b5ae-dc19ee2e78fb
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: d2af3592-da16-4b78-9be1-736eafbadf00
@@ -5461,43 +5288,42 @@ Hierarchy:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
                 BasePartId: 99aeb7a3-def5-47e3-9c59-ad40570c9ef2
                 InstanceId: 6755a4c8-3259-4ad0-9fcc-7de2fc50db67
-        -   Folder: null
-            Entity:
-                Id: d6c4ecfd-efe5-4c0f-97c2-8f153c53fba3
-                Name: "Bambú 1"
+        -   Entity:
+                Id: d49e842a-9072-4db8-b783-66cb3e9cc9a0
+                Name: "Bambú 0"
                 Components:
                     067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 3397cffc-0b6c-4c66-8012-40103de4b426
-                        Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
+                        Id: 1eaecf52-6623-4229-9070-55e2883e9ff0
+                        Position: {X: -4.467354, Y: 1.9073486E-06, Z: -2.5294545}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.1, Y: 1.1, Z: 1.1}
                         Children: {}
                     3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: ccf064b8-c504-4e8e-afb2-802851792555
+                        Id: d79e4a1c-2085-41de-a80e-7f55c2bd03aa
                         Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
                         Materials: {}
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: d0380108-61f2-49e5-883a-fa9834b6fe01
+                BasePartId: ac212958-813f-4b63-8ece-1e61e954f6d5
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
-                Id: d897bbc2-5fb9-48d3-b3c1-18fc85fbf4cb
-                Name: "Bambú 1"
+                Id: d5c42cdf-7acc-45dc-b6e5-faaf7042b150
+                Name: "Bambú 3"
                 Components:
                     067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 4711af84-128e-41f8-8374-cf3f36204b1a
-                        Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
+                        Id: 154b403a-7453-4eb2-8d3c-f89c001d53b7
+                        Position: {X: 3.197174, Y: 1.9073486E-06, Z: 2.4452407}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 94228b70-34e9-4eca-9b90-002e6ecbddd4
+                        Id: 94ad308d-aea0-4d92-b942-3a927b2ec940
                         Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
                         Materials: {}
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 43e24943-0f4b-4b41-be51-625f59eadd5f
+                BasePartId: 7098fc4e-ef3f-43a0-a5c3-b2bf5fcb7caf
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: da2ee7ee-f3cd-490e-922f-3f23155ef3f4
@@ -5516,43 +5342,6 @@ Hierarchy:
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: dcaf5abf-5380-404d-aeba-c83843d29a63
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: da5826cc-0f52-4e86-87d8-7ede75fa78e6
-                Name: "Bambú 2"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: d789090a-5cea-465c-92db-3c3ed8d4ce53
-                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 6442bfb9-c991-41a1-826f-ee2292fdbc1e
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: abedef1e-859a-4d8c-a824-9739adb476dd
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Entity:
-                Id: da5e1df5-03a3-49e3-9b4c-54bcb007d6ed
-                Name: "Bambú 0"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 9a1e613e-ad51-4996-b714-fd74d26f08a3
-                        Position: {X: -4.467354, Y: 1.9073486E-06, Z: -2.5294545}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.1, Y: 1.1, Z: 1.1}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 476fc479-bfcd-4b70-943c-7b8a53cef7f3
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 3a22cd6d-7c3b-4161-8bd7-d0f7e551c613
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
@@ -5580,7 +5369,7 @@ Hierarchy:
                 Components:
                     e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
                         Id: ca383b56-43f3-40cf-ad4e-c648e3b63c77
-                        Position: {X: 7.2619057, Y: 0.0, Z: 57.53443}
+                        Position: {X: 31.750774, Y: 1.0, Z: 41.42334}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -5591,24 +5380,6 @@ Hierarchy:
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: f64e4979-9dee-435b-bb76-953f25603b6c
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Entity:
-                Id: db962e2b-0e49-4cc8-87e2-7b39629dc31f
-                Name: "Bambú 0"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 2466d8e8-4120-43bd-9deb-7ec08afe3619
-                        Position: {X: -4.467354, Y: 1.9073486E-06, Z: -2.5294545}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.1, Y: 1.1, Z: 1.1}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 64005735-d64d-43e7-b825-7b758026f237
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 0fc3b004-caa7-4254-99c9-6f553d9d7652
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
@@ -5689,6 +5460,25 @@ Hierarchy:
                 InstanceId: 6755a4c8-3259-4ad0-9fcc-7de2fc50db67
         -   Folder: null
             Entity:
+                Id: e2a22dd9-c01c-4fdd-bae1-081f91ade6f8
+                Name: Bambues 24
+                Components:
+                    e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
+                        Id: 7510f51a-c6a1-4294-b1bd-9aec35ad197f
+                        Position: {X: -39.602962, Y: 1.0000001, Z: 36.890785}
+                        Rotation: {X: 0.0, Y: 0.6427876, Z: 0.0, W: 0.76604444}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! 4e869f26-1ca6-4c6b-afaa-8b16b6c5e9e4
+                            f85ecce74adab0363728f1996ba9e779: ref!! 7cc0c4ef-1241-425d-9b39-5bd9edab68e8
+                            e30ee0499b772da2813f008470e23b27: ref!! 445b5ae3-9365-4a50-8f11-b82c5e3e5b10
+                            69e4d8e6fbe4a83d889e68d31849286a: ref!! f7cfa103-c0ac-46a2-b82b-274c9dff064f
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: a473ccb1-df65-4bb0-8a8a-02d69796b717
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Folder: null
+            Entity:
                 Id: e36dc503-584b-4984-9947-05f5f161adf0
                 Name: Soporte
                 Components:
@@ -5731,7 +5521,7 @@ Hierarchy:
                 Components:
                     e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
                         Id: ae84551a-53f6-4844-9b67-f11ef481f9d5
-                        Position: {X: 61.19574, Y: 0.0, Z: 5.1859083}
+                        Position: {X: 1.8360113, Y: 1.0, Z: 50.88482}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -5742,25 +5532,6 @@ Hierarchy:
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: d09eba29-5ab0-491c-b418-2c8885af9b1d
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: e41abc01-77c1-408d-9c0f-78cbe62f20e5
-                Name: "Bambú 2"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 1f7d29dd-23b9-41a5-8294-d1a645059427
-                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 69fdf36c-1519-4ccd-944e-1f1dc185c513
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: e891db1d-4a5d-43a7-89bc-d654174cbb83
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: e4420e1d-f3bb-4f27-88ed-3a3f17f8018e
@@ -5857,6 +5628,44 @@ Hierarchy:
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
+                Id: e6de86d7-e224-4256-874f-c98b71d369f5
+                Name: "Bambú 3"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: 3306d7fc-cc38-47d2-8711-6f4a7a83b676
+                        Position: {X: 3.197174, Y: 1.9073486E-06, Z: 2.4452407}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: 2f670f7d-cca7-4823-9c05-a131fd054170
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: 484f5d0a-1afa-491d-94b4-d2dfdf37c5cc
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Folder: null
+            Entity:
+                Id: e80017e3-e33b-419d-9b63-e457b2e0e5b5
+                Name: "Bambú 2"
+                Components:
+                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
+                        Id: bd886e52-aabf-4d83-98fa-d5b9ae8714bc
+                        Position: {X: -3.0072289, Y: 1.9073486E-06, Z: 3.7532427}
+                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
+                        Scale: {X: 0.8, Y: 0.8, Z: 0.8}
+                        Children: {}
+                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
+                        Id: cc03accd-ab37-4b96-91f5-b6c35fbb6b8b
+                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
+                        Materials: {}
+            Base:
+                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
+                BasePartId: bdb24f27-11a3-4a7f-add4-ae230873352b
+                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
+        -   Folder: null
+            Entity:
                 Id: e908c51a-7ae9-49cf-b40a-8e4a25d2edd8
                 Name: "Bambú 3"
                 Components:
@@ -5881,7 +5690,7 @@ Hierarchy:
                 Components:
                     e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
                         Id: 7181f0b8-8dc5-4850-a1c1-70fb69af9aaa
-                        Position: {X: 59.99995, Y: 0.0, Z: 24.247019}
+                        Position: {X: -27.090061, Y: 0.0, Z: 28.040413}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -5911,25 +5720,6 @@ Hierarchy:
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: bef4db0e-66e0-45cf-b837-fdb966f33923
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: eb8dd83d-532b-466e-acaa-dd03f2deb138
-                Name: "Bambú 3"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: bc9572eb-2678-476a-a223-9f9b11a9346c
-                        Position: {X: 3.197174, Y: 1.9073486E-06, Z: 2.4452407}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 08f91814-ec29-411e-b5af-b6a0c3d5c03b
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 962d07b9-f2e6-44d8-95c1-0a509e231101
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: ebc7f53e-7bba-46c8-91aa-115c834183e1
@@ -5967,25 +5757,6 @@ Hierarchy:
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: cd05b0f2-c967-49be-a7dd-652c46758a61
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: ec3787a0-b7de-48b7-b304-1eab2523903d
-                Name: Bambues 31
-                Components:
-                    e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
-                        Id: 0b3109fe-2192-4c9e-b601-0b50b5ab419a
-                        Position: {X: -52.11997, Y: 0.0, Z: -26.523506}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! 147801ef-9f87-45ed-a9fa-df96cd14c6b7
-                            f85ecce74adab0363728f1996ba9e779: ref!! 3397cffc-0b6c-4c66-8012-40103de4b426
-                            e30ee0499b772da2813f008470e23b27: ref!! 1f7d29dd-23b9-41a5-8294-d1a645059427
-                            69e4d8e6fbe4a83d889e68d31849286a: ref!! ac99467a-8e7b-438c-b2b8-ff11eb241788
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: c7596e75-46bc-4e6b-8334-69b3ef9f3a98
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Entity:
                 Id: ed8e1364-86ff-4e62-90b5-12821ece2133
@@ -6043,31 +5814,12 @@ Hierarchy:
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
-                Id: efcd82be-b84d-4a94-bfbc-2632e9f3db23
-                Name: "Bambú 1"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: dbadeece-a451-4e97-aa41-8f0d2d42962c
-                        Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: a88221cd-af38-4133-914c-5a464d428970
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 5180cbfb-8cdf-4839-aed8-e9537158ca52
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
                 Id: f192b2d3-b33e-4af0-a0ac-86b6458f9690
                 Name: Ciruelo 6
                 Components:
                     3af33bf9195999601df8b7be11d8881b: !TransformComponent
                         Id: ece5dc4c-ff3b-496f-a5c3-2045ba10c31f
-                        Position: {X: 75.10656, Y: 3.0, Z: -7.642044}
+                        Position: {X: -28.52133, Y: 0.0, Z: -13.867022}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -6121,25 +5873,6 @@ Hierarchy:
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
-                Id: f37452ef-0b15-44c7-892a-ffb0ce3782d2
-                Name: "Bambú 3"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: c095a5b0-7aae-4a6e-a8f8-83b6aecdafc6
-                        Position: {X: 3.197174, Y: 1.9073486E-06, Z: 2.4452407}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 2377e2a1-0f26-4978-8388-da8bf0606c75
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: 4ab4bd31-d484-431b-b316-f32091fa2733
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
                 Id: f3dc171f-4262-4ff8-9857-e64fde5724c9
                 Name: "Bambú 2"
                 Components:
@@ -6175,25 +5908,6 @@ Hierarchy:
             Base:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: c6f170d2-2dce-4455-a851-25b5a334baad
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
-        -   Folder: null
-            Entity:
-                Id: f7c9fa0a-fde7-43a1-9479-0070a4143fb6
-                Name: "Bambú 1"
-                Components:
-                    067b52565a81f2b1b54d6f35eb662333: !TransformComponent
-                        Id: 8c3e4565-ff8d-496f-a3c4-5b35324d797c
-                        Position: {X: 3.2113209, Y: 1.9073486E-06, Z: -3.3985436}
-                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
-                        Scale: {X: 1.2, Y: 1.2, Z: 1.2}
-                        Children: {}
-                    3ffca8bc3c75fa2a784851aebdf80845: !ModelComponent
-                        Id: 8c12e896-9e64-44fd-b93d-8486aafbbff1
-                        Model: "69ab26cb-0ef4-4f9e-a018-060aba569570:Modelos/Árboles/Bambú/Bambú"
-                        Materials: {}
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: ba096f18-eebd-481c-b12b-121ec1ee15e4
                 InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
@@ -6286,25 +6000,6 @@ Hierarchy:
                         Scale*: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             fe850ff2a034e6ac607d6288829530db: ref!! b97e2f17-3bef-4b2a-b912-84c0d6531a71
-        -   Folder: null
-            Entity:
-                Id: fb2dee24-7f2d-462b-849c-943a7e0564fe
-                Name: Bambues 20
-                Components:
-                    e07eb10db6575d484b2e21c44deab3ec: !TransformComponent
-                        Id: 6b32b53b-7407-4b62-9a7d-0217fd75f6e0
-                        Position: {X: -22.667816, Y: 0.0, Z: 67.56408}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            3459e6065a1cb4f8e26b40f2c920a69b: ref!! df1746da-883d-4356-80fb-fbeb96ce3be8
-                            f85ecce74adab0363728f1996ba9e779: ref!! c3fffabd-3c42-48b9-970a-b65f04cbbb3a
-                            e30ee0499b772da2813f008470e23b27: ref!! 7aed63a4-a42e-4727-a371-4c9714a39eaa
-                            69e4d8e6fbe4a83d889e68d31849286a: ref!! 3d4bc6e6-9e5d-4b4b-b729-e7ad5c9b01d5
-            Base:
-                BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
-                BasePartId: d6c9e64a-f3e0-460f-94af-cf1150cfb60d
-                InstanceId: ff1f1db4-1c9c-4cb1-a79f-d45eeac65492
         -   Folder: null
             Entity:
                 Id: fd7d6fb4-6186-4120-8e00-0c0c3b6dad25
