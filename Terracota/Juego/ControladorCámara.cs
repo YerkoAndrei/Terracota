@@ -1,6 +1,6 @@
 ﻿using System;
-using Stride.Core.Mathematics;
 using Stride.Engine;
+using Stride.Core.Mathematics;
 
 namespace Terracota;
 
@@ -19,10 +19,12 @@ public class ControladorCámara : SyncScript
 
     // Rotación
     private Quaternion rotaciónInicial;
+    private Quaternion rotaciónInicialLuz;
     private Quaternion rotaciónObjetivo;
-    private Quaternion direcciónObjetivo;
-    private float YObjetivo;
+    private Quaternion rotaciónObjetivoLuz;
+    private bool primeraRotación;
     private bool derecha;
+    private float YObjetivo;
     private TransformComponent luzDireccional;
 
     // Efecto disparo
@@ -48,7 +50,7 @@ public class ControladorCámara : SyncScript
             MoverCámara();
     }
 
-    public void RotarCámara(float _YObjetivo, bool _derecha, Action _enFin = null, TransformComponent _luzDireccional = null)
+    public void RotarYCámara(float _YObjetivo, bool _derecha, Action _enFin = null, TransformComponent _luzDireccional = null)
     {
         if (rotando)
         {
@@ -71,11 +73,25 @@ public class ControladorCámara : SyncScript
             YObjetivo = (YObjetivo * -1);
 
         rotaciónObjetivo = rotaciónInicial * Quaternion.RotationY(MathUtil.DegreesToRadians(YObjetivo));
-        direcciónObjetivo = rotaciónInicial * Quaternion.RotationY(MathUtil.DegreesToRadians(YObjetivo));
 
+        if (luzDireccional != null)
+        {
+            rotaciónInicialLuz = luzDireccional.Rotation;
+            rotaciónObjetivoLuz = rotaciónInicialLuz * Quaternion.RotationY(45f);
+        }
         rotando = true;
     }
-    
+
+    public void RotarXCámara(float XObjetivo, float tiempo)
+    {
+        // Variables
+        duraciónLerp = tiempo;
+        rotaciónInicial = eje.Rotation;
+
+        rotaciónObjetivo = rotaciónInicial * Quaternion.RotationZ(MathUtil.DegreesToRadians(XObjetivo));
+        rotando = true;
+    }
+
     public void ActivarEfectoDisparo()
     {
         var retroceso = 0.8f;
@@ -108,11 +124,11 @@ public class ControladorCámara : SyncScript
         tiempoDelta += (float)Game.UpdateTime.Elapsed.TotalSeconds;
         tiempo = tiempoDelta / duraciónLerp;
 
-        eje.Rotation = Quaternion.Lerp(rotaciónInicial, direcciónObjetivo, tiempo);
+        eje.Rotation = Quaternion.Lerp(rotaciónInicial, rotaciónObjetivo, tiempo);
 
-        // Mueve sol 45º aprox.
+        // Mueve sol 45º
         if (luzDireccional != null)
-            luzDireccional.Rotation *= Quaternion.RotationY(0.005f);
+            luzDireccional.Rotation = Quaternion.Lerp(rotaciónInicialLuz, rotaciónObjetivoLuz, tiempo);
 
         // Fin
         if (tiempoDelta >= duraciónLerp)

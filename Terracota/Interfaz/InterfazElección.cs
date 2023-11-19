@@ -151,6 +151,7 @@ public class InterfazElección : StartupScript
         // Ganador
         ganaAnfitrión = RangoAleatorio(0,2) == 1;
 
+        controladorPartida.RotarXCámara(1.5f);
         await FinalizarRuleta();
         controladorPartida.ComenzarPartida(ganaAnfitrión);
     }
@@ -211,6 +212,7 @@ public class InterfazElección : StartupScript
         visorHuesped.Visibility = Visibility.Hidden;
 
         var aleatorio = RangoAleatorio(40, 51);
+        controladorPartida.RotarXCámara(4.5f);
         await MoverRuleta(aleatorio);
         await FinalizarRuleta();
         controladorPartida.ComenzarPartida(ganaAnfitrión);

@@ -21,6 +21,7 @@ public class ControladorPartidaLocal : SyncScript
 
     private ControladorCañón cañónActual;
     private bool cambiandoTurno;
+    private bool cambiarHaciaDerecha;
 
     private TipoJugador turnoJugador;
     private TipoProyectil proyectilAnfitrión;
@@ -81,13 +82,13 @@ public class ControladorPartidaLocal : SyncScript
     {
         UIElección.Enabled = false;
 
+        // Activa colisiones
+        fortalezaAnfitrión.Activar();
+        fortalezaHuesped.Activar();
+
         // Al finalizar rotación
         var enFin = () =>
         {
-            // Activa colisiones
-            fortalezaAnfitrión.Activar();
-            fortalezaHuesped.Activar();
-
             // Recarga interfaz
             interfaz.Activar(true);
             interfaz.ActualizarTurno(cantidadTurnos, multiplicador);
@@ -103,7 +104,8 @@ public class ControladorPartidaLocal : SyncScript
             turnoJugador = TipoJugador.anfitrión;
             cañónActual = cañónAnfitrión;
 
-            controladorCámara.RotarCámara(90, false, enFin);
+            cambiarHaciaDerecha = true;
+            controladorCámara.RotarYCámara(90, false, enFin);
         }
         else
         {
@@ -113,8 +115,14 @@ public class ControladorPartidaLocal : SyncScript
             turnoJugador = TipoJugador.huesped;
             cañónActual = cañónHuesped;
 
-            controladorCámara.RotarCámara(90, true, enFin);
+            cambiarHaciaDerecha = false;
+            controladorCámara.RotarYCámara(90, true, enFin);
         }
+    }
+
+    public void RotarXCámara(float tiempo)
+    {
+        controladorCámara.RotarXCámara(-40, tiempo);
     }
 
     private void Disparar()
@@ -172,7 +180,7 @@ public class ControladorPartidaLocal : SyncScript
 
         if (turnoJugador == TipoJugador.anfitrión)
         {
-            controladorCámara.RotarCámara(180, true, () =>
+            controladorCámara.RotarYCámara(180, cambiarHaciaDerecha, () =>
             {
                 cambiandoTurno = false;
                 cañónHuesped.Activar(true);
@@ -184,7 +192,7 @@ public class ControladorPartidaLocal : SyncScript
         }
         else
         {
-            controladorCámara.RotarCámara(180, true, () =>
+            controladorCámara.RotarYCámara(180, cambiarHaciaDerecha, () =>
             {
                 cambiandoTurno = false;
                 cañónAnfitrión.Activar(true);
@@ -255,6 +263,6 @@ public class ControladorPartidaLocal : SyncScript
     {
         // En caso de que pierda el que tiene el turno
         if (ganador != turnoJugador)
-            controladorCámara.RotarCámara(180, true);
+            controladorCámara.RotarYCámara(180, cambiarHaciaDerecha);
     }
 }
