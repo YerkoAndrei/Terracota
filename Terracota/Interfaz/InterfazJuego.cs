@@ -5,12 +5,13 @@ using Stride.UI;
 using Stride.Graphics;
 using Stride.UI.Panels;
 using Stride.Core.Mathematics;
+using Stride.Input;
 
 namespace Terracota;
 using static Sistema;
 using static Constantes;
 
-public class InterfazJuego : StartupScript
+public class InterfazJuego : SyncScript
 {
     public ControladorPartidaLocal controladorPartida;
 
@@ -46,6 +47,7 @@ public class InterfazJuego : StartupScript
     private List<ImageElement> estadoAnfitrión;
     private List<ImageElement> estadoHuesped;
 
+    private bool activo;
     private bool pausa;
 
     public override void Start()
@@ -111,9 +113,19 @@ public class InterfazJuego : StartupScript
         CambiarInterfaz(TipoJugador.anfitrión, TipoProyectil.bola);
     }
 
+    public override void Update()
+    {
+        if (!activo)
+            return;
+
+        if (Input.IsKeyPressed(Keys.Escape))
+            EnClicPausa();
+    }
+
     public void Activar(bool activar)
     {
-        if(activar)
+        activo = activar;
+        if (activar)
             Entity.Get<UIComponent>().Page.RootElement.Visibility = Visibility.Visible;
         else
             Entity.Get<UIComponent>().Page.RootElement.Visibility = Visibility.Hidden;
