@@ -25,7 +25,6 @@ Hierarchy:
                 Children:
                     c4b37dd54e2390d5ad3200d8e4271c26: !Button ref!! e9817252-1a86-4071-86c9-bc6589abb726
                     56709eb4bd894340587024d07f6a21b8: !ImageElement ref!! 6463ec38-0df6-47c1-9c8c-2d015302a211
-                    1d60fb5ad4ac64281a10dc757f2e77f3: !ImageElement ref!! 867763c9-4469-4e04-924f-12c1867624a2
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -46,20 +45,6 @@ Hierarchy:
                 BasePartAsset: ec94a22e-f511-4b8e-a71e-bc8c7df21ba9:Interfaces/Librerias/Botones
                 BasePartId: 5135e116-4a3a-4640-b38b-9af44c38e492
                 InstanceId: 08ff812a-e125-442f-8c25-208801c0cc62
-        -   UIElement: !ImageElement
-                Id: 321412bf-8327-4f15-8f28-0364573133e2
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Margin: {Left: 4.0, Top: 4.0, Right: 4.0, Bottom: 4.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: 
-                Source: !SpriteFromTexture
-                    Texture: d4daec2c-6de8-4f28-a41c-15146ebcbf92:Texturas/Interfaz/Borrar
-                    Center: {X: 0.0, Y: 0.0}
-                Color: {R: 255, G: 255, B: 255, A: 255}
-                StretchType: Fill
         -   UIElement: !Grid
                 Id: 32d086f5-a905-4423-993f-9b91100884c7
                 DependencyProperties: {}
@@ -96,7 +81,6 @@ Hierarchy:
                 Children:
                     c4b37dd54e2390d5ad3200d8e4271c26: !Button ref!! 7697eacf-06af-4cea-91d0-a7f1c9ea341a
                     56709eb4bd894340587024d07f6a21b8: !ImageElement ref!! 61c69ad8-b35d-45a6-941c-dca163a00f57
-                    9e58b1088d67147602929fd03f8b8682: !ImageElement ref!! 321412bf-8327-4f15-8f28-0364573133e2
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -110,9 +94,9 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: img
                 Source: !SpriteFromTexture
-                    Texture: "544f8ec8-cb8e-46d6-8873-ba73ab7cef86:Texturas/Interfaz/BaseHexágono"
+                    Texture: d4daec2c-6de8-4f28-a41c-15146ebcbf92:Texturas/Interfaz/Borrar
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 255, G: 0, B: 0, A: 255}
+                Color: {R: 255, G: 255, B: 255, A: 255}
                 StretchType: Fill
         -   UIElement: !ImageElement
                 Id: 6463ec38-0df6-47c1-9c8c-2d015302a211
@@ -124,9 +108,9 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: img
                 Source: !SpriteFromTexture
-                    Texture: "544f8ec8-cb8e-46d6-8873-ba73ab7cef86:Texturas/Interfaz/BaseHexágono"
+                    Texture: 00f28f1f-6ac5-4a82-9d36-e7c9ca599b07:Texturas/Interfaz/Sobreescribir
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 0, G: 0, B: 255, A: 255}
+                Color: {R: 255, G: 255, B: 255, A: 255}
                 StretchType: Fill
         -   UIElement: !ImageElement
                 Id: 6853b3ae-ec13-4844-a4e0-2d280e9bc88e
@@ -138,7 +122,7 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Source: !SpriteFromTexture
-                    Texture: "7e1b453f-bdd3-4d5d-8844-601313a775f4:Texturas/Interfaz/BaseBotón"
+                    Texture: 7e1b453f-bdd3-4d5d-8844-601313a775f4:Texturas/Interfaz/BaseHorizontal
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 0, B: 0, A: 255}
                 StretchType: Fill
@@ -166,20 +150,6 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: btn
-        -   UIElement: !ImageElement
-                Id: 867763c9-4469-4e04-924f-12c1867624a2
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: 
-                Source: !SpriteFromTexture
-                    Texture: 00f28f1f-6ac5-4a82-9d36-e7c9ca599b07:Texturas/Interfaz/Sobreescribir
-                    Center: {X: 0.0, Y: 0.0}
-                Color: {R: 255, G: 255, B: 255, A: 255}
-                StretchType: Fill
         -   UIElement: !ImageElement
                 Id: 86af9c85-ecae-4bb7-8638-058d00a80793
                 DependencyProperties: {}
