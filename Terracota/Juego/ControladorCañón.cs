@@ -23,6 +23,7 @@ public class ControladorCañón : SyncScript
     public Entity ruedaIzquierda;
     public Entity ruedaDerecha;
 
+    public ParticleSystemComponent partículasFuego;
     public ParticleSystemComponent partículasHumo;
 
     public Prefab bala;
@@ -118,10 +119,16 @@ public class ControladorCañón : SyncScript
         }
 
         // Partículas
+        if (!partículasFuego.Enabled)
+            partículasFuego.Enabled = true;
+
+        partículasFuego.ParticleSystem.ResetSimulation();
+        partículasFuego.ParticleSystem.Play();
+
         if (!partículasHumo.Enabled)
             partículasHumo.Enabled = true;
 
         partículasHumo.ParticleSystem.ResetSimulation();
-        partículasHumo.ParticleSystem.Play();
+        partículasHumo.ParticleSystem.Play();        
     }
 }
