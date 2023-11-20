@@ -1444,8 +1444,8 @@ Hierarchy:
                         Enabled: false
                         Control:
                             ResetSeconds: 1.0
-                            Control: Play
-                        Color: {R: 1.0, G: 0.627451, B: 0.0, A: 1.0}
+                            Control: Stop
+                        Color: {R: 1.0, G: 0.627451, B: 0.0, A: 0.0}
                         Speed: 1.0
                         ParticleSystem:
                             Settings: {}
@@ -1495,7 +1495,7 @@ Hierarchy:
                                             Position: {X: 0.0, Y: 0.0, Z: 0.0}
                                             InheritRotation: true
                                             Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                            InheritScale: true
+                                            InheritScale: false
                                             Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                                             ScaleUniform: 2.0
                                             SeedOffset: 0
@@ -3847,11 +3847,10 @@ Hierarchy:
                         Children: {}
                     f8724608dc26693057602d67126d5311: !ParticleSystemComponent
                         Id: a8660d46-2269-406f-bdb7-eaf7c9f3cca3
-                        Enabled: false
                         Control:
                             ResetSeconds: 1.0
                             Control: Stop
-                        Color: {R: 0.39215687, G: 0.39215687, B: 0.39215687, A: 0.39215687}
+                        Color: {R: 0.39215687, G: 0.39215687, B: 0.39215687, A: 0.0}
                         Speed: 1.0
                         ParticleSystem:
                             Settings: {}
@@ -3902,7 +3901,7 @@ Hierarchy:
                                             Position: {X: 0.0, Y: 0.0, Z: 0.0}
                                             InheritRotation: false
                                             Rotation: {X: 0.0, Y: 0.0, Z: 0.38268346, W: 0.9238795}
-                                            InheritScale: true
+                                            InheritScale: false
                                             Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                                             ScaleUniform: 1.0
                                             SeedOffset: 0
@@ -3928,21 +3927,6 @@ Hierarchy:
                                             DisplayParticleScaleUniform: true
                                             VelocityMin: {X: -1.5, Y: -1.5, Z: -10.0}
                                             VelocityMax: {X: 1.5, Y: 1.5, Z: 0.1}
-                                        2a9e38c34f7227a5310340e11a8ea14d: !InitialColorSeed
-                                            InheritPosition: true
-                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                                            InheritRotation: true
-                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                            InheritScale: true
-                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                                            ScaleUniform: 1.0
-                                            SeedOffset: 0
-                                            DisplayParticlePosition: false
-                                            DisplayParticleRotation: false
-                                            DisplayParticleScale: false
-                                            DisplayParticleScaleUniform: false
-                                            ColorMin: {R: 0.0, G: 0.0, B: 1.0, A: 1.0}
-                                            ColorMax: {R: 1.0, G: 0.0, B: 0.0, A: 1.0}
                                     Updaters:
                                         ed94bebc9df81d9c9abf995948f476d2: !UpdaterForceField
                                             InheritPosition: true
@@ -4853,8 +4837,8 @@ Hierarchy:
                         Enabled: false
                         Control:
                             ResetSeconds: 1.0
-                            Control: Play
-                        Color: {R: 1.0, G: 0.627451, B: 0.0, A: 1.0}
+                            Control: Stop
+                        Color: {R: 1.0, G: 0.627451, B: 0.0, A: 0.0}
                         Speed: 1.0
                         ParticleSystem:
                             Settings: {}
@@ -4904,7 +4888,7 @@ Hierarchy:
                                             Position: {X: 0.0, Y: 0.0, Z: 0.0}
                                             InheritRotation: true
                                             Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                            InheritScale: true
+                                            InheritScale: false
                                             Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                                             ScaleUniform: 2.0
                                             SeedOffset: 0
@@ -5507,11 +5491,10 @@ Hierarchy:
                         Children: {}
                     f8724608dc26693057602d67126d5311: !ParticleSystemComponent
                         Id: 1b4c9c52-1e5a-45ee-b6b6-86e1d048a702
-                        Enabled: false
                         Control:
                             ResetSeconds: 1.0
                             Control: Stop
-                        Color: {R: 0.39215687, G: 0.39215687, B: 0.39215687, A: 0.39215687}
+                        Color: {R: 0.39215687, G: 0.39215687, B: 0.39215687, A: 0.0}
                         Speed: 1.0
                         ParticleSystem:
                             Settings: {}
@@ -5562,7 +5545,7 @@ Hierarchy:
                                             Position: {X: 0.0, Y: 0.0, Z: 0.0}
                                             InheritRotation: false
                                             Rotation: {X: 0.0, Y: 0.0, Z: 0.38268346, W: 0.9238795}
-                                            InheritScale: true
+                                            InheritScale: false
                                             Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                                             ScaleUniform: 1.0
                                             SeedOffset: 0
@@ -5588,21 +5571,6 @@ Hierarchy:
                                             DisplayParticleScaleUniform: true
                                             VelocityMin: {X: -1.5, Y: -1.5, Z: -10.0}
                                             VelocityMax: {X: 1.5, Y: 1.5, Z: 0.1}
-                                        2a9e38c34f7227a5310340e11a8ea14d: !InitialColorSeed
-                                            InheritPosition: true
-                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                                            InheritRotation: true
-                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                            InheritScale: true
-                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                                            ScaleUniform: 1.0
-                                            SeedOffset: 0
-                                            DisplayParticlePosition: false
-                                            DisplayParticleRotation: false
-                                            DisplayParticleScale: false
-                                            DisplayParticleScaleUniform: false
-                                            ColorMin: {R: 0.0, G: 0.0, B: 1.0, A: 1.0}
-                                            ColorMax: {R: 1.0, G: 0.0, B: 0.0, A: 1.0}
                                     Updaters:
                                         ed94bebc9df81d9c9abf995948f476d2: !UpdaterForceField
                                             InheritPosition: true
