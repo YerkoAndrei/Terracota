@@ -1,0 +1,105 @@
+!SceneAsset
+Id: 6c364c57-a55a-4017-af9b-c51e9303424a
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! 96afc566-0ad3-48dd-a8ac-817ee9ba37be
+        - ref!! 1c24d060-2d89-44b6-ba1b-9a7d9ebc0f48
+        - ref!! 1c8250c8-2f05-40ca-88fc-6f8bd81442ec
+        - ref!! fefbc1e7-0040-4ee9-8095-710c177ed333
+        - ref!! 4e9925a0-8192-4f20-8c29-52a01b90f786
+        - ref!! 94b26a8e-163c-4ee1-8292-6133cf9523fa
+    Parts:
+        -   Entity:
+                Id: 1c24d060-2d89-44b6-ba1b-9a7d9ebc0f48
+                Name: Piso
+                Components:
+                    4c8163a445c13f5338dfe2440cb98dff: !TransformComponent
+                        Id: 8aa384bf-35a4-4242-ba96-438791ea633a
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    ebd925cf3096c2ab796056e3041d1aa1: !ModelComponent
+                        Id: 9e788212-9c9f-430b-91b4-5c1db588ca4d
+                        Model: 9820a66d-9dab-402a-9645-fcb7239d3966:Modelos/Entorno/Piso
+                        IsShadowCaster: false
+                        Materials: {}
+        -   Entity:
+                Id: 1c8250c8-2f05-40ca-88fc-6f8bd81442ec
+                Name: Contorno
+                Components:
+                    55a5429edb7581893bd2b2938589b33a: !TransformComponent
+                        Id: 7f2ea940-e6da-447c-bbad-f2f796f65f15
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    53408232e5daf6473f89eb6e43043da2: !ModelComponent
+                        Id: d9e426da-6cdb-4115-8266-a9137f0e179d
+                        Model: 81f56bdc-362e-4388-8137-9558109d3349:Modelos/Entorno/Contorno
+                        IsShadowCaster: false
+                        Materials: {}
+        -   Entity:
+                Id: 4e9925a0-8192-4f20-8c29-52a01b90f786
+                Name: Camera
+                Components:
+                    33bec5de5c7e138c9218e174774040a0: !TransformComponent
+                        Id: 7480a177-6e32-4252-add9-c79a03c20e00
+                        Position: {X: 0.0, Y: 9.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    ea259927c848ddbbb199b35cee34fda0: !CameraComponent
+                        Id: 4e3f5bca-74bc-4887-a87a-9ebd68d86765
+                        Name: null
+                        Projection: Perspective
+                        Slot: 9f373eee-c85c-45b0-9b02-82451f709476
+        -   Entity:
+                Id: 94b26a8e-163c-4ee1-8292-6133cf9523fa
+                Name: Cielo
+                Components:
+                    827b6f08d38dde0d924a80700fdf4599: !TransformComponent
+                        Id: 7eb1a4ae-d7df-42c1-bdc5-b282dce5d2ec
+                        Position: {X: 0.0, Y: -30.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.38268346, Z: 0.0, W: 0.9238795}
+                        Scale: {X: 100.0, Y: 100.0, Z: 100.0}
+                        Children: {}
+                    9c0278e2db4a7a04620e6fc8b1ad683f: !ModelComponent
+                        Id: ce3cb9cb-5002-43e1-876e-8fa59de09d33
+                        Model: 4b6db2dc-2b62-4c1f-8cd4-1722b2ad79fd:Modelos/Cielo/Cielo
+                        IsShadowCaster: false
+                        Materials: {}
+        -   Entity:
+                Id: 96afc566-0ad3-48dd-a8ac-817ee9ba37be
+                Name: Terreno
+                Components:
+                    08d5c06977f39f2d29e4144e22b5cb1a: !TransformComponent
+                        Id: 04074815-3777-4d76-b115-71a8bc588c12
+                        Position: {X: 0.0, Y: 9.536743E-07, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    516dbfa5393cdce02aa256ccae814752: !ModelComponent
+                        Id: f8171513-6514-43c3-80af-a52de2a16281
+                        Model: 4d92e787-1fc3-4e1e-815e-25fcaa0d4065:Modelos/Terreno/Terreno
+                        IsShadowCaster: false
+                        Materials: {}
+        -   Entity:
+                Id: fefbc1e7-0040-4ee9-8095-710c177ed333
+                Name: Skybox light
+                Components:
+                    09d666fe569b6705e10ac0fd980915ae: !TransformComponent
+                        Id: 4e851d74-b665-492d-b4b5-575fcd2105fa
+                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d3bd436bb21fdc2fc472afaa3883cec3: !LightComponent
+                        Id: 4c0c6b3e-3dbf-410e-a7ff-642758b09542
+                        Type: !LightSkybox
+                            Skybox: 870c1df6-0b77-44c6-85ce-bda61c75f79c:Texturas/Skybox
+                        Intensity: 6.0
