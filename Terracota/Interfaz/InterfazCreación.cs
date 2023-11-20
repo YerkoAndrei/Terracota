@@ -2,6 +2,7 @@
 using Stride.Engine;
 using Stride.UI;
 using Stride.UI.Controls;
+using Stride.UI.Events;
 using Stride.UI.Panels;
 
 namespace Terracota;
@@ -27,6 +28,8 @@ public class InterfazCreación : StartupScript
         // Textos
         txtMensaje = página.FindVisualChildOfType<TextBlock>("txtMensaje");
         txtNuevoNombre = página.FindVisualChildOfType<EditText>("txtNuevoNombre");
+        txtNuevoNombre.TextChanged += VerificarFuente;
+
         txtMensaje.Text = string.Empty;
         txtNuevoNombre.Text = string.Empty;
 
@@ -129,7 +132,7 @@ public class InterfazCreación : StartupScript
 
     private void EnClicGuardarNueva()
     {
-        var nombre = txtNuevoNombre.Text;
+        var nombre = txtNuevoNombre.Text.ToUpper().Trim();
         if (string.IsNullOrEmpty(nombre))
         {
             MostrarMensaje("Nombre no puede estar vacío");
@@ -199,6 +202,14 @@ public class InterfazCreación : StartupScript
             popup.Visibility = Visibility.Hidden;
         });
         popup.Visibility = Visibility.Visible;
+    }
+
+    private void VerificarFuente(object sender, RoutedEventArgs args)
+    {
+        var fuente = SistemaTraducción.VerificarFuente(txtNuevoNombre.Text);
+
+        if (txtNuevoNombre.Font != fuente)
+            txtNuevoNombre.Font = fuente;
     }
 
     private async void MostrarMensaje(string mensaje)

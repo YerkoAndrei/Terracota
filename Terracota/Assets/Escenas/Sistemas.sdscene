@@ -8,6 +8,7 @@ Hierarchy:
     RootParts:
         - ref!! 21f01d7f-860f-40b3-801e-9c0ec5b41907
         - ref!! 3989825c-2e05-4529-9e41-c67347ddb9e9
+        - ref!! bae920a6-7993-476b-bbb2-c1edc1f6d423
         - ref!! 37dbe4f7-f45e-43e5-aa17-5edb268b1462
     Parts:
         -   Entity:
@@ -78,3 +79,18 @@ Hierarchy:
                         NearClipPlane: 0.0
                         FarClipPlane: 0.1
                         Slot: 22e7a61e-940b-4bf3-8332-c0b9074cd7f5
+        -   Folder: null
+            Entity:
+                Id: bae920a6-7993-476b-bbb2-c1edc1f6d423
+                Name: "SistemaTraducción"
+                Components:
+                    fb6c374e88f47c3a1f497dbfe004ebbe: !TransformComponent
+                        Id: b6acebb2-be6b-4e36-acb5-edeed400c6d6
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1b3082c5d721d7b1412e2bb53ef6625d: !Terracota.SistemaTraducci%25C3%25B3n,Terracota
+                        Id: 01741f25-15e1-402e-8ef7-57d15deacc34
+                        fuentePrincipal: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                        fuenteRespaldo: b840e167-f71f-4d4f-9a21-cd8118ebb833:Fuente/YaHei
