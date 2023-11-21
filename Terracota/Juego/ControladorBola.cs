@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
@@ -9,14 +10,18 @@ using static Constantes;
 public class ControladorBola : AsyncScript
 {
     public int maxColisiones;
+    public Prefab prefabPartículas;
 
     private RigidbodyComponent cuerpo;
     private bool destruyendo;
     private int colisiones;
 
+    private List<Entity> partículas;
+
     public override async Task Execute()
     {
         cuerpo = Entity.Get<RigidbodyComponent>();
+        partículas = new List<Entity>();
 
         // Tiempo de vida
         var contarVida = ContarVida();
@@ -30,6 +35,7 @@ public class ControladorBola : AsyncScript
                (colisión.ColliderB == cuerpo && colisión.ColliderA.Entity.Get<ControladorBola>() == null))
             {
                 colisiones++;
+                MostrarEfectos();
             }
             
             // Evita colisiones innesesarias
@@ -38,6 +44,16 @@ public class ControladorBola : AsyncScript
 
             await Script.NextFrame();
         }
+    }
+
+    private void MostrarEfectos()
+    {
+        var partícula = prefabPartículas.Instantiate()[0];
+        partícula.Transform.Position = Entity.Transform.Position;
+        Entity.Scene.Entities.Add(partícula);
+
+        // Posterior borrado y descarga
+        partículas.Add(partícula);
     }
 
     private async Task ContarVida()
@@ -67,6 +83,14 @@ public class ControladorBola : AsyncScript
 
         // Fin
         cuerpo.Enabled = false;
+
+        // Removiendo entidades
+        foreach(var partículas in partículas)
+        {
+            //Content.Unload(partículas);
+            Entity.Scene.Entities.Remove(partículas);
+        }
+        //Content.Unload(Entity);
         Entity.Scene.Entities.Remove(Entity);
     }
 }
