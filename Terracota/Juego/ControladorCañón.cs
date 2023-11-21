@@ -1,4 +1,5 @@
-﻿using Stride.Core.Mathematics;
+﻿using System.Threading.Tasks;
+using Stride.Core.Mathematics;
 using Stride.Input;
 using Stride.Engine;
 using Stride.Physics;
@@ -93,6 +94,7 @@ public class ControladorCañón : SyncScript
                 nuevaBala.Transform.RotationEulerXYZ = EulerAleatorio();
 
                 var cuerpo = nuevaBala.Get<RigidbodyComponent>();
+                nuevaBala.Get<ControladorBola>().Inicialización(TipoProyectil.bola);
                 Entity.Scene.Entities.Add(nuevaBala);
 
                 // Impulso
@@ -102,19 +104,24 @@ public class ControladorCañón : SyncScript
                 break;
             case TipoProyectil.metralla:
                 var nuevaMetralla = metralla.Instantiate();
-                foreach(var metralla in nuevaMetralla)
+                for(int i=0; i < nuevaMetralla.Count; i++)
                 {
-                    metralla.Transform.Position += origenProyectil.Transform.WorldMatrix.TranslationVector;
-                    metralla.Transform.RotationEulerXYZ = EulerAleatorio();
+                    nuevaMetralla[i].Transform.Position += origenProyectil.Transform.WorldMatrix.TranslationVector;
+                    nuevaMetralla[i].Transform.RotationEulerXYZ = EulerAleatorio();
 
-                    var cuerpoMetralla = metralla.Get<RigidbodyComponent>();
-                    Entity.Scene.Entities.Add(metralla);
+                    var cuerpoMetralla = nuevaMetralla[i].Get<RigidbodyComponent>();
+                    var controladorBola = nuevaMetralla[i].Get<ControladorBola>();
+                    controladorBola.Inicialización(TipoProyectil.metralla);
+                    Entity.Scene.Entities.Add(nuevaMetralla[i]);
 
                     // Impulso
                     var aleatoriedadMetralla = RangoAleatorio(-1f, 0.5f);
                     var posiciónAleatoria = RangoAleatorio(-0.02f, 0.02f);
                     cuerpoMetralla.Mass += aleatoriedadMetralla;
                     cuerpoMetralla.ApplyForce((origenProyectil.Transform.WorldMatrix.Up + posiciónAleatoria) * ((fuerzaMetralla * multiplicador) + aleatoriedadMetralla));
+
+                    // Destruye metralla en orden para no saturar escena
+                    _ = DestruirMetralla(controladorBola, i);
                 }
                 break;
         }
@@ -131,5 +138,11 @@ public class ControladorCañón : SyncScript
 
         partículasHumo.ParticleSystem.ResetSimulation();
         partículasHumo.ParticleSystem.Play();        
+    }
+
+    private async Task DestruirMetralla(ControladorBola controladorBola, int tiempo)
+    {
+        await Task.Delay(duraciónTurno + (tiempo * 10));
+        controladorBola.DestruirInmediato();
     }
 }

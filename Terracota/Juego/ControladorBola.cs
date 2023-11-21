@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
@@ -12,19 +11,27 @@ public class ControladorBola : AsyncScript
     public int maxColisiones;
     public Prefab prefabPartículas;
 
+    private TipoProyectil tipoProyectil;
     private RigidbodyComponent cuerpo;
+    private Scene escena;
     private bool destruyendo;
+    private bool removerDeEscena;
     private int colisiones;
 
-    private List<Entity> partículas;
+    public void Inicialización(TipoProyectil _tipoProyectil)
+    {
+        tipoProyectil = _tipoProyectil;
+        removerDeEscena = (tipoProyectil != TipoProyectil.metralla);
+    }
 
     public override async Task Execute()
     {
+        escena = Entity.Scene;
         cuerpo = Entity.Get<RigidbodyComponent>();
-        partículas = new List<Entity>();
 
         // Tiempo de vida
-        var contarVida = ContarVida();
+        if (removerDeEscena)
+            _ = ContarVida();
 
         while (Game.IsRunning)
         {
@@ -49,11 +56,28 @@ public class ControladorBola : AsyncScript
     private void MostrarEfectos()
     {
         var partícula = prefabPartículas.Instantiate()[0];
+        switch(tipoProyectil)
+        {
+            case TipoProyectil.bola:
+                partícula.Transform.Scale *= 1.1f;
+                break;
+            case TipoProyectil.metralla:
+                partícula.Transform.Scale *= 0.4f;
+                break;
+        }
+
         partícula.Transform.Position = Entity.Transform.Position;
-        Entity.Scene.Entities.Add(partícula);
+        escena.Entities.Add(partícula);
 
         // Posterior borrado y descarga
-        partículas.Add(partícula);
+        _ = ContarVidaPartícula(partícula);
+    }
+
+    private async Task ContarVidaPartícula(Entity entidad)
+    {
+        // Duración partícula
+        await Task.Delay(1000);
+        escena.Entities.Remove(entidad);
     }
 
     private async Task ContarVida()
@@ -84,13 +108,14 @@ public class ControladorBola : AsyncScript
         // Fin
         cuerpo.Enabled = false;
 
-        // Removiendo entidades
-        foreach(var partículas in partículas)
-        {
-            //Content.Unload(partículas);
-            Entity.Scene.Entities.Remove(partículas);
-        }
-        //Content.Unload(Entity);
-        Entity.Scene.Entities.Remove(Entity);
+        // Removiendo entidad
+        if (removerDeEscena)
+            escena.Entities.Remove(Entity);
+    }
+
+    // Metralla es destruida en orden por ControladorCañón
+    public void DestruirInmediato()
+    {
+        escena.Entities.Remove(Entity);
     }
 }
