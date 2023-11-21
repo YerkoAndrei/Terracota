@@ -68,8 +68,8 @@ Hierarchy:
                         spriteMetralla: 017a6458-410b-4810-9447-3254c0c8db29:Texturas/Interfaz/Metralla
                         "spriteAnfitrión": "8d986627-e68f-4481-a6c3-9ef06599ea85:Texturas/Interfaz/Anfitrión"
                         spriteHuesped: 976e2b48-5f94-437c-91e9-b29ecf29da95:Texturas/Interfaz/Huesped
-                        "colorAnfitrión": {R: 255, G: 0, B: 0, A: 255}
-                        colorHuesped: {R: 0, G: 0, B: 255, A: 255}
+                        "colorAnfitrión": {R: 200, G: 0, B: 39, A: 255}
+                        colorHuesped: {R: 39, G: 0, B: 200, A: 255}
                     d9134663cf65c4ff1e2f051b273a0936: !TransformComponent
                         Id: 973c3c82-a892-4ee0-914a-36ffe7ff1aa7
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -2511,10 +2511,10 @@ Hierarchy:
                         prefabRanura: "db6c1792-d472-4911-9e4b-3ec596fe2493:Interfaces/Librerias/RanuraElección"
                         "spriteAnfitrión": "8d986627-e68f-4481-a6c3-9ef06599ea85:Texturas/Interfaz/Anfitrión"
                         spriteHuesped: 976e2b48-5f94-437c-91e9-b29ecf29da95:Texturas/Interfaz/Huesped
-                        "colorAnfitrión": {R: 255, G: 0, B: 0, A: 255}
-                        colorHuesped: {R: 0, G: 0, B: 255, A: 255}
-                        "colorRuletaVacía": {R: 255, G: 255, B: 255, A: 255}
-                        colorRuletaActiva: {R: 0, G: 255, B: 0, A: 255}
+                        "colorAnfitrión": {R: 200, G: 0, B: 39, A: 255}
+                        colorHuesped: {R: 39, G: 0, B: 200, A: 255}
+                        "colorRuletaVacía": {R: 240, G: 230, B: 160, A: 240}
+                        colorRuletaActiva: {R: 19, G: 200, B: 19, A: 255}
                     d9134663cf65c4ff1e2f051b273a0936: !TransformComponent
                         Id: 60e94728-1af1-4aaf-a39a-a61c81178f31
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -3847,6 +3847,7 @@ Hierarchy:
                         Children: {}
                     f8724608dc26693057602d67126d5311: !ParticleSystemComponent
                         Id: a8660d46-2269-406f-bdb7-eaf7c9f3cca3
+                        Enabled: false
                         Control:
                             ResetSeconds: 1.0
                             Control: Stop
@@ -5491,6 +5492,7 @@ Hierarchy:
                         Children: {}
                     f8724608dc26693057602d67126d5311: !ParticleSystemComponent
                         Id: 1b4c9c52-1e5a-45ee-b6b6-86e1d048a702
+                        Enabled: false
                         Control:
                             ResetSeconds: 1.0
                             Control: Stop

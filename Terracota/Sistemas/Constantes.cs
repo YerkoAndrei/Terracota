@@ -14,6 +14,16 @@ public static class Constantes
     public static Color colorEnClic = new Color(155, 155, 155, 250);
     public static Color colorBloqueado = new Color(155, 155, 155, 155);
 
+    // Paleta interfaz
+    // Negro    #FA191919
+    // Oscuro   #FFA03C00
+    // Claro    #F0F0DCA0
+    // Texto    #FF280000
+
+    // Amarillo     #FFF0F064
+    // Anfitrión    #FFC80027
+    // Huesped      #FF2700C8
+
     public enum Escenas
     {
         menú,
