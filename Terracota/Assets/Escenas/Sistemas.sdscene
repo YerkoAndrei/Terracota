@@ -9,6 +9,7 @@ Hierarchy:
         - ref!! 21f01d7f-860f-40b3-801e-9c0ec5b41907
         - ref!! 3989825c-2e05-4529-9e41-c67347ddb9e9
         - ref!! bae920a6-7993-476b-bbb2-c1edc1f6d423
+        - ref!! 8d2b7c8f-2973-49e3-b966-6f6ffb139bec
         - ref!! 37dbe4f7-f45e-43e5-aa17-5edb268b1462
     Parts:
         -   Entity:
@@ -79,6 +80,24 @@ Hierarchy:
                         NearClipPlane: 0.0
                         FarClipPlane: 0.1
                         Slot: 22e7a61e-940b-4bf3-8332-c0b9074cd7f5
+        -   Entity:
+                Id: 8d2b7c8f-2973-49e3-b966-6f6ffb139bec
+                Name: GameProfiler
+                Components:
+                    346b134265aa87e3a459649937509936: !TransformComponent
+                        Id: 3ad12529-06df-462d-b68c-7ffa109855ed
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    4d4f1dea651498d0468a5be39611ca93: !Terracota.GameProfiler,Terracota
+                        Id: 7a74b686-6844-4536-9438-7cb423c9ac69
+                        Enabled: false
+                        TextColor: {R: 144, G: 238, B: 144, A: 255}
+                        RefreshTime: 500.0
+                        SortingMode: ByTime
+                        FilteringMode: Fps
+                        ResultPage: 1
         -   Folder: null
             Entity:
                 Id: bae920a6-7993-476b-bbb2-c1edc1f6d423
