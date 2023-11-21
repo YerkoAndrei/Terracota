@@ -13,6 +13,21 @@ Hierarchy:
         - !Grid ref!! 9dbc5744-0ac0-4c46-9205-0a11931a40ad
     Parts:
         -   UIElement: !ImageElement
+                Id: 1479b55a-b325-47d5-b399-b61f252b635f
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 20.0
+                Height: 20.0
+                HorizontalAlignment: Left
+                Margin: {Left: 20.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Source: !SpriteFromTexture
+                    Texture: 7da5de62-4f01-42ef-a405-b12036a85127:Texturas/Interfaz/FlechaSolaIzquierda
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 160, G: 60, B: 0, A: 255}
+        -   UIElement: !ImageElement
                 Id: 16f5deaa-be37-4d49-9508-e410be06bc0c
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
@@ -35,23 +50,6 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: btn
-        -   UIElement: !ImageElement
-                Id: 37b6fff9-a154-45d6-b33f-0fdf7b325b88
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 150.0
-                Height: 100.0
-                HorizontalAlignment: Right
-                Margin: {Right: 50.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: Miniatura
-                Source: !SpriteFromTexture
-                    Texture: 66d859f6-5dbf-4782-bf1c-a7fdc0806448:Texturas/Cuadrado
-                    Center: {X: 0.0, Y: 0.0}
-                Color: {R: 0, G: 255, B: 0, A: 255}
-                StretchType: Fill
         -   UIElement: !ImageElement
                 Id: 472e8ccb-9332-4fa1-af58-94e059172fab
                 DependencyProperties: {}
@@ -109,6 +107,7 @@ Hierarchy:
                     1c482db9e487eabcfafa8de228094ddd: !ImageElement ref!! 86f64daa-a435-4dfc-8f72-dcafff1b73e9
                     99b2f9927202752e765e01936deb39aa: !ImageElement ref!! b6dd4947-332c-434a-895d-434d4688d06d
                     5566bcf02628b13fbd4b62cf4b2f7d7d: !ImageElement ref!! b34cb42c-37e9-42e2-873f-7f2e526b4493
+                    398aafcdf524421ea02ee90251ca2565: !ImageElement ref!! ec47afe9-b5d4-43dc-972f-633d4bf25a5a
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -135,6 +134,7 @@ Hierarchy:
                     1c482db9e487eabcfafa8de228094ddd: !ImageElement ref!! 4b1bbe4a-54a0-44a8-be1b-1ade58bcc67f
                     99b2f9927202752e765e01936deb39aa: !ImageElement ref!! 16f5deaa-be37-4d49-9508-e410be06bc0c
                     5566bcf02628b13fbd4b62cf4b2f7d7d: !ImageElement ref!! b29f7804-cc08-4449-b07e-610451e6fd69
+                    377dc04177242b53734f83e599961a0d: !ImageElement ref!! 1479b55a-b325-47d5-b399-b61f252b635f
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -156,24 +156,24 @@ Hierarchy:
                 Id: 94cc1f64-f057-486b-9cc1-552da8e835a4
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 60.0
-                Height: 45.0
-                HorizontalAlignment: Left
-                Margin: {Left: 20.0}
+                Width: 100.0
+                Height: 40.0
+                HorizontalAlignment: Center
+                Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: txt
-                Text: 00
+                Text: 0000
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
-                TextSize: 40.0
+                TextSize: 35.0
                 TextColor: {R: 40, G: 0, B: 0, A: 255}
                 TextAlignment: Center
         -   UIElement: !Grid
                 Id: 9dbc5744-0ac0-4c46-9205-0a11931a40ad
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 110.0
+                Height: 80.0
                 Margin: {Right: 12.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -183,7 +183,6 @@ Hierarchy:
                     874a4e3124a139ccc9dfcd3d69e0f5fd: !Button ref!! 2da2b5a3-fbfa-4622-a6f4-33e160b306a0
                     ebf01984522b5d373394da9765790fc0: !ImageElement ref!! 472e8ccb-9332-4fa1-af58-94e059172fab
                     8ab25270bb6b34496aea117e1204cb61: !TextBlock ref!! 94cc1f64-f057-486b-9cc1-552da8e835a4
-                    11353f9c679ee8e337ac08b6d1880a69: !ImageElement ref!! 37b6fff9-a154-45d6-b33f-0fdf7b325b88
                     dccf6847c7e6edb05cf0db1f032a6998: !Grid ref!! 55681e6b-3c3a-46ad-b22e-f60e906dfcbe
                 RowDefinitions: {}
                 ColumnDefinitions: {}
@@ -192,24 +191,24 @@ Hierarchy:
                 Id: 9f6090ae-a260-49c5-8f0a-f35b9f6e3ee2
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 60.0
-                Height: 45.0
-                HorizontalAlignment: Right
-                Margin: {Right: 20.0}
+                Width: 100.0
+                Height: 40.0
+                HorizontalAlignment: Center
+                Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: txt
-                Text: 00
+                Text: 0000
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
-                TextSize: 40.0
+                TextSize: 35.0
                 TextColor: {R: 40, G: 0, B: 0, A: 255}
                 TextAlignment: Center
         -   UIElement: !Grid
                 Id: b28cec70-712f-4cf9-b4e9-aecf0afb3921
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 110.0
+                Height: 80.0
                 Margin: {Right: 12.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -219,7 +218,6 @@ Hierarchy:
                     4cc2aa296fd55a1409d4a4053a134de9: !Button ref!! 56577cce-4ac3-450c-a45d-b6014e7feed8
                     219b0415f2292ab9cc3af6fda3858a8b: !ImageElement ref!! 48f61009-1528-4f25-8aee-f2957d69aa70
                     c72ca101be7d5a7b0664f5a8c4766c7c: !TextBlock ref!! 9f6090ae-a260-49c5-8f0a-f35b9f6e3ee2
-                    4acdbf24e8ead51b19636970460faccb: !ImageElement ref!! e3b93b8e-a756-4409-ad51-e2754c668953
                     ac6b9e0549f1fa2ae03c63d3e7620b17: !Grid ref!! 617e5a4a-fe3f-45e1-b637-f80515504cda
                 RowDefinitions: {}
                 ColumnDefinitions: {}
@@ -264,19 +262,17 @@ Hierarchy:
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 160, G: 60, B: 0, A: 255}
         -   UIElement: !ImageElement
-                Id: e3b93b8e-a756-4409-ad51-e2754c668953
+                Id: ec47afe9-b5d4-43dc-972f-633d4bf25a5a
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 150.0
-                Height: 100.0
-                HorizontalAlignment: Left
-                Margin: {Left: 50.0}
+                Width: 20.0
+                Height: 20.0
+                HorizontalAlignment: Right
+                Margin: {Right: 20.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: Miniatura
                 Source: !SpriteFromTexture
-                    Texture: 66d859f6-5dbf-4782-bf1c-a7fdc0806448:Texturas/Cuadrado
+                    Texture: 70fc85fd-d02c-44d1-ae9f-4025f01d5c75:Texturas/Interfaz/FlechaSolaDerecha
                     Center: {X: 0.0, Y: 0.0}
-                Color: {R: 0, G: 255, B: 0, A: 255}
-                StretchType: Fill
+                Color: {R: 160, G: 60, B: 0, A: 255}

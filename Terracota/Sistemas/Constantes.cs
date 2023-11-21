@@ -24,6 +24,13 @@ public static class Constantes
     // Anfitrión    #FFC80027
     // Huesped      #FF2700C8
 
+    // Tamaños fuentes
+    // Predeterminado   25
+    // En juego         30
+    // Fotraleza        35
+    // Títulos          45
+    // Grande           60
+
     public enum Escenas
     {
         menú,

@@ -200,7 +200,7 @@ public class InterfazJuego : SyncScript
         txtMultiplicador.Text = "x" + multiplicador.ToString("0.0");
 
         if(multiplicador >= multiplicadorMáximo)
-            txtMultiplicador.TextColor = Color.Red;
+            txtMultiplicador.TextColor = Color.Black;
     }
 
     private void CambiarTurno(TipoJugador jugador)

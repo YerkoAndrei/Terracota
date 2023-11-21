@@ -17,7 +17,7 @@ Hierarchy:
                 Width: 45.0
                 Height: 45.0
                 HorizontalAlignment: Left
-                Margin: {Left: 80.0}
+                Margin: {Left: 100.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -50,7 +50,7 @@ Hierarchy:
                 Id: 32d086f5-a905-4423-993f-9b91100884c7
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 110.0
+                Height: 80.0
                 Margin: {Right: 12.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -62,7 +62,6 @@ Hierarchy:
                     c72ca101be7d5a7b0664f5a8c4766c7c: !TextBlock ref!! f1f42a8e-2df5-4419-853c-144f81d89f30
                     b713325a816a7bb8387d16b065fffafa: !Grid ref!! 42b906d9-93a7-4ae0-bc36-543bfd20eb8e
                     9ca1fdded85b9a01c1b25450ae551daa: !Grid ref!! 04fe1672-22e8-4d6f-b2af-eca62d92190a
-                    4acdbf24e8ead51b19636970460faccb: !ImageElement ref!! 86af9c85-ecae-4bb7-8638-058d00a80793
                     799bfa2f5747900dcfdecf1581fe7ab5: !Grid ref!! f44ec420-e8cc-4f09-8d85-878af294d956
                 RowDefinitions: {}
                 ColumnDefinitions: {}
@@ -74,7 +73,7 @@ Hierarchy:
                 Width: 45.0
                 Height: 45.0
                 HorizontalAlignment: Left
-                Margin: {Left: 30.0, Top: 10.0, Bottom: 10.0}
+                Margin: {Left: 40.0, Top: 10.0, Bottom: 10.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -118,7 +117,6 @@ Hierarchy:
                 DependencyProperties:
                     c8d9e2b9b16c08e6df30136f8de95b7b~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                HorizontalAlignment: Center
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -152,23 +150,6 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: btn
-        -   UIElement: !ImageElement
-                Id: 86af9c85-ecae-4bb7-8638-058d00a80793
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 150.0
-                Height: 100.0
-                HorizontalAlignment: Left
-                Margin: {Left: 130.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: Miniatura
-                Source: !SpriteFromTexture
-                    Texture: 66d859f6-5dbf-4782-bf1c-a7fdc0806448:Texturas/Cuadrado
-                    Center: {X: 0.0, Y: 0.0}
-                Color: {R: 0, G: 255, B: 0, A: 255}
-                StretchType: Fill
         -   UIElement: !Button
                 Id: e9817252-1a86-4071-86c9-bc6589abb726
                 DependencyProperties: {}
@@ -183,19 +164,19 @@ Hierarchy:
                 Id: f1f42a8e-2df5-4419-853c-144f81d89f30
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 60.0
-                Height: 45.0
+                Width: 100.0
+                Height: 40.0
                 HorizontalAlignment: Right
-                Margin: {Right: 20.0}
+                Margin: {Right: 40.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: txt
-                Text: 00
+                Text: 0000
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
-                TextSize: 40.0
-                TextColor: {R: 0, G: 0, B: 0, A: 255}
-                TextAlignment: Center
+                TextSize: 35.0
+                TextColor: {R: 40, G: 0, B: 0, A: 255}
+                TextAlignment: Right
         -   UIElement: !Grid
                 Id: f44ec420-e8cc-4f09-8d85-878af294d956
                 DependencyProperties: {}

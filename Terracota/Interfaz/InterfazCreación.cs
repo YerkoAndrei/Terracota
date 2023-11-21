@@ -157,7 +157,7 @@ public class InterfazCreación : StartupScript
     private void EnClicGuardar(string nombre)
     {
         var pregunta0 ="¿Desea sobreescribir fortaleza";
-        var pregunta1 = string.Format("{0}?", nombre);
+        var pregunta1 = string.Format("\" {0} \"?", nombre);
         ConfigurarPopup(popup, pregunta0, pregunta1, () =>
         {
             // Sí
@@ -182,7 +182,7 @@ public class InterfazCreación : StartupScript
     private void EnClicEliminar(string nombre)
     {
         var pregunta0 = "¿Desea eliminar fortaleza";
-        var pregunta1 = string.Format("{0}?", nombre);
+        var pregunta1 = string.Format("\" {0} \"?", nombre);
         ConfigurarPopup(popup, pregunta0, pregunta1, () =>
         {
             // Sí
