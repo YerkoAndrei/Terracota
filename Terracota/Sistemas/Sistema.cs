@@ -195,6 +195,7 @@ public static class Sistema
 
         // Visual
         texto.Text = nombre;
+        texto.Font = SistemaTraducción.VerificarFuente(nombre);
         grid.SetGridRow(fila);
 
         // Miniatura
@@ -229,6 +230,7 @@ public static class Sistema
 
         // Visual
         texto.Text = nombre;
+        texto.Font = SistemaTraducción.VerificarFuente(nombre);
         grid.SetGridRow(fila);
 
         // Miniatura
