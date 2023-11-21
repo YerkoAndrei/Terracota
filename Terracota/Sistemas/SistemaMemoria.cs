@@ -70,7 +70,6 @@ public class SistemaMemoria : StartupScript
         var nuevaFortaleza = new Fortaleza();
         nuevaFortaleza.Nombre = nombre;
         nuevaFortaleza.Fecha = FormatearFechaEstándar(DateTime.Now);
-        nuevaFortaleza.Miniatura = miniatura;
         nuevaFortaleza.Bloques = new List<Bloque>();
         for (int i = 0; i < bloques.Length; i++)
         {

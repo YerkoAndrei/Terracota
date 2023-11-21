@@ -113,13 +113,13 @@ public class InterfazElección : StartupScript
 
             // Izquierda
             var nuevaRanuraAnfitrión = prefabRanura.InstantiateElement<Grid>("RanuraIzquierda");
-             ConfigurarRanuraElección(nuevaRanuraAnfitrión, i, fortalezaTemp.Nombre, fortalezaTemp.Miniatura, () => EnClicAnfitrión(fortalezaTemp.Nombre));
+             ConfigurarRanuraElección(nuevaRanuraAnfitrión, i, fortalezaTemp.Nombre, () => EnClicAnfitrión(fortalezaTemp.Nombre));
             padreRanurasAnfitrión.Height += (nuevaRanuraAnfitrión.Height + 10);
             padreRanurasAnfitrión.Children.Add(nuevaRanuraAnfitrión);
 
             // Derecha
             var nuevaRanuraHuesped = prefabRanura.InstantiateElement<Grid>("RanuraDerecha");
-            ConfigurarRanuraElección(nuevaRanuraHuesped, i, fortalezaTemp.Nombre, fortalezaTemp.Miniatura, () => EnClicHuesped(fortalezaTemp.Nombre));
+            ConfigurarRanuraElección(nuevaRanuraHuesped, i, fortalezaTemp.Nombre, () => EnClicHuesped(fortalezaTemp.Nombre));
             padreRanurasHuesped.Children.Add(nuevaRanuraHuesped);
             padreRanurasHuesped.Height += (nuevaRanuraHuesped.Height + 10);
         }

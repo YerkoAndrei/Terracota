@@ -80,12 +80,12 @@ public class InterfazCreación : StartupScript
             // Fortaleza vacía
             if (i == 0)
             {
-                ConfigurarRanuraVacíaCreación(nuevaRanura, i, fortalezaTemp.Nombre, fortalezaTemp.Miniatura,
+                ConfigurarRanuraVacíaCreación(nuevaRanura, i, fortalezaTemp.Nombre,
                     () => EnClicCargarFortaleza(fortalezaTemp.Nombre));
             }
             else
             {
-                ConfigurarRanuraCreación(nuevaRanura, i, fortalezaTemp.Nombre, fortalezaTemp.Miniatura,
+                ConfigurarRanuraCreación(nuevaRanura, i, fortalezaTemp.Nombre,
                     () => EnClicCargarFortaleza(fortalezaTemp.Nombre),
                     () => EnClicGuardar(fortalezaTemp.Nombre),
                     () => EnClicEliminar(fortalezaTemp.Nombre));

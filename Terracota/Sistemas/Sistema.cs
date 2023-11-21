@@ -179,11 +179,10 @@ public static class Sistema
         botón.Click += (sender, e) => { action.Invoke(); };
     }
 
-    public static void ConfigurarRanuraCreación(Grid grid, int fila, string nombre, string miniaturaB64, Action enCargar, Action enSobreescribir, Action enElminar)
+    public static void ConfigurarRanuraCreación(Grid grid, int fila, string nombre, Action enCargar, Action enSobreescribir, Action enElminar)
     {
         // Busca contenido dentro del "grid botón"
         ConfigurarBotón(grid, enCargar);
-        var miniatura = grid.FindVisualChildOfType<ImageElement>("Miniatura");
         var texto = grid.FindVisualChildOfType<TextBlock>("txt");
 
         // Botones
@@ -197,16 +196,12 @@ public static class Sistema
         texto.Text = nombre;
         texto.Font = SistemaTraducción.VerificarFuente(nombre);
         grid.SetGridRow(fila);
-
-        // Miniatura
-        //miniatura.Source = ConvertirB64(miniaturaB64);
     }
 
-    public static void ConfigurarRanuraVacíaCreación(Grid grid, int fila, string nombre, string miniaturaB64, Action enCargar)
+    public static void ConfigurarRanuraVacíaCreación(Grid grid, int fila, string nombre, Action enCargar)
     {
         // Busca contenido dentro del "grid botón"
         ConfigurarBotón(grid, enCargar);
-        var miniatura = grid.FindVisualChildOfType<ImageElement>("Miniatura");
         var texto = grid.FindVisualChildOfType<TextBlock>("txt");
 
         // Botones
@@ -216,33 +211,18 @@ public static class Sistema
         // Visual
         texto.Text = nombre;
         grid.SetGridRow(fila);
-
-        // Miniatura
-        //miniatura.Source = ConvertirB64(miniaturaB64);
     }
 
-    public static void ConfigurarRanuraElección(Grid grid, int fila, string nombre, string miniaturaB64, Action enClic)
+    public static void ConfigurarRanuraElección(Grid grid, int fila, string nombre, Action enClic)
     {
         // Busca contenido dentro del "grid botón"
         ConfigurarBotón(grid, enClic);
-        var miniatura = grid.FindVisualChildOfType<ImageElement>("Miniatura");
         var texto = grid.FindVisualChildOfType<TextBlock>("txt");
 
         // Visual
         texto.Text = nombre;
         texto.Font = SistemaTraducción.VerificarFuente(nombre);
         grid.SetGridRow(fila);
-
-        // Miniatura
-        //miniatura.Source = ConvertirB64(miniaturaB64);
-    }
-
-    private static ISpriteProvider ConvertirB64(string B64)
-    {
-        var sprite = new SpriteFromTexture();
-        // PENDIENTE: miniatura
-
-        return sprite;
     }
 
     public static void ConfigurarPopup(Grid grid, string pregunta0, string pregunta1, Action enClicSí, Action enClicNo)

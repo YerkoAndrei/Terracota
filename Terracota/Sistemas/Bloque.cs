@@ -22,6 +22,5 @@ public class Fortaleza
 {
     public string Nombre { get; set; }
     public string Fecha { get; set; }
-    public string Miniatura { get; set; }
     public List<Bloque> Bloques { get; set; }
 }
