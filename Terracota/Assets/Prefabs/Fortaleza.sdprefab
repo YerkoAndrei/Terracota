@@ -358,24 +358,6 @@ Hierarchy:
                 BasePartAsset: 864e169b-2a80-474f-a57e-46254e13758d:Prefabs/Corto
                 BasePartId: 7bfbc985-e878-49aa-948a-892caab395c5
                 InstanceId: 6a339d86-9f87-4bee-96b9-c0c18e22fbf4
-        -   Entity:
-                Id: 34bed4d9-22fe-4314-9daf-4eb2a36b13b8
-                Name: Bandera
-                Components:
-                    c376e76ea8faadeb37730ecff53b7d5c: !TransformComponent
-                        Id: 0dddcb18-7e6e-4f3b-b145-0bc47cd2c7a3
-                        Position: {X: 0.0, Y: 2.7, Z: 0.05}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    fc40e600c10f9b65227ac0f836817c9c: !ModelComponent
-                        Id: 5c562661-6615-465a-bf01-4edfbdbe8db6
-                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Estatua/Bandera
-                        Materials: {}
-            Base:
-                BasePartAsset: "46987841-938b-49c8-8290-d86c2f39823c:Prefabs/Estatuas/EstatuaChimpancé"
-                BasePartId: cb586dab-0cde-419c-aef3-88459750ff5d
-                InstanceId: f61dfd9f-345c-4aba-8676-48e17b9def91
         -   Folder: null
             Entity:
                 Id: 354c45d7-aba9-4032-b2b3-45bf3ce1bdda
@@ -651,24 +633,6 @@ Hierarchy:
                 BasePartId: 7bfbc985-e878-49aa-948a-892caab395c5
                 InstanceId: 0eae2552-06b4-47b5-9beb-d6da3d1c1b2b
         -   Entity:
-                Id: 535c51bd-cdc0-461c-8815-eacbfa1f4f5d
-                Name: Bandera
-                Components:
-                    c376e76ea8faadeb37730ecff53b7d5c: !TransformComponent
-                        Id: 38852d0d-2453-4927-b872-c21c2033333e
-                        Position: {X: 0.0, Y: 2.7, Z: 0.05}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    fc40e600c10f9b65227ac0f836817c9c: !ModelComponent
-                        Id: 1e6f03c5-07a5-4c81-bf77-d419807f6b1e
-                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Estatua/Bandera
-                        Materials: {}
-            Base:
-                BasePartAsset: "99853308-0f4c-476c-9987-ced83d337764:Prefabs/Estatuas/EstatuaOrangután"
-                BasePartId: 7ce31fe8-63bb-418f-87ed-ecaa5def4152
-                InstanceId: e508722c-0e82-4394-afac-0bff38199496
-        -   Entity:
                 Id: 5667985a-63f1-40ec-a738-aae283e122bf
                 Name*: Estatua 1
                 Components:
@@ -729,24 +693,6 @@ Hierarchy:
             Base:
                 BasePartAsset: 41ca5cfd-b972-493a-9b64-b3263ab527b6:Prefabs/Estatuas/EstatuaGorila
                 BasePartId: d66f5386-948d-4010-8348-05a4b4bc87e5
-                InstanceId: 46609a76-2876-463e-92f8-6f6ed0b4012b
-        -   Entity:
-                Id: 6817513b-b818-4ad1-922c-4bdf82a15147
-                Name: Bandera
-                Components:
-                    c376e76ea8faadeb37730ecff53b7d5c: !TransformComponent
-                        Id: 78127a4b-7bed-4905-8850-a712a26c69d4
-                        Position: {X: 0.0, Y: 2.7, Z: 0.05}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    fc40e600c10f9b65227ac0f836817c9c: !ModelComponent
-                        Id: 533a4868-9a04-4b42-8e1c-9a710ed96e19
-                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Estatua/Bandera
-                        Materials: {}
-            Base:
-                BasePartAsset: 41ca5cfd-b972-493a-9b64-b3263ab527b6:Prefabs/Estatuas/EstatuaGorila
-                BasePartId: c53099b9-a2f6-4954-9d1d-2ffc93d63526
                 InstanceId: 46609a76-2876-463e-92f8-6f6ed0b4012b
         -   Folder: null
             Entity:
@@ -948,7 +894,6 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             c1894bf175510506ca6a6e6c5eaa16f6: ref!! 045788c2-8f0d-4a2d-9926-a6e3a3945e93
-                            f6bdf2d1608c4617c3fe43f5da9f487f: ref!! 78127a4b-7bed-4905-8850-a712a26c69d4
                     8bb144e93510cbf705d04c9148ca913f: !ModelComponent
                         Id: 3aa1c025-e26e-4620-b927-dd9da5694634
                         Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Estatua/Lanza
@@ -1063,7 +1008,6 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             c1894bf175510506ca6a6e6c5eaa16f6: ref!! f74f4525-a07d-4913-83dc-0cca228163d1
-                            f6bdf2d1608c4617c3fe43f5da9f487f: ref!! 38852d0d-2453-4927-b872-c21c2033333e
                     8bb144e93510cbf705d04c9148ca913f: !ModelComponent
                         Id: ea41266f-b437-4030-9c78-f9fea71e3125
                         Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Estatua/Lanza
@@ -1229,7 +1173,6 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             c1894bf175510506ca6a6e6c5eaa16f6: ref!! d9097e11-b2a7-4c15-b15b-c3f3df473b7c
-                            f6bdf2d1608c4617c3fe43f5da9f487f: ref!! 0dddcb18-7e6e-4f3b-b145-0bc47cd2c7a3
                     8bb144e93510cbf705d04c9148ca913f: !ModelComponent
                         Id: ffe9be4f-e1a0-4145-812c-9a1c14385b26
                         Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Estatua/Lanza

@@ -27,20 +27,6 @@ Hierarchy:
                         estatua: nada
                         cuerpo: ref!! c47addce-fbb0-4105-a967-f909a0509bc9
                         cabeza: ref!! eb4fb358-ef62-4cdf-80fe-260d34eabd00
-        -   Entity:
-                Id: af7d3fcd-d621-4c0c-80ed-20a356d32750
-                Name: Bandera
-                Components:
-                    c376e76ea8faadeb37730ecff53b7d5c: !TransformComponent
-                        Id: 57f0536a-312a-4fc1-bb56-875a2df8477c
-                        Position: {X: 0.0, Y: 2.7, Z: 0.05}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    fc40e600c10f9b65227ac0f836817c9c: !ModelComponent
-                        Id: 5ec6b1e0-071a-45ff-bae7-e826ac9175ae
-                        Model: c89d5385-4823-4bd4-8403-b57cc9a7d05d:Modelos/Estatua/Bandera
-                        Materials: {}
         -   Folder: null
             Entity:
                 Id: b846398e-bc6c-47ed-bb1c-425e4e5347fa
@@ -138,7 +124,6 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             c1894bf175510506ca6a6e6c5eaa16f6: ref!! aee247a5-2a13-4f06-9019-a06d3efff9b6
-                            f6bdf2d1608c4617c3fe43f5da9f487f: ref!! 57f0536a-312a-4fc1-bb56-875a2df8477c
                     8bb144e93510cbf705d04c9148ca913f: !ModelComponent
                         Id: 138de63e-086a-40e2-83bd-a49a7da1f25b
                         Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Estatua/Lanza
