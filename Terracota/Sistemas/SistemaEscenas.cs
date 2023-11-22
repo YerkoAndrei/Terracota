@@ -45,7 +45,6 @@ public class SistemaEscenas : SyncScript
         var cursorBytes = Encoding.ASCII.GetBytes(cursor.ToString());
         var nuevoCursor = new Cursor(cursorBytes, cursorBytes, 0, 0, 0, 0);
         Cursor.SetCursor(nuevoCursor);
-        Cursor.Show();
 
         // Predeterminado
         instancia = this;
