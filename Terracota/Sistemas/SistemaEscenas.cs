@@ -1,9 +1,12 @@
-﻿using Stride.Core.Mathematics;
+﻿using System.Text;
+using System.Threading.Tasks;
+using Stride.Core.Mathematics;
 using Stride.Core.Serialization;
 using Stride.Engine;
+using Stride.Graphics;
+using Stride.Graphics.SDL;
 using Stride.UI;
 using Stride.UI.Panels;
-using System.Threading.Tasks;
 
 namespace Terracota;
 using static Constantes;
@@ -15,6 +18,8 @@ public class SistemaEscenas : SyncScript
     public UrlReference<Scene> escenaLocal;
     public UrlReference<Scene> escenaLAN;
     public UrlReference<Scene> escenaP2P;
+
+    public Texture cursor;
 
     private static SistemaEscenas instancia;
 
@@ -32,9 +37,17 @@ public class SistemaEscenas : SyncScript
 
     public override void Start()
     {
+        // Pantalla completa
         //Game.Window.PreferredFullscreenSize = new Int2(1920, 1080);
         //Game.Window.IsFullscreen = true;
 
+        // Cursor
+        var cursorBytes = Encoding.ASCII.GetBytes(cursor.ToString());
+        var nuevoCursor = new Cursor(cursorBytes, cursorBytes, 0, 0, 0, 0);
+        Cursor.SetCursor(nuevoCursor);
+        Cursor.Show();
+
+        // Predeterminado
         instancia = this;
         duraciónLerp = 0.2f;
 
