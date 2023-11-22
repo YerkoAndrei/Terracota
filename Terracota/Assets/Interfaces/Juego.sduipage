@@ -13,7 +13,9 @@ Hierarchy:
                 DependencyProperties:
                     81fcddf6757b1e3267c1fd1a0429baf5~Panel.ZIndexPropertyKey: 2
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Opacity: 0.8
+                Opacity: 0.95
+                Width: 55.0
+                Height: 55.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -45,7 +47,7 @@ Hierarchy:
                     69c2614b56c12a3bfc78c6301b544da8~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 HorizontalAlignment: Right
-                Margin: {Right: 12.0}
+                Margin: {Right: 17.5}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -65,7 +67,7 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Source: !SpriteFromTexture
-                    Texture: 866d8278-7633-481e-9f57-fc567f503176:Texturas/Interfaz/EsquinaIzquierda
+                    Texture: 866d8278-7633-481e-9f57-fc567f503176:Texturas/Interfaz/DecoIzquierda
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 160, G: 60, B: 0, A: 255}
             Base:
@@ -104,7 +106,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: 
                 Source: !SpriteFromTexture
-                    Texture: 866d8278-7633-481e-9f57-fc567f503176:Texturas/Interfaz/EsquinaIzquierda
+                    Texture: 866d8278-7633-481e-9f57-fc567f503176:Texturas/Interfaz/DecoIzquierda
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 240, G: 220, B: 160, A: 240}
         -   UIElement: !Button
@@ -154,7 +156,7 @@ Hierarchy:
                     21950b6ae099597a396ccd6983fb426f: !Button ref!! dc4b15f5-8b36-4e23-9922-b0477861b813
                     53fda23d5ef109b30b2f298899261524: !ImageElement ref!! ec88d3f7-9bb5-4e1d-97e8-34ddaac443f3
                     7c3051cbc7c3a9ce5c47a573c6c3f2f0: !ImageElement ref!! 70cc4c34-41f3-4e15-a0b8-10e94988d6c5
-                    0850171e3675a81843b095abb34b2fd6: !ImageElement ref!! 01448408-6cb6-4f3d-bc42-5584a846bf99
+                    742215d7eec7b53b017043bea804f764: !ImageElement ref!! 01448408-6cb6-4f3d-bc42-5584a846bf99
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -163,7 +165,6 @@ Hierarchy:
                 DependencyProperties:
                     a9c89f2e81186fb8827f9ddb5a743632~Panel.ZIndexPropertyKey: 3
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Opacity: 0.8
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -178,7 +179,7 @@ Hierarchy:
                 DependencyProperties:
                     90b011356df510c1b1872260bc2725e8~Panel.ZIndexPropertyKey: 3
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Opacity: 0.8
+                Opacity: 0.9
                 Width: 25.0
                 Height: 25.0
                 HorizontalAlignment: Right
@@ -293,7 +294,6 @@ Hierarchy:
                 DependencyProperties:
                     25ed445a8817654611794e75353ee59a~Panel.ZIndexPropertyKey: 2
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Opacity: 0.8
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -398,26 +398,13 @@ Hierarchy:
                 Id: 2aab3a84-c2db-47f1-8ac6-cc05db2053f3
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Opacity: 0.0
                 DrawLayerNumber: 2
-                Width: 60.0
-                Height: 60.0
-                Depth: 0.0
-                DepthAlignment: Stretch
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: btn
-                PressedImage: !SpriteFromTexture
-                    Texture: 8bed889a-fb97-48ed-83b6-d7efe9f5818f:Texturas/Interfaz/Pausa
-                    Center: {X: 0.0, Y: 0.0}
-                NotPressedImage: !SpriteFromTexture
-                    Texture: 8bed889a-fb97-48ed-83b6-d7efe9f5818f:Texturas/Interfaz/Pausa
-                    Center: {X: 0.0, Y: 0.0}
-                MouseOverImage: !SpriteFromTexture
-                    Texture: 8bed889a-fb97-48ed-83b6-d7efe9f5818f:Texturas/Interfaz/Pausa
-                    Center: {X: 0.0, Y: 0.0}
+                Padding: {Left: 0.0, Top: 0.0, Right: 0.0, Bottom: 0.0}
         -   UIElement: !ImageElement
                 Id: 2d0b47bf-332d-4bf4-aacd-8798298f5052
                 DependencyProperties:
@@ -443,7 +430,7 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Source: !SpriteFromTexture
-                    Texture: 866d8278-7633-481e-9f57-fc567f503176:Texturas/Interfaz/EsquinaIzquierda
+                    Texture: 866d8278-7633-481e-9f57-fc567f503176:Texturas/Interfaz/DecoIzquierda
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 160, G: 60, B: 0, A: 255}
             Base:
@@ -479,7 +466,7 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Source: !SpriteFromTexture
-                    Texture: fa2fa398-4898-4c4b-8568-a4ca9eb60567:Texturas/Interfaz/EsquinaDerecha
+                    Texture: fa2fa398-4898-4c4b-8568-a4ca9eb60567:Texturas/Interfaz/DecoDerecha
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 160, G: 60, B: 0, A: 255}
             Base:
@@ -526,7 +513,7 @@ Hierarchy:
                 DependencyProperties:
                     e931990d8b4a4fdd93d11a1d57217cf7~Panel.ZIndexPropertyKey: 3
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Opacity: 0.8
+                Opacity: 0.9
                 Width: 25.0
                 Height: 25.0
                 HorizontalAlignment: Center
@@ -587,7 +574,7 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Source: !SpriteFromTexture
-                    Texture: fa2fa398-4898-4c4b-8568-a4ca9eb60567:Texturas/Interfaz/EsquinaDerecha
+                    Texture: fa2fa398-4898-4c4b-8568-a4ca9eb60567:Texturas/Interfaz/DecoDerecha
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 160, G: 60, B: 0, A: 255}
             Base:
@@ -605,7 +592,7 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Source: !SpriteFromTexture
-                    Texture: 866d8278-7633-481e-9f57-fc567f503176:Texturas/Interfaz/EsquinaIzquierda
+                    Texture: 866d8278-7633-481e-9f57-fc567f503176:Texturas/Interfaz/DecoIzquierda
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 160, G: 60, B: 0, A: 255}
             Base:
@@ -616,6 +603,7 @@ Hierarchy:
                 Id: 4a981c3b-5483-4dbd-8b78-bb25c0a00852
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Opacity: 0.9
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -630,10 +618,8 @@ Hierarchy:
                 DependencyProperties:
                     6aa95402b3671da88167a5ba7b73f5bf~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 110.0
-                Height: 110.0
                 HorizontalAlignment: Left
-                Margin: {Left: 12.0}
+                Margin: {Left: 17.5}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -667,7 +653,7 @@ Hierarchy:
                 DependencyProperties:
                     dcc23cf887d9aee068c38ca56575e162~Panel.ZIndexPropertyKey: 3
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Opacity: 0.8
+                Opacity: 0.9
                 Width: 25.0
                 Height: 25.0
                 HorizontalAlignment: Left
@@ -783,7 +769,7 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Source: !SpriteFromTexture
-                    Texture: fa2fa398-4898-4c4b-8568-a4ca9eb60567:Texturas/Interfaz/EsquinaDerecha
+                    Texture: fa2fa398-4898-4c4b-8568-a4ca9eb60567:Texturas/Interfaz/DecoDerecha
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 160, G: 60, B: 0, A: 255}
             Base:
@@ -802,7 +788,7 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Name: 
                 Source: !SpriteFromTexture
-                    Texture: fa2fa398-4898-4c4b-8568-a4ca9eb60567:Texturas/Interfaz/EsquinaDerecha
+                    Texture: fa2fa398-4898-4c4b-8568-a4ca9eb60567:Texturas/Interfaz/DecoDerecha
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 240, G: 220, B: 160, A: 240}
         -   UIElement: !TextBlock
@@ -829,10 +815,8 @@ Hierarchy:
                 DependencyProperties:
                     4e38d9cdef901128529c49ac12f02fb6~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 110.0
-                Height: 110.0
                 HorizontalAlignment: Right
-                Margin: {Right: 164.0}
+                Margin: {Right: 205.5}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -880,10 +864,8 @@ Hierarchy:
                 DependencyProperties:
                     e3a77fd3c5a3b9fed2a7e60a10a50cbd~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 110.0
-                Height: 110.0
                 HorizontalAlignment: Right
-                Margin: {Right: 88.0}
+                Margin: {Right: 110.5}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -1036,7 +1018,6 @@ Hierarchy:
                 DependencyProperties:
                     c2efbc48c7e269e0c5f61c758b4adc9e~Panel.ZIndexPropertyKey: 2
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Opacity: 0.8
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -1143,13 +1124,30 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Source: !SpriteFromTexture
-                    Texture: 866d8278-7633-481e-9f57-fc567f503176:Texturas/Interfaz/EsquinaIzquierda
+                    Texture: 866d8278-7633-481e-9f57-fc567f503176:Texturas/Interfaz/DecoIzquierda
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 160, G: 60, B: 0, A: 255}
             Base:
                 BasePartAsset: ec94a22e-f511-4b8e-a71e-bc8c7df21ba9:Interfaces/Librerias/Botones
                 BasePartId: 5135e116-4a3a-4640-b38b-9af44c38e492
                 InstanceId: 97320684-5be7-4229-bdf4-00d8123289b0
+        -   UIElement: !TextBlock
+                Id: 95fd0a18-e306-41fd-b740-83c408bf6a5d
+                DependencyProperties:
+                    ebc139f36ac3625c98909d13cdc31607~Panel.ZIndexPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 680.0
+                Height: 65.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtGanador
+                Text: "Anfitrión / Huesped"
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 60.0
+                TextColor: {R: 240, G: 220, B: 160, A: 240}
+                TextAlignment: Center
         -   UIElement: !Button
                 Id: 960eaacf-4414-460a-8c27-7d955fe4c8e8
                 DependencyProperties: {}
@@ -1222,7 +1220,7 @@ Hierarchy:
                 Width: 110.0
                 Height: 110.0
                 HorizontalAlignment: Left
-                Margin: {Left: 164.0}
+                Margin: {Left: 205.5}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -1236,6 +1234,7 @@ Hierarchy:
                 DependencyProperties:
                     aba0de502b400356721152b348a94bb6~Panel.ZIndexPropertyKey: 0
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Opacity: 0.9
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -1308,7 +1307,7 @@ Hierarchy:
                 DependencyProperties:
                     6f9f6f49d687a42bd60c4d4ac103d641~Panel.ZIndexPropertyKey: 3
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Opacity: 0.8
+                Opacity: 0.9
                 Width: 25.0
                 Height: 25.0
                 HorizontalAlignment: Right
@@ -1331,7 +1330,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: Deco
+                Name: 
                 Source: !SpriteFromTexture
                     Texture: "ad498f2e-9e92-46b3-a8ef-9b75cf038835:Texturas/Interfaz/Octágono"
                     Center: {X: 0.0, Y: 0.0}
@@ -1341,7 +1340,7 @@ Hierarchy:
                 DependencyProperties:
                     22c3940b58614bf6ce0bf4efd697b48d~Panel.ZIndexPropertyKey: 3
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Opacity: 0.8
+                Opacity: 0.9
                 Width: 25.0
                 Height: 25.0
                 HorizontalAlignment: Center
@@ -1409,6 +1408,7 @@ Hierarchy:
                 Id: be9cdbab-3972-49cd-b544-45dd130a27ea
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Opacity: 0.9
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -1576,7 +1576,6 @@ Hierarchy:
                 Id: dc4b15f5-8b36-4e23-9922-b0477861b813
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Opacity: 0.0
                 DrawLayerNumber: 2
                 DepthAlignment: Stretch
                 Margin: {}
@@ -1642,7 +1641,7 @@ Hierarchy:
                 Width: 110.0
                 Height: 110.0
                 HorizontalAlignment: Left
-                Margin: {Left: 88.0}
+                Margin: {Left: 110.5}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -1688,6 +1687,7 @@ Hierarchy:
                 Id: eb96f85d-f001-4f7d-812c-9db8ec7071fa
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Opacity: 0.9
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -1791,6 +1791,7 @@ Hierarchy:
                     a8c398cd3c878ee0d6c0bcfb67963f38: !Grid ref!! 7e7653a6-1889-4311-b808-f4983aeb3ab9
                     3ece8d7abcc48db1f52912660fc13af2: !Grid ref!! f492692e-ab78-4d64-81fe-729994d30a57
                     161e2d9e84f9e73ddf50a1bf73e48743: !TextBlock ref!! f754ff78-2595-4adf-a0f1-065c1d2c2d0d
+                    e8c51f3c3053d5e5d7d2ca5a25a0643b: !TextBlock ref!! 95fd0a18-e306-41fd-b740-83c408bf6a5d
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -1799,7 +1800,6 @@ Hierarchy:
                 DependencyProperties:
                     a9c89f2e81186fb8827f9ddb5a743632~Panel.ZIndexPropertyKey: 3
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Opacity: 0.8
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -1814,17 +1814,17 @@ Hierarchy:
                 DependencyProperties:
                     ebc139f36ac3625c98909d13cdc31607~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 700.0
+                Width: 480.0
                 Height: 65.0
-                Margin: {}
+                Margin: {Left: 280.0, Top: -102.5, Right: 300.0, Bottom: 147.5}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: txtGanador
+                Name: 
                 Text: 'Ganador:'
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
                 TextSize: 60.0
-                TextColor: {R: 240, G: 220, B: 160, A: 240}
+                TextColor: {R: 160, G: 60, B: 0, A: 255}
                 TextAlignment: Center
         -   UIElement: !ImageElement
                 Id: f9c71af6-0d7d-4bf5-bd06-22b042eaa7df
@@ -1837,7 +1837,7 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Source: !SpriteFromTexture
-                    Texture: fa2fa398-4898-4c4b-8568-a4ca9eb60567:Texturas/Interfaz/EsquinaDerecha
+                    Texture: fa2fa398-4898-4c4b-8568-a4ca9eb60567:Texturas/Interfaz/DecoDerecha
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 160, G: 60, B: 0, A: 255}
             Base:
@@ -1867,7 +1867,7 @@ Hierarchy:
                 DependencyProperties:
                     5f3575ddd70e223f55725fa363078440~Panel.ZIndexPropertyKey: 3
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Opacity: 0.8
+                Opacity: 0.9
                 Width: 25.0
                 Height: 25.0
                 HorizontalAlignment: Left

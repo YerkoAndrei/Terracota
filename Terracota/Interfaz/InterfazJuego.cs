@@ -257,7 +257,7 @@ public class InterfazJuego : SyncScript
         switch (jugador)
         {
             case TipoJugador.anfitrión:
-                txtGanador.Text = "Ganador: " + "Anfitrión";
+                txtGanador.Text = "Anfitrión";
                 foreach(var img in imgsGanador)
                 {
                     img.Source = ObtenerSprite(spriteAnfitrión);
@@ -268,7 +268,7 @@ public class InterfazJuego : SyncScript
                 }
                 break;
             case TipoJugador.huesped:
-                txtGanador.Text = "Ganador: " + "Huesped";
+                txtGanador.Text = "Huesped";
                 foreach (var img in imgsGanador)
                 {
                     img.Source = ObtenerSprite(spriteHuesped);
