@@ -11,16 +11,16 @@ Attributes:
             MixinReference: Voronoi
             Generics:
                 80c8df7da3cef1ad4544334ff7eeaef8~Fuerza: !ComputeColorParameterFloat
-                    Value: 3.0
+                    Value: 2.0
                 ac40967ed42c12e63b74f292028f25a3~Densidad: !ComputeColorParameterFloat
-                    Value: 5.0
+                    Value: 10.0
                 c15d807e8e1e933d3b72200fb6b64d3e~RGB: !ComputeColorParameterFloat3
-                    Value: {X: 255.0, Y: 20.0, Z: 5.0}
+                    Value: {X: 40.0, Y: 10.0, Z: 20.0}
             CompositionNodes: {}
     DiffuseModel: !MaterialDiffuseLambertModelFeature {}
     Specular: !MaterialMetalnessMapFeature
         MetalnessMap: !ComputeFloat
-            Value: 1.0
+            Value: 0.6
     SpecularModel: !MaterialSpecularMicrofacetModelFeature
         Fresnel: !MaterialSpecularMicrofacetFresnelSchlick {}
         Visibility: !MaterialSpecularMicrofacetVisibilitySmithSchlickGGX {}

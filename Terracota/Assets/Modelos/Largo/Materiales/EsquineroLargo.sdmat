@@ -5,17 +5,17 @@ Tags: []
 Attributes:
     MicroSurface: !MaterialGlossinessMapFeature
         GlossinessMap: !ComputeFloat
-            Value: 0.6
+            Value: 0.8
     Diffuse: !MaterialDiffuseMapFeature
         DiffuseMap: !ComputeShaderClassColor
             MixinReference: Voronoi
             Generics:
                 e394895e2ebc776b7e75a4ab274ca710~Fuerza: !ComputeColorParameterFloat
-                    Value: 5.0
+                    Value: 3.0
                 973e1e0e127735e235a3664744377cb0~Densidad: !ComputeColorParameterFloat
-                    Value: 20.0
+                    Value: 40.0
                 a190c1c595b122c2c067c5290854438a~RGB: !ComputeColorParameterFloat3
-                    Value: {X: 20.0, Y: 5.0, Z: 255.0}
+                    Value: {X: 20.0, Y: 10.0, Z: 40.0}
             CompositionNodes: {}
     DiffuseModel: !MaterialDiffuseLambertModelFeature {}
     Specular: !MaterialMetalnessMapFeature
