@@ -7,8 +7,16 @@ Attributes:
         GlossinessMap: !ComputeFloat
             Value: 0.5
     Diffuse: !MaterialDiffuseMapFeature
-        DiffuseMap: !ComputeColor
-            Value: {R: 0.627451, G: 0.39215687, B: 0.15686275, A: 1.0}
+        DiffuseMap: !ComputeShaderClassColor
+            MixinReference: Voronoi
+            Generics:
+                9be05ea2d6ce143f3f181ddf790aec2d~Fuerza: !ComputeColorParameterFloat
+                    Value: 2.0
+                5a08fe45ee43cf8cf6d9d0924414a687~Densidad: !ComputeColorParameterFloat
+                    Value: 2.0
+                5dba3839d74b079e21d76d9a468d1183~RGB: !ComputeColorParameterFloat3
+                    Value: {X: 70.0, Y: 40.0, Z: 10.0}
+            CompositionNodes: {}
     DiffuseModel: !MaterialDiffuseLambertModelFeature {}
     Specular: !MaterialMetalnessMapFeature
         Enabled: false
