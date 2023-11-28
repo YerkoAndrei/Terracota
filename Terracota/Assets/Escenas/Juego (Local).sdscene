@@ -78,7 +78,6 @@ Hierarchy:
                         Children: {}
                     1a24c41704f8422b77d7625af2a028f5: !UIComponent
                         Id: 8df76c69-40d2-4800-87ff-e93a3a59f8f3
-                        Enabled: false
                         Page: 49e77c4c-f47a-4340-9a41-5e0e27f8083b:Interfaces/Juego
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.28, Y: 0.72, Z: 1.0}
@@ -2258,6 +2257,26 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 389f8455-e1b5-42e2-848a-c7e426cd4e3d
                 InstanceId: a5ce5142-0667-4fef-b8b0-cfc7c94f2025
+        -   Entity:
+                Id: 42ee4352-31c3-44a4-a88d-584fd84cd45d
+                Name: Ambiente
+                Components:
+                    cd2bdc16cfee10d3f8d09d643cfe49b3: !TransformComponent
+                        Id: 86b5b693-db43-4a1d-9c69-70b4b0c89442
+                        Position: {X: 0.0, Y: 2.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    0dfcd21788f053924694bc7973f9e575: !LightComponent
+                        Id: 302f5498-f7c4-4709-9f07-9fa93ef88edc
+                        Type: !LightAmbient
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                        Intensity: 2.0
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: 81b557f0-0ed9-415d-b960-2b9826423472
+                InstanceId: 542d16e6-720c-418e-831b-de378013b2ab
         -   Folder: null
             Entity:
                 Id: 435575e9-3ad3-4119-b47c-8ed48466b3fc
@@ -2487,7 +2506,6 @@ Hierarchy:
                         Children: {}
                     1a24c41704f8422b77d7625af2a028f5: !UIComponent
                         Id: 56e352d0-7364-413c-b3fe-ebe2156bbd7a
-                        Enabled: false
                         Page: "8b929d74-116a-4c3f-880a-a37a36bc3d4f:Interfaces/Elección"
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.28, Y: 0.72, Z: 1.0}
@@ -3365,6 +3383,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             84740b1bff3c411b34af1ea98099aac8: ref!! cfa543c1-ce66-46a8-903b-7a9421fe0db8
+                            2209053918980bcce6f75d953f763320: ref!! 86b5b693-db43-4a1d-9c69-70b4b0c89442
                             108f352a607968ca4ac0193815008379: ref!! 296c5bce-d63b-4515-8905-5817d165abec
                             dd4534c9a527c1e490d5b24a381ba169: ref!! 04bb63e3-c8ae-4531-b167-abdbbd9d89da
                             d1e7512c2a13c102ac90818a919858f8: ref!! 9da35cd2-7af4-4736-9ef0-1406e51250fd
@@ -7476,10 +7495,6 @@ Hierarchy:
                     243e388bf0f0dc93b596380f4cd8bc07: !BackgroundComponent
                         Id: ca29259e-4507-414a-a736-8f794f34c25a
                         Texture: 9508699c-5540-4586-ab99-38a858f4a6c1:Texturas/Cielo
-                    0dfcd21788f053924694bc7973f9e575: !LightComponent
-                        Id: dd4c8c60-7614-492f-9a71-ac98cb093375
-                        Type: !LightSkybox
-                            Skybox: 870c1df6-0b77-44c6-85ce-bda61c75f79c:Texturas/Skybox
             Base:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
                 BasePartId: d636c902-a785-4353-b5b4-1f6a1ee79ba9

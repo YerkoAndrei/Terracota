@@ -3971,6 +3971,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             84740b1bff3c411b34af1ea98099aac8: ref!! f855078d-9b76-4462-8249-4cf5178e5f21
+                            dd08545ad706b24700d437e6c55e3ab7: ref!! 911aed3a-815a-470f-9f53-3776d04e2159
                             108f352a607968ca4ac0193815008379: ref!! a546e874-3c62-4d62-9edd-b059a3c205ce
                             dd4534c9a527c1e490d5b24a381ba169: ref!! 5da2e36f-d7cf-479b-9186-fa1f2ddf05d6
                             5096f07438a389b577bf2c793661dc20: ref!! 63d18743-be25-4c95-9b69-97752d1694de
@@ -5031,10 +5032,6 @@ Hierarchy:
                     243e388bf0f0dc93b596380f4cd8bc07: !BackgroundComponent
                         Id: be1f20b7-fc6b-4bfa-9bd6-c7f80306c326
                         Texture: 9508699c-5540-4586-ab99-38a858f4a6c1:Texturas/Cielo
-                    0dfcd21788f053924694bc7973f9e575: !LightComponent
-                        Id: 86743872-bb86-4d2e-b2a1-fcbc2ceb06dd
-                        Type: !LightSkybox
-                            Skybox: 870c1df6-0b77-44c6-85ce-bda61c75f79c:Texturas/Skybox
             Base:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
                 BasePartId: d636c902-a785-4353-b5b4-1f6a1ee79ba9
@@ -5629,6 +5626,26 @@ Hierarchy:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
                 BasePartId: de701df1-4a12-4f1f-a076-f3d469104b7a
                 InstanceId: 6755a4c8-3259-4ad0-9fcc-7de2fc50db67
+        -   Entity:
+                Id: e19a9510-ae37-45f7-bbec-45635df01082
+                Name: Ambiente
+                Components:
+                    cd2bdc16cfee10d3f8d09d643cfe49b3: !TransformComponent
+                        Id: 911aed3a-815a-470f-9f53-3776d04e2159
+                        Position: {X: 0.0, Y: 2.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    0dfcd21788f053924694bc7973f9e575: !LightComponent
+                        Id: c2ba90a5-cc5f-4e65-a8d6-8edcf5c59f01
+                        Type: !LightAmbient
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                        Intensity: 2.0
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: 81b557f0-0ed9-415d-b960-2b9826423472
+                InstanceId: 8e464a2a-cba3-4fb8-93e5-341a4ecf45f7
         -   Folder: null
             Entity:
                 Id: e2a22dd9-c01c-4fdd-bae1-081f91ade6f8
