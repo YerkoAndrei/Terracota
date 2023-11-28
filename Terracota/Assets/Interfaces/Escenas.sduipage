@@ -33,6 +33,25 @@ Hierarchy:
                 Name: 
                 Children:
                     5f2295848e79dce9107556bd0a3daae5: !Grid ref!! 08c8903e-c396-4c67-a2c8-e7c3a6689178
+                    8464513d22dd49da9aeb83cec6c5710d: !TextBlock ref!! 890c8d53-e967-40ec-8b0b-39f5311370db
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
+        -   UIElement: !TextBlock
+                Id: 890c8d53-e967-40ec-8b0b-39f5311370db
+                DependencyProperties:
+                    4b44a49884d784c7e5729af3e8aeec15~Panel.ZIndexPropertyKey: 10
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 100.0
+                Height: 25.0
+                HorizontalAlignment: Left
+                VerticalAlignment: Bottom
+                Margin: {Left: 2.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtFPS
+                Text: 'FPS:  {0}'
+                Font: b840e167-f71f-4d4f-9a21-cd8118ebb833:Fuente/YaHei
+                TextSize: 20.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
