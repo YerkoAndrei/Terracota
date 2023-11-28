@@ -18,7 +18,7 @@ public static class Constantes
     // Negro    #FA191919
     // Oscuro   #FFA03C00
     // Claro    #F0F0DCA0
-    // Texto    #FF280000
+    // Texto    #FF191414
 
     // Amarillo     #FFF0F064
     // Anfitrión    #FFC80027
