@@ -4,25 +4,17 @@ SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
 Attributes:
     Diffuse: !MaterialDiffuseMapFeature
-        DiffuseMap: !ComputeTextureColor
-            Texture: 3cd4cf2d-3cd3-4ed3-b6c6-be25fb2088ef:Modelos/Cielo/TexturaCielo
-            FallbackValue:
-                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
-            Scale: {X: 1.0, Y: 1.0}
-            Offset: {X: 0.0, Y: 0.0}
-            Swizzle: null
+        DiffuseMap: !ComputeShaderClassColor
+            MixinReference: Voronoi
+            Generics:
+                587515b07609353e8d3ee5465c6f4390~Fuerza: !ComputeColorParameterFloat
+                    Value: 0.2
+                7e25c1af7e064c6271d06ce539b2c0c4~Densidad: !ComputeColorParameterFloat
+                    Value: 1.0
+                a5a629a36d39dd64e7439d1760025819~RGB: !ComputeColorParameterFloat3
+                    Value: {X: 255.0, Y: 255.0, Z: 255.0}
+            CompositionNodes: {}
     DiffuseModel: !MaterialDiffuseLambertModelFeature {}
-    Specular: !MaterialSpecularMapFeature
-        SpecularMap: !ComputeColor
-            Value: {R: 0.0, G: 0.0, B: 0.0, A: 1.0}
-        Intensity: !ComputeFloat
-            Value: 1.0
-        IsEnergyConservative: false
-    SpecularModel: !MaterialSpecularMicrofacetModelFeature
-        Fresnel: !MaterialSpecularMicrofacetFresnelSchlick {}
-        Visibility: !MaterialSpecularMicrofacetVisibilityImplicit {}
-        NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionBlinnPhong {}
-        Environment: !MaterialSpecularMicrofacetEnvironmentGGXLUT {}
     Overrides:
         UVScale: {X: 1.0, Y: 1.0}
 Layers: {}

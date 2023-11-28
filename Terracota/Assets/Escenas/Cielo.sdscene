@@ -6,50 +6,17 @@ ChildrenIds: []
 Offset: {X: 0.0, Y: 0.0, Z: 0.0}
 Hierarchy:
     RootParts:
-        - ref!! 96afc566-0ad3-48dd-a8ac-817ee9ba37be
-        - ref!! 1c24d060-2d89-44b6-ba1b-9a7d9ebc0f48
-        - ref!! 1c8250c8-2f05-40ca-88fc-6f8bd81442ec
         - ref!! fefbc1e7-0040-4ee9-8095-710c177ed333
         - ref!! 4e9925a0-8192-4f20-8c29-52a01b90f786
         - ref!! 94b26a8e-163c-4ee1-8292-6133cf9523fa
     Parts:
         -   Entity:
-                Id: 1c24d060-2d89-44b6-ba1b-9a7d9ebc0f48
-                Name: Piso
-                Components:
-                    4c8163a445c13f5338dfe2440cb98dff: !TransformComponent
-                        Id: 8aa384bf-35a4-4242-ba96-438791ea633a
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    ebd925cf3096c2ab796056e3041d1aa1: !ModelComponent
-                        Id: 9e788212-9c9f-430b-91b4-5c1db588ca4d
-                        Model: 9820a66d-9dab-402a-9645-fcb7239d3966:Modelos/Entorno/Piso
-                        IsShadowCaster: false
-                        Materials: {}
-        -   Entity:
-                Id: 1c8250c8-2f05-40ca-88fc-6f8bd81442ec
-                Name: Contorno
-                Components:
-                    55a5429edb7581893bd2b2938589b33a: !TransformComponent
-                        Id: 7f2ea940-e6da-447c-bbad-f2f796f65f15
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    53408232e5daf6473f89eb6e43043da2: !ModelComponent
-                        Id: d9e426da-6cdb-4115-8266-a9137f0e179d
-                        Model: 81f56bdc-362e-4388-8137-9558109d3349:Modelos/Entorno/Contorno
-                        IsShadowCaster: false
-                        Materials: {}
-        -   Entity:
                 Id: 4e9925a0-8192-4f20-8c29-52a01b90f786
-                Name: Camera
+                Name: "Cámara"
                 Components:
                     33bec5de5c7e138c9218e174774040a0: !TransformComponent
                         Id: 7480a177-6e32-4252-add9-c79a03c20e00
-                        Position: {X: 0.0, Y: 9.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -74,23 +41,8 @@ Hierarchy:
                         IsShadowCaster: false
                         Materials: {}
         -   Entity:
-                Id: 96afc566-0ad3-48dd-a8ac-817ee9ba37be
-                Name: Terreno
-                Components:
-                    08d5c06977f39f2d29e4144e22b5cb1a: !TransformComponent
-                        Id: 04074815-3777-4d76-b115-71a8bc588c12
-                        Position: {X: 0.0, Y: 9.536743E-07, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    516dbfa5393cdce02aa256ccae814752: !ModelComponent
-                        Id: f8171513-6514-43c3-80af-a52de2a16281
-                        Model: 4d92e787-1fc3-4e1e-815e-25fcaa0d4065:Modelos/Terreno/Terreno
-                        IsShadowCaster: false
-                        Materials: {}
-        -   Entity:
                 Id: fefbc1e7-0040-4ee9-8095-710c177ed333
-                Name: Skybox light
+                Name: Luz
                 Components:
                     09d666fe569b6705e10ac0fd980915ae: !TransformComponent
                         Id: 4e851d74-b665-492d-b4b5-575fcd2105fa
@@ -100,6 +52,7 @@ Hierarchy:
                         Children: {}
                     d3bd436bb21fdc2fc472afaa3883cec3: !LightComponent
                         Id: 4c0c6b3e-3dbf-410e-a7ff-642758b09542
-                        Type: !LightSkybox
-                            Skybox: 870c1df6-0b77-44c6-85ce-bda61c75f79c:Texturas/Skybox
-                        Intensity: 6.0
+                        Type: !LightAmbient
+                            Color: !ColorRgbProvider
+                                Value: {R: 0.627451, G: 0.8627451, B: 1.0}
+                        Intensity: 10.0
