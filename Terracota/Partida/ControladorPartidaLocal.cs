@@ -183,6 +183,9 @@ public class ControladorPartidaLocal : SyncScript
             controladorCámara.RotarYCámara(180, cambiarHaciaDerecha, () =>
             {
                 cambiandoTurno = false;
+                if (!partidaActiva)
+                    return;
+
                 cañónHuesped.Activar(true);
                 cañónActual = cañónHuesped;
 
@@ -195,6 +198,9 @@ public class ControladorPartidaLocal : SyncScript
             controladorCámara.RotarYCámara(180, cambiarHaciaDerecha, () =>
             {
                 cambiandoTurno = false;
+                if (!partidaActiva)
+                    return; 
+
                 cañónAnfitrión.Activar(true);
                 cañónActual = cañónAnfitrión;
 
