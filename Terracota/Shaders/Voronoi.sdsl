@@ -1,19 +1,19 @@
 ﻿// YerkoAndrei
 namespace Shaders
 {
-    shader Voronoi<float AngleOffset, float CellDensity, float3 RGB> : ComputeColor, PositionStream4
+    shader Voronoi<float Fuerza, float Densidad, float3 RGB> : ComputeColor, PositionStream4
     {
         override float4 Compute()
         {
             float4 color = float4((RGB.x / 255),(RGB.y / 255),(RGB.z / 255), 1);
-            float v = Voronoi(streams.Position, AngleOffset, CellDensity);
+            float v = Voronoi(streams.Position, Fuerza, Densidad);
             return float4(v,v,v,1) * color;
         }
 
-        float Voronoi(float3 UV, float AngleOffset, float CellDensity)
+        float Voronoi(float3 UV, float Fuerza, float Densidad)
         {
-            float3 g = floor(UV * CellDensity);
-            float3 f = frac(UV * CellDensity);
+            float3 g = floor(UV * Densidad);
+            float3 f = frac(UV * Densidad);
             float3 res = float3(1, 1, 0);
 
             for (int z = -1; z <= 1; z++)
@@ -23,7 +23,7 @@ namespace Shaders
                     for (int x = -1; x <= 1; x++)
                     {
                         float3 lattice = float3(x, y, z);
-                        float3 offset = RandomFloat3(lattice + g, AngleOffset);
+                        float3 offset = RandomFloat3(lattice + g, Fuerza);
                         float d = distance(lattice + offset, f);
                         if (d < res.x)
                         {
@@ -32,6 +32,8 @@ namespace Shaders
                     }
                 }
             }
+            // res.x Puntos
+            // res.y Células
             return res.y;
         }
 
