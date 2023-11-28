@@ -1301,6 +1301,8 @@ Hierarchy:
                             c319c92745bd1a660ac4b3adb8ee7600: ref!! 767232d0-75e7-4139-9252-1dba41a5e3a5
                             455d2f42baf16150ea0df286a294e197: ref!! 11573b4f-a660-47f6-a779-acc23c706d70
                             9a506e4494fcafd341581261af8c86aa: ref!! 8f0f11ef-49c1-4e00-96e2-7636d7e14052
+                            104a71a9ee62188ea9dbd433ccfb287d: ref!! 12c71e07-eb31-48bd-ba69-02e992c08c69
+                            2d3100408551994596da12fd22690a46: ref!! 45839dba-ebc3-46cd-a99c-9460dd3e2f60
             Base:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
                 BasePartId: 4bff4cad-8d16-4606-8882-0d34fe8e309a
@@ -2733,6 +2735,24 @@ Hierarchy:
                 BasePartId: 314380fe-3b44-4c64-8ed1-15a296e57504
                 InstanceId: 4d19e7d8-75a7-4e53-82c8-5df2fc9ec627
         -   Entity:
+                Id: 7f75cd34-6e70-49dc-9e86-2b0c802019b0
+                Name: Esfera (1)
+                Components:
+                    8a65be43e7d0740257c913cf558afb58: !TransformComponent
+                        Id: 45839dba-ebc3-46cd-a99c-9460dd3e2f60
+                        Position: {X: 0.0, Y: 0.0, Z: -22.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fea8a7e2b8b76551ca8cc2836e567605: !ModelComponent
+                        Id: 492d5f6e-5140-4545-bd81-599b82aa237b
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: 3fa8c756-aadc-4ab7-bf09-d2e230b93db0
+                InstanceId: 0b20dfac-f72d-4089-847e-4db9e05813ca
+        -   Entity:
                 Id: 811bfb54-1213-4dc2-8e2d-86c8ddc458ba
                 Name*: Largo_4
                 Components:
@@ -3186,6 +3206,24 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 86d7b5b3-aecc-475e-9ceb-c47a2971936c
                 InstanceId: 4d19e7d8-75a7-4e53-82c8-5df2fc9ec627
+        -   Entity:
+                Id: 9ba84a25-06d9-4b0d-a25f-03927f8108ca
+                Name: Esfera (0)
+                Components:
+                    8a65be43e7d0740257c913cf558afb58: !TransformComponent
+                        Id: 12c71e07-eb31-48bd-ba69-02e992c08c69
+                        Position: {X: 0.0, Y: 0.0, Z: 22.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fea8a7e2b8b76551ca8cc2836e567605: !ModelComponent
+                        Id: 976ed5e7-ba94-4bc7-b6f8-17b437eccc64
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+            Base:
+                BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
+                BasePartId: b5a63faa-539e-4d8d-8be3-6cbd3c8c848d
+                InstanceId: 0b20dfac-f72d-4089-847e-4db9e05813ca
         -   Entity:
                 Id: 9bc32218-748f-45ce-9680-07b75fd43107
                 Name: Paisaje
