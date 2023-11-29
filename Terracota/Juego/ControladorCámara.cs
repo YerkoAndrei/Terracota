@@ -22,7 +22,6 @@ public class ControladorCámara : SyncScript
     private Quaternion rotaciónInicialLuz;
     private Quaternion rotaciónObjetivo;
     private Quaternion rotaciónObjetivoLuz;
-    private bool primeraRotación;
     private bool derecha;
     private float YObjetivo;
     private TransformComponent luzDireccional;

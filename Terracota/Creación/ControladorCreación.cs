@@ -143,18 +143,7 @@ public class ControladorCreación : SyncScript
             switch (bloque.TipoBloque)
             {
                 case TipoBloque.estatua:
-                    switch (bloque.TipoEstatua)
-                    {
-                        case TipoEstatua.chimpancé: // 0
-                            estatuas[índiceEstatuas].ForzarPosición((bloque.Posición + fortaleza.Position), bloque.Rotación);
-                            break;
-                        case TipoEstatua.gorila:    // 1
-                            estatuas[índiceEstatuas].ForzarPosición((bloque.Posición + fortaleza.Position), bloque.Rotación);
-                            break;
-                        case TipoEstatua.orangután: // 2
-                            estatuas[índiceEstatuas].ForzarPosición((bloque.Posición + fortaleza.Position), bloque.Rotación);
-                            break;
-                    }
+                    estatuas[índiceEstatuas].ForzarPosición((bloque.Posición + fortaleza.Position), bloque.Rotación);
                     índiceEstatuas++;
                     break;
                 case TipoBloque.corto:

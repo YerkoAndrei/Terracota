@@ -9,7 +9,6 @@ using static Constantes;
 public class ControladorEstatua : AsyncScript
 {
     public TipoJugador jugador;
-    public TipoEstatua estatua;
     public RigidbodyComponent cuerpo;
     public RigidbodyComponent cabeza;
 

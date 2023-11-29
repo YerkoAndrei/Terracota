@@ -10,7 +10,6 @@ using static Constantes;
 public class ElementoCreación : StartupScript
 {
     public TipoBloque tipoBloque;
-    public TipoEstatua tipoEstatua;
     public RigidbodyComponent cuerpo;
 
     private string número;
@@ -79,11 +78,6 @@ public class ElementoCreación : StartupScript
     public TipoBloque ObtenerTipo()
     {
         return tipoBloque;
-    }
-
-    public TipoEstatua ObtenerEstatua()
-    {
-        return tipoEstatua;
     }
 
     public Vector3 ObtenerPosición()
