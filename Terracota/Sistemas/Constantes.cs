@@ -60,6 +60,21 @@ public static class Constantes
         largo
     }
 
+    public enum TipoCurva
+    {
+        nada,
+        suave,
+        rápida
+    }
+
+    public enum Direcciones
+    {
+        arriba,
+        abajo,
+        izquierda,
+        derecha
+    }
+
     public static Fortaleza GenerarFortalezaVacía()
     {
         var bloques = new List<Bloque>

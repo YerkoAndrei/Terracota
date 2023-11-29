@@ -64,7 +64,21 @@ Hierarchy:
                         Children: {}
                     2ab201454e38ddf4d9e05dc760d65317: !Terracota.SistemaAnimaci%25C3%25B3n,Terracota
                         Id: bb69a818-1ae1-4f24-be96-189ef55853fb
-                        curvaEstandar: null
+                        "curvaRápida": !ComputeCurveSamplerFloat
+                            Curve: !ComputeAnimationCurveFloat
+                                KeyFrames:
+                                    5124b0e0542488130c3ba75fd2a801d3:
+                                        Key: 0.0
+                                        Value: 0.0
+                                        TangentType: Linear
+                                    6ee1bab58540d765eeb88b38a97a19eb:
+                                        Key: 0.7
+                                        Value: 0.93
+                                        TangentType: Linear
+                                    e5a096fd4cd587c8cbfd3c018d41041e:
+                                        Key: 1.0
+                                        Value: 1.0
+                                        TangentType: Linear
         -   Entity:
                 Id: 53d9f9c7-8af3-450b-8bb0-84aa749d94b6
                 Name: "CámaraSobretodo"

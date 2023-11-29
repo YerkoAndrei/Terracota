@@ -121,7 +121,7 @@ public class ControladorCámara : SyncScript
     private void RotarEjeCámara()
     {
         tiempoDelta += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-        tiempo = tiempoDelta / duraciónLerp;
+        tiempo = SistemaAnimación.EvaluarSuave(tiempoDelta / duraciónLerp);
 
         eje.Rotation = Quaternion.Lerp(rotaciónInicial, rotaciónObjetivo, tiempo);
 
@@ -140,7 +140,7 @@ public class ControladorCámara : SyncScript
     private void MoverCámara()
     {
         tiempoDelta += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-        tiempo = tiempoDelta / duraciónLerp;
+        tiempo = SistemaAnimación.EvaluarRápido(tiempoDelta / duraciónLerp);
 
         cámara.Position = Vector3.Lerp(posiciónInicial, posiciónObjetivo, tiempo);
 
