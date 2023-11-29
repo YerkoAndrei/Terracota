@@ -18,7 +18,10 @@ public class InterfazCreación : StartupScript
     private TextBlock txtMensaje;
     private EditText txtNuevoNombre;
     private Grid gridFortalezas;
+    private Grid animFortalezas;
     private Grid popup;
+
+    private bool animando;
 
     public override void Start()
     {
@@ -39,6 +42,7 @@ public class InterfazCreación : StartupScript
 
         // Panel Guardar
         gridFortalezas = página.FindVisualChildOfType<Grid>("Fortalezas");
+        animFortalezas = página.FindVisualChildOfType<Grid>("PanelFortalezas");
         gridFortalezas.Visibility = Visibility.Hidden;
 
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnNuevo"), EnClicGuardarNueva);
@@ -118,15 +122,27 @@ public class InterfazCreación : StartupScript
 
     private void EnClicFortalezas()
     {
+        if (animando)
+            return;
+
+        animando = true;
         if (gridFortalezas.Visibility == Visibility.Visible)
         {
-            gridFortalezas.Visibility = Visibility.Hidden;
-            controladorCreación.AbrirMenú(false);
+            SistemaAnimación.AnimarElemento(animFortalezas, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, ()=>
+            {
+                gridFortalezas.Visibility = Visibility.Hidden;
+                controladorCreación.AbrirMenú(false);
+                animando = false;
+            });
         }
         else
         {
-            gridFortalezas.Visibility = Visibility.Visible;
             controladorCreación.AbrirMenú(true);
+            gridFortalezas.Visibility = Visibility.Visible;
+            SistemaAnimación.AnimarElemento(animFortalezas, 0.2f, true, Direcciones.arriba, TipoCurva.rápida, () =>
+            {
+                animando = false;
+            });
         }
     }
 
