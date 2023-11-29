@@ -201,8 +201,6 @@ public class ControladorCreación : SyncScript
             bloque.AsignarFortaleza(fortaleza.Position);
         }
 
-        // PENDIENTE: crear o sacar miniatura
-
         // Guardado
         return SistemaMemoria.GuardarFortaleza(sobreescribir, bloques.ToArray(), nombre, null);
     }

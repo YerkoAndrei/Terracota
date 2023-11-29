@@ -13,12 +13,13 @@ public class InterfazCreación : StartupScript
 {
     public ControladorCreación controladorCreación;
     public UILibrary prefabRanura;
+    public UILibrary prefabPopup;
 
     private UIElement página;
     private TextBlock txtMensaje;
     private EditText txtNuevoNombre;
     private Grid gridFortalezas;
-    private Grid popup;
+    private Grid popups;
     private Grid btnNuevo;
     private Grid btnVolver;
 
@@ -31,6 +32,9 @@ public class InterfazCreación : StartupScript
         página = Entity.Get<UIComponent>().Page.RootElement;
         ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("PanelOscuro"), EnClicFortalezas);
 
+        // Popup
+        popups = página.FindVisualChildOfType<Grid>("Popups");
+
         // Textos
         txtMensaje = página.FindVisualChildOfType<TextBlock>("txtMensaje");
         txtNuevoNombre = página.FindVisualChildOfType<EditText>("txtNuevoNombre");
@@ -38,10 +42,6 @@ public class InterfazCreación : StartupScript
 
         txtMensaje.Text = string.Empty;
         txtNuevoNombre.Text = string.Empty;
-
-        // Popup
-        popup = página.FindVisualChildOfType<Grid>("Popup");
-        popup.Visibility = Visibility.Hidden;
 
         // Panel Guardar
         gridFortalezas = página.FindVisualChildOfType<Grid>("Fortalezas");
@@ -96,7 +96,7 @@ public class InterfazCreación : StartupScript
             {
                 ConfigurarRanuraCreación(nuevaRanura, i, fortalezaTemp.Nombre,
                     () => EnClicCargarFortaleza(fortalezaTemp.Nombre),
-                    () => EnClicGuardar(fortalezaTemp.Nombre),
+                    () => EnClicSobreescribir(fortalezaTemp.Nombre),
                     () => EnClicEliminar(fortalezaTemp.Nombre));
             }
             padreRanuras.Height += (nuevaRanura.Height + 10);
@@ -179,54 +179,58 @@ public class InterfazCreación : StartupScript
             MostrarMensaje("Error al guardar");
     }
 
-    private void EnClicGuardar(string nombre)
+    private void EnClicSobreescribir(string nombre)
     {
         var pregunta0 ="¿Desea sobreescribir fortaleza";
         var pregunta1 = string.Format("\" {0} \"?", nombre);
+
+        var popup = prefabPopup.InstantiateElement<Grid>("Popup");
         ConfigurarPopup(popup, pregunta0, pregunta1, () =>
         {
             // Sí
             if (controladorCreación.EnClicGuardar(nombre, true))
             {
                 CargarFortalezas();
-                popup.Visibility = Visibility.Hidden;
+                popups.Children.Remove(popup);
             }
             else
             {
                 MostrarMensaje("Error al sobreescribir");
-                popup.Visibility = Visibility.Hidden;
+                popups.Children.Remove(popup);
             }
         }, () =>
         {
             // No
-            popup.Visibility = Visibility.Hidden;
+            popups.Children.Remove(popup);
         });
-        popup.Visibility = Visibility.Visible;
+        popups.Children.Add(popup);
     }
 
     private void EnClicEliminar(string nombre)
     {
         var pregunta0 = "¿Desea eliminar fortaleza";
         var pregunta1 = string.Format("\" {0} \"?", nombre);
+
+        var popup = prefabPopup.InstantiateElement<Grid>("Popup");
         ConfigurarPopup(popup, pregunta0, pregunta1, () =>
         {
             // Sí
             if(SistemaMemoria.EliminarFortaleza(nombre))
             {
                 CargarFortalezas();
-                popup.Visibility = Visibility.Hidden;
+                popups.Children.Remove(popup);
             }
             else
             {
                 MostrarMensaje("Error al eliminar");
-                popup.Visibility = Visibility.Hidden;
+                popups.Children.Remove(popup);
             }
         }, () =>
         {
             // No
-            popup.Visibility = Visibility.Hidden;
+            popups.Children.Remove(popup);
         });
-        popup.Visibility = Visibility.Visible;
+        popups.Children.Add(popup);
     }
 
     private void VerificarFuente(object sender, RoutedEventArgs args)

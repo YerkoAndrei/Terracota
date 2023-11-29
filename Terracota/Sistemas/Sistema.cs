@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Graphics;
@@ -230,6 +229,7 @@ public static class Sistema
         grid.FindVisualChildOfType<TextBlock>("txtPregunta 0").Text = pregunta0;
         grid.FindVisualChildOfType<TextBlock>("txtPregunta 1").Text = pregunta1;
         grid.FindVisualChildOfType<TextBlock>("txtPregunta 1").Font = SistemaTraducción.VerificarFuente(pregunta1);
+
         ConfigurarBotón(grid.FindVisualChildOfType<Grid>("btnSí"), enClicSí);
         ConfigurarBotón(grid.FindVisualChildOfType<Grid>("btnNo"), enClicNo);
     }
