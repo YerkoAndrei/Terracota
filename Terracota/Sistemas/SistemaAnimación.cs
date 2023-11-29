@@ -76,7 +76,7 @@ public class SistemaAnimación : SyncScript
                 fuera = new Thickness(original.Left, original.Top, original.Right, original.Bottom + 1500);
                 break;
             case Direcciones.abajo:
-                fuera = new Thickness(original.Left, original.Top, original.Right, original.Bottom + 1500);
+                fuera = new Thickness(original.Left, original.Top + 1500, original.Right, original.Bottom);
                 break;
             case Direcciones.izquierda:
                 fuera = new Thickness(original.Left, original.Top, original.Right + 3000, original.Bottom);

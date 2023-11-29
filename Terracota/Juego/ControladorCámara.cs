@@ -93,7 +93,7 @@ public class ControladorCámara : SyncScript
 
     public void ActivarEfectoDisparo()
     {
-        var retroceso = 0.8f;
+        var retroceso = 1;
         duraciónLerp = 0.03f;
 
         posiciónInicial = cámara.Position;
@@ -140,7 +140,11 @@ public class ControladorCámara : SyncScript
     private void MoverCámara()
     {
         tiempoDelta += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-        tiempo = SistemaAnimación.EvaluarRápido(tiempoDelta / duraciónLerp);
+
+        if(retrocediendo)
+            tiempo = tiempoDelta / duraciónLerp;
+        else
+            tiempo = SistemaAnimación.EvaluarRápido(tiempoDelta / duraciónLerp);
 
         cámara.Position = Vector3.Lerp(posiciónInicial, posiciónObjetivo, tiempo);
 
