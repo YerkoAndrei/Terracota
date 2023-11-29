@@ -50,6 +50,13 @@ public class InterfazElección : StartupScript
     private bool esperandoRuleta;
     private bool ganaAnfitrión;
 
+    // Animación
+    private Grid animSuperior;
+    private Grid animBotonesCompleto;
+    private Grid animVolver;
+    private Grid animBotones;
+    private bool animando;
+
     public override void Start()
     {
         var página = Entity.Get<UIComponent>().Page.RootElement;
@@ -81,6 +88,12 @@ public class InterfazElección : StartupScript
         imgFlechaDerecha = página.FindVisualChildOfType<ImageElement>("imgFlechaDerecha");
         imgFlechaIzquierda.Visibility = Visibility.Hidden;
         imgFlechaDerecha.Visibility = Visibility.Hidden;
+
+        // Animación
+        animSuperior = página.FindVisualChildOfType<Grid>("Superior");
+        animBotonesCompleto = página.FindVisualChildOfType<Grid>("Botones");
+        animBotones = página.FindVisualChildOfType<Grid>("animBotones");
+        animVolver = página.FindVisualChildOfType<Grid>("animVolver");
 
         // Botones
         btnComenzar = página.FindVisualChildOfType<Grid>("btnComenzar");
@@ -127,6 +140,9 @@ public class InterfazElección : StartupScript
 
     private void EnClicVolver()
     {
+        if (animando)
+            return;
+
         esperandoRuleta = false;
         gridRuleta.Visibility = Visibility.Hidden;
         decoRuleta.Visibility = Visibility.Hidden;
@@ -135,8 +151,16 @@ public class InterfazElección : StartupScript
 
     private async void EnClicAleatorio()
     {
+        if (animando)
+            return;
+
+        // Animaciones
+        BloquearBotón(btnComenzar, true);
+        BloquearBotón(btnAleatorio, true);
+        BloquearBotón(btnVolver, true);
+        SistemaAnimación.AnimarElemento(animBotonesCompleto, 0.2f, false, Direcciones.abajo, TipoCurva.rápida, null);
+
         gridRuleta.Visibility = Visibility.Hidden;
-        btnComenzar.Visibility = Visibility.Hidden;
         visorAnfitrión.Visibility = Visibility.Hidden;
         visorHuesped.Visibility = Visibility.Hidden;
 
@@ -153,7 +177,10 @@ public class InterfazElección : StartupScript
 
         controladorPartida.RotarXCámara(1.5f);
         await FinalizarRuleta();
-        controladorPartida.ComenzarPartida(ganaAnfitrión);
+        SistemaAnimación.AnimarElemento(animSuperior, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, () =>
+        {
+            controladorPartida.ComenzarPartida(ganaAnfitrión);
+        });
     }
 
     private string ObtenerRanuraAleatoria()
@@ -169,7 +196,7 @@ public class InterfazElección : StartupScript
 
     private void EnClicAnfitrión(string nombre)
     {
-        if (esperandoRuleta)
+        if (esperandoRuleta || animando)
             return;
 
         if (huespedSeleccionado)
@@ -182,7 +209,7 @@ public class InterfazElección : StartupScript
 
     private void EnClicHuesped(string nombre)
     {
-        if (esperandoRuleta)
+        if (esperandoRuleta || animando)
             return;
 
         if(anfitriónSeleccionado)
@@ -195,7 +222,7 @@ public class InterfazElección : StartupScript
 
     private async void EnClicComenzar()
     {
-        if (esperandoRuleta || !huespedSeleccionado || !anfitriónSeleccionado)
+        if (esperandoRuleta || animando ||!huespedSeleccionado || !anfitriónSeleccionado)
             return;
 
         ApagarRuleta();
@@ -203,19 +230,30 @@ public class InterfazElección : StartupScript
         gridRuleta.Visibility = Visibility.Visible;
         decoRuleta.Visibility = Visibility.Visible;
 
+        // Animaciones
+        controladorPartida.RotarXCámara(4.5f);
         btnVolver.HorizontalAlignment = HorizontalAlignment.Center;
-        btnVolver.Margin = new Thickness(0,0,0,30);
+        btnVolver.Margin = new Thickness(0, 0, 0, 120);
 
-        btnComenzar.Visibility = Visibility.Hidden;
-        btnAleatorio.Visibility = Visibility.Hidden;
+        BloquearBotón(btnComenzar, true);
+        BloquearBotón(btnAleatorio, true);
+        SistemaAnimación.AnimarElemento(animBotones, 0.2f, false, Direcciones.abajo, TipoCurva.rápida, null);
+
         visorAnfitrión.Visibility = Visibility.Hidden;
         visorHuesped.Visibility = Visibility.Hidden;
 
         var aleatorio = RangoAleatorio(40, 51);
-        controladorPartida.RotarXCámara(4.5f);
         await MoverRuleta(aleatorio);
+
+        // Animaciones
+        BloquearBotón(btnVolver, true);
+        SistemaAnimación.AnimarElemento(animVolver, 0.2f, false, Direcciones.abajo, TipoCurva.rápida, null);
+
         await FinalizarRuleta();
-        controladorPartida.ComenzarPartida(ganaAnfitrión);
+        SistemaAnimación.AnimarElemento(animSuperior, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, () =>
+        {
+            controladorPartida.ComenzarPartida(ganaAnfitrión);
+        });
     }
 
     private async Task MoverRuleta(int toques)
@@ -253,8 +291,6 @@ public class InterfazElección : StartupScript
 
     private async Task FinalizarRuleta()
     {
-        btnVolver.Visibility = Visibility.Hidden;
-        btnAleatorio.Visibility = Visibility.Hidden;
         gridRuleta.Visibility = Visibility.Hidden;
         decoRuleta.Visibility = Visibility.Hidden;
 

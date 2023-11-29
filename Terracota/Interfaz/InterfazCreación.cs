@@ -18,9 +18,12 @@ public class InterfazCreación : StartupScript
     private TextBlock txtMensaje;
     private EditText txtNuevoNombre;
     private Grid gridFortalezas;
-    private Grid animFortalezas;
     private Grid popup;
+    private Grid btnNuevo;
+    private Grid btnVolver;
 
+    // Animación
+    private Grid animFortalezas;
     private bool animando;
 
     public override void Start()
@@ -45,8 +48,10 @@ public class InterfazCreación : StartupScript
         animFortalezas = página.FindVisualChildOfType<Grid>("PanelFortalezas");
         gridFortalezas.Visibility = Visibility.Hidden;
 
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnNuevo"), EnClicGuardarNueva);
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVolver"), EnClicFortalezas);
+        btnNuevo = página.FindVisualChildOfType<Grid>("btnNuevo");
+        btnVolver = página.FindVisualChildOfType<Grid>("btnVolver");
+        ConfigurarBotón(btnNuevo, EnClicGuardarNueva);
+        ConfigurarBotón(btnVolver, EnClicFortalezas);
 
         // Guardado
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnFortalezas"), EnClicFortalezas);
@@ -126,6 +131,8 @@ public class InterfazCreación : StartupScript
             return;
 
         animando = true;
+        BloquearBotón(btnNuevo, true);
+        BloquearBotón(btnVolver, true);
         if (gridFortalezas.Visibility == Visibility.Visible)
         {
             SistemaAnimación.AnimarElemento(animFortalezas, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, ()=>
@@ -142,6 +149,8 @@ public class InterfazCreación : StartupScript
             SistemaAnimación.AnimarElemento(animFortalezas, 0.2f, true, Direcciones.arriba, TipoCurva.rápida, () =>
             {
                 animando = false;
+                BloquearBotón(btnNuevo, false);
+                BloquearBotón(btnVolver, false);
             });
         }
     }

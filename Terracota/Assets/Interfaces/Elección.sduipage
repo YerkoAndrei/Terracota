@@ -257,19 +257,10 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Children:
-                    f2066ce862df1c55531a766157c6bf2c: !Grid ref!! 5e965bb6-3ca8-4af8-917a-ac5df369cba0
-                    06077c25e3f237091dc512ef75774b0e: !Grid ref!! c0928558-ce8f-44ea-ab18-322ea559c86f
-                    da05e9bb411b2713c8a2ada85512306c: !Grid ref!! da2c615e-c183-4b7a-81ce-cc1014d2f9d2
-                    9e3477cb007533db1da75fcbea6ede7b: !Grid ref!! e37f888e-057b-4e96-8af6-aa7182df96b1
-                    419eb5c6245f66bf8e6ba8f9e7cadfcd: !Grid ref!! 0a72d273-d858-4d8f-9f9f-3443da11ad59
-                    6caf8345229c53a422064a903fb27fba: !Grid ref!! db3775bf-afdc-4626-b6aa-145189c6867c
-                    9a75abce350e6135c1696a5520cacfbb: !ImageElement ref!! 2b64effb-f1da-4611-a3c7-fd5b8c525e5e
-                    822b6d08aefde8c5e64b839e44b15e83: !ImageElement ref!! fcbe4571-8a07-4d4d-ac4b-b9c498a40814
+                    b963878fbc89b93b6f7d5e484c7d38e7: !Grid ref!! 3edcc94f-f35b-4a7b-9050-19655bd748a3
+                    e1f229b66da37c8017a305ce32da1d54: !Grid ref!! cf05b52e-962b-4b2f-8e47-d789c0832374
                     c0c803aac823e673e472cb0e63696ef3: !ScrollViewer ref!! 4cb02c42-25f8-41ef-9769-3a8cf33cff2c
                     53a62da54d55f4d60d313daa8458fa3e: !ScrollViewer ref!! f6b483df-c46f-4774-a940-736288ff92ee
-                    a3c0bea66096c273db38cbecf88bddee: !Grid ref!! 10b2dd4e-c96f-4ec8-85dc-4351e8c76dd8
-                    04551f06f86d1e387d0319f7ababc16f: !Grid ref!! 1f7275a2-4dc9-48e4-8a39-e80058d09266
-                    e18dfee43c08b3eca8273c813dacea46: !Grid ref!! e3db4c95-5126-4d5d-afb5-7a72e7ac4c5a
                     6e4a879d08be575db7acb994ef748100: !Grid ref!! 2e4f5f71-2287-4363-af12-d5991d5fc314
                     4ce24d05c7e62d2f9518e9bb2b8f469e: !Grid ref!! 419eb6b4-df36-468e-aa93-473fc92dd777
                 RowDefinitions: {}
@@ -310,6 +301,27 @@ Hierarchy:
                     Texture: "ad498f2e-9e92-46b3-a8ef-9b75cf038835:Texturas/Interfaz/Octágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 160, G: 60, B: 0, A: 255}
+        -   UIElement: !Grid
+                Id: 3edcc94f-f35b-4a7b-9050-19655bd748a3
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: Superior
+                Children:
+                    688e6c866225936f39d37dc817abdb67: !Grid ref!! 5e965bb6-3ca8-4af8-917a-ac5df369cba0
+                    668d3fb4c05a896bfd5b1486bcdfadd6: !Grid ref!! c0928558-ce8f-44ea-ab18-322ea559c86f
+                    abf47ae9ea80f1e2494b90f8a478fba7: !Grid ref!! da2c615e-c183-4b7a-81ce-cc1014d2f9d2
+                    4184caa8b584523cad4dc2df023b6a13: !Grid ref!! e37f888e-057b-4e96-8af6-aa7182df96b1
+                    31786bff7387ff6e5385e190f7d1e378: !Grid ref!! 0a72d273-d858-4d8f-9f9f-3443da11ad59
+                    db65d2c938015b2d126fb2804aa698c7: !Grid ref!! db3775bf-afdc-4626-b6aa-145189c6867c
+                    899c3fdf6dc8bc32ab70ed4bd158f2b8: !ImageElement ref!! 2b64effb-f1da-4611-a3c7-fd5b8c525e5e
+                    4fe7dea413a914570534894cc8818c97: !ImageElement ref!! fcbe4571-8a07-4d4d-ac4b-b9c498a40814
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
         -   UIElement: !TextBlock
                 Id: 3faba244-f115-4ac8-ba6c-2f527a54cb9a
                 DependencyProperties: {}
@@ -821,6 +833,21 @@ Hierarchy:
                     Texture: "544f8ec8-cb8e-46d6-8873-ba73ab7cef86:Texturas/Interfaz/BaseOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 240, G: 220, B: 160, A: 240}
+        -   UIElement: !Grid
+                Id: a081a8b4-83b6-4f43-8c14-aee839910125
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: animBotones
+                Children:
+                    24ecf6299af6eac5c81d7cba3bec5561: !Grid ref!! 10b2dd4e-c96f-4ec8-85dc-4351e8c76dd8
+                    cd6569101e79df513f2d2db9dcdc5e64: !Grid ref!! e3db4c95-5126-4d5d-afb5-7a72e7ac4c5a
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
         -   UIElement: !ImageElement
                 Id: a0e655f6-26b7-4d08-b1cf-165709ab7fbb
                 DependencyProperties:
@@ -1020,6 +1047,21 @@ Hierarchy:
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 240, G: 220, B: 160, A: 240}
                 StretchType: Fill
+        -   UIElement: !Grid
+                Id: cf05b52e-962b-4b2f-8e47-d789c0832374
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: Botones
+                Children:
+                    9a6f5943ed8b2e85ea331ea7755bd770: !Grid ref!! f05cdfe6-e3ee-4d2b-a1a6-0b319dd9d55d
+                    1818e5c96be564677fdd812adc508c43: !Grid ref!! a081a8b4-83b6-4f43-8c14-aee839910125
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
         -   UIElement: !ImageElement
                 Id: d27d2083-28ca-4602-bdb8-2e936353c9d8
                 DependencyProperties:
@@ -1280,6 +1322,20 @@ Hierarchy:
                 BasePartAsset: ec94a22e-f511-4b8e-a71e-bc8c7df21ba9:Interfaces/Librerias/Botones
                 BasePartId: 80cae4d6-68bf-4f50-82f4-05bcf2f75ce7
                 InstanceId: f4b0e085-e9e6-4558-b363-cd460381bf66
+        -   UIElement: !Grid
+                Id: f05cdfe6-e3ee-4d2b-a1a6-0b319dd9d55d
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: animVolver
+                Children:
+                    53cb119b795edb8dc62497a7a8ab3f6e: !Grid ref!! 1f7275a2-4dc9-48e4-8a39-e80058d09266
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
         -   UIElement: !Button
                 Id: f05d996f-0e9b-473a-bf80-c351caa65c7f
                 DependencyProperties: {}
