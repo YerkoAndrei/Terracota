@@ -27,8 +27,7 @@ public static class Constantes
     // Tamaños fuentes
     // Predeterminado   25
     // En juego         30
-    // Fotraleza        35
-    // Títulos          45
+    // Títulos          40
     // Grande           60
 
     public enum Escenas
