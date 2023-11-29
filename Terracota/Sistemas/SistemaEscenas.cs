@@ -62,7 +62,7 @@ public class SistemaEscenas : SyncScript
         if(ocultando)
         {
             tiempoDelta += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            tiempo = tiempoDelta / duraciónLerp;
+            tiempo = SistemaAnimación.EvaluarSuave(tiempoDelta / duraciónLerp);
             panelOscuro.BackgroundColor = Color.Lerp(Color.Transparent, Color.Black, tiempo);
 
             // Fin
@@ -73,7 +73,7 @@ public class SistemaEscenas : SyncScript
         if (abriendo)
         {
             tiempoDelta += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            tiempo = tiempoDelta / duraciónLerp;
+            tiempo = SistemaAnimación.EvaluarSuave(tiempoDelta / duraciónLerp);
             panelOscuro.BackgroundColor = Color.Lerp(Color.Black, Color.Transparent, tiempo);
 
             // Fin
@@ -135,8 +135,8 @@ public class SistemaEscenas : SyncScript
         // Carga
         Entity.Scene.Children.Add(escenaActual);
 
-        // Retraso por carga de interfaces
-        await Task.Delay(100);
+        // Retraso predeterminado
+        await Task.Delay(200);
         abriendo = true;
     }
 }

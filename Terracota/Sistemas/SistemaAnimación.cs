@@ -1,11 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using Stride.Engine;
 using Stride.Animations;
 using Stride.Core.Mathematics;
 using Stride.UI.Panels;
 using Stride.UI;
-using Stride.Rendering.Lights;
-using Stride.UI.Controls;
 
 namespace Terracota;
 using static Constantes;
@@ -16,6 +15,7 @@ public class SistemaAnimación : SyncScript
 
     private static SistemaAnimación instancia;
 
+    private Dictionary<string, Thickness> elementosConocidos;
     private bool animando;
 
     // Animación
@@ -31,6 +31,7 @@ public class SistemaAnimación : SyncScript
     public override void Start()
     {
         instancia = this;
+        elementosConocidos = new Dictionary<string, Thickness>();
     }
 
     public override void Update()
@@ -46,28 +47,42 @@ public class SistemaAnimación : SyncScript
 
     public static float EvaluarRápido(float tiempo)
     {
+        if (tiempo > 1)
+            tiempo = 1;
+
         instancia.curvaRápida.UpdateChanges();
         return instancia.curvaRápida.Evaluate(tiempo);
     }
 
-    private static void AnimarElemento(Grid _elemento, float _duración, bool entrando, Direcciones dirección, TipoCurva _tipoCurva, Action _enFin)
+    public static void AnimarElemento(Grid _elemento, float _duración, bool entrando, Direcciones dirección, TipoCurva _tipoCurva, Action _enFin)
     {
-        var original = _elemento.Margin;
-        var fuera = _elemento.Margin;
+        var original = new Thickness();
+        var fuera = new Thickness();
 
+        // Busca o agrega elemento en diccionario, queda guardado por la sesión
+        var nombre = _elemento.Name + _elemento.Parent.Name;
+        if (instancia.elementosConocidos.ContainsKey(nombre))
+            original = instancia.elementosConocidos.GetValueOrDefault(nombre);
+        else
+        {
+            instancia.elementosConocidos.Add(nombre, _elemento.Margin);
+            original = _elemento.Margin;
+        }
+
+        // Crea dirección exterior
         switch (dirección)
         {
             case Direcciones.arriba:
-                fuera = new Thickness(original.Left, original.Top + 1000, original.Right, original.Bottom);
+                fuera = new Thickness(original.Left, original.Top, original.Right, original.Bottom + 1500);
                 break;
             case Direcciones.abajo:
-                fuera = new Thickness(original.Left, original.Top, original.Right, original.Bottom + 1000);
+                fuera = new Thickness(original.Left, original.Top, original.Right, original.Bottom + 1500);
                 break;
             case Direcciones.izquierda:
-                fuera = new Thickness(original.Left + 1000, original.Top, original.Right, original.Bottom);
+                fuera = new Thickness(original.Left, original.Top, original.Right + 3000, original.Bottom);
                 break;
             case Direcciones.derecha:
-                fuera = new Thickness(original.Left, original.Top, original.Right + 1000, original.Bottom);
+                fuera = new Thickness(original.Left + 3000, original.Top, original.Right, original.Bottom);
                 break;
         }
 
@@ -83,12 +98,12 @@ public class SistemaAnimación : SyncScript
         }
 
         // Predeterminados
-        instancia.elemento.Margin = instancia.margenInicio;
-
         instancia.elemento = _elemento;
         instancia.duración = _duración;
         instancia.tipoCurva = _tipoCurva;
         instancia.enFin = _enFin;
+
+        instancia.elemento.Margin = instancia.margenInicio;
 
         instancia.tiempoDelta = 0;
         instancia.tiempo = 0;
