@@ -22,7 +22,6 @@ Hierarchy:
                     f180b8d4bd2ff5fd2e4f4f0698b689db: !Terracota.ElementoCreaci%25C3%25B3n,Terracota
                         Id: 4d68357d-9889-4a82-b255-f70823809275
                         tipoBloque: estatua
-                        tipoEstatua: nada
                         cuerpo: ref!! d5cbdf13-4994-46f1-8b41-199738fe2fd0
         -   Entity:
                 Id: 6520dadf-3e27-4a7d-8718-297a9d00ebcf
@@ -71,7 +70,7 @@ Hierarchy:
                         Id: 4705e5df-9267-4448-926e-1cc3bc4184ca
                         SpriteProvider: !SpriteFromSheet
                             Sheet: bb0de3de-51f5-4f2c-a029-09d6bfbc6b81:Sprites/Deco
-                        Color: {R: 1.0, G: 0.0, B: 0.0, A: 1.0}
+                        Color: {R: 0.78431374, G: 0.31372553, B: 0.31372553, A: 1.0}
                         PremultipliedAlpha: false
         -   Folder: null
             Entity:
@@ -141,7 +140,7 @@ Hierarchy:
                         Children: {}
                     448b18de08d2a18a78ab084fd2efa62d: !ModelComponent
                         Id: 895f23f7-08df-4a72-a45c-531e902aacae
-                        Model: null
+                        Model: 6a0770d0-5e69-4d2c-95e9-aa85a56916ca:Modelos/Estatua/Mono
                         Materials: {}
         -   Entity:
                 Id: f01dcc8c-5b11-4dcc-a120-7cbeb0706426
@@ -157,6 +156,6 @@ Hierarchy:
                         Id: d4cc5b8f-fc33-4d7e-ab33-320357b39e2a
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 662e9a78-b82a-4336-a0d7-744bcc48de5a:Sprites/Cuadrado
-                        Color: {R: 0.0, G: 1.0, B: 0.0, A: 0.78431374}
+                        Color: {R: 0.0, G: 0.7058824, B: 0.3921569, A: 0.78431374}
                         PremultipliedAlpha: false
                         BlendMode: AlphaBlend

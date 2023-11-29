@@ -1,5 +1,5 @@
 !ColliderShapeAsset
-Id: 4c204aa6-d201-4f7f-b88b-138f3dbbab66
+Id: 65af9b85-2cc6-4dcb-9772-d9395b9d5a55
 SerializedVersion: {Stride: 3.0.0.0}
 Tags: []
 ColliderShapes:
@@ -24,6 +24,22 @@ ColliderShapes:
         ConvexHullsIndices: null
         Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Estatua/Lanza
         LocalOffset: {X: 0.0, Y: -0.8, Z: 0.55}
+        LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        Scaling: {X: 1.0, Y: 1.0, Z: 1.0}
+        Decomposition:
+            Depth: 1
+            PosSampling: 10
+            AngleSampling: 10
+            PosRefine: 5
+            AngleRefine: 5
+            Alpha: 0.01
+            Threshold: 0.01
+            Enabled: true
+    9032b3c7421fe1621cf284c6a17f4913: !ConvexHullColliderShapeDesc
+        ConvexHulls: null
+        ConvexHullsIndices: null
+        Model: 6a0770d0-5e69-4d2c-95e9-aa85a56916ca:Modelos/Estatua/Mono
+        LocalOffset: {X: 0.0, Y: 0.75, Z: 0.0}
         LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         Scaling: {X: 1.0, Y: 1.0, Z: 1.0}
         Decomposition:
