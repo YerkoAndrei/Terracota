@@ -42,6 +42,7 @@ public class InterfazJuego : SyncScript
     private TextBlock txtMultiplicador;
 
     private Grid gridPausa;
+    private Grid animPausa;
     private ImageElement imgProyectil;
 
     private List<ImageElement> estadoAnfitrión;
@@ -49,6 +50,7 @@ public class InterfazJuego : SyncScript
 
     private bool activo;
     private bool pausa;
+    private bool animando;
 
     public override void Start()
     {
@@ -98,6 +100,7 @@ public class InterfazJuego : SyncScript
 
         // Menú pausa
         gridPausa = página.FindVisualChildOfType<Grid>("Pausa");
+        animPausa = página.FindVisualChildOfType<Grid>("animPausa");
         btnPausa = página.FindVisualChildOfType<Grid>("btnPausa");
         ConfigurarBotón(btnPausa, EnClicPausa);
 
@@ -138,11 +141,28 @@ public class InterfazJuego : SyncScript
 
     private void EnClicPausa()
     {
+        if (animando)
+            return;
+
         pausa = !pausa;
+        animando = true;
+
         if (pausa)
+        {
             gridPausa.Visibility = Visibility.Visible;
+            SistemaAnimación.AnimarElemento(animPausa, 0.2f, true, Direcciones.arriba, TipoCurva.rápida, () =>
+            {
+                animando = false;
+            });
+        }
         else
-            gridPausa.Visibility = Visibility.Hidden;
+        {
+            SistemaAnimación.AnimarElemento(animPausa, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, () =>
+            {
+                gridPausa.Visibility = Visibility.Hidden;
+                animando = false;
+            });
+        }
     }
 
     private void EnClicReiniciar()
