@@ -60,7 +60,7 @@ public class SistemaAnimación : SyncScript
         var fuera = new Thickness();
 
         // Busca o agrega elemento en diccionario, queda guardado por la sesión
-        var nombre = _elemento.Name + _elemento.Parent.Name;
+        var nombre = _elemento.Name + "_" + _elemento.Parent.Name;
         if (instancia.elementosConocidos.ContainsKey(nombre))
             original = instancia.elementosConocidos.GetValueOrDefault(nombre);
         else
