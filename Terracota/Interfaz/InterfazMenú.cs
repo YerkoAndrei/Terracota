@@ -1,9 +1,9 @@
-﻿using Stride.Core.Serialization;
+﻿using System;
+using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.UI;
 using Stride.UI.Controls;
 using Stride.UI.Panels;
-using System;
 
 namespace Terracota;
 using static Sistema;
@@ -11,6 +11,10 @@ using static Constantes;
 
 public class InterfazMenú : StartupScript
 {
+    public Entity rotador;
+
+    private static Quaternion últimaRotación = Quaternion.Identity;
+
     public override void Start()
     {
         var página = Entity.Get<UIComponent>().Page.RootElement;
@@ -27,10 +31,14 @@ public class InterfazMenú : StartupScript
         BloquearBotón(página.FindVisualChildOfType<Grid>("btnP2P"), true);
 
         ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("btnCréditos"), EnClicCréditos);
+
+        // Recuerda última rotación
+        rotador.Transform.Rotation = últimaRotación;
     }
 
     private void EnClicLocal()
     {
+        últimaRotación = rotador.Transform.Rotation;
         SistemaEscenas.CambiarEscena(Escenas.local);
     }
 
@@ -48,6 +56,7 @@ public class InterfazMenú : StartupScript
 
     private void EnClicCrear()
     {
+        últimaRotación = rotador.Transform.Rotation;
         SistemaEscenas.CambiarEscena(Escenas.creación);
     }
 
