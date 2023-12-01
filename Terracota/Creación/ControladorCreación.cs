@@ -184,6 +184,7 @@ public class ControladorCreación : SyncScript
     {
         // Agrega tipo + número
         var código = bloqueActual.tipoBloque.ToString() + bloqueActual.ObtenerNúmero();
+        bloqueActual.Colocar();
         if (!bloquesListos.Contains(código))
             bloquesListos.Add(código);
     }

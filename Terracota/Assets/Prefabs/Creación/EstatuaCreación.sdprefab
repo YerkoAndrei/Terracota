@@ -16,13 +16,17 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            bfad568dabe50bb43ec5e048f31ca790: ref!! 70b1a91b-6287-4cb3-afe9-1bfd18eb9984
                             7965260b48c46a99367fa66e7326a221: ref!! 71f92290-942a-4545-91e2-f1a2deb17a33
                             ff2bff364f6f466fdc2497f5fff7dd71: ref!! 40d01a10-7ead-4675-98ce-890d4edc07dc
                     f180b8d4bd2ff5fd2e4f4f0698b689db: !Terracota.ElementoCreaci%25C3%25B3n,Terracota
                         Id: 4d68357d-9889-4a82-b255-f70823809275
                         tipoBloque: estatua
                         cuerpo: ref!! d5cbdf13-4994-46f1-8b41-199738fe2fd0
+                        materialNegativo: "bef06b96-67da-409a-848f-584f52cc5c60:Prefabs/Creación/MaterialNegativo"
+                        modelos:
+                            d91b1c8f332d75981cea1f3497c2f818: ref!! a7519371-adda-4d29-89c6-dd65522d1292
+                            013de5e2fde223318942b537917da542: ref!! 895f23f7-08df-4a72-a45c-531e902aacae
+                            845ebf68046efe4bdc8d99dd9081c663: ref!! 236ff943-1df1-4374-8a3d-863e90955158
         -   Entity:
                 Id: 6520dadf-3e27-4a7d-8718-297a9d00ebcf
                 Name: Bloqueador
@@ -58,7 +62,7 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: 7255adc5-5755-4df8-a989-1ef77344b67b
-                Name: Deco
+                Name: "Límite"
                 Components:
                     e5de3f1121044d7e2df40f62b620544e: !TransformComponent
                         Id: 71f92290-942a-4545-91e2-f1a2deb17a33
@@ -86,7 +90,9 @@ Hierarchy:
                     4865d9db1e365226367e8ba4edbd339a: !ModelComponent
                         Id: 236ff943-1df1-4374-8a3d-863e90955158
                         Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Estatua/Lanza
-                        Materials: {}
+                        Materials:
+                            f7f9b589d1e057b72b760f386995ac9e~0: d4be94e3-4a98-4069-9b66-aea5a0a4da3b:Modelos/Estatua/Materiales/Terracota
+                            8e2318ff07ecd00581383e71de9b0ab6~1: 4affce4a-566b-4f19-9dcc-d110440ead90:Modelos/Estatua/Materiales/Bronce
         -   Folder: null
             Entity:
                 Id: 7a153f06-18f6-4c54-b030-04cac2e06f04
@@ -104,7 +110,9 @@ Hierarchy:
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
                         Id: a7519371-adda-4d29-89c6-dd65522d1292
                         Model: 4504bc3d-56bd-4752-af76-a6fb0f75b742:Modelos/Estatua/Estatua
-                        Materials: {}
+                        Materials:
+                            f9e7f687ec417587ad7fb4e320de6881~0: d4be94e3-4a98-4069-9b66-aea5a0a4da3b:Modelos/Estatua/Materiales/Terracota
+                            17ba06e4fb73a95d7afe894405895510~1: 4affce4a-566b-4f19-9dcc-d110440ead90:Modelos/Estatua/Materiales/Bronce
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: d5cbdf13-4994-46f1-8b41-199738fe2fd0
                         CanCollideWith: DefaultFilter, KinematicFilter, SensorTrigger
@@ -141,21 +149,6 @@ Hierarchy:
                     448b18de08d2a18a78ab084fd2efa62d: !ModelComponent
                         Id: 895f23f7-08df-4a72-a45c-531e902aacae
                         Model: 6a0770d0-5e69-4d2c-95e9-aa85a56916ca:Modelos/Estatua/Mono
-                        Materials: {}
-        -   Entity:
-                Id: f01dcc8c-5b11-4dcc-a120-7cbeb0706426
-                Name: Borde
-                Components:
-                    e5de3f1121044d7e2df40f62b620544e: !TransformComponent
-                        Id: 70b1a91b-6287-4cb3-afe9-1bfd18eb9984
-                        Position: {X: 0.0, Y: 0.001, Z: 0.1}
-                        Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 0.14, Y: 0.14, Z: 1.0}
-                        Children: {}
-                    c4f31429f5bbc00ddbd41a8fb5e55987: !SpriteComponent
-                        Id: d4cc5b8f-fc33-4d7e-ab33-320357b39e2a
-                        SpriteProvider: !SpriteFromSheet
-                            Sheet: 662e9a78-b82a-4336-a0d7-744bcc48de5a:Sprites/Cuadrado
-                        Color: {R: 0.54901963, G: 1.0, B: 0.62745094, A: 0.78431374}
-                        PremultipliedAlpha: false
-                        BlendMode: AlphaBlend
+                        Materials:
+                            dd45fe15930a677b62b13aaf18651f1f~0: d4be94e3-4a98-4069-9b66-aea5a0a4da3b:Modelos/Estatua/Materiales/Terracota
+                            274bdb4d32e5a1fe89170292daa8f69b~1: a87f0ff8-1a21-4199-8058-ab6a3c890db8:Modelos/Estatua/Materiales/Pintura

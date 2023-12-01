@@ -21,6 +21,9 @@ Hierarchy:
                         Id: d02cf9a0-cdaf-4f72-93c0-d2bcc8038a6b
                         tipoBloque: corto
                         cuerpo: ref!! 3a5dc20f-b1a0-4971-8443-b0f417423b22
+                        materialNegativo: "bef06b96-67da-409a-848f-584f52cc5c60:Prefabs/Creación/MaterialNegativo"
+                        modelos:
+                            2bf61e481dda91edb19ade113df85043: ref!! b8a2da0e-c12c-49d6-824e-fc39f318ccf7
         -   Entity:
                 Id: ea2f82d3-ec71-469a-a6c9-f4c58c6e5bee
                 Name: Modelo Corto
@@ -34,7 +37,10 @@ Hierarchy:
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
                         Id: b8a2da0e-c12c-49d6-824e-fc39f318ccf7
                         Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
-                        Materials: {}
+                        Materials:
+                            2491e659e78d05f17688f4f919b2ae29~0: 309290aa-492d-48ba-b8d8-64c7cd1e28f9:Modelos/Corto/Materiales/FondoCorto
+                            70841d60b04b0a8086db22e5a009f4a2~1: bca4c0d6-ecd5-40f2-9abd-7c7ab48043d1:Modelos/Corto/Materiales/BordeCorto
+                            de3b3382b6c8fb9064540c8b20d328cd~2: 6414b9a5-d77a-4136-84cf-3b946c6bcaad:Modelos/Corto/Materiales/EsquineroCorto
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: 3a5dc20f-b1a0-4971-8443-b0f417423b22
                         CanCollideWith: DefaultFilter, KinematicFilter, SensorTrigger

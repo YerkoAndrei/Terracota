@@ -61,13 +61,17 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            bfad568dabe50bb43ec5e048f31ca790: ref!! 4a18d887-55b5-42ec-9692-5d87c9c6e496
                             7965260b48c46a99367fa66e7326a221: ref!! 9761f8e7-8843-4821-acb7-79f3720b052f
                             ff2bff364f6f466fdc2497f5fff7dd71: ref!! e892efab-c76d-49f0-b3d8-7fe54ee73122
                     f180b8d4bd2ff5fd2e4f4f0698b689db: !Terracota.ElementoCreaci%25C3%25B3n,Terracota
                         Id: 25231085-f2b9-424e-af93-cf7a4d0aeed4
                         tipoBloque: estatua
                         cuerpo: ref!! 3bd3a2c6-c510-45f9-9dea-e7eab182b18f
+                        materialNegativo: "bef06b96-67da-409a-848f-584f52cc5c60:Prefabs/Creación/MaterialNegativo"
+                        modelos:
+                            d91b1c8f332d75981cea1f3497c2f818: ref!! 28abec2c-6eee-4fda-8cd1-160429887285
+                            013de5e2fde223318942b537917da542: ref!! 0b5aafde-ad8e-4dd2-8840-2f5338a831f6
+                            845ebf68046efe4bdc8d99dd9081c663: ref!! 07b20d08-a2eb-4bc6-a2b4-641233de215c
             Base:
                 BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
                 BasePartId: 0ec69105-7267-4360-a7fb-f1edee1aee41
@@ -110,27 +114,6 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 101826af-2822-46b2-92ce-c2c5972f0813
                 InstanceId: 4d19e7d8-75a7-4e53-82c8-5df2fc9ec627
-        -   Entity:
-                Id: 03aea906-5b1b-4a5c-9716-4d4db390a3dc
-                Name: Borde
-                Components:
-                    e5de3f1121044d7e2df40f62b620544e: !TransformComponent
-                        Id: 27a05464-4a84-46de-8d71-0eb7744be39b
-                        Position: {X: 0.0, Y: 0.001, Z: 0.1}
-                        Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 0.14, Y: 0.14, Z: 1.0}
-                        Children: {}
-                    c4f31429f5bbc00ddbd41a8fb5e55987: !SpriteComponent
-                        Id: 5ba15c69-1e65-40e9-b8ba-0969dbbd6774
-                        SpriteProvider: !SpriteFromSheet
-                            Sheet: 662e9a78-b82a-4336-a0d7-744bcc48de5a:Sprites/Cuadrado
-                        Color: {R: 0.54901963, G: 1.0, B: 0.62745094, A: 0.78431374}
-                        PremultipliedAlpha: false
-                        BlendMode: AlphaBlend
-            Base:
-                BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
-                BasePartId: f01dcc8c-5b11-4dcc-a120-7cbeb0706426
-                InstanceId: d193b24c-06c5-4083-a902-d20263dfb5aa
         -   Folder: null
             Entity:
                 Id: 03d2fa18-2e29-4299-9159-d48b71535752
@@ -177,13 +160,17 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            bfad568dabe50bb43ec5e048f31ca790: ref!! 71f67971-4629-4b1f-90fa-9ed1279588f5
                             7965260b48c46a99367fa66e7326a221: ref!! 24302db9-508b-49bd-b7c1-d5079cc0a59a
                             ff2bff364f6f466fdc2497f5fff7dd71: ref!! b4658c57-8102-47a5-a24b-a581fe284130
                     f180b8d4bd2ff5fd2e4f4f0698b689db: !Terracota.ElementoCreaci%25C3%25B3n,Terracota
                         Id: a2e3428f-90a9-4df0-8263-f8f411889be2
                         tipoBloque: estatua
                         cuerpo: ref!! d668d64d-5141-47a9-9ad9-61a406077d16
+                        materialNegativo: "bef06b96-67da-409a-848f-584f52cc5c60:Prefabs/Creación/MaterialNegativo"
+                        modelos:
+                            d91b1c8f332d75981cea1f3497c2f818: ref!! 9586373d-d8ec-447f-b2c2-956f4961285c
+                            013de5e2fde223318942b537917da542: ref!! 3e4dce04-4736-415e-b36f-4c874ac90adc
+                            845ebf68046efe4bdc8d99dd9081c663: ref!! 6348d686-3a51-4b3f-8311-8b3fc0b1caae
             Base:
                 BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
                 BasePartId: 0ec69105-7267-4360-a7fb-f1edee1aee41
@@ -241,7 +228,10 @@ Hierarchy:
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
                         Id: 14438264-3b35-427f-b515-bebef2808d10
                         Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
-                        Materials: {}
+                        Materials:
+                            2491e659e78d05f17688f4f919b2ae29~0: 309290aa-492d-48ba-b8d8-64c7cd1e28f9:Modelos/Corto/Materiales/FondoCorto
+                            70841d60b04b0a8086db22e5a009f4a2~1: bca4c0d6-ecd5-40f2-9abd-7c7ab48043d1:Modelos/Corto/Materiales/BordeCorto
+                            de3b3382b6c8fb9064540c8b20d328cd~2: 6414b9a5-d77a-4136-84cf-3b946c6bcaad:Modelos/Corto/Materiales/EsquineroCorto
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: a44c59d7-9821-4988-a1f6-fdb0885303fa
                         CanCollideWith: DefaultFilter, KinematicFilter, SensorTrigger
@@ -414,7 +404,9 @@ Hierarchy:
                     448b18de08d2a18a78ab084fd2efa62d: !ModelComponent
                         Id: 2edfdeff-387b-48ca-97b3-e44b81aa6882
                         Model: 6a0770d0-5e69-4d2c-95e9-aa85a56916ca:Modelos/Estatua/Mono
-                        Materials: {}
+                        Materials:
+                            dd45fe15930a677b62b13aaf18651f1f~0: d4be94e3-4a98-4069-9b66-aea5a0a4da3b:Modelos/Estatua/Materiales/Terracota
+                            274bdb4d32e5a1fe89170292daa8f69b~1: a87f0ff8-1a21-4199-8058-ab6a3c890db8:Modelos/Estatua/Materiales/Pintura
             Base:
                 BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
                 BasePartId: bd525eef-c098-4376-a5c2-0e64059fab3a
@@ -740,7 +732,9 @@ Hierarchy:
                     448b18de08d2a18a78ab084fd2efa62d: !ModelComponent
                         Id: 0b5aafde-ad8e-4dd2-8840-2f5338a831f6
                         Model: 6a0770d0-5e69-4d2c-95e9-aa85a56916ca:Modelos/Estatua/Mono
-                        Materials: {}
+                        Materials:
+                            dd45fe15930a677b62b13aaf18651f1f~0: d4be94e3-4a98-4069-9b66-aea5a0a4da3b:Modelos/Estatua/Materiales/Terracota
+                            274bdb4d32e5a1fe89170292daa8f69b~1: a87f0ff8-1a21-4199-8058-ab6a3c890db8:Modelos/Estatua/Materiales/Pintura
             Base:
                 BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
                 BasePartId: bd525eef-c098-4376-a5c2-0e64059fab3a
@@ -779,6 +773,9 @@ Hierarchy:
                         Id: 9d064d6e-4543-46f9-bcc8-64c82d939ff4
                         tipoBloque: largo
                         cuerpo: ref!! 81b51f1a-5e85-4171-a0c9-3043a97f069c
+                        materialNegativo: "bef06b96-67da-409a-848f-584f52cc5c60:Prefabs/Creación/MaterialNegativo"
+                        modelos:
+                            58b43b0f784d0ff272576efcbec29647: ref!! a6ef6fd3-5ebd-40ea-a232-eb1df7750994
             Base:
                 BasePartAsset: "04d961b7-0cd3-4059-814f-1cd131694b0c:Prefabs/Creación/LargoCreación"
                 BasePartId: f1b5042e-e1fd-4f4e-9bd3-0cde64dbbaeb
@@ -905,7 +902,10 @@ Hierarchy:
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
                         Id: b7956871-6b39-4ffc-9640-edcf918bf6bc
                         Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
-                        Materials: {}
+                        Materials:
+                            2491e659e78d05f17688f4f919b2ae29~0: 309290aa-492d-48ba-b8d8-64c7cd1e28f9:Modelos/Corto/Materiales/FondoCorto
+                            70841d60b04b0a8086db22e5a009f4a2~1: bca4c0d6-ecd5-40f2-9abd-7c7ab48043d1:Modelos/Corto/Materiales/BordeCorto
+                            de3b3382b6c8fb9064540c8b20d328cd~2: 6414b9a5-d77a-4136-84cf-3b946c6bcaad:Modelos/Corto/Materiales/EsquineroCorto
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: 7cde3e0a-1a68-4d39-93ac-42aee0d257c1
                         CanCollideWith: DefaultFilter, KinematicFilter, SensorTrigger
@@ -966,6 +966,9 @@ Hierarchy:
                         Id: c362ba69-8e7e-4071-a2c1-5cd857dbc1aa
                         tipoBloque: corto
                         cuerpo: ref!! 7532f48d-8905-48e6-927f-1e8d5c7838f2
+                        materialNegativo: "bef06b96-67da-409a-848f-584f52cc5c60:Prefabs/Creación/MaterialNegativo"
+                        modelos:
+                            2bf61e481dda91edb19ade113df85043: ref!! f6ada8f0-5c92-4b5a-a027-a5dfe6467e9d
             Base:
                 BasePartAsset: "ca8a9afd-e763-41aa-97d2-bf8fe2d39937:Prefabs/Creación/CortoCreación"
                 BasePartId: 670e7431-4482-412f-8d8b-83cb09f4b1b4
@@ -1165,6 +1168,9 @@ Hierarchy:
                         Id: a5dda9e8-a37e-4640-b677-6990d5ae730a
                         tipoBloque: corto
                         cuerpo: ref!! cb1e912d-19c2-4216-a2f2-887edb3e47e9
+                        materialNegativo: "bef06b96-67da-409a-848f-584f52cc5c60:Prefabs/Creación/MaterialNegativo"
+                        modelos:
+                            2bf61e481dda91edb19ade113df85043: ref!! 80795b92-a81b-44ce-8dea-09505a47e4e4
             Base:
                 BasePartAsset: "ca8a9afd-e763-41aa-97d2-bf8fe2d39937:Prefabs/Creación/CortoCreación"
                 BasePartId: 670e7431-4482-412f-8d8b-83cb09f4b1b4
@@ -1201,7 +1207,10 @@ Hierarchy:
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
                         Id: e714ac0e-0a85-4cc9-b4bd-c555dead74cb
                         Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
-                        Materials: {}
+                        Materials:
+                            2491e659e78d05f17688f4f919b2ae29~0: 309290aa-492d-48ba-b8d8-64c7cd1e28f9:Modelos/Corto/Materiales/FondoCorto
+                            70841d60b04b0a8086db22e5a009f4a2~1: bca4c0d6-ecd5-40f2-9abd-7c7ab48043d1:Modelos/Corto/Materiales/BordeCorto
+                            de3b3382b6c8fb9064540c8b20d328cd~2: 6414b9a5-d77a-4136-84cf-3b946c6bcaad:Modelos/Corto/Materiales/EsquineroCorto
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: 953de43a-9ada-4ddf-9066-7572f07bf9cd
                         CanCollideWith: DefaultFilter, KinematicFilter, SensorTrigger
@@ -1398,7 +1407,10 @@ Hierarchy:
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
                         Id: ad1f522e-1b33-4be1-bb89-cfa34c558efd
                         Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
-                        Materials: {}
+                        Materials:
+                            2491e659e78d05f17688f4f919b2ae29~0: 309290aa-492d-48ba-b8d8-64c7cd1e28f9:Modelos/Corto/Materiales/FondoCorto
+                            70841d60b04b0a8086db22e5a009f4a2~1: bca4c0d6-ecd5-40f2-9abd-7c7ab48043d1:Modelos/Corto/Materiales/BordeCorto
+                            de3b3382b6c8fb9064540c8b20d328cd~2: 6414b9a5-d77a-4136-84cf-3b946c6bcaad:Modelos/Corto/Materiales/EsquineroCorto
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: 1aaea8ef-599a-43b3-926d-2ce1cff14daa
                         CanCollideWith: DefaultFilter, KinematicFilter, SensorTrigger
@@ -1439,7 +1451,10 @@ Hierarchy:
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
                         Id: 2043a2d6-abe7-40e7-b01e-c7a8577f1c29
                         Model: 8376cd3c-bb86-4a2a-ae61-842d1cef88ab:Modelos/Largo/Largo
-                        Materials: {}
+                        Materials:
+                            bae4ce0608cc75c9157c6ca0ac74c41c~0: 84facbdc-3cac-4dbe-be0f-903f81e9c2a0:Modelos/Largo/Materiales/FondoLargo
+                            95ba8ccf648bdaa4ce5391a39e1e5e15~1: e3e7069d-18d0-406e-a8c3-1016cd9e19b5:Modelos/Largo/Materiales/BordeLargo
+                            153c5e0a673025c34e70ef0c1b33d77d~2: 2d079548-f92f-479d-827d-eb180104b49e:Modelos/Largo/Materiales/EsquineroLargo
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: 2f031a44-8dff-42e5-a2fd-240874e2d425
                         CanCollideWith: DefaultFilter, KinematicFilter, SensorTrigger
@@ -1721,6 +1736,9 @@ Hierarchy:
                         Id: 8c5482ae-608a-47dc-a719-51a000b1b0a8
                         tipoBloque: corto
                         cuerpo: ref!! 7cde3e0a-1a68-4d39-93ac-42aee0d257c1
+                        materialNegativo: "bef06b96-67da-409a-848f-584f52cc5c60:Prefabs/Creación/MaterialNegativo"
+                        modelos:
+                            2bf61e481dda91edb19ade113df85043: ref!! b7956871-6b39-4ffc-9640-edcf918bf6bc
             Base:
                 BasePartAsset: "ca8a9afd-e763-41aa-97d2-bf8fe2d39937:Prefabs/Creación/CortoCreación"
                 BasePartId: 670e7431-4482-412f-8d8b-83cb09f4b1b4
@@ -1889,7 +1907,10 @@ Hierarchy:
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
                         Id: a6ef6fd3-5ebd-40ea-a232-eb1df7750994
                         Model: 8376cd3c-bb86-4a2a-ae61-842d1cef88ab:Modelos/Largo/Largo
-                        Materials: {}
+                        Materials:
+                            bae4ce0608cc75c9157c6ca0ac74c41c~0: 84facbdc-3cac-4dbe-be0f-903f81e9c2a0:Modelos/Largo/Materiales/FondoLargo
+                            95ba8ccf648bdaa4ce5391a39e1e5e15~1: e3e7069d-18d0-406e-a8c3-1016cd9e19b5:Modelos/Largo/Materiales/BordeLargo
+                            153c5e0a673025c34e70ef0c1b33d77d~2: 2d079548-f92f-479d-827d-eb180104b49e:Modelos/Largo/Materiales/EsquineroLargo
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: 81b51f1a-5e85-4171-a0c9-3043a97f069c
                         CanCollideWith: DefaultFilter, KinematicFilter, SensorTrigger
@@ -1934,7 +1955,9 @@ Hierarchy:
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
                         Id: dd0058eb-c6bc-4fbe-84b6-1f8680cb067f
                         Model: 4504bc3d-56bd-4752-af76-a6fb0f75b742:Modelos/Estatua/Estatua
-                        Materials: {}
+                        Materials:
+                            f9e7f687ec417587ad7fb4e320de6881~0: d4be94e3-4a98-4069-9b66-aea5a0a4da3b:Modelos/Estatua/Materiales/Terracota
+                            17ba06e4fb73a95d7afe894405895510~1: 4affce4a-566b-4f19-9dcc-d110440ead90:Modelos/Estatua/Materiales/Bronce
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: 5e667bcd-6871-4c83-85f2-ad27874edfec
                         CanCollideWith: DefaultFilter, KinematicFilter, SensorTrigger
@@ -1996,13 +2019,16 @@ Hierarchy:
                         Id: 7a3c0bae-2246-431a-a3dd-738c40037c01
                         tipoBloque: corto
                         cuerpo: ref!! 802dfb91-145b-4ed3-a4b7-3af89a92ef48
+                        materialNegativo: "bef06b96-67da-409a-848f-584f52cc5c60:Prefabs/Creación/MaterialNegativo"
+                        modelos:
+                            2bf61e481dda91edb19ade113df85043: ref!! 6de18abc-fd41-489e-a974-c8f753c3013b
             Base:
                 BasePartAsset: "ca8a9afd-e763-41aa-97d2-bf8fe2d39937:Prefabs/Creación/CortoCreación"
                 BasePartId: 670e7431-4482-412f-8d8b-83cb09f4b1b4
                 InstanceId: 81192dbf-99df-46e0-b163-06f05572eb92
         -   Entity:
                 Id: 600174a2-1680-4c8b-84ac-ab956a7c9218
-                Name: Deco
+                Name: "Límite"
                 Components:
                     e5de3f1121044d7e2df40f62b620544e: !TransformComponent
                         Id: 752194b0-255d-47a0-bf2d-771ebb9e5253
@@ -2073,6 +2099,9 @@ Hierarchy:
                         Id: 5faa0e0d-1e7c-485a-b219-06db67f4107f
                         tipoBloque: largo
                         cuerpo: ref!! 4ccd581d-64a9-4afb-bb74-4c568a3de7a9
+                        materialNegativo: "bef06b96-67da-409a-848f-584f52cc5c60:Prefabs/Creación/MaterialNegativo"
+                        modelos:
+                            58b43b0f784d0ff272576efcbec29647: ref!! f7768060-f696-462a-a31f-fffff9ee494e
             Base:
                 BasePartAsset: "04d961b7-0cd3-4059-814f-1cd131694b0c:Prefabs/Creación/LargoCreación"
                 BasePartId: f1b5042e-e1fd-4f4e-9bd3-0cde64dbbaeb
@@ -2129,6 +2158,9 @@ Hierarchy:
                         Id: b5cb1b27-f1a7-416a-adef-7f54467f78a2
                         tipoBloque: corto
                         cuerpo: ref!! 8871064e-f9c9-4e01-b133-1d877c761bf3
+                        materialNegativo: "bef06b96-67da-409a-848f-584f52cc5c60:Prefabs/Creación/MaterialNegativo"
+                        modelos:
+                            2bf61e481dda91edb19ade113df85043: ref!! 34895d56-cf08-41b1-a899-7d6670b5bc42
             Base:
                 BasePartAsset: "ca8a9afd-e763-41aa-97d2-bf8fe2d39937:Prefabs/Creación/CortoCreación"
                 BasePartId: 670e7431-4482-412f-8d8b-83cb09f4b1b4
@@ -2143,13 +2175,17 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            bfad568dabe50bb43ec5e048f31ca790: ref!! 27a05464-4a84-46de-8d71-0eb7744be39b
                             7965260b48c46a99367fa66e7326a221: ref!! 752194b0-255d-47a0-bf2d-771ebb9e5253
                             ff2bff364f6f466fdc2497f5fff7dd71: ref!! d62248f8-83a7-47de-abd6-f147a8077bce
                     f180b8d4bd2ff5fd2e4f4f0698b689db: !Terracota.ElementoCreaci%25C3%25B3n,Terracota
                         Id: 25ac3d1d-cf91-4470-9283-654947b1ffff
                         tipoBloque: estatua
                         cuerpo: ref!! 5e667bcd-6871-4c83-85f2-ad27874edfec
+                        materialNegativo: "bef06b96-67da-409a-848f-584f52cc5c60:Prefabs/Creación/MaterialNegativo"
+                        modelos:
+                            d91b1c8f332d75981cea1f3497c2f818: ref!! dd0058eb-c6bc-4fbe-84b6-1f8680cb067f
+                            013de5e2fde223318942b537917da542: ref!! 2edfdeff-387b-48ca-97b3-e44b81aa6882
+                            845ebf68046efe4bdc8d99dd9081c663: ref!! 95747f07-36c8-49c3-8162-60a8d0b75842
             Base:
                 BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
                 BasePartId: 0ec69105-7267-4360-a7fb-f1edee1aee41
@@ -2349,7 +2385,10 @@ Hierarchy:
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
                         Id: 80795b92-a81b-44ce-8dea-09505a47e4e4
                         Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
-                        Materials: {}
+                        Materials:
+                            2491e659e78d05f17688f4f919b2ae29~0: 309290aa-492d-48ba-b8d8-64c7cd1e28f9:Modelos/Corto/Materiales/FondoCorto
+                            70841d60b04b0a8086db22e5a009f4a2~1: bca4c0d6-ecd5-40f2-9abd-7c7ab48043d1:Modelos/Corto/Materiales/BordeCorto
+                            de3b3382b6c8fb9064540c8b20d328cd~2: 6414b9a5-d77a-4136-84cf-3b946c6bcaad:Modelos/Corto/Materiales/EsquineroCorto
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: cb1e912d-19c2-4216-a2f2-887edb3e47e9
                         CanCollideWith: DefaultFilter, KinematicFilter, SensorTrigger
@@ -2392,6 +2431,9 @@ Hierarchy:
                         Id: 6ae50cd3-8c4c-4958-a949-c52a5ec903f4
                         tipoBloque: largo
                         cuerpo: ref!! c5e50ed1-6c1c-4590-88a8-7975d66fbd46
+                        materialNegativo: "bef06b96-67da-409a-848f-584f52cc5c60:Prefabs/Creación/MaterialNegativo"
+                        modelos:
+                            58b43b0f784d0ff272576efcbec29647: ref!! 447d392c-10d8-4ed1-8589-e11ef2f9ae01
             Base:
                 BasePartAsset: "04d961b7-0cd3-4059-814f-1cd131694b0c:Prefabs/Creación/LargoCreación"
                 BasePartId: f1b5042e-e1fd-4f4e-9bd3-0cde64dbbaeb
@@ -2409,7 +2451,10 @@ Hierarchy:
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
                         Id: dd444720-54c6-4c76-a0db-b1af58a1688e
                         Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
-                        Materials: {}
+                        Materials:
+                            2491e659e78d05f17688f4f919b2ae29~0: 309290aa-492d-48ba-b8d8-64c7cd1e28f9:Modelos/Corto/Materiales/FondoCorto
+                            70841d60b04b0a8086db22e5a009f4a2~1: bca4c0d6-ecd5-40f2-9abd-7c7ab48043d1:Modelos/Corto/Materiales/BordeCorto
+                            de3b3382b6c8fb9064540c8b20d328cd~2: 6414b9a5-d77a-4136-84cf-3b946c6bcaad:Modelos/Corto/Materiales/EsquineroCorto
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: f49e40e5-ac72-475e-be4e-24cedf00d540
                         CanCollideWith: DefaultFilter, KinematicFilter, SensorTrigger
@@ -2675,7 +2720,8 @@ Hierarchy:
                     fea8a7e2b8b76551ca8cc2836e567605: !ModelComponent
                         Id: 492d5f6e-5140-4545-bd81-599b82aa237b
                         Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
-                        Materials: {}
+                        Materials:
+                            f1b6aab4bceb861515ac418b4e72d45c~0: "bef06b96-67da-409a-848f-584f52cc5c60:Prefabs/Creación/MaterialNegativo"
             Base:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
                 BasePartId: 3fa8c756-aadc-4ab7-bf09-d2e230b93db0
@@ -2695,6 +2741,9 @@ Hierarchy:
                         Id: 2da20d4d-f207-4f0a-8569-144692f4446f
                         tipoBloque: largo
                         cuerpo: ref!! d83a8eb7-6076-4fc8-934e-b02f1855eb19
+                        materialNegativo: "bef06b96-67da-409a-848f-584f52cc5c60:Prefabs/Creación/MaterialNegativo"
+                        modelos:
+                            58b43b0f784d0ff272576efcbec29647: ref!! 671261fc-a28e-4839-97c7-6a48671538a0
             Base:
                 BasePartAsset: "04d961b7-0cd3-4059-814f-1cd131694b0c:Prefabs/Creación/LargoCreación"
                 BasePartId: f1b5042e-e1fd-4f4e-9bd3-0cde64dbbaeb
@@ -2883,7 +2932,10 @@ Hierarchy:
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
                         Id: 671261fc-a28e-4839-97c7-6a48671538a0
                         Model: 8376cd3c-bb86-4a2a-ae61-842d1cef88ab:Modelos/Largo/Largo
-                        Materials: {}
+                        Materials:
+                            bae4ce0608cc75c9157c6ca0ac74c41c~0: 84facbdc-3cac-4dbe-be0f-903f81e9c2a0:Modelos/Largo/Materiales/FondoLargo
+                            95ba8ccf648bdaa4ce5391a39e1e5e15~1: e3e7069d-18d0-406e-a8c3-1016cd9e19b5:Modelos/Largo/Materiales/BordeLargo
+                            153c5e0a673025c34e70ef0c1b33d77d~2: 2d079548-f92f-479d-827d-eb180104b49e:Modelos/Largo/Materiales/EsquineroLargo
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: d83a8eb7-6076-4fc8-934e-b02f1855eb19
                         CanCollideWith: DefaultFilter, KinematicFilter, SensorTrigger
@@ -3105,7 +3157,10 @@ Hierarchy:
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
                         Id: 34895d56-cf08-41b1-a899-7d6670b5bc42
                         Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
-                        Materials: {}
+                        Materials:
+                            2491e659e78d05f17688f4f919b2ae29~0: 309290aa-492d-48ba-b8d8-64c7cd1e28f9:Modelos/Corto/Materiales/FondoCorto
+                            70841d60b04b0a8086db22e5a009f4a2~1: bca4c0d6-ecd5-40f2-9abd-7c7ab48043d1:Modelos/Corto/Materiales/BordeCorto
+                            de3b3382b6c8fb9064540c8b20d328cd~2: 6414b9a5-d77a-4136-84cf-3b946c6bcaad:Modelos/Corto/Materiales/EsquineroCorto
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: 8871064e-f9c9-4e01-b133-1d877c761bf3
                         CanCollideWith: DefaultFilter, KinematicFilter, SensorTrigger
@@ -3205,7 +3260,9 @@ Hierarchy:
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
                         Id: 9586373d-d8ec-447f-b2c2-956f4961285c
                         Model: 4504bc3d-56bd-4752-af76-a6fb0f75b742:Modelos/Estatua/Estatua
-                        Materials: {}
+                        Materials:
+                            f9e7f687ec417587ad7fb4e320de6881~0: d4be94e3-4a98-4069-9b66-aea5a0a4da3b:Modelos/Estatua/Materiales/Terracota
+                            17ba06e4fb73a95d7afe894405895510~1: 4affce4a-566b-4f19-9dcc-d110440ead90:Modelos/Estatua/Materiales/Bronce
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: d668d64d-5141-47a9-9ad9-61a406077d16
                         CanCollideWith: DefaultFilter, KinematicFilter, SensorTrigger
@@ -3364,7 +3421,10 @@ Hierarchy:
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
                         Id: f7768060-f696-462a-a31f-fffff9ee494e
                         Model: 8376cd3c-bb86-4a2a-ae61-842d1cef88ab:Modelos/Largo/Largo
-                        Materials: {}
+                        Materials:
+                            bae4ce0608cc75c9157c6ca0ac74c41c~0: 84facbdc-3cac-4dbe-be0f-903f81e9c2a0:Modelos/Largo/Materiales/FondoLargo
+                            95ba8ccf648bdaa4ce5391a39e1e5e15~1: e3e7069d-18d0-406e-a8c3-1016cd9e19b5:Modelos/Largo/Materiales/BordeLargo
+                            153c5e0a673025c34e70ef0c1b33d77d~2: 2d079548-f92f-479d-827d-eb180104b49e:Modelos/Largo/Materiales/EsquineroLargo
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: 4ccd581d-64a9-4afb-bb74-4c568a3de7a9
                         CanCollideWith: DefaultFilter, KinematicFilter, SensorTrigger
@@ -3536,7 +3596,10 @@ Hierarchy:
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
                         Id: 51387bc1-fe85-49ce-8b22-e627a3c688e3
                         Model: 8376cd3c-bb86-4a2a-ae61-842d1cef88ab:Modelos/Largo/Largo
-                        Materials: {}
+                        Materials:
+                            bae4ce0608cc75c9157c6ca0ac74c41c~0: 84facbdc-3cac-4dbe-be0f-903f81e9c2a0:Modelos/Largo/Materiales/FondoLargo
+                            95ba8ccf648bdaa4ce5391a39e1e5e15~1: e3e7069d-18d0-406e-a8c3-1016cd9e19b5:Modelos/Largo/Materiales/BordeLargo
+                            153c5e0a673025c34e70ef0c1b33d77d~2: 2d079548-f92f-479d-827d-eb180104b49e:Modelos/Largo/Materiales/EsquineroLargo
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: 1f063b16-7314-4f6f-90c0-89a160d86556
                         CanCollideWith: DefaultFilter, KinematicFilter, SensorTrigger
@@ -3633,7 +3696,10 @@ Hierarchy:
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
                         Id: 447d392c-10d8-4ed1-8589-e11ef2f9ae01
                         Model: 8376cd3c-bb86-4a2a-ae61-842d1cef88ab:Modelos/Largo/Largo
-                        Materials: {}
+                        Materials:
+                            bae4ce0608cc75c9157c6ca0ac74c41c~0: 84facbdc-3cac-4dbe-be0f-903f81e9c2a0:Modelos/Largo/Materiales/FondoLargo
+                            95ba8ccf648bdaa4ce5391a39e1e5e15~1: e3e7069d-18d0-406e-a8c3-1016cd9e19b5:Modelos/Largo/Materiales/BordeLargo
+                            153c5e0a673025c34e70ef0c1b33d77d~2: 2d079548-f92f-479d-827d-eb180104b49e:Modelos/Largo/Materiales/EsquineroLargo
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: c5e50ed1-6c1c-4590-88a8-7975d66fbd46
                         CanCollideWith: DefaultFilter, KinematicFilter, SensorTrigger
@@ -3738,7 +3804,7 @@ Hierarchy:
                 InstanceId: 4d19e7d8-75a7-4e53-82c8-5df2fc9ec627
         -   Entity:
                 Id: aae31222-edcc-42bd-ac23-d3982ba293fb
-                Name: Deco
+                Name: "Límite"
                 Components:
                     e5de3f1121044d7e2df40f62b620544e: !TransformComponent
                         Id: 24302db9-508b-49bd-b7c1-d5079cc0a59a
@@ -3769,7 +3835,10 @@ Hierarchy:
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
                         Id: f6ada8f0-5c92-4b5a-a027-a5dfe6467e9d
                         Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
-                        Materials: {}
+                        Materials:
+                            2491e659e78d05f17688f4f919b2ae29~0: 309290aa-492d-48ba-b8d8-64c7cd1e28f9:Modelos/Corto/Materiales/FondoCorto
+                            70841d60b04b0a8086db22e5a009f4a2~1: bca4c0d6-ecd5-40f2-9abd-7c7ab48043d1:Modelos/Corto/Materiales/BordeCorto
+                            de3b3382b6c8fb9064540c8b20d328cd~2: 6414b9a5-d77a-4136-84cf-3b946c6bcaad:Modelos/Corto/Materiales/EsquineroCorto
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: 7532f48d-8905-48e6-927f-1e8d5c7838f2
                         CanCollideWith: DefaultFilter, KinematicFilter, SensorTrigger
@@ -3952,7 +4021,7 @@ Hierarchy:
                 InstanceId: 4d19e7d8-75a7-4e53-82c8-5df2fc9ec627
         -   Entity:
                 Id: b1b3a7cd-020e-4d42-b3c3-1c79e832fb24
-                Name: Deco
+                Name: "Límite"
                 Components:
                     e5de3f1121044d7e2df40f62b620544e: !TransformComponent
                         Id: 9761f8e7-8843-4821-acb7-79f3720b052f
@@ -4020,27 +4089,6 @@ Hierarchy:
                             80d39b608a48742bbd005eb8e472bcf4: ref!! f366bc73-a6b4-4caf-8107-675d8169a14b
                             8de2b81bf7ca85a96505762ef62aa785: ref!! 29e57a7a-51a1-4546-86a7-0e1445d0e283
                             42a2ef3cb918db4edbb6aac4f89c52ec: ref!! c98ee291-9238-4010-919d-bf151e47feed
-        -   Entity:
-                Id: b8ca5d93-e5b5-466e-8733-9bd5add919df
-                Name: Borde
-                Components:
-                    e5de3f1121044d7e2df40f62b620544e: !TransformComponent
-                        Id: 4a18d887-55b5-42ec-9692-5d87c9c6e496
-                        Position: {X: 0.0, Y: 0.001, Z: 0.1}
-                        Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 0.14, Y: 0.14, Z: 1.0}
-                        Children: {}
-                    c4f31429f5bbc00ddbd41a8fb5e55987: !SpriteComponent
-                        Id: 2814bc36-30cf-4d5a-904a-3a2cb4cdd66c
-                        SpriteProvider: !SpriteFromSheet
-                            Sheet: 662e9a78-b82a-4336-a0d7-744bcc48de5a:Sprites/Cuadrado
-                        Color: {R: 0.54901963, G: 1.0, B: 0.62745094, A: 0.78431374}
-                        PremultipliedAlpha: false
-                        BlendMode: AlphaBlend
-            Base:
-                BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
-                BasePartId: f01dcc8c-5b11-4dcc-a120-7cbeb0706426
-                InstanceId: da714295-6c06-42ea-aaef-7ce802a33a06
         -   Folder: null
             Entity:
                 Id: bc54905e-6d51-4e8f-b8a6-bf11b08975aa
@@ -4220,7 +4268,9 @@ Hierarchy:
                     4865d9db1e365226367e8ba4edbd339a: !ModelComponent
                         Id: 6348d686-3a51-4b3f-8311-8b3fc0b1caae
                         Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Estatua/Lanza
-                        Materials: {}
+                        Materials:
+                            f7f9b589d1e057b72b760f386995ac9e~0: d4be94e3-4a98-4069-9b66-aea5a0a4da3b:Modelos/Estatua/Materiales/Terracota
+                            8e2318ff07ecd00581383e71de9b0ab6~1: 4affce4a-566b-4f19-9dcc-d110440ead90:Modelos/Estatua/Materiales/Bronce
             Base:
                 BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
                 BasePartId: 731c6ee1-4c72-463b-acc7-c905ea289509
@@ -4316,6 +4366,9 @@ Hierarchy:
                         Id: 9d6f6f06-1f60-4c2f-8a28-21410b5998db
                         tipoBloque: largo
                         cuerpo: ref!! 2f031a44-8dff-42e5-a2fd-240874e2d425
+                        materialNegativo: "bef06b96-67da-409a-848f-584f52cc5c60:Prefabs/Creación/MaterialNegativo"
+                        modelos:
+                            58b43b0f784d0ff272576efcbec29647: ref!! 2043a2d6-abe7-40e7-b01e-c7a8577f1c29
             Base:
                 BasePartAsset: "04d961b7-0cd3-4059-814f-1cd131694b0c:Prefabs/Creación/LargoCreación"
                 BasePartId: f1b5042e-e1fd-4f4e-9bd3-0cde64dbbaeb
@@ -4353,7 +4406,9 @@ Hierarchy:
                     4865d9db1e365226367e8ba4edbd339a: !ModelComponent
                         Id: 07b20d08-a2eb-4bc6-a2b4-641233de215c
                         Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Estatua/Lanza
-                        Materials: {}
+                        Materials:
+                            f7f9b589d1e057b72b760f386995ac9e~0: d4be94e3-4a98-4069-9b66-aea5a0a4da3b:Modelos/Estatua/Materiales/Terracota
+                            8e2318ff07ecd00581383e71de9b0ab6~1: 4affce4a-566b-4f19-9dcc-d110440ead90:Modelos/Estatua/Materiales/Bronce
             Base:
                 BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
                 BasePartId: 731c6ee1-4c72-463b-acc7-c905ea289509
@@ -4428,7 +4483,9 @@ Hierarchy:
                     4865d9db1e365226367e8ba4edbd339a: !ModelComponent
                         Id: 95747f07-36c8-49c3-8162-60a8d0b75842
                         Model: c1f7846d-3009-478f-b27b-3d5119eb20e1:Modelos/Estatua/Lanza
-                        Materials: {}
+                        Materials:
+                            f7f9b589d1e057b72b760f386995ac9e~0: d4be94e3-4a98-4069-9b66-aea5a0a4da3b:Modelos/Estatua/Materiales/Terracota
+                            8e2318ff07ecd00581383e71de9b0ab6~1: 4affce4a-566b-4f19-9dcc-d110440ead90:Modelos/Estatua/Materiales/Bronce
             Base:
                 BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
                 BasePartId: 731c6ee1-4c72-463b-acc7-c905ea289509
@@ -4489,27 +4546,6 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 85c34960-3b66-467e-8335-5d63d856aa4a
                 InstanceId: 4d19e7d8-75a7-4e53-82c8-5df2fc9ec627
-        -   Entity:
-                Id: dafb2f71-17f9-4739-95c5-a82c0581e9a9
-                Name: Borde
-                Components:
-                    e5de3f1121044d7e2df40f62b620544e: !TransformComponent
-                        Id: 71f67971-4629-4b1f-90fa-9ed1279588f5
-                        Position: {X: 0.0, Y: 0.001, Z: 0.1}
-                        Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 0.14, Y: 0.14, Z: 1.0}
-                        Children: {}
-                    c4f31429f5bbc00ddbd41a8fb5e55987: !SpriteComponent
-                        Id: db907c1c-8049-481d-9464-eec64d270113
-                        SpriteProvider: !SpriteFromSheet
-                            Sheet: 662e9a78-b82a-4336-a0d7-744bcc48de5a:Sprites/Cuadrado
-                        Color: {R: 0.54901963, G: 1.0, B: 0.62745094, A: 0.78431374}
-                        PremultipliedAlpha: false
-                        BlendMode: AlphaBlend
-            Base:
-                BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
-                BasePartId: f01dcc8c-5b11-4dcc-a120-7cbeb0706426
-                InstanceId: 247ea857-c563-4f68-811e-b56f8fc0b25a
         -   Folder: null
             Entity:
                 Id: dc079d2f-beef-4376-a2b3-4d4cb72b7c25
@@ -4579,7 +4615,10 @@ Hierarchy:
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
                         Id: 6de18abc-fd41-489e-a974-c8f753c3013b
                         Model: 79489b90-0755-4573-989d-45c68ebca490:Modelos/Corto/Corto
-                        Materials: {}
+                        Materials:
+                            2491e659e78d05f17688f4f919b2ae29~0: 309290aa-492d-48ba-b8d8-64c7cd1e28f9:Modelos/Corto/Materiales/FondoCorto
+                            70841d60b04b0a8086db22e5a009f4a2~1: bca4c0d6-ecd5-40f2-9abd-7c7ab48043d1:Modelos/Corto/Materiales/BordeCorto
+                            de3b3382b6c8fb9064540c8b20d328cd~2: 6414b9a5-d77a-4136-84cf-3b946c6bcaad:Modelos/Corto/Materiales/EsquineroCorto
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: 802dfb91-145b-4ed3-a4b7-3af89a92ef48
                         CanCollideWith: DefaultFilter, KinematicFilter, SensorTrigger
@@ -4622,6 +4661,9 @@ Hierarchy:
                         Id: 43cfd3f6-0467-497f-bb51-0f97f81df1ae
                         tipoBloque: corto
                         cuerpo: ref!! 1aaea8ef-599a-43b3-926d-2ce1cff14daa
+                        materialNegativo: "bef06b96-67da-409a-848f-584f52cc5c60:Prefabs/Creación/MaterialNegativo"
+                        modelos:
+                            2bf61e481dda91edb19ade113df85043: ref!! ad1f522e-1b33-4be1-bb89-cfa34c558efd
             Base:
                 BasePartAsset: "ca8a9afd-e763-41aa-97d2-bf8fe2d39937:Prefabs/Creación/CortoCreación"
                 BasePartId: 670e7431-4482-412f-8d8b-83cb09f4b1b4
@@ -4837,7 +4879,9 @@ Hierarchy:
                     90c1b1bf0895af875cd76549ce57454a: !ModelComponent
                         Id: 28abec2c-6eee-4fda-8cd1-160429887285
                         Model: 4504bc3d-56bd-4752-af76-a6fb0f75b742:Modelos/Estatua/Estatua
-                        Materials: {}
+                        Materials:
+                            f9e7f687ec417587ad7fb4e320de6881~0: d4be94e3-4a98-4069-9b66-aea5a0a4da3b:Modelos/Estatua/Materiales/Terracota
+                            17ba06e4fb73a95d7afe894405895510~1: 4affce4a-566b-4f19-9dcc-d110440ead90:Modelos/Estatua/Materiales/Bronce
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: 3bd3a2c6-c510-45f9-9dea-e7eab182b18f
                         CanCollideWith: DefaultFilter, KinematicFilter, SensorTrigger
@@ -4972,6 +5016,9 @@ Hierarchy:
                         Id: af9d33ac-f551-4f51-9249-9e0e81728158
                         tipoBloque: corto
                         cuerpo: ref!! 953de43a-9ada-4ddf-9066-7572f07bf9cd
+                        materialNegativo: "bef06b96-67da-409a-848f-584f52cc5c60:Prefabs/Creación/MaterialNegativo"
+                        modelos:
+                            2bf61e481dda91edb19ade113df85043: ref!! e714ac0e-0a85-4cc9-b4bd-c555dead74cb
             Base:
                 BasePartAsset: "ca8a9afd-e763-41aa-97d2-bf8fe2d39937:Prefabs/Creación/CortoCreación"
                 BasePartId: 670e7431-4482-412f-8d8b-83cb09f4b1b4
@@ -5029,6 +5076,9 @@ Hierarchy:
                         Id: 9976ab18-123b-448e-8037-b54ce0496444
                         tipoBloque: corto
                         cuerpo: ref!! a44c59d7-9821-4988-a1f6-fdb0885303fa
+                        materialNegativo: "bef06b96-67da-409a-848f-584f52cc5c60:Prefabs/Creación/MaterialNegativo"
+                        modelos:
+                            2bf61e481dda91edb19ade113df85043: ref!! 14438264-3b35-427f-b515-bebef2808d10
             Base:
                 BasePartAsset: "ca8a9afd-e763-41aa-97d2-bf8fe2d39937:Prefabs/Creación/CortoCreación"
                 BasePartId: 670e7431-4482-412f-8d8b-83cb09f4b1b4
@@ -5086,6 +5136,9 @@ Hierarchy:
                         Id: 18dc72b5-3894-4aa5-b855-108debef817c
                         tipoBloque: corto
                         cuerpo: ref!! f49e40e5-ac72-475e-be4e-24cedf00d540
+                        materialNegativo: "bef06b96-67da-409a-848f-584f52cc5c60:Prefabs/Creación/MaterialNegativo"
+                        modelos:
+                            2bf61e481dda91edb19ade113df85043: ref!! dd444720-54c6-4c76-a0db-b1af58a1688e
             Base:
                 BasePartAsset: "ca8a9afd-e763-41aa-97d2-bf8fe2d39937:Prefabs/Creación/CortoCreación"
                 BasePartId: 670e7431-4482-412f-8d8b-83cb09f4b1b4
@@ -5292,7 +5345,9 @@ Hierarchy:
                     448b18de08d2a18a78ab084fd2efa62d: !ModelComponent
                         Id: 3e4dce04-4736-415e-b36f-4c874ac90adc
                         Model: 6a0770d0-5e69-4d2c-95e9-aa85a56916ca:Modelos/Estatua/Mono
-                        Materials: {}
+                        Materials:
+                            dd45fe15930a677b62b13aaf18651f1f~0: d4be94e3-4a98-4069-9b66-aea5a0a4da3b:Modelos/Estatua/Materiales/Terracota
+                            274bdb4d32e5a1fe89170292daa8f69b~1: a87f0ff8-1a21-4199-8058-ab6a3c890db8:Modelos/Estatua/Materiales/Pintura
             Base:
                 BasePartAsset: "4b61ad3c-2942-4c9f-bc29-d78c90d47c70:Prefabs/Creación/EstatuaCreación"
                 BasePartId: bd525eef-c098-4376-a5c2-0e64059fab3a
@@ -5368,6 +5423,9 @@ Hierarchy:
                         Id: 5fe1efe1-8c99-4f7e-a3bc-2a9fd0ecc71f
                         tipoBloque: largo
                         cuerpo: ref!! 1f063b16-7314-4f6f-90c0-89a160d86556
+                        materialNegativo: "bef06b96-67da-409a-848f-584f52cc5c60:Prefabs/Creación/MaterialNegativo"
+                        modelos:
+                            58b43b0f784d0ff272576efcbec29647: ref!! 51387bc1-fe85-49ce-8b22-e627a3c688e3
             Base:
                 BasePartAsset: "04d961b7-0cd3-4059-814f-1cd131694b0c:Prefabs/Creación/LargoCreación"
                 BasePartId: f1b5042e-e1fd-4f4e-9bd3-0cde64dbbaeb
