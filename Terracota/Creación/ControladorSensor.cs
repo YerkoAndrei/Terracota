@@ -31,6 +31,11 @@ public class ControladorSensor : StartupScript
         if (tipoBloqueActual == TipoBloque.estatua)
             return 0;
 
+        // Si bloque toca Estatua, también 0
+        if (sensores[0].Collisions.Where(o => (o.ColliderA.Entity.GetParent().Get<ElementoCreación>() != null && o.ColliderA.Entity.GetParent().Get<ElementoCreación>().tipoBloque == TipoBloque.estatua) ||
+                                              (o.ColliderB.Entity.GetParent().Get<ElementoCreación>() != null && o.ColliderB.Entity.GetParent().Get<ElementoCreación>().tipoBloque == TipoBloque.estatua)).ToArray().Length > 0)
+            return 0;
+
         // Controla posiciones
         if (sensores[2].Collisions.Count > 1 && sensores[3].Collisions.Count == 0)
             return VerificarSuelo(bloqueActual, 3);
