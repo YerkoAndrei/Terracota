@@ -6,6 +6,7 @@ using Stride.Graphics;
 using Stride.UI.Panels;
 using Stride.Core.Mathematics;
 using Stride.Input;
+using System.Reflection.Emit;
 
 namespace Terracota;
 using static Sistema;
@@ -41,6 +42,8 @@ public class InterfazJuego : SyncScript
     private TextBlock txtCantidadTurnos;
     private TextBlock txtMultiplicador;
 
+    private Grid Opciones;
+    private Grid animOpciones;
     private Grid gridPausa;
     private Grid animPausa;
     private ImageElement imgProyectil;
@@ -56,6 +59,8 @@ public class InterfazJuego : SyncScript
     {
         var página = Entity.Get<UIComponent>().Page.RootElement;
         ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("PanelOscuro"), EnClicPausa);
+        Opciones = página.FindVisualChildOfType<Grid>("Opciones");
+        animOpciones = página.FindVisualChildOfType<Grid>("animOpciones");
 
         gridGanador = página.FindVisualChildOfType<Grid>("Ganador");
         gridProyectil = página.FindVisualChildOfType<Grid>("Proyectil");
@@ -167,21 +172,38 @@ public class InterfazJuego : SyncScript
 
     private void EnClicReiniciar()
     {
+        if (animando)
+            return;
+
         SistemaEscenas.CambiarEscena(Escenas.local);
     }
 
     private void EnClicOpciones()
     {
+        if (animando)
+            return;
 
+        animando = true;
+        Opciones.Visibility = Visibility.Visible;
+        SistemaAnimación.AnimarElemento(animOpciones, 0.2f, true, Direcciones.abajo, TipoCurva.rápida, () =>
+        {
+            animando = false;
+        });
     }
 
     private void EnClicSalir()
     {
+        if (animando)
+            return;
+
         SistemaEscenas.CambiarEscena(Escenas.menú);
     }
 
     private void EnClicProyectil()
     {
+        if (animando)
+            return;
+
         CambiarProyectil(controladorPartida.CambiarProyectil());
     }
 

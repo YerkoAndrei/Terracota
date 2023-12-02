@@ -124,13 +124,21 @@ public class SistemaMemoria : StartupScript
     // Configuración
     private static void EstablecerConfiguraciónPredeterminada()
     {
-        if (Directory.Exists(carpetaPersistente))
+        if (File.Exists(rutaConfiguración))
             return;
 
         // Valores predeterminados
         var diccionario = new Dictionary<string, string>
         {
-            { Configuraciones.idioma.ToString(), Idiomas.sistema.ToString() }
+            { Configuraciones.idioma.ToString(),            Idiomas.sistema.ToString() },
+            { Configuraciones.gráficos.ToString(),          NivelesConfiguración.alto.ToString() },
+            { Configuraciones.sombras.ToString(),           NivelesConfiguración.alto.ToString() },
+            { Configuraciones.volumenGeneral.ToString(),    "0.5" },
+            { Configuraciones.volumenMúsica.ToString(),     "0.5" },
+            { Configuraciones.volumenEfectos.ToString(),    "0.5" },
+            { Configuraciones.velocidadRed.ToString(),      "60" },
+            { Configuraciones.pantallaCompleta.ToString(),  true.ToString() },
+            { Configuraciones.resolución.ToString(),        "1920x1080" }
         };
 
         // Guarda archivo
@@ -139,15 +147,15 @@ public class SistemaMemoria : StartupScript
         File.WriteAllText(rutaConfiguración, encriptado);
     }
 
-    public static void GuardarConfiguración(Configuraciones llave, string valor)
+    public static void GuardarConfiguración(Configuraciones configuración, string valor)
     {
-        var configuración = ObtenerConfiguraciones();
+        var configuraciones = ObtenerConfiguraciones();
 
         // Nuevo o remplazo
-        configuración[llave.ToString()] = valor;
+        configuraciones[configuración.ToString()] = valor;
 
         // Sobreescribe archivo
-        var json = JsonConvert.SerializeObject(configuración);
+        var json = JsonConvert.SerializeObject(configuraciones);
         var encriptado = DesEncriptar(json);
         File.WriteAllText(rutaConfiguración, encriptado);
     }

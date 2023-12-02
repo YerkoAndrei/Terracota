@@ -14,8 +14,8 @@ public class SistemaTraducción : StartupScript
 {
     private static SistemaTraducción instancia;
 
-    private string textosEspañol;
-    private string textosInglés;
+    private static string textosEspañol;
+    private static string textosInglés;
 
     private static Idiomas idioma;
     private static Dictionary<string, string> diccionario;
@@ -71,10 +71,10 @@ public class SistemaTraducción : StartupScript
         {
             default:
             case Idiomas.español:
-                diccionario = CrearDiccionario(instancia.textosEspañol);
+                diccionario = CrearDiccionario(textosEspañol);
                 break;
             case Idiomas.inglés:
-                diccionario = CrearDiccionario(instancia.textosInglés);
+                diccionario = CrearDiccionario(textosInglés);
                 break;
         }
 

@@ -9,8 +9,8 @@ Hierarchy:
         - ref!! 21f01d7f-860f-40b3-801e-9c0ec5b41907
         - ref!! 3989825c-2e05-4529-9e41-c67347ddb9e9
         - ref!! bae920a6-7993-476b-bbb2-c1edc1f6d423
-        - ref!! 8d2b7c8f-2973-49e3-b966-6f6ffb139bec
         - ref!! 37dbe4f7-f45e-43e5-aa17-5edb268b1462
+        - ref!! 8d2b7c8f-2973-49e3-b966-6f6ffb139bec
     Parts:
         -   Entity:
                 Id: 21f01d7f-860f-40b3-801e-9c0ec5b41907
@@ -30,6 +30,7 @@ Hierarchy:
                 Components:
                     f1525583878b6ca4443cbfdafc160486: !Terracota.SistemaEscenas,Terracota
                         Id: 804dbccc-1425-4447-a46e-36bef52e9242
+                        Priority: 2
                         "escenaMenú": "bf45c4dd-f4db-4005-9135-dab8e0ef10ed:Escenas/Menú"
                         "escenaCreación": "df77ba21-ef07-4f57-94a0-cfa4117accf5:Escenas/Creación"
                         escenaLocal: af761eff-0def-4e64-9185-a183866d2296:Escenas/Juego (Local)
@@ -115,8 +116,7 @@ Hierarchy:
                         SortingMode: ByTime
                         FilteringMode: Fps
                         ResultPage: 1
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: bae920a6-7993-476b-bbb2-c1edc1f6d423
                 Name: "SistemaTraducción"
                 Components:
@@ -128,5 +128,6 @@ Hierarchy:
                         Children: {}
                     1b3082c5d721d7b1412e2bb53ef6625d: !Terracota.SistemaTraducci%25C3%25B3n,Terracota
                         Id: 01741f25-15e1-402e-8ef7-57d15deacc34
+                        Priority: 1
                         fuentePrincipal: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
                         fuenteRespaldo: b840e167-f71f-4d4f-9a21-cd8118ebb833:Fuente/YaHei

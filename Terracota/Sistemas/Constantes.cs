@@ -84,7 +84,22 @@ public static class Constantes
 
     public enum Configuraciones
     {
-        idioma
+        idioma,
+        gráficos,
+        sombras,
+        volumenGeneral,
+        volumenMúsica,
+        volumenEfectos,
+        velocidadRed,
+        pantallaCompleta,
+        resolución
+    }
+    
+    public enum NivelesConfiguración
+    {
+        bajo,
+        medio,
+        alto
     }
 
     public static Fortaleza GenerarFortalezaVacía()
