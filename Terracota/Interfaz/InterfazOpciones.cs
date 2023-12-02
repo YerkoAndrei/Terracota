@@ -5,6 +5,7 @@ using Stride.UI;
 using Stride.UI.Panels;
 using Stride.UI.Events;
 using System;
+using System.Globalization;
 
 namespace Terracota;
 using static Sistema;
@@ -50,9 +51,6 @@ public class InterfazOpciones : StartupScript
         var sliderGeneral = página.FindVisualChildOfType<Slider>("SliderGeneral");
         var sliderMúsica = página.FindVisualChildOfType<Slider>("SliderMúsica");
         var sliderEfectos = página.FindVisualChildOfType<Slider>("SliderEfectos");
-        sliderGeneral.ValueChanged += ConfigurarVolumenGeneral;
-        sliderMúsica.ValueChanged += ConfigurarVolumenMúsica;
-        sliderEfectos.ValueChanged += ConfigurarVolumenEfectos;
 
         // Carga
         BloquearIdioma(         (Idiomas)Enum.Parse(typeof(Idiomas), SistemaMemoria.ObtenerConfiguración(Configuraciones.idioma)));
@@ -60,9 +58,15 @@ public class InterfazOpciones : StartupScript
         BloquearGráficos(       (NivelesConfiguración)Enum.Parse(typeof(NivelesConfiguración), SistemaMemoria.ObtenerConfiguración(Configuraciones.gráficos)));
         BloquearSombras(        (NivelesConfiguración)Enum.Parse(typeof(NivelesConfiguración), SistemaMemoria.ObtenerConfiguración(Configuraciones.sombras)));
 
-        sliderGeneral.Value =   float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.volumenGeneral));
-        sliderMúsica.Value =    float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.volumenMúsica));
-        sliderEfectos.Value =   float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.volumenEfectos));
+        var a = SistemaMemoria.ObtenerConfiguración(Configuraciones.volumenEfectos);
+        sliderGeneral.Value =   float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.volumenGeneral), CultureInfo.InvariantCulture);
+        sliderMúsica.Value =    float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.volumenMúsica), CultureInfo.InvariantCulture);
+        sliderEfectos.Value =   float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.volumenEfectos), CultureInfo.InvariantCulture);
+
+        // Llamados slider
+        sliderGeneral.ValueChanged += ConfigurarVolumenGeneral;
+        sliderMúsica.ValueChanged += ConfigurarVolumenMúsica;
+        sliderEfectos.ValueChanged += ConfigurarVolumenEfectos;
     }
 
     private void EnClicIdioma(Idiomas idioma)
@@ -89,7 +93,7 @@ public class InterfazOpciones : StartupScript
             return;
 
         var slider = (Slider)sender;
-        SistemaMemoria.GuardarConfiguración(Configuraciones.volumenGeneral, slider.Value.ToString());
+        SistemaMemoria.GuardarConfiguración(Configuraciones.volumenGeneral, slider.Value.ToString("0.00", CultureInfo.InvariantCulture));
     }
 
     private void ConfigurarVolumenMúsica(object sender, RoutedEventArgs e)
@@ -98,7 +102,7 @@ public class InterfazOpciones : StartupScript
             return;
 
         var slider = (Slider)sender;
-        SistemaMemoria.GuardarConfiguración(Configuraciones.volumenMúsica, slider.Value.ToString());
+        SistemaMemoria.GuardarConfiguración(Configuraciones.volumenMúsica, slider.Value.ToString("0.00", CultureInfo.InvariantCulture));
     }
 
     private void ConfigurarVolumenEfectos(object sender, RoutedEventArgs e)
@@ -107,7 +111,7 @@ public class InterfazOpciones : StartupScript
             return;
 
         var slider = (Slider)sender;
-        SistemaMemoria.GuardarConfiguración(Configuraciones.volumenEfectos, slider.Value.ToString());
+        SistemaMemoria.GuardarConfiguración(Configuraciones.volumenEfectos, slider.Value.ToString("0.00", CultureInfo.InvariantCulture));
     }
 
     private void EnClicGráficos(NivelesConfiguración nivel)

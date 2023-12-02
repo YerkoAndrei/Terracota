@@ -133,7 +133,7 @@ public class SistemaMemoria : StartupScript
             { Configuraciones.idioma.ToString(),            Idiomas.sistema.ToString() },
             { Configuraciones.gráficos.ToString(),          NivelesConfiguración.alto.ToString() },
             { Configuraciones.sombras.ToString(),           NivelesConfiguración.alto.ToString() },
-            { Configuraciones.volumenGeneral.ToString(),    "0.5" },
+            { Configuraciones.volumenGeneral.ToString(),    "1" },
             { Configuraciones.volumenMúsica.ToString(),     "0.5" },
             { Configuraciones.volumenEfectos.ToString(),    "0.5" },
             { Configuraciones.velocidadRed.ToString(),      "60" },
