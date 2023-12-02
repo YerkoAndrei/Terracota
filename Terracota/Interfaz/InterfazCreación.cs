@@ -61,7 +61,7 @@ public class InterfazCreación : StartupScript
         // Cámara
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnIzquierda"), () => EnClicMoverCámara(false));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnDerecha"), () => EnClicMoverCámara(true));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnGirar"), EnClicGirarPieza);
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnRotar"), EnClicRotarPieza);
 
         // Instanciando fortalezas guardadas
         CargarFortalezas();
@@ -114,10 +114,10 @@ public class InterfazCreación : StartupScript
         controladorCreación.EnClicMoverCámara(derecha);
     }
 
-    private void EnClicGirarPieza()
+    private void EnClicRotarPieza()
     {
         // PENDIENTE: móvil
-        controladorCreación.EnClicGirarPieza();
+        controladorCreación.EnClicRotarPieza();
     }
 
     private void EnClicReiniciarPosiciones()
@@ -160,13 +160,13 @@ public class InterfazCreación : StartupScript
         var nombre = txtNuevoNombre.Text.ToUpper().Trim();
         if (string.IsNullOrEmpty(nombre))
         {
-            MostrarMensaje("Nombre no puede estar vacío");
+            MostrarMensaje(SistemaTraducción.ObtenerTraducción("errorNuevoVacío"));
             return;
         }
 
         if (!controladorCreación.VerificarPosibleGuardar())
         {
-            MostrarMensaje("Falta colocar piezas");
+            MostrarMensaje(SistemaTraducción.ObtenerTraducción("errorNuevoBloques"));
             return;
         }
 
@@ -176,12 +176,12 @@ public class InterfazCreación : StartupScript
             CargarFortalezas();
         }
         else
-            MostrarMensaje("Error al guardar");
+            MostrarMensaje(SistemaTraducción.ObtenerTraducción("errorGuardar"));
     }
 
     private void EnClicSobreescribir(string nombre)
     {
-        var pregunta0 ="¿Desea sobreescribir fortaleza";
+        var pregunta0 = SistemaTraducción.ObtenerTraducción("preguntaSobreescribir");
         var pregunta1 = string.Format("\" {0} \"?", nombre);
 
         var popup = prefabPopup.InstantiateElement<Grid>("Popup");
@@ -195,7 +195,7 @@ public class InterfazCreación : StartupScript
             }
             else
             {
-                MostrarMensaje("Error al sobreescribir");
+                MostrarMensaje(SistemaTraducción.ObtenerTraducción("errorSobreescribir"));
                 popups.Children.Remove(popup);
             }
         }, () =>
@@ -208,7 +208,7 @@ public class InterfazCreación : StartupScript
 
     private void EnClicEliminar(string nombre)
     {
-        var pregunta0 = "¿Desea eliminar fortaleza";
+        var pregunta0 = SistemaTraducción.ObtenerTraducción("preguntaEliminar");
         var pregunta1 = string.Format("\" {0} \"?", nombre);
 
         var popup = prefabPopup.InstantiateElement<Grid>("Popup");
@@ -222,7 +222,7 @@ public class InterfazCreación : StartupScript
             }
             else
             {
-                MostrarMensaje("Error al eliminar");
+                MostrarMensaje(SistemaTraducción.ObtenerTraducción("errorEliminar"));
                 popups.Children.Remove(popup);
             }
         }, () =>
@@ -244,7 +244,7 @@ public class InterfazCreación : StartupScript
     private async void MostrarMensaje(string mensaje)
     {
         txtMensaje.Text = mensaje;
-        await Task.Delay(1000);
+        await Task.Delay(2000);
         txtMensaje.Text = string.Empty;
     }
 

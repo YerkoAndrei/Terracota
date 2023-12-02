@@ -70,7 +70,7 @@ public class ControladorCreación : SyncScript
         // Rotación
         if (Input.IsMouseButtonPressed(MouseButton.Right))
         {
-            EnClicGirarPieza();
+            EnClicRotarPieza();
         }
 
         // Colocar
@@ -206,7 +206,7 @@ public class ControladorCreación : SyncScript
         return SistemaMemoria.GuardarFortaleza(sobreescribir, bloques.ToArray(), nombre, null);
     }
 
-    public void EnClicGirarPieza()
+    public void EnClicRotarPieza()
     {
         if (bloqueActual == null)
             return;

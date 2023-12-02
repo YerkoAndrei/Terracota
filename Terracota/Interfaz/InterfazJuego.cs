@@ -228,12 +228,12 @@ public class InterfazJuego : SyncScript
         switch (jugador)
         {
             case TipoJugador.anfitrión:
-                txtTurno.Text = "Anfitrión";
+                txtTurno.Text = SistemaTraducción.ObtenerTraducción("anfitrión");
                 imgTurno.Source = ObtenerSprite(spriteAnfitrión);
                 fondoTurno.Color = colorAnfitrión;
                 break;
             case TipoJugador.huesped:
-                txtTurno.Text = "Huesped";
+                txtTurno.Text = SistemaTraducción.ObtenerTraducción("huesped");
                 imgTurno.Source = ObtenerSprite(spriteHuesped);
                 fondoTurno.Color = colorHuesped;
                 break;
@@ -245,11 +245,11 @@ public class InterfazJuego : SyncScript
         switch (proyectil)
         {
             case TipoProyectil.bola:
-                txtProyectil.Text = "Bola";
+                txtProyectil.Text = SistemaTraducción.ObtenerTraducción("bola");
                 imgProyectil.Source = ObtenerSprite(spriteBola);
                 break;
             case TipoProyectil.metralla:
-                txtProyectil.Text = "Metralla";
+                txtProyectil.Text = SistemaTraducción.ObtenerTraducción("metralla");
                 imgProyectil.Source = ObtenerSprite(spriteMetralla);
                 break;
         }
@@ -277,7 +277,7 @@ public class InterfazJuego : SyncScript
         switch (jugador)
         {
             case TipoJugador.anfitrión:
-                txtGanador.Text = "Anfitrión";
+                txtGanador.Text = SistemaTraducción.ObtenerTraducción("anfitrión");
                 foreach(var img in imgsGanador)
                 {
                     img.Source = ObtenerSprite(spriteAnfitrión);
@@ -288,7 +288,7 @@ public class InterfazJuego : SyncScript
                 }
                 break;
             case TipoJugador.huesped:
-                txtGanador.Text = "Huesped";
+                txtGanador.Text = SistemaTraducción.ObtenerTraducción("huesped");
                 foreach (var img in imgsGanador)
                 {
                     img.Source = ObtenerSprite(spriteHuesped);

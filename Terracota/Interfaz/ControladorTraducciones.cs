@@ -7,10 +7,10 @@ namespace Terracota;
 
 public class ControladorTraducciones : StartupScript
 {
-    // Código - TextBlock
+    // TextBlock - Código
     public Dictionary<string, string> códigos = new Dictionary<string, string> { };
 
-    private Dictionary<string, TextBlock> textos;
+    private Dictionary<TextBlock, string> textos;
 
     public override void Start()
     {
@@ -21,11 +21,11 @@ public class ControladorTraducciones : StartupScript
     private void CargarTextos()
     {
         var página = Entity.Get<UIComponent>().Page.RootElement;
-        textos = new Dictionary<string, TextBlock>();
+        textos = new Dictionary<TextBlock, string>();
 
         foreach (var código in códigos)
         {
-            textos.Add(código.Key, página.FindVisualChildOfType<TextBlock>(código.Value));
+            textos.Add(página.FindVisualChildOfType<TextBlock>(código.Key), código.Value);
         }
     }
 
@@ -37,7 +37,7 @@ public class ControladorTraducciones : StartupScript
 
         foreach (var texto in textos)
         {
-            texto.Value.Text = SistemaTraducción.ObtenerTraducción(texto.Key);
+            texto.Key.Text = SistemaTraducción.ObtenerTraducción(texto.Value);
         }
     }
 }
