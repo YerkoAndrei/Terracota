@@ -27,8 +27,11 @@ public class SistemaMemoria : StartupScript
         carpetaPersistente = string.Format(carpetaPersistente, Environment.UserName, desarrollador, producto);
         rutaFortalezas = Path.Combine(carpetaPersistente, archivoFortalezas);
         rutaConfiguración = Path.Combine(carpetaPersistente, archivoConfiguración);
+
+        EstablecerConfiguraciónPredeterminada();
     }
 
+    // Fortalezas
     public static List<Fortaleza> CargarFortalezas(bool crearVacía)
     {
         if (!Directory.Exists(carpetaPersistente))
@@ -56,7 +59,7 @@ public class SistemaMemoria : StartupScript
     {
         var fortalezas = CargarFortalezas(false);
 
-        // sobreescribe o niega escritura
+        // Sobreescribe o niega escritura
         var fortalezaEnRanura = fortalezas.Where(o => o.Nombre == nombre).FirstOrDefault();
         if (fortalezaEnRanura != null)
         {
@@ -118,29 +121,58 @@ public class SistemaMemoria : StartupScript
         catch { return false; }
     }
 
-    public static void GuardarConfiguración(List<string> nuevasConfiguraciones)
+    // Configuración
+    private static void EstablecerConfiguraciónPredeterminada()
     {
-        // Sobreescribe archivo
-        var json = JsonConvert.SerializeObject(nuevasConfiguraciones);
+        if (Directory.Exists(carpetaPersistente))
+            return;
+
+        // Valores predeterminados
+        var diccionario = new Dictionary<string, string>
+        {
+            { Configuraciones.idioma.ToString(), Idiomas.sistema.ToString() }
+        };
+
+        // Guarda archivo
+        var json = JsonConvert.SerializeObject(diccionario);
         var encriptado = DesEncriptar(json);
-        File.WriteAllText(rutaFortalezas, encriptado);
+        File.WriteAllText(rutaConfiguración, encriptado);
     }
 
-    public static List<string> ObtenerConfiguración()
+    public static void GuardarConfiguración(Configuraciones llave, string valor)
+    {
+        var configuración = ObtenerConfiguraciones();
+
+        // Nuevo o remplazo
+        configuración[llave.ToString()] = valor;
+
+        // Sobreescribe archivo
+        var json = JsonConvert.SerializeObject(configuración);
+        var encriptado = DesEncriptar(json);
+        File.WriteAllText(rutaConfiguración, encriptado);
+    }
+
+    private static Dictionary<string, string> ObtenerConfiguraciones()
     {
         if (!Directory.Exists(carpetaPersistente))
             Directory.CreateDirectory(carpetaPersistente);
 
-        var configuraciones = new List<string>();
+        var configuraciones = new Dictionary<string, string>();
 
         // Lee archivo
         if (File.Exists(rutaConfiguración))
         {
             var archivo = File.ReadAllText(rutaConfiguración);
             var desencriptado = DesEncriptar(archivo);
-            configuraciones = JsonConvert.DeserializeObject<List<string>>(desencriptado);
+            configuraciones = JsonConvert.DeserializeObject<Dictionary<string, string>>(desencriptado);
         }
         return configuraciones;
+    }
+
+    public static string ObtenerConfiguración(Configuraciones llave)
+    {
+        var configuraciones = ObtenerConfiguraciones();
+        return configuraciones[llave.ToString()];
     }
 
     // XOR

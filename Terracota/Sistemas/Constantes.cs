@@ -75,6 +75,18 @@ public static class Constantes
         derecha
     }
 
+    public enum Idiomas
+    {
+        sistema,
+        español,
+        inglés
+    }
+
+    public enum Configuraciones
+    {
+        idioma
+    }
+
     public static Fortaleza GenerarFortalezaVacía()
     {
         var bloques = new List<Bloque>

@@ -55,6 +55,9 @@ public class SistemaEscenas : SyncScript
 
         escenaActual = Content.Load(escenaMenú);
         Entity.Scene.Children.Add(escenaActual);
+
+        // Traduciones
+        SistemaTraducción.ActualizarTextosEscena();
     }
 
     public override void Update()
@@ -137,6 +140,10 @@ public class SistemaEscenas : SyncScript
 
         // Retraso predeterminado
         await Task.Delay(200);
+
+        // Traduciones
+        SistemaTraducción.ActualizarTextosEscena();
+
         abriendo = true;
     }
 }
