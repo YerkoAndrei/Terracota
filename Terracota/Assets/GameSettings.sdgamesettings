@@ -6,7 +6,7 @@ DefaultScene: be675a2e-c86b-40ea-bcc3-727117b4a21d:Escenas/Sistemas
 GraphicsCompositor: 25ffa03a-4a0d-4785-a8c4-23cea0e23daf:GraphicsCompositor
 Defaults:
     - !Stride.Audio.AudioEngineSettings,Stride.Audio
-        HrtfSupport: false
+        HrtfSupport: true
     - !Stride.Assets.EditorSettings,Stride.Assets
         RenderingMode: HDR
     - !Stride.Graphics.RenderingSettings,Stride.Graphics
@@ -25,6 +25,7 @@ Defaults:
         Flags: MultiThreaded, UseHardwareWhenPossible, ContinuousCollisionDetection
         FixedTimeStep: 0.016666668
         MaxTickDuration: 0.008333334
+        Gravity: {X: 0.0, Y: -10.0, Z: 0.0}
 Overrides: []
 PlatformFilters:
     - PowerVR SGX 54[0-9]
