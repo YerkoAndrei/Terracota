@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Linq;
 using System.Globalization;
 using Stride.Engine;
 using Stride.UI.Controls;
 using Stride.UI;
 using Stride.UI.Panels;
 using Stride.UI.Events;
-using System.Linq;
+using Stride.Core.Mathematics;
 
 namespace Terracota;
 using static Sistema;
@@ -124,7 +125,7 @@ public class InterfazOpciones : StartupScript
 
     private void ActualizaGráficos(NivelesConfiguración nivel)
     {
-        //Services.GetService<SceneSystem>().GraphicsCompositor = SistemaEscenas.ObtenerGráficos(nivel);
+        Services.GetService<SceneSystem>().GraphicsCompositor = SistemaEscenas.ObtenerGráficos(nivel);
     }
 
     private void EnClicSombras(NivelesConfiguración nivel)
@@ -143,14 +144,6 @@ public class InterfazOpciones : StartupScript
         controladorLuces.Get<ControladorSombras>().ActualizarSombras();
     }
 
-    private void EnClicPantallaCompleta(bool pantallaCompleta)
-    {
-        if (animando)
-            return;
-
-        SistemaMemoria.GuardarConfiguración(Configuraciones.pantallaCompleta, pantallaCompleta.ToString());
-    }
-
     private void EnClicResolución(int ancho, int alto)
     {
         if (animando)
@@ -158,6 +151,45 @@ public class InterfazOpciones : StartupScript
 
         var resolución = ancho.ToString() + "x" + alto.ToString();
         SistemaMemoria.GuardarConfiguración(Configuraciones.resolución, resolución);
+
+        // Pantalla completa
+        var pantallaCompleta = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.pantallaCompleta));
+        if (pantallaCompleta)
+        {
+            Game.Window.PreferredFullscreenSize = new Int2(ancho, alto);
+            Game.Window.IsFullscreen = pantallaCompleta;
+        }
+        else
+        {
+            Game.Window.PreferredWindowedSize = new Int2(ancho, alto);
+            Game.Window.IsFullscreen = pantallaCompleta;
+            Game.Window.SetSize(new Int2(ancho, alto));
+        }
+    }
+    
+    private void EnClicPantallaCompleta(bool pantallaCompleta)
+    {
+        if (animando)
+            return;
+
+        SistemaMemoria.GuardarConfiguración(Configuraciones.pantallaCompleta, pantallaCompleta.ToString());
+
+        // Resolución
+        var resolución = SistemaMemoria.ObtenerConfiguración(Configuraciones.resolución).Split('x');
+        var ancho = int.Parse(resolución[0]);
+        var alto = int.Parse(resolución[1]);
+
+        if (pantallaCompleta)
+        {
+            Game.Window.PreferredFullscreenSize = new Int2(ancho, alto);
+            Game.Window.IsFullscreen = pantallaCompleta;
+        }
+        else
+        {
+            Game.Window.PreferredWindowedSize = new Int2(ancho, alto);
+            Game.Window.IsFullscreen = pantallaCompleta;
+            Game.Window.SetSize(new Int2(ancho, alto));
+        }
     }
 
     // Bloqueos

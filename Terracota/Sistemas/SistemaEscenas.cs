@@ -43,8 +43,24 @@ public class SistemaEscenas : SyncScript
     public override void Start()
     {
         // Pantalla completa
-        //Game.Window.PreferredFullscreenSize = new Int2(1920, 1080);
-        //Game.Window.IsFullscreen = true;
+        var pantallaCompleta = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.pantallaCompleta));
+
+        // Resolución
+        var resolución = SistemaMemoria.ObtenerConfiguración(Configuraciones.resolución).Split('x');
+        var ancho = int.Parse(resolución[0]);
+        var alto = int.Parse(resolución[1]);
+
+        if (pantallaCompleta)
+        {
+            Game.Window.PreferredFullscreenSize = new Int2(ancho, alto);
+            Game.Window.IsFullscreen = pantallaCompleta;
+        }
+        else
+        {
+            Game.Window.PreferredWindowedSize = new Int2(ancho, alto);
+            Game.Window.IsFullscreen = pantallaCompleta;
+            Game.Window.SetSize(new Int2(ancho, alto));
+        }
 
         // Cursor
         var cursorBytes = Encoding.ASCII.GetBytes(cursor.ToString());
