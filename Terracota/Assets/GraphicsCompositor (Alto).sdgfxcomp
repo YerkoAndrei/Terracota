@@ -225,7 +225,8 @@ SharedRenderers:
                     Enabled: false
                     Color: {R: 0.0, G: 0.0, B: 0.0}
         Antialiasing: !FXAAEffect
-            Quality*: 5
+            Dither*: None
+            Quality*: 9
     ee80a20a9bd99f2d70711114e15fe7ca: !Stride.Rendering.Compositing.DebugRenderer,Stride.Rendering
         Id: de501136-4ee7-4b36-8b5b-e67754f042c3
         DebugRenderStages: {}
