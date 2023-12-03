@@ -6,7 +6,6 @@ using Stride.UI.Controls;
 using Stride.UI;
 using Stride.UI.Panels;
 using Stride.UI.Events;
-using Stride.Core.Mathematics;
 
 namespace Terracota;
 using static Sistema;
@@ -17,6 +16,8 @@ public class InterfazOpciones : StartupScript
     private UIElement página;
     private Grid Opciones;
     private Grid animOpciones;
+    private UniformGrid resoluciones;
+    private TextBlock resoluciónActual;
     private bool animando;
 
     public override void Start()
@@ -46,6 +47,21 @@ public class InterfazOpciones : StartupScript
 
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnCompleta"), () => EnClicPantallaCompleta(true));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVentana"), () => EnClicPantallaCompleta(false));
+
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnResoluciones"), () => MostrarResoluciones(true));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR0"), () => EnClicResolución(1280, 720));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR1"), () => EnClicResolución(1366, 768));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR2"), () => EnClicResolución(1600, 900));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR3"), () => EnClicResolución(1920, 1080));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR4"), () => EnClicResolución(1920, 1200));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR5"), () => EnClicResolución(2560, 1440));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR6"), () => EnClicResolución(3840, 2160));
+
+        resoluciónActual = página.FindVisualChildOfType<TextBlock>("txtResoluciónActual");
+        resoluciónActual.Text = SistemaMemoria.ObtenerConfiguración(Configuraciones.resolución).Replace("x", " x ");
+
+        resoluciones = página.FindVisualChildOfType<UniformGrid>("ListaResoluciones");
+        resoluciones.Visibility = Visibility.Hidden;
 
         var sliderGeneral = página.FindVisualChildOfType<Slider>("SliderGeneral");
         var sliderMúsica = página.FindVisualChildOfType<Slider>("SliderMúsica");
@@ -148,6 +164,17 @@ public class InterfazOpciones : StartupScript
         controladorLuces.Get<ControladorSombras>().ActualizarSombras();
     }
 
+    private void MostrarResoluciones(bool mostrar)
+    {
+        if (animando)
+            return;
+
+        if(mostrar)
+            resoluciones.Visibility = Visibility.Visible;
+        else
+            resoluciones.Visibility = Visibility.Hidden;
+    }
+
     private void EnClicResolución(int ancho, int alto)
     {
         if (animando)
@@ -158,27 +185,22 @@ public class InterfazOpciones : StartupScript
         var resolución = ancho.ToString() + "x" + alto.ToString();
 
         if (resolución == guardado)
+        {
+            MostrarResoluciones(false);
             return;
+        }
 
+        resoluciónActual.Text = resolución.Replace("x", " x ");
         SistemaMemoria.GuardarConfiguración(Configuraciones.resolución, resolución);
         ActualizaResolución(ancho, alto);
+        MostrarResoluciones(false);
     }
 
     private void ActualizaResolución(int ancho, int alto)
     {
         // Pantalla completa
         var pantallaCompleta = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.pantallaCompleta));
-        if (pantallaCompleta)
-        {
-            Game.Window.PreferredFullscreenSize = new Int2(ancho, alto);
-            Game.Window.IsFullscreen = pantallaCompleta;
-        }
-        else
-        {
-            Game.Window.PreferredWindowedSize = new Int2(ancho, alto);
-            Game.Window.IsFullscreen = pantallaCompleta;
-            Game.Window.SetSize(new Int2(ancho, alto));
-        }
+        SistemaEscenas.CambiarPantalla(pantallaCompleta, ancho, alto);
     }
 
     private void EnClicPantallaCompleta(bool pantallaCompleta)
@@ -202,17 +224,7 @@ public class InterfazOpciones : StartupScript
         var ancho = int.Parse(resolución[0]);
         var alto = int.Parse(resolución[1]);
 
-        if (pantallaCompleta)
-        {
-            Game.Window.PreferredFullscreenSize = new Int2(ancho, alto);
-            Game.Window.IsFullscreen = pantallaCompleta;
-        }
-        else
-        {
-            Game.Window.PreferredWindowedSize = new Int2(ancho, alto);
-            Game.Window.IsFullscreen = pantallaCompleta;
-            Game.Window.SetSize(new Int2(ancho, alto));
-        }
+        SistemaEscenas.CambiarPantalla(pantallaCompleta, ancho, alto);
     }
 
     // Bloqueos

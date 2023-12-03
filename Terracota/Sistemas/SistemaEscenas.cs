@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Core.Serialization;
 using Stride.Engine;
-using Stride.Graphics;
 using Stride.Graphics.SDL;
 using Stride.Rendering.Compositing;
 using Stride.UI;
@@ -42,7 +41,10 @@ public class SistemaEscenas : SyncScript
 
     public override void Start()
     {
+        instancia = this;
+
         // Pantalla completa
+        Game.Window.AllowUserResizing = true;
         Game.Window.Title = SistemaTraducción.ObtenerTraducción("nombreJuego");
         var pantallaCompleta = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.pantallaCompleta));
 
@@ -51,19 +53,11 @@ public class SistemaEscenas : SyncScript
         var ancho = int.Parse(resolución[0]);
         var alto = int.Parse(resolución[1]);
 
-        if (pantallaCompleta)
-        {
-            Game.Window.PreferredFullscreenSize = new Int2(ancho, alto);
-            Game.Window.IsFullscreen = pantallaCompleta;
-        }
-        else
-        {
-            Game.Window.PreferredWindowedSize = new Int2(ancho, alto);
-            Game.Window.IsFullscreen = pantallaCompleta;
-            Game.Window.SetSize(new Int2(ancho, alto));
-        }
+        CambiarPantalla(false, 1280, 720);
+        //CambiarPantalla(pantallaCompleta, ancho, alto);
 
         // Cursor
+        //Game.Window.IsMouseVisible = false;
         byte[] cursorBytes;
         using (var stream = Content.OpenAsStream(cursor))
         {
@@ -77,7 +71,6 @@ public class SistemaEscenas : SyncScript
         Cursor.SetCursor(nuevoCursor);
         
         // Predeterminado
-        instancia = this;
         duraciónLerp = 0.2f;
 
         var página = Entity.Get<UIComponent>().Page.RootElement;
@@ -116,6 +109,24 @@ public class SistemaEscenas : SyncScript
                 panelOscuro.CanBeHitByUser = false;
                 abriendo = false;
             }
+        }
+    }
+
+    public static void CambiarPantalla(bool pantallaCompleta, int ancho, int alto)
+    {
+        // PENDIENTE: fallo desde pantalla completa a ventana
+        // PENDIENTE: pantalla completa no cambia resoluciones
+        //Stride.Core.Serialization.Contents.ContentManagerException: 'Unexpected exception while loading asset [Texturas/Cursor]. Reason: Content serializer for Stride.Graphics.Texture/Stride.Graphics.Image could not be found.. Check inner-exception for details.' (Content serializer for Stride.Graphics.Texture/Stride.Graphics.Image could not be found.)
+        if (pantallaCompleta)
+        {
+            instancia.Game.Window.PreferredFullscreenSize = new Int2(ancho, alto);
+            instancia.Game.Window.IsFullscreen = true;
+        }
+        else
+        {
+            instancia.Game.Window.PreferredWindowedSize = new Int2(ancho, alto);
+            instancia.Game.Window.IsFullscreen = false;
+            instancia.Game.Window.SetSize(new Int2(ancho, alto));
         }
     }
 
