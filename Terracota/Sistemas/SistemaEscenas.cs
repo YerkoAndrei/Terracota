@@ -52,12 +52,7 @@ public class SistemaEscenas : SyncScript
         var ancho = int.Parse(resolución[0]);
         var alto = int.Parse(resolución[1]);
 
-        CambiarPantalla(false, 1280, 720);
-        //CambiarPantalla(pantallaCompleta, ancho, alto);
-
-        // Cursor
-        Game.Window.IsMouseVisible = false;
-        imgCursor = página.FindVisualChildOfType<ImageElement>("imgCursor");
+        CambiarPantalla(pantallaCompleta, ancho, alto);
 
         // Predeterminado
         duraciónLerp = 0.2f;
@@ -70,6 +65,10 @@ public class SistemaEscenas : SyncScript
 
         // Traduciones
         SistemaTraducción.ActualizarTextosEscena();
+
+        // Cursor
+        Game.Window.IsMouseVisible = false;
+        imgCursor = página.FindVisualChildOfType<ImageElement>("imgCursor");
     }
 
     public override void Update()
@@ -106,6 +105,8 @@ public class SistemaEscenas : SyncScript
 
     public void PosicionarCursor()
     {
+        // Cursor es un ImageElement
+        // ¿Optimizar?
         float left = 0;
         float top = 0;
         float right = 0;
@@ -126,20 +127,14 @@ public class SistemaEscenas : SyncScript
 
     public static void CambiarPantalla(bool pantallaCompleta, int ancho, int alto)
     {
-        // PENDIENTE: fallo desde pantalla completa a ventana
-        // PENDIENTE: pantalla completa no cambia resoluciones
-        //Stride.Core.Serialization.Contents.ContentManagerException: 'Unexpected exception while loading asset [Texturas/Cursor]. Reason: Content serializer for Stride.Graphics.Texture/Stride.Graphics.Image could not be found.. Check inner-exception for details.' (Content serializer for Stride.Graphics.Texture/Stride.Graphics.Image could not be found.)
-        if (pantallaCompleta)
-        {
-            instancia.Game.Window.PreferredFullscreenSize = new Int2(ancho, alto);
-            instancia.Game.Window.IsFullscreen = true;
-        }
-        else
-        {
-            instancia.Game.Window.PreferredWindowedSize = new Int2(ancho, alto);
-            instancia.Game.Window.IsFullscreen = false;
-            instancia.Game.Window.SetSize(new Int2(ancho, alto));
-        }
+        instancia.Game.Window.Visible = false;
+
+        instancia.Game.Window.SetSize(new Int2(ancho, alto));
+        instancia.Game.Window.PreferredWindowedSize = new Int2(ancho, alto);
+        instancia.Game.Window.PreferredFullscreenSize = new Int2(ancho, alto);
+        instancia.Game.Window.IsFullscreen = pantallaCompleta;
+
+        instancia.Game.Window.Visible = true;
     }
 
     public static void CambiarEscena(Escenas escena)

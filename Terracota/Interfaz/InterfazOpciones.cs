@@ -170,7 +170,12 @@ public class InterfazOpciones : StartupScript
             return;
 
         if(mostrar)
-            resoluciones.Visibility = Visibility.Visible;
+        {
+            if (resoluciones.Visibility == Visibility.Visible)
+                resoluciones.Visibility = Visibility.Hidden;
+            else
+                resoluciones.Visibility = Visibility.Visible;
+        }
         else
             resoluciones.Visibility = Visibility.Hidden;
     }
