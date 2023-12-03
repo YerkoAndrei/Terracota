@@ -1,8 +1,10 @@
-﻿using System.Threading.Tasks;
+﻿using System.IO;
+using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Core.Serialization;
 using Stride.Engine;
 using Stride.Graphics;
+using Stride.Graphics.SDL;
 using Stride.Rendering.Compositing;
 using Stride.UI;
 using Stride.UI.Panels;
@@ -22,7 +24,7 @@ public class SistemaEscenas : SyncScript
     public GraphicsCompositor compositorMedio;
     public GraphicsCompositor compositorAlto;
 
-    public Texture cursor;
+    public UrlReference cursor;
 
     private static SistemaEscenas instancia;
 
@@ -62,11 +64,18 @@ public class SistemaEscenas : SyncScript
         }
 
         // Cursor
-        /*
-        var cursorBytes = Encoding.ASCII.GetBytes(cursor.ToString());
+        byte[] cursorBytes;
+        using (var stream = Content.OpenAsStream(cursor))
+        {
+            using (var memory = new MemoryStream())
+            {
+                stream.CopyTo(memory);
+                cursorBytes = memory.ToArray();
+            }
+        }
         var nuevoCursor = new Cursor(cursorBytes, cursorBytes, 0, 0, 0, 0);
         Cursor.SetCursor(nuevoCursor);
-        */
+        
         // Predeterminado
         instancia = this;
         duraciónLerp = 0.2f;
