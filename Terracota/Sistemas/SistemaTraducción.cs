@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using Stride.Engine;
 using Stride.Graphics;
 using Newtonsoft.Json;
+using Stride.Core.Serialization;
 
 namespace Terracota;
 using static Constantes;
@@ -14,11 +15,14 @@ public class SistemaTraducción : StartupScript
 {
     private static SistemaTraducción instancia;
 
-    private static string textosEspañol;
-    private static string textosInglés;
+    private static string jsonEspañol;
+    private static string jsonInglés;
 
     private static Idiomas idioma;
     private static Dictionary<string, string> diccionario;
+
+    public UrlReference textosEspañol;
+    public UrlReference textosInglés;
 
     public SpriteFont fuentePrincipal;
     public SpriteFont fuenteRespaldo;
@@ -27,9 +31,21 @@ public class SistemaTraducción : StartupScript
     {
         instancia = this;
 
-        // Lee textos en proyecto
-        textosEspañol = new StreamReader("Assets/Textos/TextosEspañol.json", Encoding.UTF8).ReadToEnd();
-        textosInglés = new StreamReader("Assets/Textos/TextosInglés.json", Encoding.UTF8).ReadToEnd();
+        // Lee RawAsset como textos
+        using (var stream = Content.OpenAsStream(textosEspañol))
+        {
+            using (var reader = new StreamReader(stream))
+            {
+                jsonEspañol = reader.ReadToEnd();
+            }            
+        }
+        using (var stream = Content.OpenAsStream(textosInglés))
+        {
+            using (var reader = new StreamReader(stream))
+            {
+                jsonInglés = reader.ReadToEnd();
+            }
+        }
 
         // Usa guardada o idioma de sistema la primera vez
         var idiomaGuardado = (Idiomas)Enum.Parse(typeof(Idiomas), SistemaMemoria.ObtenerConfiguración(Configuraciones.idioma));
@@ -71,10 +87,10 @@ public class SistemaTraducción : StartupScript
         {
             default:
             case Idiomas.español:
-                diccionario = CrearDiccionario(textosEspañol);
+                diccionario = CrearDiccionario(jsonEspañol);
                 break;
             case Idiomas.inglés:
-                diccionario = CrearDiccionario(textosInglés);
+                diccionario = CrearDiccionario(jsonInglés);
                 break;
         }
 
