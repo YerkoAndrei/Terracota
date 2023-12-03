@@ -197,6 +197,29 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
+        -   UIElement: !UniformGrid
+                Id: 0deb5dc6-0f6d-4e1f-a565-c79b74e45456
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 200.0
+                Height: 150.0
+                HorizontalAlignment: Right
+                VerticalAlignment: Top
+                Margin: {Top: 132.0, Right: 34.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: PantallaCompleta
+                Children:
+                    c65ccb4166bd8d18fc2fba7cf0642cff: !TextBlock ref!! 63899cc2-01a7-4c06-8299-5835c19c6999
+                    60448cad345faefa5970de37bfd63ef6: !Grid ref!! 5426ca29-3f11-4cf0-a437-e3c12274f5a5
+                    3fbffd560c1f3f435cbde9972ed0f10e: !Grid ref!! 5f98a2fb-f0d2-41e5-81a7-674efe152fc9
+                Rows: 3
+                Columns: 2
+            Base:
+                BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
+                BasePartId: 8552e614-bc6e-4944-91e9-e28555c022da
+                InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
         -   UIElement: !Grid
                 Id: 0e6aca04-57e8-4880-81b7-161b66600af6
                 DependencyProperties:
@@ -989,6 +1012,21 @@ Hierarchy:
                 BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
                 BasePartId: 639ea2d3-f7ff-423c-abc0-c6d968dc9cc1
                 InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
+        -   UIElement: !Button
+                Id: 384a321e-029d-41bd-8fdf-5ab6a9900a2c
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                DepthAlignment: Stretch
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btn
+            Base:
+                BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
+                BasePartId: c0a86fcf-3b96-40ba-b5f4-f28f6d44c706
+                InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
         -   UIElement: !ImageElement
                 Id: 387aece4-9242-4d17-8683-9096d6469f50
                 DependencyProperties:
@@ -1413,6 +1451,32 @@ Hierarchy:
                 BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
                 BasePartId: 1df9a8cc-1848-42ed-81cb-10f0762e1414
                 InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
+        -   UIElement: !Grid
+                Id: 5426ca29-3f11-4cf0-a437-e3c12274f5a5
+                DependencyProperties:
+                    6651f40ff8b99c61f6d55511afa20ea4~GridBase.ColumnPropertyKey: 0
+                    2a7429b1b9028ce4227c536a63c79ffa~GridBase.RowPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 60.0
+                Height: 60.0
+                Depth: 0.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btnCompleta
+                Children:
+                    21950b6ae099597a396ccd6983fb426f: !Button ref!! eda2024c-3eac-497c-82fa-142a3a55ce66
+                    53fda23d5ef109b30b2f298899261524: !ImageElement ref!! ca2ae654-0874-4a90-9410-89547d6f8958
+                    fb6ddf15db7bb3b23028700ff2461980: !TextBlock ref!! 7e8db223-775c-49ab-bfd8-7dcef3dc06a9
+                    d2a6191912f27fdb0b4c9eb3de04a1f0: !ImageElement ref!! cd57c53f-902b-4c32-b6fd-eee03836fe6f
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+            Base:
+                BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
+                BasePartId: ab20a6dc-010d-4442-b2c2-26613978106f
+                InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
         -   UIElement: !ImageElement
                 Id: 550a28c9-fce4-47e3-895a-e7fdd085f7f7
                 DependencyProperties: {}
@@ -1468,6 +1532,32 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
+        -   UIElement: !Grid
+                Id: 5f98a2fb-f0d2-41e5-81a7-674efe152fc9
+                DependencyProperties:
+                    6651f40ff8b99c61f6d55511afa20ea4~GridBase.ColumnPropertyKey: 1
+                    2a7429b1b9028ce4227c536a63c79ffa~GridBase.RowPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 60.0
+                Height: 60.0
+                Depth: 0.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btnVentana
+                Children:
+                    21950b6ae099597a396ccd6983fb426f: !Button ref!! 384a321e-029d-41bd-8fdf-5ab6a9900a2c
+                    53fda23d5ef109b30b2f298899261524: !ImageElement ref!! 8d976b31-96ef-48c9-8db0-b420b625dd0b
+                    f1eb47bbb48892f45cc09b4d0161f907: !TextBlock ref!! 7227b8bc-5371-405b-836d-cff2e2d09ca0
+                    440bc093d1572bd069a2ae2327391620: !ImageElement ref!! bc0ed24f-6450-4784-9751-255d221a0a4d
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+            Base:
+                BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
+                BasePartId: 84e24629-8278-44dd-8220-d30a34da4656
+                InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
         -   UIElement: !ImageElement
                 Id: 5fc3e9da-4bf2-40ad-ba68-5b9406a3dcf6
                 DependencyProperties: {}
@@ -1504,6 +1594,26 @@ Hierarchy:
                 BasePartAsset: ec94a22e-f511-4b8e-a71e-bc8c7df21ba9:Interfaces/Librerias/Botones
                 BasePartId: b2f0d0a3-4308-40e5-998d-2d1af808000d
                 InstanceId: 37a9aa0f-67d9-4e14-9810-df05893ebd3e
+        -   UIElement: !TextBlock
+                Id: 63899cc2-01a7-4c06-8299-5835c19c6999
+                DependencyProperties:
+                    d042c34905fe182236af1c2395beafdb~GridBase.ColumnPropertyKey: 0
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 30.0
+                Margin: {Left: 100.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtPantallaCompleta
+                Text: Pantalla Completa
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 25.0
+                TextColor: {R: 240, G: 220, B: 160, A: 240}
+                TextAlignment: Center
+            Base:
+                BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
+                BasePartId: c2a28732-6e6f-4682-b5b4-9e6c41925e21
+                InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
         -   UIElement: !ImageElement
                 Id: 645cb6c4-476f-47d6-8012-9882409c6e88
                 DependencyProperties:
@@ -1655,6 +1765,26 @@ Hierarchy:
             Base:
                 BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
                 BasePartId: 60147a56-2b0b-4a9d-9091-34765f3155a9
+                InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
+        -   UIElement: !TextBlock
+                Id: 7227b8bc-5371-405b-836d-cff2e2d09ca0
+                DependencyProperties:
+                    d042c34905fe182236af1c2395beafdb~GridBase.ColumnPropertyKey: 0
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 30.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txt
+                Text: No
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 25.0
+                TextColor: {R: 25, G: 20, B: 20, A: 255}
+                TextAlignment: Center
+            Base:
+                BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
+                BasePartId: 9ba36cdf-9304-44a2-aeed-7293f918a134
                 InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
         -   UIElement: !Grid
                 Id: 72ec6bed-c773-4d8b-b8de-962ce10312fa
@@ -1878,6 +2008,26 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
+        -   UIElement: !TextBlock
+                Id: 7e8db223-775c-49ab-bfd8-7dcef3dc06a9
+                DependencyProperties:
+                    d042c34905fe182236af1c2395beafdb~GridBase.ColumnPropertyKey: 0
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 30.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txt
+                Text: "Sí"
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 25.0
+                TextColor: {R: 25, G: 20, B: 20, A: 255}
+                TextAlignment: Center
+            Base:
+                BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
+                BasePartId: b4905c43-d27e-476b-a508-93de713c7df6
+                InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
         -   UIElement: !ImageElement
                 Id: 7efd9346-8c27-43d9-860f-692c5234eb92
                 DependencyProperties:
@@ -2133,6 +2283,23 @@ Hierarchy:
                     Texture: "ad498f2e-9e92-46b3-a8ef-9b75cf038835:Texturas/Interfaz/Octágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 240, G: 240, B: 100, A: 255}
+        -   UIElement: !ImageElement
+                Id: 8d976b31-96ef-48c9-8db0-b420b625dd0b
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: img
+                Source: !SpriteFromTexture
+                    Texture: "544f8ec8-cb8e-46d6-8873-ba73ab7cef86:Texturas/Interfaz/BaseOctágono"
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 240, G: 230, B: 160, A: 240}
+            Base:
+                BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
+                BasePartId: 8449ba85-66ab-4810-ad93-4da2baefc856
+                InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
         -   UIElement: !ImageElement
                 Id: 8e1a7dff-82b6-4ac4-95a6-035db8540f0a
                 DependencyProperties: {}
@@ -2393,7 +2560,7 @@ Hierarchy:
                 Width: 422.0
                 Height: 58.0
                 VerticalAlignment: Bottom
-                Margin: {Left: 16.0, Right: 362.0, Bottom: 179.0}
+                Margin: {Left: 16.0, Right: 362.0, Bottom: 149.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -2502,6 +2669,7 @@ Hierarchy:
                     c053f2f4688e5865a38d0c12837c4464: !UniformGrid ref!! cfdc79c7-5eaf-4d2e-b189-4c4786ee4584
                     7ace7bf1a7ba9eb3016cc0eef0dbd6e3: !UniformGrid ref!! 7bbd9b54-5ebf-4f6e-8336-6ff1b02fb2a8
                     b00eef565768f70ec768ca9b1982b19e: !Grid ref!! 4da15c54-5aa4-4e7a-b8d0-7fa26c080a47
+                    ee3dbaa8b9cd8f84d475c370e1a06ee8: !UniformGrid ref!! 0deb5dc6-0f6d-4e1f-a565-c79b74e45456
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -2825,6 +2993,24 @@ Hierarchy:
                 BasePartId: 64767641-53f0-4c28-bc55-7d62c43b140f
                 InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
         -   UIElement: !ImageElement
+                Id: bc0ed24f-6450-4784-9751-255d221a0a4d
+                DependencyProperties:
+                    6a4791ec77733b5a49acc67ee01e21cc~Panel.ZIndexPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: 
+                Source: !SpriteFromTexture
+                    Texture: "ad498f2e-9e92-46b3-a8ef-9b75cf038835:Texturas/Interfaz/Octágono"
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 160, G: 60, B: 0, A: 255}
+            Base:
+                BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
+                BasePartId: 065094a9-5ee3-4076-b7cb-6c8e502cacdd
+                InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
+        -   UIElement: !ImageElement
                 Id: bd00733f-b224-4277-9896-24f7a77c2656
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
@@ -3106,6 +3292,23 @@ Hierarchy:
                 BasePartId: 3d0ccf1a-7ada-4fd3-bf8e-78a9f6424fb4
                 InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
         -   UIElement: !ImageElement
+                Id: ca2ae654-0874-4a90-9410-89547d6f8958
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: img
+                Source: !SpriteFromTexture
+                    Texture: "544f8ec8-cb8e-46d6-8873-ba73ab7cef86:Texturas/Interfaz/BaseOctágono"
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 240, G: 230, B: 160, A: 240}
+            Base:
+                BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
+                BasePartId: 5be8c138-004a-4e9c-89db-6311290d99ae
+                InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
+        -   UIElement: !ImageElement
                 Id: cb01e41d-d054-4d30-b14c-967d7623f7a8
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
@@ -3123,6 +3326,24 @@ Hierarchy:
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 160, G: 60, B: 0, A: 255}
                 StretchType: Fill
+        -   UIElement: !ImageElement
+                Id: cd57c53f-902b-4c32-b6fd-eee03836fe6f
+                DependencyProperties:
+                    6a4791ec77733b5a49acc67ee01e21cc~Panel.ZIndexPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: 
+                Source: !SpriteFromTexture
+                    Texture: "ad498f2e-9e92-46b3-a8ef-9b75cf038835:Texturas/Interfaz/Octágono"
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 160, G: 60, B: 0, A: 255}
+            Base:
+                BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
+                BasePartId: e3470ab6-6258-4c1d-828a-4ba722d2309c
+                InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
         -   UIElement: !TextBlock
                 Id: ce427782-6894-4e74-8abe-e84b568d2b75
                 DependencyProperties:
@@ -3165,7 +3386,7 @@ Hierarchy:
                 Width: 422.0
                 Height: 58.0
                 VerticalAlignment: Bottom
-                Margin: {Left: 16.0, Right: 362.0, Bottom: 107.0}
+                Margin: {Left: 16.0, Right: 362.0, Bottom: 91.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -3614,6 +3835,21 @@ Hierarchy:
                     Texture: "544f8ec8-cb8e-46d6-8873-ba73ab7cef86:Texturas/Interfaz/BaseOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 240, G: 230, B: 160, A: 240}
+        -   UIElement: !Button
+                Id: eda2024c-3eac-497c-82fa-142a3a55ce66
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 2
+                DepthAlignment: Stretch
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: btn
+            Base:
+                BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
+                BasePartId: 46fef8df-b26c-4f4a-b434-f3b5816e5503
+                InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
         -   UIElement: !TextBlock
                 Id: ee2265a1-216a-433b-9978-6f70580fa0c3
                 DependencyProperties: {}
@@ -3708,7 +3944,8 @@ Hierarchy:
                 Width: 200.0
                 Height: 150.0
                 HorizontalAlignment: Right
-                Margin: {Top: 200.0, Right: 20.0, Bottom: 258.0}
+                VerticalAlignment: Bottom
+                Margin: {Right: 20.0, Bottom: 126.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38

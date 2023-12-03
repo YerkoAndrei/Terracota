@@ -1,10 +1,8 @@
-﻿using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Core.Serialization;
 using Stride.Engine;
 using Stride.Graphics;
-using Stride.Graphics.SDL;
 using Stride.Rendering.Compositing;
 using Stride.UI;
 using Stride.UI.Panels;
@@ -43,6 +41,7 @@ public class SistemaEscenas : SyncScript
     public override void Start()
     {
         // Pantalla completa
+        Game.Window.Title = SistemaTraducción.ObtenerTraducción("nombreJuego");
         var pantallaCompleta = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.pantallaCompleta));
 
         // Resolución
@@ -63,10 +62,11 @@ public class SistemaEscenas : SyncScript
         }
 
         // Cursor
+        /*
         var cursorBytes = Encoding.ASCII.GetBytes(cursor.ToString());
         var nuevoCursor = new Cursor(cursorBytes, cursorBytes, 0, 0, 0, 0);
         Cursor.SetCursor(nuevoCursor);
-
+        */
         // Predeterminado
         instancia = this;
         duraciónLerp = 0.2f;

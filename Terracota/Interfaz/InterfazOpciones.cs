@@ -44,6 +44,9 @@ public class InterfazOpciones : StartupScript
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnSombrasMedias"), () => EnClicSombras(NivelesConfiguración.medio));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnSombrasAltas"), () => EnClicSombras(NivelesConfiguración.alto));
 
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnCompleta"), () => EnClicPantallaCompleta(true));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVentana"), () => EnClicPantallaCompleta(false));
+
         var sliderGeneral = página.FindVisualChildOfType<Slider>("SliderGeneral");
         var sliderMúsica = página.FindVisualChildOfType<Slider>("SliderMúsica");
         var sliderEfectos = página.FindVisualChildOfType<Slider>("SliderEfectos");
@@ -53,6 +56,7 @@ public class InterfazOpciones : StartupScript
         BloquearVelocidadRed(   int.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.velocidadRed)));
         BloquearGráficos(       (NivelesConfiguración)Enum.Parse(typeof(NivelesConfiguración), SistemaMemoria.ObtenerConfiguración(Configuraciones.gráficos)));
         BloquearSombras(        (NivelesConfiguración)Enum.Parse(typeof(NivelesConfiguración), SistemaMemoria.ObtenerConfiguración(Configuraciones.sombras)));
+        BloquearPantallaCompleta(bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.pantallaCompleta)));
 
         sliderGeneral.Value =   float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.volumenGeneral), CultureInfo.InvariantCulture);
         sliderMúsica.Value =    float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.volumenMúsica), CultureInfo.InvariantCulture);
@@ -149,9 +153,19 @@ public class InterfazOpciones : StartupScript
         if (animando)
             return;
 
+        // Resolución
+        var guardado = SistemaMemoria.ObtenerConfiguración(Configuraciones.resolución);
         var resolución = ancho.ToString() + "x" + alto.ToString();
-        SistemaMemoria.GuardarConfiguración(Configuraciones.resolución, resolución);
 
+        if (resolución == guardado)
+            return;
+
+        SistemaMemoria.GuardarConfiguración(Configuraciones.resolución, resolución);
+        ActualizaResolución(ancho, alto);
+    }
+
+    private void ActualizaResolución(int ancho, int alto)
+    {
         // Pantalla completa
         var pantallaCompleta = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.pantallaCompleta));
         if (pantallaCompleta)
@@ -166,14 +180,23 @@ public class InterfazOpciones : StartupScript
             Game.Window.SetSize(new Int2(ancho, alto));
         }
     }
-    
+
     private void EnClicPantallaCompleta(bool pantallaCompleta)
     {
         if (animando)
             return;
 
-        SistemaMemoria.GuardarConfiguración(Configuraciones.pantallaCompleta, pantallaCompleta.ToString());
+        var guardado = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.pantallaCompleta));
+        if (pantallaCompleta == guardado)
+            return;
 
+        SistemaMemoria.GuardarConfiguración(Configuraciones.pantallaCompleta, pantallaCompleta.ToString());
+        BloquearPantallaCompleta(pantallaCompleta);
+        ActualizaPantalla(pantallaCompleta);
+    }
+
+    private void ActualizaPantalla(bool pantallaCompleta)
+    {
         // Resolución
         var resolución = SistemaMemoria.ObtenerConfiguración(Configuraciones.resolución).Split('x');
         var ancho = int.Parse(resolución[0]);
@@ -220,6 +243,20 @@ public class InterfazOpciones : StartupScript
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btn30"), false);
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btn60"), true);
                 break;
+        }
+    }
+
+    private void BloquearPantallaCompleta(bool pantallaCompleta)
+    {
+        if (pantallaCompleta)
+        {
+            BloquearBotón(página.FindVisualChildOfType<Grid>("btnCompleta"), true);
+            BloquearBotón(página.FindVisualChildOfType<Grid>("btnVentana"), false);
+        }
+        else
+        {
+            BloquearBotón(página.FindVisualChildOfType<Grid>("btnCompleta"), false);
+            BloquearBotón(página.FindVisualChildOfType<Grid>("btnVentana"), true);
         }
     }
 
