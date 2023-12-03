@@ -137,7 +137,7 @@ SharedRenderers:
             RequiredApis: {}
             Overlays: {}
         SubsurfaceScatteringBlurEffect: null
-        MSAALevel: None
+        MSAALevel*: X2
         MSAAResolver: {}
     d5b2e71c088247e21556decdce138d96: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine
         Id: 97b76050-273d-495a-935b-268d347715e0
@@ -201,7 +201,9 @@ SharedRenderers:
                 e86e22e9a5d65545b8b55fca26e0afee: !Vignetting
                     Enabled: false
                     Color: {R: 0.0, G: 0.0, B: 0.0}
-        Antialiasing: !FXAAEffect {}
+        Antialiasing: !FXAAEffect
+            Dither*: Medium
+            Quality*: 5
     ee80a20a9bd99f2d70711114e15fe7ca: !Stride.Rendering.Compositing.DebugRenderer,Stride.Rendering
         Id: 5942b00f-49dc-467f-ab12-a25eeab16897
         DebugRenderStages: {}

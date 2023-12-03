@@ -184,15 +184,20 @@ SharedRenderers:
             Enabled: false
             DOFAreas: {X: 0.5, Y: 6.0, Z: 50.0, W: 200.0}
         BrightFilter:
+            Enabled*: false
             Color: {R: 1.0, G: 1.0, B: 1.0}
         Bloom:
+            Enabled*: false
             Distortion: {X: 1.0, Y: 1.0}
             Afterimage:
                 Enabled: false
         LightStreak:
+            Enabled*: false
             Attenuation: 0.7
-        LensFlare: {}
+        LensFlare:
+            Enabled*: false
         ColorTransforms:
+            Enabled*: false
             Transforms:
                 1e06f805f8b2e949a06c30d45fe413ef: !ToneMap
                     Operator: !ToneMapHejl2Operator {}
@@ -201,7 +206,8 @@ SharedRenderers:
                 e86e22e9a5d65545b8b55fca26e0afee: !Vignetting
                     Enabled: false
                     Color: {R: 0.0, G: 0.0, B: 0.0}
-        Antialiasing: !FXAAEffect {}
+        Antialiasing: !FXAAEffect
+            Enabled*: false
     ee80a20a9bd99f2d70711114e15fe7ca: !Stride.Rendering.Compositing.DebugRenderer,Stride.Rendering
         Id: be9cb108-369f-4ab9-8b6a-00e62c68ff7b
         DebugRenderStages: {}

@@ -159,8 +159,9 @@ SharedRenderers:
             RequiredApis: {}
             Overlays: {}
         SubsurfaceScatteringBlurEffect: null
-        MSAALevel: None
-        MSAAResolver: {}
+        MSAALevel*: X8
+        MSAAResolver:
+            FilterRadius*: 3.0
     d5b2e71c088247e21556decdce138d96: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine
         Id: 308699fb-6328-424e-9357-633dce9efd04
         Clear:
@@ -199,7 +200,7 @@ SharedRenderers:
         AmbientOcclusion:
             Enabled: false
         LocalReflections:
-            Enabled: false
+            Enabled*: true
             ResolvePassResolution: Full
             DepthResolution: Half
         DepthOfField:
@@ -223,7 +224,9 @@ SharedRenderers:
                 e86e22e9a5d65545b8b55fca26e0afee: !Vignetting
                     Enabled: false
                     Color: {R: 0.0, G: 0.0, B: 0.0}
-        Antialiasing: !FXAAEffect {}
+        Antialiasing: !FXAAEffect
+            Dither*: None
+            Quality*: 9
     ee80a20a9bd99f2d70711114e15fe7ca: !Stride.Rendering.Compositing.DebugRenderer,Stride.Rendering
         Id: de501136-4ee7-4b36-8b5b-e67754f042c3
         DebugRenderStages: {}
