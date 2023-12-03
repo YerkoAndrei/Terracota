@@ -161,7 +161,7 @@ SharedRenderers:
         SubsurfaceScatteringBlurEffect: null
         MSAALevel*: X8
         MSAAResolver:
-            FilterRadius*: 3.0
+            FilterRadius*: 1.0
     d5b2e71c088247e21556decdce138d96: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine
         Id: 308699fb-6328-424e-9357-633dce9efd04
         Clear:
@@ -200,7 +200,7 @@ SharedRenderers:
         AmbientOcclusion:
             Enabled: false
         LocalReflections:
-            Enabled*: true
+            Enabled*: false
             ResolvePassResolution: Full
             DepthResolution: Half
         DepthOfField:
@@ -225,8 +225,7 @@ SharedRenderers:
                     Enabled: false
                     Color: {R: 0.0, G: 0.0, B: 0.0}
         Antialiasing: !FXAAEffect
-            Dither*: None
-            Quality*: 9
+            Quality*: 5
     ee80a20a9bd99f2d70711114e15fe7ca: !Stride.Rendering.Compositing.DebugRenderer,Stride.Rendering
         Id: de501136-4ee7-4b36-8b5b-e67754f042c3
         DebugRenderStages: {}

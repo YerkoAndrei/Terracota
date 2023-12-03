@@ -5,68 +5,81 @@ Tags: []
 Archetype: 823a81bf-bac0-4552-9267-aeed499c40df:DefaultGraphicsCompositorLevel10
 Cameras:
     de2e75c3b2b23e54162686363f3f138e:
-        Id: 0b33d6ec-8016-4bd1-ab52-222f78c0a527
+        Id: 9f373eee-c85c-45b0-9b02-82451f709476
         Name: Main
+    67ec89596939e9a9cff7747bc80073ce*:
+        Id: 22e7a61e-940b-4bf3-8332-c0b9074cd7f5
+        Name: Sobretodo
 RenderStages:
     47116750c1a5d449b4ad3625f71439b3:
-        Id: 7736e0a8-bdbd-4357-870f-46e370e054bc
+        Id: 72fed79e-ddf4-4888-8e79-157d1047bbdd
         Name: Opaque
         EffectSlotName: Main
         SortMode: !SortModeStateChange {}
     9105a30fee026d4893472b6aee83d035:
-        Id: f3d0537b-b517-4114-91b7-1aa790751457
+        Id: 0c18fde9-2246-4be3-99f4-124103292b0d
         Name: Transparent
         EffectSlotName: Main
         SortMode: !BackToFrontSortMode {}
     554e52c061404d4684dd7c4c70f70e0e:
-        Id: 5d4a23be-d422-487f-b4bb-fecf65fdf3d5
+        Id: 6e6f8a44-b334-4bda-a171-20e6cad604c5
         Name: ShadowMapCaster
         EffectSlotName: ShadowMapCaster
         SortMode: !FrontToBackSortMode {}
     5a50638f5c514dc490c8c4f57cc88b57:
-        Id: 75134e95-4a00-4f8f-95d8-ee4c4969e67c
+        Id: 3d855dbd-b230-43df-b6c4-ac34f47750a4
         Name: ShadowMapCasterParaboloid
         EffectSlotName: ShadowMapCasterParaboloid
         SortMode: !FrontToBackSortMode {}
     bc1a77d2ab254a6e920f86cff65cd75e:
-        Id: 9586bea3-ac98-42f6-8285-1053fa5e7469
+        Id: df12b59e-a179-45d7-9847-3d60ccf0c0ab
         Name: ShadowMapCasterCubeMap
         EffectSlotName: ShadowMapCasterCubeMap
         SortMode: !FrontToBackSortMode {}
     33d9d311a1a65601da9ef56775477f95:
-        Id: 0c97b588-c1c2-4311-9c0f-d7dcd9dd3f9c
+        Id: 9c8d8be1-b6fc-4cf5-9047-f1b2aed94d17
         Name: GBuffer
         EffectSlotName: GBuffer
+        SortMode: !FrontToBackSortMode {}
+    901817354c1fb1455b7d42f281d60562*:
+        Id: 45dffc0d-b245-40a0-b901-1d171d872112
+        Name: UI
+        EffectSlotName: Main
+        SortMode: !FrontToBackSortMode {}
+    44add979e3551e29317718c9cd4fed6f*:
+        Id: 523dc835-32df-4ae8-8ba4-67677bd42611
+        Name: Sobretodo
+        EffectSlotName: Sobretodo
         SortMode: !FrontToBackSortMode {}
 RenderFeatures:
     d8fb80b0e7995140a46bca8dc36ee8a2: !Stride.Rendering.MeshRenderFeature,Stride.Rendering
         RenderStageSelectors:
             44cf4a95ef82544e9ce3c6507d5569a9: !Stride.Rendering.MeshTransparentRenderStageSelector,Stride.Rendering
-                OpaqueRenderStage: ref!! 7736e0a8-bdbd-4357-870f-46e370e054bc
-                TransparentRenderStage: ref!! f3d0537b-b517-4114-91b7-1aa790751457
+                OpaqueRenderStage: ref!! 72fed79e-ddf4-4888-8e79-157d1047bbdd
+                TransparentRenderStage: ref!! 0c18fde9-2246-4be3-99f4-124103292b0d
                 EffectName: StrideForwardShadingEffect
             6f7224048750e7260ea87c444f74b32c: !Stride.Rendering.Shadows.ShadowMapRenderStageSelector,Stride.Rendering
-                ShadowMapRenderStage: ref!! 5d4a23be-d422-487f-b4bb-fecf65fdf3d5
+                ShadowMapRenderStage: ref!! 6e6f8a44-b334-4bda-a171-20e6cad604c5
                 EffectName: StrideForwardShadingEffect.ShadowMapCaster
             b60663d7cb46417a94341a39c3bc1a12: !Stride.Rendering.Shadows.ShadowMapRenderStageSelector,Stride.Rendering
-                ShadowMapRenderStage: ref!! 75134e95-4a00-4f8f-95d8-ee4c4969e67c
+                ShadowMapRenderStage: ref!! 3d855dbd-b230-43df-b6c4-ac34f47750a4
                 EffectName: StrideForwardShadingEffect.ShadowMapCasterParaboloid
             f5533b1249b942df8a8aba311cd79532: !Stride.Rendering.Shadows.ShadowMapRenderStageSelector,Stride.Rendering
-                ShadowMapRenderStage: ref!! 9586bea3-ac98-42f6-8285-1053fa5e7469
+                ShadowMapRenderStage: ref!! df12b59e-a179-45d7-9847-3d60ccf0c0ab
                 EffectName: StrideForwardShadingEffect.ShadowMapCasterCubeMap
             106341b76db9fcda6a033dad16aa708b: !Stride.Rendering.MeshTransparentRenderStageSelector,Stride.Rendering
-                OpaqueRenderStage: ref!! 0c97b588-c1c2-4311-9c0f-d7dcd9dd3f9c
+                OpaqueRenderStage: ref!! 9c8d8be1-b6fc-4cf5-9047-f1b2aed94d17
                 EffectName: StrideForwardShadingEffect.ShadowMapCaster
         PipelineProcessors:
             d70f5aee0616e4ab25081ceaf643290c: !Stride.Rendering.MeshPipelineProcessor,Stride.Rendering
-                TransparentRenderStage: ref!! f3d0537b-b517-4114-91b7-1aa790751457
+                TransparentRenderStage: ref!! 0c18fde9-2246-4be3-99f4-124103292b0d
             26c899b17f88c21ab13bf60a7220ccd1: !Stride.Rendering.ShadowMeshPipelineProcessor,Stride.Rendering
-                ShadowMapRenderStage: ref!! 5d4a23be-d422-487f-b4bb-fecf65fdf3d5
+                ShadowMapRenderStage: ref!! 6e6f8a44-b334-4bda-a171-20e6cad604c5
             ff51170a7d1a4761b73ef6a5c9f0cba2: !Stride.Rendering.ShadowMeshPipelineProcessor,Stride.Rendering
-                ShadowMapRenderStage: ref!! 75134e95-4a00-4f8f-95d8-ee4c4969e67c
+                ShadowMapRenderStage: ref!! 3d855dbd-b230-43df-b6c4-ac34f47750a4
                 DepthClipping: true
             ae4336b0a9514e8488e8e0ccbcef25f4: !Stride.Rendering.ShadowMeshPipelineProcessor,Stride.Rendering
-                ShadowMapRenderStage: ref!! 9586bea3-ac98-42f6-8285-1053fa5e7469
+                ShadowMapRenderStage: ref!! df12b59e-a179-45d7-9847-3d60ccf0c0ab
                 DepthClipping: true
         RenderFeatures:
             86b959cbdf51a1438d4973177c77c627: !Stride.Rendering.TransformRenderFeature,Stride.Rendering {}
@@ -85,52 +98,61 @@ RenderFeatures:
                 ShadowMapRenderer: !Stride.Rendering.Shadows.ShadowMapRenderer,Stride.Rendering
                     Renderers:
                         7c3d3d4c86834c3551bacde2527b3836: !Stride.Rendering.Shadows.LightDirectionalShadowMapRenderer,Stride.Rendering
-                            ShadowCasterRenderStage: ref!! 5d4a23be-d422-487f-b4bb-fecf65fdf3d5
+                            ShadowCasterRenderStage: ref!! 6e6f8a44-b334-4bda-a171-20e6cad604c5
                         1c204b09435636256a3fcfd6f9ddb347: !Stride.Rendering.Shadows.LightSpotShadowMapRenderer,Stride.Rendering
-                            ShadowCasterRenderStage: ref!! 5d4a23be-d422-487f-b4bb-fecf65fdf3d5
+                            ShadowCasterRenderStage: ref!! 6e6f8a44-b334-4bda-a171-20e6cad604c5
                         7c8c69ce27034b4c8bbcab0bcdfe954b: !Stride.Rendering.Shadows.LightPointShadowMapRendererParaboloid,Stride.Rendering
-                            ShadowCasterRenderStage: ref!! 75134e95-4a00-4f8f-95d8-ee4c4969e67c
+                            ShadowCasterRenderStage: ref!! 3d855dbd-b230-43df-b6c4-ac34f47750a4
                         d59ef45dd99e49d3af3887763d153aa7: !Stride.Rendering.Shadows.LightPointShadowMapRendererCubeMap,Stride.Rendering
-                            ShadowCasterRenderStage: ref!! 9586bea3-ac98-42f6-8285-1053fa5e7469
+                            ShadowCasterRenderStage: ref!! df12b59e-a179-45d7-9847-3d60ccf0c0ab
             42be209952db58294c9f06c58809b8ca: !Stride.Rendering.InstancingRenderFeature,Stride.Rendering {}
     28e9bf54a5adbe063f59fb17acb2723e: !Stride.Rendering.Sprites.SpriteRenderFeature,Stride.Rendering
         RenderStageSelectors:
             d74665cff080638a2439c4422e542d85: !Stride.Rendering.Sprites.SpriteTransparentRenderStageSelector,Stride.Rendering
-                OpaqueRenderStage: ref!! 7736e0a8-bdbd-4357-870f-46e370e054bc
-                TransparentRenderStage: ref!! f3d0537b-b517-4114-91b7-1aa790751457
+                OpaqueRenderStage: ref!! 72fed79e-ddf4-4888-8e79-157d1047bbdd
+                TransparentRenderStage: ref!! 0c18fde9-2246-4be3-99f4-124103292b0d
                 EffectName: Test
     60780391e205770513fdd53e07279a01: !Stride.Rendering.Background.BackgroundRenderFeature,Stride.Rendering
         RenderStageSelectors:
             11c8b8ccb522e3cd1dd6688016062a6d: !Stride.Rendering.SimpleGroupToRenderStageSelector,Stride.Rendering
-                RenderStage: ref!! 7736e0a8-bdbd-4357-870f-46e370e054bc
+                RenderStage: ref!! 72fed79e-ddf4-4888-8e79-157d1047bbdd
                 EffectName: Test
     93933ad00d0c357d4915ad462cbfd04c: !Stride.Rendering.UI.UIRenderFeature,Stride.UI
         RenderStageSelectors:
             14a071694411235038a102ac3794bb4d: !Stride.Rendering.SimpleGroupToRenderStageSelector,Stride.Rendering
-                RenderStage: ref!! f3d0537b-b517-4114-91b7-1aa790751457
+                RenderGroup*: Group0, Group1, Group2, Group3, Group4, Group5, Group6, Group7, Group8, Group9, Group10, Group11, Group12, Group13, Group14, Group15, Group16, Group17, Group18, Group19, Group20, Group21, Group22, Group23, Group24, Group25, Group26, Group27, Group28, Group29
+                RenderStage*: ref!! 0c18fde9-2246-4be3-99f4-124103292b0d
                 EffectName: Test
+            d7e5d97f23388562f5501b9caed60c79*: !Stride.Rendering.SimpleGroupToRenderStageSelector,Stride.Rendering
+                RenderGroup: Group30
+                RenderStage: ref!! 45dffc0d-b245-40a0-b901-1d171d872112
+                EffectName: null
+            cb1c0c2f75cd2ea6384e62517a3231a7*: !Stride.Rendering.SimpleGroupToRenderStageSelector,Stride.Rendering
+                RenderGroup: Group31
+                RenderStage: ref!! 523dc835-32df-4ae8-8ba4-67677bd42611
+                EffectName: null
     9013eab3ea0ef6c98bf133b86c173d45: !Stride.Particles.Rendering.ParticleEmitterRenderFeature,Stride.Particles
         RenderStageSelectors:
             af1bd241305893ef8ff7952184e1cb0b: !Stride.Particles.Rendering.ParticleEmitterTransparentRenderStageSelector,Stride.Particles
-                OpaqueRenderStage: ref!! 7736e0a8-bdbd-4357-870f-46e370e054bc
-                TransparentRenderStage: ref!! f3d0537b-b517-4114-91b7-1aa790751457
+                OpaqueRenderStage: ref!! 72fed79e-ddf4-4888-8e79-157d1047bbdd
+                TransparentRenderStage: ref!! 0c18fde9-2246-4be3-99f4-124103292b0d
                 EffectName: null
         PipelineProcessors: {}
 SharedRenderers:
     60459475d3a3adaf2d1ba5d99913ca75: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine
-        Id: 1c0253d0-03a8-47b9-ab55-f241fc524aa7
+        Id: 5aa54f67-d745-4edf-bd62-22592caae259
         Clear:
             Id: 4bc4b2ca-027e-4e4a-94cb-2912709bef5f
             Color: {R: 0.40491876, G: 0.41189542, B: 0.43775, A: 1.0}
         LightProbes: true
-        OpaqueRenderStage: ref!! 7736e0a8-bdbd-4357-870f-46e370e054bc
-        TransparentRenderStage: ref!! f3d0537b-b517-4114-91b7-1aa790751457
+        OpaqueRenderStage: ref!! 72fed79e-ddf4-4888-8e79-157d1047bbdd
+        TransparentRenderStage: ref!! 0c18fde9-2246-4be3-99f4-124103292b0d
         ShadowMapRenderStages:
-            fc4d1e0de5c2b0bbc27bcf96e9a848fd: ref!! 5d4a23be-d422-487f-b4bb-fecf65fdf3d5
-            87ff1d9cdd52418daf76385176a0e316: ref!! 75134e95-4a00-4f8f-95d8-ee4c4969e67c
-            5e059d4cc2db4ee8a1f28a40f4ac3ae8: ref!! 9586bea3-ac98-42f6-8285-1053fa5e7469
-        GBufferRenderStage: ref!! 0c97b588-c1c2-4311-9c0f-d7dcd9dd3f9c
-        PostEffects: !PostProcessingEffects ref!! 30a7075e-3010-4ef7-aab3-7ac31cffe4c7
+            fc4d1e0de5c2b0bbc27bcf96e9a848fd: ref!! 6e6f8a44-b334-4bda-a171-20e6cad604c5
+            87ff1d9cdd52418daf76385176a0e316: ref!! 3d855dbd-b230-43df-b6c4-ac34f47750a4
+            5e059d4cc2db4ee8a1f28a40f4ac3ae8: ref!! df12b59e-a179-45d7-9847-3d60ccf0c0ab
+        GBufferRenderStage: ref!! 9c8d8be1-b6fc-4cf5-9047-f1b2aed94d17
+        PostEffects*: !PostProcessingEffects ref!! 86579c6a-454f-4aa1-98ec-234472c85d80
         LightShafts: null
         VRSettings:
             Enabled: false
@@ -138,20 +160,21 @@ SharedRenderers:
             Overlays: {}
         SubsurfaceScatteringBlurEffect: null
         MSAALevel*: X2
-        MSAAResolver: {}
+        MSAAResolver:
+            FilterRadius*: 0.75
     d5b2e71c088247e21556decdce138d96: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine
-        Id: 97b76050-273d-495a-935b-268d347715e0
+        Id: 308699fb-6328-424e-9357-633dce9efd04
         Clear:
             Id: 66a42307-1985-4316-871a-768449238c11
             Color: {R: 0.40491876, G: 0.41189542, B: 0.43775, A: 1.0}
         LightProbes: true
-        OpaqueRenderStage: ref!! 7736e0a8-bdbd-4357-870f-46e370e054bc
-        TransparentRenderStage: ref!! f3d0537b-b517-4114-91b7-1aa790751457
+        OpaqueRenderStage: ref!! 72fed79e-ddf4-4888-8e79-157d1047bbdd
+        TransparentRenderStage: ref!! 0c18fde9-2246-4be3-99f4-124103292b0d
         ShadowMapRenderStages:
-            2323a99a8a983e182f318e55604659b0: ref!! 5d4a23be-d422-487f-b4bb-fecf65fdf3d5
-            61b557b74893400898c007d5ece5e87f: ref!! 75134e95-4a00-4f8f-95d8-ee4c4969e67c
-            5c382f66ee524c498d26d9aaf19fc9c3: ref!! 9586bea3-ac98-42f6-8285-1053fa5e7469
-        GBufferRenderStage: ref!! 0c97b588-c1c2-4311-9c0f-d7dcd9dd3f9c
+            2323a99a8a983e182f318e55604659b0: ref!! 6e6f8a44-b334-4bda-a171-20e6cad604c5
+            61b557b74893400898c007d5ece5e87f: ref!! 3d855dbd-b230-43df-b6c4-ac34f47750a4
+            5c382f66ee524c498d26d9aaf19fc9c3: ref!! df12b59e-a179-45d7-9847-3d60ccf0c0ab
+        GBufferRenderStage: ref!! 9c8d8be1-b6fc-4cf5-9047-f1b2aed94d17
         PostEffects: null
         LightShafts: null
         VRSettings:
@@ -162,7 +185,7 @@ SharedRenderers:
         MSAALevel: None
         MSAAResolver: {}
     34ecb9b2633eacfc439ba8744fe05102: !PostProcessingEffects
-        Id: 30a7075e-3010-4ef7-aab3-7ac31cffe4c7
+        Id: 86579c6a-454f-4aa1-98ec-234472c85d80
         Outline:
             Enabled: false
             NormalWeight: 2.0
@@ -203,19 +226,38 @@ SharedRenderers:
                     Color: {R: 0.0, G: 0.0, B: 0.0}
         Antialiasing: !FXAAEffect
             Dither*: Medium
-            Quality*: 5
+            Quality*: 2
     ee80a20a9bd99f2d70711114e15fe7ca: !Stride.Rendering.Compositing.DebugRenderer,Stride.Rendering
-        Id: 5942b00f-49dc-467f-ab12-a25eeab16897
+        Id: de501136-4ee7-4b36-8b5b-e67754f042c3
         DebugRenderStages: {}
-Game: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
-    Id: 76fe87cf-f574-4ad6-85b8-e9a9586be0e2
-    Camera: ref!! 0b33d6ec-8016-4bd1-ab52-222f78c0a527
-    Child: !Stride.Rendering.Compositing.SceneRendererCollection,Stride.Rendering
-        Id: 82568e46-92e7-421a-8dca-114a74e0cd69
-        Children:
-            d39c5ddbf8b7d5ca02bafb6496b1cc3c: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! 1c0253d0-03a8-47b9-ab55-f241fc524aa7
-            01d338078e9b21121ead0868932613dd: !Stride.Rendering.Compositing.DebugRenderer,Stride.Rendering ref!! 5942b00f-49dc-467f-ab12-a25eeab16897
-    RenderMask: All
-SingleView: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! 97b76050-273d-495a-935b-268d347715e0
-Editor: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! 1c0253d0-03a8-47b9-ab55-f241fc524aa7
+Game*: !Stride.Rendering.Compositing.SceneRendererCollection,Stride.Rendering
+    Id: 0f82b768-ae06-44b9-bd80-c7e82ab82e04
+    Children:
+        3954600b5bfacb982ec536cc3f095afe: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
+            Id: 9f9ebe98-de6b-44d1-afc8-e5bca249535b
+            Camera: ref!! 9f373eee-c85c-45b0-9b02-82451f709476
+            Child: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! 5aa54f67-d745-4edf-bd62-22592caae259
+            RenderMask: Group0, Group1, Group2, Group3, Group4, Group5, Group6, Group7, Group8, Group9, Group10, Group11, Group12, Group13, Group14, Group15, Group16, Group17, Group18, Group19, Group20, Group21, Group22, Group23, Group24, Group25, Group26, Group27, Group28, Group29
+        3c1007aa23b81248e1377430c9d539c4: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
+            Id: 9ffb25cd-f31e-461b-b3ec-1a42c6e86b30
+            Camera: ref!! 9f373eee-c85c-45b0-9b02-82451f709476
+            Child: !Stride.Rendering.Compositing.SingleStageRenderer,Stride.Rendering
+                Id: 94ae2a4c-3d9c-4f09-96ec-772790a9fd89
+                RenderStage: ref!! 45dffc0d-b245-40a0-b901-1d171d872112
+            RenderMask: Group30
+        fcaa314a4fdce4fcf6168ef95b811077: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
+            Id: eb4d18fa-27b0-4650-bf8e-cf92d4fcc0f8
+            Camera: ref!! 22e7a61e-940b-4bf3-8332-c0b9074cd7f5
+            Child: !Stride.Rendering.Compositing.SingleStageRenderer,Stride.Rendering
+                Id: 5947f92e-3539-4e67-9adf-6922c2c0dd15
+                RenderStage: ref!! 523dc835-32df-4ae8-8ba4-67677bd42611
+            RenderMask: Group31
+SingleView: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! 308699fb-6328-424e-9357-633dce9efd04
+Editor*: !Stride.Rendering.Compositing.SceneRendererCollection,Stride.Rendering
+    Id: c0120f52-cf13-4663-b84b-0329386e8960
+    Children:
+        7e8e8d3b1a6e9ee4f2305a782bd50ed8: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! 5aa54f67-d745-4edf-bd62-22592caae259
+        1d87ed15566bfb1f23061c9abc412bd2: !Stride.Rendering.Compositing.SingleStageRenderer,Stride.Rendering
+            Id: fbc7233e-2a5a-46c1-9e94-00722a836f82
+            RenderStage: ref!! 45dffc0d-b245-40a0-b901-1d171d872112
 BlockPositions: {}
