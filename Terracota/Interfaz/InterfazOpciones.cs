@@ -1,21 +1,18 @@
-﻿using Stride.Engine;
-using Stride.Rendering.Compositing;
+﻿using System;
+using System.Globalization;
+using Stride.Engine;
 using Stride.UI.Controls;
 using Stride.UI;
 using Stride.UI.Panels;
 using Stride.UI.Events;
-using System;
-using System.Globalization;
+using System.Linq;
 
 namespace Terracota;
 using static Sistema;
 using static Constantes;
-using static Terracota.Constantes;
 
 public class InterfazOpciones : StartupScript
 {
-    public GraphicsCompositor compositor;
-
     private UIElement página;
     private Grid Opciones;
     private Grid animOpciones;
@@ -23,8 +20,6 @@ public class InterfazOpciones : StartupScript
 
     public override void Start()
     {
-        //compositor.Game.
-
         // Botones y deslisadores
         página = Entity.Get<UIComponent>().Page.RootElement;
         Opciones = página.FindVisualChildOfType<Grid>("Opciones");
@@ -61,6 +56,10 @@ public class InterfazOpciones : StartupScript
         sliderGeneral.Value =   float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.volumenGeneral), CultureInfo.InvariantCulture);
         sliderMúsica.Value =    float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.volumenMúsica), CultureInfo.InvariantCulture);
         sliderEfectos.Value =   float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.volumenEfectos), CultureInfo.InvariantCulture);
+
+        // Actualiza gráficos
+        ActualizaGráficos(      (NivelesConfiguración)Enum.Parse(typeof(NivelesConfiguración), SistemaMemoria.ObtenerConfiguración(Configuraciones.gráficos)));
+        ActualizaSombras();
 
         // Llamados slider
         sliderGeneral.ValueChanged += ConfigurarVolumenGeneral;
@@ -120,6 +119,12 @@ public class InterfazOpciones : StartupScript
 
         SistemaMemoria.GuardarConfiguración(Configuraciones.gráficos, nivel.ToString());
         BloquearGráficos(nivel);
+        ActualizaGráficos(nivel);
+    }
+
+    private void ActualizaGráficos(NivelesConfiguración nivel)
+    {
+        //Services.GetService<SceneSystem>().GraphicsCompositor = SistemaEscenas.ObtenerGráficos(nivel);
     }
 
     private void EnClicSombras(NivelesConfiguración nivel)
@@ -129,6 +134,13 @@ public class InterfazOpciones : StartupScript
 
         SistemaMemoria.GuardarConfiguración(Configuraciones.sombras, nivel.ToString());
         BloquearSombras(nivel);
+        ActualizaSombras();
+    }
+
+    private void ActualizaSombras()
+    {
+        var controladorLuces = SceneSystem.SceneInstance.RootScene.Children[0].Entities.Where(o => o.Get<ControladorSombras>() != null).FirstOrDefault();
+        controladorLuces.Get<ControladorSombras>().ActualizarSombras();
     }
 
     private void EnClicPantallaCompleta(bool pantallaCompleta)
