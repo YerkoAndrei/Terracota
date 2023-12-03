@@ -3,9 +3,9 @@ using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Core.Serialization;
 using Stride.Engine;
-using Stride.Graphics.SDL;
 using Stride.Rendering.Compositing;
 using Stride.UI;
+using Stride.UI.Controls;
 using Stride.UI.Panels;
 
 namespace Terracota;
@@ -23,8 +23,6 @@ public class SistemaEscenas : SyncScript
     public GraphicsCompositor compositorMedio;
     public GraphicsCompositor compositorAlto;
 
-    public UrlReference cursor;
-
     private static SistemaEscenas instancia;
 
     private static Escenas siguienteEscena;
@@ -38,6 +36,7 @@ public class SistemaEscenas : SyncScript
     private float tiempo;
 
     private Grid panelOscuro;
+    private ImageElement imgCursor;
 
     public override void Start()
     {
@@ -57,19 +56,9 @@ public class SistemaEscenas : SyncScript
         //CambiarPantalla(pantallaCompleta, ancho, alto);
 
         // Cursor
-        //Game.Window.IsMouseVisible = false;
-        byte[] cursorBytes;
-        using (var stream = Content.OpenAsStream(cursor))
-        {
-            using (var memory = new MemoryStream())
-            {
-                stream.CopyTo(memory);
-                cursorBytes = memory.ToArray();
-            }
-        }
-        var nuevoCursor = new Cursor(cursorBytes, cursorBytes, 0, 0, 0, 0);
-        Cursor.SetCursor(nuevoCursor);
-        
+        Game.Window.IsMouseVisible = false;
+        imgCursor = página.FindVisualChildOfType<ImageElement>("imgCursor");
+
         // Predeterminado
         duraciónLerp = 0.2f;
 
@@ -85,7 +74,10 @@ public class SistemaEscenas : SyncScript
 
     public override void Update()
     {
-        if(ocultando)
+        // Cursor es una imagen
+        PosicionarCursor();
+
+        if (ocultando)
         {
             tiempoDelta += (float)Game.UpdateTime.Elapsed.TotalSeconds;
             tiempo = SistemaAnimación.EvaluarSuave(tiempoDelta / duraciónLerp);
@@ -110,6 +102,26 @@ public class SistemaEscenas : SyncScript
                 abriendo = false;
             }
         }
+    }
+
+    public void PosicionarCursor()
+    {
+        float left = 0;
+        float top = 0;
+        float right = 0;
+        float bottom = 0;
+
+        if (Input.MousePosition.X > 0.5f)
+            left = (Input.MousePosition.X - 0.5f) * 2 * 1280;
+        else
+            right = (0.5f - Input.MousePosition.X) * 2 * 1280;
+
+        if (Input.MousePosition.Y > 0.5f)
+            top = (Input.MousePosition.Y - 0.5f) * 2 * 720;
+        else
+            bottom = (0.5f - Input.MousePosition.Y) * 2 * 720;
+
+        imgCursor.Margin = new Thickness(left, top, right, bottom);
     }
 
     public static void CambiarPantalla(bool pantallaCompleta, int ancho, int alto)

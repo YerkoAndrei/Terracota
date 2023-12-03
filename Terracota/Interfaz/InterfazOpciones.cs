@@ -322,6 +322,7 @@ public class InterfazOpciones : StartupScript
             return;
 
         animando = true;
+        MostrarResoluciones(false);
         SistemaAnimación.AnimarElemento(animOpciones, 0.2f, false, Direcciones.abajo, TipoCurva.rápida, () =>
         {
             Opciones.Visibility = Visibility.Hidden;
