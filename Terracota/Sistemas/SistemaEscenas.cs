@@ -5,6 +5,7 @@ using Stride.Core.Serialization;
 using Stride.Engine;
 using Stride.Graphics;
 using Stride.Graphics.SDL;
+using Stride.Rendering.Compositing;
 using Stride.UI;
 using Stride.UI.Panels;
 
@@ -18,6 +19,10 @@ public class SistemaEscenas : SyncScript
     public UrlReference<Scene> escenaLocal;
     public UrlReference<Scene> escenaLAN;
     public UrlReference<Scene> escenaP2P;
+
+    public GraphicsCompositor compositorBajo;
+    public GraphicsCompositor compositorMedio;
+    public GraphicsCompositor compositorAlto;
 
     public Texture cursor;
 
@@ -145,5 +150,19 @@ public class SistemaEscenas : SyncScript
         SistemaTraducción.ActualizarTextosEscena();
 
         abriendo = true;
+    }
+
+    public static GraphicsCompositor ObtenerGráficos(NivelesConfiguración nivel)
+    {
+        switch (nivel)
+        {
+            case NivelesConfiguración.bajo:
+                return instancia.compositorBajo;
+            case NivelesConfiguración.medio:
+                return instancia.compositorMedio;
+            default:
+            case NivelesConfiguración.alto:
+                return instancia.compositorAlto;
+        }
     }
 }
