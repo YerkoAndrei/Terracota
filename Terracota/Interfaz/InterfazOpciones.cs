@@ -29,6 +29,7 @@ public class InterfazOpciones : StartupScript
         animOpciones = página.FindVisualChildOfType<Grid>("animOpciones");
 
         ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("PanelOscuroOpciones"), EnClicVolver);
+        ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("btnPanel"), () => MostrarResoluciones(false));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVolver"), EnClicVolver);
 
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnEspañol"), () => EnClicIdioma(Idiomas.español));
@@ -49,13 +50,13 @@ public class InterfazOpciones : StartupScript
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVentana"), () => EnClicPantallaCompleta(false));
 
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnResoluciones"), () => MostrarResoluciones(true));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR0"), () => EnClicResolución(1280, 720));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR1"), () => EnClicResolución(1366, 768));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR2"), () => EnClicResolución(1600, 900));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR3"), () => EnClicResolución(1920, 1080));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR4"), () => EnClicResolución(1920, 1200));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR5"), () => EnClicResolución(2560, 1440));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR6"), () => EnClicResolución(3840, 2160));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR0"), () => EnClicResolución(1280, 720, "btnR0"));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR1"), () => EnClicResolución(1366, 768, "btnR1"));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR2"), () => EnClicResolución(1600, 900, "btnR2"));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR3"), () => EnClicResolución(1920, 1080, "btnR3"));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR4"), () => EnClicResolución(1920, 1200, "btnR4"));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR5"), () => EnClicResolución(2560, 1440, "btnR5"));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR6"), () => EnClicResolución(3840, 2160, "btnR6"));
 
         resoluciónActual = página.FindVisualChildOfType<TextBlock>("txtResoluciónActual");
         resoluciónActual.Text = SistemaMemoria.ObtenerConfiguración(Configuraciones.resolución).Replace("x", " x ");
@@ -73,6 +74,32 @@ public class InterfazOpciones : StartupScript
         BloquearGráficos(       (NivelesConfiguración)Enum.Parse(typeof(NivelesConfiguración), SistemaMemoria.ObtenerConfiguración(Configuraciones.gráficos)));
         BloquearSombras(        (NivelesConfiguración)Enum.Parse(typeof(NivelesConfiguración), SistemaMemoria.ObtenerConfiguración(Configuraciones.sombras)));
         BloquearPantallaCompleta(bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.pantallaCompleta)));
+
+        DesbloquearBotonesResolución();
+        switch(SistemaMemoria.ObtenerConfiguración(Configuraciones.resolución))
+        {
+            case "1280x720":
+                BloquearBotón(página.FindVisualChildOfType<Grid>("btnR0"), true);
+                break;
+            case "1366x768":
+                BloquearBotón(página.FindVisualChildOfType<Grid>("btnR1"), true);
+                break;
+            case "1600x900":
+                BloquearBotón(página.FindVisualChildOfType<Grid>("btnR2"), true);
+                break;
+            case "1920x1080":
+                BloquearBotón(página.FindVisualChildOfType<Grid>("btnR3"), true);
+                break;
+            case "1920x1200":
+                BloquearBotón(página.FindVisualChildOfType<Grid>("btnR4"), true);
+                break;
+            case "2560x1440":
+                BloquearBotón(página.FindVisualChildOfType<Grid>("btnR5"), true);
+                break;
+            case "3840x1440":
+                BloquearBotón(página.FindVisualChildOfType<Grid>("btnR6"), true);
+                break;
+        }
 
         sliderGeneral.Value =   float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.volumenGeneral), CultureInfo.InvariantCulture);
         sliderMúsica.Value =    float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.volumenMúsica), CultureInfo.InvariantCulture);
@@ -92,9 +119,9 @@ public class InterfazOpciones : StartupScript
     {
         if (animando)
             return;
-
         SistemaTraducción.CambiarIdioma(idioma);
         BloquearIdioma(idioma);
+        MostrarResoluciones(false);
     }
 
     private void EnClicVelocidadRed(int velocidad)
@@ -104,6 +131,7 @@ public class InterfazOpciones : StartupScript
 
         SistemaMemoria.GuardarConfiguración(Configuraciones.velocidadRed, velocidad.ToString());
         BloquearVelocidadRed(velocidad);
+        MostrarResoluciones(false);
     }
 
     private void ConfigurarVolumenGeneral(object sender, RoutedEventArgs e)
@@ -113,6 +141,7 @@ public class InterfazOpciones : StartupScript
 
         var slider = (Slider)sender;
         SistemaMemoria.GuardarConfiguración(Configuraciones.volumenGeneral, slider.Value.ToString("0.00", CultureInfo.InvariantCulture));
+        MostrarResoluciones(false);
     }
 
     private void ConfigurarVolumenMúsica(object sender, RoutedEventArgs e)
@@ -122,6 +151,7 @@ public class InterfazOpciones : StartupScript
 
         var slider = (Slider)sender;
         SistemaMemoria.GuardarConfiguración(Configuraciones.volumenMúsica, slider.Value.ToString("0.00", CultureInfo.InvariantCulture));
+        MostrarResoluciones(false);
     }
 
     private void ConfigurarVolumenEfectos(object sender, RoutedEventArgs e)
@@ -131,6 +161,7 @@ public class InterfazOpciones : StartupScript
 
         var slider = (Slider)sender;
         SistemaMemoria.GuardarConfiguración(Configuraciones.volumenEfectos, slider.Value.ToString("0.00", CultureInfo.InvariantCulture));
+        MostrarResoluciones(false);
     }
 
     private void EnClicGráficos(NivelesConfiguración nivel)
@@ -141,6 +172,7 @@ public class InterfazOpciones : StartupScript
         SistemaMemoria.GuardarConfiguración(Configuraciones.gráficos, nivel.ToString());
         BloquearGráficos(nivel);
         ActualizaGráficos(nivel);
+        MostrarResoluciones(false);
     }
 
     private void ActualizaGráficos(NivelesConfiguración nivel)
@@ -156,6 +188,7 @@ public class InterfazOpciones : StartupScript
         SistemaMemoria.GuardarConfiguración(Configuraciones.sombras, nivel.ToString());
         BloquearSombras(nivel);
         ActualizaSombras();
+        MostrarResoluciones(false);
     }
 
     private void ActualizaSombras()
@@ -180,7 +213,7 @@ public class InterfazOpciones : StartupScript
             resoluciones.Visibility = Visibility.Hidden;
     }
 
-    private void EnClicResolución(int ancho, int alto)
+    private void EnClicResolución(int ancho, int alto, string botón)
     {
         if (animando)
             return;
@@ -199,6 +232,9 @@ public class InterfazOpciones : StartupScript
         SistemaMemoria.GuardarConfiguración(Configuraciones.resolución, resolución);
         ActualizaResolución(ancho, alto);
         MostrarResoluciones(false);
+
+        DesbloquearBotonesResolución();
+        BloquearBotón(página.FindVisualChildOfType<Grid>(botón), true);
     }
 
     private void ActualizaResolución(int ancho, int alto)
@@ -220,6 +256,7 @@ public class InterfazOpciones : StartupScript
         SistemaMemoria.GuardarConfiguración(Configuraciones.pantallaCompleta, pantallaCompleta.ToString());
         BloquearPantallaCompleta(pantallaCompleta);
         ActualizaPantalla(pantallaCompleta);
+        MostrarResoluciones(false);
     }
 
     private void ActualizaPantalla(bool pantallaCompleta)
@@ -321,13 +358,24 @@ public class InterfazOpciones : StartupScript
         }
     }
 
+    private void DesbloquearBotonesResolución()
+    {
+        BloquearBotón(página.FindVisualChildOfType<Grid>("btnR0"), false);
+        BloquearBotón(página.FindVisualChildOfType<Grid>("btnR1"), false);
+        BloquearBotón(página.FindVisualChildOfType<Grid>("btnR2"), false);
+        BloquearBotón(página.FindVisualChildOfType<Grid>("btnR3"), false);
+        BloquearBotón(página.FindVisualChildOfType<Grid>("btnR4"), false);
+        BloquearBotón(página.FindVisualChildOfType<Grid>("btnR5"), false);
+        BloquearBotón(página.FindVisualChildOfType<Grid>("btnR6"), false);
+    }
+
     private void EnClicVolver()
     {
         if (animando)
             return;
 
         animando = true;
-        MostrarResoluciones(false);
+        resoluciones.Visibility = Visibility.Hidden;
         SistemaAnimación.AnimarElemento(animOpciones, 0.2f, false, Direcciones.abajo, TipoCurva.rápida, () =>
         {
             Opciones.Visibility = Visibility.Hidden;
