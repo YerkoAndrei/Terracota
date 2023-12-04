@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Graphics;
@@ -51,10 +52,11 @@ public static class Sistema
         // Busca contenido dentro del "grid botón"
         var imagen = grid.FindVisualChildOfType<ImageElement>("img");
         var botón = grid.FindVisualChildOfType<Button>("btn");
+        var ícono = grid.FindVisualChildOfType<ImageElement>("imgÍcono");
 
         // Texto
-        var texto = grid.FindVisualChildOfType<TextBlock>("txt");
-        var colorTexto = Color.White;
+        var texto = ObtenerTexto(grid);
+        var colorTexto = new Color(25, 20 ,20);
         if (texto != null)
             colorTexto = texto.TextColor;
 
@@ -80,7 +82,7 @@ public static class Sistema
 
         botón.MouseOverStateChanged += (s, a) =>
         {
-            if (VerificarBloqueo(botón, imagen, texto, colorBase, colorTexto))
+            if (VerificarBloqueo(botón, imagen, texto, ícono, colorBase, colorTexto))
                 return;
             switch (a.NewValue)
             {
@@ -94,13 +96,13 @@ public static class Sistema
         };
         botón.TouchDown += (s, a) =>
         {
-            if (VerificarBloqueo(botón, imagen, texto, colorBase, colorTexto))
+            if (VerificarBloqueo(botón, imagen, texto, ícono, colorBase, colorTexto))
                 return;
             imagen.Color = colorBase * colorEnClic;
         };
         botón.TouchUp += (s, a) =>
         {
-            if (VerificarBloqueo(botón, imagen, texto, colorBase, colorTexto))
+            if (VerificarBloqueo(botón, imagen, texto, ícono, colorBase, colorTexto))
                 return;
             imagen.Color = colorBase * colorEnCursor;
         };
@@ -135,7 +137,7 @@ public static class Sistema
         };
     }
 
-    private static bool VerificarBloqueo(Button botón, ImageElement imagen, TextBlock texto, Color colorBase, Color colorTexto)
+    private static bool VerificarBloqueo(Button botón, ImageElement imagen, TextBlock texto, ImageElement ícono, Color colorBase, Color colorTexto)
     {
         if (botón.CanBeHitByUser)
             return false;
@@ -145,6 +147,9 @@ public static class Sistema
         if (texto != null)
             texto.TextColor = colorTexto * colorBloqueado;
 
+        if (ícono != null)
+            ícono.Color = colorTexto * colorBloqueado;
+
         return true;
     }
 
@@ -153,8 +158,9 @@ public static class Sistema
     {
         // Busca contenido dentro del "grid botón"
         var imagen = grid.FindVisualChildOfType<ImageElement>("img");
-        var texto = grid.FindVisualChildOfType<TextBlock>("txt");
         var botón = grid.FindVisualChildOfType<Button>("btn");
+        var ícono = grid.FindVisualChildOfType<ImageElement>("imgÍcono");
+        var texto = ObtenerTexto(grid);
 
         botón.CanBeHitByUser = !bloquear;
 
@@ -164,12 +170,16 @@ public static class Sistema
             imagen.Color = grid.FindVisualChildOfType<Grid>("colorInicialBotón").BackgroundColor * colorBloqueado;
             if (texto != null)
                 texto.TextColor = grid.FindVisualChildOfType<Grid>("colorInicialTexto").BackgroundColor * colorBloqueado;
+            if (ícono != null)
+                ícono.Color = grid.FindVisualChildOfType<Grid>("colorInicialTexto").BackgroundColor * colorBloqueado;
         }
         else
         {
             imagen.Color = grid.FindVisualChildOfType<Grid>("colorInicialBotón").BackgroundColor * colorNormal;
             if (texto != null)
                 texto.TextColor = grid.FindVisualChildOfType<Grid>("colorInicialTexto").BackgroundColor * colorNormal;
+            if (ícono != null)
+                ícono.Color = grid.FindVisualChildOfType<Grid>("colorInicialTexto").BackgroundColor * colorNormal;
         }
     }
 
@@ -182,7 +192,7 @@ public static class Sistema
     {
         // Busca contenido dentro del "grid botón"
         ConfigurarBotón(grid, enCargar);
-        var texto = grid.FindVisualChildOfType<TextBlock>("txt");
+        var texto = ObtenerTexto(grid);
 
         // Botones
         var btnEliminar = grid.FindVisualChildOfType<Grid>("btnEliminar");
@@ -201,7 +211,7 @@ public static class Sistema
     {
         // Busca contenido dentro del "grid botón"
         ConfigurarBotón(grid, enCargar);
-        var texto = grid.FindVisualChildOfType<TextBlock>("txt");
+        var texto = ObtenerTexto(grid);
 
         // Botones
         grid.FindVisualChildOfType<Grid>("btnEliminar").Visibility = Visibility.Hidden;
@@ -212,11 +222,21 @@ public static class Sistema
         grid.SetGridRow(fila);
     }
 
+    public static TextBlock ObtenerTexto(Grid grid)
+    {
+        // Encuentra primer texto del grid
+        var textos = grid.FindVisualChildrenOfType<TextBlock>().ToArray();
+        if(textos.Length > 0)
+            return textos[0];
+        else
+            return null;
+    }
+
     public static void ConfigurarRanuraElección(Grid grid, int fila, string nombre, Action enClic)
     {
         // Busca contenido dentro del "grid botón"
         ConfigurarBotón(grid, enClic);
-        var texto = grid.FindVisualChildOfType<TextBlock>("txt");
+        var texto = ObtenerTexto(grid);
 
         // Visual
         texto.Text = nombre;
