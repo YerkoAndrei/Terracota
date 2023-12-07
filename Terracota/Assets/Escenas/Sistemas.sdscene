@@ -8,6 +8,7 @@ Hierarchy:
     RootParts:
         - ref!! 21f01d7f-860f-40b3-801e-9c0ec5b41907
         - ref!! 3989825c-2e05-4529-9e41-c67347ddb9e9
+        - ref!! 758aa04b-f96e-40e7-b903-12bf3fd17a7d
         - ref!! bae920a6-7993-476b-bbb2-c1edc1f6d423
         - ref!! 37dbe4f7-f45e-43e5-aa17-5edb268b1462
         - ref!! 8d2b7c8f-2973-49e3-b966-6f6ffb139bec
@@ -100,6 +101,30 @@ Hierarchy:
                         NearClipPlane: 0.0
                         FarClipPlane: 0.1
                         Slot: 22e7a61e-940b-4bf3-8332-c0b9074cd7f5
+        -   Entity:
+                Id: 758aa04b-f96e-40e7-b903-12bf3fd17a7d
+                Name: SistemaSonido
+                Components:
+                    08a4277822df192d07d31b06087b6540: !TransformComponent
+                        Id: 406f325f-058c-4aac-a77f-2a1a3e712429
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    479bb33f5cfe53f1ea65b9b1e53449b9: !Terracota.SistemaSonido,Terracota
+                        Id: 46a3d677-2aab-456a-bcab-46c1e7c56cd9
+                        "músicaMelodía": null
+                        "músicaTambores": null
+                        "músicaVictoria": null
+                        "sonidoBotónEntra": 9b8c7d8f-f5c1-4104-98f2-cf392a9c7a85:Sonidos/Ligero1
+                        "sonidoBotónSale": a3099482-7cbf-4555-bcb6-680312a6b681:Sonidos/Ligero2
+                        "sonidoCañonazo": null
+                        "sonidoCañónVertical": 7a0d5c4e-b878-4026-9199-2aaf525996bb:Sonidos/Golpe1
+                        "sonidoCañónHorizontal": 2e106ca4-ea61-4348-b55a-f5fd4c528dd1:Sonidos/Golpe2
+                        sonidoBloqueDerrotado: 0b71cc5d-2c18-407b-90da-ff4ea0d6a424:Sonidos/Metal3
+                        sonidoBloqueEstatua: 9d288a88-ecd1-421e-92ee-7887fe28ba13:Sonidos/Metal1
+                        sonidoBloqueCorto: 780c9be8-558d-49d3-9c9a-63185a7448fd:Sonidos/Fuerte2
+                        sonidoBloqueLargo: a910ecdc-0b03-48cb-a977-86686b10df54:Sonidos/Fuerte1
         -   Entity:
                 Id: 8d2b7c8f-2973-49e3-b966-6f6ffb139bec
                 Name: GameProfiler

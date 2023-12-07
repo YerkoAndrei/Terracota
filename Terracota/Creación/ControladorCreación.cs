@@ -70,6 +70,7 @@ public class ControladorCreación : SyncScript
         // Rotación
         if (Input.IsMouseButtonPressed(MouseButton.Right))
         {
+            SistemaSonido.SonarBotónSale();
             EnClicRotarPieza();
         }
 
@@ -106,13 +107,13 @@ public class ControladorCreación : SyncScript
             var númeroStr = resultado.Collider.Entity.GetParent().Name;
             int número = int.Parse(númeroStr[^1].ToString());
 
-            AgregarBloque(tipoBloque, número);
+            ActualizarBloqueActual(tipoBloque, número);
             return true;
         }
         return false;
     }
 
-    public void AgregarBloque(TipoBloque tipoBloque, int id)
+    public void ActualizarBloqueActual(TipoBloque tipoBloque, int id)
     {
         switch(tipoBloque)
         {
@@ -126,6 +127,7 @@ public class ControladorCreación : SyncScript
                 bloqueActual = largos[id];
                 break;
         }
+        SistemaSonido.SonarBloque(tipoBloque);
         sensor.ReiniciarCuerpo(bloqueActual.tipoBloque, bloqueActual.ObtenerRotación());
     }
 
@@ -184,7 +186,8 @@ public class ControladorCreación : SyncScript
     {
         // Agrega tipo + número
         var código = bloqueActual.tipoBloque.ToString() + bloqueActual.ObtenerNúmero();
-        bloqueActual.Colocar();
+        bloqueActual.Colocar();;
+        SistemaSonido.SonarBloque(bloqueActual.tipoBloque);
         if (!bloquesListos.Contains(código))
             bloquesListos.Add(código);
     }

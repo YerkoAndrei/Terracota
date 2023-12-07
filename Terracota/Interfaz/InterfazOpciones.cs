@@ -113,6 +113,16 @@ public class InterfazOpciones : StartupScript
         sliderGeneral.ValueChanged += ConfigurarVolumenGeneral;
         sliderMúsica.ValueChanged += ConfigurarVolumenMúsica;
         sliderEfectos.ValueChanged += ConfigurarVolumenEfectos;
+
+        // Sonidos
+        sliderGeneral.TouchDown += (s, a) => { SistemaSonido.SonarBotónEntra(); };
+        sliderGeneral.TouchUp += (s, a) => { SistemaSonido.SonarBotónSale(); };
+
+        sliderMúsica.TouchDown += (s, a) => { SistemaSonido.SonarBotónEntra(); };
+        sliderMúsica.TouchUp += (s, a) => { SistemaSonido.SonarBotónSale(); };
+
+        sliderEfectos.TouchDown += (s, a) => { SistemaSonido.SonarBotónEntra(); };
+        sliderEfectos.TouchUp += (s, a) => { SistemaSonido.SonarBotónSale(); };
     }
 
     private void EnClicIdioma(Idiomas idioma)
@@ -142,6 +152,7 @@ public class InterfazOpciones : StartupScript
         var slider = (Slider)sender;
         SistemaMemoria.GuardarConfiguración(Configuraciones.volumenGeneral, slider.Value.ToString("0.00", CultureInfo.InvariantCulture));
         MostrarResoluciones(false);
+        SistemaSonido.ActualizarVolumenMúsica();
     }
 
     private void ConfigurarVolumenMúsica(object sender, RoutedEventArgs e)
@@ -152,6 +163,7 @@ public class InterfazOpciones : StartupScript
         var slider = (Slider)sender;
         SistemaMemoria.GuardarConfiguración(Configuraciones.volumenMúsica, slider.Value.ToString("0.00", CultureInfo.InvariantCulture));
         MostrarResoluciones(false);
+        SistemaSonido.ActualizarVolumenMúsica();
     }
 
     private void ConfigurarVolumenEfectos(object sender, RoutedEventArgs e)
@@ -230,14 +242,14 @@ public class InterfazOpciones : StartupScript
 
         resoluciónActual.Text = resolución.Replace("x", " x ");
         SistemaMemoria.GuardarConfiguración(Configuraciones.resolución, resolución);
-        ActualizaResolución(ancho, alto);
+        ActualizarResolución(ancho, alto);
         MostrarResoluciones(false);
 
         DesbloquearBotonesResolución();
         BloquearBotón(página.FindVisualChildOfType<Grid>(botón), true);
     }
 
-    private void ActualizaResolución(int ancho, int alto)
+    private void ActualizarResolución(int ancho, int alto)
     {
         // Pantalla completa
         var pantallaCompleta = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.pantallaCompleta));

@@ -63,6 +63,10 @@ public static class Sistema
         // En clic
         botón.Click += (s, a) => { action.Invoke(); };
 
+        // Sonidos
+        botón.TouchDown += (s, a) => { SistemaSonido.SonarBotónEntra(); };
+        botón.TouchUp += (s, a) => { SistemaSonido.SonarBotónSale(); };
+
         // Cambios color
         var colorBase = imagen.Color;
 
@@ -112,6 +116,10 @@ public static class Sistema
     {
         // En clic
         botón.Click += (sender, e) => { action.Invoke(); };
+
+        // Sonidos
+        botón.TouchDown += (s, a) => { SistemaSonido.SonarBotónEntra(); };
+        botón.TouchUp += (s, a) => { SistemaSonido.SonarBotónSale(); };
 
         // Cambios color
         var colorBase = imagen.Color;
