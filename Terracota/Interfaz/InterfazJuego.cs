@@ -6,7 +6,6 @@ using Stride.Graphics;
 using Stride.UI.Panels;
 using Stride.Core.Mathematics;
 using Stride.Input;
-using System.Reflection.Emit;
 
 namespace Terracota;
 using static Sistema;
@@ -295,6 +294,8 @@ public class InterfazJuego : SyncScript
 
         gridGanador.Visibility = Visibility.Visible;
         btnPausa.Visibility = Visibility.Visible;
+
+        SistemaSonido.SonarVictoria();
 
         switch (jugador)
         {

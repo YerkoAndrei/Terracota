@@ -128,6 +128,7 @@ public class ControladorPartidaLocal : SyncScript
     private void Disparar()
     {
         controladorCámara.ActivarEfectoDisparo();
+        SistemaSonido.SonarCañonazo();
 
         if (turnoJugador == TipoJugador.anfitrión)
             cañónActual.Disparar(proyectilAnfitrión, multiplicador);
@@ -236,6 +237,8 @@ public class ControladorPartidaLocal : SyncScript
             interfaz.RestarHuesped(estatuasHuesped);
             estatuasHuesped++;
         }
+
+        SistemaSonido.SonarEstatuaDesactivada();
         VerificarPartida();
     }
 

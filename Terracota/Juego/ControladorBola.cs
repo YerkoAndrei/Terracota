@@ -43,6 +43,7 @@ public class ControladorBola : AsyncScript
             {
                 colisiones++;
                 MostrarEfectos();
+                SistemaSonido.SonarBola();
             }
             
             // Evita colisiones innesesarias

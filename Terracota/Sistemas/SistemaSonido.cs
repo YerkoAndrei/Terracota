@@ -1,6 +1,6 @@
-﻿using Stride.Engine;
+﻿using System.Globalization;
+using Stride.Engine;
 using Stride.Audio;
-using System.Globalization;
 
 namespace Terracota;
 using static Constantes;
@@ -9,7 +9,9 @@ public class SistemaSonido : StartupScript
 {
     public Sound músicaMelodía;
     public Sound músicaTambores;
-    public Sound músicaVictoria;
+
+    public Sound sonidoInicio;
+    public Sound sonidoVictoria;
 
     public Sound sonidoBotónEntra;
     public Sound sonidoBotónSale;
@@ -18,7 +20,9 @@ public class SistemaSonido : StartupScript
     public Sound sonidoCañónVertical;
     public Sound sonidoCañónHorizontal;
 
-    public Sound sonidoBloqueDerrotado;
+    public Sound sonidoBola;
+    public Sound sonidoBloqueEstatuaDesactivada;
+
     public Sound sonidoBloqueEstatua;
     public Sound sonidoBloqueCorto;
     public Sound sonidoBloqueLargo;
@@ -27,6 +31,8 @@ public class SistemaSonido : StartupScript
 
     private SoundInstance melodía;
     private SoundInstance tambores;
+
+    private SoundInstance inicio;
     private SoundInstance victoria;
 
     private SoundInstance botónEntra;
@@ -36,7 +42,8 @@ public class SistemaSonido : StartupScript
     private SoundInstance cañónVertical;
     private SoundInstance cañónHorizontal;
 
-    private SoundInstance bloqueDerrotado;
+    private SoundInstance bola;
+    private SoundInstance bloqueEstatuaDesactivada;
     private SoundInstance bloqueEstatua;
     private SoundInstance bloqueCorto;
     private SoundInstance bloqueLargo;
@@ -47,19 +54,24 @@ public class SistemaSonido : StartupScript
         /*
         melodía = músicaMelodía.CreateInstance();
         tambores = músicaTambores.CreateInstance();
-        victoria = músicaVictoria.CreateInstance();
         */
+        
+        victoria = sonidoInicio.CreateInstance();
+        inicio = sonidoInicio.CreateInstance();
+        
         // Interfaz
         botónEntra = sonidoBotónEntra.CreateInstance();
         botónSale = sonidoBotónSale.CreateInstance();
-
+        
         // Cañón
         cañonazo = sonidoCañonazo.CreateInstance();
         cañónVertical = sonidoCañónVertical.CreateInstance();
         cañónHorizontal = sonidoCañónHorizontal.CreateInstance();
 
         // Bloques
-        bloqueDerrotado = sonidoBloqueDerrotado.CreateInstance();
+        bola = sonidoBola.CreateInstance();
+        bloqueEstatuaDesactivada = sonidoBloqueEstatuaDesactivada.CreateInstance();
+
         bloqueEstatua = sonidoBloqueEstatua.CreateInstance();
         bloqueCorto = sonidoBloqueCorto.CreateInstance();
         bloqueLargo = sonidoBloqueLargo.CreateInstance();
@@ -77,11 +89,12 @@ public class SistemaSonido : StartupScript
     }
 
     public static void CambiarMúsica(bool tambores)
-    {
+    {/*
+        //PENDIENTE: subir volumen de a poco
         if(tambores)
             instancia.tambores.Volume = ObtenerVolumen(Configuraciones.volumenMúsica);
         else
-            instancia.tambores.Volume = 0;
+            instancia.tambores.Volume = 0;*/
     }
 
     public static void SonarVictoria()
@@ -89,6 +102,20 @@ public class SistemaSonido : StartupScript
         instancia.victoria.Stop();
         instancia.victoria.Volume = ObtenerVolumen(Configuraciones.volumenMúsica);
         instancia.victoria.PlayExclusive();
+    }
+
+    public static void SonarInicio()
+    {
+        instancia.inicio.Stop();
+        instancia.inicio.Volume = ObtenerVolumen(Configuraciones.volumenMúsica);
+        instancia.inicio.PlayExclusive();
+    }
+
+    public static void SonarRuleta()
+    {
+        instancia.botónEntra.Stop();
+        instancia.botónEntra.Volume = ObtenerVolumen(Configuraciones.volumenMúsica);
+        instancia.botónEntra.PlayExclusive();
     }
 
     public static void SonarBotónEntra()
@@ -126,13 +153,14 @@ public class SistemaSonido : StartupScript
         instancia.cañónHorizontal.PlayExclusive();
     }
 
-    public static void SonarEstatuaDerrotada()
+    public static void SonarEstatuaDesactivada()
     {
-        instancia.bloqueDerrotado.Stop();
-        instancia.bloqueDerrotado.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
-        instancia.bloqueDerrotado.PlayExclusive();
+        instancia.bloqueEstatuaDesactivada.Stop();
+        instancia.bloqueEstatuaDesactivada.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+        instancia.bloqueEstatuaDesactivada.PlayExclusive();
     }
 
+    // Creación
     public static void SonarBloque(TipoBloque bloque)
     {
         switch (bloque)
@@ -155,20 +183,45 @@ public class SistemaSonido : StartupScript
         }
     }
 
-    // Sonido espaciado
-    public static Sound ObtenerSonidoBloque(TipoBloque bloque)
+    // Juego
+    public static void SonarBola()
     {
-        switch(bloque)
+        // PENDIENTE: volumen según fuerza
+        if (instancia.bola.PlayState == Stride.Media.PlayState.Playing)
+            return;
+
+        instancia.bola.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+        instancia.bola.PlayExclusive();
+    }
+
+    public static void SonarBloqueFísico(TipoBloque bloque)
+    {
+        // PENDIENTE: volumen según fuerza
+        switch (bloque)
         {
             case TipoBloque.estatua:
-                return instancia.sonidoBloqueEstatua;
+                if (instancia.bloqueEstatua.PlayState == Stride.Media.PlayState.Playing)
+                    return;
+
+                instancia.bloqueEstatua.Stop();
+                instancia.bloqueEstatua.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+                instancia.bloqueEstatua.PlayExclusive();
+                break;
             case TipoBloque.corto:
-                return instancia.sonidoBloqueCorto;
+                if (instancia.bloqueCorto.PlayState == Stride.Media.PlayState.Playing)
+                    return;
+
+                instancia.bloqueCorto.Stop();
+                instancia.bloqueCorto.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+                instancia.bloqueCorto.PlayExclusive();
+                break;
             case TipoBloque.largo:
-                return instancia.sonidoBloqueLargo;
-            default:
-            case TipoBloque.nada:
-                return null;
+                if (instancia.bloqueLargo.PlayState == Stride.Media.PlayState.Playing)
+                    return;
+
+                instancia.bloqueLargo.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+                instancia.bloqueLargo.PlayExclusive();
+                break;
         }
     }
 

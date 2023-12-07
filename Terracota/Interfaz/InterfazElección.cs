@@ -161,6 +161,8 @@ public class InterfazElección : StartupScript
 
         controladorPartida.RotarXCámara(1.5f);
         await FinalizarRuleta();
+
+        SistemaSonido.CambiarMúsica(true);
         SistemaAnimación.AnimarElemento(animSuperior, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, () =>
         {
             controladorPartida.ComenzarPartida(ganaAnfitrión);
@@ -226,7 +228,10 @@ public class InterfazElección : StartupScript
         controladorPartida.RotarXCámara(4.5f);
         var aleatorio = RangoAleatorio(40, 51);
         await MoverRuleta(aleatorio);
+        SistemaSonido.SonarInicio();
         await FinalizarRuleta();
+
+        SistemaSonido.CambiarMúsica(true);
         SistemaAnimación.AnimarElemento(animSuperior, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, () =>
         {
             controladorPartida.ComenzarPartida(ganaAnfitrión);
@@ -256,6 +261,7 @@ public class InterfazElección : StartupScript
             if (toqueActual >= diezAntes)
                 delay += 40;
 
+            SistemaSonido.SonarRuleta();
             await Task.Delay(delay);
         }
 
@@ -291,6 +297,7 @@ public class InterfazElección : StartupScript
 
         // Fin
         await Task.Delay(1800);
+        SistemaSonido.SonarInicio();
     }
 
     private void ApagarRuleta()
