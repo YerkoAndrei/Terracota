@@ -1,6 +1,8 @@
 ﻿using System.Globalization;
+using System.Threading.Tasks;
 using Stride.Engine;
 using Stride.Audio;
+using Stride.Core.Mathematics;
 
 namespace Terracota;
 using static Constantes;
@@ -88,13 +90,33 @@ public class SistemaSonido : StartupScript
         tambores.Play();*/
     }
 
-    public static void CambiarMúsica(bool tambores)
+    public static async void CambiarMúsica(bool tambores)
     {/*
-        //PENDIENTE: subir volumen de a poco
-        if(tambores)
-            instancia.tambores.Volume = ObtenerVolumen(Configuraciones.volumenMúsica);
+        if (tambores)
+            await CambiarVolumenTambores(0, ObtenerVolumen(Configuraciones.volumenMúsica));
         else
-            instancia.tambores.Volume = 0;*/
+            await CambiarVolumenTambores(ObtenerVolumen(Configuraciones.volumenMúsica), 0);*/
+    }
+
+    private static async Task CambiarVolumenTambores(float inicio, float final)
+    {
+        float duración = 1;
+        float tiempoLerp = 0;
+        float tiempo = 0;
+
+        while (tiempoLerp < duración)
+        {
+            tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
+
+            instancia.tambores.Volume = MathUtil.Lerp(inicio, final, tiempo);
+            tiempoLerp += (float)instancia.Game.UpdateTime.Elapsed.TotalSeconds;
+
+            // Task.Delay se muestra con lag visual, pero en sonido no se nota
+            await Task.Delay(1);
+        }
+
+        // Fin
+        instancia.tambores.Volume = final;
     }
 
     public static void SonarVictoria()
@@ -184,19 +206,17 @@ public class SistemaSonido : StartupScript
     }
 
     // Juego
-    public static void SonarBola()
+    public static void SonarBola(float fuerza)
     {
-        // PENDIENTE: volumen según fuerza
         if (instancia.bola.PlayState == Stride.Media.PlayState.Playing)
             return;
 
-        instancia.bola.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+        instancia.bola.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * fuerza;
         instancia.bola.PlayExclusive();
     }
 
-    public static void SonarBloqueFísico(TipoBloque bloque)
+    public static void SonarBloqueFísico(TipoBloque bloque, float fuerza)
     {
-        // PENDIENTE: volumen según fuerza
         switch (bloque)
         {
             case TipoBloque.estatua:
@@ -204,7 +224,7 @@ public class SistemaSonido : StartupScript
                     return;
 
                 instancia.bloqueEstatua.Stop();
-                instancia.bloqueEstatua.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+                instancia.bloqueEstatua.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * fuerza;
                 instancia.bloqueEstatua.PlayExclusive();
                 break;
             case TipoBloque.corto:
@@ -212,14 +232,14 @@ public class SistemaSonido : StartupScript
                     return;
 
                 instancia.bloqueCorto.Stop();
-                instancia.bloqueCorto.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+                instancia.bloqueCorto.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * fuerza;
                 instancia.bloqueCorto.PlayExclusive();
                 break;
             case TipoBloque.largo:
                 if (instancia.bloqueLargo.PlayState == Stride.Media.PlayState.Playing)
                     return;
 
-                instancia.bloqueLargo.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+                instancia.bloqueLargo.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * fuerza;
                 instancia.bloqueLargo.PlayExclusive();
                 break;
         }

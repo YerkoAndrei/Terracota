@@ -13,11 +13,21 @@ public class ElementoSonido : AsyncScript
 
         while (Game.IsRunning)
         {
-            await cuerpo.NewCollision();
+            var colisión = await cuerpo.NewCollision();
 
             // Primero de posicionamiento no suena
             if (primero)
-                SistemaSonido.SonarBloqueFísico(elemento.tipoBloque);
+            {
+                // Obtiene fuerza bola
+                var controladorBola = colisión.ColliderA.Entity.Get<ControladorBola>();
+                if (controladorBola == null)
+                    controladorBola = colisión.ColliderB.Entity.Get<ControladorBola>();
+                
+                if(controladorBola != null)
+                    SistemaSonido.SonarBloqueFísico(elemento.tipoBloque, controladorBola.ObtenerFuerza());
+                else
+                    SistemaSonido.SonarBloqueFísico(elemento.tipoBloque, 0.5f);
+            }
             else
                 primero = true;
 

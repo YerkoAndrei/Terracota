@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
@@ -43,7 +44,7 @@ public class ControladorBola : AsyncScript
             {
                 colisiones++;
                 MostrarEfectos();
-                SistemaSonido.SonarBola();
+                SistemaSonido.SonarBola(ObtenerFuerza());
             }
             
             // Evita colisiones innesesarias
@@ -112,6 +113,16 @@ public class ControladorBola : AsyncScript
         // Removiendo entidad
         if (removerDeEscena)
             escena.Entities.Remove(Entity);
+    }
+
+    public float ObtenerFuerza()
+    {
+        var velocidad = cuerpo.LinearVelocity;
+        velocidad.Normalize();
+
+        // velocidad.Z es dirección de disparo
+        // ¿Variar más?
+        return MathF.Abs(velocidad.Z) - 0.1f;
     }
 
     // Metralla es destruida en orden por ControladorCañón

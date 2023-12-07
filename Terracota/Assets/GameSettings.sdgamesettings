@@ -22,7 +22,7 @@ Defaults:
     - !Stride.Assets.Textures.TextureSettings,Stride.Assets
         TextureQuality: Best
     - !Stride.Physics.PhysicsSettings,Stride.Physics
-        Flags: MultiThreaded, UseHardwareWhenPossible, ContinuousCollisionDetection
+        Flags: MultiThreaded, UseHardwareWhenPossible
         FixedTimeStep: 0.016666668
         MaxTickDuration: 0.008333334
         Gravity: {X: 0.0, Y: -10.0, Z: 0.0}
