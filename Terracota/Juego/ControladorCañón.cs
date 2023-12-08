@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Input;
 using Stride.Engine;
@@ -32,6 +33,12 @@ public class ControladorCañón : SyncScript
 
     private bool activo;
     private InterfazJuego interfaz;
+
+    private float deltaXRotado;
+    private float deltaYRotado;
+
+    private bool deltaXPositivo;
+    private bool deltaYPositivo;
 
     public override void Start() { }
 
@@ -73,10 +80,14 @@ public class ControladorCañón : SyncScript
             soporte.Transform.RotationEulerXYZ += new Vector3(0, -(Input.MouseDelta.X * sensibilidadX), 0);
             ruedaIzquierda.Transform.RotationEulerXYZ += new Vector3(-(Input.MouseDelta.X * sensibilidadX), 0, 0);
             ruedaDerecha.Transform.RotationEulerXYZ += new Vector3((Input.MouseDelta.X * sensibilidadX), 0, 0);
+            SonarX(Input.MouseDelta.X);
         }
 
         if (Input.MouseDelta.Y != 0 && ánguloX < 60 && ánguloX > -40)
+        {
             cañón.Transform.RotationEulerXYZ += new Vector3(-(Input.MouseDelta.Y * sensibilidadY), 0, 0);
+            SonarY(Input.MouseDelta.Y);
+        }
     }
 
     private void MoverCañónMóvil()
@@ -138,6 +149,44 @@ public class ControladorCañón : SyncScript
 
         partículasHumo.ParticleSystem.ResetSimulation();
         partículasHumo.ParticleSystem.Play();        
+    }
+
+    private void SonarX(float delta)
+    {
+        // Reinicia si cambia dirección
+        var positivo = delta > 0;
+        if (deltaXPositivo != positivo)
+        {
+            deltaXPositivo = positivo;
+            deltaXRotado = 0;
+        }
+
+        // Suena según sensibilidad
+        deltaXRotado += MathF.Abs(delta);
+        if(deltaXRotado >= 0.01f)
+        {
+            deltaXRotado = 0;
+            SistemaSonido.SonarCañónHorizontal();
+        }
+    }
+
+    private void SonarY(float delta)
+    {
+        // Reinicia si cambia dirección
+        var positivo = delta > 0;
+        if (deltaYPositivo != positivo)
+        {
+            deltaYPositivo = positivo;
+            deltaYRotado = 0;
+        }
+
+        // Suena según sensibilidad
+        deltaYRotado += MathF.Abs(delta);
+        if (deltaYRotado >= 0.01f)
+        {
+            deltaYRotado = 0;
+            SistemaSonido.SonarCañónVertical();
+        }
     }
 
     private async Task DestruirMetralla(ControladorBola controladorBola, int tiempo)

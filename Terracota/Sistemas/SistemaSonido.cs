@@ -161,17 +161,23 @@ public class SistemaSonido : StartupScript
         instancia.cañonazo.PlayExclusive();
     }
 
+
     public static void SonarCañónVertical()
     {
+        if (instancia.cañónVertical.PlayState == Stride.Media.PlayState.Playing)
+            return;
+
         instancia.cañónVertical.Stop();
-        instancia.cañónVertical.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+        instancia.cañónVertical.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.5f;
         instancia.cañónVertical.PlayExclusive();
     }
 
     public static void SonarCañónHorizontal()
     {
-        instancia.cañónHorizontal.Stop();
-        instancia.cañónHorizontal.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+        if (instancia.cañónHorizontal.PlayState == Stride.Media.PlayState.Playing)
+            return;
+
+        instancia.cañónHorizontal.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.5f;
         instancia.cañónHorizontal.PlayExclusive();
     }
 
