@@ -57,9 +57,9 @@ public class SistemaSonido : StartupScript
         melodía = músicaMelodía.CreateInstance();
         tambores = músicaTambores.CreateInstance();
         */
-        
-        victoria = sonidoInicio.CreateInstance();
+
         inicio = sonidoInicio.CreateInstance();
+        victoria = sonidoVictoria.CreateInstance();
         
         // Interfaz
         botónEntra = sonidoBotónEntra.CreateInstance();
@@ -135,9 +135,9 @@ public class SistemaSonido : StartupScript
 
     public static void SonarRuleta()
     {
-        instancia.botónEntra.Stop();
-        instancia.botónEntra.Volume = ObtenerVolumen(Configuraciones.volumenMúsica);
-        instancia.botónEntra.PlayExclusive();
+        instancia.botónSale.Stop();
+        instancia.botónSale.Volume = ObtenerVolumen(Configuraciones.volumenMúsica) * 0.4f;
+        instancia.botónSale.PlayExclusive();
     }
 
     public static void SonarBotónEntra()
@@ -168,7 +168,7 @@ public class SistemaSonido : StartupScript
             return;
 
         instancia.cañónVertical.Stop();
-        instancia.cañónVertical.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.5f;
+        instancia.cañónVertical.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.4f;
         instancia.cañónVertical.PlayExclusive();
     }
 
@@ -177,7 +177,7 @@ public class SistemaSonido : StartupScript
         if (instancia.cañónHorizontal.PlayState == Stride.Media.PlayState.Playing)
             return;
 
-        instancia.cañónHorizontal.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.5f;
+        instancia.cañónHorizontal.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.4f;
         instancia.cañónHorizontal.PlayExclusive();
     }
 
