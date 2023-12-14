@@ -161,8 +161,8 @@ public class InterfazElección : StartupScript
 
         controladorPartida.RotarXCámara(1.5f);
         await FinalizarRuleta();
-
         SistemaSonido.CambiarMúsica(true);
+
         SistemaAnimación.AnimarElemento(animSuperior, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, () =>
         {
             controladorPartida.ComenzarPartida(ganaAnfitrión);
@@ -229,9 +229,10 @@ public class InterfazElección : StartupScript
         var aleatorio = RangoAleatorio(40, 51);
         await MoverRuleta(aleatorio);
         SistemaSonido.SonarInicio();
-        await FinalizarRuleta();
 
+        await FinalizarRuleta();
         SistemaSonido.CambiarMúsica(true);
+
         SistemaAnimación.AnimarElemento(animSuperior, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, () =>
         {
             controladorPartida.ComenzarPartida(ganaAnfitrión);

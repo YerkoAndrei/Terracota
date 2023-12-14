@@ -150,8 +150,6 @@ public class SistemaEscenas : SyncScript
         siguienteEscena = escena;
         ocultando = true;
         abriendo = false;
-
-        SistemaSonido.CambiarMúsica(false);
     }
 
     private async void CargarEscena()

@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Stride.Engine;
 using Stride.Audio;
+using Stride.Media;
 using Stride.Core.Mathematics;
 
 namespace Terracota;
@@ -10,7 +11,7 @@ using static Constantes;
 public class SistemaSonido : StartupScript
 {
     public Sound músicaMelodía;
-    public Sound músicaTambores;
+    public Sound músicaPercusión;
 
     public Sound sonidoInicio;
     public Sound sonidoVictoria;
@@ -32,7 +33,7 @@ public class SistemaSonido : StartupScript
     private static SistemaSonido instancia;
 
     private SoundInstance melodía;
-    private SoundInstance tambores;
+    private SoundInstance perscusión;
 
     private SoundInstance inicio;
     private SoundInstance victoria;
@@ -50,14 +51,15 @@ public class SistemaSonido : StartupScript
     private SoundInstance bloqueCorto;
     private SoundInstance bloqueLargo;
 
+    private bool percusiónActiva;
+
     public override void Start()
     {
         instancia = this;
-        /*
+        
         melodía = músicaMelodía.CreateInstance();
-        tambores = músicaTambores.CreateInstance();
-        */
-
+        perscusión = músicaPercusión.CreateInstance();
+        
         inicio = sonidoInicio.CreateInstance();
         victoria = sonidoVictoria.CreateInstance();
         
@@ -78,29 +80,37 @@ public class SistemaSonido : StartupScript
         bloqueCorto = sonidoBloqueCorto.CreateInstance();
         bloqueLargo = sonidoBloqueLargo.CreateInstance();
 
-        /*
         // Música
+        percusiónActiva = false;
+
+        melodía.Volume = 0;
+        perscusión.Volume = 0;
         ActualizarVolumenMúsica();
-        CambiarMúsica(false);
         
         melodía.IsLooping = true;
-        tambores.IsLooping = true;
+        perscusión.IsLooping = true;
 
         melodía.Play();
-        tambores.Play();*/
+        perscusión.Play();
     }
 
-    public static async void CambiarMúsica(bool tambores)
-    {/*
-        if (tambores)
+    public static async void CambiarMúsica(bool percusión)
+    {
+        if (percusión)
+        {
+            instancia.percusiónActiva = true;
             await CambiarVolumenTambores(0, ObtenerVolumen(Configuraciones.volumenMúsica));
-        else
-            await CambiarVolumenTambores(ObtenerVolumen(Configuraciones.volumenMúsica), 0);*/
+        }
+        else if(!percusión && instancia.percusiónActiva)
+        {
+            instancia.percusiónActiva = false;
+            await CambiarVolumenTambores(ObtenerVolumen(Configuraciones.volumenMúsica), 0);
+        }
     }
 
     private static async Task CambiarVolumenTambores(float inicio, float final)
     {
-        float duración = 1;
+        float duración = 2;
         float tiempoLerp = 0;
         float tiempo = 0;
 
@@ -108,7 +118,7 @@ public class SistemaSonido : StartupScript
         {
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
 
-            instancia.tambores.Volume = MathUtil.Lerp(inicio, final, tiempo);
+            instancia.perscusión.Volume = MathUtil.Lerp(inicio, final, tiempo);
             tiempoLerp += (float)instancia.Game.UpdateTime.Elapsed.TotalSeconds;
 
             // Task.Delay se muestra con lag visual, pero en sonido no se nota
@@ -116,7 +126,7 @@ public class SistemaSonido : StartupScript
         }
 
         // Fin
-        instancia.tambores.Volume = final;
+        instancia.perscusión.Volume = final;
     }
 
     public static void SonarVictoria()
@@ -164,20 +174,20 @@ public class SistemaSonido : StartupScript
 
     public static void SonarCañónVertical()
     {
-        if (instancia.cañónVertical.PlayState == Stride.Media.PlayState.Playing)
+        if (instancia.cañónVertical.PlayState == PlayState.Playing)
             return;
 
         instancia.cañónVertical.Stop();
-        instancia.cañónVertical.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.4f;
+        instancia.cañónVertical.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.2f;
         instancia.cañónVertical.PlayExclusive();
     }
 
     public static void SonarCañónHorizontal()
     {
-        if (instancia.cañónHorizontal.PlayState == Stride.Media.PlayState.Playing)
+        if (instancia.cañónHorizontal.PlayState == PlayState.Playing)
             return;
 
-        instancia.cañónHorizontal.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.4f;
+        instancia.cañónHorizontal.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.2f;
         instancia.cañónHorizontal.PlayExclusive();
     }
 
@@ -214,7 +224,7 @@ public class SistemaSonido : StartupScript
     // Juego
     public static void SonarBola(float fuerza)
     {
-        if (instancia.bola.PlayState == Stride.Media.PlayState.Playing)
+        if (instancia.bola.PlayState == PlayState.Playing)
             return;
 
         instancia.bola.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * fuerza;
@@ -226,7 +236,7 @@ public class SistemaSonido : StartupScript
         switch (bloque)
         {
             case TipoBloque.estatua:
-                if (instancia.bloqueEstatua.PlayState == Stride.Media.PlayState.Playing)
+                if (instancia.bloqueEstatua.PlayState == PlayState.Playing)
                     return;
 
                 instancia.bloqueEstatua.Stop();
@@ -234,7 +244,7 @@ public class SistemaSonido : StartupScript
                 instancia.bloqueEstatua.PlayExclusive();
                 break;
             case TipoBloque.corto:
-                if (instancia.bloqueCorto.PlayState == Stride.Media.PlayState.Playing)
+                if (instancia.bloqueCorto.PlayState == PlayState.Playing)
                     return;
 
                 instancia.bloqueCorto.Stop();
@@ -242,7 +252,7 @@ public class SistemaSonido : StartupScript
                 instancia.bloqueCorto.PlayExclusive();
                 break;
             case TipoBloque.largo:
-                if (instancia.bloqueLargo.PlayState == Stride.Media.PlayState.Playing)
+                if (instancia.bloqueLargo.PlayState == PlayState.Playing)
                     return;
 
                 instancia.bloqueLargo.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * fuerza;
@@ -253,9 +263,11 @@ public class SistemaSonido : StartupScript
 
     // Música
     public static void ActualizarVolumenMúsica()
-    {/*
+    {
         instancia.melodía.Volume = ObtenerVolumen(Configuraciones.volumenMúsica);
-        instancia.tambores.Volume = ObtenerVolumen(Configuraciones.volumenMúsica);*/
+
+        if(instancia.percusiónActiva)
+            instancia.perscusión.Volume = ObtenerVolumen(Configuraciones.volumenMúsica);
     }
 
     // Mezclador

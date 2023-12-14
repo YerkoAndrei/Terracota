@@ -174,6 +174,7 @@ public class InterfazJuego : SyncScript
         if (animando)
             return;
 
+        SistemaSonido.CambiarMúsica(false);
         SistemaEscenas.CambiarEscena(Escenas.local);
     }
 
@@ -195,6 +196,7 @@ public class InterfazJuego : SyncScript
         if (animando)
             return;
 
+        SistemaSonido.CambiarMúsica(false);
         SistemaEscenas.CambiarEscena(Escenas.menú);
     }
 

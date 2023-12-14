@@ -135,7 +135,7 @@ public class SistemaMemoria : StartupScript
             { Configuraciones.sombras.ToString(),           NivelesConfiguración.alto.ToString() },
             { Configuraciones.volumenGeneral.ToString(),    "1" },
             { Configuraciones.volumenMúsica.ToString(),     "0.5" },
-            { Configuraciones.volumenEfectos.ToString(),    "0.5" },
+            { Configuraciones.volumenEfectos.ToString(),    "0.75" },
             { Configuraciones.velocidadRed.ToString(),      "60" },
             { Configuraciones.pantallaCompleta.ToString(),  true.ToString() },
             { Configuraciones.resolución.ToString(),        "1920x1080" }
