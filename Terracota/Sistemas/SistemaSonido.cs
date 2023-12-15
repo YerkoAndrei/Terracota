@@ -85,13 +85,14 @@ public class SistemaSonido : StartupScript
 
         melodía.Volume = 0;
         perscusión.Volume = 0;
-        ActualizarVolumenMúsica();
         
         melodía.IsLooping = true;
         perscusión.IsLooping = true;
 
         melodía.Play();
         perscusión.Play();
+
+        _ = CambiarVolumenMelodía(0, ObtenerVolumen(Configuraciones.volumenMúsica));
     }
 
     public static async void CambiarMúsica(bool percusión)
@@ -108,9 +109,34 @@ public class SistemaSonido : StartupScript
         }
     }
 
-    private static async Task CambiarVolumenTambores(float inicio, float final)
+    private static async Task CambiarVolumenMelodía(float inicio, float final, float duración = 0)
     {
-        float duración = 2;
+        if (duración == 0)
+            duración = 3f;
+
+        float tiempoLerp = 0;
+        float tiempo = 0;
+
+        while (tiempoLerp < duración)
+        {
+            tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
+
+            instancia.melodía.Volume = MathUtil.Lerp(inicio, final, tiempo);
+            tiempoLerp += (float)instancia.Game.UpdateTime.Elapsed.TotalSeconds;
+
+            // Task.Delay se muestra con lag visual, pero en sonido no se nota
+            await Task.Delay(1);
+        }
+
+        // Fin
+        instancia.melodía.Volume = final;
+    }
+
+    private static async Task CambiarVolumenTambores(float inicio, float final, float duración = 0)
+    {
+        if(duración == 0)
+            duración = 1.5f;
+
         float tiempoLerp = 0;
         float tiempo = 0;
 
@@ -129,11 +155,19 @@ public class SistemaSonido : StartupScript
         instancia.perscusión.Volume = final;
     }
 
-    public static void SonarVictoria()
+    public static async Task SonarVictoria()
     {
+        instancia.percusiónActiva = false;
+        await CambiarVolumenTambores(ObtenerVolumen(Configuraciones.volumenMúsica), 0, 0.2f);
+        await CambiarVolumenMelodía(ObtenerVolumen(Configuraciones.volumenMúsica), 0, 0.2f);
+
         instancia.victoria.Stop();
         instancia.victoria.Volume = ObtenerVolumen(Configuraciones.volumenMúsica);
         instancia.victoria.PlayExclusive();
+
+        await Task.Delay(2000);
+        await CambiarVolumenMelodía(0, ObtenerVolumen(Configuraciones.volumenMúsica), 2f);
+        instancia.melodía.Volume = ObtenerVolumen(Configuraciones.volumenMúsica);
     }
 
     public static void SonarInicio()

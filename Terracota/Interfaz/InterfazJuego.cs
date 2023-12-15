@@ -288,7 +288,7 @@ public class InterfazJuego : SyncScript
         estadoHuesped[estatua].Color = Color.Red;
     }
 
-    public void MostrarGanador(TipoJugador jugador, int turno)
+    public async void MostrarGanador(TipoJugador jugador, int turno)
     {
         txtCantidadTurnos.Text = turno.ToString();
         gridProyectil.Visibility = Visibility.Hidden;
@@ -296,8 +296,6 @@ public class InterfazJuego : SyncScript
 
         gridGanador.Visibility = Visibility.Visible;
         btnPausa.Visibility = Visibility.Visible;
-
-        SistemaSonido.SonarVictoria();
 
         switch (jugador)
         {
@@ -324,5 +322,7 @@ public class InterfazJuego : SyncScript
                 }
                 break;
         }
+
+        await SistemaSonido.SonarVictoria();
     }
 }
