@@ -163,10 +163,14 @@ public class ControladorCañón : SyncScript
 
         // Suena según sensibilidad
         deltaXRotado += MathF.Abs(delta);
-        if(deltaXRotado >= 0.01f)
+        if (deltaXRotado >= 0.01f && deltaXRotado < 0.015f)
         {
             deltaXRotado = 0;
             SistemaSonido.SonarCañónHorizontal();
+        }
+        else if (deltaXRotado > 0.01f)
+        {
+            deltaXRotado = 0;
         }
     }
 
@@ -182,10 +186,14 @@ public class ControladorCañón : SyncScript
 
         // Suena según sensibilidad
         deltaYRotado += MathF.Abs(delta);
-        if (deltaYRotado >= 0.01f)
+        if (deltaYRotado >= 0.01f && deltaYRotado < 0.015f)
         {
             deltaYRotado = 0;
             SistemaSonido.SonarCañónVertical();
+        }
+        else if (deltaYRotado > 0.01f)
+        {
+            deltaYRotado = 0;
         }
     }
 

@@ -180,7 +180,7 @@ public class SistemaSonido : StartupScript
         await CambiarVolumenMelodía(ObtenerVolumen(Configuraciones.volumenMúsica), 0, 0.2f);
 
         instancia.victoria.Stop();
-        instancia.victoria.Volume = ObtenerVolumen(Configuraciones.volumenMúsica);
+        instancia.victoria.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
         instancia.victoria.PlayExclusive();
 
         await Task.Delay(2000);
@@ -191,14 +191,14 @@ public class SistemaSonido : StartupScript
     public static void SonarInicio()
     {
         instancia.inicio.Stop();
-        instancia.inicio.Volume = ObtenerVolumen(Configuraciones.volumenMúsica);
+        instancia.inicio.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
         instancia.inicio.PlayExclusive();
     }
 
     public static void SonarRuleta()
     {
         instancia.botónSale.Stop();
-        instancia.botónSale.Volume = ObtenerVolumen(Configuraciones.volumenMúsica) * 0.4f;
+        instancia.botónSale.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.2f;
         instancia.botónSale.PlayExclusive();
     }
 
@@ -226,20 +226,15 @@ public class SistemaSonido : StartupScript
 
     public static void SonarCañónVertical()
     {
-        if (instancia.cañónVertical.PlayState == PlayState.Playing)
-            return;
-
         instancia.cañónVertical.Stop();
-        instancia.cañónVertical.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.2f;
+        instancia.cañónVertical.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.4f;
         instancia.cañónVertical.PlayExclusive();
     }
 
     public static void SonarCañónHorizontal()
     {
-        if (instancia.cañónHorizontal.PlayState == PlayState.Playing)
-            return;
-
-        instancia.cañónHorizontal.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.2f;
+        instancia.cañónHorizontal.Stop();
+        instancia.cañónHorizontal.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.4f;
         instancia.cañónHorizontal.PlayExclusive();
     }
 
