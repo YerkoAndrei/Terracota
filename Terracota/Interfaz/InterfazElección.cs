@@ -49,12 +49,15 @@ public class InterfazElección : StartupScript
 
     private bool esperandoRuleta;
     private bool ganaAnfitrión;
+    private bool partidaCancelada;
 
     // Animación
     private Grid animSuperior;
 
     public override void Start()
     {
+        partidaCancelada = false;
+
         var página = Entity.Get<UIComponent>().Page.RootElement;
 
         // Ruleta
@@ -134,6 +137,7 @@ public class InterfazElección : StartupScript
     private void EnClicVolver()
     {
         esperandoRuleta = false;
+        partidaCancelada = true;
         gridRuleta.Visibility = Visibility.Hidden;
         decoRuleta.Visibility = Visibility.Hidden;
         SistemaEscenas.CambiarEscena(Escenas.menú);
@@ -228,6 +232,10 @@ public class InterfazElección : StartupScript
         controladorPartida.RotarXCámara(4.5f);
         var aleatorio = RangoAleatorio(40, 51);
         await MoverRuleta(aleatorio);
+
+        if (partidaCancelada)
+            return;
+
         SistemaSonido.SonarInicio();
 
         await FinalizarRuleta();
@@ -246,7 +254,7 @@ public class InterfazElección : StartupScript
         int ruletaActual = 0;
         int delay = 45;
 
-        while (toqueActual < toques && esperandoRuleta)
+        while (toqueActual < toques && esperandoRuleta && !partidaCancelada)
         {
             toqueActual++;
             ruletaActual++;

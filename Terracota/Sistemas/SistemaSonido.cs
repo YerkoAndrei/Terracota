@@ -52,6 +52,7 @@ public class SistemaSonido : StartupScript
     private SoundInstance bloqueLargo;
 
     private bool percusiónActiva;
+    private bool cambiandoMúsica;
 
     public override void Start()
     {
@@ -89,23 +90,30 @@ public class SistemaSonido : StartupScript
         melodía.IsLooping = true;
         perscusión.IsLooping = true;
 
-        melodía.Play();
-        perscusión.Play();
-
         _ = CambiarVolumenMelodía(0, ObtenerVolumen(Configuraciones.volumenMúsica));
     }
 
-    public static async void CambiarMúsica(bool percusión)
+    public static async void CambiarMúsica(bool percusión, float duración = 0)
     {
         if (percusión)
         {
             instancia.percusiónActiva = true;
-            await CambiarVolumenTambores(0, ObtenerVolumen(Configuraciones.volumenMúsica));
+
+            // Delay(2) para esperar async
+            instancia.cambiandoMúsica = true;
+            await Task.Delay(2);
+            instancia.cambiandoMúsica = false;
+            await CambiarVolumenTambores(0, ObtenerVolumen(Configuraciones.volumenMúsica), duración);
         }
         else if(!percusión && instancia.percusiónActiva)
         {
             instancia.percusiónActiva = false;
-            await CambiarVolumenTambores(ObtenerVolumen(Configuraciones.volumenMúsica), 0);
+
+            // Delay(2) para esperar async
+            instancia.cambiandoMúsica = true;
+            await Task.Delay(2);
+            instancia.cambiandoMúsica = false;
+            await CambiarVolumenTambores(ObtenerVolumen(Configuraciones.volumenMúsica), 0, duración);
         }
     }
 
@@ -116,6 +124,10 @@ public class SistemaSonido : StartupScript
 
         float tiempoLerp = 0;
         float tiempo = 0;
+
+        await Task.Delay(1000);
+        instancia.melodía.Play();
+        instancia.perscusión.Play();
 
         while (tiempoLerp < duración)
         {
@@ -149,6 +161,12 @@ public class SistemaSonido : StartupScript
 
             // Task.Delay se muestra con lag visual, pero en sonido no se nota
             await Task.Delay(1);
+
+            if (instancia.cambiandoMúsica)
+            {
+                instancia.cambiandoMúsica = false;
+                return;
+            }
         }
 
         // Fin

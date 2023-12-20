@@ -154,6 +154,7 @@ public class InterfazJuego : SyncScript
         if (pausa)
         {
             gridPausa.Visibility = Visibility.Visible;
+            SistemaSonido.CambiarMúsica(false, 0.5f);
             SistemaAnimación.AnimarElemento(animPausa, 0.2f, true, Direcciones.arriba, TipoCurva.rápida, () =>
             {
                 animando = false;
@@ -161,6 +162,7 @@ public class InterfazJuego : SyncScript
         }
         else
         {
+            SistemaSonido.CambiarMúsica(true, 0.5f);
             SistemaAnimación.AnimarElemento(animPausa, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, () =>
             {
                 gridPausa.Visibility = Visibility.Hidden;
