@@ -224,17 +224,31 @@ public class SistemaSonido : StartupScript
     }
 
 
-    public static void SonarCañónVertical()
+    public static void SonarCañónVertical(bool forzarSilencio)
     {
-        instancia.cañónVertical.Stop();
-        instancia.cañónVertical.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.4f;
+        // Si va muy rápido suena mas despacio
+        if (instancia.cañónVertical.PlayState == PlayState.Playing || forzarSilencio)
+        {
+            instancia.cañónVertical.Stop();
+            instancia.cañónVertical.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.015f;
+        }
+        else
+            instancia.cañónVertical.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.4f;
+
         instancia.cañónVertical.PlayExclusive();
     }
 
-    public static void SonarCañónHorizontal()
+    public static void SonarCañónHorizontal(bool forzarSilencio)
     {
-        instancia.cañónHorizontal.Stop();
-        instancia.cañónHorizontal.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.4f;
+        // Si va muy rápido suena más despacio
+        if (instancia.cañónHorizontal.PlayState == PlayState.Playing || forzarSilencio)
+        {
+            instancia.cañónHorizontal.Stop();
+            instancia.cañónHorizontal.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.015f;
+        }
+        else
+            instancia.cañónHorizontal.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.4f;
+
         instancia.cañónHorizontal.PlayExclusive();
     }
 

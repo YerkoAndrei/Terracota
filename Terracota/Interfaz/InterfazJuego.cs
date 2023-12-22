@@ -290,8 +290,14 @@ public class InterfazJuego : SyncScript
         estadoHuesped[estatua].Color = Color.Red;
     }
 
+    public bool ObtenerActivo()
+    {
+        return activo;
+    }
+
     public async void MostrarGanador(TipoJugador jugador, int turno)
     {
+        activo = false;
         txtCantidadTurnos.Text = turno.ToString();
         gridProyectil.Visibility = Visibility.Hidden;
         gridTurno.Visibility = Visibility.Hidden;
