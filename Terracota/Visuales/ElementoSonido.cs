@@ -58,7 +58,7 @@ public class ElementoSonido : AsyncScript
             return;
 
         // Rango aleatorio da un poco de vida a los sonidos
-        instanciaSonido.Volume = SistemaSonido.ObtenerVolumen(Configuraciones.volumenEfectos) * (fuerza - RangoAleatorio(0f, 0.9f));
+        instanciaSonido.Volume = SistemaSonido.ObtenerVolumen(Configuraciones.volumenEfectos) * (fuerza - RangoAleatorio(0.0f, 0.8f));
         instanciaSonido.PlayExclusive();
     }
 

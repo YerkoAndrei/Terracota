@@ -45,7 +45,10 @@ public class ControladorBola : AsyncScript
             {
                 colisiones++;
                 MostrarEfectos();
-                SistemaSonido.SonarBola(ObtenerMayorFuerzaLinearNormalizada());
+
+                // Solo suena cuando está sola
+                if (colisión.ColliderA.Entity.Get<ElementoSonido>() == null && colisión.ColliderB.Entity.Get<ElementoSonido>() == null)
+                    SistemaSonido.SonarBola(ObtenerMayorFuerzaLinearNormalizada());
             }
             
             // Evita colisiones innesesarias
@@ -128,7 +131,7 @@ public class ControladorBola : AsyncScript
             case TipoProyectil.bola:
                 return ObtenerMayorValor(velocidad);
             case TipoProyectil.metralla:
-                return ObtenerMayorValor(velocidad) * 0.5f;
+                return ObtenerMayorValor(velocidad) * 0.6f;
         }
     }
 
