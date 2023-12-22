@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.UI;
@@ -95,7 +96,12 @@ public class InterfazMenú : StartupScript
         if (animando)
             return;
 
-        // Abrir panel
+        try
+        {
+            // Abre navegador
+            Process.Start(new ProcessStartInfo { FileName = "https://yerkoandrei.itch.io", UseShellExecute = true });
+        }
+        catch { }        
     }
 
     private void EnClicSalir()
