@@ -91,7 +91,7 @@ public class SistemaSonido : StartupScript
         melodía.IsLooping = true;
         perscusión.IsLooping = true;
 
-        _ = CambiarVolumenMelodía(0, ObtenerVolumen(Configuraciones.volumenMúsica));
+        _ = CambiarVolumenMelodía(0, ObtenerVolumen(Configuraciones.volumenMúsica), true);
     }
 
     public static async void CambiarMúsica(bool percusión, float duración = 0)
@@ -118,7 +118,7 @@ public class SistemaSonido : StartupScript
         }
     }
 
-    private static async Task CambiarVolumenMelodía(float inicio, float final, float duración = 0)
+    private static async Task CambiarVolumenMelodía(float inicio, float final, bool iniciando, float duración = 0)
     {
         if (duración == 0)
             duración = 3f;
@@ -126,9 +126,12 @@ public class SistemaSonido : StartupScript
         float tiempoLerp = 0;
         float tiempo = 0;
 
-        await Task.Delay(1000);
-        instancia.melodía.Play();
-        instancia.perscusión.Play();
+        if (iniciando)
+        {
+            await Task.Delay(1000);
+            instancia.melodía.Play();
+            instancia.perscusión.Play();
+        }
 
         while (tiempoLerp < duración)
         {
@@ -178,14 +181,14 @@ public class SistemaSonido : StartupScript
     {
         instancia.percusiónActiva = false;
         await CambiarVolumenTambores(ObtenerVolumen(Configuraciones.volumenMúsica), 0, 0.2f);
-        await CambiarVolumenMelodía(ObtenerVolumen(Configuraciones.volumenMúsica), 0, 0.2f);
+        await CambiarVolumenMelodía(ObtenerVolumen(Configuraciones.volumenMúsica), 0, false, 0.2f);
 
         instancia.victoria.Stop();
         instancia.victoria.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
         instancia.victoria.PlayExclusive();
 
         await Task.Delay(2000);
-        await CambiarVolumenMelodía(0, ObtenerVolumen(Configuraciones.volumenMúsica), 2f);
+        await CambiarVolumenMelodía(0, ObtenerVolumen(Configuraciones.volumenMúsica), false, 2f);
         instancia.melodía.Volume = ObtenerVolumen(Configuraciones.volumenMúsica);
     }
 
