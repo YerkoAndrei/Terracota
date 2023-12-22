@@ -5,6 +5,7 @@ using Stride.Engine;
 using Stride.Physics;
 
 namespace Terracota;
+using static Sistema;
 using static Constantes;
 
 public class ControladorBola : AsyncScript
@@ -44,7 +45,7 @@ public class ControladorBola : AsyncScript
             {
                 colisiones++;
                 MostrarEfectos();
-                SistemaSonido.SonarBola(ObtenerFuerza());
+                SistemaSonido.SonarBola(ObtenerMayorFuerzaLinearNormalizada());
             }
             
             // Evita colisiones innesesarias
@@ -115,14 +116,13 @@ public class ControladorBola : AsyncScript
             escena.Entities.Remove(Entity);
     }
 
-    public float ObtenerFuerza()
+    public float ObtenerMayorFuerzaLinearNormalizada()
     {
+        // Encuentra mayor velocidad normalizada
         var velocidad = cuerpo.LinearVelocity;
         velocidad.Normalize();
 
-        // velocidad.Z es dirección de disparo
-        // ¿Variar más?
-        return MathF.Abs(velocidad.Z) - 0.1f;
+        return ObtenerMayorValor(velocidad);
     }
 
     // Metralla es destruida en orden por ControladorCañón

@@ -267,4 +267,20 @@ public static class Sistema
         var fechaHora = fecha.ToString(ISO8006);
         return fechaHora;
     }
+
+    public static float ObtenerMayorValor(Vector3 velocidad)
+    {
+        var mayor = 0f;
+
+        if (MathF.Abs(velocidad.X) > mayor)
+            mayor = MathF.Abs(velocidad.X);
+
+        if (MathF.Abs(velocidad.Y) > mayor)
+            mayor = MathF.Abs(velocidad.Y);
+
+        if (MathF.Abs(velocidad.Z) > mayor)
+            mayor = MathF.Abs(velocidad.Z);
+
+        return mayor;
+    }
 }
