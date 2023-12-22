@@ -122,7 +122,14 @@ public class ControladorBola : AsyncScript
         var velocidad = cuerpo.LinearVelocity;
         velocidad.Normalize();
 
-        return ObtenerMayorValor(velocidad);
+        switch (tipoProyectil)
+        {
+            default:
+            case TipoProyectil.bola:
+                return ObtenerMayorValor(velocidad);
+            case TipoProyectil.metralla:
+                return ObtenerMayorValor(velocidad) * 0.5f;
+        }
     }
 
     // Metralla es destruida en orden por ControladorCañón
