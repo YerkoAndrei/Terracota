@@ -6,6 +6,7 @@ using Stride.Media;
 using Stride.Core.Mathematics;
 
 namespace Terracota;
+using static Sistema;
 using static Constantes;
 
 public class SistemaSonido : StartupScript
@@ -223,10 +224,9 @@ public class SistemaSonido : StartupScript
         instancia.cañonazo.PlayExclusive();
     }
 
-
     public static void SonarCañónVertical(bool forzarSilencio)
     {
-        // Si va muy rápido suena mas despacio
+        // Si va muy rápido suena más despacio
         if (instancia.cañónVertical.PlayState == PlayState.Playing || forzarSilencio)
         {
             instancia.cañónVertical.Stop();
@@ -250,13 +250,6 @@ public class SistemaSonido : StartupScript
             instancia.cañónHorizontal.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.4f;
 
         instancia.cañónHorizontal.PlayExclusive();
-    }
-
-    public static void SonarEstatuaDesactivada()
-    {
-        instancia.bloqueEstatuaDesactivada.Stop();
-        instancia.bloqueEstatuaDesactivada.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
-        instancia.bloqueEstatuaDesactivada.PlayExclusive();
     }
 
     // Creación
@@ -285,40 +278,30 @@ public class SistemaSonido : StartupScript
     // Juego
     public static void SonarBola(float fuerza)
     {
-        if (instancia.bola.PlayState == PlayState.Playing)
-            return;
-
-        instancia.bola.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * fuerza;
+        instancia.bola.Stop();
+        instancia.bola.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * (fuerza - RangoAleatorio(0f, 0.2f));
         instancia.bola.PlayExclusive();
     }
 
-    public static void SonarBloqueFísico(TipoBloque bloque, float fuerza)
+    public static void SonarEstatuaDesactivada()
+    {
+        instancia.bloqueEstatuaDesactivada.Stop();
+        instancia.bloqueEstatuaDesactivada.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+        instancia.bloqueEstatuaDesactivada.PlayExclusive();
+    }
+
+    public static SoundInstance CrearInstancia(TipoBloque bloque)
     {
         switch (bloque)
         {
             case TipoBloque.estatua:
-                if (instancia.bloqueEstatua.PlayState == PlayState.Playing)
-                    return;
-
-                instancia.bloqueEstatua.Stop();
-                instancia.bloqueEstatua.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * fuerza;
-                instancia.bloqueEstatua.PlayExclusive();
-                break;
+                return instancia.sonidoBloqueEstatua.CreateInstance();
             case TipoBloque.corto:
-                if (instancia.bloqueCorto.PlayState == PlayState.Playing)
-                    return;
-
-                instancia.bloqueCorto.Stop();
-                instancia.bloqueCorto.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * fuerza;
-                instancia.bloqueCorto.PlayExclusive();
-                break;
+                return instancia.sonidoBloqueCorto.CreateInstance();
             case TipoBloque.largo:
-                if (instancia.bloqueLargo.PlayState == PlayState.Playing)
-                    return;
-
-                instancia.bloqueLargo.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * fuerza;
-                instancia.bloqueLargo.PlayExclusive();
-                break;
+                return instancia.sonidoBloqueLargo.CreateInstance();
+            default:
+                return null;
         }
     }
 
@@ -332,7 +315,7 @@ public class SistemaSonido : StartupScript
     }
 
     // Mezclador
-    private static float ObtenerVolumen(Configuraciones volumen)
+    public static float ObtenerVolumen(Configuraciones volumen)
     {
         var volumenGeneral = float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.volumenGeneral), CultureInfo.InvariantCulture);
         switch (volumen)

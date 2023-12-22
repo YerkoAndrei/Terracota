@@ -1,18 +1,23 @@
 ﻿using System.Threading.Tasks;
+using Stride.Audio;
 using Stride.Engine;
 using Stride.Physics;
 
 namespace Terracota;
 using static Sistema;
+using static Constantes;
 
 public class ElementoSonido : AsyncScript
 {
     private RigidbodyComponent cuerpo;
+    private SoundInstance instanciaSonido;
 
     public override async Task Execute()
     {
         var elemento = Entity.Get<ElementoBloque>();
+
         cuerpo = elemento.cuerpo;
+        instanciaSonido = SistemaSonido.CrearInstancia(elemento.tipoBloque);
 
         // Sensibilidades para que suene
         var sensiblidadLinear = 0.025;
@@ -31,20 +36,30 @@ public class ElementoSonido : AsyncScript
             if (ObtenerMayorFuerzaLinear() >= sensiblidadLinear && controladorBola == null)
             {
                 // Volumen base velocidad linear
-                SistemaSonido.SonarBloqueFísico(elemento.tipoBloque, ObtenerMayorFuerzaLinearNormalizada());
+                SonarBloqueFísico(elemento.tipoBloque, ObtenerMayorFuerzaLinearNormalizada());
             }
             else if (ObtenerMayorFuerzaLinear() < sensiblidadLinear && ObtenerMayorFuerzaAngular() >= sensiblidadAngular && controladorBola == null)
             {
                 // Volumen base velocidad angular
-                SistemaSonido.SonarBloqueFísico(elemento.tipoBloque, ObtenerMayorFuerzaAngularNormalizada());
+                SonarBloqueFísico(elemento.tipoBloque, ObtenerMayorFuerzaAngularNormalizada());
             }
             else if (controladorBola != null)
             {
                 // Volumen base velocidad bola
-                SistemaSonido.SonarBloqueFísico(elemento.tipoBloque, controladorBola.ObtenerMayorFuerzaLinearNormalizada());
+                SonarBloqueFísico(elemento.tipoBloque, controladorBola.ObtenerMayorFuerzaLinearNormalizada());
             }
             await Script.NextFrame();
         }
+    }
+
+    public void SonarBloqueFísico(TipoBloque bloque, float fuerza)
+    {
+        if (instanciaSonido.PlayState == Stride.Media.PlayState.Playing)
+            return;
+
+        // Rango aleatorio da un poco de vida a los sonidos
+        instanciaSonido.Volume = SistemaSonido.ObtenerVolumen(Configuraciones.volumenEfectos) * (fuerza - RangoAleatorio(0f, 0.9f));
+        instanciaSonido.PlayExclusive();
     }
 
     // Encuentra mayor velocidad sin normalizar
