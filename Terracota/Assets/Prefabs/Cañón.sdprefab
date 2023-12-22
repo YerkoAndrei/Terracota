@@ -54,7 +54,7 @@ Hierarchy:
                         Control:
                             ResetSeconds: 1.0
                             Control: Stop
-                        Color: {R: 0.39215687, G: 0.39215687, B: 0.39215687, A: 0.39215687}
+                        Color: {R: 0.3529412, G: 0.3529412, B: 0.3529412, A: 0.74509805}
                         Speed: 1.0
                         ParticleSystem:
                             Settings: {}
@@ -84,7 +84,7 @@ Hierarchy:
                                             LoopCondition: OneShot
                                             Delay: {X: 0.0, Y: 0.0}
                                             Duration: {X: 1.0, Y: 1.0}
-                                            SpawnCount: 150
+                                            SpawnCount: 200
                                     Initializers:
                                         38f63c62943ef694052bfd50568e464e: !InitialSizeSeed
                                             InheritPosition: true
@@ -129,8 +129,8 @@ Hierarchy:
                                             DisplayParticleRotation: true
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: true
-                                            VelocityMin: {X: -1.5, Y: -1.5, Z: -10.0}
-                                            VelocityMax: {X: 1.5, Y: 1.5, Z: 0.1}
+                                            VelocityMin: {X: -1.6, Y: -1.6, Z: -10.0}
+                                            VelocityMax: {X: 1.6, Y: 1.6, Z: 0.1}
                                     Updaters:
                                         ed94bebc9df81d9c9abf995948f476d2: !UpdaterForceField
                                             InheritPosition: true
@@ -324,7 +324,7 @@ Hierarchy:
                                             LoopCondition: OneShot
                                             Delay: {X: 0.0, Y: 0.0}
                                             Duration: {X: 1.0, Y: 1.0}
-                                            SpawnCount: 80
+                                            SpawnCount: 100
                                     Initializers:
                                         38f63c62943ef694052bfd50568e464e: !InitialSizeSeed
                                             InheritPosition: true
