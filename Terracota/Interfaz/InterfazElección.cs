@@ -132,6 +132,9 @@ public class InterfazElección : StartupScript
             padreRanurasHuesped.Children.Add(nuevaRanuraHuesped);
             padreRanurasHuesped.Height += (nuevaRanuraHuesped.Height + 10);
         }
+
+        if(fortalezas.Count <= 1)
+            BloquearBotón(btnAleatorio, true);
     }
 
     private void EnClicVolver()
