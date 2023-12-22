@@ -101,7 +101,7 @@ public class InterfazMenú : StartupScript
             // Abre navegador
             Process.Start(new ProcessStartInfo { FileName = "https://yerkoandrei.itch.io", UseShellExecute = true });
         }
-        catch { }        
+        catch { }
     }
 
     private void EnClicSalir()
