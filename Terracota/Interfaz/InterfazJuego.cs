@@ -305,6 +305,12 @@ public class InterfazJuego : SyncScript
         gridGanador.Visibility = Visibility.Visible;
         btnPausa.Visibility = Visibility.Visible;
 
+        animando = true;
+        SistemaAnimación.AnimarElemento(gridGanador, 0.5f, true, Direcciones.arriba, TipoCurva.suave, () =>
+        {
+            animando = false;
+        });
+
         switch (jugador)
         {
             case TipoJugador.anfitrión:
@@ -331,6 +337,7 @@ public class InterfazJuego : SyncScript
                 break;
         }
 
+        // Sonido
         await SistemaSonido.SonarVictoria();
     }
 }
