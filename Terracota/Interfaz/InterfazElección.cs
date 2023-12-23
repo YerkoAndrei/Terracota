@@ -100,8 +100,6 @@ public class InterfazElección : StartupScript
         ConfigurarBotón(btnVolver, EnClicVolver);
         ConfigurarBotón(btnAleatorio, EnClicAleatorio);
 
-        BloquearBotón(btnComenzar, true);
-
         // Fortalezas
         var padreRanurasAnfitrión = página.FindVisualChildOfType<UniformGrid>("RanurasAnfitrión");
         var padreRanurasHuesped = página.FindVisualChildOfType<UniformGrid>("RanurasHuesped");
@@ -133,7 +131,10 @@ public class InterfazElección : StartupScript
             padreRanurasHuesped.Height += (nuevaRanuraHuesped.Height + 10);
         }
 
-        if(fortalezas.Count <= 1)
+        // Bloqueo botones
+        BloquearBotón(btnComenzar, true);
+
+        if (fortalezas.Count <= 1)
             BloquearBotón(btnAleatorio, true);
     }
 
