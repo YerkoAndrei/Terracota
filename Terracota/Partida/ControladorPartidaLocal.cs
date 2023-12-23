@@ -34,7 +34,7 @@ public class ControladorPartidaLocal : SyncScript
     private float multiplicador;
 
     private bool partidaActiva;
-    private bool sumarMultiplicador;
+    private bool esperandoReinicio;
 
     public override void Start()
     {
@@ -173,8 +173,13 @@ public class ControladorPartidaLocal : SyncScript
         await Task.Delay(duraciónTurno);
         interfaz.ActivarTurno(false);
 
+        // Verifica partida
         if (!partidaActiva)
+        {
+            cambiandoTurno = false;
+            VerificarPartida();
             return;
+        }
 
         cañónAnfitrión.Activar(false);
         cañónHuesped.Activar(false);
@@ -184,13 +189,18 @@ public class ControladorPartidaLocal : SyncScript
             controladorCámara.RotarYCámara(180, cambiarHaciaDerecha, () =>
             {
                 cambiandoTurno = false;
+                turnoJugador = TipoJugador.huesped;
+
+                // Verifica partida por si se gana mientras gira
                 if (!partidaActiva)
+                {
+                    VerificarPartida();
                     return;
+                }
 
                 cañónHuesped.Activar(true);
                 cañónActual = cañónHuesped;
 
-                turnoJugador = TipoJugador.huesped;
                 interfaz.CambiarInterfaz(turnoJugador, proyectilHuesped);
             }, luzDireccional);
         }
@@ -199,30 +209,34 @@ public class ControladorPartidaLocal : SyncScript
             controladorCámara.RotarYCámara(180, cambiarHaciaDerecha, () =>
             {
                 cambiandoTurno = false;
+                turnoJugador = TipoJugador.anfitrión;
+
+                // Verifica partida por si se gana mientras gira
                 if (!partidaActiva)
-                    return; 
+                {
+                    VerificarPartida();
+                    return;
+                }
 
                 cañónAnfitrión.Activar(true);
                 cañónActual = cañónAnfitrión;
 
-                turnoJugador = TipoJugador.anfitrión;
                 interfaz.CambiarInterfaz(turnoJugador, proyectilAnfitrión);
-
-                // Suma potencia despues de 4 turnos
-                SumarPotencia();
             }, luzDireccional);
         }
 
+        // Suma potencia cada de 4 turnos
         cantidadTurnos++;
+        SumarPotencia();
+
         interfaz.ActualizarTurno(cantidadTurnos, multiplicador);
     }
 
     public void SumarPotencia()
     {
-        if (sumarMultiplicador && multiplicador < multiplicadorMáximo)
+        // Aumenta cada 4 turnos
+        if ((cantidadTurnos - 1) % 4 == 0 && multiplicador < multiplicadorMáximo)
             multiplicador += 0.1f;
-
-        sumarMultiplicador = !sumarMultiplicador;
     }
 
     public void DesactivarEstatua(TipoJugador jugador)
@@ -244,6 +258,9 @@ public class ControladorPartidaLocal : SyncScript
 
     private void VerificarPartida()
     {
+        if (esperandoReinicio)
+            return;
+
         var ganador = TipoJugador.nada;
 
         if (estatuasAnfitrión >= maxEstatuas)
@@ -262,16 +279,22 @@ public class ControladorPartidaLocal : SyncScript
         // Muestra ganador
         if (ganador != TipoJugador.nada)
         {
-            partidaActiva = false;
-            MirarGanador(ganador);
-            interfaz.MostrarGanador(ganador, cantidadTurnos);
-        }
-    }
+            // Evita animar de nuevo
+            if (partidaActiva)
+                interfaz.MostrarGanador(ganador, cantidadTurnos);
 
-    private void MirarGanador(TipoJugador ganador)
-    {
-        // En caso de que pierda el que tiene el turno
-        if (ganador != turnoJugador)
-            controladorCámara.RotarYCámara(180, cambiarHaciaDerecha);
+            partidaActiva = false;
+
+            // Bloqueo final
+            if (!cambiandoTurno && ganador == turnoJugador)
+                esperandoReinicio = true;
+
+            // En caso de que pierda el que tiene el turno
+            if (!cambiandoTurno && ganador != turnoJugador)
+            {
+                esperandoReinicio = true;
+                controladorCámara.RotarYCámara(180, cambiarHaciaDerecha);
+            }
+        }
     }
 }
