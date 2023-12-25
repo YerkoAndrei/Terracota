@@ -35,8 +35,7 @@ public static class Constantes
         menú,
         creación,
         local,
-        LAN,
-        P2P
+        remoto
     }
 
     public enum TipoJugador
@@ -100,6 +99,27 @@ public static class Constantes
         bajo,
         medio,
         alto
+    }
+
+    public enum TipoConexión
+    {
+        LAN,
+        P2P
+    }
+
+    public enum EntradasRed
+    {
+        // Asignación inicial
+        marcarComoAnfitrión,
+        marcarComoHuesped,
+
+        // Turnos
+        turnoAnfitrión,
+        turnoHuesped,
+
+        // Juego
+        disparo,
+        data
     }
 
     public static Fortaleza GenerarFortalezaVacía()

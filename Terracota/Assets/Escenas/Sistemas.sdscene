@@ -6,6 +6,7 @@ ChildrenIds: []
 Offset: {X: 0.0, Y: 0.0, Z: 0.0}
 Hierarchy:
     RootParts:
+        - ref!! 69171581-1245-4d0e-8c67-9f01f33c03ac
         - ref!! 21f01d7f-860f-40b3-801e-9c0ec5b41907
         - ref!! 3989825c-2e05-4529-9e41-c67347ddb9e9
         - ref!! 758aa04b-f96e-40e7-b903-12bf3fd17a7d
@@ -35,8 +36,7 @@ Hierarchy:
                         "escenaMenú": "bf45c4dd-f4db-4005-9135-dab8e0ef10ed:Escenas/Menú"
                         "escenaCreación": "df77ba21-ef07-4f57-94a0-cfa4117accf5:Escenas/Creación"
                         escenaLocal: af761eff-0def-4e64-9185-a183866d2296:Escenas/Juego (Local)
-                        escenaLAN: null
-                        escenaP2P: null
+                        escenaRemoto: null
                         compositorBajo: a56fb2c4-a1e1-4402-99f2-f26bf153acab:GraphicsCompositor (Bajo)
                         compositorMedio: dd006137-0769-46d0-9fad-d32f87dc48ea:GraphicsCompositor (Medio)
                         compositorAlto: 25ffa03a-4a0d-4785-a8c4-23cea0e23daf:GraphicsCompositor (Alto)
@@ -101,6 +101,18 @@ Hierarchy:
                         NearClipPlane: 0.0
                         FarClipPlane: 0.1
                         Slot: 22e7a61e-940b-4bf3-8332-c0b9074cd7f5
+        -   Entity:
+                Id: 69171581-1245-4d0e-8c67-9f01f33c03ac
+                Name: SistemaRed
+                Components:
+                    7d6bc3c5b5d85038669f5949e1f0c341: !TransformComponent
+                        Id: a7968a5f-dc33-4286-900b-b2109ef7b28d
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    3097f9c3cccda562b8a923f3c650101c: !Terracota.SistemaRed,Terracota
+                        Id: 7afb4481-f501-412f-a355-0a622c9216d1
         -   Entity:
                 Id: 758aa04b-f96e-40e7-b903-12bf3fd17a7d
                 Name: SistemaSonido
