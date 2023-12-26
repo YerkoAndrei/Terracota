@@ -16,7 +16,7 @@ public class SistemaEscenas : SyncScript
     public UrlReference<Scene> escenaMenú;
     public UrlReference<Scene> escenaCreación;
     public UrlReference<Scene> escenaLocal;
-    public UrlReference<Scene> escenaRemoto;
+    public UrlReference<Scene> escenaRemota;
 
     public GraphicsCompositor compositorBajo;
     public GraphicsCompositor compositorMedio;
@@ -176,7 +176,7 @@ public class SistemaEscenas : SyncScript
                 escenaActual = Content.Load(escenaLocal);
                 break;
             case Escenas.remoto:
-                escenaActual = Content.Load(escenaRemoto);
+                escenaActual = Content.Load(escenaRemota);
                 conectar = true;
                 break;
         }

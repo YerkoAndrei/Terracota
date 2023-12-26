@@ -11,7 +11,7 @@ namespace Terracota;
 using static Sistema;
 using static Constantes;
 
-public class InterfazElección : StartupScript
+public class InterfazElecciónLocal : StartupScript
 {
     public ControladorPartidaLocal controladorPartida;
     public UILibrary prefabRanura;

@@ -119,7 +119,11 @@ public static class Constantes
         turnoAnfitrión,
         turnoHuesped,
 
+        // Elección
+        cargarFortaleza,
+        
         // Juego
+        pausa,
         disparo,
         texto,
         data
