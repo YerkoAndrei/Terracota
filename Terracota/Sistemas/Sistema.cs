@@ -234,6 +234,13 @@ public static class Sistema
     {
         // Busca contenido dentro del "grid botón"
         var textoNombreIP = grid.FindVisualChildOfType<TextBlock>("txtNombreIP");
+        var conectar = grid.FindVisualChildOfType<TextBlock>("txtConectar");
+        var anfitrión = grid.FindVisualChildOfType<TextBlock>("txtAnfitrión");
+        var huesped = grid.FindVisualChildOfType<TextBlock>("txtHuesped");
+
+        conectar.Text = SistemaTraducción.ObtenerTraducción("conectarComo");
+        anfitrión.Text = SistemaTraducción.ObtenerTraducción("anfitrión");
+        huesped.Text = SistemaTraducción.ObtenerTraducción("huesped");
 
         // Botones
         var btnComoAnfitrión = grid.FindVisualChildOfType<Grid>("btnComoAnfitrión");
@@ -246,9 +253,12 @@ public static class Sistema
         textoNombreIP.Text = ip;
 
         if (!string.IsNullOrEmpty(nombre))
-            textoNombreIP.Text += " - " + nombre;
+            textoNombreIP.Text += "  -  " + nombre;
 
         textoNombreIP.Font = SistemaTraducción.VerificarFuente(textoNombreIP.Text);
+        conectar.Font = SistemaTraducción.VerificarFuente(conectar.Text);
+        anfitrión.Font = SistemaTraducción.VerificarFuente(conectar.Text);
+        huesped.Font = SistemaTraducción.VerificarFuente(conectar.Text);
     }
 
     public static TextBlock ObtenerTexto(Grid grid)

@@ -26,6 +26,8 @@ public class InterfazMenú : StartupScript
     private UIElement página;
     private Grid Opciones;
     private Grid animOpciones;
+    private Grid animLAN;
+    private Grid animP2P;
     private Grid gridLAN;
     private Grid gridP2P;
 
@@ -35,6 +37,11 @@ public class InterfazMenú : StartupScript
     private UniformGrid padreHosts;
     private EditText txtBaseIPActual;
 
+    private EditText txtConexiónP2P;
+    private TextBlock txtErrorP2P;
+    private Grid btnComoAnfitrión;
+    private Grid btnComoHuesped;
+
     private bool cargando;
     private bool animando;
 
@@ -43,6 +50,8 @@ public class InterfazMenú : StartupScript
         página = Entity.Get<UIComponent>().Page.RootElement;
         Opciones = página.FindVisualChildOfType<Grid>("Opciones");
         animOpciones = página.FindVisualChildOfType<Grid>("animOpciones");
+        animLAN = página.FindVisualChildOfType<Grid>("animLAN");
+        animP2P = página.FindVisualChildOfType<Grid>("animP2P");
 
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnLocal"), EnClicLocal);
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnLAN"), EnClicLAN);
@@ -52,25 +61,21 @@ public class InterfazMenú : StartupScript
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnOpciones"), EnClicOpciones);
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnSalir"), EnClicSalir);
 
-        BloquearBotón(página.FindVisualChildOfType<Grid>("btnP2P"), true);
-
         ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("btnCréditos"), EnClicCréditos);
+        ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("PanelOscuroLAN"), CerrarPaneles);
+        ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("PanelOscuroP2P"), CerrarPaneles);
 
         // Conexiones
         gridLAN = página.FindVisualChildOfType<Grid>("ConexiónLAN");
         gridP2P = página.FindVisualChildOfType<Grid>("ConexiónP2P");
 
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnLANVolver"), CerrarPaneles);
-        //ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnP2PVolver"), CerrarPaneles);
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnP2PVolver"), CerrarPaneles);
 
         gridLAN.Visibility = Visibility.Hidden;
-        //gridP2P.Visibility = Visibility.Hidden;
+        gridP2P.Visibility = Visibility.Hidden;
 
         // LAN
-        página.FindVisualChildOfType<TextBlock>("txtIPActual").Text = SistemaRed.ObtenerIP(TipoConexión.LAN);
-        página.FindVisualChildOfType<TextBlock>("txtNombreHost").Text = SistemaRed.ObtenerNombreHost(TipoConexión.LAN);
-        padreHosts = página.FindVisualChildOfType<UniformGrid>("Hosts");
-
         gridCargando = página.FindVisualChildOfType<Grid>("Cargando");
         gridCargando.Visibility = Visibility.Hidden;
         imgCargando = página.FindVisualChildOfType<ImageElement>("imgCargando");
@@ -78,6 +83,7 @@ public class InterfazMenú : StartupScript
         btnBuscar = página.FindVisualChildOfType<Grid>("btnBuscarLAN");
         ConfigurarBotón(btnBuscar, EnClicBuscarLAN);
 
+        padreHosts = página.FindVisualChildOfType<UniformGrid>("Hosts");
         txtBaseIPActual = página.FindVisualChildOfType<EditText>("txtBaseIPActual");
         txtBaseIPActual.TextChanged += VerificarFuente;
 
@@ -85,6 +91,16 @@ public class InterfazMenú : StartupScript
         txtBaseIPActual.Text = partesIP[0] + "." + partesIP[1] + "." + partesIP[2] + ".";
 
         // P2P
+        txtConexiónP2P = página.FindVisualChildOfType<EditText>("txtConexiónP2P");
+        txtConexiónP2P.Text = string.Empty;
+
+        txtErrorP2P = página.FindVisualChildOfType<TextBlock>("txtErrorP2P");
+        txtErrorP2P.Text = string.Empty;
+
+        btnComoAnfitrión = página.FindVisualChildOfType<Grid>("btnP2PComoAnfitrión");
+        btnComoHuesped = página.FindVisualChildOfType<Grid>("btnP2PComoHuesped");
+        ConfigurarBotón(btnComoAnfitrión, () => { EnClicConectarP2P(TipoJugador.anfitrión); });
+        ConfigurarBotón(btnComoHuesped, () => { EnClicConectarP2P(TipoJugador.huesped); });
 
         // Recuerda última rotación
         rotador.Transform.Rotation = últimaRotación;
@@ -104,7 +120,31 @@ public class InterfazMenú : StartupScript
         if (animando)
             return;
 
+        página.FindVisualChildOfType<TextBlock>("txtLANActual").Text = SistemaRed.ObtenerIP(TipoConexión.LAN);
+        página.FindVisualChildOfType<TextBlock>("txtNombreHost").Text = SistemaRed.ObtenerNombreHost();
+
+        // Traducciones de instancias
+        var textos = padreHosts.FindVisualChildrenOfType<TextBlock>();
+        foreach (var texto in textos)
+        {
+            if(texto.Name == "txtConectar")
+                texto.Text = SistemaTraducción.ObtenerTraducción("conectarComo");
+
+            if (texto.Name == "txtAnfitrión")
+                texto.Text = SistemaTraducción.ObtenerTraducción("anfitrión");
+
+            if (texto.Name == "txtHuesped")
+                texto.Text = SistemaTraducción.ObtenerTraducción("huesped");
+
+            texto.Font = SistemaTraducción.VerificarFuente(texto.Text);
+        }
+
+        animando = true;
         gridLAN.Visibility = Visibility.Visible;
+        SistemaAnimación.AnimarElemento(animLAN, 0.2f, true, Direcciones.arriba, TipoCurva.rápida, () =>
+        {
+            animando = false;
+        });
     }
 
     private void EnClicBuscarLAN()
@@ -203,7 +243,27 @@ public class InterfazMenú : StartupScript
         if (animando)
             return;
 
-        //gridP2P.Visibility = Visibility.Hidden;
+        página.FindVisualChildOfType<TextBlock>("txtP2PActual").Text = SistemaRed.ObtenerIP(TipoConexión.P2P);
+
+        animando = true;
+        gridP2P.Visibility = Visibility.Visible;
+        SistemaAnimación.AnimarElemento(animP2P, 0.2f, true, Direcciones.arriba, TipoCurva.rápida, () =>
+        {
+            animando = false;
+        });
+    }
+
+    private void EnClicConectarP2P(TipoJugador tipoJugador)
+    {
+        if (animando)
+            return;
+
+        txtErrorP2P.Text = string.Empty;
+
+        var resultado = SistemaRed.ConectarDispositivo(txtConexiónP2P.Text, TipoConexión.P2P, tipoJugador);
+
+        if (!string.IsNullOrEmpty(resultado))
+            txtErrorP2P.Text = resultado;
     }
 
     private void CerrarPaneles()
@@ -211,8 +271,24 @@ public class InterfazMenú : StartupScript
         if (animando)
             return;
 
-        gridLAN.Visibility = Visibility.Hidden;
-        //gridP2P.Visibility = Visibility.Hidden;
+        animando = true;
+        if (gridLAN.Visibility == Visibility.Visible)
+        {
+            SistemaAnimación.AnimarElemento(animLAN, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, () =>
+            {
+                animando = false;
+                gridLAN.Visibility = Visibility.Hidden;
+            });
+        }
+
+        if (gridP2P.Visibility == Visibility.Visible)
+        {
+            SistemaAnimación.AnimarElemento(animP2P, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, () =>
+            {
+                animando = false;
+                gridP2P.Visibility = Visibility.Hidden;
+            });
+        }
     }
 
     private void EnClicCrear()

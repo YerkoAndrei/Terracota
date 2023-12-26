@@ -111,17 +111,9 @@ public class SistemaRed : AsyncScript
         }
     }
 
-    public static string ObtenerNombreHost(TipoConexión tipoConexión)
+    public static string ObtenerNombreHost()
     {
-        switch (tipoConexión)
-        {
-            case TipoConexión.LAN:
-                return Dns.GetHostName();
-            case TipoConexión.P2P:
-                return "Internet";
-            default:
-                return string.Empty;
-        }
+        return Dns.GetHostName();
     }
 
     public static void MarcarDispositivo(TipoJugador _tipoJugador)
@@ -129,26 +121,40 @@ public class SistemaRed : AsyncScript
         tipoJugador = _tipoJugador;
     }
 
-    public static void ConectarDispositivo(string ip, TipoConexión tipoConexión, TipoJugador conectarComo)
+    public static string ConectarDispositivo(string ip, TipoConexión tipoConexión, TipoJugador conectarComo)
     {
         MarcarDispositivo(conectarComo);
 
         IPConectada = ip;
         udp = new UdpClient(puerto);
         remoto = new IPEndPoint(IPAddress.Parse(IPConectada), puerto);
+        var marcarComo = EntradasRed.nada;
 
-        // Esperar respuesta
         switch (conectarComo)
         {
             case TipoJugador.anfitrión:
-                EnviarData(EntradasRed.marcarComoAnfitrión);
+                marcarComo = EntradasRed.marcarComoHuesped;
                 break;
             case TipoJugador.huesped:
-                EnviarData(EntradasRed.marcarComoHuesped);
+                marcarComo = EntradasRed.marcarComoAnfitrión;
                 break;
         }
-        // en respuesta
-        CambiarEscena();
+
+        try
+        {
+            // Esperar respuesta
+            EnviarData(marcarComo);
+            // en respuesta
+
+            CambiarEscena();
+        }
+        catch (Exception e)
+        {
+            // Verificar y/o traducir errores
+            return e.Message;
+        }
+
+        return string.Empty;
     }
 
     private static void CambiarEscena()
@@ -209,11 +215,5 @@ public class SistemaRed : AsyncScript
         
         // Visual
         interfazMenú.MostrarCargando(false);
-    }
-
-    // P2P
-    public static void EncontrarP2P()
-    {
-
     }
 }

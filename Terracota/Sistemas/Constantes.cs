@@ -109,6 +109,8 @@ public static class Constantes
 
     public enum EntradasRed
     {
+        nada,
+
         // Asignación inicial
         marcarComoAnfitrión,
         marcarComoHuesped,
