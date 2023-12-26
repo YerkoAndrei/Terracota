@@ -14,7 +14,6 @@ using static Constantes;
 
 public class SistemaRed : AsyncScript
 {
-    private static SistemaRed instancia;
     private static TipoJugador tipoJugador;
 
     private static string IPLocalActual;
@@ -28,11 +27,10 @@ public class SistemaRed : AsyncScript
     private static IPEndPoint remoto;
     private static int puerto = 666;
 
-    private bool conectado;
+    private static bool conectado;
 
     public override async Task Execute()
     {
-        instancia = this;
         ObtenerIPs();
                 
         int cuadroActual = 0;
@@ -67,19 +65,17 @@ public class SistemaRed : AsyncScript
         if (IPSv4.Length > 0)
         {
             // Usa la primera que comience con 192.168.
-            var encontrada = false;
             foreach (var ip in IPSv4)
             {
                 if(ip.ToString().Contains("192.168."))
                 {
                     IPLocalActual = ip.ToString();
-                    encontrada = true;
                     break;
                 }
             }
 
             // Si no, la última
-            if(!encontrada)
+            if(string.IsNullOrEmpty(IPLocalActual))
                 IPLocalActual = IPSv4[^1].ToString();
         }
         else
@@ -110,6 +106,19 @@ public class SistemaRed : AsyncScript
                 return IPLocalActual;
             case TipoConexión.P2P:
                 return IPPublicaActual;
+            default:
+                return string.Empty;
+        }
+    }
+
+    public static string ObtenerNombreHost(TipoConexión tipoConexión)
+    {
+        switch (tipoConexión)
+        {
+            case TipoConexión.LAN:
+                return Dns.GetHostName();
+            case TipoConexión.P2P:
+                return "Internet";
             default:
                 return string.Empty;
         }
@@ -147,11 +156,21 @@ public class SistemaRed : AsyncScript
         SistemaEscenas.CambiarEscena(Escenas.remoto);
     }
 
+    public static void Conectar()
+    {
+        conectado = true;
+    }
+
     public static void EnviarData(EntradasRed entrada, string data = null)
     {
         var json = JsonConvert.SerializeObject(data);
         var bytes = Encoding.ASCII.GetBytes(json);
 
+        //udp.BeginSend();
+    }
+
+    private static void RecibirData()
+    {
         udp.BeginReceive(new AsyncCallback(EnRecibir), udp);
     }
 
@@ -164,24 +183,23 @@ public class SistemaRed : AsyncScript
     // LAN
     public static async void BuscarLAN(string ipLocal, InterfazMenú interfazMenú)
     {
-        Ping ping;
-        IPAddress ip;
-        PingReply respuesta;
-        string nombreIP;
-        string nombreHost;
-
-        await Parallel.ForAsync(1, 255, async (i, loopState) =>
+        await Parallel.ForAsync(2, 255, async (i, loopState) =>
         {
-            ping = new Ping();
-            nombreIP = ipLocal + i.ToString();
-            ip = IPAddress.Parse(nombreIP);
-            respuesta = await ping.SendPingAsync(ip, 100);
+            var ping = new Ping();
+            var nombreIP = ipLocal + i.ToString();
+            var nombreHost = string.Empty;
+            var ip = IPAddress.Parse(nombreIP);
+            var respuesta = await ping.SendPingAsync(ip, 100);
 
             if (respuesta.Status == IPStatus.Success)
             {
-                // Intenta obtener nombre de host
-                try     { nombreHost = Dns.GetHostEntry(ip).HostName; }
-                catch   { nombreHost = string.Empty; }
+                try
+                {
+                    // Intenta obtener nombre de host
+                    var buscarNombre = await Dns.GetHostEntryAsync(ip);
+                    nombreHost = buscarNombre.HostName;
+                }
+                catch { }
 
                 // Se agrega a la lista
                 if (nombreIP != IPLocalActual)

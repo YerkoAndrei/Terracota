@@ -119,6 +119,7 @@ public static class Constantes
 
         // Juego
         disparo,
+        texto,
         data
     }
 

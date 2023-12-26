@@ -153,6 +153,7 @@ public class SistemaEscenas : SyncScript
 
     private async void CargarEscena()
     {
+        var conectar = false;
         ocultando = false;
 
         tiempo = 0;
@@ -176,6 +177,7 @@ public class SistemaEscenas : SyncScript
                 break;
             case Escenas.remoto:
                 escenaActual = Content.Load(escenaRemoto);
+                conectar = true;
                 break;
         }
 
@@ -187,6 +189,10 @@ public class SistemaEscenas : SyncScript
 
         // Traduciones
         SistemaTraducción.ActualizarTextosEscena();
+
+        // Red
+        if(conectar)
+            SistemaRed.Conectar();
 
         abriendo = true;
     }

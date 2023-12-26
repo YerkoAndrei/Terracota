@@ -94,6 +94,25 @@ Hierarchy:
                 BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
                 BasePartId: fbcfa7a1-8292-429b-ad97-0f7431ba1550
                 InstanceId: 75086f6f-3c9e-46ce-9632-5ac471b5fdf4
+        -   UIElement: !TextBlock
+                Id: 04e65266-379d-4824-8429-5beffa6abfc3
+                DependencyProperties:
+                    85211e90f0e1aae8c90a45b924f7cec9~Panel.ZIndexPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 200.0
+                Height: 30.0
+                HorizontalAlignment: Right
+                VerticalAlignment: Top
+                Margin: {Top: 230.0, Right: 20.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtNombreHost
+                Text: nombre host
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 25.0
+                TextColor: {R: 240, G: 220, B: 160, A: 240}
+                TextAlignment: Right
         -   UIElement: !Button
                 Id: 05175f3f-a87c-408e-b383-56889d0c56c9
                 DependencyProperties: {}
@@ -2935,8 +2954,8 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: txtIPLocal
-                Text: 'IP local:'
+                Name: txtLocal
+                Text: 'Local:'
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
                 TextSize: 25.0
                 TextColor: {R: 240, G: 220, B: 160, A: 240}
@@ -5428,6 +5447,7 @@ Hierarchy:
                     1ed6c957c5b0e29e9b0e4c6c2e7576ea: !TextBlock ref!! 878f5a01-4e4c-46d9-8774-7625458d44db
                     1bfb3f11a3e66bcfc08e3e572cfd159b: !TextBlock ref!! 817132bc-050d-4500-b866-d42b5f9453f3
                     22a20f8a251b7945ad217b8f4c5b64d7: !TextBlock ref!! 61b9e74c-93ed-4b79-a4ec-8d3e547b4b0e
+                    68d6b409c4160189d56c6ced59072c56: !TextBlock ref!! 04e65266-379d-4824-8429-5beffa6abfc3
                     94c603df33bae4346bbf36aa10f2dabd: !Grid ref!! 14507d09-587d-4e93-8134-00de24661db8
                     d11630c5364f00a78908bdc7b8b5bbac: !Grid ref!! b32e481b-89ea-44ae-9eea-7494f42094f0
                     12ea236d4c8201a692c73a218256e964: !Grid ref!! 78ca441e-7e23-4178-9849-f1aab8ecd7c4

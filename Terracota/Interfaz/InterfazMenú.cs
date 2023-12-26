@@ -68,6 +68,7 @@ public class InterfazMenú : StartupScript
 
         // LAN
         página.FindVisualChildOfType<TextBlock>("txtIPActual").Text = SistemaRed.ObtenerIP(TipoConexión.LAN);
+        página.FindVisualChildOfType<TextBlock>("txtNombreHost").Text = SistemaRed.ObtenerNombreHost(TipoConexión.LAN);
         padreHosts = página.FindVisualChildOfType<UniformGrid>("Hosts");
 
         gridCargando = página.FindVisualChildOfType<Grid>("Cargando");
@@ -130,7 +131,7 @@ public class InterfazMenú : StartupScript
         padreHosts.Children.Add(nuevoHost);
 
         // Re ordena lista cada nuevo y al final
-        // Son ingresado en paralelo y el índice puede repetirse
+        // Son ingresados en paralelo y el índice puede repetirse
         OrdenarHosts();
     }
 
