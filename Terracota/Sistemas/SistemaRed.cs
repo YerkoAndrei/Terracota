@@ -63,7 +63,7 @@ public class SistemaRed : AsyncScript
         var IPSv4 = Dns.GetHostEntry(Dns.GetHostName()).AddressList.Where(o => o.AddressFamily == AddressFamily.InterNetwork).ToArray();
 
         if(IPSv4.Length > 0)
-            IPLocalActual = IPSv4[IPSv4.Length - 1].ToString();
+            IPLocalActual = IPSv4[^1].ToString();
         else
             IPLocalActual = "NO IP";
 
@@ -136,7 +136,7 @@ public class SistemaRed : AsyncScript
     }
 
     // LAN
-    public static void BuscarLAN(string ipLocal)
+    public static async void BuscarLAN(string ipLocal)
     {
         var interfazMenú =  instancia.SceneSystem.SceneInstance.RootScene.Children[0].Entities.Where(o => o.Get<InterfazMenú>() != null).FirstOrDefault().Get<InterfazMenú>();
         
@@ -146,10 +146,10 @@ public class SistemaRed : AsyncScript
         string nombre;
         int índice = 0;
 
-        Parallel.For(0, 254, (i, loopState) =>
+        await Parallel.ForAsync(0, 254, async (i, loopState) =>
         {
             ping = new Ping();
-            respuesta = ping.Send(ipLocal + i.ToString());
+            respuesta = await ping.SendPingAsync(ipLocal + i.ToString());
 
             if(respuesta.Status == IPStatus.Success)
             {
@@ -187,11 +187,10 @@ public class SistemaRed : AsyncScript
                     }
                 }
             }
-
-            // Visual
-            if (i >= 254)
-                interfazMenú.DetenerCarga();
         });
+
+        // Visual
+        interfazMenú.MostrarCargando(false);
     }
 
     // P2P

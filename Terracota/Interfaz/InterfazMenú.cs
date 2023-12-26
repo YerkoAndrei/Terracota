@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.UI;
@@ -16,6 +18,9 @@ public class InterfazMenú : StartupScript
     public Entity rotador;
     public UILibrary prefabHost;
 
+    public Color colorCargaVacía;
+    public Color colorCargaActiva;
+
     private static Quaternion últimaRotación = Quaternion.Identity;
 
     private UIElement página;
@@ -24,9 +29,13 @@ public class InterfazMenú : StartupScript
     private Grid gridLAN;
     private Grid gridP2P;
 
+    private Grid btnBuscar;
+    private Grid gridCargando;
+    private ImageElement imgCargando;
     private UniformGrid padreHosts;
     private EditText txtBaseIPActual;
 
+    private bool cargando;
     private bool animando;
 
     public override void Start()
@@ -60,7 +69,13 @@ public class InterfazMenú : StartupScript
         // LAN
         página.FindVisualChildOfType<TextBlock>("txtIPActual").Text = SistemaRed.ObtenerIP(TipoConexión.LAN);
         padreHosts = página.FindVisualChildOfType<UniformGrid>("Hosts");
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnBuscarLAN"), EnClicBuscarLAN);
+
+        gridCargando = página.FindVisualChildOfType<Grid>("Cargando");
+        gridCargando.Visibility = Visibility.Hidden;
+        imgCargando = página.FindVisualChildOfType<ImageElement>("imgCargando");
+
+        btnBuscar = página.FindVisualChildOfType<Grid>("btnBuscarLAN");
+        ConfigurarBotón(btnBuscar, EnClicBuscarLAN);
 
         txtBaseIPActual = página.FindVisualChildOfType<EditText>("txtBaseIPActual");
         txtBaseIPActual.TextChanged += VerificarFuente;
@@ -91,14 +106,6 @@ public class InterfazMenú : StartupScript
         gridLAN.Visibility = Visibility.Visible;
     }
 
-    private void EnClicP2P()
-    {
-        if (animando)
-            return;
-
-        //gridP2P.Visibility = Visibility.Hidden;
-    }
-
     private void EnClicBuscarLAN()
     {
         if (animando)
@@ -109,7 +116,7 @@ public class InterfazMenú : StartupScript
         padreHosts.Rows = 0;
         padreHosts.Height = 0;
 
-        // mostrar cargando
+        MostrarCargando(true);
         SistemaRed.BuscarLAN(txtBaseIPActual.Text);
     }
 
@@ -121,21 +128,66 @@ public class InterfazMenú : StartupScript
             () => { SistemaRed.ConectarDispositivo(host.IP, TipoConexión.LAN, TipoJugador.huesped); });
         
         padreHosts.Rows++;
-        padreHosts.Height += (nuevoHost.Height + 50);
+        padreHosts.Height += (nuevoHost.Height + 40);
         padreHosts.Children.Add(nuevoHost);
     }
 
-    public void DetenerCarga()
+    public void MostrarCargando(bool _cargando)
     {
-        // quitar cargando
+        cargando = _cargando;
+
+        if (cargando)
+        {
+            gridCargando.Visibility = Visibility.Visible;
+            BloquearBotón(btnBuscar, true);
+            AnimarCarga();
+        }
+        else
+        {
+            gridCargando.Visibility = Visibility.Hidden;
+            BloquearBotón(btnBuscar, false);
+        }
+    }
+
+    private async void AnimarCarga()
+    {
+        int delay = 200;
+        bool activo = false;
+
+        while (cargando)
+        {
+            if (activo)
+            {
+                imgCargando.Color = colorCargaVacía;
+                activo = false;
+            }
+            else 
+            {
+                imgCargando.Color = colorCargaActiva;
+                activo = true;
+            }
+            await Task.Delay(delay);
+        }
     }
 
     private void VerificarFuente(object sender, RoutedEventArgs args)
     {
+        // Solo números y puntos
+        string regex = @"[^0-9.]";
+        txtBaseIPActual.Text = Regex.Replace(txtBaseIPActual.Text, regex, "");
+
         var fuente = SistemaTraducción.VerificarFuente(txtBaseIPActual.Text);
 
         if (txtBaseIPActual.Font != fuente)
             txtBaseIPActual.Font = fuente;
+    }
+
+    private void EnClicP2P()
+    {
+        if (animando)
+            return;
+
+        //gridP2P.Visibility = Visibility.Hidden;
     }
 
     private void CerrarPaneles()

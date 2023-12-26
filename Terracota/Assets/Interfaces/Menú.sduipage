@@ -1889,6 +1889,23 @@ Hierarchy:
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 240, G: 220, B: 160, A: 240}
         -   UIElement: !ImageElement
+                Id: 55961d55-c8e0-4d22-b5db-893c62868c30
+                DependencyProperties:
+                    50c55a9c41f47ab1f0ce34eb40296c93~Panel.ZIndexPropertyKey: 1
+                    0775ee5034b621347b3bd5f2a44a95fa~GridBase.ColumnPropertyKey: 0
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 25.0
+                Height: 25.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: 
+                Source: !SpriteFromTexture
+                    Texture: "ad498f2e-9e92-46b3-a8ef-9b75cf038835:Texturas/Interfaz/Octágono"
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 160, G: 60, B: 0, A: 255}
+        -   UIElement: !ImageElement
                 Id: 56c3718d-aeff-4144-b5e5-5f7e7be51d29
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
@@ -3458,7 +3475,6 @@ Hierarchy:
                 Id: 99c20b25-c0a8-41fd-bcdd-0ceb13cb5966
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Visibility: Hidden
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -3507,6 +3523,25 @@ Hierarchy:
                 BasePartAsset: ec94a22e-f511-4b8e-a71e-bc8c7df21ba9:Interfaces/Librerias/Botones
                 BasePartId: 4c733d25-6bd9-4f3e-bfd8-79714c7ec65f
                 InstanceId: 67fd3cfa-3df4-4a24-a44f-1f062ce251a5
+        -   UIElement: !Grid
+                Id: 9a4f1bd0-9c9a-46fc-976b-170f82a1d663
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 25.0
+                Height: 25.0
+                HorizontalAlignment: Right
+                VerticalAlignment: Bottom
+                Margin: {Right: 100.0, Bottom: 120.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: Cargando
+                Children:
+                    23672cdfc9bb17a8abf4a0db9448bcfe: !ImageElement ref!! 55961d55-c8e0-4d22-b5db-893c62868c30
+                    9bb7803479782d13f4a5122d17681128: !ImageElement ref!! b633ec61-851a-4c0d-bf53-dd55375b572b
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
         -   UIElement: !Grid
                 Id: 9ca46631-3d81-4f56-8d7c-de4a663de6e9
                 DependencyProperties:
@@ -3992,7 +4027,7 @@ Hierarchy:
                 Id: aed85bb9-5ad5-4edb-8ec9-9de872dfb3c0
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 110.0
+                Height: 230.0
                 VerticalAlignment: Top
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
@@ -4247,6 +4282,21 @@ Hierarchy:
                 BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
                 BasePartId: acdf301b-d5e0-49b5-942f-78c09c3afaf4
                 InstanceId: 0b67fdc3-ca82-484c-8aec-abac0f56c8de
+        -   UIElement: !ImageElement
+                Id: b633ec61-851a-4c0d-bf53-dd55375b572b
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 25.0
+                Height: 25.0
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: imgCargando
+                Source: !SpriteFromTexture
+                    Texture: "544f8ec8-cb8e-46d6-8873-ba73ab7cef86:Texturas/Interfaz/BaseOctágono"
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 240, G: 220, B: 160, A: 240}
         -   UIElement: !Button
                 Id: b72d3f8e-34a5-46e1-9951-a121a98b51b2
                 DependencyProperties: {}
@@ -5365,6 +5415,7 @@ Hierarchy:
                     d11630c5364f00a78908bdc7b8b5bbac: !Grid ref!! b32e481b-89ea-44ae-9eea-7494f42094f0
                     12ea236d4c8201a692c73a218256e964: !Grid ref!! 78ca441e-7e23-4178-9849-f1aab8ecd7c4
                     9f991cbb4d90f81162c5889c5c96452c: !ScrollViewer ref!! f1cb3a01-52d4-47a2-9ee7-e8b60259073d
+                    295c6ee3523bd1d58bf0e941bfb64599: !Grid ref!! 9a4f1bd0-9c9a-46fc-976b-170f82a1d663
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
