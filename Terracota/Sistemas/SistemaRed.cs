@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using System.Net.NetworkInformation;
 using System.Net;
 using System.Net.Sockets;
 using System.Net.Http;
 using Stride.Engine;
+using Newtonsoft.Json;
 
 namespace Terracota;
 using static Constantes;
@@ -62,20 +64,41 @@ public class SistemaRed : AsyncScript
         // Local, última encontrada
         var IPSv4 = Dns.GetHostEntry(Dns.GetHostName()).AddressList.Where(o => o.AddressFamily == AddressFamily.InterNetwork).ToArray();
 
-        if(IPSv4.Length > 0)
-            IPLocalActual = IPSv4[^1].ToString();
+        if (IPSv4.Length > 0)
+        {
+            // Usa la primera que comience con 192.168.
+            var encontrada = false;
+            foreach (var ip in IPSv4)
+            {
+                if(ip.ToString().Contains("192.168."))
+                {
+                    IPLocalActual = ip.ToString();
+                    encontrada = true;
+                    break;
+                }
+            }
+
+            // Si no, la última
+            if(!encontrada)
+                IPLocalActual = IPSv4[^1].ToString();
+        }
         else
             IPLocalActual = "NO IP";
 
         // Global
-        try
+        string[] APIs = { "https://api.seeip.org/", "https://api.ipify.org/" };
+        foreach (var ip in APIs)
         {
-            var respuesta = await cliente.GetStringAsync("https://api.ipify.org/");
-            IPPublicaActual = respuesta;
-        }
-        catch (Exception e)
-        {
-            IPPublicaActual = "NO IP";
+            try
+            {
+                var respuesta = await cliente.GetStringAsync(ip);
+                IPPublicaActual = respuesta;
+                break;
+            }
+            catch
+            {
+                IPPublicaActual = "NO IP";
+            }
         }
     }
 
@@ -126,6 +149,9 @@ public class SistemaRed : AsyncScript
 
     public static void EnviarData(EntradasRed entrada, string data = null)
     {
+        var json = JsonConvert.SerializeObject(data);
+        var bytes = Encoding.ASCII.GetBytes(json);
+
         udp.BeginReceive(new AsyncCallback(EnRecibir), udp);
     }
 
@@ -136,59 +162,33 @@ public class SistemaRed : AsyncScript
     }
 
     // LAN
-    public static async void BuscarLAN(string ipLocal)
+    public static async void BuscarLAN(string ipLocal, InterfazMenú interfazMenú)
     {
-        var interfazMenú =  instancia.SceneSystem.SceneInstance.RootScene.Children[0].Entities.Where(o => o.Get<InterfazMenú>() != null).FirstOrDefault().Get<InterfazMenú>();
-        
         Ping ping;
         IPAddress ip;
         PingReply respuesta;
-        string nombre;
-        int índice = 0;
+        string nombreIP;
+        string nombreHost;
 
-        await Parallel.ForAsync(0, 254, async (i, loopState) =>
+        await Parallel.ForAsync(1, 255, async (i, loopState) =>
         {
             ping = new Ping();
-            respuesta = await ping.SendPingAsync(ipLocal + i.ToString());
+            nombreIP = ipLocal + i.ToString();
+            ip = IPAddress.Parse(nombreIP);
+            respuesta = await ping.SendPingAsync(ip, 100);
 
-            if(respuesta.Status == IPStatus.Success)
+            if (respuesta.Status == IPStatus.Success)
             {
-                try
-                {
-                    ip = IPAddress.Parse(ipLocal + i.ToString());
-                    nombre = Dns.GetHostEntry(ip).HostName;
-                    var nuevoHost = new Host
-                    {
-                        IP = ipLocal + i.ToString(),
-                        Nombre = nombre
-                    };
+                // Intenta obtener nombre de host
+                try     { nombreHost = Dns.GetHostEntry(ip).HostName; }
+                catch   { nombreHost = string.Empty; }
 
-                    // Se agrega con nombre
-                    if (nuevoHost.IP != IPLocalActual)
-                    {
-                        interfazMenú.AgregarHost(nuevoHost, índice);
-                        índice++;
-                    }
-                }
-                catch (Exception e)
-                {
-                    ip = IPAddress.Parse(ipLocal + i.ToString());
-                    var nuevoHost = new Host
-                    {
-                        IP = ipLocal + i.ToString(),
-                        Nombre = string.Empty
-                    };
-
-                    // Se agrega sin nombre
-                    if (nuevoHost.IP != IPLocalActual)
-                    {
-                        interfazMenú.AgregarHost(nuevoHost, índice);
-                        índice++;
-                    }
-                }
+                // Se agrega a la lista
+                if (nombreIP != IPLocalActual)
+                    interfazMenú.AgregarHost(nombreIP, nombreHost);
             }
         });
-
+        
         // Visual
         interfazMenú.MostrarCargando(false);
     }

@@ -117,19 +117,33 @@ public class InterfazMenú : StartupScript
         padreHosts.Height = 0;
 
         MostrarCargando(true);
-        SistemaRed.BuscarLAN(txtBaseIPActual.Text);
+        SistemaRed.BuscarLAN(txtBaseIPActual.Text, this);
     }
 
-    public void AgregarHost(Host host, int índice)
+    public void AgregarHost(string nombreIP, string nombreHost)
     {
         var nuevoHost = prefabHost.InstantiateElement<Grid>("Host");
-        ConfigurarHostLAN(nuevoHost, índice, host.IP, host.Nombre,
-            () => { SistemaRed.ConectarDispositivo(host.IP, TipoConexión.LAN, TipoJugador.anfitrión); },
-            () => { SistemaRed.ConectarDispositivo(host.IP, TipoConexión.LAN, TipoJugador.huesped); });
+        ConfigurarHostLAN(nuevoHost, nombreIP, nombreHost,
+            () => { SistemaRed.ConectarDispositivo(nombreIP, TipoConexión.LAN, TipoJugador.anfitrión); },
+            () => { SistemaRed.ConectarDispositivo(nombreIP, TipoConexión.LAN, TipoJugador.huesped); });
         
-        padreHosts.Rows++;
-        padreHosts.Height += (nuevoHost.Height + 40);
         padreHosts.Children.Add(nuevoHost);
+
+        // Re ordena lista cada nuevo y al final
+        // Son ingresado en paralelo y el índice puede repetirse
+        OrdenarHosts();
+    }
+
+    private void OrdenarHosts()
+    {
+        padreHosts.Rows = padreHosts.Children.Count;
+        padreHosts.Height = 0;
+
+        for (int i = 0; i < padreHosts.Children.Count; i++)
+        {
+            padreHosts.Children[i].SetGridRow(i);
+            padreHosts.Height += (padreHosts.Children[i].Height + 10);
+        }
     }
 
     public void MostrarCargando(bool _cargando)
@@ -146,6 +160,7 @@ public class InterfazMenú : StartupScript
         {
             gridCargando.Visibility = Visibility.Hidden;
             BloquearBotón(btnBuscar, false);
+            OrdenarHosts();
         }
     }
 

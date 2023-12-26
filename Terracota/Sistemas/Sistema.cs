@@ -230,11 +230,10 @@ public static class Sistema
         grid.SetGridRow(fila);
     }
 
-    public static void ConfigurarHostLAN(Grid grid, int fila, string ip, string nombre, Action enConectarComoAnfitrión, Action enConectarComoHuesped)
+    public static void ConfigurarHostLAN(Grid grid, string ip, string nombre, Action enConectarComoAnfitrión, Action enConectarComoHuesped)
     {
         // Busca contenido dentro del "grid botón"
-        var textoIP = grid.FindVisualChildOfType<TextBlock>("txtIP");
-        var textoNombre = grid.FindVisualChildOfType<TextBlock>("txtNombre");
+        var textoNombreIP = grid.FindVisualChildOfType<TextBlock>("txtNombreIP");
 
         // Botones
         var btnComoAnfitrión = grid.FindVisualChildOfType<Grid>("btnComoAnfitrión");
@@ -244,12 +243,12 @@ public static class Sistema
         ConfigurarBotón(btnComoHuesped, enConectarComoHuesped);
 
         // Visual
-        textoIP.Text = ip;
-        textoIP.Font = SistemaTraducción.VerificarFuente(ip);
+        textoNombreIP.Text = ip;
 
-        textoNombre.Text = nombre;
-        textoNombre.Font = SistemaTraducción.VerificarFuente(nombre);
-        grid.SetGridRow(fila);
+        if (!string.IsNullOrEmpty(nombre))
+            textoNombreIP.Text += " - " + nombre;
+
+        textoNombreIP.Font = SistemaTraducción.VerificarFuente(textoNombreIP.Text);
     }
 
     public static TextBlock ObtenerTexto(Grid grid)

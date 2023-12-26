@@ -3223,6 +3223,23 @@ Hierarchy:
                 BasePartId: 76b5f504-b327-4943-abd5-32b05a75878c
                 InstanceId: 72c106c9-df5f-4b8d-86bc-e2f92354fb95
         -   UIElement: !Grid
+                Id: 90181d0f-3dc9-498d-8eb8-b49154eaf8d4
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 650.0
+                Height: 450.0
+                HorizontalAlignment: Left
+                Margin: {Left: 20.0, Top: 80.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: Encontrados
+                Children:
+                    e7cfa650b3f08e623454e9e694cd0988: !ScrollViewer ref!! f1cb3a01-52d4-47a2-9ee7-e8b60259073d
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+        -   UIElement: !Grid
                 Id: 90f10192-dda0-4f8d-91d7-e9419613ebe5
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
@@ -4027,7 +4044,7 @@ Hierarchy:
                 Id: aed85bb9-5ad5-4edb-8ec9-9de872dfb3c0
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Height: 230.0
+                Height: 140.0
                 VerticalAlignment: Top
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
@@ -5414,7 +5431,7 @@ Hierarchy:
                     94c603df33bae4346bbf36aa10f2dabd: !Grid ref!! 14507d09-587d-4e93-8134-00de24661db8
                     d11630c5364f00a78908bdc7b8b5bbac: !Grid ref!! b32e481b-89ea-44ae-9eea-7494f42094f0
                     12ea236d4c8201a692c73a218256e964: !Grid ref!! 78ca441e-7e23-4178-9849-f1aab8ecd7c4
-                    9f991cbb4d90f81162c5889c5c96452c: !ScrollViewer ref!! f1cb3a01-52d4-47a2-9ee7-e8b60259073d
+                    c8373f0981d26e02a70057ac0c56e7de: !Grid ref!! 90181d0f-3dc9-498d-8eb8-b49154eaf8d4
                     295c6ee3523bd1d58bf0e941bfb64599: !Grid ref!! 9a4f1bd0-9c9a-46fc-976b-170f82a1d663
                 RowDefinitions: {}
                 ColumnDefinitions: {}
@@ -5664,10 +5681,7 @@ Hierarchy:
                 Id: f1cb3a01-52d4-47a2-9ee7-e8b60259073d
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 650.0
-                Height: 450.0
-                HorizontalAlignment: Left
-                Margin: {Left: 20.0, Top: 80.0}
+                Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
