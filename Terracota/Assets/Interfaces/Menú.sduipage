@@ -3852,7 +3852,7 @@ Hierarchy:
                 Width: 650.0
                 Height: 400.0
                 VerticalAlignment: Bottom
-                Margin: {Left: 20.0, Right: 330.0, Bottom: 30.0}
+                Margin: {Left: 20.0, Right: 330.0, Bottom: 35.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -6498,6 +6498,7 @@ Hierarchy:
                     1bfb3f11a3e66bcfc08e3e572cfd159b: !TextBlock ref!! 817132bc-050d-4500-b866-d42b5f9453f3
                     22a20f8a251b7945ad217b8f4c5b64d7: !TextBlock ref!! 61b9e74c-93ed-4b79-a4ec-8d3e547b4b0e
                     68d6b409c4160189d56c6ced59072c56: !TextBlock ref!! 04e65266-379d-4824-8429-5beffa6abfc3
+                    13488b7fddad49db0e08351a06702309: !TextBlock ref!! fb08c7d9-c545-4006-807e-5f186617a003
                     94c603df33bae4346bbf36aa10f2dabd: !Grid ref!! 14507d09-587d-4e93-8134-00de24661db8
                     d11630c5364f00a78908bdc7b8b5bbac: !Grid ref!! b32e481b-89ea-44ae-9eea-7494f42094f0
                     12ea236d4c8201a692c73a218256e964: !Grid ref!! 78ca441e-7e23-4178-9849-f1aab8ecd7c4
@@ -6979,17 +6980,17 @@ Hierarchy:
                     85211e90f0e1aae8c90a45b924f7cec9~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 500.0
-                Height: 30.0
+                Height: 25.0
                 HorizontalAlignment: Left
                 VerticalAlignment: Bottom
-                Margin: {Left: 50.0, Bottom: 20.0}
+                Margin: {Left: 20.0, Bottom: 20.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: txtErrorP2P
                 Text: mensaje error
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
-                TextSize: 25.0
+                TextSize: 20.0
                 TextColor: {R: 160, G: 60, B: 0, A: 255}
         -   UIElement: !ImageElement
                 Id: f955991f-2b77-4e16-a4bf-c6b5b4218fb4
@@ -7089,6 +7090,24 @@ Hierarchy:
                 BasePartAsset: ec94a22e-f511-4b8e-a71e-bc8c7df21ba9:Interfaces/Librerias/Botones
                 BasePartId: e91e7db3-8872-4dee-9d83-b09bc3ae5510
                 InstanceId: 72c106c9-df5f-4b8d-86bc-e2f92354fb95
+        -   UIElement: !TextBlock
+                Id: fb08c7d9-c545-4006-807e-5f186617a003
+                DependencyProperties:
+                    85211e90f0e1aae8c90a45b924f7cec9~Panel.ZIndexPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 500.0
+                Height: 25.0
+                HorizontalAlignment: Left
+                VerticalAlignment: Bottom
+                Margin: {Left: 20.0, Bottom: 10.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtErrorLAN
+                Text: mensaje error
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 20.0
+                TextColor: {R: 160, G: 60, B: 0, A: 255}
         -   UIElement: !Button
                 Id: fb8af093-4c7f-460c-80dc-4986d39c9672
                 DependencyProperties: {}

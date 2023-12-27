@@ -33,6 +33,7 @@ public class InterfazMenú : StartupScript
 
     private Grid btnBuscar;
     private Grid gridCargando;
+    private TextBlock txtErrorLAN;
     private ImageElement imgCargando;
     private UniformGrid padreHosts;
     private EditText txtBaseIPActual;
@@ -79,6 +80,9 @@ public class InterfazMenú : StartupScript
         gridCargando = página.FindVisualChildOfType<Grid>("Cargando");
         gridCargando.Visibility = Visibility.Hidden;
         imgCargando = página.FindVisualChildOfType<ImageElement>("imgCargando");
+
+        txtErrorLAN = página.FindVisualChildOfType<TextBlock>("txtErrorLAN");
+        txtErrorLAN.Text = string.Empty;
 
         btnBuscar = página.FindVisualChildOfType<Grid>("btnBuscarLAN");
         ConfigurarBotón(btnBuscar, EnClicBuscarLAN);
@@ -253,9 +257,13 @@ public class InterfazMenú : StartupScript
         });
     }
 
-    private void EnClicConectarLAN(string ip, TipoConexión tipoConexión, TipoJugador conectarComo)
+    private async void EnClicConectarLAN(string ip, TipoConexión tipoConexión, TipoJugador conectarComo)
     {
-        _ = SistemaRed.ConectarDispositivo(ip, tipoConexión, conectarComo, true);
+        txtErrorLAN.Text = string.Empty;
+        var resultado = await SistemaRed.ConectarDispositivo(ip, tipoConexión, conectarComo, true);
+
+        if (!string.IsNullOrEmpty(resultado))
+            txtErrorLAN.Text = resultado;
     }
 
     private async void EnClicConectarP2P(TipoJugador tipoJugador)
@@ -264,7 +272,6 @@ public class InterfazMenú : StartupScript
             return;
 
         txtErrorP2P.Text = string.Empty;
-
         var resultado = await SistemaRed.ConectarDispositivo(txtConexiónP2P.Text, TipoConexión.P2P, tipoJugador, true);
 
         if (!string.IsNullOrEmpty(resultado))
