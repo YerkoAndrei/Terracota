@@ -6,6 +6,7 @@ using Stride.UI.Controls;
 using Stride.UI;
 using Stride.UI.Panels;
 using Stride.UI.Events;
+using System.Text.RegularExpressions;
 
 namespace Terracota;
 using static Sistema;
@@ -18,6 +19,7 @@ public class InterfazOpciones : StartupScript
     private Grid animOpciones;
     private UniformGrid resoluciones;
     private TextBlock resoluciónActual;
+    private EditText txtPuerto;
     private bool animando;
 
     public override void Start()
@@ -57,6 +59,10 @@ public class InterfazOpciones : StartupScript
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR4"), () => EnClicResolución(1920, 1200, "btnR4"));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR5"), () => EnClicResolución(2560, 1440, "btnR5"));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR6"), () => EnClicResolución(3840, 2160, "btnR6"));
+
+        txtPuerto = página.FindVisualChildOfType<EditText>("txtPuerto");
+        txtPuerto.Text = SistemaMemoria.ObtenerConfiguración(Configuraciones.puertoRed);
+        txtPuerto.TextChanged += ConfigurarPuerto;
 
         resoluciónActual = página.FindVisualChildOfType<TextBlock>("txtResoluciónActual");
         resoluciónActual.Text = SistemaMemoria.ObtenerConfiguración(Configuraciones.resolución).Replace("x", " x ");
@@ -140,10 +146,38 @@ public class InterfazOpciones : StartupScript
             return;
 
         SistemaMemoria.GuardarConfiguración(Configuraciones.velocidadRed, velocidad.ToString());
+        SistemaRed.ActualizarConfiguración();
         BloquearVelocidadRed(velocidad);
         MostrarResoluciones(false);
     }
 
+    private void ConfigurarPuerto(object sender, RoutedEventArgs e)
+    {
+        if (animando)
+            return;
+
+        MostrarResoluciones(false);
+        if (string.IsNullOrEmpty(txtPuerto.Text))
+        {
+            txtPuerto.Text = "0";
+            return;
+        }
+
+        // Solo números
+        string regex = @"[^0-9]";
+        var número = int.Parse(Regex.Replace(txtPuerto.Text, regex, ""));
+
+        // Excepciones y límites
+        if (número == 0 || número > 60000)
+            número = 0;
+
+        txtPuerto.Text = número.ToString();
+
+        SistemaMemoria.GuardarConfiguración(Configuraciones.puertoRed, txtPuerto.Text);
+        if (!SistemaRed.ActualizarConfiguración())
+            txtPuerto.Text = "0";
+    }
+    
     private void ConfigurarVolumenGeneral(object sender, RoutedEventArgs e)
     {
         if (animando)

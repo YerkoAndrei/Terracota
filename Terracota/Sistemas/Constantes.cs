@@ -90,6 +90,7 @@ public static class Constantes
         volumenMúsica,
         volumenEfectos,
         velocidadRed,
+        puertoRed,
         pantallaCompleta,
         resolución
     }
@@ -110,10 +111,7 @@ public static class Constantes
     public enum EntradasRed
     {
         nada,
-
-        // Asignación inicial
-        marcarComoAnfitrión,
-        marcarComoHuesped,
+        conexión,
 
         // Turnos
         turnoAnfitrión,
@@ -126,7 +124,7 @@ public static class Constantes
         pausa,
         disparo,
         texto,
-        data
+        físicas
     }
 
     public static Fortaleza GenerarFortalezaVacía()

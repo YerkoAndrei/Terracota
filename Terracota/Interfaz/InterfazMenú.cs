@@ -165,8 +165,8 @@ public class InterfazMenú : StartupScript
     {
         var nuevoHost = prefabHost.InstantiateElement<Grid>("Host");
         ConfigurarHostLAN(nuevoHost, nombreIP, nombreHost,
-            () => { SistemaRed.ConectarDispositivo(nombreIP, TipoConexión.LAN, TipoJugador.anfitrión); },
-            () => { SistemaRed.ConectarDispositivo(nombreIP, TipoConexión.LAN, TipoJugador.huesped); });
+            () => { EnClicConectarLAN(nombreIP, TipoConexión.LAN, TipoJugador.anfitrión); },
+            () => { EnClicConectarLAN(nombreIP, TipoConexión.LAN, TipoJugador.huesped); });
         
         padreHosts.Children.Add(nuevoHost);
 
@@ -253,14 +253,19 @@ public class InterfazMenú : StartupScript
         });
     }
 
-    private void EnClicConectarP2P(TipoJugador tipoJugador)
+    private void EnClicConectarLAN(string ip, TipoConexión tipoConexión, TipoJugador conectarComo)
+    {
+        _ = SistemaRed.ConectarDispositivo(ip, tipoConexión, conectarComo, true);
+    }
+
+    private async void EnClicConectarP2P(TipoJugador tipoJugador)
     {
         if (animando)
             return;
 
         txtErrorP2P.Text = string.Empty;
 
-        var resultado = SistemaRed.ConectarDispositivo(txtConexiónP2P.Text, TipoConexión.P2P, tipoJugador);
+        var resultado = await SistemaRed.ConectarDispositivo(txtConexiónP2P.Text, TipoConexión.P2P, tipoJugador, true);
 
         if (!string.IsNullOrEmpty(resultado))
             txtErrorP2P.Text = resultado;

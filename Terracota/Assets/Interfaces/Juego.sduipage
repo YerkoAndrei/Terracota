@@ -211,6 +211,28 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: PanelOscuro
+        -   UIElement: !UniformGrid
+                Id: 09b78fa4-2949-46bc-8687-e6ee7eb12ff8
+                DependencyProperties:
+                    cc736ec6c993be3ccc03572700f986e7~Panel.ZIndexPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 200.0
+                Height: 82.0
+                VerticalAlignment: Top
+                Margin: {Left: 415.0, Top: 210.0, Right: 385.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: Puerto
+                Children:
+                    c65ccb4166bd8d18fc2fba7cf0642cff: !TextBlock ref!! 51702b99-1d0f-4a0c-a8a0-b0d48095a25e
+                    7ec60812c9375dd7f49a90ebba08ae1c: !Grid ref!! 1ac5d6c4-46c5-4db9-84dd-66b725023c90
+                Rows: 3
+                Columns: 2
+            Base:
+                BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
+                BasePartId: 03c4053e-470e-4cb9-b3b2-2e8864b3e383
+                InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
         -   UIElement: !ImageElement
                 Id: 0a160818-407d-449a-ab16-6d339c97932e
                 DependencyProperties: {}
@@ -706,6 +728,31 @@ Hierarchy:
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 25, G: 25, B: 25, A: 250}
                 StretchType: Fill
+        -   UIElement: !Grid
+                Id: 1ac5d6c4-46c5-4db9-84dd-66b725023c90
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 200.0
+                Height: 50.0
+                HorizontalAlignment: Right
+                Margin: {Top: 38.333332, Right: -100.0, Bottom: -49.999996}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: Entrada
+                Children:
+                    c5cbc7b77dfd9e25c0c497a8ad19d7d2: !ImageElement ref!! a489c9f0-5599-4cae-aece-086bfc6a0434
+                    83a28e8e0f5ea2fecac8417ebd796857: !ImageElement ref!! d624ff0f-0979-4dfe-a28e-d0c1e5c39fb2
+                    91514cbb498e006f1d6c0dd14edebcc5: !ImageElement ref!! bfeb2ed0-6ae8-4b6f-a26a-b804af464aad
+                    26ea45cb08b7f724759af0f85869d009: !ImageElement ref!! 5faf9fba-dfb2-4996-a3c8-e75f4fefc26c
+                    67c2d5f8bc94a3cd76182c98c5d05b99: !EditText ref!! fca2b49f-ab97-4978-8f88-7997e02b7413
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
+            Base:
+                BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
+                BasePartId: 029e43e9-3649-4df2-a912-cfbae89e3e7e
+                InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
         -   UIElement: !ImageElement
                 Id: 1b00100d-eae9-465e-9711-1df3d0dd73d8
                 DependencyProperties: {}
@@ -2023,6 +2070,26 @@ Hierarchy:
                 BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
                 BasePartId: 25269b56-8bb5-48f3-94f0-26e0d0a9d9ec
                 InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
+        -   UIElement: !TextBlock
+                Id: 51702b99-1d0f-4a0c-a8a0-b0d48095a25e
+                DependencyProperties:
+                    d042c34905fe182236af1c2395beafdb~GridBase.ColumnPropertyKey: 0
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Height: 30.0
+                Margin: {Left: 100.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: "txtTítuloPuerto"
+                Text: Puerto
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 25.0
+                TextColor: {R: 240, G: 220, B: 160, A: 240}
+                TextAlignment: Center
+            Base:
+                BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
+                BasePartId: 6335931b-034d-47e8-8a69-e29c1eb48fdf
+                InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
         -   UIElement: !Grid
                 Id: 51b13538-f1cc-4365-a4c6-600990dd9694
                 DependencyProperties: {}
@@ -2216,6 +2283,24 @@ Hierarchy:
             Base:
                 BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
                 BasePartId: 84e24629-8278-44dd-8220-d30a34da4656
+                InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
+        -   UIElement: !ImageElement
+                Id: 5faf9fba-dfb2-4996-a3c8-e75f4fefc26c
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                HorizontalAlignment: Right
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: 
+                Source: !SpriteFromTexture
+                    Texture: fa2fa398-4898-4c4b-8568-a4ca9eb60567:Texturas/Interfaz/DecoDerecha
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 240, G: 220, B: 160, A: 240}
+            Base:
+                BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
+                BasePartId: 1688e334-5661-4ea0-af47-d10b96943ebe
                 InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
         -   UIElement: !ImageElement
                 Id: 60be1624-5bfa-405a-9579-d9bffce90c8a
@@ -3690,6 +3775,24 @@ Hierarchy:
                 BasePartId: 82d2ebed-edb7-424c-a099-a76540fa95ba
                 InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
         -   UIElement: !ImageElement
+                Id: a489c9f0-5599-4cae-aece-086bfc6a0434
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: 
+                Source: !SpriteFromTexture
+                    Texture: 66d859f6-5dbf-4782-bf1c-a7fdc0806448:Texturas/Cuadrado
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 160, G: 60, B: 0, A: 255}
+                StretchType: Fill
+            Base:
+                BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
+                BasePartId: 11be258f-6b79-413a-b810-9a568df47cbf
+                InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
+        -   UIElement: !ImageElement
                 Id: a51f9e4f-cc3a-4132-ac58-046a117856a5
                 DependencyProperties:
                     c36bde437af01aeaaa414c1d1a4a44df~Panel.ZIndexPropertyKey: 1
@@ -3795,6 +3898,7 @@ Hierarchy:
                     fa1c414de6da83f9b9ab162ea32bee4b: !Button ref!! a42b8769-2201-45a0-ab41-d36013bdda17
                     bab8926ef65253598fc22de94684a041: !UniformGrid ref!! 5712493c-4aeb-478f-9cbd-855c52fb5654
                     81830f00625aac3c77eb17155974e09c: !UniformGrid ref!! d8d45697-914f-45f2-8832-2dec91516719
+                    9e1e237d5d248310bae011585b2b9f35: !UniformGrid ref!! 09b78fa4-2949-46bc-8687-e6ee7eb12ff8
                     a8cee8bf8365360c29ea3698649c192b: !UniformGrid ref!! 87617c49-a344-403f-8119-ceefcd697513
                 RowDefinitions: {}
                 ColumnDefinitions: {}
@@ -4310,6 +4414,24 @@ Hierarchy:
             Base:
                 BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
                 BasePartId: 8fa633db-b962-4c50-ac63-ac95036ca8f8
+                InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
+        -   UIElement: !ImageElement
+                Id: bfeb2ed0-6ae8-4b6f-a26a-b804af464aad
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                HorizontalAlignment: Left
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: 
+                Source: !SpriteFromTexture
+                    Texture: 866d8278-7633-481e-9f57-fc567f503176:Texturas/Interfaz/DecoIzquierda
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 240, G: 220, B: 160, A: 240}
+            Base:
+                BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
+                BasePartId: 50fd471b-0ca6-4154-b949-163838750314
                 InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
         -   UIElement: !Grid
                 Id: c0a2e6af-a382-46d9-8ec4-ffd005d11d66
@@ -4849,6 +4971,24 @@ Hierarchy:
             Base:
                 BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
                 BasePartId: 041acd76-10d2-4399-94ea-0752cef19deb
+                InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
+        -   UIElement: !ImageElement
+                Id: d624ff0f-0979-4dfe-a28e-d0c1e5c39fb2
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: 
+                Source: !SpriteFromTexture
+                    Texture: 7e1b453f-bdd3-4d5d-8844-601313a775f4:Texturas/Interfaz/BaseHorizontal
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 240, G: 220, B: 160, A: 240}
+                StretchType: Fill
+            Base:
+                BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
+                BasePartId: d0da8ba8-641b-4803-b1bd-e6d93bc77b38
                 InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
         -   UIElement: !ImageElement
                 Id: d7834b4a-758a-4ebd-a43f-b8eebebf6cdc
@@ -5676,6 +5816,35 @@ Hierarchy:
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 160, G: 60, B: 0, A: 255}
                 StretchType: Fill
+        -   UIElement: !EditText
+                Id: fca2b49f-ab97-4978-8f88-7997e02b7413
+                DependencyProperties:
+                    6638b9a762ef1c1ed15a691084a00071~Panel.ZIndexPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                DrawLayerNumber: 5
+                CanBeHitByUser: true
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtPuerto
+                Padding: {Left: 8.0, Top: 4.0, Right: 8.0, Bottom: 24.0}
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 25.0
+                TextColor: {R: 240, G: 220, B: 160, A: 240}
+                TextAlignment: Center
+                CaretColor: {R: 240, G: 230, B: 160, A: 240}
+                CaretWidth: 1.0
+                SelectionColor: {R: 160, G: 60, B: 0, A: 255}
+                IMESelectionColor: {R: 160, G: 60, B: 0, A: 255}
+                MaxLength: 5
+                MaxLines: 1
+                CaretFrequency: 1.0
+                Text: 00000
+            Base:
+                BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
+                BasePartId: 5f6be45e-632f-408e-918b-603301805c7e
+                InstanceId: ac071ff2-3362-48ea-aa54-f93cece635ce
         -   UIElement: !ImageElement
                 Id: fd1a6248-1293-45a8-88d6-c480be79f83b
                 DependencyProperties:
