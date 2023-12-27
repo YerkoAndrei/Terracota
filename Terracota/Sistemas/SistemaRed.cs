@@ -21,9 +21,10 @@ public class SistemaRed : AsyncScript
     private static string IPPúblicaActual;
     private static string IPConectada;
 
-    private static readonly HttpClient cliente = new HttpClient();
+    // GLobal
+    private static HttpClient cliente = new HttpClient();
 
-    // Envío de data
+    // UDP P2P
     private static UdpClient udp;
     private static IPEndPoint remoto;
 
@@ -34,7 +35,7 @@ public class SistemaRed : AsyncScript
 
     public override async Task Execute()
     {
-        Log.Warning(tipoJugador.ToString());
+        Log.Warning("inicio");
         ObtenerIPs();
                 
         int cuadroActual = 0;
@@ -137,8 +138,18 @@ public class SistemaRed : AsyncScript
 
         try
         {
-            udp.Connect(IPConectada, puerto);
             var correcto = false;
+
+            // Conexión
+            udp = new UdpClient(puerto);
+            remoto = new IPEndPoint(IPAddress.Any, puerto);
+            udp.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
+            
+            // Solo anfitrión
+            if(conectarComo == TipoJugador.anfitrión)
+                udp.Client.Bind(remoto);
+
+            udp.Connect(IPConectada, puerto);
 
             if (iniciar)
             {
@@ -153,11 +164,22 @@ public class SistemaRed : AsyncScript
                         break;
                 }
 
+                var conectarRemotoComo = TipoJugador.nada;
+                switch (conectarComo)
+                {
+                    case TipoJugador.anfitrión:
+                        conectarRemotoComo = TipoJugador.huesped;
+                        break;
+                    case TipoJugador.huesped:
+                        conectarRemotoComo = TipoJugador.anfitrión;
+                        break;
+                }
+
                 var data = new Conexión
                 {
                     IP = miIP,
                     TipoConexión = tipoConexión,
-                    ConectarComo = conectarComo
+                    ConectarComo = conectarRemotoComo
                 };
                 correcto = await EnviarData(EntradasRed.conexión, data);
             }
@@ -172,7 +194,7 @@ public class SistemaRed : AsyncScript
         }
         catch (Exception e)
         {
-            // Verificar y/o traducir errores
+            // PENDIENTE: Controlar y traducir errores
             return e.Message;
         }
     }
@@ -213,10 +235,18 @@ public class SistemaRed : AsyncScript
 
     private static async Task RecibirData()
     {
-        var resultado = await udp.ReceiveAsync();
-        var buffer = Encoding.ASCII.GetString(resultado.Buffer);
+        string buffer = string.Empty;
+        try
+        {
+            var resultado = await udp.ReceiveAsync();
+            buffer = Encoding.ASCII.GetString(resultado.Buffer);
+        }
+        catch
+        {
+            return;
+        }
 
-        if(buffer.Length == 0)
+        if(string.IsNullOrEmpty(buffer))
             return;
 
         var data = JsonConvert.DeserializeObject<Dictionary<int, string>>(buffer);
@@ -290,10 +320,13 @@ public class SistemaRed : AsyncScript
             return false;
 
         velocidadRed = int.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.velocidadRed));
-        puerto = int.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.puertoRed));
+        puerto = Sistema.RangoAleatorio(666, 777);// int.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.puertoRed));
 
         try
         {
+            if(udp != null)
+                udp.Close();
+
             udp = new UdpClient(puerto);
             remoto = new IPEndPoint(IPAddress.Any, puerto);
             return true;
