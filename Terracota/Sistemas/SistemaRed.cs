@@ -131,25 +131,23 @@ public class SistemaRed : AsyncScript
 
     public static async Task<string> ConectarDispositivo(string ip, TipoConexión tipoConexión, TipoJugador conectarComo, bool iniciar)
     {
-        MarcarDispositivo(conectarComo);
-
-        IPConectada = ip;
-        remoto = new IPEndPoint(IPAddress.Parse(IPConectada), puerto);
-
         try
         {
             var correcto = false;
 
             // Conexión
+            if (udp != null)
+                udp.Close();
+
             udp = new UdpClient(puerto);
-            remoto = new IPEndPoint(IPAddress.Any, puerto);
+            remoto = new IPEndPoint(IPAddress.Parse(ip), puerto);
             udp.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
             
             // Solo anfitrión
-            if(conectarComo == TipoJugador.anfitrión)
-                udp.Client.Bind(remoto);
+            //if(conectarComo == TipoJugador.anfitrión)
+            //    udp.Client.Bind(remoto);
 
-            udp.Connect(IPConectada, puerto);
+            udp.Connect(ip, puerto);
 
             if (iniciar)
             {
@@ -186,6 +184,9 @@ public class SistemaRed : AsyncScript
 
             if (correcto || !iniciar)
             {
+                MarcarDispositivo(conectarComo);
+                IPConectada = ip;
+
                 CambiarEscena();
                 return string.Empty;
             }
@@ -305,7 +306,7 @@ public class SistemaRed : AsyncScript
                 catch { }
 
                 // Se agrega a la lista
-                //if (nombreIP != IPLocalActual)
+                if (nombreIP != IPLocalActual)
                     interfazMenú.AgregarHost(nombreIP, nombreHost);
             }
         });
@@ -320,7 +321,7 @@ public class SistemaRed : AsyncScript
             return false;
 
         velocidadRed = int.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.velocidadRed));
-        puerto = Sistema.RangoAleatorio(666, 777);// int.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.puertoRed));
+        puerto = int.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.puertoRed));
 
         try
         {
