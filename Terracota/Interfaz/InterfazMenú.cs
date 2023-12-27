@@ -157,6 +157,7 @@ public class InterfazMenú : StartupScript
             return;
 
         // Limpieza
+        txtErrorLAN.Text = string.Empty;
         padreHosts.Children.Clear();
         padreHosts.Rows = 0;
         padreHosts.Height = 0;
@@ -284,6 +285,9 @@ public class InterfazMenú : StartupScript
             return;
 
         animando = true;
+        txtErrorLAN.Text = string.Empty;
+        txtErrorP2P.Text = string.Empty;
+
         if (gridLAN.Visibility == Visibility.Visible)
         {
             SistemaAnimación.AnimarElemento(animLAN, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, () =>
