@@ -287,7 +287,7 @@ public class SistemaRed : AsyncScript
     // LAN
     public static async void BuscarLAN(string ipLocal, InterfazMenú interfazMenú)
     {
-        await Parallel.ForAsync(2, 255, async (i, loopState) =>
+        await Parallel.ForAsync(1, 255, async (i, loopState) =>
         {
             var ping = new Ping();
             var nombreIP = ipLocal + i.ToString();
