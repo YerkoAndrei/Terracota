@@ -297,4 +297,40 @@ public class ControladorPartidaRemota : SyncScript
             }
         }
     }
+
+    // Remoto
+    public void CargarFortaleza(Fortaleza fortaleza, TipoJugador tipoJugador)
+    {
+
+    }
+
+    public void CambiarTurno(TipoJugador tipoJugador)
+    {
+
+    }
+
+    public void ActivarDisparo(TipoJugador tipoJugador)
+    {
+
+    }
+
+    public Físicas ObtenerFísicas()
+    {
+        return new Físicas();
+    }
+
+    public void ActualizarFísicas(Físicas físicas)
+    {
+
+    }
+
+    public void Pausar(TipoJugador tipoJugador)
+    {
+
+    }
+
+    public void ActualizarTexto(Texto nuevoTexto)
+    {
+
+    }
 }

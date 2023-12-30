@@ -28,17 +28,20 @@ public class SistemaRed : AsyncScript
     private static UdpClient udp;
     private static IPEndPoint remoto;
 
+    private static bool conectado;
     private static int velocidadRed;
     private static int puerto;
 
-    private static bool conectado;
+    // Partida remota
+    private static SistemaRed instancia;
+    private static ControladorPartidaRemota controlador;
 
     public override async Task Execute()
     {
-        Log.Warning("inicio");
-        ObtenerIPs();
-                
+        instancia = this;
         int cuadroActual = 0;
+
+        ObtenerIPs();
         ActualizarConfiguración();
 
         while (Game.IsRunning)
@@ -61,7 +64,7 @@ public class SistemaRed : AsyncScript
 
     private async Task ActualizarFísica()
     {
-        var data = "PENDIENE";
+        var data = controlador.ObtenerFísicas();
         await EnviarData(EntradasRed.físicas, data);
     }
 
@@ -188,6 +191,9 @@ public class SistemaRed : AsyncScript
                 IPConectada = ip;
 
                 CambiarEscena();
+
+                // Obtención controlador
+                controlador = instancia.SceneSystem.SceneInstance.RootScene.Children[0].Entities.Where(o => o.Get<ControladorPartidaRemota>() != null).FirstOrDefault().Get<ControladorPartidaRemota>();
                 return string.Empty;
             }
             else
@@ -213,7 +219,10 @@ public class SistemaRed : AsyncScript
     public static async Task<bool> EnviarData(EntradasRed entrada, dynamic data = null)
     {
         // Serializa data
-        var json = JsonConvert.SerializeObject(data);
+        var json = string.Empty;
+        if(data != null)
+            json = JsonConvert.SerializeObject(data);
+
         var diccionario = new Dictionary<int, string>()
         {
             { (int)entrada, json }
@@ -256,32 +265,58 @@ public class SistemaRed : AsyncScript
         switch(entrada)
         {
             case EntradasRed.conexión:
-                var contenido = JsonConvert.DeserializeObject<Conexión>(data.Values.Single());
-                await ConectarDispositivo(contenido.IP, contenido.TipoConexión, contenido.ConectarComo, false);
+                var conexión = JsonConvert.DeserializeObject<Conexión>(data.Values.Single());
+                await ConectarDispositivo(conexión.IP, conexión.TipoConexión, conexión.ConectarComo, false);
                 break;
             case EntradasRed.turnoAnfitrión:
-
+                controlador.CambiarTurno(TipoJugador.anfitrión);
                 break;
             case EntradasRed.turnoHuesped:
-
+                controlador.CambiarTurno(TipoJugador.huesped);
                 break;
             case EntradasRed.cargarFortaleza:
-
+                var fortaleza = JsonConvert.DeserializeObject<Fortaleza>(data.Values.Single());
+                switch(tipoJugador)
+                {
+                    case TipoJugador.anfitrión:
+                        controlador.CargarFortaleza(fortaleza, TipoJugador.huesped);
+                        break;
+                    case TipoJugador.huesped:
+                        controlador.CargarFortaleza(fortaleza, TipoJugador.anfitrión);
+                        break;
+                }
                 break;
             case EntradasRed.pausa:
-
+                switch (tipoJugador)
+                {
+                    case TipoJugador.anfitrión:
+                        controlador.Pausar(TipoJugador.huesped);
+                        break;
+                    case TipoJugador.huesped:
+                        controlador.Pausar(TipoJugador.anfitrión);
+                        break;
+                }
                 break;
             case EntradasRed.disparo:
-
+                switch (tipoJugador)
+                {
+                    case TipoJugador.anfitrión:
+                        controlador.ActivarDisparo(TipoJugador.huesped);
+                        break;
+                    case TipoJugador.huesped:
+                        controlador.ActivarDisparo(TipoJugador.anfitrión);
+                        break;
+                }
                 break;
             case EntradasRed.texto:
-
+                var texto = JsonConvert.DeserializeObject<Texto>(data.Values.Single());
+                controlador.ActualizarTexto(texto);
                 break;
             case EntradasRed.físicas:
-
+                var físicas = JsonConvert.DeserializeObject<Físicas>(data.Values.Single());
+                controlador.ActualizarFísicas(físicas);
                 break;
         }
-        Console.WriteLine(entrada);
     }
 
     // LAN
