@@ -124,6 +124,9 @@ public class SistemaMemoria : StartupScript
     // Configuración
     private static void EstablecerConfiguraciónPredeterminada()
     {
+        if (!Directory.Exists(carpetaPersistente))
+            Directory.CreateDirectory(carpetaPersistente);
+
         if (File.Exists(rutaConfiguración))
             return;
 
