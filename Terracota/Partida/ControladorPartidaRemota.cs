@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Stride.Engine;
 using Stride.Input;
 
@@ -36,6 +38,8 @@ public class ControladorPartidaRemota : SyncScript
     private bool partidaActiva;
     private bool esperandoReinicio;
 
+    private List<ElementoBloque> bloques;
+
     public override void Start()
     {
         // Predeterminado
@@ -47,12 +51,51 @@ public class ControladorPartidaRemota : SyncScript
         proyectilAnfitrión = TipoProyectil.bola;
         proyectilHuesped = TipoProyectil.bola;
 
-        cañónAnfitrión.Iniciar(interfaz);
-        cañónHuesped.Iniciar(interfaz);
+        switch (SistemaRed.ObtenerTipoJugador())
+        {
+            case TipoJugador.anfitrión:
+                cañónAnfitrión.Iniciar(interfaz);
+                break;
+            case TipoJugador.huesped:
+                cañónHuesped.Iniciar(interfaz);
+                break;
+        }
 
         // Comienza con elección
         UIElección.Enabled = true;
         interfaz.Activar(false);
+
+        // Red
+        bloques = new List<ElementoBloque>();
+
+        // Físicas anfitrión
+        var índice = 0;
+        var bloquesAnfitrión = new List<ElementoBloque>();
+        bloquesAnfitrión.AddRange(fortalezaAnfitrión.estatuas);
+        bloquesAnfitrión.AddRange(fortalezaAnfitrión.cortos);
+        bloquesAnfitrión.AddRange(fortalezaAnfitrión.largos);
+        foreach (var bloque in bloquesAnfitrión)
+        {
+            bloque.CrearCódigo("0_" + índice);
+            bloques.Add(bloque);
+            índice++;
+        }
+
+        // Físicas huespes
+        índice = 0;
+        var bloquesHuesped = new List<ElementoBloque>();
+        bloquesHuesped.AddRange(fortalezaHuesped.estatuas);
+        bloquesHuesped.AddRange(fortalezaHuesped.cortos);
+        bloquesHuesped.AddRange(fortalezaHuesped.largos);
+        foreach (var bloque in bloquesHuesped)
+        {
+            bloque.CrearCódigo("1_" + índice);
+            bloques.Add(bloque);
+            índice++;
+        }
+
+        // Código es para ordenar una sola vez
+        bloques = bloques.OrderBy(o => o.ObtenerCódigo()).ToList();
     }
 
     public override void Update()
@@ -83,8 +126,8 @@ public class ControladorPartidaRemota : SyncScript
         UIElección.Enabled = false;
 
         // Activa colisiones
-        fortalezaAnfitrión.Activar();
-        fortalezaHuesped.Activar();
+        //fortalezaAnfitrión.Activar();
+        //fortalezaHuesped.Activar();
 
         // Al finalizar rotación
         var enFin = () =>
@@ -170,7 +213,7 @@ public class ControladorPartidaRemota : SyncScript
     {
         cambiandoTurno = true;
         interfaz.PausarInterfaz();
-        await Task.Delay(duraciónTurno);
+        await Task.Delay(duraciónTurnoLocal);
         interfaz.ActivarTurno(false);
 
         // Verifica partida
@@ -298,7 +341,7 @@ public class ControladorPartidaRemota : SyncScript
         }
     }
 
-    // Remoto
+    // Red
     public void CargarFortaleza(Fortaleza fortaleza, TipoJugador tipoJugador)
     {
 
@@ -314,16 +357,6 @@ public class ControladorPartidaRemota : SyncScript
 
     }
 
-    public Físicas ObtenerFísicas()
-    {
-        return new Físicas();
-    }
-
-    public void ActualizarFísicas(Físicas físicas)
-    {
-
-    }
-
     public void Pausar(TipoJugador tipoJugador)
     {
 
@@ -332,5 +365,51 @@ public class ControladorPartidaRemota : SyncScript
     public void ActualizarTexto(Texto nuevoTexto)
     {
 
+    }
+
+    public Físicas ObtenerFísicas()
+    {
+        var físicas = new Físicas();
+
+        // Cañón
+        switch(SistemaRed.ObtenerTipoJugador())
+        {
+            case TipoJugador.anfitrión:
+                físicas.SoporteCañón = cañónHuesped.ObtenerRotaciónSoporte();
+                físicas.TuboCañón = cañónHuesped.ObtenerRotaciónCañón();
+                break;
+            case TipoJugador.huesped:
+                físicas.SoporteCañón = cañónAnfitrión.ObtenerRotaciónSoporte();
+                físicas.TuboCañón = cañónAnfitrión.ObtenerRotaciónCañón();
+                break;
+        }
+
+        // Bloques
+        foreach (var bloque in bloques)
+        {
+            físicas.Bloques.Add(new BloqueFísico(bloque.ObtenerCódigo(), bloque.Entity.Transform.Position, bloque.Entity.Transform.Rotation));
+        }
+
+        return físicas;
+    }
+
+    public void ActualizarFísicas(Físicas físicas)
+    {
+        // Cañón
+        switch (SistemaRed.ObtenerTipoJugador())
+        {
+            case TipoJugador.anfitrión:
+                 cañónHuesped.ActualizarRotación(físicas.TuboCañón, físicas.SoporteCañón);
+                break;
+            case TipoJugador.huesped:
+                cañónAnfitrión.ActualizarRotación(físicas.TuboCañón, físicas.SoporteCañón);
+                break;
+        }
+
+        // Bloques
+        for (int i = 0; i < físicas.Bloques.Count; i++)
+        {
+            bloques[i].Posicionar(físicas.Bloques[i].Posición, físicas.Bloques[i].Rotación);
+        }
     }
 }

@@ -216,6 +216,11 @@ public class SistemaRed : AsyncScript
         conectado = true;
     }
 
+    public static TipoJugador ObtenerTipoJugador()
+    {
+        return tipoJugador;
+    }
+
     public static async Task<bool> EnviarData(EntradasRed entrada, dynamic data = null)
     {
         // Serializa data

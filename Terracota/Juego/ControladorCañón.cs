@@ -191,7 +191,24 @@ public class ControladorCañón : SyncScript
 
     private async Task DestruirMetralla(ControladorBola controladorBola, int tiempo)
     {
-        await Task.Delay(duraciónTurno + (tiempo * 10));
+        await Task.Delay(duraciónTurnoLocal + (tiempo * 10));
         controladorBola.DestruirInmediato();
+    }
+
+    // Red
+    public Quaternion ObtenerRotaciónCañón()
+    {
+        return soporte.Transform.Rotation;
+    }
+
+    public Quaternion ObtenerRotaciónSoporte()
+    {
+        return cañón.Transform.Rotation;
+    }
+
+    public void ActualizarRotación(Quaternion _cañón, Quaternion _soporte)
+    {
+        cañón.Transform.Rotation = _cañón;
+        soporte.Transform.Rotation = _soporte;
     }
 }

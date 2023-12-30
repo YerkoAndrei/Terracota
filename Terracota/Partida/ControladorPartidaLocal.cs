@@ -170,7 +170,7 @@ public class ControladorPartidaLocal : SyncScript
     {
         cambiandoTurno = true;
         interfaz.PausarInterfaz();
-        await Task.Delay(duraciónTurno);
+        await Task.Delay(duraciónTurnoLocal);
         interfaz.ActivarTurno(false);
 
         // Verifica partida

@@ -5,7 +5,8 @@ namespace Terracota;
 
 public static class Constantes
 {
-    public static int duraciónTurno = 3000;
+    public static int duraciónTurnoLocal = 3000;
+    public static int duraciónTurnoRemoto = 1000;
     public static float multiplicadorMáximo = 1.5f;
 
     // Color botones

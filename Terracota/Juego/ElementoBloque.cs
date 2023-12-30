@@ -12,12 +12,23 @@ public class ElementoBloque : StartupScript
 
     // Posición hijo
     private Vector3 posiciónCuerpo;
+    private string código;
 
     public override void Start()
     {
         posiciónCuerpo = cuerpo.Entity.Transform.Position;
         cuerpo.IsKinematic = true;
         cuerpo.Enabled = false;
+    }
+
+    public void CrearCódigo(string _código)
+    {
+        código = _código;
+    }
+
+    public string ObtenerCódigo()
+    {
+        return código;
     }
 
     public void Activar()

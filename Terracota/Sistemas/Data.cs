@@ -1,4 +1,5 @@
-﻿using Stride.Core.Mathematics;
+﻿using System.Collections.Generic;
+using Stride.Core.Mathematics;
 using static Terracota.Constantes;
 
 public class Conexión
@@ -17,13 +18,25 @@ public class Texto
 
 public class Físicas
 {
-    public Quaternion Cañón { get; set; }
-    public BloqueFísico[] Bloques { get; set; }
+    public Quaternion TuboCañón { get; set; }
+    public Quaternion SoporteCañón { get; set; }
+    /*
+    public Vector3 PosiciónBola { get; set; }
+    public Quaternion RotaciónBola { get; set; }
+    */
+    public List<BloqueFísico> Bloques { get; set; }
 }
 
 public class BloqueFísico
 {
-    public int Id { get; set; }
+    public string Código { get; set; }
     public Vector3 Posición { get; set; }
     public Quaternion Rotación { get; set; }
+
+    public BloqueFísico(string código, Vector3 posición, Quaternion rotación)
+    {
+        Código = código;
+        Posición = posición;
+        Rotación = rotación;
+    }
 }

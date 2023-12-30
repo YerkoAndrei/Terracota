@@ -88,7 +88,7 @@ public class ControladorBola : AsyncScript
 
     private async Task ContarVida()
     {
-        await Task.Delay(duraciónTurno);
+        await Task.Delay(duraciónTurnoLocal);
         await Destruir();
     }
 
