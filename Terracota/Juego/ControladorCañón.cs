@@ -138,6 +138,11 @@ public class ControladorCañón : SyncScript
         }
 
         // Partículas
+        ActivarPartículas();
+    }
+
+    public void ActivarPartículas()
+    {
         if (!partículasFuego.Enabled)
             partículasFuego.Enabled = true;
 
@@ -148,7 +153,7 @@ public class ControladorCañón : SyncScript
             partículasHumo.Enabled = true;
 
         partículasHumo.ParticleSystem.ResetSimulation();
-        partículasHumo.ParticleSystem.Play();        
+        partículasHumo.ParticleSystem.Play();
     }
 
     private void SonarX(float delta)

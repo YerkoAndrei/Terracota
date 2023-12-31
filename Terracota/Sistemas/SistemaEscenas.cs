@@ -1,5 +1,4 @@
-﻿using System.IO;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Core.Serialization;
 using Stride.Engine;

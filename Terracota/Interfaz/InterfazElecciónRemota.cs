@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Graphics;
@@ -44,8 +43,7 @@ public class InterfazElecciónRemota : StartupScript
     private Grid btnVolver;
     private Grid btnAleatorio;
 
-    private bool anfitriónSeleccionado;
-    private bool huespedSeleccionado;
+    private bool fortalezaSeleccionada;
 
     private bool esperandoRuleta;
     private bool ganaAnfitrión;
@@ -118,17 +116,23 @@ public class InterfazElecciónRemota : StartupScript
         {
             var fortalezaTemp = fortalezas[i];
 
-            // Izquierda
-            var nuevaRanuraAnfitrión = prefabRanura.InstantiateElement<Grid>("RanuraIzquierda");
-             ConfigurarRanuraElección(nuevaRanuraAnfitrión, i, fortalezaTemp.Nombre, () => EnClicAnfitrión(fortalezaTemp.Nombre));
-            padreRanurasAnfitrión.Height += (nuevaRanuraAnfitrión.Height + 10);
-            padreRanurasAnfitrión.Children.Add(nuevaRanuraAnfitrión);
-
-            // Derecha
-            var nuevaRanuraHuesped = prefabRanura.InstantiateElement<Grid>("RanuraDerecha");
-            ConfigurarRanuraElección(nuevaRanuraHuesped, i, fortalezaTemp.Nombre, () => EnClicHuesped(fortalezaTemp.Nombre));
-            padreRanurasHuesped.Children.Add(nuevaRanuraHuesped);
-            padreRanurasHuesped.Height += (nuevaRanuraHuesped.Height + 10);
+            // Solo muestra fortalezas locales
+            if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
+            {
+                // Izquierda
+                var nuevaRanuraAnfitrión = prefabRanura.InstantiateElement<Grid>("RanuraIzquierda");
+                ConfigurarRanuraElección(nuevaRanuraAnfitrión, i, fortalezaTemp.Nombre, () => EnClicAnfitrión(fortalezaTemp.Nombre));
+                padreRanurasAnfitrión.Height += (nuevaRanuraAnfitrión.Height + 10);
+                padreRanurasAnfitrión.Children.Add(nuevaRanuraAnfitrión);
+            }
+            else
+            {
+                // Derecha
+                var nuevaRanuraHuesped = prefabRanura.InstantiateElement<Grid>("RanuraDerecha");
+                ConfigurarRanuraElección(nuevaRanuraHuesped, i, fortalezaTemp.Nombre, () => EnClicHuesped(fortalezaTemp.Nombre));
+                padreRanurasHuesped.Children.Add(nuevaRanuraHuesped);
+                padreRanurasHuesped.Height += (nuevaRanuraHuesped.Height + 10);
+            }
         }
 
         // Bloqueo botones
@@ -147,8 +151,10 @@ public class InterfazElecciónRemota : StartupScript
         SistemaEscenas.CambiarEscena(Escenas.menú);
     }
 
-    private async void EnClicAleatorio()
+    private void EnClicAleatorio()
     {
+        var jugadorListo = SistemaRed.ObtenerTipoJugador();
+
         btnComenzar.Visibility = Visibility.Hidden;
         btnAleatorio.Visibility = Visibility.Hidden;
 
@@ -156,25 +162,28 @@ public class InterfazElecciónRemota : StartupScript
         visorAnfitrión.Visibility = Visibility.Hidden;
         visorHuesped.Visibility = Visibility.Hidden;
 
-        // Anfitrión
-        var ranuraAnfitrión = ObtenerRanuraAleatoria();
-        EnClicAnfitrión(ranuraAnfitrión);
-
-        // Huesped
-        var ranuraHuesped = ObtenerRanuraAleatoria(); 
-        EnClicHuesped(ranuraHuesped);
-
-        // Ganador
-        ganaAnfitrión = RangoAleatorio(0,2) == 1;
+        if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
+        {
+            var ranuraAnfitrión = ObtenerRanuraAleatoria();
+            EnClicAnfitrión(ranuraAnfitrión);
+        }
+        else
+        {
+            var ranuraHuesped = ObtenerRanuraAleatoria();
+            EnClicHuesped(ranuraHuesped);
+        }
 
         controladorPartida.RotarXCámara(1.5f);
-        await FinalizarRuleta();
         SistemaSonido.CambiarMúsica(true);
 
-        SistemaAnimación.AnimarElemento(animSuperior, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, () =>
-        {
-            controladorPartida.ComenzarPartida(ganaAnfitrión);
-        });
+        // Intenta comenzar partida
+        controladorPartida.RevisarJugadoresListos(SistemaRed.ObtenerTipoJugador());
+        if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
+            _ = SistemaRed.EnviarData(EntradasRed.anfitriónListo);
+        else
+            _ = SistemaRed.EnviarData(EntradasRed.huespedListo);
+
+        SistemaAnimación.AnimarElemento(animSuperior, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, null);
     }
 
     private string ObtenerRanuraAleatoria()
@@ -193,10 +202,9 @@ public class InterfazElecciónRemota : StartupScript
         if (esperandoRuleta)
             return;
 
-        if (huespedSeleccionado)
-            BloquearBotón(btnComenzar, false);
+        BloquearBotón(btnComenzar, false);
 
-        anfitriónSeleccionado = true;
+        fortalezaSeleccionada = true;
         txtAnfitrión.Text = nombre;
         controladorPartida.CargarFortaleza(nombre, true);
     }
@@ -206,24 +214,22 @@ public class InterfazElecciónRemota : StartupScript
         if (esperandoRuleta)
             return;
 
-        if(anfitriónSeleccionado)
-            BloquearBotón(btnComenzar, false);
+        BloquearBotón(btnComenzar, false);
 
-        huespedSeleccionado = true;
+        fortalezaSeleccionada = true;
         txtHuesped.Text = nombre;
         controladorPartida.CargarFortaleza(nombre, false);
     }
 
-    private async void EnClicComenzar()
+    private void EnClicComenzar()
     {
-        if (esperandoRuleta ||!huespedSeleccionado || !anfitriónSeleccionado)
+        if (esperandoRuleta ||!fortalezaSeleccionada)
             return;
-
-        ApagarRuleta();
+        /*
         esperandoRuleta = true;
         gridRuleta.Visibility = Visibility.Visible;
         decoRuleta.Visibility = Visibility.Visible;
-
+        */
         visorAnfitrión.Visibility = Visibility.Hidden;
         visorHuesped.Visibility = Visibility.Hidden;
 
@@ -233,24 +239,23 @@ public class InterfazElecciónRemota : StartupScript
         btnVolver.HorizontalAlignment = HorizontalAlignment.Center;
         btnVolver.Margin = new Thickness(0, 0, 0, 120);
 
-        controladorPartida.RotarXCámara(4.5f);
-        var aleatorio = RangoAleatorio(40, 51);
-        await MoverRuleta(aleatorio);
-
-        if (partidaCancelada)
-            return;
+        controladorPartida.RotarXCámara(1.5f);
+        //controladorPartida.RotarXCámara(4.5f);
+        //var aleatorio = RangoAleatorio(40, 51);
 
         SistemaSonido.SonarInicio();
-
-        await FinalizarRuleta();
         SistemaSonido.CambiarMúsica(true);
 
-        SistemaAnimación.AnimarElemento(animSuperior, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, () =>
-        {
-            controladorPartida.ComenzarPartida(ganaAnfitrión);
-        });
-    }
+        // Intenta comenzar partida
+        controladorPartida.RevisarJugadoresListos(SistemaRed.ObtenerTipoJugador());
+        if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
+            _ = SistemaRed.EnviarData(EntradasRed.anfitriónListo);
+        else
+            _ = SistemaRed.EnviarData(EntradasRed.huespedListo);
 
+        SistemaAnimación.AnimarElemento(animSuperior, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, null);
+    }
+    /*
     private async Task MoverRuleta(int toques)
     {
         int diezAntes = toques - 10;
@@ -319,5 +324,5 @@ public class InterfazElecciónRemota : StartupScript
         {
             ruleta[i].Color = colorRuletaVacía;
         }
-    }
+    }*/
 }

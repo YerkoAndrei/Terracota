@@ -21,13 +21,13 @@ public class ControladorPartidaRemota : SyncScript
     public InterfazJuego interfaz;
     public UIComponent UIElección;
 
-    private ControladorCañón cañónActual;
+    private bool anfitriónListo;
+    private bool huespedListo;
     private bool cambiandoTurno;
     private bool cambiarHaciaDerecha;
 
     private TipoJugador turnoJugador;
-    private TipoProyectil proyectilAnfitrión;
-    private TipoProyectil proyectilHuesped;
+    private TipoProyectil proyectilActual;
 
     private int estatuasAnfitrión;
     private int estatuasHuesped;
@@ -36,7 +36,6 @@ public class ControladorPartidaRemota : SyncScript
     private float multiplicador;
 
     private bool partidaActiva;
-    private bool esperandoReinicio;
 
     private List<ElementoBloque> bloques;
 
@@ -48,8 +47,7 @@ public class ControladorPartidaRemota : SyncScript
         multiplicador = 1.0f;
         turnoJugador = TipoJugador.nada;
 
-        proyectilAnfitrión = TipoProyectil.bola;
-        proyectilHuesped = TipoProyectil.bola;
+        proyectilActual = TipoProyectil.bola;
 
         switch (SistemaRed.ObtenerTipoJugador())
         {
@@ -104,7 +102,7 @@ public class ControladorPartidaRemota : SyncScript
             return;
 
         // Entradas
-        if (Input.IsKeyPressed(Keys.Space) && !interfaz.ObtenerPausa() && partidaActiva && !cambiandoTurno)
+        if (Input.IsKeyPressed(Keys.Space) && !interfaz.ObtenerPausa() && partidaActiva && !cambiandoTurno && turnoJugador == SistemaRed.ObtenerTipoJugador())
         {
             Disparar();
             CambiarTurno();
@@ -115,19 +113,24 @@ public class ControladorPartidaRemota : SyncScript
     {
         var fortaleza = SistemaMemoria.ObtenerFortaleza(nombre);
 
+        // Local
         if (anfitrión)
             fortalezaAnfitrión.Inicializar(fortaleza, true);
         else
             fortalezaHuesped.Inicializar(fortaleza, false);
+
+        // Remoto
+        _ = SistemaRed.EnviarData(EntradasRed.cargarFortaleza, fortaleza);
+
     }
 
-    public void ComenzarPartida(bool ganaAnfitrión)
+    private void ComenzarPartida()
     {
         UIElección.Enabled = false;
 
         // Activa colisiones
-        //fortalezaAnfitrión.Activar();
-        //fortalezaHuesped.Activar();
+        fortalezaAnfitrión.Activar();
+        fortalezaHuesped.Activar();
 
         // Al finalizar rotación
         var enFin = () =>
@@ -139,13 +142,14 @@ public class ControladorPartidaRemota : SyncScript
             partidaActiva = true;
         };
 
-        if (ganaAnfitrión)
+        // PENDIENTE: Inicio siempre es anfitrión, cambiar
+        if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
+            _= SistemaRed.EnviarData(EntradasRed.turnoAnfitrión);
+
+        if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
         {
             cañónAnfitrión.Activar(true);
             cañónHuesped.Activar(false);
-
-            turnoJugador = TipoJugador.anfitrión;
-            cañónActual = cañónAnfitrión;
 
             cambiarHaciaDerecha = true;
             controladorCámara.RotarYCámara(90, false, enFin);
@@ -154,9 +158,6 @@ public class ControladorPartidaRemota : SyncScript
         {
             cañónAnfitrión.Activar(false);
             cañónHuesped.Activar(true);
-
-            turnoJugador = TipoJugador.huesped;
-            cañónActual = cañónHuesped;
 
             cambiarHaciaDerecha = false;
             controladorCámara.RotarYCámara(90, true, enFin);
@@ -173,40 +174,24 @@ public class ControladorPartidaRemota : SyncScript
         controladorCámara.ActivarEfectoDisparo();
         SistemaSonido.SonarCañonazo();
 
-        if (turnoJugador == TipoJugador.anfitrión)
-            cañónActual.Disparar(proyectilAnfitrión, multiplicador);
+        if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
+            cañónAnfitrión.Disparar(proyectilActual, multiplicador);
         else
-            cañónActual.Disparar(proyectilHuesped, multiplicador);
+            cañónHuesped.Disparar(proyectilActual, multiplicador);
     }
 
     public TipoProyectil CambiarProyectil()
     {
-        if (turnoJugador == TipoJugador.anfitrión)
+        switch (proyectilActual)
         {
-            switch (proyectilAnfitrión)
-            {
-                case TipoProyectil.bola:
-                    proyectilAnfitrión = TipoProyectil.metralla;
-                    break;
-                case TipoProyectil.metralla:
-                    proyectilAnfitrión = TipoProyectil.bola;
-                    break;
-            }
-            return proyectilAnfitrión;
+            case TipoProyectil.bola:
+                proyectilActual = TipoProyectil.metralla;
+                break;
+            case TipoProyectil.metralla:
+                proyectilActual = TipoProyectil.bola;
+                break;
         }
-        else
-        {
-            switch (proyectilHuesped)
-            {
-                case TipoProyectil.bola:
-                    proyectilHuesped = TipoProyectil.metralla;
-                    break;
-                case TipoProyectil.metralla:
-                    proyectilHuesped = TipoProyectil.bola;
-                    break;
-            }
-            return proyectilHuesped;
-        }
+        return proyectilActual;
     }
 
     private async void CambiarTurno()
@@ -215,6 +200,7 @@ public class ControladorPartidaRemota : SyncScript
         interfaz.PausarInterfaz();
         await Task.Delay(duraciónTurnoLocal);
         interfaz.ActivarTurno(false);
+        cambiandoTurno = false;
 
         // Verifica partida
         if (!partidaActiva)
@@ -224,49 +210,21 @@ public class ControladorPartidaRemota : SyncScript
             return;
         }
 
-        cañónAnfitrión.Activar(false);
-        cañónHuesped.Activar(false);
-
         if (turnoJugador == TipoJugador.anfitrión)
         {
-            controladorCámara.RotarYCámara(180, cambiarHaciaDerecha, () =>
-            {
-                cambiandoTurno = false;
-                turnoJugador = TipoJugador.huesped;
-
-                // Verifica partida por si se gana mientras gira
-                if (!partidaActiva)
-                {
-                    VerificarPartida();
-                    return;
-                }
-
-                cañónHuesped.Activar(true);
-                cañónActual = cañónHuesped;
-
-                interfaz.CambiarInterfaz(turnoJugador, proyectilHuesped);
-            }, luzDireccional);
+            turnoJugador = TipoJugador.huesped;
+            _ = SistemaRed.EnviarData(EntradasRed.turnoHuesped);
         }
         else
         {
-            controladorCámara.RotarYCámara(180, cambiarHaciaDerecha, () =>
-            {
-                cambiandoTurno = false;
-                turnoJugador = TipoJugador.anfitrión;
-
-                // Verifica partida por si se gana mientras gira
-                if (!partidaActiva)
-                {
-                    VerificarPartida();
-                    return;
-                }
-
-                cañónAnfitrión.Activar(true);
-                cañónActual = cañónAnfitrión;
-
-                interfaz.CambiarInterfaz(turnoJugador, proyectilAnfitrión);
-            }, luzDireccional);
+            turnoJugador = TipoJugador.anfitrión;
+            _ = SistemaRed.EnviarData(EntradasRed.turnoAnfitrión);
         }
+
+        interfaz.CambiarInterfaz(turnoJugador, proyectilActual);
+
+        // rotar solo luz
+        //controladorCámara.RotarYCámara(180, cambiarHaciaDerecha, null, luzDireccional);
 
         // Suma potencia cada de 4 turnos
         cantidadTurnos++;
@@ -301,7 +259,7 @@ public class ControladorPartidaRemota : SyncScript
 
     private void VerificarPartida()
     {
-        if (esperandoReinicio)
+        if (!partidaActiva)
             return;
 
         var ganador = TipoJugador.nada;
@@ -322,39 +280,31 @@ public class ControladorPartidaRemota : SyncScript
         // Muestra ganador
         if (ganador != TipoJugador.nada)
         {
-            // Evita animar de nuevo
-            if (partidaActiva)
-                interfaz.MostrarGanador(ganador, cantidadTurnos);
-
+            interfaz.MostrarGanador(ganador, cantidadTurnos);
             partidaActiva = false;
-
-            // Bloqueo final
-            if (!cambiandoTurno && ganador == turnoJugador)
-                esperandoReinicio = true;
-
-            // En caso de que pierda el que tiene el turno
-            if (!cambiandoTurno && ganador != turnoJugador)
-            {
-                esperandoReinicio = true;
-                controladorCámara.RotarYCámara(180, cambiarHaciaDerecha);
-            }
         }
     }
 
     // Red
     public void CargarFortaleza(Fortaleza fortaleza, TipoJugador tipoJugador)
     {
-
+        if (tipoJugador == TipoJugador.anfitrión)
+            fortalezaAnfitrión.Inicializar(fortaleza, true);
+        else
+            fortalezaHuesped.Inicializar(fortaleza, false);
     }
 
-    public void CambiarTurno(TipoJugador tipoJugador)
+    public void CambiarTurno(TipoJugador _turnoJugador)
     {
-
+        turnoJugador = _turnoJugador;
     }
 
     public void ActivarDisparo(TipoJugador tipoJugador)
     {
-
+        if (tipoJugador == TipoJugador.anfitrión)
+            cañónAnfitrión.ActivarPartículas();
+        else
+            cañónHuesped.ActivarPartículas();
     }
 
     public void Pausar(TipoJugador tipoJugador)
@@ -365,6 +315,19 @@ public class ControladorPartidaRemota : SyncScript
     public void ActualizarTexto(Texto nuevoTexto)
     {
 
+    }
+
+    public void RevisarJugadoresListos(TipoJugador tipoJugador)
+    {
+        if (tipoJugador == TipoJugador.anfitrión)
+            anfitriónListo = true;
+        else
+            huespedListo = true;
+
+        if (tipoJugador == TipoJugador.anfitrión && huespedListo)
+            ComenzarPartida();
+        else if (tipoJugador == TipoJugador.huesped && anfitriónListo)
+            ComenzarPartida();
     }
 
     public Físicas ObtenerFísicas()

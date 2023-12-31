@@ -190,10 +190,7 @@ public class SistemaRed : AsyncScript
                 MarcarDispositivo(conectarComo);
                 IPConectada = ip;
 
-                CambiarEscena();
-
-                // Obtención controlador
-                controlador = instancia.SceneSystem.SceneInstance.RootScene.Children[0].Entities.Where(o => o.Get<ControladorPartidaRemota>() != null).FirstOrDefault().Get<ControladorPartidaRemota>();
+                SistemaEscenas.CambiarEscena(Escenas.remoto);
                 return string.Empty;
             }
             else
@@ -206,13 +203,10 @@ public class SistemaRed : AsyncScript
         }
     }
 
-    private static void CambiarEscena()
-    {
-        SistemaEscenas.CambiarEscena(Escenas.remoto);
-    }
-
     public static void Conectar()
     {
+        // Obtención controlador
+        controlador = instancia.SceneSystem.SceneInstance.RootScene.Children[0].Entities.Where(o => o.Get<ControladorPartidaRemota>() != null).FirstOrDefault().Get<ControladorPartidaRemota>();
         conectado = true;
     }
 
@@ -272,6 +266,12 @@ public class SistemaRed : AsyncScript
             case EntradasRed.conexión:
                 var conexión = JsonConvert.DeserializeObject<Conexión>(data.Values.Single());
                 await ConectarDispositivo(conexión.IP, conexión.TipoConexión, conexión.ConectarComo, false);
+                break;
+            case EntradasRed.anfitriónListo:
+                controlador.RevisarJugadoresListos(TipoJugador.anfitrión);
+                break;
+            case EntradasRed.huespedListo:
+                controlador.RevisarJugadoresListos(TipoJugador.huesped);
                 break;
             case EntradasRed.turnoAnfitrión:
                 controlador.CambiarTurno(TipoJugador.anfitrión);

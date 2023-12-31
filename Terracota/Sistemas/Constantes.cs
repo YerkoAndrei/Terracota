@@ -113,6 +113,8 @@ public static class Constantes
     {
         nada,
         conexión,
+        anfitriónListo,
+        huespedListo,
 
         // Turnos
         turnoAnfitrión,
