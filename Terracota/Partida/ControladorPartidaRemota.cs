@@ -7,7 +7,7 @@ using Stride.Input;
 namespace Terracota;
 using static Constantes;
 
-public class ControladorPartidaRemota : SyncScript
+public class ControladorPartidaRemota : SyncScript, IPartida
 {
     public ControladorCañón cañónAnfitrión;
     public ControladorCañón cañónHuesped;
@@ -162,6 +162,8 @@ public class ControladorPartidaRemota : SyncScript
             cambiarHaciaDerecha = false;
             controladorCámara.RotarYCámara(90, true, enFin);
         }
+
+        SistemaRed.ActivarActualizaciónFísicas(true);
     }
 
     public void RotarXCámara(float tiempo)
@@ -333,9 +335,10 @@ public class ControladorPartidaRemota : SyncScript
     public Físicas ObtenerFísicas()
     {
         var físicas = new Físicas();
+        físicas.Bloques = new List<BloqueFísico>();
 
         // Cañón
-        switch(SistemaRed.ObtenerTipoJugador())
+        switch (SistemaRed.ObtenerTipoJugador())
         {
             case TipoJugador.anfitrión:
                 físicas.SoporteCañón = cañónHuesped.ObtenerRotaciónSoporte();

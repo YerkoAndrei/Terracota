@@ -5,7 +5,7 @@ using Stride.Input;
 namespace Terracota;
 using static Constantes;
 
-public class ControladorPartidaLocal : SyncScript
+public class ControladorPartidaLocal : SyncScript, IPartida
 {
     public ControladorCañón cañónAnfitrión;
     public ControladorCañón cañónHuesped;

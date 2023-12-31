@@ -29,6 +29,7 @@ public class SistemaRed : AsyncScript
     private static IPEndPoint remoto;
 
     private static bool conectado;
+    private static bool jugando;
     private static int velocidadRed;
     private static int puerto;
 
@@ -44,9 +45,10 @@ public class SistemaRed : AsyncScript
         ObtenerIPs();
         ActualizarConfiguración();
 
+        // PENDIENTE: cambiar a Hz
         while (Game.IsRunning)
         {
-            if (conectado && tipoJugador == TipoJugador.anfitrión)
+            if (conectado && jugando && tipoJugador == TipoJugador.anfitrión)
             {
                 cuadroActual++;
                 if (cuadroActual >= velocidadRed)
@@ -55,10 +57,12 @@ public class SistemaRed : AsyncScript
                     await ActualizarFísica();
                 }
             }
-
-            await RecibirData();
-
             await Script.NextFrame();
+        }
+
+        while (true)
+        {
+            await RecibirData();
         }
     }
 
@@ -210,6 +214,11 @@ public class SistemaRed : AsyncScript
         conectado = true;
     }
 
+    public static void ActivarActualizaciónFísicas(bool activar)
+    {
+        jugando = activar;
+    }
+
     public static TipoJugador ObtenerTipoJugador()
     {
         return tipoJugador;
@@ -229,7 +238,7 @@ public class SistemaRed : AsyncScript
 
         // Agrega encabezado
         var dataFinal = JsonConvert.SerializeObject(diccionario);
-        var buffer = Encoding.ASCII.GetBytes(dataFinal);
+        var buffer = Encoding.Unicode.GetBytes(dataFinal);
 
         try
         {
@@ -248,7 +257,7 @@ public class SistemaRed : AsyncScript
         try
         {
             var resultado = await udp.ReceiveAsync();
-            buffer = Encoding.ASCII.GetString(resultado.Buffer);
+            buffer = Encoding.Unicode.GetString(resultado.Buffer);
         }
         catch
         {

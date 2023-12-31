@@ -12,7 +12,7 @@ public class ControladorEstatua : AsyncScript
     public RigidbodyComponent cuerpo;
     public RigidbodyComponent cabeza;
 
-    private ControladorPartidaLocal controladorPartida;
+    private IPartida iPartida;
     private bool activo;
 
     public void Iniciar()
@@ -22,7 +22,16 @@ public class ControladorEstatua : AsyncScript
 
     public override async Task Execute()
     {
-        controladorPartida = Entity.Scene.Entities.FirstOrDefault(e => e.Name == "ControladorPartida").Get<ControladorPartidaLocal>();
+        // Encuentra interface
+        var controlador = Entity.Scene.Entities.FirstOrDefault(e => e.Name == "ControladorPartida");
+        foreach (var componente in controlador.Components)
+        {
+            if (componente is IPartida)
+            {
+                iPartida = (IPartida)componente;
+                break;
+            }
+        }
 
         while (Game.IsRunning)
         {
@@ -42,6 +51,6 @@ public class ControladorEstatua : AsyncScript
         cuerpo.Mass = 1000;
         activo = false;
 
-        controladorPartida.DesactivarEstatua(jugador);
+        iPartida.DesactivarEstatua(jugador);
     }
 }
