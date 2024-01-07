@@ -19,7 +19,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     public TransformComponent luzDireccional;
 
     public InterfazJuego interfaz;
-    public InterfazElecciónRemota interfazElección;
+    public InterfazElecciónRemota elección;
     public UIComponent UIElección;
 
     private bool anfitriónListo;
@@ -185,6 +185,8 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         controladorCámara.ActivarEfectoDisparo();
         SistemaSonido.SonarCañonazo();
 
+        _ = SistemaRed.EnviarData(EntradasRed.disparo);
+
         if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
             cañónAnfitrión.Disparar(proyectilActual, multiplicador);
         else
@@ -296,7 +298,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         }
     }
 
-    // Red
+    // Remoto
     public void CargarFortaleza(Fortaleza fortaleza, TipoJugador tipoJugador)
     {
         if (tipoJugador == TipoJugador.anfitrión)
@@ -304,7 +306,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         else
             fortalezaHuesped.Inicializar(fortaleza, false);
 
-        //interfazElección.MostrarNombre(fortaleza.Nombre, tipoJugador);
+        elección.MostrarNombreFortaleza(fortaleza.Nombre, tipoJugador);
     }
 
     public void CambiarTurno(TipoJugador _turnoJugador)
@@ -314,6 +316,8 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
     public void ActivarDisparo(TipoJugador tipoJugador)
     {
+        SistemaSonido.SonarCañonazo();
+
         if (tipoJugador == TipoJugador.anfitrión)
             cañónAnfitrión.ActivarPartículas();
         else

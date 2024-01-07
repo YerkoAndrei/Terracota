@@ -364,11 +364,11 @@ public class InterfazElecciónRemota : StartupScript
         }
     }
 
-    private void PrenderRuleta()
+    public void MostrarNombreFortaleza(string nombre, TipoJugador tipoJugador)
     {
-        for (int i = 0; i < ruleta.Length; i++)
-        {
-            ruleta[i].Color = colorRuletaActiva;
-        }
+        if (tipoJugador == TipoJugador.anfitrión)
+            txtAnfitrión.Text = nombre;
+        else
+            txtHuesped.Text = nombre;
     }
 }
