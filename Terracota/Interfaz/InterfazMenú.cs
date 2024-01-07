@@ -24,6 +24,14 @@ public class InterfazMenú : StartupScript
     private Grid animRemoto;
     private Grid gridRemoto;
 
+    private Grid popupInvitación;
+    private Grid animInvitación;
+    private Grid btnSí;
+    private Grid btnNo;
+
+    private Conexión conexiónPendiente;
+    private TextBlock txtDatosInvitación;
+
     private EditText txtConexiónRemota;
     private TextBlock txtErrorConexión;
     private Grid btnComoAnfitrión;
@@ -51,6 +59,16 @@ public class InterfazMenú : StartupScript
         gridRemoto = página.FindVisualChildOfType<Grid>("ConexiónRemota");
         animRemoto = página.FindVisualChildOfType<Grid>("animRemoto");
         gridRemoto.Visibility = Visibility.Hidden;
+
+        popupInvitación = página.FindVisualChildOfType<Grid>("PopupInvitación");
+        animInvitación = página.FindVisualChildOfType<Grid>("animInvitación");
+        txtDatosInvitación = página.FindVisualChildOfType<TextBlock>("txtDatosInvitación");
+        btnSí = página.FindVisualChildOfType<Grid>("btnSí");
+        btnNo = página.FindVisualChildOfType<Grid>("btnNo");
+
+        ConfigurarBotón(btnNo, () => { CerrarInvitación(true); });
+        ConfigurarBotón(btnNo, () => { CerrarInvitación(false); });
+        popupInvitación.Visibility = Visibility.Hidden;
 
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnRemotoVolver"), CerrarPaneles);
 
@@ -116,12 +134,86 @@ public class InterfazMenú : StartupScript
             return;
 
         txtErrorConexión.Text = string.Empty;
+        BloquearBotón(btnComoAnfitrión, true);
+        BloquearBotón(btnComoHuesped, true);
 
-        // PENDIENTE: identificar LAN o P2P
-        var resultado = await SistemaRed.ConectarDispositivo(txtConexiónRemota.Text, TipoConexión.global, tipoJugador, true);
+        // Identifica IP local
+        // PENDIENTE: identificar 0-255
+        var tipoConexión = TipoConexión.global;
+        if (txtConexiónRemota.Text.Contains("169.254") ||
+            txtConexiónRemota.Text.Contains("192.168") ||
+            txtConexiónRemota.Text.Contains("172.16") ||
+            txtConexiónRemota.Text.Contains("172.31") ||
+            txtConexiónRemota.Text.Contains("10.0") ||
+            txtConexiónRemota.Text.Contains("10.255"))
+        {
+            tipoConexión = TipoConexión.local;
+        }
+
+        if ((tipoConexión == TipoConexión.local && txtConexiónRemota.Text == SistemaRed.ObtenerIP(TipoConexión.local) )||
+            (tipoConexión == TipoConexión.global && txtConexiónRemota.Text == SistemaRed.ObtenerIP(TipoConexión.global)))
+        {
+            txtErrorConexión.Text = "misma ip";
+            BloquearBotón(btnComoAnfitrión, false);
+            BloquearBotón(btnComoHuesped, false);
+            return;
+        }
+
+        // Conexión
+        var resultado = await SistemaRed.ConectarDispositivo(txtConexiónRemota.Text, tipoConexión, tipoJugador, true);
 
         if (!string.IsNullOrEmpty(resultado))
+        {
             txtErrorConexión.Text = resultado;
+            BloquearBotón(btnComoAnfitrión, false);
+            BloquearBotón(btnComoHuesped, false);
+        }
+    }
+
+    public void MostrarInvitación(Conexión conexión)
+    {
+        if (animando || conexiónPendiente != null)
+            return;
+                
+        conexiónPendiente = conexión;
+        txtDatosInvitación.Text = string.Format(SistemaTraducción.ObtenerTraducción("datosConexión"), conexión.IP, conexión.ConectarComo.ToString());
+        popupInvitación.Visibility = Visibility.Visible;
+
+        SistemaAnimación.AnimarElemento(animInvitación, 0.2f, true, Direcciones.arriba, TipoCurva.rápida, null);
+    }
+
+    public async void CerrarInvitación(bool conectarse)
+    {
+        if (animando)
+            return;
+
+        if (conectarse)
+        {
+            BloquearBotón(btnSí, true);
+            BloquearBotón(btnNo, true);
+
+            var resultado =  await SistemaRed.ConectarDispositivo(conexiónPendiente.IP, conexiónPendiente.TipoConexión, conexiónPendiente.ConectarComo, false);
+
+            // Abre panel y muestra error
+            if (!string.IsNullOrEmpty(resultado))
+            {
+                txtErrorConexión.Text = resultado;
+                txtConexiónRemota.Text = conexiónPendiente.IP;
+                CerrarInvitación(false);
+            }
+        }
+        else
+        {
+            BloquearBotón(btnSí, false);
+            BloquearBotón(btnNo, false);
+
+            conexiónPendiente = null;
+            SistemaAnimación.AnimarElemento(animInvitación, 0.2f, true, Direcciones.arriba, TipoCurva.rápida, () =>
+            {
+                popupInvitación.Visibility = Visibility.Hidden;
+                EnClicRemoto();
+            });
+        }
     }
 
     private void CerrarPaneles()

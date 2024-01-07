@@ -44,7 +44,7 @@ public class SistemaRed : AsyncScript
         ObtenerIPs();
         ActualizarConfiguración();
 
-        // PENDIENTE: cambiar a Hz
+        // PENDIENTE: cambiar a Hz?
         while (Game.IsRunning)
         {
             if (conectado && jugando && tipoJugador == TipoJugador.anfitrión)
@@ -63,12 +63,6 @@ public class SistemaRed : AsyncScript
         {
             await RecibirData();
         }
-    }
-
-    private async Task ActualizarFísica()
-    {
-        var data = controlador.ObtenerFísicas();
-        await EnviarData(EntradasRed.físicas, data);
     }
 
     private static async void ObtenerIPs()
@@ -110,29 +104,6 @@ public class SistemaRed : AsyncScript
                 IPPúblicaActual = "NO IP";
             }
         }
-    }
-
-    public static string ObtenerIP(TipoConexión tipoConexión)
-    {
-        switch(tipoConexión)
-        {
-            case TipoConexión.local:
-                return IPLocalActual;
-            case TipoConexión.global:
-                return IPPúblicaActual;
-            default:
-                return string.Empty;
-        }
-    }
-
-    public static string ObtenerNombreHost()
-    {
-        return Dns.GetHostName();
-    }
-
-    public static void MarcarDispositivo(TipoJugador _tipoJugador)
-    {
-        tipoJugador = _tipoJugador;            
     }
 
     public static async Task<string> ConectarDispositivo(string ip, TipoConexión tipoConexión, TipoJugador conectarComo, bool iniciar)
@@ -197,30 +168,13 @@ public class SistemaRed : AsyncScript
                 return string.Empty;
             }
             else
-                return "error udp";
+                return "error";
         }
         catch (Exception e)
         {
             // PENDIENTE: Controlar y traducir errores
             return e.Message;
         }
-    }
-
-    public static void Conectar()
-    {
-        // Obtención controlador
-        controlador = instancia.SceneSystem.SceneInstance.RootScene.Children[0].Entities.Where(o => o.Get<ControladorPartidaRemota>() != null).FirstOrDefault().Get<ControladorPartidaRemota>();
-        conectado = true;
-    }
-
-    public static void ActivarActualizaciónFísicas(bool activar)
-    {
-        jugando = activar;
-    }
-
-    public static TipoJugador ObtenerTipoJugador()
-    {
-        return tipoJugador;
     }
 
     public static async Task<bool> EnviarData(EntradasRed entrada, dynamic data = null)
@@ -273,7 +227,7 @@ public class SistemaRed : AsyncScript
         {
             case EntradasRed.conexión:
                 var conexión = JsonConvert.DeserializeObject<Conexión>(data.Values.Single());
-                await ConectarDispositivo(conexión.IP, conexión.TipoConexión, conexión.ConectarComo, false);
+                MostrarInvitación(conexión);
                 break;
             case EntradasRed.anfitriónListo:
                 controlador.RevisarJugadoresListos(TipoJugador.anfitrión);
@@ -330,6 +284,54 @@ public class SistemaRed : AsyncScript
                 controlador.ActualizarFísicas(físicas);
                 break;
         }
+    }
+
+    private async Task ActualizarFísica()
+    {
+        var data = controlador.ObtenerFísicas();
+        await EnviarData(EntradasRed.físicas, data);
+    }
+
+    private static void MostrarInvitación(Conexión conexión)
+    {
+        // Obtención interfaz
+        var interfaz = instancia.SceneSystem.SceneInstance.RootScene.Children[0].Entities.Where(o => o.Get<InterfazMenú>() != null).FirstOrDefault().Get<InterfazMenú>();
+        interfaz.MostrarInvitación(conexión);
+    }
+
+    public static void MarcarDispositivo(TipoJugador _tipoJugador)
+    {
+        tipoJugador = _tipoJugador;
+    }
+
+    public static void Conectar()
+    {
+        // Obtención controlador
+        controlador = instancia.SceneSystem.SceneInstance.RootScene.Children[0].Entities.Where(o => o.Get<ControladorPartidaRemota>() != null).FirstOrDefault().Get<ControladorPartidaRemota>();
+        conectado = true;
+    }
+
+    public static void ActivarActualizaciónFísicas(bool activar)
+    {
+        jugando = activar;
+    }
+
+    public static string ObtenerIP(TipoConexión tipoConexión)
+    {
+        switch (tipoConexión)
+        {
+            case TipoConexión.local:
+                return IPLocalActual;
+            case TipoConexión.global:
+                return IPPúblicaActual;
+            default:
+                return string.Empty;
+        }
+    }
+
+    public static TipoJugador ObtenerTipoJugador()
+    {
+        return tipoJugador;
     }
 
     public static bool ActualizarConfiguración()

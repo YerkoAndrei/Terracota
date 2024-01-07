@@ -203,7 +203,10 @@ public class InterfazCreación : StartupScript
             // No
             popups.Children.Remove(popup);
         });
+
         popups.Children.Add(popup);
+        popup.FindVisualChildOfType<TextBlock>("txtSí").Text = SistemaTraducción.ObtenerTraducción("sí");
+        popup.FindVisualChildOfType<TextBlock>("txtNo").Text = SistemaTraducción.ObtenerTraducción("no");
     }
 
     private void EnClicEliminar(string nombre)
@@ -230,7 +233,10 @@ public class InterfazCreación : StartupScript
             // No
             popups.Children.Remove(popup);
         });
+
         popups.Children.Add(popup);
+        popup.FindVisualChildOfType<TextBlock>("txtSí").Text = SistemaTraducción.ObtenerTraducción("sí");
+        popup.FindVisualChildOfType<TextBlock>("txtNo").Text = SistemaTraducción.ObtenerTraducción("no");
     }
 
     private void VerificarFuente(object sender, RoutedEventArgs args)
