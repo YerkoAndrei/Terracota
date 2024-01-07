@@ -3,7 +3,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using System.Net.NetworkInformation;
 using System.Net;
 using System.Net.Sockets;
 using System.Net.Http;
@@ -117,9 +116,9 @@ public class SistemaRed : AsyncScript
     {
         switch(tipoConexión)
         {
-            case TipoConexión.LAN:
+            case TipoConexión.local:
                 return IPLocalActual;
-            case TipoConexión.P2P:
+            case TipoConexión.global:
                 return IPPúblicaActual;
             default:
                 return string.Empty;
@@ -149,8 +148,8 @@ public class SistemaRed : AsyncScript
             udp = new UdpClient(puerto);
             remoto = new IPEndPoint(IPAddress.Parse(ip), puerto);
             udp.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
-            
-            // Solo anfitrión
+
+            // Solo anfitrión (automático)
             //if(conectarComo == TipoJugador.anfitrión)
             //    udp.Client.Bind(remoto);
 
@@ -161,10 +160,10 @@ public class SistemaRed : AsyncScript
                 var miIP = string.Empty;
                 switch (tipoConexión)
                 {
-                    case TipoConexión.LAN:
+                    case TipoConexión.local:
                         miIP = IPLocalActual;
                         break;
-                    case TipoConexión.P2P:
+                    case TipoConexión.global:
                         miIP = IPPúblicaActual;
                         break;
                 }
@@ -331,37 +330,6 @@ public class SistemaRed : AsyncScript
                 controlador.ActualizarFísicas(físicas);
                 break;
         }
-    }
-
-    // LAN
-    public static async void BuscarLAN(string ipLocal, InterfazMenú interfazMenú)
-    {
-        await Parallel.ForAsync(1, 255, async (i, loopState) =>
-        {
-            var ping = new Ping();
-            var nombreIP = ipLocal + i.ToString();
-            var nombreHost = string.Empty;
-            var ip = IPAddress.Parse(nombreIP);
-            var respuesta = await ping.SendPingAsync(ip, 100);
-
-            if (respuesta.Status == IPStatus.Success)
-            {
-                try
-                {
-                    // Intenta obtener nombre de host
-                    var buscarNombre = await Dns.GetHostEntryAsync(ip);
-                    nombreHost = buscarNombre.HostName;
-                }
-                catch { }
-
-                // Se agrega a la lista
-                if (nombreIP != IPLocalActual)
-                    interfazMenú.AgregarHost(nombreIP, nombreHost);
-            }
-        });
-        
-        // Visual
-        interfazMenú.MostrarCargando(false);
     }
 
     public static bool ActualizarConfiguración()

@@ -105,8 +105,8 @@ public static class Constantes
 
     public enum TipoConexión
     {
-        LAN,
-        P2P
+        local,
+        global
     }
 
     public enum EntradasRed
