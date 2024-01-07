@@ -11,6 +11,7 @@ using Newtonsoft.Json;
 
 namespace Terracota;
 using static Constantes;
+using static Terracota.Constantes;
 
 public class SistemaRed : AsyncScript
 {
@@ -229,11 +230,22 @@ public class SistemaRed : AsyncScript
                 var conexión = JsonConvert.DeserializeObject<Conexión>(data.Values.Single());
                 MostrarInvitación(conexión);
                 break;
+            case EntradasRed.cerrar:
+                CerrarConexión();
+                break;
             case EntradasRed.anfitriónListo:
                 controlador.RevisarJugadoresListos(TipoJugador.anfitrión);
                 break;
             case EntradasRed.huespedListo:
                 controlador.RevisarJugadoresListos(TipoJugador.huesped);
+                break;
+            case EntradasRed.comenzarRuleta:
+                var toques = int.Parse(data.Values.Single());
+                ComenzarRuleta(toques);
+                break;
+            case EntradasRed.finalizarRuleta:
+                var ganaAnfitrión = bool.Parse(data.Values.Single());
+                FinalizarRuleta(ganaAnfitrión);
                 break;
             case EntradasRed.turnoAnfitrión:
                 controlador.CambiarTurno(TipoJugador.anfitrión);
@@ -299,6 +311,29 @@ public class SistemaRed : AsyncScript
         interfaz.MostrarInvitación(conexión);
     }
 
+    private static void ComenzarRuleta(int toques)
+    {
+        // Obtención interfaz
+        var elección = instancia.SceneSystem.SceneInstance.RootScene.Children[0].Entities.Where(o => o.Get<InterfazElecciónRemota>() != null).FirstOrDefault().Get<InterfazElecciónRemota>();
+        elección.ComenzarRuleta(toques);
+    }
+
+    private static void FinalizarRuleta(bool ganaAnfitrión)
+    {
+        // Obtención interfaz
+        var elección = instancia.SceneSystem.SceneInstance.RootScene.Children[0].Entities.Where(o => o.Get<InterfazElecciónRemota>() != null).FirstOrDefault().Get<InterfazElecciónRemota>();
+        elección.ComenzarPartida(ganaAnfitrión);
+    }
+
+    private static void CerrarConexión()
+    {
+        ActualizarConfiguración();
+        MarcarDispositivo(TipoJugador.nada);
+        IPConectada = string.Empty;
+
+        SistemaEscenas.CambiarEscena(Escenas.menú);
+    }
+    
     public static void MarcarDispositivo(TipoJugador _tipoJugador)
     {
         tipoJugador = _tipoJugador;

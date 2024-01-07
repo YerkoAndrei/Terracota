@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Graphics;
@@ -43,7 +44,8 @@ public class InterfazElecciónRemota : StartupScript
     private Grid btnVolver;
     private Grid btnAleatorio;
 
-    private bool fortalezaSeleccionada;
+    private bool anfitriónSeleccionado;
+    private bool huespedSeleccionado;
 
     private bool esperandoRuleta;
     private bool ganaAnfitrión;
@@ -149,12 +151,14 @@ public class InterfazElecciónRemota : StartupScript
         gridRuleta.Visibility = Visibility.Hidden;
         decoRuleta.Visibility = Visibility.Hidden;
         SistemaEscenas.CambiarEscena(Escenas.menú);
+
+        // Cierra conexión
+        _ = SistemaRed.EnviarData(EntradasRed.cerrar);
     }
 
     private void EnClicAleatorio()
     {
         var jugadorListo = SistemaRed.ObtenerTipoJugador();
-
         btnComenzar.Visibility = Visibility.Hidden;
         btnAleatorio.Visibility = Visibility.Hidden;
 
@@ -162,6 +166,7 @@ public class InterfazElecciónRemota : StartupScript
         visorAnfitrión.Visibility = Visibility.Hidden;
         visorHuesped.Visibility = Visibility.Hidden;
 
+        // Carga fortaleza
         if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
         {
             var ranuraAnfitrión = ObtenerRanuraAleatoria();
@@ -173,17 +178,8 @@ public class InterfazElecciónRemota : StartupScript
             EnClicHuesped(ranuraHuesped);
         }
 
-        controladorPartida.RotarXCámara(1.5f);
-        SistemaSonido.CambiarMúsica(true);
-
         // Intenta comenzar partida
-        controladorPartida.RevisarJugadoresListos(SistemaRed.ObtenerTipoJugador());
-        if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
-            _ = SistemaRed.EnviarData(EntradasRed.anfitriónListo);
-        else
-            _ = SistemaRed.EnviarData(EntradasRed.huespedListo);
-
-        SistemaAnimación.AnimarElemento(animSuperior, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, null);
+        IntentarComenzarPartida();
     }
 
     private string ObtenerRanuraAleatoria()
@@ -204,7 +200,7 @@ public class InterfazElecciónRemota : StartupScript
 
         BloquearBotón(btnComenzar, false);
 
-        fortalezaSeleccionada = true;
+        anfitriónSeleccionado = true;
         txtAnfitrión.Text = nombre;
         controladorPartida.CargarFortaleza(nombre, true);
     }
@@ -216,20 +212,21 @@ public class InterfazElecciónRemota : StartupScript
 
         BloquearBotón(btnComenzar, false);
 
-        fortalezaSeleccionada = true;
+        huespedSeleccionado = true;
         txtHuesped.Text = nombre;
         controladorPartida.CargarFortaleza(nombre, false);
     }
 
     private void EnClicComenzar()
     {
-        if (esperandoRuleta ||!fortalezaSeleccionada)
+        if (esperandoRuleta || !huespedSeleccionado || !anfitriónSeleccionado)
             return;
-        /*
+
+        ApagarRuleta();
         esperandoRuleta = true;
         gridRuleta.Visibility = Visibility.Visible;
         decoRuleta.Visibility = Visibility.Visible;
-        */
+
         visorAnfitrión.Visibility = Visibility.Hidden;
         visorHuesped.Visibility = Visibility.Hidden;
 
@@ -239,23 +236,65 @@ public class InterfazElecciónRemota : StartupScript
         btnVolver.HorizontalAlignment = HorizontalAlignment.Center;
         btnVolver.Margin = new Thickness(0, 0, 0, 120);
 
-        controladorPartida.RotarXCámara(1.5f);
-        //controladorPartida.RotarXCámara(4.5f);
-        //var aleatorio = RangoAleatorio(40, 51);
+        if (partidaCancelada)
+            return;
 
+        // Intenta comenzar partida
+        IntentarComenzarPartida();
+    }
+
+    private void IntentarComenzarPartida()
+    {
+        if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
+        {
+            _ = SistemaRed.EnviarData(EntradasRed.anfitriónListo);
+
+            // Anfitrión comprueba que estén listos
+            if (controladorPartida.RevisarJugadoresListos(SistemaRed.ObtenerTipoJugador()))
+                ComenzarRuleta(0);
+        }
+        else
+            _ = SistemaRed.EnviarData(EntradasRed.huespedListo);
+    }
+
+    public async void ComenzarRuleta(int toques)
+    {
+        // En huesped, toques vienen desde anfitrión
+        if(toques == 0)
+            toques = RangoAleatorio(40, 51);
+
+        if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
+        {
+            _ = SistemaRed.EnviarData(EntradasRed.comenzarRuleta, toques);
+
+            controladorPartida.RotarXCámara(4.5f);
+            await MoverRuleta(toques);
+
+            _ = SistemaRed.EnviarData(EntradasRed.finalizarRuleta, ganaAnfitrión);
+            ComenzarPartida(ganaAnfitrión);
+        }
+        else
+        {
+            controladorPartida.RotarXCámara(4.5f);
+            await MoverRuleta(toques);
+        }
+    }
+
+    public async void ComenzarPartida(bool _ganaAnfitrión)
+    {
+        ganaAnfitrión = _ganaAnfitrión;
+
+        SistemaSonido.SonarInicio();
+        await FinalizarRuleta();
         SistemaSonido.SonarInicio();
         SistemaSonido.CambiarMúsica(true);
 
-        // Intenta comenzar partida
-        controladorPartida.RevisarJugadoresListos(SistemaRed.ObtenerTipoJugador());
-        if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
-            _ = SistemaRed.EnviarData(EntradasRed.anfitriónListo);
-        else
-            _ = SistemaRed.EnviarData(EntradasRed.huespedListo);
-
-        SistemaAnimación.AnimarElemento(animSuperior, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, null);
+        SistemaAnimación.AnimarElemento(animSuperior, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, () =>
+        {
+            controladorPartida.ComenzarPartida(ganaAnfitrión);
+        });
     }
-    /*
+
     private async Task MoverRuleta(int toques)
     {
         int diezAntes = toques - 10;
@@ -315,14 +354,21 @@ public class InterfazElecciónRemota : StartupScript
 
         // Fin
         await Task.Delay(1800);
-        SistemaSonido.SonarInicio();
     }
 
     private void ApagarRuleta()
     {
-        for(int i=0; i < ruleta.Length; i++)
+        for (int i = 0; i < ruleta.Length; i++)
         {
             ruleta[i].Color = colorRuletaVacía;
         }
-    }*/
+    }
+
+    private void PrenderRuleta()
+    {
+        for (int i = 0; i < ruleta.Length; i++)
+        {
+            ruleta[i].Color = colorRuletaActiva;
+        }
+    }
 }

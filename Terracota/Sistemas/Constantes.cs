@@ -113,20 +113,26 @@ public static class Constantes
     {
         nada,
         conexión,
+        cerrar,
+
+        // Elección
+        cargarFortaleza,
         anfitriónListo,
         huespedListo,
+        comenzarRuleta,
+        finalizarRuleta,
 
         // Turnos
         turnoAnfitrión,
         turnoHuesped,
+        finalizarPartida,  // pendiente
 
-        // Elección
-        cargarFortaleza,
-        
         // Juego
-        pausa,
-        disparo,
-        texto,
+        estatuaAnfitriónCaída,  // pendiente
+        estatuaHuespedCaída,  // pendiente
+        pausa,  // pendiente
+        disparo,  // pendiente
+        texto,  // pendiente
         físicas
     }
 

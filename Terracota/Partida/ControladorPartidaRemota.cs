@@ -19,12 +19,12 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     public TransformComponent luzDireccional;
 
     public InterfazJuego interfaz;
+    public InterfazElecciónRemota interfazElección;
     public UIComponent UIElección;
 
     private bool anfitriónListo;
     private bool huespedListo;
     private bool cambiandoTurno;
-    private bool cambiarHaciaDerecha;
 
     private TipoJugador turnoJugador;
     private TipoProyectil proyectilActual;
@@ -121,10 +121,9 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
         // Remoto
         _ = SistemaRed.EnviarData(EntradasRed.cargarFortaleza, fortaleza);
-
     }
 
-    private void ComenzarPartida()
+    public void ComenzarPartida(bool ganaAnfitrión)
     {
         UIElección.Enabled = false;
 
@@ -142,16 +141,29 @@ public class ControladorPartidaRemota : SyncScript, IPartida
             partidaActiva = true;
         };
 
-        // PENDIENTE: Inicio siempre es anfitrión, cambiar
+        // Turno inicial
         if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
-            _= SistemaRed.EnviarData(EntradasRed.turnoAnfitrión);
+        {
+            SistemaRed.ActivarActualizaciónFísicas(true);
 
+            if (ganaAnfitrión)
+            {
+                turnoJugador = TipoJugador.anfitrión;
+                _ = SistemaRed.EnviarData(EntradasRed.turnoAnfitrión);
+            }
+            else
+            {
+                turnoJugador = TipoJugador.huesped;
+                _ = SistemaRed.EnviarData(EntradasRed.turnoHuesped);
+            }
+        }
+
+        // Cañones
         if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
         {
             cañónAnfitrión.Activar(true);
             cañónHuesped.Activar(false);
 
-            cambiarHaciaDerecha = true;
             controladorCámara.RotarYCámara(90, false, enFin);
         }
         else
@@ -159,11 +171,8 @@ public class ControladorPartidaRemota : SyncScript, IPartida
             cañónAnfitrión.Activar(false);
             cañónHuesped.Activar(true);
 
-            cambiarHaciaDerecha = false;
             controladorCámara.RotarYCámara(90, true, enFin);
         }
-
-        SistemaRed.ActivarActualizaciónFísicas(true);
     }
 
     public void RotarXCámara(float tiempo)
@@ -200,7 +209,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     {
         cambiandoTurno = true;
         interfaz.PausarInterfaz();
-        await Task.Delay(duraciónTurnoLocal);
+        await Task.Delay(duraciónTurnoRemoto);
         interfaz.ActivarTurno(false);
         cambiandoTurno = false;
 
@@ -294,6 +303,8 @@ public class ControladorPartidaRemota : SyncScript, IPartida
             fortalezaAnfitrión.Inicializar(fortaleza, true);
         else
             fortalezaHuesped.Inicializar(fortaleza, false);
+
+        //interfazElección.MostrarNombre(fortaleza.Nombre, tipoJugador);
     }
 
     public void CambiarTurno(TipoJugador _turnoJugador)
@@ -319,7 +330,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
     }
 
-    public void RevisarJugadoresListos(TipoJugador tipoJugador)
+    public bool RevisarJugadoresListos(TipoJugador tipoJugador)
     {
         if (tipoJugador == TipoJugador.anfitrión)
             anfitriónListo = true;
@@ -327,9 +338,11 @@ public class ControladorPartidaRemota : SyncScript, IPartida
             huespedListo = true;
 
         if (tipoJugador == TipoJugador.anfitrión && huespedListo)
-            ComenzarPartida();
+            return true;
         else if (tipoJugador == TipoJugador.huesped && anfitriónListo)
-            ComenzarPartida();
+            return true;
+        else
+            return false;
     }
 
     public Físicas ObtenerFísicas()
