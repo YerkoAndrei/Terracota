@@ -48,14 +48,14 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         turnoJugador = TipoJugador.nada;
 
         proyectilActual = TipoProyectil.bola;
-
+        
         switch (SistemaRed.ObtenerTipoJugador())
         {
             case TipoJugador.anfitrión:
-                cañónAnfitrión.Iniciar(interfaz);
+                cañónAnfitrión.Iniciar(interfaz, TipoJugador.anfitrión);
                 break;
             case TipoJugador.huesped:
-                cañónHuesped.Iniciar(interfaz);
+                cañónHuesped.Iniciar(interfaz, TipoJugador.huesped);
                 break;
         }
 

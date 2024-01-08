@@ -12,8 +12,6 @@ using static Sistema;
 
 public class ControladorCañón : SyncScript
 {
-    public TipoJugador tipoJugador;
-
     public float fuerzaBola;
     public float fuerzaMetralla;
 
@@ -44,7 +42,7 @@ public class ControladorCañón : SyncScript
 
     public override void Start() { }
 
-    public void Iniciar(InterfazJuego _controladorInterfaz)
+    public void Iniciar(InterfazJuego _controladorInterfaz, TipoJugador tipoJugador)
     {
         fuerzaBola *= 1000;
         fuerzaMetralla *= 1000;
@@ -119,15 +117,14 @@ public class ControladorCañón : SyncScript
                 bola.Disparar(origenProyectil.Transform.WorldMatrix.TranslationVector, EulerAleatorio(), aleatoriedadBola, fuerza);
                 break;
             case TipoProyectil.metralla:
-                for (int i = 0; i < metralla.Count; i++)
+                foreach (var bola in metralla)
                 {
                     // Impulso
                     var aleatoriedadMetralla = RangoAleatorio(-1f, 0.5f);
                     var posiciónAleatoria = RangoAleatorio(-0.02f, 0.02f);
                     var fuerzaIndividual = (origenProyectil.Transform.WorldMatrix.Up + posiciónAleatoria) * ((fuerzaMetralla * multiplicador) + aleatoriedadMetralla);
-                    var posición = metralla[0].Entity.Transform.Position += origenProyectil.Transform.WorldMatrix.TranslationVector;
 
-                    metralla[0].Disparar(posición, EulerAleatorio(), aleatoriedadMetralla, fuerzaIndividual);
+                    bola.Disparar(origenProyectil.Transform.WorldMatrix.TranslationVector, EulerAleatorio(), aleatoriedadMetralla, fuerzaIndividual);
                 }
                 break;
         }

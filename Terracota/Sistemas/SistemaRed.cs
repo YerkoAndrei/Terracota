@@ -368,6 +368,11 @@ public class SistemaRed : AsyncScript
         return tipoJugador;
     }
 
+    public static bool ObtenerJugando()
+    {
+        return (conectado && jugando);
+    }
+
     public static bool ActualizarConfiguración()
     {
         if (conectado)

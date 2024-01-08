@@ -47,8 +47,8 @@ public class ControladorPartidaLocal : SyncScript, IPartida
         proyectilAnfitrión = TipoProyectil.bola;
         proyectilHuesped = TipoProyectil.bola;
 
-        cañónAnfitrión.Iniciar(interfaz);
-        cañónHuesped.Iniciar(interfaz);
+        cañónAnfitrión.Iniciar(interfaz, TipoJugador.anfitrión);
+        cañónHuesped.Iniciar(interfaz, TipoJugador.huesped);
 
         // Comienza con elección
         UIElección.Enabled = true;

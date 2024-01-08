@@ -15,43 +15,23 @@ public class ControladorBola : AsyncScript
     public Prefab prefabPartículas;
 
     private RigidbodyComponent cuerpo;
+    private Vector3 posiciónInicial;
     private Vector3 escalaInicial;
     private float masaInicial;
     private bool activo;
-    private bool destruyendo;
+    private bool guardando;
     private int colisiones;
-
-    public void Disparar(Vector3 posición, Vector3 rotación, float aleatorio, Vector3 fuerza)
-    {
-        activo = true;
-        destruyendo = false;
-
-        Entity.Transform.Position = posición;
-        Entity.Transform.RotationEulerXYZ = rotación;
-        Entity.Transform.Scale = escalaInicial;
-
-        cuerpo.Enabled = true;
-        cuerpo.IsKinematic = false;
-
-        cuerpo.Mass = masaInicial + aleatorio;
-        cuerpo.ApplyForce(fuerza);
-
-        // Tiempo de vida
-        _ = ContarVida();
-    }
 
     public override async Task Execute()
     {
-        activo = false;
-
         cuerpo = Entity.Get<RigidbodyComponent>();
-        cuerpo.IsKinematic = true;
-        cuerpo.Enabled = false;
 
+        // Valores iniciales
+        posiciónInicial = Entity.Transform.Position;
         escalaInicial = Entity.Transform.Scale;
         masaInicial = cuerpo.Mass;
 
-        Entity.Transform.Scale = Vector3.Zero;
+        Ocultar();
 
         while (Game.IsRunning)
         {
@@ -66,17 +46,37 @@ public class ControladorBola : AsyncScript
                     colisiones++;
                     MostrarEfectos();
 
-                    // Solo suena cuando está sola
+                    // Solo suena cuando colisiona con estáticos
                     if (colisión.ColliderA.Entity.Get<ElementoSonido>() == null && colisión.ColliderB.Entity.Get<ElementoSonido>() == null)
                         SistemaSonido.SonarBola(ObtenerMayorFuerzaLinearNormalizada());
                 }
 
                 // Evita colisiones innesesarias
                 if (colisiones >= maxColisiones)
-                    await Destruir();
+                    await Guardar();
             }
             await Script.NextFrame();
         }
+    }
+
+    public void Disparar(Vector3 posición, Vector3 rotación, float aleatorio, Vector3 fuerza)
+    {
+        activo = true;
+        guardando = false;
+
+        Entity.Transform.Position = posiciónInicial + posición;
+        Entity.Transform.RotationEulerXYZ = rotación;
+        Entity.Transform.Scale = escalaInicial;
+
+        cuerpo.Enabled = true;
+        cuerpo.IsKinematic = false;
+        cuerpo.UpdatePhysicsTransformation();
+
+        cuerpo.Mass = masaInicial + aleatorio;
+        cuerpo.ApplyForce(fuerza);
+
+        // Tiempo de vida
+        _ = ContarVida();
     }
 
     private void MostrarEfectos()
@@ -108,14 +108,19 @@ public class ControladorBola : AsyncScript
 
     private async Task ContarVida()
     {
-        await Task.Delay(duraciónTurnoLocal);
-        await Destruir();
+        // Duración según tipo de juego
+        var duración = duraciónTurnoLocal;
+        if(SistemaRed.ObtenerJugando())
+            duración = duraciónTurnoRemoto;
+
+        await Task.Delay(duración);
+        await Guardar();
     }
 
-    private async Task Destruir()
+    private async Task Guardar()
     {
-        if (destruyendo) return;
-        destruyendo = true;
+        if (guardando) return;
+        guardando = true;
 
         float duraciónLerp = 0.7f;
         float tiempoLerp = 0;
@@ -132,12 +137,17 @@ public class ControladorBola : AsyncScript
         }
 
         // Fin
-        Entity.Transform.Scale = Vector3.One;
-        activo = false;
+        Ocultar();
+    }
 
-        // Guardando entidad
+    private void Ocultar()
+    {
+        activo = false;
         cuerpo.IsKinematic = true;
         cuerpo.Enabled = false;
+
+        Entity.Transform.Scale = Vector3.Zero;
+        Entity.Transform.Position = posiciónInicial - Vector3.UnitY;
     }
 
     public float ObtenerMayorFuerzaLinearNormalizada()
