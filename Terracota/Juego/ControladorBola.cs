@@ -18,9 +18,9 @@ public class ControladorBola : AsyncScript
     private Vector3 posiciónInicial;
     private Vector3 escalaInicial;
     private float masaInicial;
+    private int colisiones;
     private bool activo;
     private bool guardando;
-    private int colisiones;
 
     public override async Task Execute()
     {
@@ -63,6 +63,7 @@ public class ControladorBola : AsyncScript
     {
         activo = true;
         guardando = false;
+        colisiones = 0;
 
         Entity.Transform.Position = posiciónInicial + posición;
         Entity.Transform.RotationEulerXYZ = rotación;
