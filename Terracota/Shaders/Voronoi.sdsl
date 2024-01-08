@@ -6,7 +6,7 @@ namespace Shaders
         override float4 Compute()
         {
             float4 color = float4((RGB.x / 255),(RGB.y / 255),(RGB.z / 255), 1);
-            float v = Voronoi(streams.Position, Fuerza, Densidad);
+            float v = Voronoi(streams.Position.xyz, Fuerza, Densidad);
             return float4(v,v,v,1) * color;
         }
 
@@ -40,7 +40,7 @@ namespace Shaders
         float3 RandomFloat3(float3 UV, float offset)
         {
             float3x3 m = float3x3(15.27, 47.63, 99.41, 89.98, 23.45, 67.89, 12.34, 56.78, 90.12);
-            UV = frac(sin(mul(UV, m)) * 46839.32);
+            UV = frac(sin(mul(UV, m)) * 46839.34);
             return float3(
                 sin(UV.y * offset) * 0.5 + 0.5,
                 cos(UV.x * offset) * 0.5 + 0.5,
