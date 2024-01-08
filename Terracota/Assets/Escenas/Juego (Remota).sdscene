@@ -299,11 +299,103 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.0, Z: -2.4}
                         Rotation: {X: -0.7071067, Y: 0.0, Z: 0.0, W: 0.7071068}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            f290eb770caa52ca7dbea97cc98d41b1: ref!! d8baf172-e350-43f7-aef3-afa81c57ec32
+                            6c5bb3628468e88be4bc09f603fa8973: ref!! b753b6f8-a359-4e5b-afa6-037a4fc4250b
             Base:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: b1e3dd4b-e127-4d5c-91f4-5da6de0221b4
                 InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
+        -   Entity:
+                Id: 0696b96e-2ea2-4cfd-984b-ac5a33d9a490
+                Name: Bola 17
+                Components:
+                    5d6135555ebc1d5e66cc2c33b917a4fe: !Terracota.ControladorBola,Terracota
+                        Id: 52a5b865-0f98-41b5-a48c-fe0949ba9164
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 2b138bd8-899e-4c33-86e6-3c12027c88fc
+                        Position: {X: 0.11, Y: -0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 89a2cafc-84ef-450d-80bb-7bf14896ce21
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    83472d07fabf764d3605f77193b76fd8: !RigidbodyComponent
+                        Id: 78693e3d-ed40-4b25-bec7-035a9ff8c5f5
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            14f3da4d56819fd57bbd599bb5aaf79a: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: f35582a9-167a-410e-9fb6-893def290256
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
+        -   Entity:
+                Id: 06cbea9f-f279-49bf-8d73-51e4a98c99d5
+                Name: Bola 12
+                Components:
+                    dd15e53c9b449e76d79cb2489be6a21d: !Terracota.ControladorBola,Terracota
+                        Id: f0a67328-26d7-4baa-b24b-a5970bccf374
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 1ed8f1c4-fe86-4346-bc22-a8e7bff0c20e
+                        Position: {X: -0.11, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 1140f0de-a59b-4fb4-92c3-7f1a92b33a77
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    b58a68dcf585b0b8b7fd9a7d941c3e93: !RigidbodyComponent
+                        Id: e7d517ef-0bb0-427a-9451-aa05ddb99b60
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            406a850509e7f0c245ab57b400b130a4: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 8e1de27f-3da2-420e-af3a-2dac66147fa2
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
         -   Folder: null
             Entity:
                 Id: 06dac119-fe35-4822-8929-d007f20667f0
@@ -341,6 +433,51 @@ Hierarchy:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
                 BasePartId: b5a63faa-539e-4d8d-8be3-6cbd3c8c848d
                 InstanceId: e7db122c-a7aa-4772-8ac2-37eae1155189
+        -   Entity:
+                Id: 07a0ab9b-fdfd-4cfb-8e61-08f6d2e97644
+                Name: Bola 25
+                Components:
+                    d22afe9221764f6f6d85b5f016845288: !Terracota.ControladorBola,Terracota
+                        Id: 49d181f2-e2c6-42c9-9a56-cf1edf838936
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: aecc72c1-f91f-41af-95f3-824ffda62f21
+                        Position: {X: 0.0, Y: -0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 8260ead9-a65e-4777-9187-14d53fbadb92
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    3f7970af7788dc6e6a5dbf67de75e3a3: !RigidbodyComponent
+                        Id: c08f4f77-04db-4c07-85b3-8449558c8eba
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            ad2bb2e506e61b47d0bad41ad6819697: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: deed4c90-a9c6-4686-af24-36c6937663aa
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
         -   Entity:
                 Id: 07ae916c-fb0a-4c64-9575-a758123134f7
                 Name: Bandera
@@ -397,6 +534,51 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 8bd0b234-7ce1-4ba3-8408-e8097e8c1a70
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Entity:
+                Id: 0808c2eb-0592-41e8-9717-a2177a7eeed1
+                Name: Bola 23
+                Components:
+                    534bcc1d6ae206fb84b4babcfe28de0f: !Terracota.ControladorBola,Terracota
+                        Id: 0506d3e8-daf8-4f47-b7ae-e7aefd14a082
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: bc47b8e3-bb81-4a0b-a919-ccaa0dcc7b01
+                        Position: {X: 0.11, Y: 0.0, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 14b3fa14-f3a6-430e-8c4e-58faeb0b5502
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    02eccabbab1fa83fd4a30e7a13ca2334: !RigidbodyComponent
+                        Id: cc7f3712-1496-4764-8867-b6813c7df9ba
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            62a8bdaabd2582b5e5fcdb4123fe84a4: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 7831f210-02be-48ff-9fe4-2738fd4e697f
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
         -   Folder: null
             Entity:
                 Id: 086206a9-2847-4a76-8e89-4460db3afa89
@@ -761,6 +943,51 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: becc89ac-9516-457f-bbb5-6a24aa6ea325
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Entity:
+                Id: 0d37256b-b3bf-49bc-9d76-1baff9b8a2db
+                Name: Bola 7
+                Components:
+                    80a6cddffe76600c9d5b4d5ce81eb24d: !Terracota.ControladorBola,Terracota
+                        Id: 818515bb-585f-4dd3-9ada-03d83f328395
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: f03e95d0-050e-4f6a-8086-a0ef4222235a
+                        Position: {X: 0.0, Y: -0.11, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: dabc61b5-67e7-4f7b-8222-cd8660fbda53
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    a6d22df1d2178fc6a6b410d3b44f6854: !RigidbodyComponent
+                        Id: 528a5ac5-b0e0-4717-872b-4a33dedde5e5
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            eb41dee8b6544923550d08e9878eef3d: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 18c8d01b-1d5e-4bab-8240-79ca9c134654
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
         -   Folder: null
             Entity:
                 Id: 0d54a84d-7a4f-4dd9-a7ee-b8c1843dcd3f
@@ -1074,6 +1301,51 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: cf159b50-3f83-44f4-b9cb-bc69337b7906
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Entity:
+                Id: 136001c6-8f11-4168-a03d-5273ba067a4e
+                Name: Bola 5
+                Components:
+                    782ed5b40434b4a07f0839ae718dedbc: !Terracota.ControladorBola,Terracota
+                        Id: 99a92c05-f91b-44f2-b61c-5cab55535a71
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: cc3ab474-1606-42ac-b3cc-c6efd7f42aa8
+                        Position: {X: 0.11, Y: 0.0, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 06d43215-1977-41c2-b059-282e03d1ac93
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    5c945a4b622ce02792f7526f38056797: !RigidbodyComponent
+                        Id: 478380ce-fe12-49c1-ae02-a54a205202d9
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            c083dbfa606773dc799a09a39b454781: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 37751793-1138-45a2-b891-3e9c00db3443
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
         -   Folder: null
             Entity:
                 Id: 13c8c9c1-a7df-4e7e-a645-4f96e6a8ecc4
@@ -1134,6 +1406,51 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 4d50a490-50b9-4d53-a8f1-e37b782f607c
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Entity:
+                Id: 14ba81d3-b107-4f34-bfe8-3e785c4864d7
+                Name: Bola 15
+                Components:
+                    9af0fa7fd686a3cfb9b7b8ec1840e946: !Terracota.ControladorBola,Terracota
+                        Id: 7d3a3612-5fa9-4665-a99f-936bb020950d
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: cced280c-621d-4133-b6e7-0c30a4ca19d0
+                        Position: {X: -0.11, Y: -0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 787d57f8-31f5-4e7c-9dcb-74320057657d
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    0f043d6ccbedae29810be6264bff5235: !RigidbodyComponent
+                        Id: 11716706-17bb-4b30-8e46-6e6ac5363a8b
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            07fcb43f0e6b512d6927ee528d864299: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 68ded393-b59c-43a7-baa8-938b4ac521c4
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
         -   Entity:
                 Id: 151fd448-ea3d-4d89-b703-0df89131a748
                 Name: Modelo Cabeza
@@ -1483,6 +1800,51 @@ Hierarchy:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
                 BasePartId: 85c997fb-589e-47c2-bc9c-d7f38bf3229b
                 InstanceId: 74486002-9462-4274-b832-2a75923b225d
+        -   Entity:
+                Id: 215284ba-3b13-4e03-86f4-8cfefaba7f3b
+                Name: Bola 16
+                Components:
+                    f4a7ccc0ae1034ddce4d2667b6bf3369: !Terracota.ControladorBola,Terracota
+                        Id: 1f0dc10d-c0f9-47db-964b-540e2842dc73
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 5169a201-f038-4b63-a713-142cd3694f8f
+                        Position: {X: 0.0, Y: -0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 7191de5f-52bd-452a-b46a-bf284975db1e
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    116efe57a035d60db4313ad54a3f8a2d: !RigidbodyComponent
+                        Id: 2ea371e6-21f6-43d2-b4c8-fa40a77f26ce
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            5da18a26a56c55e2b189f2a21111c7b9: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 80631c81-c42e-4ee0-ad50-7e417f28a4d6
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
         -   Folder: null
             Entity:
                 Id: 218e1cd5-ad3f-4151-94e9-d547b2c7f3d9
@@ -1580,6 +1942,141 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 97d395e5-5d46-47a2-8bb2-f473d18c0397
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Entity:
+                Id: 260249c3-cf27-43cb-863a-d6c79b83baad
+                Name: Bola 7
+                Components:
+                    80a6cddffe76600c9d5b4d5ce81eb24d: !Terracota.ControladorBola,Terracota
+                        Id: 8ee4673d-1066-4735-bf0c-0f3b7f32eb58
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 4fc5ead0-9908-489d-9edb-9753697b9b0e
+                        Position: {X: 0.0, Y: -0.11, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 88882a2c-ad65-4b10-9692-bb751f727146
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    a6d22df1d2178fc6a6b410d3b44f6854: !RigidbodyComponent
+                        Id: ccd3f7d9-7430-424e-a3eb-a494b1adeabe
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            eb41dee8b6544923550d08e9878eef3d: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 18c8d01b-1d5e-4bab-8240-79ca9c134654
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
+        -   Entity:
+                Id: 26a4b8a2-3fe9-4ab8-ba29-baa3eaa03ecd
+                Name: Bola 23
+                Components:
+                    534bcc1d6ae206fb84b4babcfe28de0f: !Terracota.ControladorBola,Terracota
+                        Id: d78202b5-54e0-4074-b1ad-a6152ea394e1
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: fa282803-1ada-43a2-b935-abc8219f0cf2
+                        Position: {X: 0.11, Y: 0.0, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: ea516ff1-f4a4-4b4d-9ea5-c43d79e1e46b
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    02eccabbab1fa83fd4a30e7a13ca2334: !RigidbodyComponent
+                        Id: 5ea9bc17-c0b1-4e7a-b2d1-f9e53c0eb6f1
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            62a8bdaabd2582b5e5fcdb4123fe84a4: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 7831f210-02be-48ff-9fe4-2738fd4e697f
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
+        -   Entity:
+                Id: 26e05a5d-f162-4975-8e42-e4795af31e7b
+                Name: Bola 22
+                Components:
+                    43b90d946c2284960785657bcefcdcbb: !Terracota.ControladorBola,Terracota
+                        Id: d4f0bdbe-7e32-4a20-b914-6554fb7aa043
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 50506be3-4e61-47bb-90f6-116b10bd7da2
+                        Position: {X: 0.0, Y: 0.0, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: e86b626a-5722-4759-8659-203f578acb2b
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    b8881723367197eb845b2243f7c619a1: !RigidbodyComponent
+                        Id: cc8cdfe0-817d-455b-8bee-dc6786fb8bb8
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            d0975cb3a7578f5072d0e7c327fe154c: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 88537472-82c6-4044-8796-1ed1474a9fa3
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
         -   Folder: null
             Entity:
                 Id: 27492093-6731-400e-8d02-0ed16e71c655
@@ -1752,6 +2249,51 @@ Hierarchy:
                 BasePartId: a80fb368-8b12-4164-8d2f-f126a68111b4
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
         -   Entity:
+                Id: 2961f118-7e46-49a3-a0a1-381940018aa6
+                Name: Bola 8
+                Components:
+                    b54cdf5640ffbd0f70a24db40f800b67: !Terracota.ControladorBola,Terracota
+                        Id: b9fb9c9f-8d17-481e-95c5-d186aa3b982f
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 12dd3eb6-d8b3-4c3f-8f02-0045e1e46f1f
+                        Position: {X: 0.11, Y: -0.11, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 0f9d27f6-d0dc-40fb-add1-873acc59097a
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    d5251afc6f5b651a1a94b4bd2e088c66: !RigidbodyComponent
+                        Id: 818ed1bb-faa4-46e0-a2bd-b538adbf4c52
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9fac12e4a535b183d798c8aeb4fbd604: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: afd0a5fd-8445-4076-b84c-85df6cd07724
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
+        -   Entity:
                 Id: 29dfce4f-a9d6-4f33-839a-25a08e8323c7
                 Name: Bandera
                 Components:
@@ -1912,6 +2454,141 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: a08b2a79-da71-441a-88de-82dc219b8870
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Entity:
+                Id: 31026358-9f23-4751-963b-1fe3179c9a45
+                Name: Bola 2
+                Components:
+                    1f845404d8ec8c265cfe1f591376d78e: !Terracota.ControladorBola,Terracota
+                        Id: ac4899a9-9bc6-493b-9a4a-b6f63caa4e51
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 36f9addf-aa99-4886-82f8-9533d9127233
+                        Position: {X: 0.11, Y: 0.11, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 899f3d10-8eeb-4949-b013-6b7831efb35a
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    7ba6f1ca8713790a9b8162f9da5e3cbd: !RigidbodyComponent
+                        Id: 8a9b4256-da8a-4f4c-b90f-918bd553c484
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            1ed59ab01cb35a18b5c5bcd2dc96b044: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: a872cc27-6191-499e-ab1b-3e601d633bb3
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
+        -   Entity:
+                Id: 327a5983-ea2a-4255-a7dd-96132ea912d3
+                Name: Bola 17
+                Components:
+                    5d6135555ebc1d5e66cc2c33b917a4fe: !Terracota.ControladorBola,Terracota
+                        Id: c4ac6014-07d9-4352-88c5-dc7991b26c2b
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 48e1a59e-0ea6-4b9d-855d-3d8d91bc05a7
+                        Position: {X: 0.11, Y: -0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: d3a0131b-51aa-4a32-aecb-236864a71a58
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    83472d07fabf764d3605f77193b76fd8: !RigidbodyComponent
+                        Id: e78edc99-91d0-49a9-ab0f-7221390c5bb1
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            14f3da4d56819fd57bbd599bb5aaf79a: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: f35582a9-167a-410e-9fb6-893def290256
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
+        -   Entity:
+                Id: 32a25aa7-3dc2-48c4-9706-dd03729c7689
+                Name: Bola 13
+                Components:
+                    27f87fcf37326f768b7bb9ee09fe19bc: !Terracota.ControladorBola,Terracota
+                        Id: 8aafa2b7-3b5d-4337-9aea-92c27a5fd10f
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 5db2a1fc-2ba4-4b90-850a-23df4483935b
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 964ec97d-ba3f-4bf7-8601-7d086c26c6f7
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    6e5385600a2427c4a5ee919c28307474: !RigidbodyComponent
+                        Id: 7bd297ff-bb3d-44fc-9175-0963da52ad39
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            3f7bc706fcba336adebf0c4d30880bda: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 4765e5b1-bc9e-4c75-900d-a5e4013708dc
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
         -   Folder: null
             Entity:
                 Id: 3326b4fa-6be2-4f39-8a84-94d36bde82f2
@@ -2262,6 +2939,51 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: fbb0f6ee-8e73-4ab4-b945-fc45c11d905e
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Entity:
+                Id: 3967f947-88ff-460c-a24e-1868663b34ad
+                Name: Bola 26
+                Components:
+                    abc05ee1c03b1a2ad85b1473ff5df1dd: !Terracota.ControladorBola,Terracota
+                        Id: 1ea0d123-de79-42d6-8a8c-c3771f329f4a
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: c3c7512d-12f6-4f22-b23f-434d81037119
+                        Position: {X: 0.11, Y: -0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: cb267df6-bdcb-4fd5-8cf1-4d9691bbfdbc
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    700d06d4f156f454cf23b40c053fa9f5: !RigidbodyComponent
+                        Id: 141efa47-02fa-47bd-9a55-d1ae8c5474a0
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            b55d4c3eb93f1a643325d994c18ffc9b: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 37405d2e-8fa5-4d1b-b671-09a6a3dea582
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
         -   Folder: null
             Entity:
                 Id: 3b0bd79e-1017-4499-8947-8aed2ed39be2
@@ -2659,6 +3381,51 @@ Hierarchy:
                 BasePartId: 6ee4bbb2-0f0c-4a1e-bc9e-ace3eff3b41a
                 InstanceId: e80b070a-a3c4-45d2-8772-15130324c604
         -   Entity:
+                Id: 44306202-d271-4f72-94fe-7ff4f2665168
+                Name: Bola 18
+                Components:
+                    5c92f446875b033fb8819abe64d844cc: !Terracota.ControladorBola,Terracota
+                        Id: 801e615d-fb62-4a78-ae10-a46823c10a42
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 8654b3fb-8221-432b-b95b-f42afc8390c6
+                        Position: {X: -0.11, Y: 0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: bef466dc-1609-4dff-ad50-bb09c6215e2b
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    7e94a9b7fe903a0c200eea4e3d0608ac: !RigidbodyComponent
+                        Id: 633d0a7e-9119-4933-b9ea-bf610c4a0978
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            6afd0e436ab581cd19d3998d17cd3488: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 7b56ca4a-0d0f-44d6-9ffe-2d015865e3e1
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
+        -   Entity:
                 Id: 4461c42e-3ed9-4447-ba79-4ec861b69d6b
                 Name: Bandera
                 Components:
@@ -2754,6 +3521,51 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 62f11225-5735-42ac-9490-bd0a01a89605
                 InstanceId: e441019d-d37d-4562-a3d2-57422c1cb870
+        -   Entity:
+                Id: 477c06ca-06e0-4e22-9b9f-e001a70a79de
+                Name: Bola 21
+                Components:
+                    3a6911a2b96b296df8c8a0a8a52613ae: !Terracota.ControladorBola,Terracota
+                        Id: 80922638-aab7-481b-9e25-b194b78fd81f
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 2d032170-3d72-4b52-a4bc-985dd079af3c
+                        Position: {X: -0.11, Y: 0.0, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 508c88ee-c16e-4e81-acc2-3db3cdbb2251
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    cd635cd3147ab9327951c49133bfab34: !RigidbodyComponent
+                        Id: d46445c6-9c8b-471b-b92d-1dc777577626
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            ab6f54433a82ec5c58f1efd99edbdfba: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 072b5f40-cbb4-4baf-a101-4bec3451e1b5
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
         -   Folder: null
             Entity:
                 Id: 4786135e-bed5-49a9-818f-a38f6c87cddc
@@ -2773,6 +3585,51 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 5e0bf2d3-cca1-488b-b371-ee693aa59d0e
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Entity:
+                Id: 47fa5437-134e-4210-baaf-3dab84ceb9b8
+                Name: Bola 15
+                Components:
+                    9af0fa7fd686a3cfb9b7b8ec1840e946: !Terracota.ControladorBola,Terracota
+                        Id: 6fbf3fca-e26f-4702-8d88-cfb7ccb2bd26
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 631d2025-8a63-4fcf-9d46-c1a451f44cc6
+                        Position: {X: -0.11, Y: -0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: d8486580-5f67-4219-848c-06be653afc71
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    0f043d6ccbedae29810be6264bff5235: !RigidbodyComponent
+                        Id: a8626a4f-5f6d-4638-9125-5ed333c1965e
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            07fcb43f0e6b512d6927ee528d864299: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 68ded393-b59c-43a7-baa8-938b4ac521c4
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
         -   Entity:
                 Id: 4896bf11-997f-40a8-8e98-d60afd2af289
                 Name: "Cañón"
@@ -3013,6 +3870,96 @@ Hierarchy:
                 BasePartId: d2c02281-c1c6-4ade-b219-d6b789d48478
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
         -   Entity:
+                Id: 4b63f50a-a8d7-4f89-80d7-24c75e06cdd5
+                Name: Bola 26
+                Components:
+                    abc05ee1c03b1a2ad85b1473ff5df1dd: !Terracota.ControladorBola,Terracota
+                        Id: 4087fb42-7c8e-41d7-a0fb-756baf66cbe3
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 2b905448-9a48-42a7-bdaa-34bf65dd23ae
+                        Position: {X: 0.11, Y: -0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 1537f80b-6a02-4522-bb6e-ba2830aeb946
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    700d06d4f156f454cf23b40c053fa9f5: !RigidbodyComponent
+                        Id: 6d6b0324-4b9c-4fb0-a9f1-3c459001c31a
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            b55d4c3eb93f1a643325d994c18ffc9b: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 37405d2e-8fa5-4d1b-b671-09a6a3dea582
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
+        -   Entity:
+                Id: 4bffeef7-c0b4-4053-b43f-af85338b6b8c
+                Name: Bola 6
+                Components:
+                    c4e549cb8044aeb7aa82e811f038f17d: !Terracota.ControladorBola,Terracota
+                        Id: b4a59c05-d762-411d-a203-8060158b7427
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 66ec3d63-ac54-45fe-97eb-2e79c05d57ed
+                        Position: {X: -0.11, Y: -0.11, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 88d283e6-a13c-4c49-8fcf-f7000744c3b7
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    53750bb8e11858310b58e10351d57ad9: !RigidbodyComponent
+                        Id: 7f950c6c-08cf-41c3-8737-f9e2ae83b0f2
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            27b6c850302040f216172514ecbf67b2: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 44ab7a4a-aa0a-40ee-9fff-9c866ae78ac9
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
+        -   Entity:
                 Id: 4daffd6c-7a72-4f94-8279-57f095cc0b59
                 Name: "Bambú 0"
                 Components:
@@ -3030,6 +3977,51 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: f02cfbfe-7445-46ee-8def-66de812fe2cc
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Entity:
+                Id: 4dcc7705-b677-4223-8d02-5561e18b8482
+                Name: Bola 9
+                Components:
+                    86ae864f6ebe70f552b5e1a02c6b05bf: !Terracota.ControladorBola,Terracota
+                        Id: c4e9ec49-5070-4f52-95a8-4d28e62a67c6
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: ff880a0d-3055-41c7-9f44-c18d69a34e5e
+                        Position: {X: -0.11, Y: 0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 692fcce3-f415-403b-a46b-3d167e4d96a2
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    4e3693cbe13a59c3693af4e320e4c334: !RigidbodyComponent
+                        Id: 40e93649-20fe-48cc-af0f-2fccd1749d68
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            1a748e3ac1a822566b360951f0c21b61: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 2a2dba7f-dc8d-4823-8646-c54403035e4f
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
         -   Folder: null
             Entity:
                 Id: 4de18872-ede4-4a02-a49a-534ddead87c1
@@ -3068,6 +4060,51 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 2542b4e4-3600-499e-a67d-e4b3c275b1b0
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Entity:
+                Id: 4e85eb9d-1017-4b61-a6b0-bb03214b920e
+                Name: Bola 10
+                Components:
+                    a3d592f30f8494ff8b708e625447bf4c: !Terracota.ControladorBola,Terracota
+                        Id: 21f38515-acfd-46ab-b9f9-a18917bce89a
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: c31af5bd-9820-40b3-a84a-612dd5e9a8b2
+                        Position: {X: 0.0, Y: 0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 5880f87e-00ef-49d9-919f-ff1243419254
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    30e3ae85ef0e2a0566f2ea75d35c0afb: !RigidbodyComponent
+                        Id: d2fdd009-323b-4040-b0b2-43a56df954de
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            07370cde40c300624b2240d1945a0d38: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 8c99439c-5cb0-451a-8651-94f4f524d12c
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
         -   Folder: null
             Entity:
                 Id: 504f21d3-788a-44c8-a989-43f7b2a23b31
@@ -3090,6 +4127,137 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 8be65bbb-fb13-45ae-816b-918a48f1da9c
                 InstanceId: e441019d-d37d-4562-a3d2-57422c1cb870
+        -   Entity:
+                Id: 505d8a1f-9c58-4797-af8f-0147f3a8b78d
+                Name: Metralla
+                Components:
+                    967207ad784849d8648d6539a8c737d1: !TransformComponent
+                        Id: b753b6f8-a359-4e5b-afa6-037a4fc4250b
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            9160e94ee5552e4104e0965400f44880: ref!! 18dbf645-3921-4723-a8ee-efa5873a8ea6
+                            982e22ddf610ff0b012ce46710f1e324: ref!! 31e50f32-ea47-40bf-aba2-a6c7a3611cd3
+                            8b8942a4cf8b50af381b2df51ef056d9: ref!! 36f9addf-aa99-4886-82f8-9533d9127233
+                            986377a0da6a612f5ace26652e307801: ref!! 9526e0e9-f707-443d-b400-3861d6632633
+                            b12fee433ca914ae569ada3fcfaa6353: ref!! 0ed51feb-6d53-43c2-82d5-3679875497ea
+                            5407c08978dca4da1eb3652e413e8900: ref!! cc3ab474-1606-42ac-b3cc-c6efd7f42aa8
+                            934544cce3f335f791c8302dd892a667: ref!! 66ec3d63-ac54-45fe-97eb-2e79c05d57ed
+                            02138e5f478e0624887bfd910ba5a0cb: ref!! 4fc5ead0-9908-489d-9edb-9753697b9b0e
+                            782c4a3f8b4c4613fceb31e268ef0ee8: ref!! 2b60749a-a0ff-4f94-bb40-111db9bfc896
+                            125962aeb2124f53b3dd17ff9e48cccb: ref!! 8d5a8dcf-66cd-461e-ad94-1078100764dc
+                            6aa60bc1c6d8b3236e6696a2a8899715: ref!! f4306a61-3f57-403d-9bf3-d0b6d9b51e15
+                            8b70c63a8b7696f07e1bf4386dae7bc4: ref!! 7fba03c1-dde4-4975-8ee2-f2bf7c3291e7
+                            2751ac34215b15733e55ed1092afc894: ref!! 0f42e58d-11a2-4302-91f4-606fc2925136
+                            ec96736b3320e6fb49ab55be6347e91b: ref!! a1db21db-4ac9-4b53-ae3d-28044ad4ca7e
+                            8c702abb51da266e433e062bd009c095: ref!! 7b40cc7f-51b3-40ca-b73b-78e6d0c11ffe
+                            d291a94db7b3271d026bb4f0d4c20bca: ref!! cced280c-621d-4133-b6e7-0c30a4ca19d0
+                            f540b89c16ea86b77f9f28b005544dbb: ref!! 5169a201-f038-4b63-a713-142cd3694f8f
+                            eff7ca81e46fb8d63717f422c30ed1f0: ref!! 48e1a59e-0ea6-4b9d-855d-3d8d91bc05a7
+                            769384f8aa639255fa10d6a00bc5d0c9: ref!! 2abe3374-d9ab-48a6-97fe-97de878c2cdf
+                            c080e1fdaa8d7709a06115d77f4f6ce8: ref!! 2b5849c2-24a5-44ed-a004-717ef6ef3c50
+                            d58cd7614062eb773545ccf5ea8c9444: ref!! 02908125-6da1-4240-850c-282fa65b7fcf
+                            0bf2f4db7669da7c8c255a18d7116ce3: ref!! ac0cc87c-88e3-4bb9-8f97-6f67bf6993ef
+                            9831b2b890f8e0aa80cac1689edcde66: ref!! 50506be3-4e61-47bb-90f6-116b10bd7da2
+                            6e37818a14a4c7b90cbf7919ae5dc55e: ref!! fa282803-1ada-43a2-b935-abc8219f0cf2
+                            d777dee4e73c08dcfc7a61f834e130a5: ref!! 3a21650f-a4f9-43fa-a8a0-648e96288bad
+                            037557ea3ce2edfd01c8615765e5bd6a: ref!! aecc72c1-f91f-41af-95f3-824ffda62f21
+                            9689c69a4c1cfd5c81817fdfdda53550: ref!! 2b905448-9a48-42a7-bdaa-34bf65dd23ae
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 0a279704-5ace-489c-97d7-b82c16899a5b
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
+        -   Entity:
+                Id: 51295ad2-2015-49c6-b636-e7673e3a69b4
+                Name: Bola 3
+                Components:
+                    049d0ab964a6389fbd0e7f4f3480c3e4: !Terracota.ControladorBola,Terracota
+                        Id: fd65ca2c-af99-419d-b894-721f2e84c1da
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 9526e0e9-f707-443d-b400-3861d6632633
+                        Position: {X: -0.11, Y: 0.0, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: b04da264-2999-41e3-a85f-af15d0006942
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    d5c98a43ed644c0147459ecc64ee8fc3: !RigidbodyComponent
+                        Id: c9c96d9a-dc1f-4080-95bc-1c588abeb192
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            179bfef96c019dd55919d6ab733f04fb: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: db5e8ebc-5db5-4cc1-9475-1f95bf39029a
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
+        -   Entity:
+                Id: 51a91e6c-bdb9-4cf2-888a-a034d1b6b868
+                Name: Bola 14
+                Components:
+                    289939238cd71692af72965ea93f4c54: !Terracota.ControladorBola,Terracota
+                        Id: 151a184a-2368-4509-a319-8bbfcfc038c6
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 7b40cc7f-51b3-40ca-b73b-78e6d0c11ffe
+                        Position: {X: 0.11, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 8c3c731f-64e4-4c26-8565-7e0d66125d14
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    dc983ac982905dee8da5c6523210273b: !RigidbodyComponent
+                        Id: 48969956-6a2f-41f6-a049-a25d8abddc3c
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8a47e96799f66356c93f3246a124aafa: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 1a4fd6df-f14d-4945-b2cd-cdb946c0a15a
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
         -   Folder: null
             Entity:
                 Id: 51b08270-bc19-426a-8985-1e99162aad78
@@ -3128,6 +4296,51 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: d5cb902c-1b08-4acd-a3ec-68d5e56fd051
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Entity:
+                Id: 53241ac0-f10b-478b-9d9d-0c43b57ea731
+                Name: Bola 10
+                Components:
+                    a3d592f30f8494ff8b708e625447bf4c: !Terracota.ControladorBola,Terracota
+                        Id: c738d64c-dea3-4adf-bc04-a8a9dc122dd5
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: f4306a61-3f57-403d-9bf3-d0b6d9b51e15
+                        Position: {X: 0.0, Y: 0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 838f18c0-6f61-4fff-bf7e-ca7139f71753
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    30e3ae85ef0e2a0566f2ea75d35c0afb: !RigidbodyComponent
+                        Id: 6008beab-345f-450b-91a9-7a4637774992
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            07370cde40c300624b2240d1945a0d38: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 8c99439c-5cb0-451a-8651-94f4f524d12c
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
         -   Folder: null
             Entity:
                 Id: 5477b24e-0d6f-4fba-b10d-9e95050c4d1d
@@ -3184,6 +4397,51 @@ Hierarchy:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
                 BasePartId: d4f6e3c4-44f1-4db8-9cc9-8ae265f7bf2f
                 InstanceId: 74486002-9462-4274-b832-2a75923b225d
+        -   Entity:
+                Id: 55d72adb-a6a2-400e-b3bc-641c246f8ecf
+                Name: Bola 11
+                Components:
+                    52baebb8dc86bf262ad46c44842cc301: !Terracota.ControladorBola,Terracota
+                        Id: 9ca39098-b17d-4eb8-8223-698466c6dd8c
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 78c49cfd-df29-4e97-bdbe-1c759cd4ba21
+                        Position: {X: 0.11, Y: 0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 7a8b9ca7-8247-44f7-9d5d-40dc6c1b45dd
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    4f8e85a7b06d88d5fdf38ad6cfc84107: !RigidbodyComponent
+                        Id: f5f5118f-3cc3-4b49-8962-dcb2f156b62d
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9fcc4caa8cef5e90b0e7cbda94c6b076: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: cbcbdbb0-e541-4bbc-923b-77e28a135291
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
         -   Folder: null
             Entity:
                 Id: 567eea69-6fc7-4011-b318-2d82472a5991
@@ -3672,6 +4930,51 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 389f8455-e1b5-42e2-848a-c7e426cd4e3d
                 InstanceId: e441019d-d37d-4562-a3d2-57422c1cb870
+        -   Entity:
+                Id: 6529f28f-ac42-4fbc-bca6-325e91090b88
+                Name: Bola 12
+                Components:
+                    dd15e53c9b449e76d79cb2489be6a21d: !Terracota.ControladorBola,Terracota
+                        Id: 136d0e3a-94e8-4a97-adea-6590a41bead2
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 0f42e58d-11a2-4302-91f4-606fc2925136
+                        Position: {X: -0.11, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: ffa75cd0-69af-4ef6-ba8f-5f3e65aa63e4
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    b58a68dcf585b0b8b7fd9a7d941c3e93: !RigidbodyComponent
+                        Id: adb6c2ac-a0ad-4963-bf1d-908a599a6450
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            406a850509e7f0c245ab57b400b130a4: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 8e1de27f-3da2-420e-af3a-2dac66147fa2
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
         -   Folder: null
             Entity:
                 Id: 65e5cb41-a846-4045-a2ff-9b7b61abf521
@@ -3691,6 +4994,51 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: de0a956c-1aec-4196-8f83-d03fe4dc59e8
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Entity:
+                Id: 65ee3d9d-45d0-4dcd-85df-5717fa579903
+                Name: Bola 14
+                Components:
+                    289939238cd71692af72965ea93f4c54: !Terracota.ControladorBola,Terracota
+                        Id: f8aff8c1-597b-49b6-8164-dbf6dab25420
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: dcf607e3-4ee1-46c9-a5bd-97043da34005
+                        Position: {X: 0.11, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: fdb44dec-6085-42e0-8078-967277113194
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    dc983ac982905dee8da5c6523210273b: !RigidbodyComponent
+                        Id: 96a25b5e-cd95-4ada-87a7-d2db77d1e9d3
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8a47e96799f66356c93f3246a124aafa: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 1a4fd6df-f14d-4945-b2cd-cdb946c0a15a
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
         -   Folder: null
             Entity:
                 Id: 6611bece-5cd6-4deb-93af-f2b38db8f1f6
@@ -3725,8 +5073,8 @@ Hierarchy:
                         Children: {}
                     3cd46ca143b5e34bb295085f29977263: !Terracota.ControladorPartidaRemota,Terracota
                         Id: 92f20fd3-c1ff-41c2-ac36-2a92ab13a1c0
-                        "cañónAnfitrión": ref!! 3c51bd60-2eea-4b28-a76c-7c99a5d1f6ab
-                        "cañónHuesped": ref!! f04e216a-826b-4f18-ab64-70509cd5bb8f
+                        "cañónAnfitrión": null
+                        "cañónHuesped": null
                         "fortalezaAnfitrión": ref!! 0a8170d5-c455-4106-91cd-fea79dfb8580
                         fortalezaHuesped: ref!! 1b3b09f0-6886-46e0-ac48-53dfec9173ee
                         "controladorCámara": ref!! 24c183db-10d7-4a20-aa2e-e2dc0a560703
@@ -3734,6 +5082,21 @@ Hierarchy:
                         interfaz: ref!! 95324920-26fa-465f-b610-3dfe1705665d
                         "elección": ref!! 609f6f95-447c-4c7d-9502-dd7d255a3acb
                         "UIElección": ref!! bfdca2e7-d250-4848-bdee-06b45f17c093
+        -   Entity:
+                Id: 69c0ad74-f8e4-4db5-b54e-ba74ee545b9d
+                Name: Bola
+                Components:
+                    a8b230f7717fdab6ab56d059f97b4846: !TransformComponent
+                        Id: 36f24d1a-69d2-44b1-94e7-148199a08d71
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            bcd88443ccea770d95997d25b0293f70: ref!! bf14ed2d-476d-48f6-845b-a737b024e629
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 08008486-d4be-4dc0-b4d1-93fc7a99a303
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
         -   Folder: null
             Entity:
                 Id: 6a56a19c-10c6-4e6f-b37e-46b07b5d81ee
@@ -3868,6 +5231,51 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: af1abac3-e06a-4cf4-95b9-8622cb991366
                 InstanceId: e80b070a-a3c4-45d2-8772-15130324c604
+        -   Entity:
+                Id: 6f991bbb-5ea1-4a7b-9f77-08e76ede37b6
+                Name: Bola 11
+                Components:
+                    52baebb8dc86bf262ad46c44842cc301: !Terracota.ControladorBola,Terracota
+                        Id: 56caf3d9-af37-45d8-aa02-00d968ab9403
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 7fba03c1-dde4-4975-8ee2-f2bf7c3291e7
+                        Position: {X: 0.11, Y: 0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 1efdef3d-1076-4040-8b0c-7466ba6bbe2a
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    4f8e85a7b06d88d5fdf38ad6cfc84107: !RigidbodyComponent
+                        Id: 3e015f04-8556-4ec8-9f22-9fcee1bce916
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9fcc4caa8cef5e90b0e7cbda94c6b076: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: cbcbdbb0-e541-4bbc-923b-77e28a135291
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
         -   Folder: null
             Entity:
                 Id: 6fa4acd2-6d01-42dd-95fb-94ae84d203b2
@@ -4196,6 +5604,96 @@ Hierarchy:
                 BasePartId: a473ccb1-df65-4bb0-8a8a-02d69796b717
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
         -   Entity:
+                Id: 79f29755-cf86-4028-8e85-d9548dea297d
+                Name: Bola 19
+                Components:
+                    fe1cb20ae97b02c95a776295e4f55fc7: !Terracota.ControladorBola,Terracota
+                        Id: 017dd9b5-9807-4887-a56a-7f224d8d864e
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 2b5849c2-24a5-44ed-a004-717ef6ef3c50
+                        Position: {X: 0.0, Y: 0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: e9f64557-a812-4ebb-a7b0-b8e42e02a527
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    995c7e5d0707e2b02f3ff06d64e08509: !RigidbodyComponent
+                        Id: 413a760b-eb23-475f-bf52-fbd2d1eaffd5
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            f08d04bb80f1a5f226d1796a365deefb: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 720ad567-9569-4ac9-926b-eff4fff082e4
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
+        -   Entity:
+                Id: 7a161b10-60c1-42c2-b76e-67ff179c7f8b
+                Name: Bola 9
+                Components:
+                    86ae864f6ebe70f552b5e1a02c6b05bf: !Terracota.ControladorBola,Terracota
+                        Id: 02630a92-bf1c-4a08-a677-cfa0d080ec94
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 8d5a8dcf-66cd-461e-ad94-1078100764dc
+                        Position: {X: -0.11, Y: 0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 56b2d930-856b-4ad3-b972-9c6b852aa338
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    4e3693cbe13a59c3693af4e320e4c334: !RigidbodyComponent
+                        Id: 4e1aaa7a-7316-430b-baac-23075525597d
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            1a748e3ac1a822566b360951f0c21b61: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 2a2dba7f-dc8d-4823-8646-c54403035e4f
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
+        -   Entity:
                 Id: 7a4a3799-707a-4ee2-b7ad-6f8b66755f0f
                 Name: Modelo Lanza
                 Components:
@@ -4290,6 +5788,51 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 1b13d9e7-1cff-410a-8bb3-e63fd3d02275
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Entity:
+                Id: 7e92ce53-4e7c-419c-a421-6ba02ee6476d
+                Name: Bola 24
+                Components:
+                    d1ef393171ea825f9a8e69771815562a: !Terracota.ControladorBola,Terracota
+                        Id: a96da6a9-c926-4177-abd5-6995671805a7
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 3a21650f-a4f9-43fa-a8a0-648e96288bad
+                        Position: {X: -0.11, Y: -0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 02f6e070-bfbd-4af3-ac46-4bd8e74473f7
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    1aadcb6e0ea80409eb47f476ee00887b: !RigidbodyComponent
+                        Id: 2922a806-e94b-4055-bd00-3aba847919f3
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            c2fd4bb93ef7c5f3485681132a75c862: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 3a9e2549-500b-40db-a3a9-3f5be28b3558
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
         -   Folder: null
             Entity:
                 Id: 7f5ce592-374c-4a30-8b38-c706efe41f07
@@ -4422,6 +5965,51 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: dd3653d8-f82d-481d-8bbc-031dc77faec5
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Entity:
+                Id: 83ddbfd7-fab3-4158-b088-86a5ac961cdb
+                Name: Bola 3
+                Components:
+                    049d0ab964a6389fbd0e7f4f3480c3e4: !Terracota.ControladorBola,Terracota
+                        Id: a7ffdc1e-f288-40bc-9bf0-1330ab26e3af
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 9c6683fc-cbf5-46b2-bd49-4e3104a1f28b
+                        Position: {X: -0.11, Y: 0.0, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: dd555abb-d9a9-4188-95a5-6091513c55ee
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    d5c98a43ed644c0147459ecc64ee8fc3: !RigidbodyComponent
+                        Id: 8344d6fb-f1d8-4eb3-b53d-9bcd6707391d
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            179bfef96c019dd55919d6ab733f04fb: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: db5e8ebc-5db5-4cc1-9475-1f95bf39029a
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
         -   Folder: null
             Entity:
                 Id: 8676dc6a-ab03-4b37-a18a-ca879cd8fb63
@@ -4558,6 +6146,51 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: e443bb86-23b7-4b47-b1ed-a04b4e6e461a
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Entity:
+                Id: 8a29a2eb-671a-415c-84ea-0837c542d1b4
+                Name: Bola 22
+                Components:
+                    43b90d946c2284960785657bcefcdcbb: !Terracota.ControladorBola,Terracota
+                        Id: dddf3487-6be9-4959-9123-0a1bc0d5472c
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: aa0a79f2-be08-419e-a123-0fb05ca5405b
+                        Position: {X: 0.0, Y: 0.0, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: e42edad3-52fd-4e33-b28c-1507e3964e28
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    b8881723367197eb845b2243f7c619a1: !RigidbodyComponent
+                        Id: f647eea5-f694-4217-9053-b7ad108db26e
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            d0975cb3a7578f5072d0e7c327fe154c: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 88537472-82c6-4044-8796-1ed1474a9fa3
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
         -   Folder: null
             Entity:
                 Id: 8b3759ed-1b14-45a8-85a1-12b156977c7e
@@ -4844,6 +6477,21 @@ Hierarchy:
                 BasePartId: d185eeea-0cac-405c-934d-27d504f3c98c
                 InstanceId: e80b070a-a3c4-45d2-8772-15130324c604
         -   Entity:
+                Id: 93a8733a-010e-4941-ab71-4844e7e0fca2
+                Name: Bola
+                Components:
+                    a8b230f7717fdab6ab56d059f97b4846: !TransformComponent
+                        Id: d8baf172-e350-43f7-aef3-afa81c57ec32
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            bcd88443ccea770d95997d25b0293f70: ref!! 058f780a-7cb9-47aa-8935-bea9a4563c7f
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 08008486-d4be-4dc0-b4d1-93fc7a99a303
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
+        -   Entity:
                 Id: 93a99d3c-69db-4046-9232-dd80edd46d89
                 Name: "Bambú 0"
                 Components:
@@ -4956,6 +6604,137 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: efa71b0c-d885-4b91-9e46-5f977d995ea5
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Entity:
+                Id: 96dffa68-46ad-4070-a7bf-e70eb3849fa3
+                Name: Metralla
+                Components:
+                    967207ad784849d8648d6539a8c737d1: !TransformComponent
+                        Id: 5d571d17-bb5c-4e34-99c4-a414b4f6f690
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            9160e94ee5552e4104e0965400f44880: ref!! fff3a0bc-4e90-49be-8699-c4bbb0e3bbcd
+                            982e22ddf610ff0b012ce46710f1e324: ref!! fa5e9337-3f0a-4939-a6ab-642fbee924eb
+                            8b8942a4cf8b50af381b2df51ef056d9: ref!! cc82a86d-42a1-44bf-9713-8b837b4b1630
+                            986377a0da6a612f5ace26652e307801: ref!! 9c6683fc-cbf5-46b2-bd49-4e3104a1f28b
+                            b12fee433ca914ae569ada3fcfaa6353: ref!! 4b7940f7-f916-48d3-aa95-849fbee56443
+                            5407c08978dca4da1eb3652e413e8900: ref!! da660186-4eb4-44c9-88dc-9840aa96616d
+                            934544cce3f335f791c8302dd892a667: ref!! 644d2070-8298-4def-a845-a748900d9b5f
+                            02138e5f478e0624887bfd910ba5a0cb: ref!! f03e95d0-050e-4f6a-8086-a0ef4222235a
+                            782c4a3f8b4c4613fceb31e268ef0ee8: ref!! 12dd3eb6-d8b3-4c3f-8f02-0045e1e46f1f
+                            125962aeb2124f53b3dd17ff9e48cccb: ref!! ff880a0d-3055-41c7-9f44-c18d69a34e5e
+                            6aa60bc1c6d8b3236e6696a2a8899715: ref!! c31af5bd-9820-40b3-a84a-612dd5e9a8b2
+                            8b70c63a8b7696f07e1bf4386dae7bc4: ref!! 78c49cfd-df29-4e97-bdbe-1c759cd4ba21
+                            2751ac34215b15733e55ed1092afc894: ref!! 1ed8f1c4-fe86-4346-bc22-a8e7bff0c20e
+                            ec96736b3320e6fb49ab55be6347e91b: ref!! 5db2a1fc-2ba4-4b90-850a-23df4483935b
+                            8c702abb51da266e433e062bd009c095: ref!! dcf607e3-4ee1-46c9-a5bd-97043da34005
+                            d291a94db7b3271d026bb4f0d4c20bca: ref!! 631d2025-8a63-4fcf-9d46-c1a451f44cc6
+                            f540b89c16ea86b77f9f28b005544dbb: ref!! d6cffc51-f641-4fef-ad2e-dfbd60f7541d
+                            eff7ca81e46fb8d63717f422c30ed1f0: ref!! 2b138bd8-899e-4c33-86e6-3c12027c88fc
+                            769384f8aa639255fa10d6a00bc5d0c9: ref!! 8654b3fb-8221-432b-b95b-f42afc8390c6
+                            c080e1fdaa8d7709a06115d77f4f6ce8: ref!! 9088b752-ed9e-4afa-afd4-99b18ce47daa
+                            d58cd7614062eb773545ccf5ea8c9444: ref!! 890eae0b-b085-46ee-9ab2-313c64991de7
+                            0bf2f4db7669da7c8c255a18d7116ce3: ref!! 2d032170-3d72-4b52-a4bc-985dd079af3c
+                            9831b2b890f8e0aa80cac1689edcde66: ref!! aa0a79f2-be08-419e-a123-0fb05ca5405b
+                            6e37818a14a4c7b90cbf7919ae5dc55e: ref!! bc47b8e3-bb81-4a0b-a919-ccaa0dcc7b01
+                            d777dee4e73c08dcfc7a61f834e130a5: ref!! d6109b93-1277-4e55-be7b-5f30b2c2b042
+                            037557ea3ce2edfd01c8615765e5bd6a: ref!! cde706af-55f3-4cc5-b003-7807c5020d37
+                            9689c69a4c1cfd5c81817fdfdda53550: ref!! c3c7512d-12f6-4f22-b23f-434d81037119
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 0a279704-5ace-489c-97d7-b82c16899a5b
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
+        -   Entity:
+                Id: 987054e5-9a6d-45ed-9bc5-7abdb2176239
+                Name: Bola 16
+                Components:
+                    f4a7ccc0ae1034ddce4d2667b6bf3369: !Terracota.ControladorBola,Terracota
+                        Id: 9ed461d2-2417-4b92-8ec8-37a81bc5d9b1
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: d6cffc51-f641-4fef-ad2e-dfbd60f7541d
+                        Position: {X: 0.0, Y: -0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: aecb1e0f-f108-45d8-bf88-d48dfcfcd60c
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    116efe57a035d60db4313ad54a3f8a2d: !RigidbodyComponent
+                        Id: 9cedf107-fc49-4234-b02b-23c4fe4180ca
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            5da18a26a56c55e2b189f2a21111c7b9: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 80631c81-c42e-4ee0-ad50-7e417f28a4d6
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
+        -   Entity:
+                Id: 98cc7f2b-9030-41c7-898f-9b2f147b0a5a
+                Name: Bola 4
+                Components:
+                    2e061cbbd6aacf70bf8d7ca4ed959396: !Terracota.ControladorBola,Terracota
+                        Id: 38b164e9-5827-4ff1-a1cc-dda5c532dd33
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 4b7940f7-f916-48d3-aa95-849fbee56443
+                        Position: {X: 0.0, Y: 0.0, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: c361f31f-bfea-4433-9ff3-16e376c79d75
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    a1637319c29a8d884daa2b2822856748: !RigidbodyComponent
+                        Id: f841f476-b837-45f8-be3a-da942c3349c1
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            b72ee723dc545feb04a85ec5cf1117f3: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: a41bf262-2420-4227-be8c-c7eb584848c5
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
         -   Folder: null
             Entity:
                 Id: 991d07d4-88b7-41f1-89e7-a15fa10cb6c5
@@ -5070,8 +6849,8 @@ Hierarchy:
                         Children:
                             fe850ff2a034e6ac607d6288829530db: ref!! 27295a7b-2d87-4f4b-a806-3445c1da093b
                     125a758c8adcd915ce55f12615d90a70: !Terracota.ControladorCa%25C3%25B1%25C3%25B3n,Terracota
-                        Id: 3c51bd60-2eea-4b28-a76c-7c99a5d1f6ab
-                        fuerzaBala: 180.0
+                        Id: ca5c8225-f67b-4aec-ae9b-46a35ecb252e
+                        fuerzaBola: 180.0
                         fuerzaMetralla: 19.0
                         sensibilidadX: 0.8
                         sensibilidadY: 0.8
@@ -5082,8 +6861,8 @@ Hierarchy:
                         ruedaDerecha: ref!! 3770bf3b-c979-4de7-881f-ea4bf2936f4e
                         "partículasFuego": ref!! a8730424-05ea-4260-b14f-3782650b548f
                         "partículasHumo": ref!! f8f02ed8-9e2f-4590-875b-9e3799b4d09e
-                        bala: 32dc5310-2c33-4019-a4a0-fdf11fafd6c0:Prefabs/Bola
-                        metralla: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                        bola: null
+                        metralla: {}
             Base:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: 5a937d20-d3e9-4e7e-98cb-a6926d62f59b
@@ -5183,6 +6962,51 @@ Hierarchy:
                 BasePartId: 9e8a6db5-b50a-4731-8141-677809eb9745
                 InstanceId: 74486002-9462-4274-b832-2a75923b225d
         -   Entity:
+                Id: a0ea1f06-d462-46de-9a2d-6c2d4b0d62e6
+                Name: Bola 0
+                Components:
+                    35cc06cc97aa692bf8b8cbbdb426f5a5: !Terracota.ControladorBola,Terracota
+                        Id: 2c543a5a-463e-4a5e-9bb1-f33feaf60f08
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: fff3a0bc-4e90-49be-8699-c4bbb0e3bbcd
+                        Position: {X: -0.11, Y: 0.11, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 031dc51c-a11b-4bd6-9135-06d2d926125f
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    114b90db974cabdf571a34bde6aba6b8: !RigidbodyComponent
+                        Id: 0d656895-2894-4366-9417-2511ec84d9ab
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            88fc81dbeb4e77279fd45c895c8babd5: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: d500d8ab-3e5d-4328-b84c-1f426182f261
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
+        -   Entity:
                 Id: a175c519-76bf-4bd1-b1b8-113fb2037407
                 Name: "Ícono"
                 Components:
@@ -5201,6 +7025,51 @@ Hierarchy:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
                 BasePartId: 5dc56436-ba66-4194-8efa-2d7391049727
                 InstanceId: 74486002-9462-4274-b832-2a75923b225d
+        -   Entity:
+                Id: a3db984c-03c9-4c61-b41c-4bac3e4c7ead
+                Name: Bola 5
+                Components:
+                    782ed5b40434b4a07f0839ae718dedbc: !Terracota.ControladorBola,Terracota
+                        Id: 9de658ac-b687-4b61-a247-1e72eb7b0f26
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: da660186-4eb4-44c9-88dc-9840aa96616d
+                        Position: {X: 0.11, Y: 0.0, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: ca5f9faf-80c0-4b30-b3f3-214a83c8e49e
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    5c945a4b622ce02792f7526f38056797: !RigidbodyComponent
+                        Id: 3d7eb3dd-b05f-434b-bed1-8773c41143ed
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            c083dbfa606773dc799a09a39b454781: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 37751793-1138-45a2-b891-3e9c00db3443
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
         -   Folder: null
             Entity:
                 Id: a43a2f2a-f006-4835-864b-e7eb173701fd
@@ -5321,6 +7190,51 @@ Hierarchy:
                 BasePartId: 012f43df-6cb3-4551-a847-291894047d66
                 InstanceId: 74486002-9462-4274-b832-2a75923b225d
         -   Entity:
+                Id: a7a816c0-b7a8-47d0-ac40-e311f717c855
+                Name: Bola 4
+                Components:
+                    2e061cbbd6aacf70bf8d7ca4ed959396: !Terracota.ControladorBola,Terracota
+                        Id: 2730bbd7-b8d3-4eb1-9315-df3ac4efdf27
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 0ed51feb-6d53-43c2-82d5-3679875497ea
+                        Position: {X: 0.0, Y: 0.0, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 9f49a946-2029-408b-9e6d-409434b165ca
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    a1637319c29a8d884daa2b2822856748: !RigidbodyComponent
+                        Id: 9ead131c-0fca-4ccc-b871-b73e2b9d73f8
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            b72ee723dc545feb04a85ec5cf1117f3: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: a41bf262-2420-4227-be8c-c7eb584848c5
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
+        -   Entity:
                 Id: a7aab79c-3a34-4063-8ee9-bcdcf769c7a3
                 Name: Origen
                 Components:
@@ -5329,7 +7243,9 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.0, Z: -2.4}
                         Rotation: {X: -0.7071067, Y: 0.0, Z: 0.0, W: 0.7071068}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            a6af66a2e0546d6374df0f90a9a2110b: ref!! 36f24d1a-69d2-44b1-94e7-148199a08d71
+                            2b37b211bef37c352d7afb21108dc60d: ref!! 5d571d17-bb5c-4e34-99c4-a414b4f6f690
             Base:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: b1e3dd4b-e127-4d5c-91f4-5da6de0221b4
@@ -5352,6 +7268,51 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: f7871d35-b294-4414-a23c-0eaba15bafc3
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Entity:
+                Id: a7ee15e6-1b08-467e-89f2-3c7debecd330
+                Name: Bola 24
+                Components:
+                    d1ef393171ea825f9a8e69771815562a: !Terracota.ControladorBola,Terracota
+                        Id: f6d292e4-d5d0-4673-9b34-320595b983d3
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: d6109b93-1277-4e55-be7b-5f30b2c2b042
+                        Position: {X: -0.11, Y: -0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 0a56cd80-d681-4bf6-a3c4-333c53018b13
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    1aadcb6e0ea80409eb47f476ee00887b: !RigidbodyComponent
+                        Id: 9915323b-8081-4496-8c63-54619afbf4a8
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            c2fd4bb93ef7c5f3485681132a75c862: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 3a9e2549-500b-40db-a3a9-3f5be28b3558
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
         -   Entity:
                 Id: a7f5c87d-0581-4603-9223-79630c3ba4c3
                 Name: Ciruelo 4
@@ -5409,6 +7370,51 @@ Hierarchy:
                 BasePartId: d702a0c1-1ce7-4fae-802b-42a70cdeee62
                 InstanceId: e80b070a-a3c4-45d2-8772-15130324c604
         -   Entity:
+                Id: a8d7f51e-86d2-4d7f-8d2c-2f38f645178c
+                Name: Bola 0
+                Components:
+                    35cc06cc97aa692bf8b8cbbdb426f5a5: !Terracota.ControladorBola,Terracota
+                        Id: 969b303a-6a8f-44d3-a39e-f45e6bf3b442
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 18dbf645-3921-4723-a8ee-efa5873a8ea6
+                        Position: {X: -0.11, Y: 0.11, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: e58623d5-da9b-4179-9f2f-ff005904a937
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    114b90db974cabdf571a34bde6aba6b8: !RigidbodyComponent
+                        Id: c59efe4c-d628-41c9-8f9b-d21ae5ca76a3
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            88fc81dbeb4e77279fd45c895c8babd5: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: d500d8ab-3e5d-4328-b84c-1f426182f261
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
+        -   Entity:
                 Id: a8e8acea-bb38-4378-8770-951952f63778
                 Name: "Bambú 0"
                 Components:
@@ -5463,6 +7469,51 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 8ebc74e2-8ae9-45cf-a73d-50286b484c05
                 InstanceId: e80b070a-a3c4-45d2-8772-15130324c604
+        -   Entity:
+                Id: ab058dca-5907-40bb-9f53-b495142fd898
+                Name: Bola 13
+                Components:
+                    27f87fcf37326f768b7bb9ee09fe19bc: !Terracota.ControladorBola,Terracota
+                        Id: ea793c59-d48b-4833-ba93-27cb886258d6
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: a1db21db-4ac9-4b53-ae3d-28044ad4ca7e
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 38ad29da-a0db-4ff6-bdf8-fb051c5fc572
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    6e5385600a2427c4a5ee919c28307474: !RigidbodyComponent
+                        Id: 5207ff89-8546-4700-9c78-fee6c31b1cd6
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            3f7bc706fcba336adebf0c4d30880bda: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 4765e5b1-bc9e-4c75-900d-a5e4013708dc
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
         -   Folder: null
             Entity:
                 Id: ab0f09e3-ff0f-4e40-a7d3-7849ebf31c2c
@@ -5619,6 +7670,51 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: cdcac20c-cccc-45a4-bf4b-d063ae74c8f7
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Entity:
+                Id: ad1c9801-9fbf-4691-9e47-fa6105ef5d0d
+                Name: Bola 18
+                Components:
+                    5c92f446875b033fb8819abe64d844cc: !Terracota.ControladorBola,Terracota
+                        Id: c5624b8a-1b1b-4991-9d2f-d68690a02fc8
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 2abe3374-d9ab-48a6-97fe-97de878c2cdf
+                        Position: {X: -0.11, Y: 0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 5c9accbb-28b4-4a8d-93c3-6b5e0292bada
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    7e94a9b7fe903a0c200eea4e3d0608ac: !RigidbodyComponent
+                        Id: b0750ef3-9ec5-4e26-ae96-5ab5b78fc2aa
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            6afd0e436ab581cd19d3998d17cd3488: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 7b56ca4a-0d0f-44d6-9ffe-2d015865e3e1
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
         -   Folder: null
             Entity:
                 Id: ada77d75-1134-47ee-9674-a22770868fd8
@@ -5717,6 +7813,51 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: e9adb3d4-0f80-47e9-9881-ac3f0a540380
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Entity:
+                Id: b0098014-272e-412c-99d9-1033bb9e6cc0
+                Name: Bola
+                Components:
+                    0b80a32559ba00ef3b0e7c07918b9b54: !Terracota.ControladorBola,Terracota
+                        Id: 3db7c2c5-d51f-4f2b-8691-1e3e955d1cff
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 32
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    45f11cee7c77c9296c3e3dc685715f6e: !TransformComponent
+                        Id: bf14ed2d-476d-48f6-845b-a737b024e629
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.3, Y: 0.3, Z: 0.3}
+                        Children: {}
+                    f05b3696c40f743d796fc0bba1f38923: !ModelComponent
+                        Id: e6ebb387-d21f-425c-a8a9-1d099ffb235f
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    c1f56cbccac418b87b6546e758c8f1d1: !RigidbodyComponent
+                        Id: 3e3bf89c-1267-42a2-89f8-bdbe08bbf9e2
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 0.8
+                        RollingFriction: 0.2
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fc245c18783243b7a95c6bfe6de62802: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 142be28e-0cdb-40bf-a432-83a03d89b8b0
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
         -   Folder: null
             Entity:
                 Id: b01c57cc-30e7-4f75-9764-02ca01440ea8
@@ -5847,6 +7988,51 @@ Hierarchy:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
                 BasePartId: 15d3eaa2-60e8-4743-96a0-54a7dca1e5b5
                 InstanceId: 74486002-9462-4274-b832-2a75923b225d
+        -   Entity:
+                Id: b5695562-dde0-4c0c-9a08-8b4537862d9d
+                Name: Bola 19
+                Components:
+                    fe1cb20ae97b02c95a776295e4f55fc7: !Terracota.ControladorBola,Terracota
+                        Id: babd3952-9c66-4da2-b678-d73a3f52fd8b
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 9088b752-ed9e-4afa-afd4-99b18ce47daa
+                        Position: {X: 0.0, Y: 0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: b4d7e00e-19f6-40d2-8c05-923c560391d6
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    995c7e5d0707e2b02f3ff06d64e08509: !RigidbodyComponent
+                        Id: 4221b08d-5af4-4f25-9644-f0e7cdb84912
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            f08d04bb80f1a5f226d1796a365deefb: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 720ad567-9569-4ac9-926b-eff4fff082e4
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
         -   Entity:
                 Id: b5cdb07a-7a29-40b7-a7d0-723b2ca61374
                 Name: "Bambú 0"
@@ -6295,6 +8481,51 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 7dc7de24-e16f-4017-b5ae-dc19ee2e78fb
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Entity:
+                Id: bfc4895a-a237-4d2c-8c7c-26818c815c9a
+                Name: Bola
+                Components:
+                    0b80a32559ba00ef3b0e7c07918b9b54: !Terracota.ControladorBola,Terracota
+                        Id: 85f582f2-e085-408e-a1ef-27f2a0736dcf
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 32
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    45f11cee7c77c9296c3e3dc685715f6e: !TransformComponent
+                        Id: 058f780a-7cb9-47aa-8935-bea9a4563c7f
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.3, Y: 0.3, Z: 0.3}
+                        Children: {}
+                    f05b3696c40f743d796fc0bba1f38923: !ModelComponent
+                        Id: cf0bba94-d82f-445a-bb44-baf87f222b72
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    c1f56cbccac418b87b6546e758c8f1d1: !RigidbodyComponent
+                        Id: d95fa88d-4844-444c-ba27-fa958785e150
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 0.8
+                        RollingFriction: 0.2
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fc245c18783243b7a95c6bfe6de62802: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 142be28e-0cdb-40bf-a432-83a03d89b8b0
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
         -   Folder: null
             Entity:
                 Id: bfc62f87-2241-42bb-b25c-653cfe268998
@@ -6375,6 +8606,51 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: c6aa98f1-ff13-4a61-8b82-a09d1df42d3b
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Entity:
+                Id: c1793177-1b24-4008-bccb-db0d6ef8f3d4
+                Name: Bola 6
+                Components:
+                    c4e549cb8044aeb7aa82e811f038f17d: !Terracota.ControladorBola,Terracota
+                        Id: dc65ff4f-51e0-45e6-8b68-50c2322c63f8
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 644d2070-8298-4def-a845-a748900d9b5f
+                        Position: {X: -0.11, Y: -0.11, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 4270531b-f8d3-409b-b420-57aa7d33078a
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    53750bb8e11858310b58e10351d57ad9: !RigidbodyComponent
+                        Id: ac3f34b2-4035-4c74-8fa7-8fcdcdd75d2f
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            27b6c850302040f216172514ecbf67b2: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 44ab7a4a-aa0a-40ee-9fff-9c866ae78ac9
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
         -   Folder: null
             Entity:
                 Id: c21f4683-419e-45a1-bf43-8e126fb3f09b
@@ -6394,6 +8670,51 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 5fe79215-bcf0-4244-bf5e-415358472e2e
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Entity:
+                Id: c22943a6-6cd2-44c3-9df0-d831910c5649
+                Name: Bola 20
+                Components:
+                    db5d1f791611a7e4d47d7faf2d2f1bb0: !Terracota.ControladorBola,Terracota
+                        Id: 597edfae-5858-47c8-900e-5e849ca0ea3f
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 890eae0b-b085-46ee-9ab2-313c64991de7
+                        Position: {X: 0.11, Y: 0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 71c2fc6d-b250-4c14-8226-574d87c514e0
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    04b0c235630663c97f266c474c2b3b0f: !RigidbodyComponent
+                        Id: 2a00b60f-791d-43fd-a6a9-80ba88d902d9
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            1b89d0fd53d3204372d8b0660920d230: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: d8cafb9d-6269-405c-b1b6-5cfdab81d1ef
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
         -   Entity:
                 Id: c260efb9-8660-47fd-888d-95323d199df5
                 Name: Lanza
@@ -6698,6 +9019,51 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: f487fbba-0281-4b03-9644-693d7e613aa8
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Entity:
+                Id: ca690a3a-bf74-4636-b6a9-312b63328a0c
+                Name: Bola 8
+                Components:
+                    b54cdf5640ffbd0f70a24db40f800b67: !Terracota.ControladorBola,Terracota
+                        Id: 63f4ce25-c180-4ec5-94af-455b702a8578
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 2b60749a-a0ff-4f94-bb40-111db9bfc896
+                        Position: {X: 0.11, Y: -0.11, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 6e420373-1539-4ee9-aa16-7c05f0f4b237
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    d5251afc6f5b651a1a94b4bd2e088c66: !RigidbodyComponent
+                        Id: f85d1aff-00dd-4b9b-b803-d8affb0fbf34
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9fac12e4a535b183d798c8aeb4fbd604: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: afd0a5fd-8445-4076-b84c-85df6cd07724
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
         -   Folder: null
             Entity:
                 Id: ca7b8457-30d6-4b60-836f-d98cfe703dbe
@@ -6811,6 +9177,51 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 6b192722-81f2-42f7-a359-02e35ad6e558
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Entity:
+                Id: cc321165-ebd6-45fe-b135-ac90d8e3da22
+                Name: Bola 1
+                Components:
+                    c5d6587452bb9a37b75b6411cddd74f6: !Terracota.ControladorBola,Terracota
+                        Id: 209763d8-de7b-4b76-8b86-b79ce851b68e
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 31e50f32-ea47-40bf-aba2-a6c7a3611cd3
+                        Position: {X: 0.0, Y: 0.11, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 7ef4c911-fc5b-4a4b-8eb9-95949719da7c
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    e4a5c22b98a6cb0ca96e6f8214ee3a73: !RigidbodyComponent
+                        Id: 47c82fcf-f521-4b4c-b81b-f87ea594b00c
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            2377c83f19e96e00ca9d168645740cd7: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: f50a1fab-f1b2-48dd-9998-f49cb569f522
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
         -   Folder: null
             Entity:
                 Id: cd6687cd-c036-44a4-a097-4da52a69787c
@@ -7196,6 +9607,51 @@ Hierarchy:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
                 BasePartId: c8388db7-cf23-492e-9ed7-7e346a8aee0a
                 InstanceId: 74486002-9462-4274-b832-2a75923b225d
+        -   Entity:
+                Id: dac63932-b3a7-4b3b-be59-6e8a8fc2cea6
+                Name: Bola 2
+                Components:
+                    1f845404d8ec8c265cfe1f591376d78e: !Terracota.ControladorBola,Terracota
+                        Id: d363da4a-8a4d-41d1-82c4-eed7a8b8ff51
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: cc82a86d-42a1-44bf-9713-8b837b4b1630
+                        Position: {X: 0.11, Y: 0.11, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 4862952e-5ece-4332-b6be-6608389e65df
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    7ba6f1ca8713790a9b8162f9da5e3cbd: !RigidbodyComponent
+                        Id: e62b5d97-c388-4079-a0ab-096cfce182a9
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            1ed59ab01cb35a18b5c5bcd2dc96b044: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: a872cc27-6191-499e-ab1b-3e601d633bb3
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
         -   Folder: null
             Entity:
                 Id: dad7c38d-868a-4f77-b250-ffa918ad79ab
@@ -7228,8 +9684,8 @@ Hierarchy:
                         Children:
                             fe850ff2a034e6ac607d6288829530db: ref!! 82761329-e5c1-4373-a0c6-beed326b35c7
                     125a758c8adcd915ce55f12615d90a70: !Terracota.ControladorCa%25C3%25B1%25C3%25B3n,Terracota
-                        Id: f04e216a-826b-4f18-ab64-70509cd5bb8f
-                        fuerzaBala: 180.0
+                        Id: dc284fd7-4d14-4b32-859d-a7b2933b1720
+                        fuerzaBola: 180.0
                         fuerzaMetralla: 19.0
                         sensibilidadX: 0.8
                         sensibilidadY: 0.8
@@ -7240,8 +9696,8 @@ Hierarchy:
                         ruedaDerecha: ref!! c8b137f0-3f1b-4bd7-bdb5-6ff6fcf0a4fe
                         "partículasFuego": ref!! 7c33508e-bae1-4769-a388-64986e3c6dd5
                         "partículasHumo": ref!! c7b540b5-7502-415d-a47d-5e3c20aaff92
-                        bala: 32dc5310-2c33-4019-a4a0-fdf11fafd6c0:Prefabs/Bola
-                        metralla: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                        bola: null
+                        metralla: {}
             Base:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: 5a937d20-d3e9-4e7e-98cb-a6926d62f59b
@@ -7488,6 +9944,51 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 2879154b-597e-446e-80ae-eab69ed9429c
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Entity:
+                Id: e5963bd7-3da6-4763-8bcb-f56f8f56366f
+                Name: Bola 25
+                Components:
+                    d22afe9221764f6f6d85b5f016845288: !Terracota.ControladorBola,Terracota
+                        Id: df961f7a-7dbd-444c-8940-d4cbd39255b8
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: cde706af-55f3-4cc5-b003-7807c5020d37
+                        Position: {X: 0.0, Y: -0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: c982948f-0d0d-409a-82dd-b73213228c33
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    3f7970af7788dc6e6a5dbf67de75e3a3: !RigidbodyComponent
+                        Id: a5411004-8660-4b25-b86d-4439a89e754a
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            ad2bb2e506e61b47d0bad41ad6819697: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: deed4c90-a9c6-4686-af24-36c6937663aa
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
         -   Folder: null
             Entity:
                 Id: e626cd1c-d56b-45c7-9bb7-9efe59e03bf2
@@ -7548,6 +10049,51 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 1ad6bc1a-f166-4a2c-a76c-dc97e34e97c0
                 InstanceId: e441019d-d37d-4562-a3d2-57422c1cb870
+        -   Entity:
+                Id: e6d6f1dc-f51e-4eff-b492-4f0f75f5912f
+                Name: Bola 20
+                Components:
+                    db5d1f791611a7e4d47d7faf2d2f1bb0: !Terracota.ControladorBola,Terracota
+                        Id: 57e0a994-69a4-4906-a53e-1159b30c69fb
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 02908125-6da1-4240-850c-282fa65b7fcf
+                        Position: {X: 0.11, Y: 0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 68a448d7-fcc1-467c-b023-9c7933153ca6
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    04b0c235630663c97f266c474c2b3b0f: !RigidbodyComponent
+                        Id: 197d27b7-b549-4aea-bca8-1eb8861508fb
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            1b89d0fd53d3204372d8b0660920d230: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: d8cafb9d-6269-405c-b1b6-5cfdab81d1ef
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
         -   Folder: null
             Entity:
                 Id: e7836370-d966-4cb2-8939-bd6d799a94b6
@@ -8305,6 +10851,51 @@ Hierarchy:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
                 BasePartId: b181d6af-f519-49f5-b1ef-861190338f57
                 InstanceId: 74486002-9462-4274-b832-2a75923b225d
+        -   Entity:
+                Id: f8e6d655-4751-46ff-9da6-1442b1dc7dfb
+                Name: Bola 21
+                Components:
+                    3a6911a2b96b296df8c8a0a8a52613ae: !Terracota.ControladorBola,Terracota
+                        Id: d027d451-41f2-48bf-bd5d-308ff820b608
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: ac0cc87c-88e3-4bb9-8f97-6f67bf6993ef
+                        Position: {X: -0.11, Y: 0.0, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: e157c7c4-c237-4d18-b93a-7dc933d7cd06
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    cd635cd3147ab9327951c49133bfab34: !RigidbodyComponent
+                        Id: fc38ebe2-6e05-4a16-95c3-53ab8f3d0a33
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            ab6f54433a82ec5c58f1efd99edbdfba: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: 072b5f40-cbb4-4baf-a101-4bec3451e1b5
+                InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
         -   Folder: null
             Entity:
                 Id: faf4e045-e08d-4e12-9997-c2fc99cfb8b1
@@ -8324,6 +10915,51 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 4d3d400f-a92b-45de-adf5-07ea33bfaddc
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Entity:
+                Id: fb2d3012-7047-487d-99c2-5ed296d0d4e4
+                Name: Bola 1
+                Components:
+                    c5d6587452bb9a37b75b6411cddd74f6: !Terracota.ControladorBola,Terracota
+                        Id: d78fd41d-f1e8-4aa6-a618-5cf24f49cd6e
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 2
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: fa5e9337-3f0a-4939-a6ab-642fbee924eb
+                        Position: {X: 0.0, Y: 0.11, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: bc3a264f-a9c6-4c10-ba28-411aff67f3d3
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    e4a5c22b98a6cb0ca96e6f8214ee3a73: !RigidbodyComponent
+                        Id: 6016172d-8767-49f6-93de-3aee63a09680
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            2377c83f19e96e00ca9d168645740cd7: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
+                BasePartId: f50a1fab-f1b2-48dd-9998-f49cb569f522
+                InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
         -   Entity:
                 Id: fbd9bd07-4654-48c0-ad89-88aaab6683f5
                 Name: Entorno

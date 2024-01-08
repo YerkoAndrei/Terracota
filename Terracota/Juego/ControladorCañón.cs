@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Input;
 using Stride.Engine;
-using Stride.Physics;
 using Stride.Particles.Components;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Terracota;
 using static Constantes;
@@ -12,7 +12,9 @@ using static Sistema;
 
 public class ControladorCañón : SyncScript
 {
-    public float fuerzaBala;
+    public TipoJugador tipoJugador;
+
+    public float fuerzaBola;
     public float fuerzaMetralla;
 
     public float sensibilidadX;
@@ -28,8 +30,8 @@ public class ControladorCañón : SyncScript
     public ParticleSystemComponent partículasFuego;
     public ParticleSystemComponent partículasHumo;
 
-    public Prefab bala;
-    public Prefab metralla;
+    private ControladorBola bola;
+    private List<ControladorBola> metralla;
 
     private bool activo;
     private InterfazJuego interfaz;
@@ -44,10 +46,20 @@ public class ControladorCañón : SyncScript
 
     public void Iniciar(InterfazJuego _controladorInterfaz)
     {
-        fuerzaBala *= 1000;
+        fuerzaBola *= 1000;
         fuerzaMetralla *= 1000;
 
         interfaz = _controladorInterfaz;
+
+        // Encuentra proyectiles en raíz escena
+        bola = Entity.Scene.Entities.Where(o => o.Get<ControladorBola>() != null && o.Get<ControladorBola>().tipoProyectil == TipoProyectil.bola && o.Get<ControladorBola>().tipoJugador == tipoJugador).FirstOrDefault().Get<ControladorBola>();
+
+        metralla = new List<ControladorBola>();
+        var metrallaEncontrada = Entity.Scene.Entities.Where(o => o.Get<ControladorBola>() != null && o.Get<ControladorBola>().tipoProyectil == TipoProyectil.metralla && o.Get<ControladorBola>().tipoJugador == tipoJugador).ToArray();
+        foreach(var m in metrallaEncontrada)
+        {
+            metralla.Add(m.Get<ControladorBola>());
+        }
     }
 
     public override void Update()
@@ -96,43 +108,26 @@ public class ControladorCañón : SyncScript
     }
 
     public void Disparar(TipoProyectil tipoProyectil, float multiplicador)
-    {        
+    {
         switch (tipoProyectil)
         {
             case TipoProyectil.bola:
-                var nuevaBala = bala.Instantiate()[0];
-                nuevaBala.Transform.Position = origenProyectil.Transform.WorldMatrix.TranslationVector;
-                nuevaBala.Transform.RotationEulerXYZ = EulerAleatorio();
-
-                var cuerpo = nuevaBala.Get<RigidbodyComponent>();
-                nuevaBala.Get<ControladorBola>().Inicialización(TipoProyectil.bola);
-                Entity.Scene.Entities.Add(nuevaBala);
-
                 // Impulso
-                var aleatoriedadBala = RangoAleatorio(-0.5f, 0.5f);
-                cuerpo.Mass += aleatoriedadBala;
-                cuerpo.ApplyForce(origenProyectil.Transform.WorldMatrix.Up * ((fuerzaBala * multiplicador) + aleatoriedadBala));
+                var aleatoriedadBola = RangoAleatorio(-0.5f, 0.5f);
+                var fuerza = origenProyectil.Transform.WorldMatrix.Up * ((fuerzaBola * multiplicador) + aleatoriedadBola);
+
+                bola.Disparar(origenProyectil.Transform.WorldMatrix.TranslationVector, EulerAleatorio(), aleatoriedadBola, fuerza);
                 break;
             case TipoProyectil.metralla:
-                var nuevaMetralla = metralla.Instantiate();
-                for(int i=0; i < nuevaMetralla.Count; i++)
+                for (int i = 0; i < metralla.Count; i++)
                 {
-                    nuevaMetralla[i].Transform.Position += origenProyectil.Transform.WorldMatrix.TranslationVector;
-                    nuevaMetralla[i].Transform.RotationEulerXYZ = EulerAleatorio();
-
-                    var cuerpoMetralla = nuevaMetralla[i].Get<RigidbodyComponent>();
-                    var controladorBola = nuevaMetralla[i].Get<ControladorBola>();
-                    controladorBola.Inicialización(TipoProyectil.metralla);
-                    Entity.Scene.Entities.Add(nuevaMetralla[i]);
-
                     // Impulso
                     var aleatoriedadMetralla = RangoAleatorio(-1f, 0.5f);
                     var posiciónAleatoria = RangoAleatorio(-0.02f, 0.02f);
-                    cuerpoMetralla.Mass += aleatoriedadMetralla;
-                    cuerpoMetralla.ApplyForce((origenProyectil.Transform.WorldMatrix.Up + posiciónAleatoria) * ((fuerzaMetralla * multiplicador) + aleatoriedadMetralla));
+                    var fuerzaIndividual = (origenProyectil.Transform.WorldMatrix.Up + posiciónAleatoria) * ((fuerzaMetralla * multiplicador) + aleatoriedadMetralla);
+                    var posición = metralla[0].Entity.Transform.Position += origenProyectil.Transform.WorldMatrix.TranslationVector;
 
-                    // Destruye metralla en orden para no saturar escena
-                    _ = DestruirMetralla(controladorBola, i);
+                    metralla[0].Disparar(posición, EulerAleatorio(), aleatoriedadMetralla, fuerzaIndividual);
                 }
                 break;
         }
@@ -192,12 +187,6 @@ public class ControladorCañón : SyncScript
             deltaYRotado = 0;
             SistemaSonido.SonarCañónVertical(!interfaz.ObtenerActivo());
         }
-    }
-
-    private async Task DestruirMetralla(ControladorBola controladorBola, int tiempo)
-    {
-        await Task.Delay(duraciónTurnoLocal + (tiempo * 10));
-        controladorBola.DestruirInmediato();
     }
 
     // Red

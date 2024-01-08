@@ -11,7 +11,6 @@ using Newtonsoft.Json;
 
 namespace Terracota;
 using static Constantes;
-using static Terracota.Constantes;
 
 public class SistemaRed : AsyncScript
 {

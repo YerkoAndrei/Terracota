@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Physics;
@@ -10,51 +9,72 @@ using static Constantes;
 
 public class ControladorBola : AsyncScript
 {
+    public TipoProyectil tipoProyectil;
+    public TipoJugador tipoJugador;
     public int maxColisiones;
     public Prefab prefabPartículas;
 
-    private TipoProyectil tipoProyectil;
     private RigidbodyComponent cuerpo;
-    private Scene escena;
+    private Vector3 escalaInicial;
+    private float masaInicial;
+    private bool activo;
     private bool destruyendo;
-    private bool removerDeEscena;
     private int colisiones;
 
-    public void Inicialización(TipoProyectil _tipoProyectil)
+    public void Disparar(Vector3 posición, Vector3 rotación, float aleatorio, Vector3 fuerza)
     {
-        tipoProyectil = _tipoProyectil;
-        removerDeEscena = (tipoProyectil != TipoProyectil.metralla);
+        activo = true;
+        destruyendo = false;
+
+        Entity.Transform.Position = posición;
+        Entity.Transform.RotationEulerXYZ = rotación;
+        Entity.Transform.Scale = escalaInicial;
+
+        cuerpo.Enabled = true;
+        cuerpo.IsKinematic = false;
+
+        cuerpo.Mass = masaInicial + aleatorio;
+        cuerpo.ApplyForce(fuerza);
+
+        // Tiempo de vida
+        _ = ContarVida();
     }
 
     public override async Task Execute()
     {
-        escena = Entity.Scene;
-        cuerpo = Entity.Get<RigidbodyComponent>();
+        activo = false;
 
-        // Tiempo de vida
-        if (removerDeEscena)
-            _ = ContarVida();
+        cuerpo = Entity.Get<RigidbodyComponent>();
+        cuerpo.IsKinematic = true;
+        cuerpo.Enabled = false;
+
+        escalaInicial = Entity.Transform.Scale;
+        masaInicial = cuerpo.Mass;
+
+        Entity.Transform.Scale = Vector3.Zero;
 
         while (Game.IsRunning)
         {
-            var colisión = await cuerpo.NewCollision();
-
-            // Metralla con metralla no cuenta como colisión
-            if ((colisión.ColliderA == cuerpo && colisión.ColliderB.Entity.Get<ControladorBola>() == null) ||
-               (colisión.ColliderB == cuerpo && colisión.ColliderA.Entity.Get<ControladorBola>() == null))
+            if (activo)
             {
-                colisiones++;
-                MostrarEfectos();
+                var colisión = await cuerpo.NewCollision();
 
-                // Solo suena cuando está sola
-                if (colisión.ColliderA.Entity.Get<ElementoSonido>() == null && colisión.ColliderB.Entity.Get<ElementoSonido>() == null)
-                    SistemaSonido.SonarBola(ObtenerMayorFuerzaLinearNormalizada());
+                // Metralla con metralla no cuenta como colisión
+                if ((colisión.ColliderA == cuerpo && colisión.ColliderB.Entity.Get<ControladorBola>() == null) ||
+                   (colisión.ColliderB == cuerpo && colisión.ColliderA.Entity.Get<ControladorBola>() == null))
+                {
+                    colisiones++;
+                    MostrarEfectos();
+
+                    // Solo suena cuando está sola
+                    if (colisión.ColliderA.Entity.Get<ElementoSonido>() == null && colisión.ColliderB.Entity.Get<ElementoSonido>() == null)
+                        SistemaSonido.SonarBola(ObtenerMayorFuerzaLinearNormalizada());
+                }
+
+                // Evita colisiones innesesarias
+                if (colisiones >= maxColisiones)
+                    await Destruir();
             }
-            
-            // Evita colisiones innesesarias
-            if (colisiones >= maxColisiones)
-                await Destruir();
-
             await Script.NextFrame();
         }
     }
@@ -62,7 +82,7 @@ public class ControladorBola : AsyncScript
     private void MostrarEfectos()
     {
         var partícula = prefabPartículas.Instantiate()[0];
-        switch(tipoProyectil)
+        switch (tipoProyectil)
         {
             case TipoProyectil.bola:
                 partícula.Transform.Scale *= 1.1f;
@@ -73,17 +93,17 @@ public class ControladorBola : AsyncScript
         }
 
         partícula.Transform.Position = Entity.Transform.Position;
-        escena.Entities.Add(partícula);
+        Entity.Scene.Entities.Add(partícula);
 
-        // Posterior borrado y descarga
+        // Posterior destrucción
         _ = ContarVidaPartícula(partícula);
     }
 
-    private async Task ContarVidaPartícula(Entity entidad)
+    private async Task ContarVidaPartícula(Entity partícula)
     {
         // Duración partícula
         await Task.Delay(1000);
-        escena.Entities.Remove(entidad);
+        Entity.Scene.Entities.Remove(partícula);
     }
 
     private async Task ContarVida()
@@ -97,7 +117,7 @@ public class ControladorBola : AsyncScript
         if (destruyendo) return;
         destruyendo = true;
 
-        float duraciónLerp = 1;
+        float duraciónLerp = 0.7f;
         float tiempoLerp = 0;
         float tiempo = 0;
 
@@ -108,15 +128,16 @@ public class ControladorBola : AsyncScript
 
             Entity.Transform.Scale = Vector3.Lerp(inicial, Vector3.Zero, tiempo);
             tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            await Script.NextFrame();
+            await Task.Delay(1);
         }
 
         // Fin
-        cuerpo.Enabled = false;
+        Entity.Transform.Scale = Vector3.One;
+        activo = false;
 
-        // Removiendo entidad
-        if (removerDeEscena)
-            escena.Entities.Remove(Entity);
+        // Guardando entidad
+        cuerpo.IsKinematic = true;
+        cuerpo.Enabled = false;
     }
 
     public float ObtenerMayorFuerzaLinearNormalizada()
@@ -133,11 +154,5 @@ public class ControladorBola : AsyncScript
             case TipoProyectil.metralla:
                 return ObtenerMayorValor(velocidad) * 0.6f;
         }
-    }
-
-    // Metralla es destruida en orden por ControladorCañón
-    public void DestruirInmediato()
-    {
-        escena.Entities.Remove(Entity);
     }
 }
