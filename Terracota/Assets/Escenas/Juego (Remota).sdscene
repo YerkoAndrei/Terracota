@@ -16,7 +16,110 @@ Hierarchy:
         - ref!! fbd9bd07-4654-48c0-ad89-88aaab6683f5
         - ref!! 881f119e-614c-4820-9d7e-608410e7abc5
         - ref!! e85846cb-add0-466f-a136-d5177ac862dd
+        - ref!! f180aeef-55de-44ff-b72d-a8a0f745044d
+        - ref!! 6d6dde7b-f03d-4f0e-ba3b-aaa54c03cf96
+        - ref!! 8b9c2cdd-ca55-45ac-8a1e-5c1d8963c558
+        - ref!! b8dede01-e6a8-4381-a779-62030a1a38d9
+        - ref!! 0e9c5ade-9ed1-4f0d-b54d-83332d7cbdba
+        - ref!! 96d0a707-dc29-4c97-9ef8-cad0104de4e8
+        - ref!! 230f33ab-2b4d-444a-9b0c-055d15a0f0df
+        - ref!! 348c0d0f-2130-465a-ac7d-b796fbc37ab5
+        - ref!! d4d00902-eec6-4e73-9468-535c3ef1f511
+        - ref!! d4dd4223-711a-41af-b834-42e5409dad79
+        - ref!! d4a1cc98-0f4b-4f0b-8b48-f4ab03b097bc
+        - ref!! 30713e94-2a07-469a-9d89-b6522dd3c472
+        - ref!! 394a4343-a42b-4ab0-8571-9c6fcd8fa762
+        - ref!! 1dcfd711-5194-414d-af81-d0d76a06aaa9
+        - ref!! a8be7eeb-9e5d-4447-ac23-e90a4f8f98d1
+        - ref!! bd16279c-8fdb-42cb-9f67-495cb510ccd7
+        - ref!! 755f8c5a-3c97-42c8-ad91-615b450425f5
+        - ref!! d9998644-6f4c-475c-9ac7-6274834998c9
+        - ref!! ed888303-e1b0-4290-9c87-98795ec81bed
+        - ref!! 15e96f22-1c5e-4fd0-acc4-882c17337d9d
+        - ref!! 65a6233e-f0db-4618-a6d4-cb8bf2e43339
+        - ref!! 72528b57-3995-41d6-9094-b59f2ecbeb41
+        - ref!! 090b098a-a64e-4794-bc11-6022d948071a
+        - ref!! 45707809-28b0-46f8-b9ef-b65e1568d348
+        - ref!! 71d79662-996b-4aa7-999b-681992c31835
+        - ref!! 67ccebd5-9b40-4cd8-89cb-789cb3be5aa5
+        - ref!! 48f6f554-a720-48dc-96c8-e66d4a1a0054
+        - ref!! 19a63de3-fb7e-48e9-a9c9-0734bb5494e2
+        - ref!! f4a2bb91-371c-4294-9c62-a43e4be0d0e8
+        - ref!! 4671aef3-538e-4a24-a534-2e103b8f0fc9
+        - ref!! 8a98d130-0fb5-4f2e-b0cb-ce9453fdd514
+        - ref!! b7523b38-6c33-44e8-8df2-293b09e4be7c
+        - ref!! f48dc15f-5a88-4f7a-8bf0-ee2a1afba127
+        - ref!! 0808f5f0-de04-4152-b884-ab89c3306e95
+        - ref!! 509defba-f470-4ae8-ad5a-64e2981b5a67
+        - ref!! 7ca6ee99-3597-4e9e-81db-f32c367e8aff
+        - ref!! 62463e38-3eec-49c8-991e-61a485ebeba1
+        - ref!! 5ff68125-256a-41f4-8d1f-2a4345356bfe
+        - ref!! 0574548f-b402-4e77-9eee-346e8d52dc5b
+        - ref!! 0f5fd1a7-46c4-460c-b6d4-2266d3e172fc
+        - ref!! 9bb799a3-9832-44fa-abc8-2c9732383147
+        - ref!! 13f9221e-1f9a-417b-ba7e-a93876ae515c
+        - ref!! a976d96e-1693-4be6-9b8a-f183d9c543bd
+        - ref!! ebfa1802-eead-4c63-bad0-a2fa364f69c7
+        - ref!! a70d4525-53d6-4938-8724-dcaa349b943f
+        - ref!! 49d0811b-6838-43e2-8c03-880858cb4d3d
+        - ref!! 882b3cd0-c4a9-456b-ad05-34751c34d457
+        - ref!! fdd182c5-3d8e-4c10-b5b9-b7f15aa7d421
+        - ref!! 5798931d-624d-4b4d-a694-b546471f2b02
+        - ref!! aea2fe6f-3d32-49ef-8b7a-b2bb627cc7c1
+        - ref!! d5825b70-ccc8-4bc3-bc43-2d66bb73982b
+        - ref!! 95c366ba-9088-470b-a3a4-c017d5907ae2
+        - ref!! 78f3287e-922c-47ad-b70b-63e8aca9f658
+        - ref!! 01df3583-300d-4583-861d-a446b1c44cbb
+        - ref!! cd07f6a6-9eae-45bd-852c-10d295cdfb4d
+        - ref!! 18ca3eeb-ea33-4b39-91bf-4608666f8fda
     Parts:
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: 01df3583-300d-4583-861d-a446b1c44cbb
+                Name: Bola 24
+                Components:
+                    d1ef393171ea825f9a8e69771815562a: !Terracota.ControladorBola,Terracota
+                        Id: 5630bcc4-cb2a-48f3-a59d-51256d52852b
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 0833df4b-181f-45a2-8778-8bd1d336bc84
+                        Position: {X: -0.11, Y: -0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: b11fb3f3-7398-4294-be33-ca5b2bb4a7bf
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    1aadcb6e0ea80409eb47f476ee00887b: !RigidbodyComponent
+                        Id: a9168ea6-ef3e-459c-adde-295de117183e
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            c2fd4bb93ef7c5f3485681132a75c862: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 27aabf80-265b-4cc6-a3cf-38423a79309a
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
         -   Folder: null
             Entity:
                 Id: 01e58ccc-06c7-44fe-ab0f-302b82ec1db5
@@ -290,6 +393,53 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 0c738010-05ee-444e-a9b4-61ac344a851e
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: 0574548f-b402-4e77-9eee-346e8d52dc5b
+                Name: Bola 9
+                Components:
+                    86ae864f6ebe70f552b5e1a02c6b05bf: !Terracota.ControladorBola,Terracota
+                        Id: ae789abc-bab6-4a0f-8f51-33671d8f32aa
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: dd3c6980-eb83-4bb8-a3ea-2681092a197d
+                        Position: {X: -0.11, Y: 0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 43c10e9a-089c-40d2-a8d6-187dc1fd7268
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    4e3693cbe13a59c3693af4e320e4c334: !RigidbodyComponent
+                        Id: dc9835c7-e03e-4f85-a66c-f988cf27a618
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            1a748e3ac1a822566b360951f0c21b61: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 7084e51c-9f28-44ca-9192-f113c0d1a1b6
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
         -   Entity:
                 Id: 05cf9db6-369a-4ac2-9f81-525ab77419bb
                 Name: Origen
@@ -579,6 +729,53 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: 7831f210-02be-48ff-9fe4-2738fd4e697f
                 InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: 0808f5f0-de04-4152-b884-ab89c3306e95
+                Name: Bola 4
+                Components:
+                    2e061cbbd6aacf70bf8d7ca4ed959396: !Terracota.ControladorBola,Terracota
+                        Id: a9f2aa40-bbea-43ff-9aa6-621e3c043194
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 8ca64257-107b-40f8-a23e-8f0fb846eb2f
+                        Position: {X: 0.0, Y: 0.0, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 84642b9a-b6c3-492a-99fb-33689809e8bd
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    a1637319c29a8d884daa2b2822856748: !RigidbodyComponent
+                        Id: a46db25e-65f0-4887-8bb7-b57ab29267ad
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            b72ee723dc545feb04a85ec5cf1117f3: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 810288bd-4dfa-4f0c-a75c-f0eb0720ade7
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
         -   Folder: null
             Entity:
                 Id: 086206a9-2847-4a76-8e89-4460db3afa89
@@ -639,6 +836,53 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 74fb447b-350f-4d49-bca6-2727fabc9d9f
                 InstanceId: e441019d-d37d-4562-a3d2-57422c1cb870
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: 090b098a-a64e-4794-bc11-6022d948071a
+                Name: Bola 21
+                Components:
+                    3a6911a2b96b296df8c8a0a8a52613ae: !Terracota.ControladorBola,Terracota
+                        Id: 1214c393-1326-4bc7-b040-a8cca9bc040d
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: a7897aab-bf8c-42ae-8e16-ac19832b1f88
+                        Position: {X: -0.11, Y: 0.0, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 385a4876-403b-42b4-8c33-f8c66f8ef013
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    cd635cd3147ab9327951c49133bfab34: !RigidbodyComponent
+                        Id: 40765fe4-4918-4668-8cc5-c8c0cc1f2825
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            ab6f54433a82ec5c58f1efd99edbdfba: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: ba6104f0-90d6-462d-8354-93d0776920a3
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
         -   Entity:
                 Id: 0917ec05-0c3b-4b24-97c1-8ffab95b5186
                 Name: Polvo
@@ -1048,6 +1292,53 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 143b1618-49ed-4896-868a-84c35c03a54e
                 InstanceId: e441019d-d37d-4562-a3d2-57422c1cb870
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: 0e9c5ade-9ed1-4f0d-b54d-83332d7cbdba
+                Name: Bola 3
+                Components:
+                    049d0ab964a6389fbd0e7f4f3480c3e4: !Terracota.ControladorBola,Terracota
+                        Id: fbc9283e-47e8-4948-9110-c8ddb26771ca
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 7f99d4b4-9dec-4ea1-a92d-37a5e60f70cc
+                        Position: {X: -0.11, Y: 0.0, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 9b2c43e1-a780-4198-ab0f-8187ef9d3f54
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    d5c98a43ed644c0147459ecc64ee8fc3: !RigidbodyComponent
+                        Id: 340c1e50-bb0c-4e8a-9c0d-645aac836048
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            179bfef96c019dd55919d6ab733f04fb: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 9a38fb44-eb64-4ed9-9800-db4b0586675a
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
         -   Folder: null
             Entity:
                 Id: 0eb974ba-7286-406d-b2b2-c7633771cf61
@@ -1132,6 +1423,53 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 8040b2a6-bc39-46a5-a946-e4cd5fdb35e3
                 InstanceId: e80b070a-a3c4-45d2-8772-15130324c604
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: 0f5fd1a7-46c4-460c-b6d4-2266d3e172fc
+                Name: Bola 10
+                Components:
+                    a3d592f30f8494ff8b708e625447bf4c: !Terracota.ControladorBola,Terracota
+                        Id: bd399adb-e05c-42b0-8142-6ad5b6be734c
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 8fd9df5f-8e10-47e4-982f-87824686e045
+                        Position: {X: 0.0, Y: 0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: c6ca1329-1a2b-43fd-89e8-a34b70b4c2da
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    30e3ae85ef0e2a0566f2ea75d35c0afb: !RigidbodyComponent
+                        Id: 39069dd0-8215-477d-9997-30d350e3ed4c
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            07370cde40c300624b2240d1945a0d38: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 7beb5c6e-3b56-48a3-bb84-e3f0ae7d25a8
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
         -   Entity:
                 Id: 0fb78c25-ed30-4612-96ce-79a17033bda5
                 Name: Modelo Cabeza
@@ -1368,6 +1706,53 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 2fb859c9-4748-485f-a769-711e5e9ac687
                 InstanceId: e80b070a-a3c4-45d2-8772-15130324c604
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: 13f9221e-1f9a-417b-ba7e-a93876ae515c
+                Name: Bola 12
+                Components:
+                    dd15e53c9b449e76d79cb2489be6a21d: !Terracota.ControladorBola,Terracota
+                        Id: c0e3ca4d-3ac3-46e6-9f2b-f8540f382399
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 4b5ec67e-c61c-4807-af6a-5ecc77b7d316
+                        Position: {X: -0.11, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: f8c0a006-f1cc-41bf-afb9-f7ba5580d69a
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    b58a68dcf585b0b8b7fd9a7d941c3e93: !RigidbodyComponent
+                        Id: ae1a7551-d659-4769-b17b-a9f5c1681591
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            406a850509e7f0c245ab57b400b130a4: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 8428f241-86a1-4293-9916-b68380f0b4f7
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
         -   Folder: null
             Entity:
                 Id: 1421442c-8113-4a5d-85ea-c5cd24fe96f1
@@ -1488,6 +1873,53 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: ecdf8d0e-e9bf-426a-8cbe-1ad0bb383d29
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: 15e96f22-1c5e-4fd0-acc4-882c17337d9d
+                Name: Bola 18
+                Components:
+                    5c92f446875b033fb8819abe64d844cc: !Terracota.ControladorBola,Terracota
+                        Id: 5c82364d-dedd-427b-8005-1545f1e4b2e1
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 04654f45-cc6a-4a97-918c-9dbf4e45f01e
+                        Position: {X: -0.11, Y: 0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 2c397805-2c5e-4dfe-a05f-33d95b9df5af
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    7e94a9b7fe903a0c200eea4e3d0608ac: !RigidbodyComponent
+                        Id: 6c407996-0519-47aa-a2d9-d382eb2e1bdf
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            6afd0e436ab581cd19d3998d17cd3488: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 0dceba87-214d-4562-93d7-de53e24b5fe0
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
         -   Entity:
                 Id: 15f93c06-5bae-4aec-ba28-7ded23e7c602
                 Name: "Bambú 0"
@@ -1535,6 +1967,100 @@ Hierarchy:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
                 BasePartId: 2bb12672-64e7-4c41-bb2c-23f9e7330029
                 InstanceId: e7db122c-a7aa-4772-8ac2-37eae1155189
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: 18ca3eeb-ea33-4b39-91bf-4608666f8fda
+                Name: Bola 26
+                Components:
+                    abc05ee1c03b1a2ad85b1473ff5df1dd: !Terracota.ControladorBola,Terracota
+                        Id: 05cb3d13-c906-49e1-8fb6-2c68011d0d2b
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 2c23b2bd-6bff-4a07-b074-959a98f04598
+                        Position: {X: 0.11, Y: -0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: abf68820-2a9e-4794-a104-3f242ac99c5c
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    700d06d4f156f454cf23b40c053fa9f5: !RigidbodyComponent
+                        Id: 53e98e24-9065-4e54-901a-32b5bc64e042
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            b55d4c3eb93f1a643325d994c18ffc9b: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 559330a7-748b-48e6-ae4c-37553a5025b1
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: 19a63de3-fb7e-48e9-a9c9-0734bb5494e2
+                Name: Bola 26
+                Components:
+                    abc05ee1c03b1a2ad85b1473ff5df1dd: !Terracota.ControladorBola,Terracota
+                        Id: 5f7b52aa-1b85-4ee9-89fa-00f2ba4cf3ad
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 5b6d2068-adb3-4469-a056-c2115991b87b
+                        Position: {X: 0.11, Y: -0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 8da84b93-07b9-4fe9-9b19-fdd88edc7a80
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    700d06d4f156f454cf23b40c053fa9f5: !RigidbodyComponent
+                        Id: 159ca74f-59b8-48d9-a7f5-cba2d4093d6b
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            b55d4c3eb93f1a643325d994c18ffc9b: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 559330a7-748b-48e6-ae4c-37553a5025b1
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
         -   Folder: null
             Entity:
                 Id: 1a6e33e8-4e33-4f2d-933f-7e4e9d53aa1d
@@ -1678,6 +2204,53 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 47696b62-7d0f-4aa5-b808-e862806872d9
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: 1dcfd711-5194-414d-af81-d0d76a06aaa9
+                Name: Bola 12
+                Components:
+                    dd15e53c9b449e76d79cb2489be6a21d: !Terracota.ControladorBola,Terracota
+                        Id: d08dcb8f-a436-41f5-8f08-d0ee0d7698a5
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: f77704d8-114c-45ae-838d-685cdf76abe2
+                        Position: {X: -0.11, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 11ad0692-c985-4c4d-aa38-7703b4a57aa7
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    b58a68dcf585b0b8b7fd9a7d941c3e93: !RigidbodyComponent
+                        Id: 3865808c-f80e-430a-a9a3-918867bba6f6
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            406a850509e7f0c245ab57b400b130a4: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 8428f241-86a1-4293-9916-b68380f0b4f7
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
         -   Folder: null
             Entity:
                 Id: 1ddaff34-a43d-485b-b4d7-ced0e19ab0ce
@@ -1904,6 +2477,53 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: af1abac3-e06a-4cf4-95b9-8622cb991366
                 InstanceId: e441019d-d37d-4562-a3d2-57422c1cb870
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: 230f33ab-2b4d-444a-9b0c-055d15a0f0df
+                Name: Bola 5
+                Components:
+                    782ed5b40434b4a07f0839ae718dedbc: !Terracota.ControladorBola,Terracota
+                        Id: 5b00a13f-e631-4e14-9264-eaf37343c346
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 592bb277-26d9-4f06-9893-539d686ccc1a
+                        Position: {X: 0.11, Y: 0.0, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 6f6485f8-4b7c-434e-9ccb-651c2e0d1847
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    5c945a4b622ce02792f7526f38056797: !RigidbodyComponent
+                        Id: 13e75404-ed53-4a22-a31a-b8be626f5980
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            c083dbfa606773dc799a09a39b454781: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: ed16f15f-057f-437d-ace3-8dcfd0a38840
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
         -   Entity:
                 Id: 23add7c2-169b-4a29-a6d3-7da1c9c117c6
                 Name: Modelo Lanza
@@ -2435,6 +3055,53 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: eef3e37b-e72c-4b99-8919-19db3f0862d0
                 InstanceId: e80b070a-a3c4-45d2-8772-15130324c604
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: 30713e94-2a07-469a-9d89-b6522dd3c472
+                Name: Bola 10
+                Components:
+                    a3d592f30f8494ff8b708e625447bf4c: !Terracota.ControladorBola,Terracota
+                        Id: 87381713-c9a5-4f7b-922a-0bd54eb28ee5
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: d7f1e9ed-7132-4534-9b1a-9347245d6a1f
+                        Position: {X: 0.0, Y: 0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: b2085845-eb3b-4b0b-b4a2-2421113d514c
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    30e3ae85ef0e2a0566f2ea75d35c0afb: !RigidbodyComponent
+                        Id: 5cc0088a-2123-4edf-9c57-223573ac7644
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            07370cde40c300624b2240d1945a0d38: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 7beb5c6e-3b56-48a3-bb84-e3f0ae7d25a8
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
         -   Folder: null
             Entity:
                 Id: 30d2b6bb-eb15-47b1-b78b-f88ee573de72
@@ -2629,6 +3296,53 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 838a3b43-cc02-44ad-aa10-902ba86b76d0
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: 348c0d0f-2130-465a-ac7d-b796fbc37ab5
+                Name: Bola 6
+                Components:
+                    c4e549cb8044aeb7aa82e811f038f17d: !Terracota.ControladorBola,Terracota
+                        Id: 86476c9c-ea64-40c2-b251-f743c68db40e
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 633120e4-2845-458a-86e2-e439269b582a
+                        Position: {X: -0.11, Y: -0.11, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 0216541f-b3bf-4dbc-89d3-22072a251275
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    53750bb8e11858310b58e10351d57ad9: !RigidbodyComponent
+                        Id: e371016c-107d-4681-98d4-867e64496951
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            27b6c850302040f216172514ecbf67b2: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: f316b750-1721-44b8-9f7a-c3ab662e9db1
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
         -   Folder: null
             Entity:
                 Id: 3548d8c2-e306-4d1e-880b-9744518e2eb6
@@ -2920,6 +3634,53 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 293194a9-80b5-450f-832e-1c6da4087d03
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: 394a4343-a42b-4ab0-8571-9c6fcd8fa762
+                Name: Bola 11
+                Components:
+                    52baebb8dc86bf262ad46c44842cc301: !Terracota.ControladorBola,Terracota
+                        Id: e7a453c8-4e67-41cb-b19b-aa9a4d635a96
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 9e09ab0a-8aef-4ccb-818f-2aea7b51d7ed
+                        Position: {X: 0.11, Y: 0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 10c69bb3-a94e-4edb-8bf8-4dda9ab75226
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    4f8e85a7b06d88d5fdf38ad6cfc84107: !RigidbodyComponent
+                        Id: a5cdda73-93a5-469e-9ecc-28adee499c8a
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9fcc4caa8cef5e90b0e7cbda94c6b076: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 1e4b5581-b491-43b9-8985-c1f599141089
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
         -   Folder: null
             Entity:
                 Id: 395de483-5ea2-4c87-aef9-9b450b5a2b0e
@@ -3484,6 +4245,53 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 044f8038-e253-4800-b94a-d7381c30fa95
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: 45707809-28b0-46f8-b9ef-b65e1568d348
+                Name: Bola 22
+                Components:
+                    43b90d946c2284960785657bcefcdcbb: !Terracota.ControladorBola,Terracota
+                        Id: 0e46d597-0531-44c9-8232-188b5ab1eeef
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 1a43b6bb-40a3-4cb9-832a-cf89ef2183c5
+                        Position: {X: 0.0, Y: 0.0, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 10a55e28-03a9-4ab2-976c-57d8f5acc7ee
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    b8881723367197eb845b2243f7c619a1: !RigidbodyComponent
+                        Id: a1cc2dd8-5d8c-4577-a632-9cd3f31a9846
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            d0975cb3a7578f5072d0e7c327fe154c: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: b5adb895-5cee-4ea0-84f1-b40393f0aaca
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
         -   Entity:
                 Id: 46281b51-71ab-4ccc-a664-bf6a6f07e1ba
                 Name: Bandera
@@ -3503,6 +4311,53 @@ Hierarchy:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
                 BasePartId: 22db057c-7ba0-46d7-a9e7-c40256c2dae3
                 InstanceId: 74486002-9462-4274-b832-2a75923b225d
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: 4671aef3-538e-4a24-a534-2e103b8f0fc9
+                Name: Bola 0
+                Components:
+                    35cc06cc97aa692bf8b8cbbdb426f5a5: !Terracota.ControladorBola,Terracota
+                        Id: 032c8619-79c3-4db7-b163-298ad80d3129
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 332646d9-dc17-4e63-b4d5-d36298d06c3f
+                        Position: {X: -0.11, Y: 0.11, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: b152a77c-6faa-4437-b3fd-cdb51fa86816
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    114b90db974cabdf571a34bde6aba6b8: !RigidbodyComponent
+                        Id: f1d8961f-43bd-4e90-9cdf-c215650aa23a
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            88fc81dbeb4e77279fd45c895c8babd5: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 88aa0e63-7949-4475-a5ab-7074456ed6b4
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
         -   Entity:
                 Id: 469b846d-772f-4e84-b714-54e3f5f4f87d
                 Name: Modelo Cabeza
@@ -3651,6 +4506,100 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: 08868581-5001-468d-8f30-83fb352761d3
                 InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: 48f6f554-a720-48dc-96c8-e66d4a1a0054
+                Name: Bola 25
+                Components:
+                    d22afe9221764f6f6d85b5f016845288: !Terracota.ControladorBola,Terracota
+                        Id: 1a85bb46-a51d-4e8f-b184-14bc9dbc7914
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 679f6df0-38b7-4a11-81c8-5846f68de2b2
+                        Position: {X: 0.0, Y: -0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 707987f8-3148-485c-a2e0-3a7bdee41089
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    3f7970af7788dc6e6a5dbf67de75e3a3: !RigidbodyComponent
+                        Id: f81ba72d-a383-4c92-b285-ff454e2d0cf5
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            ad2bb2e506e61b47d0bad41ad6819697: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: c9d234d0-9e69-4abe-9ba4-bce1d7e04d06
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: 49d0811b-6838-43e2-8c03-880858cb4d3d
+                Name: Bola 16
+                Components:
+                    f4a7ccc0ae1034ddce4d2667b6bf3369: !Terracota.ControladorBola,Terracota
+                        Id: 2683e47c-9329-4f67-af8f-bd895ceb306e
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 791b7348-6641-4831-ab13-984b26ce7511
+                        Position: {X: 0.0, Y: -0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: fb21e9a8-fd68-40bb-b3df-cfcef7c29c19
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    116efe57a035d60db4313ad54a3f8a2d: !RigidbodyComponent
+                        Id: f23b9452-9fb5-4550-9b07-ecbbd1d2c164
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            5da18a26a56c55e2b189f2a21111c7b9: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 76e1192f-a9d0-4fc1-9bc7-a911456d7eb7
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
         -   Folder: null
             Entity:
                 Id: 4a8a1bee-b4c1-42ea-9b7c-b4e6e981953a
@@ -4168,6 +5117,53 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: 0a279704-5ace-489c-97d7-b82c16899a5b
                 InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: 509defba-f470-4ae8-ad5a-64e2981b5a67
+                Name: Bola 5
+                Components:
+                    782ed5b40434b4a07f0839ae718dedbc: !Terracota.ControladorBola,Terracota
+                        Id: 00a40852-7425-4d09-b302-8908f982f9f0
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: fe5ec75c-d7c8-41f0-aae3-5b7946c43665
+                        Position: {X: 0.11, Y: 0.0, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: d9cc33e9-533d-4755-8a96-31048998a996
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    5c945a4b622ce02792f7526f38056797: !RigidbodyComponent
+                        Id: bb5dd3b7-17d7-46d1-ad0e-95591416487d
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            c083dbfa606773dc799a09a39b454781: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: ed16f15f-057f-437d-ace3-8dcfd0a38840
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
         -   Entity:
                 Id: 51295ad2-2015-49c6-b636-e7673e3a69b4
                 Name: Bola 3
@@ -4502,6 +5498,53 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 9c24aa5a-70c0-4d08-96e0-3c12b3a08cb5
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: 5798931d-624d-4b4d-a694-b546471f2b02
+                Name: Bola 19
+                Components:
+                    fe1cb20ae97b02c95a776295e4f55fc7: !Terracota.ControladorBola,Terracota
+                        Id: 91d876f1-c9a0-446f-a7e0-1fbc2a702298
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 6417b76e-d4eb-44da-9eae-c8dfeddbdcd8
+                        Position: {X: 0.0, Y: 0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: f2d6f0d8-93ba-4a4d-b685-dbd22071e026
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    995c7e5d0707e2b02f3ff06d64e08509: !RigidbodyComponent
+                        Id: 9634a1c2-bd11-454c-8fde-04b19a178681
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            f08d04bb80f1a5f226d1796a365deefb: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: ca9d3f76-ae8f-4729-bb6a-c1a0ece69453
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
         -   Folder: null
             Entity:
                 Id: 58547823-b74f-43d7-99b8-85f4ca313040
@@ -4750,6 +5793,53 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: a96c1c3c-5b0e-4560-a058-907cbb483aea
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: 5ff68125-256a-41f4-8d1f-2a4345356bfe
+                Name: Bola 8
+                Components:
+                    b54cdf5640ffbd0f70a24db40f800b67: !Terracota.ControladorBola,Terracota
+                        Id: 12baef53-c223-4704-8376-ff39664fee8a
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: fd8e82d6-00df-4819-bbad-eb2ad747220d
+                        Position: {X: 0.11, Y: -0.11, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 2fdf7a1c-fb65-4367-ad25-0256f14b91f1
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    d5251afc6f5b651a1a94b4bd2e088c66: !RigidbodyComponent
+                        Id: 663b264d-1ff0-450c-a76a-d2e5b0d6699c
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9fac12e4a535b183d798c8aeb4fbd604: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: b791ce70-9816-4c64-a395-6490185b4011
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
         -   Folder: null
             Entity:
                 Id: 6185bbd2-4146-405b-925a-61efe5fa5c9f
@@ -4812,6 +5902,53 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: e34ce6ff-92ee-4fe3-a2f1-8edf5c0c117d
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: 62463e38-3eec-49c8-991e-61a485ebeba1
+                Name: Bola 7
+                Components:
+                    80a6cddffe76600c9d5b4d5ce81eb24d: !Terracota.ControladorBola,Terracota
+                        Id: 4e52564a-fa7a-4da4-8d97-665f702d89e0
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: e22b2f2d-e52a-4016-8637-749905f976ae
+                        Position: {X: 0.0, Y: -0.11, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 818ed7b4-94e2-409c-afb2-5963ae3546cc
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    a6d22df1d2178fc6a6b410d3b44f6854: !RigidbodyComponent
+                        Id: e79a3c38-74fe-4d99-a17b-53301d42e92f
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            eb41dee8b6544923550d08e9878eef3d: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: bf9296c3-0419-4584-922d-032356ee71fc
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
         -   Folder: null
             Entity:
                 Id: 62508a80-fa3c-4db2-8000-aefb14cd2fdc
@@ -4975,6 +6112,53 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: 8e1de27f-3da2-420e-af3a-2dac66147fa2
                 InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: 65a6233e-f0db-4618-a6d4-cb8bf2e43339
+                Name: Bola 19
+                Components:
+                    fe1cb20ae97b02c95a776295e4f55fc7: !Terracota.ControladorBola,Terracota
+                        Id: 1ef7ace2-395d-413e-a774-8cf45d680a48
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: cdc6edc7-ae54-47e7-b39f-67d9e527b3e5
+                        Position: {X: 0.0, Y: 0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 1cf80adb-0b3c-4866-8744-d339a636d2b2
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    995c7e5d0707e2b02f3ff06d64e08509: !RigidbodyComponent
+                        Id: 928f0c70-2eba-4941-9a5b-eaf5670e0cc4
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            f08d04bb80f1a5f226d1796a365deefb: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: ca9d3f76-ae8f-4729-bb6a-c1a0ece69453
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
         -   Folder: null
             Entity:
                 Id: 65e5cb41-a846-4045-a2ff-9b7b61abf521
@@ -5061,6 +6245,53 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 5094df51-633d-48b9-9b52-dc2eef9d3af6
                 InstanceId: e441019d-d37d-4562-a3d2-57422c1cb870
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: 67ccebd5-9b40-4cd8-89cb-789cb3be5aa5
+                Name: Bola 24
+                Components:
+                    d1ef393171ea825f9a8e69771815562a: !Terracota.ControladorBola,Terracota
+                        Id: 58d0f145-7dd3-4c1d-b9d2-4e0722d91866
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 85f8c239-c80a-4e47-b2f9-8193c2957a26
+                        Position: {X: -0.11, Y: -0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: ff51e984-6108-477e-b70b-5f031826f833
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    1aadcb6e0ea80409eb47f476ee00887b: !RigidbodyComponent
+                        Id: 7ea88644-f94b-477b-84a9-8e689654b89d
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            c2fd4bb93ef7c5f3485681132a75c862: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 27aabf80-265b-4cc6-a3cf-38423a79309a
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
         -   Entity:
                 Id: 67fdedf2-aeef-401f-9830-9173a9dc7323
                 Name: ControladorPartida
@@ -5070,17 +6301,17 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            467ed3b6cbbfaab718cf57ed5cb350ad: ref!! b05f909d-720f-4529-82fe-3c23a65f0865
                     3cd46ca143b5e34bb295085f29977263: !Terracota.ControladorPartidaRemota,Terracota
                         Id: 92f20fd3-c1ff-41c2-ac36-2a92ab13a1c0
-                        "cañónAnfitrión": null
-                        "cañónHuesped": null
+                        "cañónAnfitrión": ref!! ca5c8225-f67b-4aec-ae9b-46a35ecb252e
+                        "cañónHuesped": ref!! dc284fd7-4d14-4b32-859d-a7b2933b1720
                         "fortalezaAnfitrión": ref!! 0a8170d5-c455-4106-91cd-fea79dfb8580
                         fortalezaHuesped: ref!! 1b3b09f0-6886-46e0-ac48-53dfec9173ee
                         "controladorCámara": ref!! 24c183db-10d7-4a20-aa2e-e2dc0a560703
                         luzDireccional: ref!! 6da1cbb8-7ccb-478a-83ac-2b4eafea4e06
                         interfaz: ref!! 95324920-26fa-465f-b610-3dfe1705665d
-                        "elección": ref!! 609f6f95-447c-4c7d-9502-dd7d255a3acb
                         "UIElección": ref!! bfdca2e7-d250-4848-bdee-06b45f17c093
         -   Entity:
                 Id: 69c0ad74-f8e4-4db5-b54e-ba74ee545b9d
@@ -5209,6 +6440,53 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 484f5d0a-1afa-491d-94b4-d2dfdf37c5cc
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: 6d6dde7b-f03d-4f0e-ba3b-aaa54c03cf96
+                Name: Bola 0
+                Components:
+                    35cc06cc97aa692bf8b8cbbdb426f5a5: !Terracota.ControladorBola,Terracota
+                        Id: 9edd912e-9051-43de-b07a-dc7f57261514
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 6ab9fb01-89de-45b2-94dc-7b4103355ebd
+                        Position: {X: -0.11, Y: 0.11, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: ef44cf00-341e-44ec-af9d-7f16a4e23377
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    114b90db974cabdf571a34bde6aba6b8: !RigidbodyComponent
+                        Id: 436d8033-3d46-4c20-87a8-5e6308f4d4c3
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            88fc81dbeb4e77279fd45c895c8babd5: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 88aa0e63-7949-4475-a5ab-7074456ed6b4
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
         -   Folder: null
             Entity:
                 Id: 6f8894d4-03d5-4ee1-b83b-21ac79058e6d
@@ -5295,6 +6573,100 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 1bd6f469-8c2a-47ce-9ada-c896b21b7e46
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: 71d79662-996b-4aa7-999b-681992c31835
+                Name: Bola 23
+                Components:
+                    534bcc1d6ae206fb84b4babcfe28de0f: !Terracota.ControladorBola,Terracota
+                        Id: 22ce193b-ee2e-4ad7-9f94-78c4e9f8a347
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: e8dd886b-9c35-4f5d-93e8-bc330a7debcd
+                        Position: {X: 0.11, Y: 0.0, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: e52426ec-729a-46bb-ab8f-58e06e8a93be
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    02eccabbab1fa83fd4a30e7a13ca2334: !RigidbodyComponent
+                        Id: 240c74e2-7fee-4a03-9f31-682bb108a18c
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            62a8bdaabd2582b5e5fcdb4123fe84a4: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 78c05d55-bcb1-4eba-8352-1de1347fde44
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: 72528b57-3995-41d6-9094-b59f2ecbeb41
+                Name: Bola 20
+                Components:
+                    db5d1f791611a7e4d47d7faf2d2f1bb0: !Terracota.ControladorBola,Terracota
+                        Id: 045e6678-43ad-4a2c-b36c-02d9eca64ef9
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 8e416183-be27-4de5-bd97-fb3309a5201b
+                        Position: {X: 0.11, Y: 0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 629ca57e-5c44-4119-982a-1024fb51e90f
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    04b0c235630663c97f266c474c2b3b0f: !RigidbodyComponent
+                        Id: 22604197-8af1-4447-b10c-11cac65a500f
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            1b89d0fd53d3204372d8b0660920d230: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 14301384-26a9-4008-b970-26f7c1058e48
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
         -   Folder: null
             Entity:
                 Id: 72977cfa-f8ff-46e6-bb7e-f023a8f09377
@@ -5333,6 +6705,53 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: d702a0c1-1ce7-4fae-802b-42a70cdeee62
                 InstanceId: e441019d-d37d-4562-a3d2-57422c1cb870
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: 755f8c5a-3c97-42c8-ad91-615b450425f5
+                Name: Bola 15
+                Components:
+                    9af0fa7fd686a3cfb9b7b8ec1840e946: !Terracota.ControladorBola,Terracota
+                        Id: a5384ea8-4edd-4b7d-bee5-1e6084fe92d2
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: c401f369-6f0e-4c41-8763-043a2251ff4e
+                        Position: {X: -0.11, Y: -0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 660bf761-a1f4-4f33-9d07-adce35406fb3
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    0f043d6ccbedae29810be6264bff5235: !RigidbodyComponent
+                        Id: 56b95296-126d-4179-b61f-0c6b8fcb38f6
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            07fcb43f0e6b512d6927ee528d864299: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 4732ba64-d2db-4d32-8f86-d419504627d0
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
         -   Folder: null
             Entity:
                 Id: 75ff2dfc-1dd2-40ff-b145-4731c0b49c1c
@@ -5565,6 +6984,53 @@ Hierarchy:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
                 BasePartId: 01c26840-711c-4d04-9df0-4caa40523f71
                 InstanceId: 74486002-9462-4274-b832-2a75923b225d
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: 78f3287e-922c-47ad-b70b-63e8aca9f658
+                Name: Bola 23
+                Components:
+                    534bcc1d6ae206fb84b4babcfe28de0f: !Terracota.ControladorBola,Terracota
+                        Id: a111bb54-68bf-48d1-b283-2b23b85f3cae
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: d3a8acd1-e131-4c84-ad6e-9331d286e710
+                        Position: {X: 0.11, Y: 0.0, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: e5379e17-7bbf-463a-ad2c-306162a964c9
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    02eccabbab1fa83fd4a30e7a13ca2334: !RigidbodyComponent
+                        Id: c6eb3c66-5553-4924-903a-96f448856781
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            62a8bdaabd2582b5e5fcdb4123fe84a4: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 78c05d55-bcb1-4eba-8352-1de1347fde44
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
         -   Folder: null
             Entity:
                 Id: 795a982d-061e-46bd-85bc-931d95ddc3a8
@@ -5750,6 +7216,53 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 2fd33ceb-2883-4b11-b42d-3ef922be645c
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: 7ca6ee99-3597-4e9e-81db-f32c367e8aff
+                Name: Bola 6
+                Components:
+                    c4e549cb8044aeb7aa82e811f038f17d: !Terracota.ControladorBola,Terracota
+                        Id: 931a8a41-359c-43de-8961-8a65e120a703
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: ed23de0e-ff61-41bc-96b4-29eac2bc768b
+                        Position: {X: -0.11, Y: -0.11, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: ae47a3bb-345e-4030-bdb2-587a5d211ae7
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    53750bb8e11858310b58e10351d57ad9: !RigidbodyComponent
+                        Id: c1901272-0c57-4e66-ba3c-a9463b98b065
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            27b6c850302040f216172514ecbf67b2: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: f316b750-1721-44b8-9f7a-c3ab662e9db1
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
         -   Folder: null
             Entity:
                 Id: 7d25ffa1-1525-4ec5-aec1-7d3f10103810
@@ -6127,6 +7640,53 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 7098fc4e-ef3f-43a0-a5c3-b2bf5fcb7caf
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: 882b3cd0-c4a9-456b-ad05-34751c34d457
+                Name: Bola 17
+                Components:
+                    5d6135555ebc1d5e66cc2c33b917a4fe: !Terracota.ControladorBola,Terracota
+                        Id: f91748eb-512b-4a3e-8167-70267f1db26b
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 4d83a141-738e-4250-97b7-b6b4399c98be
+                        Position: {X: 0.11, Y: -0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: b404bb75-c977-4603-98fd-8cbd23f4decb
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    83472d07fabf764d3605f77193b76fd8: !RigidbodyComponent
+                        Id: 2bd74714-5020-48de-8cf8-17497858f15d
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            14f3da4d56819fd57bbd599bb5aaf79a: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 74048fc2-9c45-47fe-b6e9-04c88c8c04eb
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
         -   Folder: null
             Entity:
                 Id: 8906a562-cbcb-498c-b717-4662d7be366a
@@ -6191,6 +7751,53 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: 88537472-82c6-4044-8796-1ed1474a9fa3
                 InstanceId: 0f12ec9c-3d68-48bf-bce7-6ac6645d2369
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: 8a98d130-0fb5-4f2e-b0cb-ce9453fdd514
+                Name: Bola 1
+                Components:
+                    c5d6587452bb9a37b75b6411cddd74f6: !Terracota.ControladorBola,Terracota
+                        Id: 0355ace0-5bb9-4640-aeee-7148a81b2c1c
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 533128d6-6ef2-411d-a6c9-2ad835a77b3a
+                        Position: {X: 0.0, Y: 0.11, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: d21d434d-9ba3-45b7-949a-e926867c87d0
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    e4a5c22b98a6cb0ca96e6f8214ee3a73: !RigidbodyComponent
+                        Id: 70c3164a-a320-4a16-a974-bd2c61bc29cf
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            2377c83f19e96e00ca9d168645740cd7: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 14556bb6-b4a3-4922-b41f-1376e78a50b6
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
         -   Folder: null
             Entity:
                 Id: 8b3759ed-1b14-45a8-85a1-12b156977c7e
@@ -6250,6 +7857,53 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 62f11225-5735-42ac-9490-bd0a01a89605
                 InstanceId: e80b070a-a3c4-45d2-8772-15130324c604
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: 8b9c2cdd-ca55-45ac-8a1e-5c1d8963c558
+                Name: Bola 1
+                Components:
+                    c5d6587452bb9a37b75b6411cddd74f6: !Terracota.ControladorBola,Terracota
+                        Id: 084074b6-8ea9-45d3-a3f8-5afec3653cdb
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: b4a830e1-633f-45a2-96c1-b46be871b204
+                        Position: {X: 0.0, Y: 0.11, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 47c5635b-3c5f-4bba-b9fb-e60f67acf7f7
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    e4a5c22b98a6cb0ca96e6f8214ee3a73: !RigidbodyComponent
+                        Id: 2c23ed6e-44ed-4c6d-9e8c-4c9102a15a1a
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            2377c83f19e96e00ca9d168645740cd7: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 14556bb6-b4a3-4922-b41f-1376e78a50b6
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
         -   Entity:
                 Id: 8ba0ce57-d563-4a6b-9e61-7041f376a195
                 Name: Bandera
@@ -6585,6 +8239,53 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: f115ad8f-9e88-4daf-ad99-383b2b30b9e5
                 InstanceId: e441019d-d37d-4562-a3d2-57422c1cb870
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: 95c366ba-9088-470b-a3a4-c017d5907ae2
+                Name: Bola 22
+                Components:
+                    43b90d946c2284960785657bcefcdcbb: !Terracota.ControladorBola,Terracota
+                        Id: da9d551b-85fc-4b04-8484-dd32cd5aa9e2
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 8297dc3f-194b-4945-bbc6-30f54be79c33
+                        Position: {X: 0.0, Y: 0.0, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: ddeab9fd-2bcc-4479-a130-724f63d4f4e0
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    b8881723367197eb845b2243f7c619a1: !RigidbodyComponent
+                        Id: b1a6cf55-9934-4281-8519-ee5336edb611
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            d0975cb3a7578f5072d0e7c327fe154c: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: b5adb895-5cee-4ea0-84f1-b40393f0aaca
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
         -   Folder: null
             Entity:
                 Id: 9626925c-0729-47d6-9f0c-12701c24961a
@@ -6604,6 +8305,53 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: efa71b0c-d885-4b91-9e46-5f977d995ea5
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: 96d0a707-dc29-4c97-9ef8-cad0104de4e8
+                Name: Bola 4
+                Components:
+                    2e061cbbd6aacf70bf8d7ca4ed959396: !Terracota.ControladorBola,Terracota
+                        Id: 263d8a23-91ae-4aa9-b356-9fb05f64a43e
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 8fd3a0b9-9d1d-48a4-8d0c-35e80846cfa8
+                        Position: {X: 0.0, Y: 0.0, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 301bba87-ba0a-41c3-a05d-d934f6617765
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    a1637319c29a8d884daa2b2822856748: !RigidbodyComponent
+                        Id: c588dc64-6b4f-4217-bebd-c82d07575601
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            b72ee723dc545feb04a85ec5cf1117f3: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 810288bd-4dfa-4f0c-a75c-f0eb0720ade7
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
         -   Entity:
                 Id: 96dffa68-46ad-4070-a7bf-e70eb3849fa3
                 Name: Metralla
@@ -6837,6 +8585,53 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 1913f40e-215d-48a8-9a56-94cde0e041f4
                 InstanceId: e80b070a-a3c4-45d2-8772-15130324c604
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: 9bb799a3-9832-44fa-abc8-2c9732383147
+                Name: Bola 11
+                Components:
+                    52baebb8dc86bf262ad46c44842cc301: !Terracota.ControladorBola,Terracota
+                        Id: fabf5604-0e21-4a91-a2a5-ccba6ab521eb
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: bb050bb3-7c80-4f80-a503-2a5dfeed9976
+                        Position: {X: 0.11, Y: 0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: d2bb66ac-966b-4522-ace6-848620f016bc
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    4f8e85a7b06d88d5fdf38ad6cfc84107: !RigidbodyComponent
+                        Id: 445764eb-cdfb-47ba-ba64-313fb6e2fd43
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9fcc4caa8cef5e90b0e7cbda94c6b076: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 1e4b5581-b491-43b9-8985-c1f599141089
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
         -   Entity:
                 Id: 9d3a13d7-8b6f-42c7-82ce-1730b7be0f5f
                 Name*: "ControladorCañón (Anfitrión)"
@@ -7187,6 +8982,53 @@ Hierarchy:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
                 BasePartId: 012f43df-6cb3-4551-a847-291894047d66
                 InstanceId: 74486002-9462-4274-b832-2a75923b225d
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: a70d4525-53d6-4938-8724-dcaa349b943f
+                Name: Bola 15
+                Components:
+                    9af0fa7fd686a3cfb9b7b8ec1840e946: !Terracota.ControladorBola,Terracota
+                        Id: c2654ad3-7787-4dcf-8a20-ad886a78d77e
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 37f9231f-786e-43dd-8df4-80be62bba653
+                        Position: {X: -0.11, Y: -0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 1b8d9916-30ac-49b7-9c58-1067dac341c8
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    0f043d6ccbedae29810be6264bff5235: !RigidbodyComponent
+                        Id: ed942035-7528-480a-bddd-4076cae52ae2
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            07fcb43f0e6b512d6927ee528d864299: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 4732ba64-d2db-4d32-8f86-d419504627d0
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
         -   Entity:
                 Id: a7a816c0-b7a8-47d0-ac40-e311f717c855
                 Name: Bola 4
@@ -7367,6 +9209,53 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: d702a0c1-1ce7-4fae-802b-42a70cdeee62
                 InstanceId: e80b070a-a3c4-45d2-8772-15130324c604
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: a8be7eeb-9e5d-4447-ac23-e90a4f8f98d1
+                Name: Bola 13
+                Components:
+                    27f87fcf37326f768b7bb9ee09fe19bc: !Terracota.ControladorBola,Terracota
+                        Id: 30820e24-b8e0-468a-a561-45408d92344e
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: dc4d0566-8fef-4b78-bfb2-729b07259161
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: b879a11f-064d-4187-918e-cc46077688f6
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    6e5385600a2427c4a5ee919c28307474: !RigidbodyComponent
+                        Id: 448dc7a9-5d04-4939-b202-0fdcdb156519
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            3f7bc706fcba336adebf0c4d30880bda: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: cd443751-e04f-45a0-a5c9-7ba898c9674e
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
         -   Entity:
                 Id: a8d7f51e-86d2-4d7f-8d2c-2f38f645178c
                 Name: Bola 0
@@ -7467,6 +9356,53 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 8ebc74e2-8ae9-45cf-a73d-50286b484c05
                 InstanceId: e80b070a-a3c4-45d2-8772-15130324c604
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: a976d96e-1693-4be6-9b8a-f183d9c543bd
+                Name: Bola 13
+                Components:
+                    27f87fcf37326f768b7bb9ee09fe19bc: !Terracota.ControladorBola,Terracota
+                        Id: c78b716c-85b8-4a24-92d9-a4aa8c82e2fe
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: b9f9659a-e8d1-4515-9e80-26fcd5786c95
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 61411e27-5bab-4995-b9c5-a1f54d6d33e0
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    6e5385600a2427c4a5ee919c28307474: !RigidbodyComponent
+                        Id: ebce2397-0b71-4299-8cde-068cddec66bd
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            3f7bc706fcba336adebf0c4d30880bda: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: cd443751-e04f-45a0-a5c9-7ba898c9674e
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
         -   Entity:
                 Id: ab058dca-5907-40bb-9f53-b495142fd898
                 Name: Bola 13
@@ -7793,6 +9729,53 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 559f4220-0919-43b6-8524-a0a6d358180a
                 InstanceId: e441019d-d37d-4562-a3d2-57422c1cb870
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: aea2fe6f-3d32-49ef-8b7a-b2bb627cc7c1
+                Name: Bola 20
+                Components:
+                    db5d1f791611a7e4d47d7faf2d2f1bb0: !Terracota.ControladorBola,Terracota
+                        Id: 07beaf06-7b27-4ea9-bf69-499b25b6aaa6
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: ebf5562f-0247-4cb4-ac0c-7b08dea919b7
+                        Position: {X: 0.11, Y: 0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 866a9d56-9dec-4a0a-9880-069e51bc615c
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    04b0c235630663c97f266c474c2b3b0f: !RigidbodyComponent
+                        Id: 3a241529-cbcc-4cd1-a059-edf162d1fb4f
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            1b89d0fd53d3204372d8b0660920d230: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 14301384-26a9-4008-b970-26f7c1058e48
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
         -   Entity:
                 Id: aec365a2-b934-43a0-9422-21b1a15568b2
                 Name: "Bambú 0"
@@ -8168,6 +10151,53 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 94440f63-9462-4ebd-bd52-08e1439096aa
                 InstanceId: e441019d-d37d-4562-a3d2-57422c1cb870
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: b7523b38-6c33-44e8-8df2-293b09e4be7c
+                Name: Bola 2
+                Components:
+                    1f845404d8ec8c265cfe1f591376d78e: !Terracota.ControladorBola,Terracota
+                        Id: d6f8b292-f755-4b98-8c08-fda0f102b68c
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: fbd13284-f690-4811-b525-695dbaab1cbf
+                        Position: {X: 0.11, Y: 0.11, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 8bf59724-9dcc-4938-ad76-95be53ba9a76
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    7ba6f1ca8713790a9b8162f9da5e3cbd: !RigidbodyComponent
+                        Id: a4f5a136-0dc2-4f85-9f0a-26ec730b7c3d
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            1ed59ab01cb35a18b5c5bcd2dc96b044: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 6daa43fa-c11e-4954-aa0d-ccda5f883119
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
         -   Folder: null
             Entity:
                 Id: b773c5e0-9985-49bc-88e1-115ba8308364
@@ -8231,6 +10261,53 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: cc314c21-f915-4641-951e-2dcd6cb3bf87
                 InstanceId: e80b070a-a3c4-45d2-8772-15130324c604
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: b8dede01-e6a8-4381-a779-62030a1a38d9
+                Name: Bola 2
+                Components:
+                    1f845404d8ec8c265cfe1f591376d78e: !Terracota.ControladorBola,Terracota
+                        Id: 4cf728ea-138e-4e34-99ac-72ebd4a6eaf7
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 26d35068-5466-432f-8b90-24a16c413980
+                        Position: {X: 0.11, Y: 0.11, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 78e5ad05-8427-4fe7-99a2-5c0c94390d89
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    7ba6f1ca8713790a9b8162f9da5e3cbd: !RigidbodyComponent
+                        Id: 149a527e-d7f3-412d-81b7-a518854c4e9f
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            1ed59ab01cb35a18b5c5bcd2dc96b044: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 6daa43fa-c11e-4954-aa0d-ccda5f883119
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
         -   Folder: null
             Entity:
                 Id: b932eeec-2f1c-4dae-a555-eaf97e786339
@@ -8443,6 +10520,53 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: f2b48e3a-68ee-4e2c-be7e-b0998925f257
                 InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: bd16279c-8fdb-42cb-9f67-495cb510ccd7
+                Name: Bola 14
+                Components:
+                    289939238cd71692af72965ea93f4c54: !Terracota.ControladorBola,Terracota
+                        Id: e229d6fb-4828-4dbc-ace1-c51160aa78e2
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 5fdedf08-ea53-4b35-bd28-ea0ed6aeb093
+                        Position: {X: 0.11, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: d4f58396-68db-48d1-a1c4-cda7910c324b
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    dc983ac982905dee8da5c6523210273b: !RigidbodyComponent
+                        Id: 2ddc08f6-d037-474b-a4ee-6c1e38fe5165
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8a47e96799f66356c93f3246a124aafa: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 30349ddb-ea66-43ec-a0fa-12f5fc7048d7
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
         -   Entity:
                 Id: be68898f-3100-49cb-8e7d-eba365f5418a
                 Name: Rueda (Izquierda)
@@ -9220,6 +11344,53 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: f50a1fab-f1b2-48dd-9998-f49cb569f522
                 InstanceId: dbd26988-0469-4a6a-bfe3-9db6c33461a4
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: cd07f6a6-9eae-45bd-852c-10d295cdfb4d
+                Name: Bola 25
+                Components:
+                    d22afe9221764f6f6d85b5f016845288: !Terracota.ControladorBola,Terracota
+                        Id: e327c418-100f-4672-93cd-05620b201725
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 02c5ecad-e1d7-41e9-b57e-6c9d2bd4ad69
+                        Position: {X: 0.0, Y: -0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 6759106d-bfe0-433d-b371-98a17c7b6ab7
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    3f7970af7788dc6e6a5dbf67de75e3a3: !RigidbodyComponent
+                        Id: 73282d0b-e471-49db-8759-c6be7737fafd
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            ad2bb2e506e61b47d0bad41ad6819697: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: c9d234d0-9e69-4abe-9ba4-bce1d7e04d06
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
         -   Folder: null
             Entity:
                 Id: cd6687cd-c036-44a4-a097-4da52a69787c
@@ -9417,6 +11588,147 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 9b14ceb8-e455-465e-9d9c-628b9c4764b7
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: d4a1cc98-0f4b-4f0b-8b48-f4ab03b097bc
+                Name: Bola 9
+                Components:
+                    86ae864f6ebe70f552b5e1a02c6b05bf: !Terracota.ControladorBola,Terracota
+                        Id: 938305f4-92c9-452f-9692-4db2e50ec177
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 6dc37957-a800-433c-a99a-7a654e4bef16
+                        Position: {X: -0.11, Y: 0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: d034f127-053f-432a-a0a0-68b289adea81
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    4e3693cbe13a59c3693af4e320e4c334: !RigidbodyComponent
+                        Id: 5207ef46-b8a6-41a8-8c80-dfa37c423b5b
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            1a748e3ac1a822566b360951f0c21b61: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 7084e51c-9f28-44ca-9192-f113c0d1a1b6
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: d4d00902-eec6-4e73-9468-535c3ef1f511
+                Name: Bola 7
+                Components:
+                    80a6cddffe76600c9d5b4d5ce81eb24d: !Terracota.ControladorBola,Terracota
+                        Id: c3e8fa4d-1d5e-4a13-96ed-7f8a049689f8
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: ee1fc184-8b26-42c4-b3d9-e1193d450eb5
+                        Position: {X: 0.0, Y: -0.11, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 717a33d6-593a-4261-b9f2-4cc37d98139e
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    a6d22df1d2178fc6a6b410d3b44f6854: !RigidbodyComponent
+                        Id: 7517f62d-f998-4ad9-8fa1-f8fa7eba7a79
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            eb41dee8b6544923550d08e9878eef3d: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: bf9296c3-0419-4584-922d-032356ee71fc
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: d4dd4223-711a-41af-b834-42e5409dad79
+                Name: Bola 8
+                Components:
+                    b54cdf5640ffbd0f70a24db40f800b67: !Terracota.ControladorBola,Terracota
+                        Id: c91dc3f6-6a8f-4ffc-80fb-992b05584818
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 21a79ea0-b39d-41d2-abae-5d94b445403f
+                        Position: {X: 0.11, Y: -0.11, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 5f4e9215-8cfb-43ce-9204-e6618c5fe721
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    d5251afc6f5b651a1a94b4bd2e088c66: !RigidbodyComponent
+                        Id: 0edfc7f5-1e0c-46d7-ae8a-0d0c6190f1d0
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            9fac12e4a535b183d798c8aeb4fbd604: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: b791ce70-9816-4c64-a395-6490185b4011
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
         -   Entity:
                 Id: d54c9793-bad8-4e4c-8912-ce6fad977747
                 Name: Bambues 0
@@ -9454,6 +11766,53 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 0947c0ab-be07-4519-b744-c569d004f4b5
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: d5825b70-ccc8-4bc3-bc43-2d66bb73982b
+                Name: Bola 21
+                Components:
+                    3a6911a2b96b296df8c8a0a8a52613ae: !Terracota.ControladorBola,Terracota
+                        Id: 5ac61fc0-1400-43d0-9544-6a04b8f2fd95
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 04126d17-a245-4e39-acc1-0de81f62a0a3
+                        Position: {X: -0.11, Y: 0.0, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: f6df5ef0-b425-4195-adbf-74b82f4947bb
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    cd635cd3147ab9327951c49133bfab34: !RigidbodyComponent
+                        Id: cbfdcb72-79cb-4625-a66f-6c2770d1fc8c
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            ab6f54433a82ec5c58f1efd99edbdfba: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: ba6104f0-90d6-462d-8354-93d0776920a3
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
         -   Folder: null
             Entity:
                 Id: d60b0f0e-f1ca-4ea0-85b2-9d71a8a942b2
@@ -9549,6 +11908,53 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 14ea579a-a723-4eb3-a9a5-c1f68c05c21c
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: d9998644-6f4c-475c-9ac7-6274834998c9
+                Name: Bola 16
+                Components:
+                    f4a7ccc0ae1034ddce4d2667b6bf3369: !Terracota.ControladorBola,Terracota
+                        Id: f4600159-bd1d-4a06-837f-c4dd12657d00
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 713dd8d8-a076-41a6-b4ea-58cebe5c6d37
+                        Position: {X: 0.0, Y: -0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 7bfd6bdf-ba01-4110-a3a4-dadebd83b39d
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    116efe57a035d60db4313ad54a3f8a2d: !RigidbodyComponent
+                        Id: 60e423b1-2e3d-4917-a3d0-1e6a572bd52f
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            5da18a26a56c55e2b189f2a21111c7b9: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 76e1192f-a9d0-4fc1-9bc7-a911456d7eb7
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
         -   Entity:
                 Id: d99cf935-ad58-4ee1-9090-1cfaef4fbc36
                 Name: "Bambú 0"
@@ -10283,6 +12689,53 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 82f3ff53-f893-4724-a4cc-f7d362efe89f
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: ebfa1802-eead-4c63-bad0-a2fa364f69c7
+                Name: Bola 14
+                Components:
+                    289939238cd71692af72965ea93f4c54: !Terracota.ControladorBola,Terracota
+                        Id: fdb293cd-2969-4d9f-a173-9a5aa333e9a9
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: b30d426f-e7ad-462c-889a-3cad43bd3894
+                        Position: {X: 0.11, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 900e617e-77e2-430e-8bee-61f12ba493a4
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    dc983ac982905dee8da5c6523210273b: !RigidbodyComponent
+                        Id: 0a1996b8-1137-4826-ac7b-4f184d30faf0
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            8a47e96799f66356c93f3246a124aafa: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 30349ddb-ea66-43ec-a0fa-12f5fc7048d7
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
         -   Entity:
                 Id: ec41b6a1-51bd-4e2c-94ad-9d1b54378422
                 Name: Bandera
@@ -10339,6 +12792,53 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 746df4d3-0d57-400f-a8d8-1b1b841dad66
                 InstanceId: e80b070a-a3c4-45d2-8772-15130324c604
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: ed888303-e1b0-4290-9c87-98795ec81bed
+                Name: Bola 17
+                Components:
+                    5d6135555ebc1d5e66cc2c33b917a4fe: !Terracota.ControladorBola,Terracota
+                        Id: a4102504-502d-4e2a-99fb-aae8b38fe4f0
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: aa612018-fbcd-41b1-8caf-a2074324d2c9
+                        Position: {X: 0.11, Y: -0.11, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 10e77892-97d7-44a9-a33c-ef588a91051b
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    83472d07fabf764d3605f77193b76fd8: !RigidbodyComponent
+                        Id: 4c6a845c-ab57-49d8-934e-4aa02034bd6b
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            14f3da4d56819fd57bbd599bb5aaf79a: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 74048fc2-9c45-47fe-b6e9-04c88c8c04eb
+                InstanceId: e02c01b2-040c-43b0-ac9f-1ebd86c0ee8f
         -   Entity:
                 Id: edf1d4ea-bc2f-4250-8c55-fd4f6392d00a
                 Name: Bandera
@@ -10456,6 +12956,53 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 3ed8f5bc-4da5-4515-914f-06dea1d87ed6
                 InstanceId: e80b070a-a3c4-45d2-8772-15130324c604
+        -   Folder: Proyectiles (Huesped)
+            Entity:
+                Id: f180aeef-55de-44ff-b72d-a8a0f745044d
+                Name: Bola
+                Components:
+                    0b80a32559ba00ef3b0e7c07918b9b54: !Terracota.ControladorBola,Terracota
+                        Id: 085d814f-8f56-43ae-b503-89e283646e6b
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 32
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    45f11cee7c77c9296c3e3dc685715f6e: !TransformComponent
+                        Id: 899b68e3-fe01-4179-b64b-4c546c2100c2
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.3, Y: 0.3, Z: 0.3}
+                        Children: {}
+                    f05b3696c40f743d796fc0bba1f38923: !ModelComponent
+                        Id: ab412058-4028-415f-9fe6-7957900962fd
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    c1f56cbccac418b87b6546e758c8f1d1: !RigidbodyComponent
+                        Id: 91dc7d63-3433-4be1-91fc-8e480089cdd4
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 0.8
+                        RollingFriction: 0.2
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fc245c18783243b7a95c6bfe6de62802: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: 32dc5310-2c33-4019-a4a0-fdf11fafd6c0:Prefabs/Bola
+                BasePartId: cb5b5796-6cb4-4515-8461-8563363ed366
+                InstanceId: eda91634-e93d-4db5-90d3-87cc37525256
         -   Folder: null
             Entity:
                 Id: f2b178b7-6be3-4cb8-bb2d-75320ed767cd
@@ -10591,6 +13138,100 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 95e96d59-af9d-4f05-a814-adfe2a8d42c8
                 InstanceId: 387f24de-4bc0-4a20-bf9e-78921dec9e7a
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: f48dc15f-5a88-4f7a-8bf0-ee2a1afba127
+                Name: Bola 3
+                Components:
+                    049d0ab964a6389fbd0e7f4f3480c3e4: !Terracota.ControladorBola,Terracota
+                        Id: baaa0be7-5b3b-420e-a21b-614cb6624d24
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 4d48ad1b-6a71-4e92-ba7e-4ce9f246ff9e
+                        Position: {X: -0.11, Y: 0.0, Z: -0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: 968cc999-82c6-4909-95d2-40dc20a8470b
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    d5c98a43ed644c0147459ecc64ee8fc3: !RigidbodyComponent
+                        Id: 1af0762e-3fd1-4975-9baa-34420717e960
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            179bfef96c019dd55919d6ab733f04fb: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 9a38fb44-eb64-4ed9-9800-db4b0586675a
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: f4a2bb91-371c-4294-9c62-a43e4be0d0e8
+                Name: Bola
+                Components:
+                    0b80a32559ba00ef3b0e7c07918b9b54: !Terracota.ControladorBola,Terracota
+                        Id: 7768d401-fcd3-49af-8a4f-a98ac5e367ba
+                        tipoProyectil: bola
+                        tipoJugador: nada
+                        maxColisiones: 32
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    45f11cee7c77c9296c3e3dc685715f6e: !TransformComponent
+                        Id: 0f510ec8-7220-494b-9aa6-0e9499cd5e9a
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.3, Y: 0.3, Z: 0.3}
+                        Children: {}
+                    f05b3696c40f743d796fc0bba1f38923: !ModelComponent
+                        Id: 855f5c16-5862-4804-acc5-c15596482367
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    c1f56cbccac418b87b6546e758c8f1d1: !RigidbodyComponent
+                        Id: 095558e0-3ab5-431c-ab2c-4e116661d39c
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.8
+                        Friction: 0.8
+                        RollingFriction: 0.2
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 100.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            fc245c18783243b7a95c6bfe6de62802: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: 32dc5310-2c33-4019-a4a0-fdf11fafd6c0:Prefabs/Bola
+                BasePartId: cb5b5796-6cb4-4515-8461-8563363ed366
+                InstanceId: 3172df0c-33b8-484f-be57-8e14cefc4a3a
         -   Folder: null
             Entity:
                 Id: f4cb25a6-dfae-4bb7-a3f5-f7347ba191af
@@ -10977,7 +13618,6 @@ Hierarchy:
                             9a506e4494fcafd341581261af8c86aa: ref!! cb584002-79ba-4a2c-9046-a02c8bcba89d
                             bc41e062fc059730e4a1344d71fdfa24: ref!! 56035081-b8b8-4791-a688-30f2e730976f
                             20a412bc8ad2f3ae7c3c1fd43e9eed4e: ref!! 20dde3d1-c473-4a2c-b1c7-f1c4f92a767d
-                            22e3cecfecddcc6bf39ad4b0ab71d59a: ref!! b05f909d-720f-4529-82fe-3c23a65f0865
                     6af576c3cf361e69ff5e0afec2c736be: !Terracota.ControladorSombras,Terracota
                         Id: c63b88fd-38e5-415a-81cf-25c162ec6cae
                         luzPrincipal: ref!! d4bdb42d-3184-4591-a100-1174ed5a9640
@@ -11084,6 +13724,53 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: f610b0de-2a0c-4104-b835-286adf5ac8bb
                 InstanceId: e441019d-d37d-4562-a3d2-57422c1cb870
+        -   Folder: "Proyectiles (Anitrión)"
+            Entity:
+                Id: fdd182c5-3d8e-4c10-b5b9-b7f15aa7d421
+                Name: Bola 18
+                Components:
+                    5c92f446875b033fb8819abe64d844cc: !Terracota.ControladorBola,Terracota
+                        Id: db499f73-ef93-4b63-9ac0-d391c12d61f3
+                        tipoProyectil: metralla
+                        tipoJugador: nada
+                        maxColisiones: 4
+                        "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
+                    3c5e241897e193359a70d89b5eb615fc: !TransformComponent
+                        Id: 612ab80a-a0a2-4ddd-afb4-6bbb034cdc3c
+                        Position: {X: -0.11, Y: 0.11, Z: 0.11}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.05, Y: 0.05, Z: 0.05}
+                        Children: {}
+                    e18c6becdf2d9dff4bce8bcc40817006: !ModelComponent
+                        Id: e64bf46e-4acc-41ed-a415-4fb9b50e08b5
+                        Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
+                        Materials: {}
+                    7e94a9b7fe903a0c200eea4e3d0608ac: !RigidbodyComponent
+                        Id: c6369794-e113-46b3-a118-3cc04a9ce09f
+                        Enabled: false
+                        CanSleep: false
+                        Restitution: 0.9
+                        Friction: 1.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 10.0
+                        LinearDamping: 0.4
+                        AngularDamping: 0.1
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            6afd0e436ab581cd19d3998d17cd3488: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 1.0
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+            Base:
+                BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
+                BasePartId: 0dceba87-214d-4562-93d7-de53e24b5fe0
+                InstanceId: 2e4bd47c-1ee2-41da-a1a1-ee9c63cd4d2a
         -   Entity:
                 Id: fe647148-e649-48d9-bbb6-64a16368be8d
                 Name: "Bambú 0"
