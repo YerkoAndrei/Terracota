@@ -29,7 +29,7 @@ Hierarchy:
         -   UIElement: !Grid
                 Id: 01568e9f-4a7a-4689-ad57-1f8fc43353f6
                 DependencyProperties:
-                    751ea65b073f6a07ab525331f8644358~GridBase.RowPropertyKey: 2
+                    751ea65b073f6a07ab525331f8644358~GridBase.RowPropertyKey: 7
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 50.0
                 Margin*: {}
@@ -300,7 +300,8 @@ Hierarchy:
                 InstanceId: 0b67fdc3-ca82-484c-8aec-abac0f56c8de
         -   UIElement: !Grid
                 Id: 0f4541b0-2365-4bbc-b3ed-b368116ed917
-                DependencyProperties: {}
+                DependencyProperties:
+                    44623c73f7d650ad3fb22524da5723a4~GridBase.RowPropertyKey: 5
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 50.0
                 Margin*: {}
@@ -848,7 +849,7 @@ Hierarchy:
                 BackgroundColor: {R: 25, G: 25, B: 25, A: 250}
                 CanBeHitByUser: true
                 Width: 1000.0
-                Height: 400.0
+                Height: 410.0
                 Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -957,23 +958,6 @@ Hierarchy:
                 BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
                 BasePartId: ee4bf604-4509-4845-98b0-117b1f79758c
                 InstanceId: 0b67fdc3-ca82-484c-8aec-abac0f56c8de
-        -   UIElement: !UniformGrid
-                Id: 27bafef7-85e3-492d-a81c-f570313715fc
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 500.0
-                Height: 200.0
-                HorizontalAlignment: Right
-                Margin: {Top: 325.0, Right: 50.0, Bottom: 175.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: Opciones
-                Children:
-                    a1d5207a81eaf1f56b31e77f8fa4128f: !Grid ref!! 0f4541b0-2365-4bbc-b3ed-b368116ed917
-                    bc757315a2ac3ec93a790604043c1a85: !Grid ref!! 919718c2-a899-4fcc-9d80-3cc351959103
-                    aa72552cc1339e0565570971e72a92ef: !Grid ref!! 01568e9f-4a7a-4689-ad57-1f8fc43353f6
-                Rows: 3
         -   UIElement: !Grid
                 Id: 27d85103-b169-419e-81a1-d46b078caa84
                 DependencyProperties:
@@ -3328,18 +3312,21 @@ Hierarchy:
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 500.0
-                Height: 150.0
-                HorizontalAlignment: Left
+                Height: 480.0
+                HorizontalAlignment: Center
                 VerticalAlignment: Center
-                Margin: {Left: 50.0, Top: 150.0}
+                Margin: {Top: 140.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: Partidas
+                Name: Botones
                 Children:
                     caaa7571f704da8d4a152f025a7275e0: !Grid ref!! 51859cae-e033-4338-9416-55a889512047
                     75788ce3e987522d9cf6c3be22a0f3ab: !Grid ref!! 7f641fa0-da6f-46d3-849a-ad68cf0d7ab9
-                Rows: 2
+                    120b3f90c366eef4664ec132300f8751: !Grid ref!! 0f4541b0-2365-4bbc-b3ed-b368116ed917
+                    f7a95c321c5f7c7ae558345f1fc5d7bf: !Grid ref!! 919718c2-a899-4fcc-9d80-3cc351959103
+                    32fc410ecd26cba05af10403c77d707e: !Grid ref!! 01568e9f-4a7a-4689-ad57-1f8fc43353f6
+                Rows: 8
         -   UIElement: !ImageElement
                 Id: 80ecf3b6-8bdb-4c89-9c79-ef3f1bebc6fa
                 DependencyProperties: {}
@@ -3609,7 +3596,7 @@ Hierarchy:
         -   UIElement: !Grid
                 Id: 919718c2-a899-4fcc-9d80-3cc351959103
                 DependencyProperties:
-                    5a9581db551299ad824184d7a7b999d5~GridBase.RowPropertyKey: 1
+                    5a9581db551299ad824184d7a7b999d5~GridBase.RowPropertyKey: 6
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 50.0
                 Margin*: {}
@@ -3621,6 +3608,8 @@ Hierarchy:
                     6b48d72e3f217444851a50ff9e544e33: !Button ref!! 2bff7f2a-b323-45c0-84ed-8072df821e02
                     7dc0800956523c71fb047a89e1600016: !ImageElement ref!! 736b0ce2-41fc-4131-a7c3-a5415b420ea0
                     45bf3cb34a3475bed97efb141c8090b1: !TextBlock ref!! 7e3c3246-e4f2-4133-bb08-12a7f9ca4a52
+                    e8000e1c3445dd08b64c59a6c9dc2161: !ImageElement ref!! f12ad352-8c40-41a0-bf3e-eaad2122e067
+                    7e4844c6971fea292e19ea8d5d6a3d3a: !ImageElement ref!! c8535e37-0807-443a-9831-5556c0222174
                     560efa9f96d449fef4f551b2d2e8a40d: !Grid ref!! 6086d372-3232-4116-8d51-a4ba4fe9e8d0
                 RowDefinitions: {}
                 ColumnDefinitions: {}
@@ -4492,7 +4481,6 @@ Hierarchy:
                 Children:
                     6d5c0771993d442db0ea037b1af8d2de: !Grid ref!! 665de169-966c-45b7-b3be-fd0123561d4a
                     dd35e0f9b3e50eb3b9223a680136902d: !UniformGrid ref!! 80bf0937-e247-4b4e-bf74-0858ea36d95f
-                    527d35fb0c5130e01b10c934fceb7c4e: !UniformGrid ref!! 27bafef7-85e3-492d-a81c-f570313715fc
                     e230a9b00343be28bc4b250380fb2eb7: !Grid ref!! 935f400b-eb50-4246-8d02-e00ecd98449c
                     3997f4dca8330f46ddc664681706888c: !Grid ref!! b891168b-8e9a-4d03-ae2b-446a76740ec8
                     e2f3d97010d17832877f2f773f6439d9: !Grid ref!! aea5b2b6-5788-4604-a05b-1ec66f3a9262
@@ -5212,6 +5200,23 @@ Hierarchy:
                 BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
                 BasePartId: 1a4d6f4e-9fae-43d4-b6f1-29178014c6a3
                 InstanceId: 0b67fdc3-ca82-484c-8aec-abac0f56c8de
+        -   UIElement: !ImageElement
+                Id: c8535e37-0807-443a-9831-5556c0222174
+                DependencyProperties:
+                    c36bde437af01aeaaa414c1d1a4a44df~Panel.ZIndexPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width*: 30.0
+                Height*: 30.0
+                HorizontalAlignment*: Left
+                VerticalAlignment*: Stretch
+                Margin*: {Left: 18.5}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Source: !SpriteFromTexture
+                    Texture*: 1b57e277-52c6-487a-a207-59a649f610f4:Texturas/Interfaz/Engranaje
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 160, G: 60, B: 0, A: 255}
         -   UIElement: !ImageElement
                 Id: ca766137-0e7f-4d66-b298-d3dba3d0533b
                 DependencyProperties:
@@ -6285,6 +6290,23 @@ Hierarchy:
                 BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
                 BasePartId: 0f57d332-c26e-484e-8b45-c56c56f1be44
                 InstanceId: 0b67fdc3-ca82-484c-8aec-abac0f56c8de
+        -   UIElement: !ImageElement
+                Id: f12ad352-8c40-41a0-bf3e-eaad2122e067
+                DependencyProperties:
+                    c36bde437af01aeaaa414c1d1a4a44df~Panel.ZIndexPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width*: 30.0
+                Height*: 30.0
+                HorizontalAlignment*: Right
+                VerticalAlignment*: Stretch
+                Margin*: {Left: 18.5, Right: 18.5}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Source: !SpriteFromTexture
+                    Texture*: 1b57e277-52c6-487a-a207-59a649f610f4:Texturas/Interfaz/Engranaje
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 160, G: 60, B: 0, A: 255}
         -   UIElement: !Grid
                 Id: f2bc3a6c-2ad2-424b-85c4-d4c5475b0be1
                 DependencyProperties: {}
