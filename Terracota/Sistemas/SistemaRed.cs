@@ -20,9 +20,6 @@ public class SistemaRed : AsyncScript
     private static string IPPúblicaActual;
     private static string IPConectada;
 
-    // GLobal
-    private static readonly HttpClient cliente = new HttpClient();
-
     // UDP P2P
     private static UdpClient udp;
     private static IPEndPoint remoto;
@@ -95,6 +92,7 @@ public class SistemaRed : AsyncScript
             IPLocalActual = "NO IP";
 
         // Global
+        var cliente = new HttpClient();
         string[] APIs = { "https://api.seeip.org/", "https://api.ipify.org/" };
         foreach (var ip in APIs)
         {

@@ -1,6 +1,8 @@
 ﻿using Stride.Core.Mathematics;
 using System.Collections.Generic;
-using static Terracota.Constantes;
+
+namespace Terracota;
+using static Constantes;
 
 public class Bloque
 {

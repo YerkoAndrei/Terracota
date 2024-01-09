@@ -13,7 +13,7 @@ using static Constantes;
 
 public static class Sistema
 {
-    private static string ISO8006 = "yyyy-MM-ddThh:mm:ss";
+    private const string ISO8006 = "yyyy-MM-ddThh:mm:ss";
 
     public static float RangoAleatorio(float min, float max)
     {
@@ -41,8 +41,10 @@ public static class Sistema
 
     public static ISpriteProvider ObtenerSprite(Texture textura)
     {
-        var sprite = new SpriteFromTexture();
-        sprite.Texture = textura;
+        var sprite = new SpriteFromTexture
+        {
+            Texture = textura
+        };
 
         return sprite;
     }

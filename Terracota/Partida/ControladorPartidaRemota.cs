@@ -133,16 +133,6 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         fortalezaAnfitrión.Activar();
         fortalezaHuesped.Activar();
 
-        // Al finalizar rotación
-        var enFin = () =>
-        {
-            // Recarga interfaz
-            interfaz.Activar(true);
-            interfaz.ActualizarTurno(cantidadTurnos, multiplicador);
-            interfaz.CambiarInterfaz(turnoJugador, TipoProyectil.bola);
-            partidaActiva = true;
-        };
-
         // Turno inicial
         if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
         {
@@ -166,17 +156,26 @@ public class ControladorPartidaRemota : SyncScript, IPartida
             cañónAnfitrión.Activar(true);
             cañónHuesped.Activar(false);
 
-            controladorCámara.RotarYCámara(90, false, enFin);
+            controladorCámara.RotarYCámara(90, false, EnFinalizarCámara);
         }
         else
         {
             cañónAnfitrión.Activar(false);
             cañónHuesped.Activar(true);
 
-            controladorCámara.RotarYCámara(90, true, enFin);
+            controladorCámara.RotarYCámara(90, true, EnFinalizarCámara);
         }
     }
 
+    public void EnFinalizarCámara()
+    {
+        // Recarga interfaz
+        interfaz.Activar(true);
+        interfaz.ActualizarTurno(cantidadTurnos, multiplicador);
+        interfaz.CambiarInterfaz(turnoJugador, TipoProyectil.bola);
+        partidaActiva = true;
+    }
+    
     public void RotarXCámara(float tiempo)
     {
         controladorCámara.RotarXCámara(-40, tiempo);
@@ -358,8 +357,10 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
     public Físicas ObtenerFísicas()
     {
-        var físicas = new Físicas();
-        físicas.Bloques = new List<BloqueFísico>();
+        var físicas = new Físicas
+        {
+            Bloques = new List<BloqueFísico>()
+        };
 
         // Cañón
         if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
@@ -389,9 +390,11 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
     public RotaciónCañón ObtenerRotaciónCañón()
     {
-        var cañón = new RotaciónCañón();
-        cañón.SoporteCañón = cañónHuesped.ObtenerRotaciónSoporte();
-        cañón.TuboCañón = cañónHuesped.ObtenerRotaciónCañón();
+        var cañón = new RotaciónCañón
+        {
+            SoporteCañón = cañónHuesped.ObtenerRotaciónSoporte(),
+            TuboCañón = cañónHuesped.ObtenerRotaciónCañón()
+        };
 
         return cañón;
     }

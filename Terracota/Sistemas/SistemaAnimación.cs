@@ -56,7 +56,7 @@ public class SistemaAnimación : SyncScript
 
     public static void AnimarElemento(Grid _elemento, float _duración, bool entrando, Direcciones dirección, TipoCurva _tipoCurva, Action _enFin)
     {
-        var original = new Thickness();
+        Thickness original;
         var fuera = new Thickness();
 
         // Busca o agrega elemento en diccionario, queda guardado por la sesión

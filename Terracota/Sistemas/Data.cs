@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using Stride.Core.Mathematics;
-using static Terracota.Constantes;
+
+namespace Terracota;
+using static Constantes;
 
 public class Conexión
 {

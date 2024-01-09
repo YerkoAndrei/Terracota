@@ -86,16 +86,6 @@ public class ControladorPartidaLocal : SyncScript, IPartida
         fortalezaAnfitrión.Activar();
         fortalezaHuesped.Activar();
 
-        // Al finalizar rotación
-        var enFin = () =>
-        {
-            // Recarga interfaz
-            interfaz.Activar(true);
-            interfaz.ActualizarTurno(cantidadTurnos, multiplicador);
-            interfaz.CambiarInterfaz(turnoJugador, TipoProyectil.bola);
-            partidaActiva = true;
-        };
-
         if (ganaAnfitrión)
         {
             cañónAnfitrión.Activar(true);
@@ -105,7 +95,7 @@ public class ControladorPartidaLocal : SyncScript, IPartida
             cañónActual = cañónAnfitrión;
 
             cambiarHaciaDerecha = true;
-            controladorCámara.RotarYCámara(90, false, enFin);
+            controladorCámara.RotarYCámara(90, false, EnFinalizarCámara);
         }
         else
         {
@@ -116,8 +106,17 @@ public class ControladorPartidaLocal : SyncScript, IPartida
             cañónActual = cañónHuesped;
 
             cambiarHaciaDerecha = false;
-            controladorCámara.RotarYCámara(90, true, enFin);
+            controladorCámara.RotarYCámara(90, true, EnFinalizarCámara);
         }
+    }
+
+    public void EnFinalizarCámara()
+    {
+        // Recarga interfaz
+        interfaz.Activar(true);
+        interfaz.ActualizarTurno(cantidadTurnos, multiplicador);
+        interfaz.CambiarInterfaz(turnoJugador, TipoProyectil.bola);
+        partidaActiva = true;
     }
 
     public void RotarXCámara(float tiempo)

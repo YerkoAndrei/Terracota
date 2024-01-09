@@ -5,15 +5,15 @@ namespace Terracota;
 
 public static class Constantes
 {
-    public static int duraciónTurnoLocal = 3000;
-    public static int duraciónTurnoRemoto = 1500;
-    public static float multiplicadorMáximo = 1.5f;
+    public const int duraciónTurnoLocal = 3000;
+    public const int duraciónTurnoRemoto = 1500;
+    public const float multiplicadorMáximo = 1.5f;
 
     // Color botones
-    public static Color colorNormal = new(255, 255, 255, 255);
-    public static Color colorEnCursor = new(200, 200, 200, 250);
-    public static Color colorEnClic = new(155, 155, 155, 250);
-    public static Color colorBloqueado = new(155, 155, 155, 155);
+    public static Color colorNormal = new Color(255, 255, 255, 255);
+    public static Color colorEnCursor = new Color(200, 200, 200, 250);
+    public static Color colorEnClic = new Color(155, 155, 155, 250);
+    public static Color colorBloqueado = new Color(155, 155, 155, 155);
 
     // Paleta interfaz
     // Negro    #FA191919
