@@ -10,10 +10,10 @@ public static class Constantes
     public static float multiplicadorMáximo = 1.5f;
 
     // Color botones
-    public static Color colorNormal = new Color(255, 255, 255, 255);
-    public static Color colorEnCursor = new Color(200, 200, 200, 250);
-    public static Color colorEnClic = new Color(155, 155, 155, 250);
-    public static Color colorBloqueado = new Color(155, 155, 155, 155);
+    public static Color colorNormal = new(255, 255, 255, 255);
+    public static Color colorEnCursor = new(200, 200, 200, 250);
+    public static Color colorEnClic = new(155, 155, 155, 250);
+    public static Color colorBloqueado = new(155, 155, 155, 155);
 
     // Paleta interfaz
     // Negro    #FA191919
@@ -109,10 +109,11 @@ public static class Constantes
         global
     }
 
-    public enum EntradasRed
+    public enum DataRed
     {
         nada,
-        conexión,
+        conectar,
+        iniciarPartida,
         cerrar,
 
         // Elección
@@ -133,7 +134,8 @@ public static class Constantes
         pausa,  // pendiente
         disparo,  // pendiente
         texto,  // pendiente
-        físicas
+        físicas,
+        cañón
     }
 
     public static Fortaleza GenerarFortalezaVacía()

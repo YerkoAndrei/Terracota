@@ -21,7 +21,7 @@ public class SistemaRed : AsyncScript
     private static string IPConectada;
 
     // GLobal
-    private static HttpClient cliente = new HttpClient();
+    private static readonly HttpClient cliente = new HttpClient();
 
     // UDP P2P
     private static UdpClient udp;
@@ -43,8 +43,9 @@ public class SistemaRed : AsyncScript
 
         ObtenerIPs();
         ActualizarConfiguración();
+        EscucharUDP();
 
-        // PENDIENTE: cambiar a Hz?
+        // PENDIENTE: cambiar a Tick / Hz?
         while (Game.IsRunning)
         {
             if (conectado && jugando && tipoJugador == TipoJugador.anfitrión)
@@ -56,12 +57,16 @@ public class SistemaRed : AsyncScript
                     await ActualizarFísica();
                 }
             }
+            else if (conectado && jugando && tipoJugador == TipoJugador.huesped)
+            {
+                cuadroActual++;
+                if (cuadroActual >= velocidadRed)
+                {
+                    cuadroActual = 0;
+                    await ActualizarCañón();
+                }
+            }
             await Script.NextFrame();
-        }
-
-        while (true)
-        {
-            await RecibirData();
         }
     }
 
@@ -106,12 +111,10 @@ public class SistemaRed : AsyncScript
         }
     }
 
-    public static async Task<string> ConectarDispositivo(string ip, TipoConexión tipoConexión, TipoJugador conectarComo, bool iniciar)
+    public static async Task<string> ConectarDispositivo(string ip, TipoConexión tipoConexión, TipoJugador conectarLocalComo, bool contactar)
     {
         try
         {
-            var correcto = false;
-
             // Conexión
             if (udp != null)
                 udp.Close();
@@ -120,14 +123,12 @@ public class SistemaRed : AsyncScript
             remoto = new IPEndPoint(IPAddress.Parse(ip), puerto);
             udp.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
 
-            // Solo anfitrión (automático)
-            //if(conectarComo == TipoJugador.anfitrión)
-            //    udp.Client.Bind(remoto);
-
             udp.Connect(ip, puerto);
 
-            if (iniciar)
+            var correcto = false;
+            if (contactar)
             {
+                // Datos conexión
                 var miIP = string.Empty;
                 switch (tipoConexión)
                 {
@@ -139,8 +140,9 @@ public class SistemaRed : AsyncScript
                         break;
                 }
 
-                var conectarRemotoComo = TipoJugador.nada;
-                switch (conectarComo)
+                // Contrario en remoto
+                var conectarRemotoComo = conectarLocalComo;
+                switch (conectarLocalComo)
                 {
                     case TipoJugador.anfitrión:
                         conectarRemotoComo = TipoJugador.huesped;
@@ -150,21 +152,20 @@ public class SistemaRed : AsyncScript
                         break;
                 }
 
-                var data = new Conexión
+                var conexión = new Conexión
                 {
                     IP = miIP,
                     TipoConexión = tipoConexión,
                     ConectarComo = conectarRemotoComo
                 };
-                correcto = await EnviarData(EntradasRed.conexión, data);
+
+                correcto = await EnviarData(DataRed.conectar, conexión);
             }
 
-            if (correcto || !iniciar)
+            if (correcto || !contactar)
             {
-                MarcarDispositivo(conectarComo);
+                MarcarDispositivo(conectarLocalComo);
                 IPConectada = ip;
-
-                SistemaEscenas.CambiarEscena(Escenas.remoto);
                 return string.Empty;
             }
             else
@@ -177,7 +178,7 @@ public class SistemaRed : AsyncScript
         }
     }
 
-    public static async Task<bool> EnviarData(EntradasRed entrada, dynamic data = null)
+    public static async Task<bool> EnviarData(DataRed entrada, dynamic data = null)
     {
         // Serializa data
         var json = string.Empty;
@@ -204,9 +205,17 @@ public class SistemaRed : AsyncScript
         }
     }
 
+    private static async void EscucharUDP()
+    {
+        while (true)
+        {
+            await RecibirData();
+        }
+    }
+
     private static async Task RecibirData()
     {
-        string buffer = string.Empty;
+        string buffer;
         try
         {
             var resultado = await udp.ReceiveAsync();
@@ -221,38 +230,41 @@ public class SistemaRed : AsyncScript
             return;
 
         var data = JsonConvert.DeserializeObject<Dictionary<int, string>>(buffer);
-        var entrada = (EntradasRed)data.Keys.Single();
+        var entrada = (DataRed)data.Keys.Single();
 
         switch(entrada)
         {
-            case EntradasRed.conexión:
+            case DataRed.conectar:
                 var conexión = JsonConvert.DeserializeObject<Conexión>(data.Values.Single());
                 MostrarInvitación(conexión);
                 break;
-            case EntradasRed.cerrar:
-                CerrarConexión();
+            case DataRed.iniciarPartida:
+                IniciarPartida(false);
                 break;
-            case EntradasRed.anfitriónListo:
+            case DataRed.cerrar:
+                CerrarConexión(false);
+                break;
+            case DataRed.anfitriónListo:
                 controlador.RevisarJugadoresListos(TipoJugador.anfitrión);
                 break;
-            case EntradasRed.huespedListo:
+            case DataRed.huespedListo:
                 controlador.RevisarJugadoresListos(TipoJugador.huesped);
                 break;
-            case EntradasRed.comenzarRuleta:
+            case DataRed.comenzarRuleta:
                 var toques = int.Parse(data.Values.Single());
                 ComenzarRuleta(toques);
                 break;
-            case EntradasRed.finalizarRuleta:
+            case DataRed.finalizarRuleta:
                 var ganaAnfitrión = bool.Parse(data.Values.Single());
                 FinalizarRuleta(ganaAnfitrión);
                 break;
-            case EntradasRed.turnoAnfitrión:
-                controlador.CambiarTurno(TipoJugador.anfitrión);
+            case DataRed.turnoAnfitrión:
+                controlador.ActualizarTurno(TipoJugador.anfitrión);
                 break;
-            case EntradasRed.turnoHuesped:
-                controlador.CambiarTurno(TipoJugador.huesped);
+            case DataRed.turnoHuesped:
+                controlador.ActualizarTurno(TipoJugador.huesped);
                 break;
-            case EntradasRed.cargarFortaleza:
+            case DataRed.cargarFortaleza:
                 var fortaleza = JsonConvert.DeserializeObject<Fortaleza>(data.Values.Single());
                 switch(tipoJugador)
                 {
@@ -264,7 +276,7 @@ public class SistemaRed : AsyncScript
                         break;
                 }
                 break;
-            case EntradasRed.pausa:
+            case DataRed.pausa:
                 switch (tipoJugador)
                 {
                     case TipoJugador.anfitrión:
@@ -275,7 +287,7 @@ public class SistemaRed : AsyncScript
                         break;
                 }
                 break;
-            case EntradasRed.disparo:
+            case DataRed.disparo:
                 switch (tipoJugador)
                 {
                     case TipoJugador.anfitrión:
@@ -286,21 +298,39 @@ public class SistemaRed : AsyncScript
                         break;
                 }
                 break;
-            case EntradasRed.texto:
+            case DataRed.texto:
                 var texto = JsonConvert.DeserializeObject<Texto>(data.Values.Single());
                 controlador.ActualizarTexto(texto);
                 break;
-            case EntradasRed.físicas:
+            case DataRed.físicas:
                 var físicas = JsonConvert.DeserializeObject<Físicas>(data.Values.Single());
                 controlador.ActualizarFísicas(físicas);
+                break;
+            case DataRed.cañón:
+                var cañón = JsonConvert.DeserializeObject<RotaciónCañón>(data.Values.Single());
+                switch (tipoJugador)
+                {
+                    case TipoJugador.anfitrión:
+                        controlador.ActualizarCañón(cañón, TipoJugador.huesped);
+                        break;
+                    case TipoJugador.huesped:
+                        controlador.ActualizarCañón(cañón, TipoJugador.anfitrión);
+                        break;
+                }
                 break;
         }
     }
 
-    private async Task ActualizarFísica()
+    private static async Task ActualizarFísica()
     {
         var data = controlador.ObtenerFísicas();
-        await EnviarData(EntradasRed.físicas, data);
+        await EnviarData(DataRed.físicas, data);
+    }
+
+    private static async Task ActualizarCañón()
+    {
+        var data = controlador.ObtenerRotaciónCañón();
+        await EnviarData(DataRed.cañón, data);
     }
 
     private static void MostrarInvitación(Conexión conexión)
@@ -308,6 +338,26 @@ public class SistemaRed : AsyncScript
         // Obtención interfaz
         var interfaz = instancia.SceneSystem.SceneInstance.RootScene.Children[0].Entities.Where(o => o.Get<InterfazMenú>() != null).FirstOrDefault().Get<InterfazMenú>();
         interfaz.MostrarInvitación(conexión);
+    }
+
+    public static async void IniciarPartida(bool contactar)
+    {
+        if (contactar)
+            await EnviarData(DataRed.iniciarPartida);
+
+        SistemaEscenas.CambiarEscena(Escenas.remoto);
+    }
+
+    public static async void CerrarConexión(bool contactar)
+    {
+        if (contactar)
+            await EnviarData(DataRed.cerrar);
+
+        ActualizarConfiguración();
+        MarcarDispositivo(TipoJugador.nada);
+        IPConectada = string.Empty;
+
+        SistemaEscenas.CambiarEscena(Escenas.menú);
     }
 
     private static void ComenzarRuleta(int toques)
@@ -323,16 +373,7 @@ public class SistemaRed : AsyncScript
         var elección = instancia.SceneSystem.SceneInstance.RootScene.Children[0].Entities.Where(o => o.Get<InterfazElecciónRemota>() != null).FirstOrDefault().Get<InterfazElecciónRemota>();
         elección.ComenzarPartida(ganaAnfitrión);
     }
-
-    private static void CerrarConexión()
-    {
-        ActualizarConfiguración();
-        MarcarDispositivo(TipoJugador.nada);
-        IPConectada = string.Empty;
-
-        SistemaEscenas.CambiarEscena(Escenas.menú);
-    }
-    
+        
     public static void MarcarDispositivo(TipoJugador _tipoJugador)
     {
         tipoJugador = _tipoJugador;

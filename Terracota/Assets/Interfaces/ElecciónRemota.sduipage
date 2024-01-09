@@ -29,6 +29,20 @@ Hierarchy:
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
         -   UIElement: !ImageElement
+                Id: 09084828-48e0-4d1f-8c7c-32d73a3cfe22
+                DependencyProperties:
+                    1e4b0f4f67b356f6e6f6d5aa320eb685~Panel.ZIndexPropertyKey: 0
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: imgHuespedListo
+                Source: !SpriteFromTexture
+                    Texture: "544f8ec8-cb8e-46d6-8873-ba73ab7cef86:Texturas/Interfaz/BaseOctágono"
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 240, G: 220, B: 160, A: 240}
+        -   UIElement: !ImageElement
                 Id: 0b56fdf4-59fc-4633-8b7e-2fd55eca94bc
                 DependencyProperties:
                     a95804a35b986a4a111f06ca2e7121f9~Panel.ZIndexPropertyKey: 1
@@ -121,7 +135,7 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name*: txtVolver
-                Text: txt
+                Text*: Volver
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
                 TextSize: 25.0
                 TextColor: {R: 25, G: 20, B: 20, A: 255}
@@ -268,7 +282,7 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name*: txtComenzar
-                Text: txt
+                Text*: Comenzar
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
                 TextSize: 25.0
                 TextColor: {R: 25, G: 20, B: 20, A: 255}
@@ -428,6 +442,25 @@ Hierarchy:
                     Texture: 7da5de62-4f01-42ef-a405-b12036a85127:Texturas/Interfaz/FlechaSolaIzquierda
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 240, G: 240, B: 100, A: 255}
+        -   UIElement: !Grid
+                Id: 58626f18-6cec-4221-a32f-77b9f5e5a593
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 20.0
+                Height: 20.0
+                HorizontalAlignment: Right
+                VerticalAlignment: Top
+                Margin: {Top: 80.0, Right: 455.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: "PreparaciónHuesped"
+                Children:
+                    9f2d5d979862dfcb999b30a23ea73119: !ImageElement ref!! 6ac98896-40a0-4f55-9641-f46cc568e5ad
+                    8beb10b6de1645440dad7c5b67bf397b: !ImageElement ref!! 09084828-48e0-4d1f-8c7c-32d73a3cfe22
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
         -   UIElement: !ImageElement
                 Id: 5f728285-5a44-466e-9533-f8b73d1923e8
                 DependencyProperties: {}
@@ -492,6 +525,19 @@ Hierarchy:
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 160, G: 60, B: 0, A: 255}
                 StretchType: Fill
+        -   UIElement: !ImageElement
+                Id: 68b2f7aa-2965-4a4f-b3db-01129e08b621
+                DependencyProperties:
+                    a95804a35b986a4a111f06ca2e7121f9~Panel.ZIndexPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Source: !SpriteFromTexture
+                    Texture: "ad498f2e-9e92-46b3-a8ef-9b75cf038835:Texturas/Interfaz/Octágono"
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 160, G: 60, B: 0, A: 255}
         -   UIElement: !Grid
                 Id: 68c1e2a8-f568-49f8-93c9-789a14de9ded
                 DependencyProperties: {}
@@ -512,6 +558,19 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
+        -   UIElement: !ImageElement
+                Id: 6ac98896-40a0-4f55-9641-f46cc568e5ad
+                DependencyProperties:
+                    a95804a35b986a4a111f06ca2e7121f9~Panel.ZIndexPropertyKey: 1
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Source: !SpriteFromTexture
+                    Texture: "ad498f2e-9e92-46b3-a8ef-9b75cf038835:Texturas/Interfaz/Octágono"
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 160, G: 60, B: 0, A: 255}
         -   UIElement: !ImageElement
                 Id: 6d9e45df-5e0a-4920-8899-e4e35c3a04a2
                 DependencyProperties:
@@ -617,7 +676,7 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name*: txtAleatorio
-                Text: txt
+                Text*: Aleatorio
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
                 TextSize: 25.0
                 TextColor: {R: 25, G: 20, B: 20, A: 255}
@@ -746,6 +805,20 @@ Hierarchy:
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 240, G: 220, B: 160, A: 240}
         -   UIElement: !ImageElement
+                Id: 9b05ee90-ec43-4bd3-97c6-21904a9225b3
+                DependencyProperties:
+                    1e4b0f4f67b356f6e6f6d5aa320eb685~Panel.ZIndexPropertyKey: 0
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: "imgAnfitriónListo"
+                Source: !SpriteFromTexture
+                    Texture: "544f8ec8-cb8e-46d6-8873-ba73ab7cef86:Texturas/Interfaz/BaseOctágono"
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 240, G: 220, B: 160, A: 240}
+        -   UIElement: !ImageElement
                 Id: a07fdbe5-4fdd-4f99-a769-03288f5ba58f
                 DependencyProperties:
                     c8d9e2b9b16c08e6df30136f8de95b7b~Panel.ZIndexPropertyKey: 1
@@ -775,7 +848,9 @@ Hierarchy:
                 Children:
                     688e6c866225936f39d37dc817abdb67: !Grid ref!! 68c1e2a8-f568-49f8-93c9-789a14de9ded
                     668d3fb4c05a896bfd5b1486bcdfadd6: !Grid ref!! 4c97a2a6-429c-41f1-b2fb-b464e42ec03e
+                    5d27664d941c6e7dfb739fc3251775ad: !Grid ref!! f131bfdd-3c08-4a3b-8c20-ef42e6c65625
                     abf47ae9ea80f1e2494b90f8a478fba7: !Grid ref!! d8d9a944-d7c0-4399-b416-ec718c96b386
+                    63723dd7f479b2683486c83d2f91b69b: !Grid ref!! 58626f18-6cec-4221-a32f-77b9f5e5a593
                     4184caa8b584523cad4dc2df023b6a13: !Grid ref!! 06475190-3035-416b-a8b1-2fa5ac2fec65
                     31786bff7387ff6e5385e190f7d1e378: !Grid ref!! ba803c05-814c-49a4-a149-69975f5d645c
                     db65d2c938015b2d126fb2804aa698c7: !Grid ref!! f66c5a63-c343-4126-b283-30402f2273e3
@@ -1271,6 +1346,25 @@ Hierarchy:
                     Texture: "544f8ec8-cb8e-46d6-8873-ba73ab7cef86:Texturas/Interfaz/BaseOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 240, G: 220, B: 160, A: 240}
+        -   UIElement: !Grid
+                Id: f131bfdd-3c08-4a3b-8c20-ef42e6c65625
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 20.0
+                Height: 20.0
+                HorizontalAlignment: Left
+                VerticalAlignment: Top
+                Margin: {Left: 455.0, Top: 80.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: "PreparaciónAnfitrión"
+                Children:
+                    9f2d5d979862dfcb999b30a23ea73119: !ImageElement ref!! 68b2f7aa-2965-4a4f-b3db-01129e08b621
+                    8beb10b6de1645440dad7c5b67bf397b: !ImageElement ref!! 9b05ee90-ec43-4bd3-97c6-21904a9225b3
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
         -   UIElement: !ImageElement
                 Id: f1e4410c-62a1-4fa9-a3df-ac59841b0489
                 DependencyProperties:

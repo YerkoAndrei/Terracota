@@ -189,12 +189,12 @@ public class ControladorCañón : SyncScript
     // Red
     public Quaternion ObtenerRotaciónCañón()
     {
-        return soporte.Transform.Rotation;
+        return cañón.Transform.Rotation;
     }
 
     public Quaternion ObtenerRotaciónSoporte()
     {
-        return cañón.Transform.Rotation;
+        return soporte.Transform.Rotation;
     }
 
     public void ActualizarRotación(Quaternion _cañón, Quaternion _soporte)

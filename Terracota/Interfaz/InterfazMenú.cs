@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.UI;
@@ -15,6 +16,8 @@ using static Constantes;
 public class InterfazMenú : StartupScript
 {
     public Entity rotador;
+    public Color colorEspera;
+    public Color colorActivo;
 
     private static Quaternion últimaRotación = Quaternion.Identity;
 
@@ -29,6 +32,11 @@ public class InterfazMenú : StartupScript
     private Grid btnSí;
     private Grid btnNo;
 
+    private Grid popupEsperando;
+    private Grid animEsperando;
+    private ImageElement imgEsperando;
+    private TextBlock txtEsperando;
+
     private Conexión conexiónPendiente;
     private TextBlock txtDatosInvitación;
 
@@ -38,6 +46,7 @@ public class InterfazMenú : StartupScript
     private Grid btnComoHuesped;
 
     private bool animando;
+    private bool animandoEspera;
 
     public override void Start()
     {
@@ -55,24 +64,17 @@ public class InterfazMenú : StartupScript
         ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("btnCréditos"), EnClicCréditos);
         ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("PanelOscuroRemoto"), CerrarPaneles);
 
-        // Conexiones
+        // Conexión
         gridRemoto = página.FindVisualChildOfType<Grid>("ConexiónRemota");
         animRemoto = página.FindVisualChildOfType<Grid>("animRemoto");
         gridRemoto.Visibility = Visibility.Hidden;
 
-        popupInvitación = página.FindVisualChildOfType<Grid>("PopupInvitación");
-        animInvitación = página.FindVisualChildOfType<Grid>("animInvitación");
-        txtDatosInvitación = página.FindVisualChildOfType<TextBlock>("txtDatosInvitación");
-        btnSí = página.FindVisualChildOfType<Grid>("btnSí");
-        btnNo = página.FindVisualChildOfType<Grid>("btnNo");
-
-        ConfigurarBotón(btnNo, () => { CerrarInvitación(true); });
-        ConfigurarBotón(btnNo, () => { CerrarInvitación(false); });
-        popupInvitación.Visibility = Visibility.Hidden;
+        txtConexiónRemota = página.FindVisualChildOfType<EditText>("txtConexiónRemota");
+        txtConexiónRemota.TextChanged += VerificarFuente;
 
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnRemotoVolver"), CerrarPaneles);
 
-        // P2P
+        // Remoto
         txtConexiónRemota = página.FindVisualChildOfType<EditText>("txtConexiónRemota");
         txtConexiónRemota.Text = string.Empty;
 
@@ -84,8 +86,24 @@ public class InterfazMenú : StartupScript
         ConfigurarBotón(btnComoAnfitrión, () => { EnClicConectarRemoto(TipoJugador.anfitrión); });
         ConfigurarBotón(btnComoHuesped, () => { EnClicConectarRemoto(TipoJugador.huesped); });
 
-        txtConexiónRemota = página.FindVisualChildOfType<EditText>("txtConexiónRemota");
-        txtConexiónRemota.TextChanged += VerificarFuente;
+        // Invitación
+        popupInvitación = página.FindVisualChildOfType<Grid>("PopupInvitación");
+        animInvitación = página.FindVisualChildOfType<Grid>("animInvitación");
+        txtDatosInvitación = página.FindVisualChildOfType<TextBlock>("txtDatosInvitación");
+        btnSí = página.FindVisualChildOfType<Grid>("btnSí");
+        btnNo = página.FindVisualChildOfType<Grid>("btnNo");
+
+        ConfigurarBotón(btnSí, () => { CerrarInvitación(true); });
+        ConfigurarBotón(btnNo, () => { CerrarInvitación(false); });
+        popupInvitación.Visibility = Visibility.Hidden;
+
+        // Esperando
+        popupEsperando = página.FindVisualChildOfType<Grid>("PopupEsperando");
+        animEsperando = página.FindVisualChildOfType<Grid>("animEsperando");
+        txtEsperando = página.FindVisualChildOfType<TextBlock>("txtEsperando");
+        imgEsperando = página.FindVisualChildOfType<ImageElement>("imgEsperando");
+
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnCancelarEsperando"), () => { SistemaRed.CerrarConexión(true); });
 
         // Recuerda última rotación
         rotador.Transform.Rotation = últimaRotación;
@@ -162,11 +180,40 @@ public class InterfazMenú : StartupScript
         // Conexión
         var resultado = await SistemaRed.ConectarDispositivo(txtConexiónRemota.Text, tipoConexión, tipoJugador, true);
 
-        if (!string.IsNullOrEmpty(resultado))
+        if (string.IsNullOrEmpty(resultado))
+        {
+            // Esperando
+            txtEsperando.Text = string.Format(SistemaTraducción.ObtenerTraducción("esperando"), txtConexiónRemota.Text);
+
+            SistemaAnimación.AnimarElemento(animInvitación, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, () =>
+            {
+                popupInvitación.Visibility = Visibility.Hidden;
+            });
+
+            animandoEspera = true;
+            popupEsperando.Visibility = Visibility.Visible;
+            SistemaAnimación.AnimarElemento(animEsperando, 0.2f, true, Direcciones.abajo, TipoCurva.rápida,  AnimarEspera);
+        }
+        else
         {
             txtErrorConexión.Text = resultado;
             BloquearBotón(btnComoAnfitrión, false);
             BloquearBotón(btnComoHuesped, false);
+        }
+    }
+
+    public async void AnimarEspera()
+    {
+        var espera = true;
+        while(!SistemaRed.ObtenerJugando() || !animandoEspera)
+        {
+            if (espera)
+                imgEsperando.Color = colorActivo;
+            else
+                imgEsperando.Color = colorEspera;
+
+            await Task.Delay(500);
+            espera = !espera;
         }
     }
 
@@ -195,7 +242,9 @@ public class InterfazMenú : StartupScript
             var resultado =  await SistemaRed.ConectarDispositivo(conexiónPendiente.IP, conexiónPendiente.TipoConexión, conexiónPendiente.ConectarComo, false);
 
             // Abre panel y muestra error
-            if (!string.IsNullOrEmpty(resultado))
+            if (string.IsNullOrEmpty(resultado))
+                SistemaRed.IniciarPartida(true);
+            else
             {
                 txtErrorConexión.Text = resultado;
                 txtConexiónRemota.Text = conexiónPendiente.IP;
@@ -203,17 +252,7 @@ public class InterfazMenú : StartupScript
             }
         }
         else
-        {
-            BloquearBotón(btnSí, false);
-            BloquearBotón(btnNo, false);
-
-            conexiónPendiente = null;
-            SistemaAnimación.AnimarElemento(animInvitación, 0.2f, true, Direcciones.arriba, TipoCurva.rápida, () =>
-            {
-                popupInvitación.Visibility = Visibility.Hidden;
-                EnClicRemoto();
-            });
-        }
+            SistemaRed.CerrarConexión(true);
     }
 
     private void CerrarPaneles()

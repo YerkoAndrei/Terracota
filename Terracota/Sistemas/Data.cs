@@ -18,13 +18,18 @@ public class Texto
 
 public class Físicas
 {
-    public Quaternion TuboCañón { get; set; }
-    public Quaternion SoporteCañón { get; set; }
     /*
     public Vector3 PosiciónBola { get; set; }
     public Quaternion RotaciónBola { get; set; }
     */
+    public RotaciónCañón RotaciónCañón { get; set; }    
     public List<BloqueFísico> Bloques { get; set; }
+}
+
+public class RotaciónCañón
+{
+    public Quaternion TuboCañón { get; set; }
+    public Quaternion SoporteCañón { get; set; }
 }
 
 public class BloqueFísico

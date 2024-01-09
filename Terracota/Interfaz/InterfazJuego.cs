@@ -198,6 +198,9 @@ public class InterfazJuego : SyncScript
         if (animando)
             return;
 
+        if (SistemaRed.ObtenerJugando())
+            SistemaRed.CerrarConexión(true);
+
         SistemaSonido.CambiarMúsica(false);
         SistemaEscenas.CambiarEscena(Escenas.menú);
     }

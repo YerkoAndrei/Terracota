@@ -53,6 +53,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         {
             case TipoJugador.anfitrión:
                 cañónAnfitrión.Iniciar(interfaz, TipoJugador.anfitrión);
+                cañónHuesped.Iniciar(interfaz, TipoJugador.huesped);
                 break;
             case TipoJugador.huesped:
                 cañónHuesped.Iniciar(interfaz, TipoJugador.huesped);
@@ -121,7 +122,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
             fortalezaHuesped.Inicializar(fortaleza, false);
 
         // Remoto
-        _ = SistemaRed.EnviarData(EntradasRed.cargarFortaleza, fortaleza);
+        _ = SistemaRed.EnviarData(DataRed.cargarFortaleza, fortaleza);
     }
 
     public void ComenzarPartida(bool ganaAnfitrión)
@@ -150,12 +151,12 @@ public class ControladorPartidaRemota : SyncScript, IPartida
             if (ganaAnfitrión)
             {
                 turnoJugador = TipoJugador.anfitrión;
-                _ = SistemaRed.EnviarData(EntradasRed.turnoAnfitrión);
+                _ = SistemaRed.EnviarData(DataRed.turnoAnfitrión);
             }
             else
             {
                 turnoJugador = TipoJugador.huesped;
-                _ = SistemaRed.EnviarData(EntradasRed.turnoHuesped);
+                _ = SistemaRed.EnviarData(DataRed.turnoHuesped);
             }
         }
 
@@ -186,7 +187,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         controladorCámara.ActivarEfectoDisparo();
         SistemaSonido.SonarCañonazo();
 
-        _ = SistemaRed.EnviarData(EntradasRed.disparo);
+        _ = SistemaRed.EnviarData(DataRed.disparo);
 
         if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
             cañónAnfitrión.Disparar(proyectilActual, multiplicador);
@@ -224,26 +225,34 @@ public class ControladorPartidaRemota : SyncScript, IPartida
             return;
         }
 
-        if (turnoJugador == TipoJugador.anfitrión)
+        // Envia cambio
+        if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
         {
-            turnoJugador = TipoJugador.huesped;
-            _ = SistemaRed.EnviarData(EntradasRed.turnoHuesped);
-        }
-        else
-        {
-            turnoJugador = TipoJugador.anfitrión;
-            _ = SistemaRed.EnviarData(EntradasRed.turnoAnfitrión);
+            if (turnoJugador == TipoJugador.anfitrión)
+                _ = SistemaRed.EnviarData(DataRed.turnoHuesped);
+            else
+                _ = SistemaRed.EnviarData(DataRed.turnoAnfitrión);
         }
 
-        interfaz.CambiarInterfaz(turnoJugador, proyectilActual);
-
-        // rotar solo luz
+        // Rota solo luz
         //controladorCámara.RotarYCámara(180, cambiarHaciaDerecha, null, luzDireccional);
+
+        // Actualiza turno
+        if (turnoJugador == TipoJugador.anfitrión)
+            ActualizarTurno(TipoJugador.huesped);
+        else
+            ActualizarTurno(TipoJugador.anfitrión);
+    }
+
+    public void ActualizarTurno(TipoJugador _turnoJugador)
+    {
+        turnoJugador = _turnoJugador;
 
         // Suma potencia cada de 4 turnos
         cantidadTurnos++;
         SumarPotencia();
 
+        interfaz.CambiarInterfaz(turnoJugador, proyectilActual);
         interfaz.ActualizarTurno(cantidadTurnos, multiplicador);
     }
 
@@ -310,11 +319,6 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         elección.MostrarNombreFortaleza(fortaleza.Nombre, tipoJugador);
     }
 
-    public void CambiarTurno(TipoJugador _turnoJugador)
-    {
-        turnoJugador = _turnoJugador;
-    }
-
     public void ActivarDisparo(TipoJugador tipoJugador)
     {
         SistemaSonido.SonarCañonazo();
@@ -337,6 +341,8 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
     public bool RevisarJugadoresListos(TipoJugador tipoJugador)
     {
+        elección.MostrarJugadorListo(tipoJugador);
+
         if (tipoJugador == TipoJugador.anfitrión)
             anfitriónListo = true;
         else
@@ -356,17 +362,8 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         físicas.Bloques = new List<BloqueFísico>();
 
         // Cañón
-        switch (SistemaRed.ObtenerTipoJugador())
-        {
-            case TipoJugador.anfitrión:
-                físicas.SoporteCañón = cañónHuesped.ObtenerRotaciónSoporte();
-                físicas.TuboCañón = cañónHuesped.ObtenerRotaciónCañón();
-                break;
-            case TipoJugador.huesped:
-                físicas.SoporteCañón = cañónAnfitrión.ObtenerRotaciónSoporte();
-                físicas.TuboCañón = cañónAnfitrión.ObtenerRotaciónCañón();
-                break;
-        }
+        if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
+            físicas.RotaciónCañón = ObtenerRotaciónCañón();
 
         // Bloques
         foreach (var bloque in bloques)
@@ -380,20 +377,30 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     public void ActualizarFísicas(Físicas físicas)
     {
         // Cañón
-        switch (SistemaRed.ObtenerTipoJugador())
-        {
-            case TipoJugador.anfitrión:
-                 cañónHuesped.ActualizarRotación(físicas.TuboCañón, físicas.SoporteCañón);
-                break;
-            case TipoJugador.huesped:
-                cañónAnfitrión.ActualizarRotación(físicas.TuboCañón, físicas.SoporteCañón);
-                break;
-        }
+        if (SistemaRed.ObtenerTipoJugador() == TipoJugador.huesped)
+            ActualizarCañón(físicas.RotaciónCañón, TipoJugador.anfitrión);
 
         // Bloques
         for (int i = 0; i < físicas.Bloques.Count; i++)
         {
             bloques[i].Posicionar(físicas.Bloques[i].Posición, físicas.Bloques[i].Rotación);
         }
+    }
+
+    public RotaciónCañón ObtenerRotaciónCañón()
+    {
+        var cañón = new RotaciónCañón();
+        cañón.SoporteCañón = cañónHuesped.ObtenerRotaciónSoporte();
+        cañón.TuboCañón = cañónHuesped.ObtenerRotaciónCañón();
+
+        return cañón;
+    }
+
+    public void ActualizarCañón(RotaciónCañón rotaciónCañón, TipoJugador tipoJugador)
+    {
+        if (tipoJugador == TipoJugador.anfitrión)
+            cañónAnfitrión.ActualizarRotación(rotaciónCañón.TuboCañón, rotaciónCañón.SoporteCañón);
+        else
+            cañónHuesped.ActualizarRotación(rotaciónCañón.TuboCañón, rotaciónCañón.SoporteCañón);
     }
 }
