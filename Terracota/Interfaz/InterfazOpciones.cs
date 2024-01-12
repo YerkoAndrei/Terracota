@@ -168,7 +168,7 @@ public class InterfazOpciones : StartupScript
         var número = int.Parse(Regex.Replace(txtPuerto.Text, regex, ""));
 
         // Excepciones y límites
-        if (número == 0 || número > 60000)
+        if (número < 1 || número > 65535)
             número = 0;
 
         txtPuerto.Text = número.ToString();
