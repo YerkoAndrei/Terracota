@@ -136,7 +136,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         // Turno inicial
         if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
         {
-            SistemaRed.ActivarActualizaciónFísicas(true);
+            SistemaRed.ActivarActualizaciónRed(true);
 
             if (ganaAnfitrión)
             {

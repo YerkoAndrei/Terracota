@@ -6,13 +6,13 @@ using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
 using System.Net.Http;
+using System.Timers;
 using Stride.Engine;
 using Newtonsoft.Json;
-
 namespace Terracota;
 using static Constantes;
 
-public class SistemaRed : AsyncScript
+public class SistemaRed : StartupScript
 {
     private static TipoJugador tipoJugador;
 
@@ -33,37 +33,35 @@ public class SistemaRed : AsyncScript
     private static SistemaRed instancia;
     private static ControladorPartidaRemota controlador;
 
-    public override async Task Execute()
+    private static Timer temporizador;
+
+    public override void Start()
     {
         instancia = this;
-        int cuadroActual = 0;
 
         ObtenerIPs();
         ActualizarConfiguración();
-        EscucharUDP();
 
-        // PENDIENTE: cambiar a Tick / Hz?
-        while (Game.IsRunning)
+        EscucharUDP();
+    }
+
+    private static void CrearTemporizador()
+    {
+        temporizador = new Timer(1000 / velocidadRed);
+        temporizador.Elapsed += ActualizarRed;
+        temporizador.AutoReset = true;
+        temporizador.Enabled = true;
+        temporizador.Start();
+    }
+
+    private static async void ActualizarRed(object sender, ElapsedEventArgs e)
+    {
+        if (conectado && jugando)
         {
-            if (conectado && jugando && tipoJugador == TipoJugador.anfitrión)
-            {
-                cuadroActual++;
-                if (cuadroActual >= velocidadRed)
-                {
-                    cuadroActual = 0;
-                    await ActualizarFísica();
-                }
-            }
-            else if (conectado && jugando && tipoJugador == TipoJugador.huesped)
-            {
-                cuadroActual++;
-                if (cuadroActual >= velocidadRed)
-                {
-                    cuadroActual = 0;
-                    await ActualizarCañón();
-                }
-            }
-            await Script.NextFrame();
+            if(tipoJugador == TipoJugador.anfitrión)
+                await ActualizarFísica();
+            else if (tipoJugador == TipoJugador.huesped)
+                await ActualizarCañón();
         }
     }
 
@@ -384,9 +382,10 @@ public class SistemaRed : AsyncScript
         conectado = true;
     }
 
-    public static void ActivarActualizaciónFísicas(bool activar)
+    public static void ActivarActualizaciónRed(bool activar)
     {
         jugando = activar;
+        CrearTemporizador();
     }
 
     public static string ObtenerIP(TipoConexión tipoConexión)
