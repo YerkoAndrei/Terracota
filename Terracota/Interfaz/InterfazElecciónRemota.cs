@@ -246,8 +246,7 @@ public class InterfazElecciónRemota : StartupScript
             _ = SistemaRed.EnviarData(DataRed.anfitriónListo);
 
             // Anfitrión comprueba que estén listos
-            if (controladorPartida.RevisarJugadoresListos(SistemaRed.ObtenerTipoJugador()))
-                ComenzarRuleta(0);
+            controladorPartida.RevisarJugadoresListos(SistemaRed.ObtenerTipoJugador());
         }
         else
             _ = SistemaRed.EnviarData(DataRed.huespedListo);

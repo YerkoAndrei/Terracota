@@ -338,7 +338,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
     }
 
-    public bool RevisarJugadoresListos(TipoJugador tipoJugador)
+    public void RevisarJugadoresListos(TipoJugador tipoJugador)
     {
         elección.MostrarJugadorListo(tipoJugador);
 
@@ -347,12 +347,12 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         else
             huespedListo = true;
 
-        if (tipoJugador == TipoJugador.anfitrión && huespedListo)
-            return true;
-        else if (tipoJugador == TipoJugador.huesped && anfitriónListo)
-            return true;
-        else
-            return false;
+        if ((tipoJugador == TipoJugador.anfitrión && huespedListo) ||
+            (tipoJugador == TipoJugador.huesped && anfitriónListo))
+        {
+            if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
+                elección.ComenzarRuleta(0);
+        }
     }
 
     public Físicas ObtenerFísicas()
