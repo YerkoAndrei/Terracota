@@ -252,11 +252,10 @@ public class InterfazElecciónRemota : StartupScript
             _ = SistemaRed.EnviarData(DataRed.huespedListo);
     }
 
-    public async void ComenzarRuleta(int toques)
+    public async void ComenzarRuleta()
     {
-        // En huesped, toques vienen desde anfitrión
-        if(toques == 0)
-            toques = RangoAleatorio(40, 51);
+        // Toques aleatorios deciden quién empeiza
+        var toques = RangoAleatorio(40, 51);
 
         ApagarRuleta();
         esperandoRuleta = true;
@@ -265,7 +264,7 @@ public class InterfazElecciónRemota : StartupScript
 
         if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
         {
-            _ = SistemaRed.EnviarData(DataRed.comenzarRuleta, toques);
+            _ = SistemaRed.EnviarData(DataRed.comenzarRuleta);
 
             controladorPartida.RotarXCámara(4.5f);
             await MoverRuletaAnfitrión(toques);
@@ -276,7 +275,7 @@ public class InterfazElecciónRemota : StartupScript
         else
         {
             controladorPartida.RotarXCámara(4.5f);
-            await MoverRuletaHuesped(toques);
+            await MoverRuletaHuesped();
         }
     }
 
@@ -329,28 +328,24 @@ public class InterfazElecciónRemota : StartupScript
         await Task.Delay(500);
     }
 
-    private async Task MoverRuletaHuesped(int toques)
+    private async Task MoverRuletaHuesped()
     {
         var apagado = true;
-        int diezAntes = toques - 10;
+        var toques = 40;
         int toqueActual = 0;
-        int delay = 45;
+        int delay = 100;
 
         while (toqueActual < toques && esperandoRuleta && !partidaCancelada)
         {
-            toqueActual++;
-
             // Cambia colores
             if (apagado)
                 PrenderRuleta();
             else
                 ApagarRuleta();
 
+            toqueActual++;
             apagado = !apagado;
-
-            // Últimos van más lento
-            if (toqueActual >= diezAntes)
-                delay += 40;
+            delay += 10;
 
             SistemaSonido.SonarRuleta();
             await Task.Delay(delay);

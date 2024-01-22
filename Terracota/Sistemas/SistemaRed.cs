@@ -248,8 +248,7 @@ public class SistemaRed : StartupScript
                 controlador.RevisarJugadoresListos(TipoJugador.huesped);
                 break;
             case DataRed.comenzarRuleta:
-                var toques = int.Parse(data.Values.Single());
-                ComenzarRuleta(toques);
+                ComenzarRuleta();
                 break;
             case DataRed.finalizarRuleta:
                 var ganaAnfitrión = bool.Parse(data.Values.Single());
@@ -357,11 +356,11 @@ public class SistemaRed : StartupScript
         SistemaEscenas.CambiarEscena(Escenas.menú);
     }
 
-    private static void ComenzarRuleta(int toques)
+    private static void ComenzarRuleta()
     {
         // Obtención interfaz
         var elección = instancia.SceneSystem.SceneInstance.RootScene.Children[0].Entities.Where(o => o.Get<InterfazElecciónRemota>() != null).FirstOrDefault().Get<InterfazElecciónRemota>();
-        elección.ComenzarRuleta(toques);
+        elección.ComenzarRuleta();
     }
 
     private static void FinalizarRuleta(bool ganaAnfitrión)
