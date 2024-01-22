@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Linq;
+using System.Collections.Generic;
 using Stride.Engine;
 using Stride.UI.Controls;
 using Stride.UI;
@@ -13,8 +14,6 @@ using static Constantes;
 
 public class InterfazJuego : SyncScript
 {
-    public ControladorPartidaLocal controladorPartida;
-
     public Texture spriteBola;
     public Texture spriteMetralla;
 
@@ -47,6 +46,8 @@ public class InterfazJuego : SyncScript
     private Grid animPausa;
     private ImageElement imgProyectil;
 
+    private IPartida iPartida;
+
     private List<ImageElement> estadoAnfitrión;
     private List<ImageElement> estadoHuesped;
 
@@ -56,6 +57,16 @@ public class InterfazJuego : SyncScript
 
     public override void Start()
     {
+        var controlador = Entity.Scene.Entities.FirstOrDefault(e => e.Name == "ControladorPartida");
+        foreach (var componente in controlador.Components)
+        {
+            if (componente is IPartida)
+            {
+                iPartida = (IPartida)componente;
+                break;
+            }
+        }
+
         var página = Entity.Get<UIComponent>().Page.RootElement;
         ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("PanelOscuro"), EnClicPausa);
         Opciones = página.FindVisualChildOfType<Grid>("Opciones");
@@ -210,7 +221,7 @@ public class InterfazJuego : SyncScript
         if (animando)
             return;
 
-        CambiarProyectil(controladorPartida.CambiarProyectil());
+        CambiarProyectil(iPartida.CambiarProyectil());
     }
 
     public void PausarInterfaz()

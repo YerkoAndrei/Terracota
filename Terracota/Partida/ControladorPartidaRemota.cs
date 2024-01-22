@@ -6,7 +6,6 @@ using Stride.Input;
 
 namespace Terracota;
 using static Constantes;
-using static Terracota.Constantes;
 
 public class ControladorPartidaRemota : SyncScript, IPartida
 {
