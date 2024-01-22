@@ -6,6 +6,7 @@ using Stride.Input;
 
 namespace Terracota;
 using static Constantes;
+using static Terracota.Constantes;
 
 public class ControladorPartidaRemota : SyncScript, IPartida
 {
@@ -20,7 +21,6 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
     public InterfazJuego interfaz;
     public UIComponent UIElección;
-    public InterfazElecciónRemota elección;
 
     private bool anfitriónListo;
     private bool huespedListo;
@@ -37,7 +37,11 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
     private bool partidaActiva;
 
+    private InterfazElecciónRemota elección;
     private List<ElementoBloque> bloques;
+
+    private TipoJugador cargaPendienteJugador;
+    private Fortaleza cargaPendienteFortaleza;
 
     public override void Start()
     {
@@ -61,6 +65,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         }
 
         // Comienza con elección
+        elección = UIElección.Entity.Get<InterfazElecciónRemota>();
         UIElección.Enabled = true;
         interfaz.Activar(false);
 
@@ -95,6 +100,14 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
         // Código es para ordenar una sola vez
         bloques = bloques.OrderBy(o => o.ObtenerCódigo()).ToList();
+
+        // Cargas pendientes
+        if(cargaPendienteJugador != TipoJugador.nada)
+        {
+            CargarFortaleza(cargaPendienteFortaleza, cargaPendienteJugador);
+            cargaPendienteJugador = TipoJugador.nada;
+            cargaPendienteFortaleza = null;
+        }
     }
 
     public override void Update()
@@ -309,6 +322,14 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     // Remoto
     public void CargarFortaleza(Fortaleza fortaleza, TipoJugador tipoJugador)
     {
+        // Por si remoto envia antes de que cargue escena
+        if (elección == null)
+        {
+            cargaPendienteJugador = tipoJugador;
+            cargaPendienteFortaleza = fortaleza;
+            return;
+        }
+
         if (tipoJugador == TipoJugador.anfitrión)
             fortalezaAnfitrión.Inicializar(fortaleza, true);
         else
