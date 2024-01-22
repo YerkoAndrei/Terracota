@@ -364,7 +364,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
         // Cañón
         if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
-            físicas.RotaciónCañón = ObtenerRotaciónCañón();
+            físicas.RotaciónCañón = ObtenerRotaciónCañón(TipoJugador.anfitrión);
 
         // Bloques
         foreach (var bloque in bloques)
@@ -378,6 +378,8 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     public void ActualizarFísicas(Físicas físicas)
     {
         // Cañón
+        // Huesped actualiza cañón junto con físicas
+        // Anfitrión actualiza cañón en llamado independiente
         if (SistemaRed.ObtenerTipoJugador() == TipoJugador.huesped)
             ActualizarCañón(físicas.RotaciónCañón, TipoJugador.anfitrión);
 
@@ -388,13 +390,19 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         }
     }
 
-    public RotaciónCañón ObtenerRotaciónCañón()
+    public RotaciónCañón ObtenerRotaciónCañón(TipoJugador jugador)
     {
-        var cañón = new RotaciónCañón
+        var cañón = new RotaciónCañón();
+        if (jugador == TipoJugador.anfitrión)
         {
-            SoporteCañón = cañónHuesped.ObtenerRotaciónSoporte(),
-            TuboCañón = cañónHuesped.ObtenerRotaciónCañón()
-        };
+            cañón.SoporteCañón = cañónAnfitrión.ObtenerRotaciónSoporte();
+            cañón.TuboCañón = cañónAnfitrión.ObtenerRotaciónCañón();
+        }
+        else
+        {
+            cañón.SoporteCañón = cañónHuesped.ObtenerRotaciónSoporte();
+            cañón.TuboCañón = cañónHuesped.ObtenerRotaciónCañón();
+        }
 
         return cañón;
     }

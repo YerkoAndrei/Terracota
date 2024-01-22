@@ -325,7 +325,7 @@ public class SistemaRed : StartupScript
 
     private static async Task ActualizarCañón()
     {
-        var data = controlador.ObtenerRotaciónCañón();
+        var data = controlador.ObtenerRotaciónCañón(TipoJugador.huesped);
         await EnviarData(DataRed.cañón, data);
     }
 
