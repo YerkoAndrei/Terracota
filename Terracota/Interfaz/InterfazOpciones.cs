@@ -52,11 +52,11 @@ public class InterfazOpciones : StartupScript
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVentana"), () => EnClicPantallaCompleta(false));
 
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnResoluciones"), () => MostrarResoluciones(true));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR0"), () => EnClicResolución(1280, 720, "btnR0"));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR1"), () => EnClicResolución(1366, 768, "btnR1"));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR2"), () => EnClicResolución(1600, 900, "btnR2"));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR3"), () => EnClicResolución(1920, 1080, "btnR3"));
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR4"), () => EnClicResolución(1920, 1200, "btnR4"));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR0"), () => EnClicResolución(960, 540, "btnR0"));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR1"), () => EnClicResolución(1280, 720, "btnR1"));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR2"), () => EnClicResolución(1366, 768, "btnR2"));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR3"), () => EnClicResolución(1600, 900, "btnR3"));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR4"), () => EnClicResolución(1920, 1080, "btnR4"));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR5"), () => EnClicResolución(2560, 1440, "btnR5"));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR6"), () => EnClicResolución(3840, 2160, "btnR6"));
 
@@ -84,25 +84,25 @@ public class InterfazOpciones : StartupScript
         DesbloquearBotonesResolución();
         switch(SistemaMemoria.ObtenerConfiguración(Configuraciones.resolución))
         {
-            case "1280x720":
+            case "960x540":
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnR0"), true);
                 break;
-            case "1366x768":
+            case "1280x720":
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnR1"), true);
                 break;
-            case "1600x900":
+            case "1366x768":
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnR2"), true);
                 break;
-            case "1920x1080":
+            case "1600x900":
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnR3"), true);
                 break;
-            case "1920x1200":
+            case "1920x1080":
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnR4"), true);
                 break;
             case "2560x1440":
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnR5"), true);
                 break;
-            case "3840x1440":
+            case "3840x2160":
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnR6"), true);
                 break;
         }
