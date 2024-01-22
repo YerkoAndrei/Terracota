@@ -254,9 +254,6 @@ public class InterfazElecciónRemota : StartupScript
 
     public async void ComenzarRuleta()
     {
-        // Toques aleatorios deciden quién empeiza
-        var toques = RangoAleatorio(40, 51);
-
         ApagarRuleta();
         esperandoRuleta = true;
         gridRuleta.Visibility = Visibility.Visible;
@@ -267,7 +264,9 @@ public class InterfazElecciónRemota : StartupScript
             _ = SistemaRed.EnviarData(DataRed.comenzarRuleta);
 
             controladorPartida.RotarXCámara(4.5f);
-            await MoverRuletaAnfitrión(toques);
+
+            // Toques aleatorios deciden quién empeiza
+            await MoverRuletaAnfitrión(RangoAleatorio(40, 51));
 
             _ = SistemaRed.EnviarData(DataRed.finalizarRuleta, ganaAnfitrión);
             ComenzarPartida(ganaAnfitrión);

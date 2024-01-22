@@ -370,7 +370,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
             (tipoJugador == TipoJugador.huesped && anfitriónListo))
         {
             if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
-                elección.ComenzarRuleta(0);
+                elección.ComenzarRuleta();
         }
     }
 
