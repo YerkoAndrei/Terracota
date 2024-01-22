@@ -20,6 +20,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
     public InterfazJuego interfaz;
     public UIComponent UIElección;
+    public InterfazElecciónRemota elección;
 
     private bool anfitriónListo;
     private bool huespedListo;
@@ -36,7 +37,6 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
     private bool partidaActiva;
 
-    private InterfazElecciónRemota elección;
     private List<ElementoBloque> bloques;
 
     public override void Start()
@@ -61,7 +61,6 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         }
 
         // Comienza con elección
-        elección = UIElección.Entity.Get<InterfazElecciónRemota>();
         UIElección.Enabled = true;
         interfaz.Activar(false);
 
