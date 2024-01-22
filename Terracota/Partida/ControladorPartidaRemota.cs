@@ -133,11 +133,11 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         fortalezaAnfitrión.Activar();
         fortalezaHuesped.Activar();
 
+        SistemaRed.ActivarActualizaciónRed(true);
+
         // Turno inicial
         if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
         {
-            SistemaRed.ActivarActualizaciónRed(true);
-
             if (ganaAnfitrión)
             {
                 turnoJugador = TipoJugador.anfitrión;
