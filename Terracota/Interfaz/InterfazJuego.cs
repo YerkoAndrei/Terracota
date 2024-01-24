@@ -229,12 +229,20 @@ public class InterfazJuego : SyncScript
         CambiarProyectil(iPartida.CambiarProyectil());
     }
 
-    public void OcultarInterfaz()
+    public void OcultarInterfazLocal()
     {
         txtProyectil.Text = string.Empty;
         txtCantidadTurnos.Text = string.Empty;
 
         gridCañón.Visibility = Visibility.Hidden;
+        gridProyectil.Visibility = Visibility.Hidden;
+        btnPausa.Visibility = Visibility.Hidden;
+    }
+
+    public void OcultarInterfazRemoto()
+    {
+        txtCantidadTurnos.Text = string.Empty;
+
         gridProyectil.Visibility = Visibility.Hidden;
         btnPausa.Visibility = Visibility.Hidden;
     }

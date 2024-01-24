@@ -167,7 +167,7 @@ public class ControladorPartidaLocal : SyncScript, IPartida
     private async void CambiarTurno()
     {
         cambiandoTurno = true;
-        interfaz.OcultarInterfaz();
+        interfaz.OcultarInterfazLocal();
         await Task.Delay(duraciónTurnoLocal);
 
         // Verifica partida

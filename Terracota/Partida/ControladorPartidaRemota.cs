@@ -230,7 +230,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     {
         // Pausa turno
         cambiandoTurno = true;
-        interfaz.OcultarInterfaz();
+        interfaz.OcultarInterfazRemoto();
         await Task.Delay(duraciónTurnoRemoto);
 
         // Verifica partida
@@ -266,7 +266,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     public void EsperarCambioTurno()
     {
         cambiandoTurno = true;
-        interfaz.OcultarInterfaz();
+        interfaz.OcultarInterfazRemoto();
 
         // Rota solo luz
         //controladorCámara.RotarYCámara(180, cambiarHaciaDerecha, null, luzDireccional);
@@ -340,7 +340,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     public void CargarFortaleza(Fortaleza fortaleza, TipoJugador tipoJugador)
     {
         // Por si remoto envia antes de que cargue escena
-        if (elección == null)
+        if (elección == null || !elección.ObtenerIniciada())
         {
             cargaPendienteJugador = tipoJugador;
             cargaPendienteFortaleza = fortaleza;
