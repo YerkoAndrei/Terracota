@@ -20,6 +20,11 @@ public class InterfazOpciones : StartupScript
     private UniformGrid resoluciones;
     private TextBlock resoluciónActual;
     private EditText txtPuerto;
+
+    private Grid pestañaGráficos;
+    private Grid pestañaSonidos;
+    private Grid pestañaRed;
+
     private bool animando;
 
     public override void Start()
@@ -33,6 +38,10 @@ public class InterfazOpciones : StartupScript
         ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("PanelOscuroOpciones"), EnClicVolver);
         ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("btnPanel"), () => MostrarResoluciones(false));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVolver"), EnClicVolver);
+
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnGráficos"), () => EnClicPestaña("Gráficos"));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnSonidos"), () => EnClicPestaña("Sonidos"));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnRed"), () => EnClicPestaña("Red"));
 
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnEspañol"), () => EnClicIdioma(Idiomas.español));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnInglés"), () => EnClicIdioma(Idiomas.inglés));
@@ -60,6 +69,11 @@ public class InterfazOpciones : StartupScript
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR4"), () => EnClicResolución(1920, 1080, "btnR4"));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR5"), () => EnClicResolución(2560, 1440, "btnR5"));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnR6"), () => EnClicResolución(3840, 2160, "btnR6"));
+
+        pestañaGráficos = página.FindVisualChildOfType<Grid>("PanelGráficos");
+        pestañaSonidos = página.FindVisualChildOfType<Grid>("PanelSonido");
+        pestañaRed = página.FindVisualChildOfType<Grid>("PanelRed");
+        EnClicPestaña("Gráficos");
 
         txtPuerto = página.FindVisualChildOfType<EditText>("txtPuerto");
         txtPuerto.Text = SistemaMemoria.ObtenerConfiguración(Configuraciones.puertoRed);
@@ -139,6 +153,43 @@ public class InterfazOpciones : StartupScript
         SistemaTraducción.CambiarIdioma(idioma);
         BloquearIdioma(idioma);
         MostrarResoluciones(false);
+    }
+
+    private void EnClicPestaña(string pestaña)
+    {
+        if (animando)
+            return;
+
+        switch (pestaña)
+        {
+            case "Gráficos":
+                pestañaGráficos.Visibility = Visibility.Visible;
+                pestañaSonidos.Visibility = Visibility.Hidden;
+                pestañaRed.Visibility = Visibility.Hidden;
+
+                BloquearBotón(página.FindVisualChildOfType<Grid>("btnGráficos"), true);
+                BloquearBotón(página.FindVisualChildOfType<Grid>("btnSonidos"), false);
+                BloquearBotón(página.FindVisualChildOfType<Grid>("btnRed"), false);
+                break;
+            case "Sonidos":
+                pestañaGráficos.Visibility = Visibility.Hidden;
+                pestañaSonidos.Visibility = Visibility.Visible;
+                pestañaRed.Visibility = Visibility.Hidden;
+
+                BloquearBotón(página.FindVisualChildOfType<Grid>("btnGráficos"), false);
+                BloquearBotón(página.FindVisualChildOfType<Grid>("btnSonidos"), true);
+                BloquearBotón(página.FindVisualChildOfType<Grid>("btnRed"), false);
+                break;
+            case "Red":
+                pestañaGráficos.Visibility = Visibility.Hidden;
+                pestañaSonidos.Visibility = Visibility.Hidden;
+                pestañaRed.Visibility = Visibility.Visible;
+
+                BloquearBotón(página.FindVisualChildOfType<Grid>("btnGráficos"), false);
+                BloquearBotón(página.FindVisualChildOfType<Grid>("btnSonidos"), false);
+                BloquearBotón(página.FindVisualChildOfType<Grid>("btnRed"), true);
+                break;
+        }
     }
 
     private void EnClicVelocidadRed(int velocidad)
