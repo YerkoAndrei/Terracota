@@ -245,10 +245,7 @@ public class InterfazJuego : SyncScript
     {
         ActivarTurno(false);
         CambiarTurno(jugador);
-
-        gridTurno.Visibility = Visibility.Visible;
-        gridProyectil.Visibility = Visibility.Visible;
-        btnPausa.Visibility = Visibility.Visible;
+        MostrarInformación();
 
         CambiarProyectil(proyectil);
     }
@@ -260,6 +257,13 @@ public class InterfazJuego : SyncScript
 
         if(multiplicador >= multiplicadorMáximo)
             txtMultiplicador.TextColor = Color.Red;
+    }
+
+    public void MostrarInformación()
+    {
+        gridTurno.Visibility = Visibility.Visible;
+        gridProyectil.Visibility = Visibility.Visible;
+        btnPausa.Visibility = Visibility.Visible;
     }
 
     public void CambiarTurno(TipoJugador jugador)

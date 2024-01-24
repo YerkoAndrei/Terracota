@@ -268,6 +268,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     {
         cambiandoTurno = true;
         interfaz.PausarInterfaz();
+        interfaz.ActivarTurno(false);
 
         // Rota solo luz
         //controladorCámara.RotarYCámara(180, cambiarHaciaDerecha, null, luzDireccional);
@@ -283,6 +284,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         interfaz.ActualizarTurno(cantidadTurnos, CalcularPotencia(cantidadTurnos));
         interfaz.CambiarTurno(turnoJugador);
         interfaz.ActivarTurno(true);
+        interfaz.MostrarInformación();
     }
 
     public float CalcularPotencia(int turnos)
