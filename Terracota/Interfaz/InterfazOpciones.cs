@@ -39,6 +39,7 @@ public class InterfazOpciones : StartupScript
 
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btn30"), () => EnClicVelocidadRed(30));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btn60"), () => EnClicVelocidadRed(60));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btn120"), () => EnClicVelocidadRed(120));
 
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnGráficosBajos"), () => EnClicGráficos(NivelesConfiguración.bajo));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnGráficosMedios"), () => EnClicGráficos(NivelesConfiguración.medio));
