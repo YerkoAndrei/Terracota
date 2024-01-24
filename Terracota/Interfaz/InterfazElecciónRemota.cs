@@ -345,7 +345,7 @@ public class InterfazElecciónRemota : StartupScript
 
             toqueActual++;
             apagado = !apagado;
-            delay += 15;
+            delay += 10;
 
             SistemaSonido.SonarRuleta();
             await Task.Delay(delay);
