@@ -190,6 +190,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         // Recarga interfaz
         interfaz.Activar(true);
         interfaz.ActualizarTurno(cantidadTurnos, multiplicador);
+        interfaz.CambiarTurno(turnoJugador);
         interfaz.CambiarInterfaz(SistemaRed.ObtenerTipoJugador(), TipoProyectil.bola);
         partidaActiva = true;
     }
