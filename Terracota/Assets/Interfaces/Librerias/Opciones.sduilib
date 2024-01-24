@@ -1014,7 +1014,7 @@ Hierarchy:
                     3af803d8382c15d94c6049acb4ffd439~GridBase.RowPropertyKey: 0
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 50.0
-                Margin: {}
+                Margin: {Right: 12.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -1115,6 +1115,21 @@ Hierarchy:
                 BasePartAsset: ec94a22e-f511-4b8e-a71e-bc8c7df21ba9:Interfaces/Librerias/Botones
                 BasePartId: 4c733d25-6bd9-4f3e-bfd8-79714c7ec65f
                 InstanceId: 785492e4-fe23-427b-9f37-879b31f829b5
+        -   UIElement: !ScrollViewer
+                Id: 45b18f73-9bc3-4844-91f7-740965e3d23d
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 215.0
+                Height: 260.0
+                Margin: {Right: -15.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Padding: {}
+                ScrollBarColor: {R: 240, G: 220, B: 160, A: 240}
+                ScrollBarThickness: 10.0
+                ScrollMode: Vertical
+                Content: !UniformGrid ref!! 6487c6e4-7f63-461a-abe8-87607d8b0bad
         -   UIElement: !Button
                 Id: 45c43f32-b9cc-4269-9653-0ebf648a42da
                 DependencyProperties: {}
@@ -1164,7 +1179,7 @@ Hierarchy:
                     3af803d8382c15d94c6049acb4ffd439~GridBase.RowPropertyKey: 3
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 50.0
-                Margin: {}
+                Margin: {Right: 12.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -1748,7 +1763,7 @@ Hierarchy:
                     3af803d8382c15d94c6049acb4ffd439~GridBase.RowPropertyKey: 2
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 50.0
-                Margin: {}
+                Margin: {Right: 12.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -1828,18 +1843,16 @@ Hierarchy:
                 Id: 6487c6e4-7f63-461a-abe8-87607d8b0bad
                 DependencyProperties:
                     b5747a18e84917d590e33efd1413ab61~Panel.ZIndexPropertyKey: 2
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 255}
-                Visibility: Hidden
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 CanBeHitByUser: true
-                Width: 200.0
+                Width: 212.0
                 Height: 400.0
                 HorizontalAlignment: Left
-                VerticalAlignment: Center
-                Margin: {Left: 100.0, Top: 320.0}
+                Margin: {}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: ListaResoluciones
+                Name: 
                 Children:
                     83b241ac99c97430e9b1b610cf17e9e3: !Grid ref!! 3aa844be-cc81-43dd-9a73-45e9378104b1
                     52f6a9e6740c873b6b7bb48636d4daa3: !Grid ref!! 6f982019-fbe5-43a5-882e-effc2d569d3a
@@ -1936,7 +1949,7 @@ Hierarchy:
                     3af803d8382c15d94c6049acb4ffd439~GridBase.RowPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 50.0
-                Margin: {}
+                Margin: {Right: 12.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -2458,7 +2471,7 @@ Hierarchy:
                     3af803d8382c15d94c6049acb4ffd439~GridBase.RowPropertyKey: 4
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 50.0
-                Margin: {}
+                Margin: {Right: 12.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -2557,7 +2570,7 @@ Hierarchy:
                     3af803d8382c15d94c6049acb4ffd439~GridBase.RowPropertyKey: 6
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 50.0
-                Margin: {}
+                Margin: {Right: 12.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -3308,7 +3321,7 @@ Hierarchy:
                     f156351688ce6129427d33a5bf052a08: !UniformGrid ref!! 8552e614-bc6e-4944-91e9-e28555c022da
                     674e3f1913d6be0a381296618e0d5253: !UniformGrid ref!! 2d06d730-ba0c-469b-9d4f-93fc264d18df
                     2ed85fc8f07d4ed70ba450936cc95237: !UniformGrid ref!! 076d81ae-9dd1-45a0-b867-bcfcaa1718df
-                    40f46ec626cf3ebc6488ca8c39d12196: !UniformGrid ref!! 6487c6e4-7f63-461a-abe8-87607d8b0bad
+                    2e832c86e8d951c13d8d7262153b8f20: !Grid ref!! f044e197-4a52-430d-8343-f89f9265d0fc
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -3668,7 +3681,7 @@ Hierarchy:
                     3af803d8382c15d94c6049acb4ffd439~GridBase.RowPropertyKey: 5
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 50.0
-                Margin: {}
+                Margin: {Right: 12.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -3803,6 +3816,24 @@ Hierarchy:
                 BasePartAsset: ec94a22e-f511-4b8e-a71e-bc8c7df21ba9:Interfaces/Librerias/Botones
                 BasePartId: e91e7db3-8872-4dee-9d83-b09bc3ae5510
                 InstanceId: 785492e4-fe23-427b-9f37-879b31f829b5
+        -   UIElement: !Grid
+                Id: f044e197-4a52-430d-8343-f89f9265d0fc
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Visibility: Hidden
+                Width: 200.0
+                Height: 260.0
+                HorizontalAlignment: Left
+                Margin: {Left: 100.0, Top: 260.0, Bottom: 70.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: ListaResoluciones
+                Children:
+                    ac4732670c52e0320d5ca12bc52a5ea9: !ScrollViewer ref!! 45b18f73-9bc3-4844-91f7-740965e3d23d
+                RowDefinitions: {}
+                ColumnDefinitions: {}
+                LayerDefinitions: {}
         -   UIElement: !ImageElement
                 Id: f048d1b1-5de2-4419-8371-5464fa74dec1
                 DependencyProperties:

@@ -17,7 +17,7 @@ public class InterfazOpciones : StartupScript
     private UIElement página;
     private Grid Opciones;
     private Grid animOpciones;
-    private UniformGrid resoluciones;
+    private Grid resoluciones;
     private TextBlock resoluciónActual;
     private EditText txtPuerto;
 
@@ -82,7 +82,7 @@ public class InterfazOpciones : StartupScript
         resoluciónActual = página.FindVisualChildOfType<TextBlock>("txtResoluciónActual");
         resoluciónActual.Text = SistemaMemoria.ObtenerConfiguración(Configuraciones.resolución).Replace("x", " x ");
 
-        resoluciones = página.FindVisualChildOfType<UniformGrid>("ListaResoluciones");
+        resoluciones = página.FindVisualChildOfType<Grid>("ListaResoluciones");
         resoluciones.Visibility = Visibility.Hidden;
 
         var sliderGeneral = página.FindVisualChildOfType<Slider>("SliderGeneral");
