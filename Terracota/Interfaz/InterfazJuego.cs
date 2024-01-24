@@ -27,10 +27,13 @@ public class InterfazJuego : SyncScript
     private Grid gridGanador;
     private Grid btnPausa;
 
-    private Grid gridTurno;
-    private TextBlock txtTurno;
-    private ImageElement imgTurno;
-    private ImageElement fondoTurno;
+    private Grid gridCañón;
+    private TextBlock txtNombreCañón;
+    private ImageElement imgCañón;
+    private ImageElement fondoCañón;
+
+    private ImageElement imgTurnoAnfitrión;
+    private ImageElement imgTurnoHuesped;
 
     private TextBlock txtGanador;
     private List<ImageElement> imgsGanador;
@@ -91,10 +94,13 @@ public class InterfazJuego : SyncScript
             página.FindVisualChildOfType<ImageElement>("FondoÍcono 1"),
         };
 
-        gridTurno = página.FindVisualChildOfType<Grid>("Turno");
-        txtTurno = página.FindVisualChildOfType<TextBlock>("txtTurno");
-        imgTurno = página.FindVisualChildOfType<ImageElement>("imgTurno");
-        fondoTurno = página.FindVisualChildOfType<ImageElement>("FondoTurno");
+        gridCañón = página.FindVisualChildOfType<Grid>("Cañón");
+        txtNombreCañón = página.FindVisualChildOfType<TextBlock>("txtNombreCañón");
+        imgCañón = página.FindVisualChildOfType<ImageElement>("imgCañón");
+        fondoCañón = página.FindVisualChildOfType<ImageElement>("FondoCañón");
+
+        imgTurnoAnfitrión = página.FindVisualChildOfType<ImageElement>("imgTurnoAnfitrión");
+        imgTurnoHuesped = página.FindVisualChildOfType<ImageElement>("imgTurnoHuesped");
 
         imgProyectil = página.FindVisualChildOfType<ImageElement>("imgProyectil");
         ConfigurarBotónConImagen(página.FindVisualChildOfType<Button>("btnProyectil"), imgProyectil, EnClicProyectil);
@@ -236,14 +242,15 @@ public class InterfazJuego : SyncScript
     public void ActivarTurno(bool activar)
     {
         if (activar)
-            gridTurno.Visibility = Visibility.Visible;
+            gridCañón.Visibility = Visibility.Visible;
         else
-            gridTurno.Visibility = Visibility.Hidden;
+            gridCañón.Visibility = Visibility.Hidden;
     }
 
     public void CambiarInterfaz(TipoJugador jugador, TipoProyectil proyectil)
     {
         ActivarTurno(false);
+        CambiarNombreCañón(jugador);
         CambiarTurno(jugador);
         MostrarInformación();
 
@@ -261,24 +268,40 @@ public class InterfazJuego : SyncScript
 
     public void MostrarInformación()
     {
-        gridTurno.Visibility = Visibility.Visible;
+        gridCañón.Visibility = Visibility.Visible;
         gridProyectil.Visibility = Visibility.Visible;
         btnPausa.Visibility = Visibility.Visible;
     }
 
-    public void CambiarTurno(TipoJugador jugador)
+    public void CambiarNombreCañón(TipoJugador jugador)
     {
         switch (jugador)
         {
             case TipoJugador.anfitrión:
-                txtTurno.Text = SistemaTraducción.ObtenerTraducción("anfitrión");
-                imgTurno.Source = ObtenerSprite(spriteAnfitrión);
-                fondoTurno.Color = colorAnfitrión;
+                txtNombreCañón.Text = SistemaTraducción.ObtenerTraducción("anfitrión");
+                imgCañón.Source = ObtenerSprite(spriteAnfitrión);
+                fondoCañón.Color = colorAnfitrión;
                 break;
             case TipoJugador.huesped:
-                txtTurno.Text = SistemaTraducción.ObtenerTraducción("huesped");
-                imgTurno.Source = ObtenerSprite(spriteHuesped);
-                fondoTurno.Color = colorHuesped;
+                txtNombreCañón.Text = SistemaTraducción.ObtenerTraducción("huesped");
+                imgCañón.Source = ObtenerSprite(spriteHuesped);
+                fondoCañón.Color = colorHuesped;
+                break;
+        }
+    }
+    
+    public void CambiarTurno(TipoJugador jugador)
+    {
+        imgTurnoAnfitrión.Visibility = Visibility.Hidden;
+        imgTurnoHuesped.Visibility = Visibility.Hidden;
+
+        switch (jugador)
+        {
+            case TipoJugador.anfitrión:
+                imgTurnoAnfitrión.Visibility = Visibility.Visible;
+                break;
+            case TipoJugador.huesped:
+                imgTurnoHuesped.Visibility = Visibility.Visible;
                 break;
         }
     }
@@ -318,7 +341,7 @@ public class InterfazJuego : SyncScript
         activo = false;
         txtCantidadTurnos.Text = turno.ToString();
         gridProyectil.Visibility = Visibility.Hidden;
-        gridTurno.Visibility = Visibility.Hidden;
+        gridCañón.Visibility = Visibility.Hidden;
 
         gridGanador.Visibility = Visibility.Visible;
         btnPausa.Visibility = Visibility.Visible;

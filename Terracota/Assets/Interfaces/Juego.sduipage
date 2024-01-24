@@ -72,7 +72,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: txtTurno
+                Name: "txtNombreCañón"
                 Text: Turno
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
                 TextSize: 30.0
@@ -1210,7 +1210,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: imgTurno
+                Name: "imgCañón"
                 Source: !SpriteFromTexture
                     Texture: "8d986627-e68f-4481-a6c3-9ef06599ea85:Texturas/Interfaz/Anfitrión"
                     Center: {X: 0.0, Y: 0.0}
@@ -1414,6 +1414,23 @@ Hierarchy:
                 BasePartAsset: ec94a22e-f511-4b8e-a71e-bc8c7df21ba9:Interfaces/Librerias/Botones
                 BasePartId: e0335d05-ef36-4ac9-be60-6ba8b4da63e9
                 InstanceId: f5f6572c-6779-401b-8782-42471889f27c
+        -   UIElement: !ImageElement
+                Id: 3189b64d-4131-43be-9902-4c7b48ad25b9
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 40.0
+                Height: 40.0
+                HorizontalAlignment: Left
+                VerticalAlignment: Top
+                Margin: {Left: -25.0, Top: 10.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: "imgTurnoAnfitrión"
+                Source: !SpriteFromTexture
+                    Texture: 70fc85fd-d02c-44d1-ae9f-4025f01d5c75:Texturas/Interfaz/FlechaSolaDerecha
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 240, G: 240, B: 100, A: 255}
         -   UIElement: !ImageElement
                 Id: 3286c3f9-e0af-449f-a4b5-6bbb475a04a6
                 DependencyProperties: {}
@@ -2007,7 +2024,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: FondoTurno
+                Name: "FondoCañón"
                 Source: !SpriteFromTexture
                     Texture: "544f8ec8-cb8e-46d6-8873-ba73ab7cef86:Texturas/Interfaz/BaseOctágono"
                     Center: {X: 0.0, Y: 0.0}
@@ -2329,7 +2346,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: Turno
+                Name: "Cañón"
                 Children:
                     b186d1e89ad6b8580146c891d77ee3a3: !TextBlock ref!! 04292ffc-58a5-4895-983e-cc0b2d09ee9a
                     8e45842365ac6e5bbe9c88e8f728eae7: !Grid ref!! 5013ce36-ba59-40c0-a608-6ddd5956ef1b
@@ -3680,6 +3697,23 @@ Hierarchy:
                 BasePartAsset: ec94a22e-f511-4b8e-a71e-bc8c7df21ba9:Interfaces/Librerias/Botones
                 BasePartId: 4c733d25-6bd9-4f3e-bfd8-79714c7ec65f
                 InstanceId: 37a9aa0f-67d9-4e14-9810-df05893ebd3e
+        -   UIElement: !ImageElement
+                Id: 992ec803-4bc5-499e-bc6c-c17cd8122f8f
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 40.0
+                Height: 40.0
+                HorizontalAlignment: Left
+                VerticalAlignment: Center
+                Margin: {Left: -25.0, Top: 25.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: imgTurnoHuesped
+                Source: !SpriteFromTexture
+                    Texture: 70fc85fd-d02c-44d1-ae9f-4025f01d5c75:Texturas/Interfaz/FlechaSolaDerecha
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 240, G: 240, B: 100, A: 255}
         -   UIElement: !Button
                 Id: 99fc4eed-4283-43de-8a0e-48f48d6ba3d6
                 DependencyProperties: {}
@@ -5625,11 +5659,11 @@ Hierarchy:
                 Id: eb4b22dd-c506-4877-bc3f-e983e0a569b2
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 80.0
+                Width: 100.0
                 Height: 250.0
                 HorizontalAlignment: Right
                 VerticalAlignment: Top
-                Margin: {Top: 20.0, Right: 20.0}
+                Margin: {Top: 20.0, Right: 10.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -5637,6 +5671,8 @@ Hierarchy:
                 Children:
                     003b18eb5621054d2273c77cbb70fa1c: !Grid ref!! 064a38c5-8594-4bbe-95aa-d98beb95071b
                     2e8d88b0e9eab8fbc5ca77201c776076: !Grid ref!! 86f09146-1a4b-418d-89c8-74fb1a194b83
+                    2cce273f656f4177046c5ffce33d8a1e: !ImageElement ref!! 3189b64d-4131-43be-9902-4c7b48ad25b9
+                    e6a008ecce0858f3eb6238d60f976eaa: !ImageElement ref!! 992ec803-4bc5-499e-bc6c-c17cd8122f8f
                     1306fe37def09de21984ac9bf335b522: !TextBlock ref!! 36a45035-40f2-498d-be98-639869d3503f
                 RowDefinitions: {}
                 ColumnDefinitions: {}
