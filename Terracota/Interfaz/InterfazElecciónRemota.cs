@@ -332,7 +332,7 @@ public class InterfazElecciónRemota : StartupScript
         var apagado = true;
         var toques = 40;
         int toqueActual = 0;
-        int delay = 100;
+        int delay = 60;
 
         while (toqueActual < toques && esperandoRuleta && !partidaCancelada)
         {
@@ -344,7 +344,7 @@ public class InterfazElecciónRemota : StartupScript
 
             toqueActual++;
             apagado = !apagado;
-            delay += 10;
+            delay += 5;
 
             SistemaSonido.SonarRuleta();
             await Task.Delay(delay);
