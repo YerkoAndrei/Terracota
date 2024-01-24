@@ -163,7 +163,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
             var turno = new Turno
             {
                 Jugador = turnoJugador,
-                CantidadTurnos = 0
+                CantidadTurnos = 1
             };
             _ = SistemaRed.EnviarData(DataRed.cambioTurno, turno);
         }
