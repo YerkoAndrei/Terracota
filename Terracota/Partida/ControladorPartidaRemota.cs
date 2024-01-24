@@ -231,8 +231,6 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         // Pausa turno
         cambiandoTurno = true;
         interfaz.OcultarInterfazRemoto();
-        controladorCámara.RotarLuz(luzDireccional);
-
         await Task.Delay(duraciónTurnoRemoto);
 
         // Verifica partida
@@ -242,6 +240,8 @@ public class ControladorPartidaRemota : SyncScript, IPartida
             VerificarPartida();
             return;
         }
+
+        controladorCámara.RotarLuz(luzDireccional);
 
         // Suma potencia cada de 4 turnos
         cantidadTurnos++;

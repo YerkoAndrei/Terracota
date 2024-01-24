@@ -99,10 +99,18 @@ public class ControladorCámara : SyncScript
         // Referencias
         duraciónLerpLuz = duraciónRotación;
         luzDireccional = _luzDireccional;
-
         rotaciónInicialLuz = luzDireccional.Rotation;
-        rotaciónObjetivoLuz = rotaciónInicialLuz * Quaternion.RotationY(MathUtil.DegreesToRadians(45));
 
+        var rotación = 45f;
+        if(SistemaRed.ObtenerJugando())
+        {
+            if (SistemaRed.ObtenerTipoJugador() == Constantes.TipoJugador.anfitrión)
+                rotación = 11.25f;
+            else
+                rotación = -11.25f;
+        }
+
+        rotaciónObjetivoLuz = rotaciónInicialLuz * Quaternion.RotationY(MathUtil.DegreesToRadians(rotación));
         rotandoLuz = true;
     }
 
