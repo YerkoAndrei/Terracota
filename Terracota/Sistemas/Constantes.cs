@@ -5,6 +5,7 @@ namespace Terracota;
 
 public static class Constantes
 {
+    // Duración remota debe ser mitad de local
     public const int duraciónTurnoLocal = 3000;
     public const int duraciónTurnoRemoto = 1500;
     public const float multiplicadorMáximo = 1.5f;

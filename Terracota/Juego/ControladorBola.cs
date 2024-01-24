@@ -18,6 +18,7 @@ public class ControladorBola : AsyncScript
     private Vector3 posiciónInicial;
     private Vector3 escalaInicial;
     private float masaInicial;
+    private float duraciónGuardado;
     private int colisiones;
     private bool activo;
     private bool guardando;
@@ -25,6 +26,7 @@ public class ControladorBola : AsyncScript
     public override async Task Execute()
     {
         cuerpo = Entity.Get<RigidbodyComponent>();
+        duraciónGuardado = 0.7f;
 
         // Valores iniciales
         posiciónInicial = Entity.Transform.Position;
@@ -110,9 +112,13 @@ public class ControladorBola : AsyncScript
     private async Task ContarVida()
     {
         // Duración según tipo de juego
+        // Remoto = (duraciónTurnoLocal - duraciónGuardado) - desface;
         var duración = duraciónTurnoLocal;
-        if(SistemaRed.ObtenerJugando())
-            duración = duraciónTurnoRemoto;
+        if (SistemaRed.ObtenerJugando())
+        {
+            var tiempoGuardado = (int)(duraciónGuardado * 1000f);
+            duración -= (tiempoGuardado + 200);
+        }
 
         await Task.Delay(duración);
         await Guardar();
@@ -123,7 +129,7 @@ public class ControladorBola : AsyncScript
         if (guardando) return;
         guardando = true;
 
-        float duraciónLerp = 0.7f;
+        float duraciónLerp = duraciónGuardado;
         float tiempoLerp = 0;
         float tiempo = 0;
 
