@@ -109,6 +109,8 @@ public class ControladorCámara : SyncScript
             else
                 rotación = -11.25f;
         }
+        else if (!SistemaRed.ObtenerJugando() && !derecha)
+            rotación = (rotación * -1);
 
         rotaciónObjetivoLuz = rotaciónInicialLuz * Quaternion.RotationY(MathUtil.DegreesToRadians(rotación));
         rotandoLuz = true;
