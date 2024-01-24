@@ -290,6 +290,7 @@ public class SistemaRed : StartupScript
                         break;
                     case TipoJugador.huesped:
                         controlador.ActivarDisparo(TipoJugador.anfitrión);
+                        controlador.EsperarCambioTurno();
                         break;
                 }
                 break;

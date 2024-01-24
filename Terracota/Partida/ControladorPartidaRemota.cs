@@ -281,6 +281,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         // Activa turno
         cambiandoTurno = false;
         interfaz.ActualizarTurno(cantidadTurnos, CalcularPotencia(cantidadTurnos));
+        interfaz.CambiarTurno(turnoJugador);
         interfaz.ActivarTurno(true);
     }
 

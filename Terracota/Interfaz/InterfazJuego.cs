@@ -262,7 +262,7 @@ public class InterfazJuego : SyncScript
             txtMultiplicador.TextColor = Color.Red;
     }
 
-    private void CambiarTurno(TipoJugador jugador)
+    public void CambiarTurno(TipoJugador jugador)
     {
         switch (jugador)
         {
