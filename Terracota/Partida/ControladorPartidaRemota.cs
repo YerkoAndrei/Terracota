@@ -231,6 +231,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         // Pausa turno
         cambiandoTurno = true;
         interfaz.PausarInterfaz();
+        interfaz.ActivarTurno(false);
         await Task.Delay(duraciónTurnoRemoto);
 
         // Verifica partida
@@ -279,8 +280,8 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
         // Activa turno
         cambiandoTurno = false;
-        interfaz.ActivarTurno(false);
         interfaz.ActualizarTurno(cantidadTurnos, CalcularPotencia(cantidadTurnos));
+        interfaz.ActivarTurno(true);
     }
 
     public float CalcularPotencia(int turnos)
