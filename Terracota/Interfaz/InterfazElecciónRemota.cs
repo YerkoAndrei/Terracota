@@ -281,6 +281,7 @@ public class InterfazElecciónRemota : StartupScript
     public async void ComenzarPartida(bool _ganaAnfitrión)
     {
         ganaAnfitrión = _ganaAnfitrión;
+        esperandoRuleta = false;
 
         SistemaSonido.SonarInicio();
         await FinalizarRuleta();
@@ -332,7 +333,7 @@ public class InterfazElecciónRemota : StartupScript
         var apagado = true;
         var toques = 40;
         int toqueActual = 0;
-        int delay = 60;
+        int delay = 30;
 
         while (toqueActual < toques && esperandoRuleta && !partidaCancelada)
         {
@@ -344,7 +345,7 @@ public class InterfazElecciónRemota : StartupScript
 
             toqueActual++;
             apagado = !apagado;
-            delay += 5;
+            delay += 15;
 
             SistemaSonido.SonarRuleta();
             await Task.Delay(delay);
