@@ -339,10 +339,17 @@ public class InterfazOpciones : StartupScript
             case 30:
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btn30"), true);
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btn60"), false);
+                BloquearBotón(página.FindVisualChildOfType<Grid>("btn120"), false);
                 break;
             case 60:
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btn30"), false);
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btn60"), true);
+                BloquearBotón(página.FindVisualChildOfType<Grid>("btn120"), false);
+                break;
+            case 120:
+                BloquearBotón(página.FindVisualChildOfType<Grid>("btn30"), false);
+                BloquearBotón(página.FindVisualChildOfType<Grid>("btn60"), false);
+                BloquearBotón(página.FindVisualChildOfType<Grid>("btn120"), true);
                 break;
         }
     }
