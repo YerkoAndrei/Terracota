@@ -371,11 +371,6 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
     }
 
-    public void ActualizarTexto(Texto nuevoTexto)
-    {
-
-    }
-
     public void RevisarJugadoresListos(TipoJugador tipoJugador)
     {
         elección.MostrarJugadorListo(tipoJugador);
