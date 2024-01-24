@@ -114,8 +114,7 @@ public class ControladorPartidaLocal : SyncScript, IPartida
     {
         // Recarga interfaz
         interfaz.Activar(true);
-        interfaz.ActualizarTurno(cantidadTurnos, multiplicador);
-        interfaz.CambiarInterfaz(turnoJugador, TipoProyectil.bola);
+        interfaz.MostrarInterfazLocal(turnoJugador, TipoProyectil.bola, cantidadTurnos, multiplicador);
         partidaActiva = true;
     }
 
@@ -168,9 +167,8 @@ public class ControladorPartidaLocal : SyncScript, IPartida
     private async void CambiarTurno()
     {
         cambiandoTurno = true;
-        interfaz.PausarInterfaz();
+        interfaz.OcultarInterfaz();
         await Task.Delay(duraciónTurnoLocal);
-        interfaz.ActivarTurno(false);
 
         // Verifica partida
         if (!partidaActiva)
@@ -200,7 +198,7 @@ public class ControladorPartidaLocal : SyncScript, IPartida
                 cañónHuesped.Activar(true);
                 cañónActual = cañónHuesped;
 
-                interfaz.CambiarInterfaz(turnoJugador, proyectilHuesped);
+                interfaz.MostrarInterfazLocal(turnoJugador, proyectilAnfitrión, cantidadTurnos, multiplicador);
             }, luzDireccional);
         }
         else
@@ -220,15 +218,13 @@ public class ControladorPartidaLocal : SyncScript, IPartida
                 cañónAnfitrión.Activar(true);
                 cañónActual = cañónAnfitrión;
 
-                interfaz.CambiarInterfaz(turnoJugador, proyectilAnfitrión);
+                interfaz.MostrarInterfazLocal(turnoJugador, proyectilAnfitrión, cantidadTurnos, multiplicador);
             }, luzDireccional);
         }
 
         // Suma potencia cada de 4 turnos
         cantidadTurnos++;
         SumarPotencia();
-
-        interfaz.ActualizarTurno(cantidadTurnos, multiplicador);
     }
 
     public void SumarPotencia()

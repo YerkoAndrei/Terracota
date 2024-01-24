@@ -189,9 +189,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     {
         // Recarga interfaz
         interfaz.Activar(true);
-        interfaz.ActualizarTurno(cantidadTurnos, multiplicador);
-        interfaz.CambiarTurno(turnoJugador);
-        interfaz.CambiarInterfaz(SistemaRed.ObtenerTipoJugador(), TipoProyectil.bola);
+        interfaz.MostrarInterfazRemoto(SistemaRed.ObtenerTipoJugador(), cantidadTurnos, multiplicador);
         partidaActiva = true;
     }
     
@@ -231,8 +229,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     {
         // Pausa turno
         cambiandoTurno = true;
-        interfaz.PausarInterfaz();
-        interfaz.ActivarTurno(false);
+        interfaz.OcultarInterfaz();
         await Task.Delay(duraciónTurnoRemoto);
 
         // Verifica partida
@@ -268,8 +265,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     public void EsperarCambioTurno()
     {
         cambiandoTurno = true;
-        interfaz.PausarInterfaz();
-        interfaz.ActivarTurno(false);
+        interfaz.OcultarInterfaz();
 
         // Rota solo luz
         //controladorCámara.RotarYCámara(180, cambiarHaciaDerecha, null, luzDireccional);
@@ -282,10 +278,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
         // Activa turno
         cambiandoTurno = false;
-        interfaz.ActualizarTurno(cantidadTurnos, CalcularPotencia(cantidadTurnos));
-        interfaz.CambiarTurno(turnoJugador);
-        interfaz.ActivarTurno(true);
-        interfaz.MostrarInformación();
+        interfaz.MostrarInterfazRemoto(SistemaRed.ObtenerTipoJugador(), cantidadTurnos, CalcularPotencia(cantidadTurnos));
     }
 
     public float CalcularPotencia(int turnos)

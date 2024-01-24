@@ -134,7 +134,6 @@ public class InterfazJuego : SyncScript
         pausa = false;
         gridGanador.Visibility = Visibility.Hidden;
         gridPausa.Visibility = Visibility.Hidden;
-        CambiarInterfaz(TipoJugador.anfitrión, TipoProyectil.bola);
     }
 
     public override void Update()
@@ -230,34 +229,40 @@ public class InterfazJuego : SyncScript
         CambiarProyectil(iPartida.CambiarProyectil());
     }
 
-    public void PausarInterfaz()
+    public void MostrarInterfazLocal(TipoJugador jugador, TipoProyectil proyectil, int turno, float multiplicador)
+    {
+        gridCañón.Visibility = Visibility.Visible;
+        gridProyectil.Visibility = Visibility.Visible;
+        btnPausa.Visibility = Visibility.Visible;
+
+        CambiarNombreCañón(jugador);
+        CambiarProyectil(proyectil);
+
+        CambiarTurno(jugador);
+        ActualizarEstado(turno, multiplicador);
+    }
+
+    public void MostrarInterfazRemoto(TipoJugador jugador, int turno, float multiplicador)
+    {
+        gridCañón.Visibility = Visibility.Visible;
+        gridProyectil.Visibility = Visibility.Visible;
+        btnPausa.Visibility = Visibility.Visible;
+
+        CambiarTurno(jugador);
+        ActualizarEstado(turno, multiplicador);
+    }
+
+    public void OcultarInterfaz()
     {
         txtProyectil.Text = string.Empty;
         txtCantidadTurnos.Text = string.Empty;
 
-        btnPausa.Visibility = Visibility.Hidden;
+        gridCañón.Visibility = Visibility.Hidden;
         gridProyectil.Visibility = Visibility.Hidden;
+        btnPausa.Visibility = Visibility.Hidden;
     }
 
-    public void ActivarTurno(bool activar)
-    {
-        if (activar)
-            gridCañón.Visibility = Visibility.Visible;
-        else
-            gridCañón.Visibility = Visibility.Hidden;
-    }
-
-    public void CambiarInterfaz(TipoJugador jugador, TipoProyectil proyectil)
-    {
-        ActivarTurno(false);
-        CambiarNombreCañón(jugador);
-        CambiarTurno(jugador);
-        MostrarInformación();
-
-        CambiarProyectil(proyectil);
-    }
-
-    public void ActualizarTurno(int turno, float multiplicador)
+    private void ActualizarEstado(int turno, float multiplicador)
     {
         txtCantidadTurnos.Text = turno.ToString();
         txtMultiplicador.Text = "x" + multiplicador.ToString("0.0");
@@ -266,14 +271,7 @@ public class InterfazJuego : SyncScript
             txtMultiplicador.TextColor = Color.Red;
     }
 
-    public void MostrarInformación()
-    {
-        gridCañón.Visibility = Visibility.Visible;
-        gridProyectil.Visibility = Visibility.Visible;
-        btnPausa.Visibility = Visibility.Visible;
-    }
-
-    public void CambiarNombreCañón(TipoJugador jugador)
+    private void CambiarNombreCañón(TipoJugador jugador)
     {
         switch (jugador)
         {
@@ -289,8 +287,8 @@ public class InterfazJuego : SyncScript
                 break;
         }
     }
-    
-    public void CambiarTurno(TipoJugador jugador)
+
+    private void CambiarTurno(TipoJugador jugador)
     {
         imgTurnoAnfitrión.Visibility = Visibility.Hidden;
         imgTurnoHuesped.Visibility = Visibility.Hidden;
