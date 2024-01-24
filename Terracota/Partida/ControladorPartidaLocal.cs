@@ -180,6 +180,7 @@ public class ControladorPartidaLocal : SyncScript, IPartida
 
         cañónAnfitrión.Activar(false);
         cañónHuesped.Activar(false);
+        controladorCámara.RotarLuz(luzDireccional);
 
         if (turnoJugador == TipoJugador.anfitrión)
         {
@@ -199,7 +200,7 @@ public class ControladorPartidaLocal : SyncScript, IPartida
                 cañónActual = cañónHuesped;
 
                 interfaz.MostrarInterfazLocal(turnoJugador, proyectilAnfitrión, cantidadTurnos, multiplicador);
-            }, luzDireccional);
+            });
         }
         else
         {
@@ -219,7 +220,7 @@ public class ControladorPartidaLocal : SyncScript, IPartida
                 cañónActual = cañónAnfitrión;
 
                 interfaz.MostrarInterfazLocal(turnoJugador, proyectilAnfitrión, cantidadTurnos, multiplicador);
-            }, luzDireccional);
+            });
         }
 
         // Suma potencia cada de 4 turnos

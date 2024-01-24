@@ -10,12 +10,18 @@ public class ControladorCámara : SyncScript
     public TransformComponent cámara;
 
     private bool rotando;
+    private bool rotandoLuz;
     private bool moviendo;
 
     // Lerp
+    private float duraciónRotación;
     private float duraciónLerp;
     private float tiempoDelta;
     private float tiempo;
+
+    private float duraciónLerpLuz;
+    private float tiempoDeltaLuz;
+    private float tiempoLuz;
 
     // Rotación
     private Quaternion rotaciónInicial;
@@ -24,11 +30,11 @@ public class ControladorCámara : SyncScript
     private Quaternion rotaciónObjetivoLuz;
     private bool derecha;
     private float YObjetivo;
-    private TransformComponent luzDireccional;
 
     // Efecto disparo
     private Vector3 posiciónInicial;
     private Vector3 posiciónObjetivo;
+    private TransformComponent luzDireccional;
     private float ZInicial;
     private bool retrocediendo;
 
@@ -38,6 +44,7 @@ public class ControladorCámara : SyncScript
     public override void Start()
     {
         ZInicial = cámara.Position.Z;
+        duraciónRotación = 1;
     }
 
     public override void Update()
@@ -45,11 +52,14 @@ public class ControladorCámara : SyncScript
         if (rotando)
             RotarEjeCámara();
 
+        if (rotandoLuz)
+            RotarEjeLuz();
+
         if (moviendo)
             MoverCámara();
     }
 
-    public void RotarYCámara(float _YObjetivo, bool _derecha, Action _enFin = null, TransformComponent _luzDireccional = null)
+    public void RotarYCámara(float _YObjetivo, bool _derecha, Action _enFin = null)
     {
         if (rotando)
         {
@@ -60,11 +70,10 @@ public class ControladorCámara : SyncScript
         // Referencias
         YObjetivo = _YObjetivo;
         derecha = _derecha;
-        luzDireccional = _luzDireccional;
         enFin = _enFin;
 
         // Variables
-        duraciónLerp = 1f;
+        duraciónLerp = duraciónRotación;
         rotaciónInicial = eje.Rotation;
 
         // Ajusta dirección de movimiento
@@ -72,12 +81,6 @@ public class ControladorCámara : SyncScript
             YObjetivo = (YObjetivo * -1);
 
         rotaciónObjetivo = rotaciónInicial * Quaternion.RotationY(MathUtil.DegreesToRadians(YObjetivo));
-
-        if (luzDireccional != null)
-        {
-            rotaciónInicialLuz = luzDireccional.Rotation;
-            rotaciónObjetivoLuz = rotaciónInicialLuz * Quaternion.RotationY(45f);
-        }
         rotando = true;
     }
 
@@ -89,6 +92,18 @@ public class ControladorCámara : SyncScript
 
         rotaciónObjetivo = rotaciónInicial * Quaternion.RotationZ(MathUtil.DegreesToRadians(XObjetivo));
         rotando = true;
+    }
+
+    public void RotarLuz(TransformComponent _luzDireccional)
+    {
+        // Referencias
+        duraciónLerpLuz = duraciónRotación;
+        luzDireccional = _luzDireccional;
+
+        rotaciónInicialLuz = luzDireccional.Rotation;
+        rotaciónObjetivoLuz = rotaciónInicialLuz * Quaternion.RotationY(MathUtil.DegreesToRadians(45));
+
+        rotandoLuz = true;
     }
 
     public void ActivarEfectoDisparo()
@@ -125,15 +140,28 @@ public class ControladorCámara : SyncScript
 
         eje.Rotation = Quaternion.Lerp(rotaciónInicial, rotaciónObjetivo, tiempo);
 
-        // Mueve sol 45º
-        if (luzDireccional != null)
-            luzDireccional.Rotation = Quaternion.Lerp(rotaciónInicialLuz, rotaciónObjetivoLuz, tiempo);
-
         // Fin
         if (tiempoDelta >= duraciónLerp)
         {
             eje.Rotation = rotaciónObjetivo;
             TerminarLerp();
+        }
+    }
+
+    private void RotarEjeLuz()
+    {
+        tiempoDeltaLuz += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+        tiempoLuz = SistemaAnimación.EvaluarSuave(tiempoDeltaLuz / duraciónLerpLuz);
+
+        luzDireccional.Rotation = Quaternion.Lerp(rotaciónInicialLuz, rotaciónObjetivoLuz, tiempoLuz);
+
+        // Fin
+        if (tiempoDeltaLuz >= duraciónLerpLuz)
+        {
+            rotandoLuz = false;
+            tiempoDeltaLuz = 0;
+            tiempoLuz = 0;
+            luzDireccional.Rotation = rotaciónObjetivoLuz;
         }
     }
 
