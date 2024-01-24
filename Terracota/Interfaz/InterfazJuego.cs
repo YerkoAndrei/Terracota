@@ -229,6 +229,16 @@ public class InterfazJuego : SyncScript
         CambiarProyectil(iPartida.CambiarProyectil());
     }
 
+    public void OcultarInterfaz()
+    {
+        txtProyectil.Text = string.Empty;
+        txtCantidadTurnos.Text = string.Empty;
+
+        gridCañón.Visibility = Visibility.Hidden;
+        gridProyectil.Visibility = Visibility.Hidden;
+        btnPausa.Visibility = Visibility.Hidden;
+    }
+
     public void MostrarInterfazLocal(TipoJugador jugador, TipoProyectil proyectil, int turno, float multiplicador)
     {
         gridCañón.Visibility = Visibility.Visible;
@@ -252,14 +262,10 @@ public class InterfazJuego : SyncScript
         ActualizarEstado(turno, multiplicador);
     }
 
-    public void OcultarInterfaz()
+    public void ComenzarInterfazRemoto(TipoJugador jugador, TipoProyectil proyectil)
     {
-        txtProyectil.Text = string.Empty;
-        txtCantidadTurnos.Text = string.Empty;
-
-        gridCañón.Visibility = Visibility.Hidden;
-        gridProyectil.Visibility = Visibility.Hidden;
-        btnPausa.Visibility = Visibility.Hidden;
+        CambiarNombreCañón(jugador);
+        CambiarProyectil(proyectil);
     }
 
     private void ActualizarEstado(int turno, float multiplicador)
@@ -269,6 +275,22 @@ public class InterfazJuego : SyncScript
 
         if(multiplicador >= multiplicadorMáximo)
             txtMultiplicador.TextColor = Color.Red;
+    }
+
+    private void CambiarTurno(TipoJugador jugador)
+    {
+        imgTurnoAnfitrión.Visibility = Visibility.Hidden;
+        imgTurnoHuesped.Visibility = Visibility.Hidden;
+
+        switch (jugador)
+        {
+            case TipoJugador.anfitrión:
+                imgTurnoAnfitrión.Visibility = Visibility.Visible;
+                break;
+            case TipoJugador.huesped:
+                imgTurnoHuesped.Visibility = Visibility.Visible;
+                break;
+        }
     }
 
     private void CambiarNombreCañón(TipoJugador jugador)
@@ -288,21 +310,6 @@ public class InterfazJuego : SyncScript
         }
     }
 
-    private void CambiarTurno(TipoJugador jugador)
-    {
-        imgTurnoAnfitrión.Visibility = Visibility.Hidden;
-        imgTurnoHuesped.Visibility = Visibility.Hidden;
-
-        switch (jugador)
-        {
-            case TipoJugador.anfitrión:
-                imgTurnoAnfitrión.Visibility = Visibility.Visible;
-                break;
-            case TipoJugador.huesped:
-                imgTurnoHuesped.Visibility = Visibility.Visible;
-                break;
-        }
-    }
 
     private void CambiarProyectil(TipoProyectil proyectil)
     {
