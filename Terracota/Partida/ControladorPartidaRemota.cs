@@ -115,10 +115,16 @@ public class ControladorPartidaRemota : SyncScript, IPartida
             return;
 
         // Entradas
-        if (Input.IsKeyPressed(Keys.Space) && !interfaz.ObtenerPausa() && partidaActiva && !cambiandoTurno && turnoJugador == SistemaRed.ObtenerTipoJugador())
+        if (Input.IsKeyPressed(Keys.Space) && !interfaz.ObtenerPausa() && partidaActiva && !cambiandoTurno &&
+            SistemaRed.ObtenerTipoJugador() == turnoJugador)
         {
             Disparar();
-            CambiarTurno();
+
+            // Cambia turno o espera cambio
+            if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
+                CambiarTurno();
+            else
+                EsperarCambioTurno();
         }
     }
 
@@ -150,15 +156,16 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
         {
             if (ganaAnfitrión)
-            {
                 turnoJugador = TipoJugador.anfitrión;
-                _ = SistemaRed.EnviarData(DataRed.turnoAnfitrión);
-            }
             else
-            {
                 turnoJugador = TipoJugador.huesped;
-                _ = SistemaRed.EnviarData(DataRed.turnoHuesped);
-            }
+
+            var turno = new Turno
+            {
+                Jugador = turnoJugador,
+                CantidadTurnos = 0
+            };
+            _ = SistemaRed.EnviarData(DataRed.cambioTurno, turno);
         }
 
         // Cañones
@@ -219,13 +226,12 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         return proyectilActual;
     }
 
-    private async void CambiarTurno()
+    public async void CambiarTurno()
     {
+        // Pausa turno
         cambiandoTurno = true;
         interfaz.PausarInterfaz();
         await Task.Delay(duraciónTurnoRemoto);
-        interfaz.ActivarTurno(false);
-        cambiandoTurno = false;
 
         // Verifica partida
         if (!partidaActiva)
@@ -235,42 +241,55 @@ public class ControladorPartidaRemota : SyncScript, IPartida
             return;
         }
 
-        // Envia cambio
-        if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
-        {
-            if (turnoJugador == TipoJugador.anfitrión)
-                _ = SistemaRed.EnviarData(DataRed.turnoHuesped);
-            else
-                _ = SistemaRed.EnviarData(DataRed.turnoAnfitrión);
-        }
-
         // Rota solo luz
         //controladorCámara.RotarYCámara(180, cambiarHaciaDerecha, null, luzDireccional);
 
-        // Actualiza turno
-        if (turnoJugador == TipoJugador.anfitrión)
-            ActualizarTurno(TipoJugador.huesped);
-        else
-            ActualizarTurno(TipoJugador.anfitrión);
-    }
-
-    public void ActualizarTurno(TipoJugador _turnoJugador)
-    {
-        turnoJugador = _turnoJugador;
-
         // Suma potencia cada de 4 turnos
         cantidadTurnos++;
-        SumarPotencia();
 
-        interfaz.CambiarInterfaz(turnoJugador, proyectilActual);
-        interfaz.ActualizarTurno(cantidadTurnos, multiplicador);
+        // Envia cambio
+        var nuevoTurno = TipoJugador.anfitrión;
+        if (turnoJugador == TipoJugador.anfitrión)
+            nuevoTurno = TipoJugador.huesped;
+
+        var turno = new Turno
+        {
+            Jugador = nuevoTurno,
+            CantidadTurnos = cantidadTurnos
+        };
+        await SistemaRed.EnviarData(DataRed.cambioTurno, turno);
+
+        // Actualiza turno
+        ActualizarTurno(nuevoTurno, cantidadTurnos);
     }
 
-    public void SumarPotencia()
+    public void EsperarCambioTurno()
+    {
+        cambiandoTurno = true;
+        interfaz.PausarInterfaz();
+
+        // Rota solo luz
+        //controladorCámara.RotarYCámara(180, cambiarHaciaDerecha, null, luzDireccional);
+    }
+
+    public void ActualizarTurno(TipoJugador _turnoJugador, int _cantidadTurnos)
+    {
+        turnoJugador = _turnoJugador;
+        cantidadTurnos = _cantidadTurnos;
+
+        // Activa turno
+        cambiandoTurno = false;
+        interfaz.ActivarTurno(false);
+        interfaz.ActualizarTurno(cantidadTurnos, CalcularPotencia(cantidadTurnos));
+    }
+
+    public float CalcularPotencia(int turnos)
     {
         // Aumenta cada 4 turnos
-        if ((cantidadTurnos - 1) % 4 == 0 && multiplicador < multiplicadorMáximo)
+        if ((turnos - 1) % 4 == 0 && multiplicador < multiplicadorMáximo)
             multiplicador += 0.1f;
+        
+        return multiplicador;
     }
 
     public void DesactivarEstatua(TipoJugador jugador)

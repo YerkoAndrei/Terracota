@@ -124,18 +124,15 @@ public static class Constantes
         finalizarRuleta,
 
         // Turnos
-        turnoAnfitrión,
-        turnoHuesped,
+        cambioTurno,
         finalizarPartida,  // pendiente
 
         // Juego
-        estatuaAnfitriónCaída,  // pendiente
-        estatuaHuespedCaída,  // pendiente
-        pausa,  // pendiente
-        disparo,  // pendiente
-        texto,  // pendiente
         físicas,
-        cañón
+        cañón,
+        disparo,
+        estatua,  // pendiente
+        pausa,  // pendiente
     }
 
     public static Fortaleza GenerarFortalezaVacía()

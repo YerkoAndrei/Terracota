@@ -11,13 +11,6 @@ public class Conexión
     public TipoJugador ConectarComo { get; set; }
 }
 
-public class Texto
-{
-    public string Emisor { get; set; }
-    public string Tiempo { get; set; }
-    public string Text { get; set; }
-}
-
 public class Físicas
 {
     /*
@@ -26,6 +19,12 @@ public class Físicas
     */
     public RotaciónCañón RotaciónCañón { get; set; }    
     public List<BloqueFísico> Bloques { get; set; }
+}
+
+public class Turno
+{
+    public TipoJugador Jugador { get; set; }
+    public int CantidadTurnos { get; set; }
 }
 
 public class RotaciónCañón
@@ -47,3 +46,4 @@ public class BloqueFísico
         Rotación = rotación;
     }
 }
+

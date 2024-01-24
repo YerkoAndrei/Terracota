@@ -254,11 +254,9 @@ public class SistemaRed : StartupScript
                 var ganaAnfitrión = bool.Parse(data.Values.Single());
                 FinalizarRuleta(ganaAnfitrión);
                 break;
-            case DataRed.turnoAnfitrión:
-                controlador.ActualizarTurno(TipoJugador.anfitrión);
-                break;
-            case DataRed.turnoHuesped:
-                controlador.ActualizarTurno(TipoJugador.huesped);
+            case DataRed.cambioTurno:
+                var turno = JsonConvert.DeserializeObject<Turno>(data.Values.Single());
+                controlador.ActualizarTurno(turno.Jugador, turno.CantidadTurnos);
                 break;
             case DataRed.cargarFortaleza:
                 var fortaleza = JsonConvert.DeserializeObject<Fortaleza>(data.Values.Single());
@@ -288,15 +286,12 @@ public class SistemaRed : StartupScript
                 {
                     case TipoJugador.anfitrión:
                         controlador.ActivarDisparo(TipoJugador.huesped);
+                        controlador.CambiarTurno();
                         break;
                     case TipoJugador.huesped:
                         controlador.ActivarDisparo(TipoJugador.anfitrión);
                         break;
                 }
-                break;
-            case DataRed.texto:
-                var texto = JsonConvert.DeserializeObject<Texto>(data.Values.Single());
-                controlador.ActualizarTexto(texto);
                 break;
             case DataRed.físicas:
                 var físicas = JsonConvert.DeserializeObject<Físicas>(data.Values.Single());
