@@ -348,6 +348,8 @@ public class SistemaRed : StartupScript
         ActualizarConfiguración();
         MarcarDispositivo(TipoJugador.nada);
         IPConectada = string.Empty;
+        conectado = false;
+        jugando = false;
 
         SistemaSonido.CambiarMúsica(false);
         SistemaEscenas.CambiarEscena(Escenas.menú);
