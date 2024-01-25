@@ -48,7 +48,6 @@ public class ElementoBloque : StartupScript
     {
         cuerpo.Entity.Transform.Position = bloque.Posición;
         cuerpo.Entity.Transform.Rotation = bloque.Rotación;
-        //cuerpo.Entity.Transform.UpdateWorldMatrix();
     }
 
     public BloqueFísico ObtenerPosición()
