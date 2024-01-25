@@ -193,7 +193,11 @@ public class InterfazJuego : SyncScript
             return;
 
         SistemaSonido.CambiarMúsica(false);
-        SistemaEscenas.CambiarEscena(Escenas.local);
+
+        if (SistemaRed.ObtenerJugando())
+            SistemaRed.IniciarPartida(true);
+        else
+            SistemaEscenas.CambiarEscena(Escenas.local);
     }
 
     private void EnClicOpciones()
