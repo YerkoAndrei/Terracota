@@ -474,17 +474,7 @@ public class InterfazOpciones : StartupScript
         BloquearBotón(página.FindVisualChildOfType<Grid>("btnR6"), false);
     }
 
-    public bool ObtenerActivo()
-    {
-        return Opciones.Visibility == Visibility.Visible;
-    }
-
-    public void ForzarNeutralidad()
-    {
-        animando = false;
-    }
-
-    public void EnClicVolver()
+    private void EnClicVolver()
     {
         if (animando)
             return;
@@ -496,5 +486,14 @@ public class InterfazOpciones : StartupScript
             Opciones.Visibility = Visibility.Hidden;
             animando = false;
         });
+    }
+    public void Ocultar()
+    {
+        if (Opciones.Visibility != Visibility.Visible)
+            return;
+
+        resoluciones.Visibility = Visibility.Hidden;
+        Opciones.Visibility = Visibility.Hidden;
+        animando = false;
     }
 }

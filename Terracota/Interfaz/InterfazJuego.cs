@@ -270,20 +270,10 @@ public class InterfazJuego : SyncScript
     public void MostrarInterfazRemoto(TipoJugador jugador, int turno, float multiplicador)
     {
         // Reinicio de menú de pausa
-        if (gridPausa.Visibility == Visibility.Visible)
+        if (pausa)
         {
-            pausa = false;
-            SistemaSonido.CambiarMúsica(true, 0.5f);
-            SistemaAnimación.AnimarElemento(animPausa, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, () =>
-            {
-                gridPausa.Visibility = Visibility.Hidden;
-            });
-        }
-
-        if (interfazOpciones.ObtenerActivo())
-        {
-            interfazOpciones.ForzarNeutralidad();
-            interfazOpciones.EnClicVolver();
+            EnClicPausa();
+            interfazOpciones.Ocultar();
         }
 
         gridCañón.Visibility = Visibility.Visible;
