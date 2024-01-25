@@ -479,6 +479,11 @@ public class InterfazOpciones : StartupScript
         return Opciones.Visibility == Visibility.Visible;
     }
 
+    public void ForzarNeutralidad()
+    {
+        animando = false;
+    }
+
     public void EnClicVolver()
     {
         if (animando)

@@ -269,12 +269,18 @@ public class InterfazJuego : SyncScript
 
     public void MostrarInterfazRemoto(TipoJugador jugador, int turno, float multiplicador)
     {
-        // Reinicio de menú pausa
-        if (pausa)
+        // Reinicio de menú de pausa
+        if (ObtenerPausa())
+        {
+            animando = false;
             EnClicPausa();
+        }
 
         if (interfazOpciones.ObtenerActivo())
+        {
+            interfazOpciones.ForzarNeutralidad();
             interfazOpciones.EnClicVolver();
+        }
 
         gridCañón.Visibility = Visibility.Visible;
         gridProyectil.Visibility = Visibility.Visible;
