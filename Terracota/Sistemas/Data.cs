@@ -35,13 +35,11 @@ public class RotaciónCañón
 
 public class BloqueFísico
 {
-    public string Código { get; set; }
     public Vector3 Posición { get; set; }
     public Quaternion Rotación { get; set; }
 
-    public BloqueFísico(string código, Vector3 posición, Quaternion rotación)
+    public BloqueFísico(Vector3 posición, Quaternion rotación)
     {
-        Código = código;
         Posición = posición;
         Rotación = rotación;
     }

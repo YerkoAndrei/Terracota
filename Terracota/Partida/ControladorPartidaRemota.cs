@@ -146,15 +146,17 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     {
         UIElección.Enabled = false;
 
-        // Activa colisiones
-        fortalezaAnfitrión.Activar();
-        fortalezaHuesped.Activar();
-
+        // Anfitrión controla físicas
+        // Huesped solo controla su propio cañón
         SistemaRed.ActivarActualizaciónRed(true);
 
-        // Turno inicial
         if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
         {
+            // Activa colisiones
+            fortalezaAnfitrión.Activar();
+            fortalezaHuesped.Activar();
+
+            // Turno inicial
             if (ganaAnfitrión)
                 turnoJugador = TipoJugador.anfitrión;
             else
@@ -391,14 +393,13 @@ public class ControladorPartidaRemota : SyncScript, IPartida
             Bloques = new List<BloqueFísico>()
         };
 
-        // Cañón
-        if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
-            físicas.RotaciónCañón = ObtenerRotaciónCañón(TipoJugador.anfitrión);
+        // Cañón anfitrión
+        físicas.RotaciónCañón = ObtenerRotaciónCañón(TipoJugador.anfitrión);
 
         // Bloques
         foreach (var bloque in bloques)
         {
-            físicas.Bloques.Add(new BloqueFísico(bloque.ObtenerCódigo(), bloque.Entity.Transform.Position, bloque.Entity.Transform.Rotation));
+            físicas.Bloques.Add(new BloqueFísico(bloque.Entity.Transform.Position, bloque.Entity.Transform.Rotation));
         }
 
         return físicas;
@@ -406,11 +407,8 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
     public void ActualizarFísicas(Físicas físicas)
     {
-        // Cañón
-        // Huesped actualiza cañón junto con físicas
-        // Anfitrión actualiza cañón en llamado independiente
-        if (SistemaRed.ObtenerTipoJugador() == TipoJugador.huesped)
-            ActualizarCañón(físicas.RotaciónCañón, TipoJugador.anfitrión);
+        // Cañón Huesped      
+        ActualizarCañón(físicas.RotaciónCañón, TipoJugador.anfitrión);
 
         // Bloques
         for (int i = 0; i < físicas.Bloques.Count; i++)
@@ -419,6 +417,8 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         }
     }
 
+    // Anfitrión actualiza cañón junto con físicas
+    // Huesped actualiza cañón en llamado independiente  
     public RotaciónCañón ObtenerRotaciónCañón(TipoJugador jugador)
     {
         var cañón = new RotaciónCañón();
