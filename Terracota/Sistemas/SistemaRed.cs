@@ -266,11 +266,9 @@ public class SistemaRed : StartupScript
                         break;
                 }
                 break;
-            case DataRed.anfitriónListo:
-                controlador.RevisarJugadoresListos(TipoJugador.anfitrión);
-                break;
-            case DataRed.huespedListo:
-                controlador.RevisarJugadoresListos(TipoJugador.huesped);
+            case DataRed.jugadorListo:
+                var listo = JsonConvert.DeserializeObject<TipoJugador>(data.Values.Single());
+                controlador.RevisarJugadoresListos(listo);
                 break;
             case DataRed.comenzarRuleta:
                 ComenzarRuleta();

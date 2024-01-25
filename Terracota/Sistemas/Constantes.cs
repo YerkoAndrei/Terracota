@@ -123,8 +123,7 @@ public static class Constantes
 
         // Elección
         cargarFortaleza,
-        anfitriónListo,
-        huespedListo,
+        jugadorListo,
         comenzarRuleta,
         finalizarRuleta,
 

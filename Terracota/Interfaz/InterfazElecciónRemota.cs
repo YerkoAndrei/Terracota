@@ -245,13 +245,13 @@ public class InterfazElecciónRemota : StartupScript
 
         if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
         {
-            _ = SistemaRed.EnviarData(DataRed.anfitriónListo);
+            _ = SistemaRed.EnviarData(DataRed.jugadorListo, TipoJugador.anfitrión);
 
             // Anfitrión comprueba que estén listos
             controladorPartida.RevisarJugadoresListos(SistemaRed.ObtenerTipoJugador());
         }
         else
-            _ = SistemaRed.EnviarData(DataRed.huespedListo);
+            _ = SistemaRed.EnviarData(DataRed.jugadorListo, TipoJugador.huesped);
     }
 
     public async void ComenzarRuleta()
