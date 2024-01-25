@@ -282,14 +282,15 @@ public class SistemaRed : StartupScript
                 }
                 break;
             case DataRed.disparo:
+                var proyectil = JsonConvert.DeserializeObject<TipoProyectil>(data.Values.Single());
                 switch (tipoJugador)
                 {
                     case TipoJugador.anfitrión:
-                        controlador.ActivarDisparo(TipoJugador.huesped);
+                        controlador.ActivarDisparo(TipoJugador.huesped, proyectil);
                         controlador.CambiarTurno();
                         break;
                     case TipoJugador.huesped:
-                        controlador.ActivarDisparo(TipoJugador.anfitrión);
+                        controlador.ActivarDisparo(TipoJugador.anfitrión, proyectil);
                         controlador.EsperarCambioTurno();
                         break;
                 }

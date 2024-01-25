@@ -206,7 +206,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         controladorCámara.ActivarEfectoDisparo();
         SistemaSonido.SonarCañonazo();
 
-        _ = SistemaRed.EnviarData(DataRed.disparo);
+        _ = SistemaRed.EnviarData(DataRed.disparo, proyectilActual);
 
         if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
             cañónAnfitrión.Disparar(proyectilActual, multiplicador);
@@ -354,14 +354,14 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         elección.MostrarNombreFortaleza(fortaleza.Nombre, tipoJugador);
     }
 
-    public void ActivarDisparo(TipoJugador tipoJugador)
+    public void ActivarDisparo(TipoJugador tipoJugador, TipoProyectil proyectil)
     {
         SistemaSonido.SonarCañonazo();
 
         if (tipoJugador == TipoJugador.anfitrión)
             cañónAnfitrión.ActivarPartículas();
         else
-            cañónHuesped.ActivarPartículas();
+            cañónHuesped.Disparar(proyectil, multiplicador);
     }
 
     public void Pausar(TipoJugador tipoJugador)
