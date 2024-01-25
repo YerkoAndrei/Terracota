@@ -13,12 +13,14 @@ public class Conexión
 
 public class Físicas
 {
-    /*
-    public Vector3 PosiciónBola { get; set; }
-    public Quaternion RotaciónBola { get; set; }
-    */
-    public RotaciónCañón RotaciónCañón { get; set; }    
+    public RotaciónCañón RotaciónCañónAnfitrión { get; set; }
     public List<BloqueFísico> Bloques { get; set; }
+
+    public ProyectilFísico BolaAnfitrión { get; set; }
+    public List<ProyectilFísico> MetrallaAnfitrión { get; set; }
+
+    public ProyectilFísico BolaHuesped { get; set; }
+    public List<ProyectilFísico> MetrallaHuesped { get; set; }
 }
 
 public class Turno
@@ -39,3 +41,9 @@ public class BloqueFísico
     public Quaternion Rotación { get; set; }
 }
 
+public class ProyectilFísico
+{
+    public Vector3 Posición { get; set; }
+    public Vector3 Escala { get; set; }
+    public Quaternion Rotación { get; set; }
+}

@@ -21,6 +21,12 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     public InterfazJuego interfaz;
     public UIComponent UIElección;
 
+    public ControladorBola bolaAnfitrión;
+    public List<ControladorBola> metrallaAnfitrión = new List<ControladorBola> { };
+
+    public ControladorBola bolaHuesped;
+    public List<ControladorBola> metrallaHuesped = new List<ControladorBola> { };
+
     private bool anfitriónListo;
     private bool huespedListo;
     private bool cambiandoTurno;
@@ -394,12 +400,26 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         };
 
         // Cañón anfitrión
-        físicas.RotaciónCañón = ObtenerRotaciónCañón(TipoJugador.anfitrión);
+        físicas.RotaciónCañónAnfitrión = ObtenerRotaciónCañón(TipoJugador.anfitrión);
 
         // Bloques
         foreach (var bloque in bloques)
         {
             físicas.Bloques.Add(bloque.ObtenerPosición());
+        }
+
+        // Proyectiles
+        físicas.BolaAnfitrión = bolaAnfitrión.ObtenerPosición();
+        físicas.BolaHuesped = bolaHuesped.ObtenerPosición();
+
+        foreach (var bola in metrallaAnfitrión)
+        {
+            físicas.MetrallaAnfitrión.Add(bola.ObtenerPosición());
+        }
+
+        foreach (var bola in metrallaHuesped)
+        {
+            físicas.MetrallaHuesped.Add(bola.ObtenerPosición());
         }
 
         return físicas;
@@ -408,12 +428,23 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     public void ActualizarFísicas(Físicas físicas)
     {
         // Cañón Huesped      
-        ActualizarCañón(físicas.RotaciónCañón, TipoJugador.anfitrión);
+        ActualizarCañón(físicas.RotaciónCañónAnfitrión, TipoJugador.anfitrión);
 
         // Bloques
         for (int i = 0; i < físicas.Bloques.Count; i++)
         {
             bloques[i].PosicionarFísica(físicas.Bloques[i]);
+        }
+
+        // Proyectiles
+        for (int i = 0; i < físicas.MetrallaAnfitrión.Count; i++)
+        {
+            metrallaAnfitrión[i].PosicionarFísica(físicas.MetrallaAnfitrión[i]);
+        }
+
+        for (int i = 0; i < físicas.MetrallaHuesped.Count; i++)
+        {
+            metrallaHuesped[i].PosicionarFísica(físicas.MetrallaHuesped[i]);
         }
     }
 

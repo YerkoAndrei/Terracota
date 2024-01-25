@@ -117,7 +117,7 @@ public class ControladorBola : AsyncScript
         if (SistemaRed.ObtenerJugando())
         {
             var tiempoGuardado = (int)(duraciónGuardado * 1000f);
-            duración -= (tiempoGuardado + 200);
+            duración -= (tiempoGuardado + 300);
         }
 
         await Task.Delay(duración);
@@ -171,5 +171,25 @@ public class ControladorBola : AsyncScript
             case TipoProyectil.metralla:
                 return ObtenerMayorValor(velocidad) * 0.6f;
         }
+    }
+
+    public void PosicionarFísica(ProyectilFísico bloque)
+    {
+        cuerpo.Entity.Transform.Position = bloque.Posición;
+        cuerpo.Entity.Transform.Scale = bloque.Escala;
+        cuerpo.Entity.Transform.Rotation = bloque.Rotación;
+    }
+
+    public ProyectilFísico ObtenerPosición()
+    {
+        // Anfitrión obtiene físicas
+        // Huesped actualiza sin física
+        var física = new ProyectilFísico
+        {
+            Posición = cuerpo.Entity.Transform.Position,
+            Escala = cuerpo.Entity.Transform.Scale,
+            Rotación = cuerpo.Entity.Transform.Rotation,
+        };
+        return física;
     }
 }

@@ -175,6 +175,10 @@ public class SistemaRed : StartupScript
         }
     }
 
+    // Físicas podrían optimizarse:
+    // Guardar solo XYZ de Vector3
+    // Guardar solo WXYZ de Quaternion
+    // Comprimir string final
     public static async Task<bool> EnviarData(DataRed entrada, dynamic data = null)
     {
         // Serializa data
