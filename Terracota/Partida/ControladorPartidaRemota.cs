@@ -48,6 +48,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     private List<ElementoBloque> bloques;
 
     // PENDIENTE
+    private static InterfazElecciónRemota elecciónEstática;
     private static TipoJugador cargaPendienteJugador;
     private static Fortaleza cargaPendienteFortaleza;
 
@@ -74,6 +75,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
         // Comienza con elección
         elección = UIElección.Entity.Get<InterfazElecciónRemota>();
+        elecciónEstática = elección;
         UIElección.Enabled = true;
         interfaz.Activar(false);
 
@@ -117,6 +119,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
             CargarFortaleza(cargaPendienteFortaleza, cargaPendienteJugador);
             cargaPendienteJugador = TipoJugador.nada;
             cargaPendienteFortaleza = null;
+            elecciónEstática = null;
         }
     }
 
@@ -358,7 +361,13 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     }
 
     // Remoto
-    public static void GuardarFortaleza(Fortaleza fortaleza, TipoJugador tipoJugador)
+    public static bool VerificarIniciado()
+    {
+        // Por si remoto envia antes de que cargue escena
+        return (elecciónEstática != null && elecciónEstática.ObtenerIniciada());
+    }
+
+    public static void GuardarFortalezaPendiente(Fortaleza fortaleza, TipoJugador tipoJugador)
     {
         cargaPendienteFortaleza = fortaleza;
         cargaPendienteJugador = tipoJugador;

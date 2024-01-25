@@ -260,17 +260,17 @@ public class SistemaRed : StartupScript
                 {
                     // Por si remoto envia antes de que cargue escena
                     case TipoJugador.anfitrión:
-                        if (conectado)
+                        if (ControladorPartidaRemota.VerificarIniciado())
                             controlador.CargarFortaleza(fortaleza, TipoJugador.huesped);
                         else
-                            ControladorPartidaRemota.GuardarFortaleza(fortaleza, TipoJugador.huesped);
+                            ControladorPartidaRemota.GuardarFortalezaPendiente(fortaleza, TipoJugador.huesped);
                         break;
                     // Por si remoto envia antes de que cargue escena
                     case TipoJugador.huesped:
-                        if (conectado)
+                        if (ControladorPartidaRemota.VerificarIniciado())
                             controlador.CargarFortaleza(fortaleza, TipoJugador.anfitrión);
                         else
-                            ControladorPartidaRemota.GuardarFortaleza(fortaleza, TipoJugador.anfitrión);
+                            ControladorPartidaRemota.GuardarFortalezaPendiente(fortaleza, TipoJugador.anfitrión);
                         break;
                 }
                 break;
