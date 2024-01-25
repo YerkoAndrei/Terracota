@@ -174,6 +174,9 @@ public class SistemaRed : StartupScript
         }
     }
 
+    // Posibles optimizaciones:
+    // Mover solo matrices en movimiento
+    // Comprimir json
     public static async Task<bool> EnviarData(DataRed entrada, dynamic data = null)
     {
         // Serializa data
@@ -239,6 +242,18 @@ public class SistemaRed : StartupScript
             case DataRed.cerrar:
                 CerrarConexión(false);
                 break;
+            case DataRed.cargarFortaleza:
+                var fortaleza = JsonConvert.DeserializeObject<Fortaleza>(data.Values.Single());
+                switch (tipoJugador)
+                {
+                    case TipoJugador.anfitrión:
+                        controlador.CargarFortaleza(fortaleza, TipoJugador.huesped);
+                        break;
+                    case TipoJugador.huesped:
+                        controlador.CargarFortaleza(fortaleza, TipoJugador.anfitrión);
+                        break;
+                }
+                break;
             case DataRed.anfitriónListo:
                 controlador.RevisarJugadoresListos(TipoJugador.anfitrión);
                 break;
@@ -256,26 +271,23 @@ public class SistemaRed : StartupScript
                 var turno = JsonConvert.DeserializeObject<Turno>(data.Values.Single());
                 controlador.ActualizarTurno(turno.Jugador, turno.CantidadTurnos);
                 break;
-            case DataRed.cargarFortaleza:
-                var fortaleza = JsonConvert.DeserializeObject<Fortaleza>(data.Values.Single());
-                switch(tipoJugador)
-                {
-                    case TipoJugador.anfitrión:
-                        controlador.CargarFortaleza(fortaleza, TipoJugador.huesped);
-                        break;
-                    case TipoJugador.huesped:
-                        controlador.CargarFortaleza(fortaleza, TipoJugador.anfitrión);
-                        break;
-                }
+            case DataRed.finalizarPartida:
+                var ganador = JsonConvert.DeserializeObject<TipoJugador>(data.Values.Single());
+                controlador.MostrarGanador(ganador);
                 break;
-            case DataRed.pausa:
+            case DataRed.físicas:
+                var físicas = JsonConvert.DeserializeObject<Físicas>(data.Values.Single());
+                controlador.ActualizarFísicas(físicas);
+                break;
+            case DataRed.cañón:
+                var cañón = JsonConvert.DeserializeObject<float[]>(data.Values.Single());
                 switch (tipoJugador)
                 {
                     case TipoJugador.anfitrión:
-                        controlador.Pausar(TipoJugador.huesped);
+                        controlador.ActualizarCañón(cañón, TipoJugador.huesped);
                         break;
                     case TipoJugador.huesped:
-                        controlador.Pausar(TipoJugador.anfitrión);
+                        controlador.ActualizarCañón(cañón, TipoJugador.anfitrión);
                         break;
                 }
                 break;
@@ -293,21 +305,9 @@ public class SistemaRed : StartupScript
                         break;
                 }
                 break;
-            case DataRed.físicas:
-                var físicas = JsonConvert.DeserializeObject<Físicas>(data.Values.Single());
-                controlador.ActualizarFísicas(físicas);
-                break;
-            case DataRed.cañón:
-                var cañón = JsonConvert.DeserializeObject<float[]>(data.Values.Single());
-                switch (tipoJugador)
-                {
-                    case TipoJugador.anfitrión:
-                        controlador.ActualizarCañón(cañón, TipoJugador.huesped);
-                        break;
-                    case TipoJugador.huesped:
-                        controlador.ActualizarCañón(cañón, TipoJugador.anfitrión);
-                        break;
-                }
+            case DataRed.estatua:
+                var jugador = JsonConvert.DeserializeObject<TipoJugador>(data.Values.Single());
+                controlador.DesactivarEstatua(jugador);
                 break;
         }
     }

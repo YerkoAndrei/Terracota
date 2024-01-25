@@ -314,7 +314,11 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         }
 
         SistemaSonido.SonarEstatuaDesactivada();
-        VerificarPartida();
+        if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
+        {
+            _ = SistemaRed.EnviarData(DataRed.estatua, jugador);
+            VerificarPartida();
+        }
     }
 
     private void VerificarPartida()
@@ -340,9 +344,16 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         // Muestra ganador
         if (ganador != TipoJugador.nada)
         {
-            interfaz.MostrarGanador(ganador, cantidadTurnos);
-            partidaActiva = false;
+            // Anfitrión envía data
+            _ = SistemaRed.EnviarData(DataRed.finalizarPartida, ganador);
+            MostrarGanador(ganador);
         }
+    }
+
+    public void MostrarGanador(TipoJugador ganador)
+    {
+        interfaz.MostrarGanador(ganador, cantidadTurnos);
+        partidaActiva = false;
     }
 
     // Remoto
@@ -372,11 +383,6 @@ public class ControladorPartidaRemota : SyncScript, IPartida
             cañónAnfitrión.ActivarPartículas();
         else
             cañónHuesped.Disparar(proyectil, multiplicador);
-    }
-
-    public void Pausar(TipoJugador tipoJugador)
-    {
-
     }
 
     public void RevisarJugadoresListos(TipoJugador tipoJugador)

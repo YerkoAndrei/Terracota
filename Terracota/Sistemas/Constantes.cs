@@ -126,14 +126,13 @@ public static class Constantes
 
         // Turnos
         cambioTurno,
-        finalizarPartida,  // pendiente
+        finalizarPartida,
 
         // Juego
         físicas,
         cañón,
         disparo,
-        estatua,  // pendiente
-        pausa,  // pendiente
+        estatua
     }
 
     public static Fortaleza GenerarFortalezaVacía()
