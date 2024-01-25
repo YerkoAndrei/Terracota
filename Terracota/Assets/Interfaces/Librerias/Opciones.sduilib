@@ -395,7 +395,7 @@ Hierarchy:
                     cc736ec6c993be3ccc03572700f986e7~Panel.ZIndexPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 210.0
-                Height: 120.0
+                Height: 110.0
                 HorizontalAlignment: Left
                 VerticalAlignment: Top
                 Margin: {Left: 255.0, Top: -10.0}
@@ -405,11 +405,10 @@ Hierarchy:
                 Name: Red
                 Children:
                     c65ccb4166bd8d18fc2fba7cf0642cff: !TextBlock ref!! 64767641-53f0-4c28-bc55-7d62c43b140f
-                    be443fe290f4bf9e2fc388b56016265d: !TextBlock ref!! 4a9472ce-34b9-49ac-b890-d51220f9238f
                     60448cad345faefa5970de37bfd63ef6: !Grid ref!! 91c06eb0-afb2-4925-8ff0-2d3dead6e339
                     3fbffd560c1f3f435cbde9972ed0f10e: !Grid ref!! 5d0f1b69-8530-469a-bfc1-5f74088eef03
                     44da64953f390d9c495fc691e18ed25e: !Grid ref!! ea9e3215-0b54-47e8-87df-f36667840ee2
-                Rows: 3
+                Rows: 2
                 Columns: 3
         -   UIElement: !ImageElement
                 Id: 1a3d293d-be09-4753-936a-65bd43d954b5
@@ -1240,25 +1239,6 @@ Hierarchy:
                     Texture: "544f8ec8-cb8e-46d6-8873-ba73ab7cef86:Texturas/Interfaz/BaseOctágono"
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 240, G: 230, B: 160, A: 240}
-        -   UIElement: !TextBlock
-                Id: 4a9472ce-34b9-49ac-b890-d51220f9238f
-                DependencyProperties:
-                    d042c34905fe182236af1c2395beafdb~GridBase.ColumnPropertyKey: 1
-                    246887b1bf7aeed33df9ab4e92c204ff~GridBase.RowPropertyKey: 1
-                    cf394be34b98dee4e8df0ffa355bc34e~GridBase.ColumnSpanPropertyKey: 1
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 200.0
-                Height: 25.0
-                Margin: {Bottom: 30.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: "txtSoloAnfitrión"
-                Text: "(Solo anfitrión)"
-                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
-                TextSize: 20.0
-                TextColor: {R: 240, G: 220, B: 160, A: 240}
-                TextAlignment: Center
         -   UIElement: !Grid
                 Id: 4aa8218f-b3fe-404b-9b12-aea42fa9378b
                 DependencyProperties: {}
@@ -1653,7 +1633,7 @@ Hierarchy:
                 Id: 5d0f1b69-8530-469a-bfc1-5f74088eef03
                 DependencyProperties:
                     6651f40ff8b99c61f6d55511afa20ea4~GridBase.ColumnPropertyKey: 1
-                    2a7429b1b9028ce4227c536a63c79ffa~GridBase.RowPropertyKey: 2
+                    2a7429b1b9028ce4227c536a63c79ffa~GridBase.RowPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 60.0
                 Height: 60.0
@@ -2587,7 +2567,7 @@ Hierarchy:
                 Id: 91c06eb0-afb2-4925-8ff0-2d3dead6e339
                 DependencyProperties:
                     6651f40ff8b99c61f6d55511afa20ea4~GridBase.ColumnPropertyKey: 0
-                    2a7429b1b9028ce4227c536a63c79ffa~GridBase.RowPropertyKey: 2
+                    2a7429b1b9028ce4227c536a63c79ffa~GridBase.RowPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 60.0
                 Height: 60.0
@@ -3784,7 +3764,7 @@ Hierarchy:
                 Id: ea9e3215-0b54-47e8-87df-f36667840ee2
                 DependencyProperties:
                     6651f40ff8b99c61f6d55511afa20ea4~GridBase.ColumnPropertyKey: 2
-                    2a7429b1b9028ce4227c536a63c79ffa~GridBase.RowPropertyKey: 2
+                    2a7429b1b9028ce4227c536a63c79ffa~GridBase.RowPropertyKey: 1
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 60.0
                 Height: 60.0
