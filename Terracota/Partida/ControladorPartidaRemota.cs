@@ -41,14 +41,14 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     private float multiplicador;
 
     private bool partidaActiva;
+    private bool interfazInicializada;
     private int cantidadBloques;
     private int cantidadMetralla;
 
     private InterfazElecciónRemota elección;
     private List<ElementoBloque> bloques;
 
-    // PENDIENTE
-    private static InterfazElecciónRemota elecciónEstática;
+    // Por si remoto envia antes de que cargue escena
     private static TipoJugador cargaPendienteJugador;
     private static Fortaleza cargaPendienteFortaleza;
 
@@ -76,8 +76,8 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         // Comienza con elección
         elección = UIElección.Entity.Get<InterfazElecciónRemota>();
         elección.Inicializar();
+        interfazInicializada = true;
 
-        elecciónEstática = elección;
         UIElección.Enabled = true;
         interfaz.Activar(false);
 
@@ -121,7 +121,6 @@ public class ControladorPartidaRemota : SyncScript, IPartida
             CargarFortaleza(cargaPendienteFortaleza, cargaPendienteJugador);
             cargaPendienteJugador = TipoJugador.nada;
             cargaPendienteFortaleza = null;
-            elecciónEstática = null;
         }
     }
 
@@ -363,20 +362,16 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     }
 
     // Remoto
-    public static bool VerificarIniciado()
-    {
-        // Por si remoto envia antes de que cargue escena
-        return (elecciónEstática != null && elecciónEstática.ObtenerIniciada());
-    }
-
-    public static void GuardarFortalezaPendiente(Fortaleza fortaleza, TipoJugador tipoJugador)
-    {
-        cargaPendienteFortaleza = fortaleza;
-        cargaPendienteJugador = tipoJugador;
-    }
-
     public void CargarFortaleza(Fortaleza fortaleza, TipoJugador tipoJugador)
     {
+        // Por si remoto envia antes de que cargue escena
+        if (elección == null || !interfazInicializada)
+        {
+            cargaPendienteFortaleza = fortaleza;
+            cargaPendienteJugador = tipoJugador;
+            return;
+        }
+
         if (tipoJugador == TipoJugador.anfitrión)
             fortalezaAnfitrión.Inicializar(fortaleza, true);
         else

@@ -47,7 +47,6 @@ public class InterfazElecciónRemota : StartupScript
     private Grid btnVolver;
     private Grid btnAleatorio;
 
-    private bool iniciada;
     private bool esperandoRuleta;
     private bool ganaAnfitrión;
     private bool partidaCancelada;
@@ -140,7 +139,6 @@ public class InterfazElecciónRemota : StartupScript
                 padreRanurasHuesped.Height += (nuevaRanuraHuesped.Height + 10);
             }
         }
-        iniciada = true;
 
         // Bloqueo botones
         BloquearBotón(btnComenzar, true);
@@ -395,11 +393,6 @@ public class InterfazElecciónRemota : StartupScript
         {
             ruleta[i].Color = colorRuletaVacía;
         }
-    }
-
-    public bool ObtenerIniciada()
-    {
-        return iniciada;
     }
 
     public void MostrarJugadorListo(TipoJugador tipoJugador)
