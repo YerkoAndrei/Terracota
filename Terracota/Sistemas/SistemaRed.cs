@@ -236,12 +236,24 @@ public class SistemaRed : StartupScript
                 var conexión = JsonConvert.DeserializeObject<Conexión>(data.Values.Single());
                 MostrarInvitación(conexión);
                 break;
-            case DataRed.iniciarPartida:
-                IniciarPartida(false);
-                break;
             case DataRed.cerrar:
                 CerrarConexión(false);
                 break;
+
+            // Partida
+            case DataRed.iniciarPartida:
+                IniciarPartida(false);
+                break;
+            case DataRed.finalizarPartida:
+                var ganador = JsonConvert.DeserializeObject<TipoJugador>(data.Values.Single());
+                controlador.MostrarGanador(ganador);
+                break;
+            case DataRed.cambioTurno:
+                var turno = JsonConvert.DeserializeObject<Turno>(data.Values.Single());
+                controlador.ActualizarTurno(turno.Jugador, turno.CantidadTurnos);
+                break;
+
+            // Elección
             case DataRed.cargarFortaleza:
                 var fortaleza = JsonConvert.DeserializeObject<Fortaleza>(data.Values.Single());
                 switch (tipoJugador)
@@ -267,14 +279,8 @@ public class SistemaRed : StartupScript
                 var ganaAnfitrión = bool.Parse(data.Values.Single());
                 FinalizarRuleta(ganaAnfitrión);
                 break;
-            case DataRed.cambioTurno:
-                var turno = JsonConvert.DeserializeObject<Turno>(data.Values.Single());
-                controlador.ActualizarTurno(turno.Jugador, turno.CantidadTurnos);
-                break;
-            case DataRed.finalizarPartida:
-                var ganador = JsonConvert.DeserializeObject<TipoJugador>(data.Values.Single());
-                controlador.MostrarGanador(ganador);
-                break;
+
+            // Juego
             case DataRed.físicas:
                 var físicas = JsonConvert.DeserializeObject<Físicas>(data.Values.Single());
                 controlador.ActualizarFísicas(físicas);

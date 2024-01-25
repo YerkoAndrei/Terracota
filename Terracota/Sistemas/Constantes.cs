@@ -114,8 +114,12 @@ public static class Constantes
     {
         nada,
         conectar,
-        iniciarPartida,
         cerrar,
+
+        // Partida
+        iniciarPartida,
+        finalizarPartida,
+        cambioTurno,
 
         // Elección
         cargarFortaleza,
@@ -124,15 +128,11 @@ public static class Constantes
         comenzarRuleta,
         finalizarRuleta,
 
-        // Turnos
-        cambioTurno,
-        finalizarPartida,
-
         // Juego
         físicas,
         cañón,
         disparo,
-        estatua
+        estatua,
     }
 
     public static Fortaleza GenerarFortalezaVacía()
