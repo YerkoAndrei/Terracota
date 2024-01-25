@@ -272,8 +272,12 @@ public class InterfazJuego : SyncScript
         // Reinicio de menú de pausa
         if (ObtenerPausa())
         {
-            animando = false;
-            EnClicPausa();
+            pausa = false;
+            SistemaSonido.CambiarMúsica(true, 0.5f);
+            SistemaAnimación.AnimarElemento(animPausa, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, () =>
+            {
+                gridPausa.Visibility = Visibility.Hidden;
+            });
         }
 
         if (interfazOpciones.ObtenerActivo())
