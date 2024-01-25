@@ -413,12 +413,12 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         // Bloques
         for (int i = 0; i < físicas.Bloques.Count; i++)
         {
-            bloques[i].Posicionar(físicas.Bloques[i].Posición, físicas.Bloques[i].Rotación);
+            bloques[i].PosicionarFísica(físicas.Bloques[i].Posición, físicas.Bloques[i].Rotación);
         }
     }
 
-    // Anfitrión actualiza cañón junto con físicas
-    // Huesped actualiza cañón en llamado independiente  
+    // Anfitrión actualiza su cañón junto con físicas
+    // Huesped actualiza su cañón en llamado independiente  
     public RotaciónCañón ObtenerRotaciónCañón(TipoJugador jugador)
     {
         var cañón = new RotaciónCañón();

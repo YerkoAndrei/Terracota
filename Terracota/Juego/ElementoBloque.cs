@@ -43,4 +43,10 @@ public class ElementoBloque : StartupScript
         Entity.Transform.Position = posición;
         Entity.Transform.Rotation = rotación;
     }
+
+    public void PosicionarFísica(Vector3 posición, Quaternion rotación)
+    {
+        cuerpo.Entity.Transform.Position = posición;
+        cuerpo.Entity.Transform.Rotation = rotación;
+    }
 }
