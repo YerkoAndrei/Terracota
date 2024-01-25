@@ -155,23 +155,24 @@ public class InterfazMenú : StartupScript
         BloquearBotón(btnComoAnfitrión, true);
         BloquearBotón(btnComoHuesped, true);
 
-        // Identifica IP local
-        // PENDIENTE: identificar 0-255
-        var tipoConexión = TipoConexión.global;
-        if (txtConexiónRemota.Text.Contains("169.254") ||
-            txtConexiónRemota.Text.Contains("192.168") ||
-            txtConexiónRemota.Text.Contains("172.16") ||
-            txtConexiónRemota.Text.Contains("172.31") ||
-            txtConexiónRemota.Text.Contains("10.0") ||
-            txtConexiónRemota.Text.Contains("10.255"))
+        // Reconoce si es dirección ip
+        if(!SistemaRed.ValidarDirección(txtConexiónRemota.Text))
         {
-            tipoConexión = TipoConexión.local;
+            txtErrorConexión.Text = SistemaTraducción.ObtenerTraducción("errorIp");
+            BloquearBotón(btnComoAnfitrión, false);
+            BloquearBotón(btnComoHuesped, false);
+            return;
         }
+
+        // Identifica IP local
+        var tipoConexión = TipoConexión.global;
+        if (SistemaRed.IdentificarRedLocal(txtConexiónRemota.Text))
+            tipoConexión = TipoConexión.local;
 
         if ((tipoConexión == TipoConexión.local && txtConexiónRemota.Text == SistemaRed.ObtenerIP(TipoConexión.local) )||
             (tipoConexión == TipoConexión.global && txtConexiónRemota.Text == SistemaRed.ObtenerIP(TipoConexión.global)))
         {
-            txtErrorConexión.Text = "misma ip";
+            txtErrorConexión.Text = SistemaTraducción.ObtenerTraducción("errorIp");
             BloquearBotón(btnComoAnfitrión, false);
             BloquearBotón(btnComoHuesped, false);
             return;
@@ -196,7 +197,7 @@ public class InterfazMenú : StartupScript
         }
         else
         {
-            txtErrorConexión.Text = resultado;
+            txtErrorConexión.Text = SistemaTraducción.ObtenerTraducción(resultado);
             BloquearBotón(btnComoAnfitrión, false);
             BloquearBotón(btnComoHuesped, false);
         }
@@ -246,7 +247,7 @@ public class InterfazMenú : StartupScript
                 SistemaRed.IniciarPartida(true);
             else
             {
-                txtErrorConexión.Text = resultado;
+                txtErrorConexión.Text = SistemaTraducción.ObtenerTraducción(resultado); ;
                 txtConexiónRemota.Text = conexiónPendiente.IP;
                 CerrarInvitación(false);
             }

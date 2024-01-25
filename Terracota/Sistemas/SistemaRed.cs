@@ -166,12 +166,12 @@ public class SistemaRed : StartupScript
                 return string.Empty;
             }
             else
-                return "error";
+                return "errorConexión";
         }
-        catch (Exception e)
+        catch
         {
-            // PENDIENTE: Controlar y traducir errores
-            return e.Message;
+            // Errores pueden ser más precisos
+            return "errorConexión";
         }
     }
 
@@ -406,6 +406,38 @@ public class SistemaRed : StartupScript
     public static bool ObtenerJugando()
     {
         return (conectado && jugando);
+    }
+
+    public static bool ValidarDirección(string ip)
+    {
+        try
+        {
+            IPAddress.Parse(ip);
+            return true;
+        }
+        catch
+        {
+            return false;
+        }
+    }
+
+    public static bool IdentificarRedLocal(string ip)
+    {
+        byte[] dirección = IPAddress.Parse(ip).GetAddressBytes();
+        switch (dirección[0])
+        {
+            case 10:
+            case 127:
+                return true;
+            case 169:
+                return dirección[1] == 254;
+            case 172:
+                return dirección[1] >= 16 && dirección[1] < 32;
+            case 192:
+                return dirección[1] == 168;
+            default:
+                return false;
+        }
     }
 
     public static bool ActualizarConfiguración()
