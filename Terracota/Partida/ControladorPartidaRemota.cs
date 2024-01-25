@@ -49,6 +49,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     private List<ElementoBloque> bloques;
 
     // Por si remoto envia antes de que cargue escena
+    private static TipoJugador listoPendiente;
     private static TipoJugador cargaPendienteJugador;
     private static Fortaleza cargaPendienteFortaleza;
 
@@ -123,6 +124,12 @@ public class ControladorPartidaRemota : SyncScript, IPartida
             CargarFortaleza(cargaPendienteFortaleza, cargaPendienteJugador);
             cargaPendienteJugador = TipoJugador.nada;
             cargaPendienteFortaleza = null;
+        }
+
+        if (listoPendiente != TipoJugador.nada)
+        {
+            RevisarJugadoresListos(listoPendiente);
+            listoPendiente = TipoJugador.nada;
         }
     }
 
@@ -394,6 +401,13 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
     public void RevisarJugadoresListos(TipoJugador tipoJugador)
     {
+        // Por si remoto envia antes de que cargue escena
+        if (elección == null || !interfazInicializada)
+        {
+            listoPendiente = tipoJugador;
+            return;
+        }
+
         elección.MostrarJugadorListo(tipoJugador);
 
         if (tipoJugador == TipoJugador.anfitrión)
