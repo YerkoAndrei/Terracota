@@ -400,9 +400,9 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     {
         var físicas = new Físicas
         {
-            Bloques = new List<BloqueFísico>(),
-            MetrallaAnfitrión = new List<ProyectilFísico>(),
-            MetrallaHuesped = new List<ProyectilFísico>()
+            Bloques = new List<float[]>(),
+            MetrallaAnfitrión = new List<float[]>(),
+            MetrallaHuesped = new List<float[]>()
         };
 
         // Jugador anfitrión

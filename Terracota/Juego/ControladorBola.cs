@@ -173,22 +173,29 @@ public class ControladorBola : AsyncScript
         }
     }
 
-    public void PosicionarFísica(ProyectilFísico bloque)
+    public void PosicionarFísica(float[] matriz)
     {
-        cuerpo.Entity.Transform.Position = new Vector3(bloque.Posición[0], bloque.Posición[1], bloque.Posición[2]);
-        cuerpo.Entity.Transform.Scale = new Vector3(bloque.Posición[0], bloque.Posición[1], bloque.Posición[2]);
-        cuerpo.Entity.Transform.Rotation = bloque.Rotación;
+        cuerpo.Entity.Transform.Position = new Vector3(matriz[0], matriz[1], matriz[2]);
+        cuerpo.Entity.Transform.Rotation = new Quaternion(matriz[3], matriz[4], matriz[5], matriz[6]);
+        cuerpo.Entity.Transform.Scale = new Vector3(matriz[7], matriz[8], matriz[9]);
     }
 
-    public ProyectilFísico ObtenerFísicas()
+    public float[] ObtenerFísicas()
     {
         // Anfitrión obtiene físicas
         // Huesped actualiza sin física
-        return new ProyectilFísico
+        return new float[]
         {
-            Posición = new float[] { cuerpo.Entity.Transform.Position.X, cuerpo.Entity.Transform.Position.Y, cuerpo.Entity.Transform.Position.Z },
-            Escala = new float[] { cuerpo.Entity.Transform.Scale.X, cuerpo.Entity.Transform.Scale.Y, cuerpo.Entity.Transform.Scale.Z },
-            Rotación = cuerpo.Entity.Transform.Rotation,
+            cuerpo.Entity.Transform.Position.X,
+            cuerpo.Entity.Transform.Position.Y,
+            cuerpo.Entity.Transform.Position.Z,
+            cuerpo.Entity.Transform.Rotation.X,
+            cuerpo.Entity.Transform.Rotation.Y,
+            cuerpo.Entity.Transform.Rotation.Z,
+            cuerpo.Entity.Transform.Rotation.W,
+            cuerpo.Entity.Transform.Scale.X,
+            cuerpo.Entity.Transform.Scale.Y,
+            cuerpo.Entity.Transform.Scale.Z
         };
     }
 }

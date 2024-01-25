@@ -14,13 +14,13 @@ public class Conexión
 public class Físicas
 {
     public RotaciónCañón RotaciónCañónAnfitrión { get; set; }
-    public List<BloqueFísico> Bloques { get; set; }
+    public List<float[]> Bloques { get; set; }
 
-    public ProyectilFísico BolaAnfitrión { get; set; }
-    public List<ProyectilFísico> MetrallaAnfitrión { get; set; }
+    public float[] BolaAnfitrión { get; set; }
+    public List<float[]> MetrallaAnfitrión { get; set; }
 
-    public ProyectilFísico BolaHuesped { get; set; }
-    public List<ProyectilFísico> MetrallaHuesped { get; set; }
+    public float[] BolaHuesped { get; set; }
+    public List<float[]> MetrallaHuesped { get; set; }
 }
 
 public class Turno
@@ -35,15 +35,15 @@ public class RotaciónCañón
     public Quaternion SoporteCañón { get; set; }
 }
 
-public class BloqueFísico
-{
-    public float[] Posición { get; set; }
-    public Quaternion Rotación { get; set; }
-}
+// Matriz:
+// 0: Posición X
+// 1: Posición Y
+// 2: Posición Z
+// 3: Rotación X
+// 4: Rotación Y
+// 5: Rotación Z
+// 6: Rotación W
 
-public class ProyectilFísico
-{
-    public float[] Posición { get; set; }
-    public float[] Escala { get; set; }
-    public Quaternion Rotación { get; set; }
-}
+// 7: Escala X
+// 8: Escala Y
+// 9: Escala Z

@@ -44,20 +44,28 @@ public class ElementoBloque : StartupScript
         Entity.Transform.Rotation = rotación;
     }
 
-    public void PosicionarFísica(BloqueFísico bloque)
+    public void PosicionarFísica(float[] matriz)
     {
-        cuerpo.Entity.Transform.Position = new Vector3 (bloque.Posición[0], bloque.Posición[1], bloque.Posición[2]);
-        cuerpo.Entity.Transform.Rotation = bloque.Rotación;
+        cuerpo.Entity.Transform.Position = new Vector3(matriz[0], matriz[1], matriz[2]);
+        cuerpo.Entity.Transform.Rotation = new Quaternion(matriz[3], matriz[4], matriz[5], matriz[6]);
     }
 
-    public BloqueFísico ObtenerFísicas()
+    public float[] ObtenerFísicas()
     {
         // Anfitrión obtiene físicas
         // Huesped actualiza sin física
-        return new BloqueFísico
+        return new float[]
         {
-            Posición = new float[] { cuerpo.Entity.Transform.Position.X, cuerpo.Entity.Transform.Position.Y, cuerpo.Entity.Transform.Position.Z },
-            Rotación = cuerpo.Entity.Transform.Rotation,
+            cuerpo.Entity.Transform.Position.X,
+            cuerpo.Entity.Transform.Position.Y,
+            cuerpo.Entity.Transform.Position.Z,
+            cuerpo.Entity.Transform.Rotation.X,
+            cuerpo.Entity.Transform.Rotation.Y,
+            cuerpo.Entity.Transform.Rotation.Z,
+            cuerpo.Entity.Transform.Rotation.W,
+            cuerpo.Entity.Transform.Scale.X,
+            cuerpo.Entity.Transform.Scale.Y,
+            cuerpo.Entity.Transform.Scale.Z
         };
     }
 }
