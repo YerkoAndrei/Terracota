@@ -247,7 +247,7 @@ public class InterfazMenú : StartupScript
                 SistemaRed.IniciarPartida(true);
             else
             {
-                txtErrorConexión.Text = SistemaTraducción.ObtenerTraducción(resultado); ;
+                txtErrorConexión.Text = SistemaTraducción.ObtenerTraducción(resultado);
                 txtConexiónRemota.Text = conexiónPendiente.IP;
                 CerrarInvitación(false);
             }

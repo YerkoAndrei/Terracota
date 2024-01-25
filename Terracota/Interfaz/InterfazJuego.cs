@@ -266,6 +266,9 @@ public class InterfazJuego : SyncScript
 
     public void MostrarInterfazRemoto(TipoJugador jugador, int turno, float multiplicador)
     {
+        if (pausa)
+            EnClicPausa();
+
         gridCañón.Visibility = Visibility.Visible;
         gridProyectil.Visibility = Visibility.Visible;
         btnPausa.Visibility = Visibility.Visible;
@@ -321,7 +324,6 @@ public class InterfazJuego : SyncScript
                 break;
         }
     }
-
 
     private void CambiarProyectil(TipoProyectil proyectil)
     {
