@@ -270,7 +270,7 @@ public class InterfazJuego : SyncScript
     public void MostrarInterfazRemoto(TipoJugador jugador, int turno, float multiplicador)
     {
         // Reinicio de menú de pausa
-        if (ObtenerPausa())
+        if (gridPausa.Visibility == Visibility.Visible)
         {
             pausa = false;
             SistemaSonido.CambiarMúsica(true, 0.5f);
