@@ -474,7 +474,12 @@ public class InterfazOpciones : StartupScript
         BloquearBotón(página.FindVisualChildOfType<Grid>("btnR6"), false);
     }
 
-    private void EnClicVolver()
+    public bool ObtenerActivo()
+    {
+        return Opciones.Visibility == Visibility.Visible;
+    }
+
+    public void EnClicVolver()
     {
         if (animando)
             return;

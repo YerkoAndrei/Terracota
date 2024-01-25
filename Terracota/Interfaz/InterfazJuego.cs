@@ -43,11 +43,12 @@ public class InterfazJuego : SyncScript
     private TextBlock txtCantidadTurnos;
     private TextBlock txtMultiplicador;
 
+    private InterfazOpciones interfazOpciones;
+    private ImageElement imgProyectil;
     private Grid Opciones;
     private Grid animOpciones;
     private Grid gridPausa;
     private Grid animPausa;
-    private ImageElement imgProyectil;
 
     private IPartida iPartida;
 
@@ -69,6 +70,8 @@ public class InterfazJuego : SyncScript
                 break;
             }
         }
+
+        interfazOpciones = Entity.Get<InterfazOpciones>();
 
         var página = Entity.Get<UIComponent>().Page.RootElement;
         ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("PanelOscuro"), EnClicPausa);
@@ -266,8 +269,12 @@ public class InterfazJuego : SyncScript
 
     public void MostrarInterfazRemoto(TipoJugador jugador, int turno, float multiplicador)
     {
+        // Reinicio de menú pausa
         if (pausa)
             EnClicPausa();
+
+        if (interfazOpciones.ObtenerActivo())
+            interfazOpciones.EnClicVolver();
 
         gridCañón.Visibility = Visibility.Visible;
         gridProyectil.Visibility = Visibility.Visible;
