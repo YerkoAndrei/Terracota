@@ -33,7 +33,7 @@ public class ControladorBola : AsyncScript
         escalaInicial = Entity.Transform.Scale;
         masaInicial = cuerpo.Mass;
 
-        Ocultar();
+        _ = Ocultar();
 
         while (Game.IsRunning)
         {
@@ -61,8 +61,12 @@ public class ControladorBola : AsyncScript
         }
     }
 
-    public void Disparar(Vector3 posición, Vector3 rotación, float aleatorio, Vector3 fuerza)
+    public async void Disparar(Vector3 posición, Vector3 rotación, float aleatorio, Vector3 fuerza)
     {
+        // Espera posible diferencia
+        if(activo)
+            await Ocultar();
+
         activo = true;
         guardando = false;
         colisiones = 0;
@@ -117,7 +121,7 @@ public class ControladorBola : AsyncScript
         if (SistemaRed.ObtenerJugando())
         {
             var tiempoGuardado = (int)(duraciónGuardado * 1000f);
-            duración -= (tiempoGuardado + 300);
+            duración -= (tiempoGuardado + 200);
         }
 
         await Task.Delay(duración);
@@ -134,7 +138,7 @@ public class ControladorBola : AsyncScript
         float tiempo = 0;
 
         var inicial = Entity.Transform.Scale;
-        while (tiempoLerp < duraciónLerp)
+        while (tiempoLerp < duraciónLerp && activo)
         {
             tiempo = SistemaAnimación.EvaluarRápido(tiempoLerp / duraciónLerp);
 
@@ -144,10 +148,11 @@ public class ControladorBola : AsyncScript
         }
 
         // Fin
-        Ocultar();
+        if (activo)
+            await Ocultar();
     }
 
-    private void Ocultar()
+    private async Task Ocultar()
     {
         activo = false;
         cuerpo.IsKinematic = true;
@@ -155,6 +160,7 @@ public class ControladorBola : AsyncScript
 
         Entity.Transform.Scale = Vector3.Zero;
         Entity.Transform.Position = posiciónInicial - Vector3.UnitY;
+        await Task.Delay(2);
     }
 
     public float ObtenerMayorFuerzaLinearNormalizada()
