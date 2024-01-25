@@ -47,8 +47,9 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     private InterfazElecciónRemota elección;
     private List<ElementoBloque> bloques;
 
-    private TipoJugador cargaPendienteJugador;
-    private Fortaleza cargaPendienteFortaleza;
+    // PENDIENTE
+    private static TipoJugador cargaPendienteJugador;
+    private static Fortaleza cargaPendienteFortaleza;
 
     public override void Start()
     {
@@ -357,16 +358,14 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     }
 
     // Remoto
+    public static void GuardarFortaleza(Fortaleza fortaleza, TipoJugador tipoJugador)
+    {
+        cargaPendienteFortaleza = fortaleza;
+        cargaPendienteJugador = tipoJugador;
+    }
+
     public void CargarFortaleza(Fortaleza fortaleza, TipoJugador tipoJugador)
     {
-        // Por si remoto envia antes de que cargue escena
-        if (elección == null || !elección.ObtenerIniciada())
-        {
-            cargaPendienteJugador = tipoJugador;
-            cargaPendienteFortaleza = fortaleza;
-            return;
-        }
-
         if (tipoJugador == TipoJugador.anfitrión)
             fortalezaAnfitrión.Inicializar(fortaleza, true);
         else

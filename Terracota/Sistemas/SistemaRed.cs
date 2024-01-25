@@ -258,11 +258,19 @@ public class SistemaRed : StartupScript
                 var fortaleza = JsonConvert.DeserializeObject<Fortaleza>(data.Values.Single());
                 switch (tipoJugador)
                 {
+                    // Por si remoto envia antes de que cargue escena
                     case TipoJugador.anfitrión:
-                        controlador.CargarFortaleza(fortaleza, TipoJugador.huesped);
+                        if (conectado)
+                            controlador.CargarFortaleza(fortaleza, TipoJugador.huesped);
+                        else
+                            ControladorPartidaRemota.GuardarFortaleza(fortaleza, TipoJugador.huesped);
                         break;
+                    // Por si remoto envia antes de que cargue escena
                     case TipoJugador.huesped:
-                        controlador.CargarFortaleza(fortaleza, TipoJugador.anfitrión);
+                        if (conectado)
+                            controlador.CargarFortaleza(fortaleza, TipoJugador.anfitrión);
+                        else
+                            ControladorPartidaRemota.GuardarFortaleza(fortaleza, TipoJugador.anfitrión);
                         break;
                 }
                 break;
