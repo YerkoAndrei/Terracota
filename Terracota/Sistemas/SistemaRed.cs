@@ -340,6 +340,7 @@ public class SistemaRed : StartupScript
         if (contactar)
             await EnviarData(DataRed.iniciarPartida);
 
+        jugando = false;
         SistemaEscenas.CambiarEscena(Escenas.remoto);
     }
 
