@@ -180,16 +180,15 @@ public class ControladorBola : AsyncScript
         cuerpo.Entity.Transform.Rotation = bloque.Rotación;
     }
 
-    public ProyectilFísico ObtenerPosición()
+    public ProyectilFísico ObtenerFísicas()
     {
         // Anfitrión obtiene físicas
         // Huesped actualiza sin física
-        var física = new ProyectilFísico
+        return new ProyectilFísico
         {
             Posición = cuerpo.Entity.Transform.Position,
             Escala = cuerpo.Entity.Transform.Scale,
             Rotación = cuerpo.Entity.Transform.Rotation,
         };
-        return física;
     }
 }

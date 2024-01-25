@@ -50,15 +50,14 @@ public class ElementoBloque : StartupScript
         cuerpo.Entity.Transform.Rotation = bloque.Rotación;
     }
 
-    public BloqueFísico ObtenerPosición()
+    public BloqueFísico ObtenerFísicas()
     {
         // Anfitrión obtiene físicas
         // Huesped actualiza sin física
-        var física = new BloqueFísico
+        return new BloqueFísico
         {
             Posición = cuerpo.Entity.Transform.Position,
             Rotación = cuerpo.Entity.Transform.Rotation,
         };
-        return física;
     }
 }

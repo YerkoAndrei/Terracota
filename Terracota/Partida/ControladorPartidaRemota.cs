@@ -41,9 +41,12 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     private float multiplicador;
 
     private bool partidaActiva;
+    private int cantidadBloques;
+    private int cantidadMetralla;
 
     private InterfazElecciónRemota elección;
     private List<ElementoBloque> bloques;
+    private Físicas físicas;
 
     private TipoJugador cargaPendienteJugador;
     private Fortaleza cargaPendienteFortaleza;
@@ -76,6 +79,12 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
         // Red
         bloques = new List<ElementoBloque>();
+        físicas = new Físicas
+        {
+            Bloques = new List<BloqueFísico>(),
+            MetrallaAnfitrión = new List<ProyectilFísico>(),
+            MetrallaHuesped = new List<ProyectilFísico>()
+        };
 
         // Físicas anfitrión
         var índice = 0;
@@ -102,6 +111,9 @@ public class ControladorPartidaRemota : SyncScript, IPartida
             bloques.Add(bloque);
             índice++;
         }
+
+        cantidadBloques = bloques.Count;
+        cantidadMetralla = metrallaAnfitrión.Count;
 
         // Código es para ordenar una sola vez
         bloques = bloques.OrderBy(o => o.ObtenerCódigo()).ToList();
@@ -394,32 +406,23 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
     public Físicas ObtenerFísicas()
     {
-        var físicas = new Físicas
-        {
-            Bloques = new List<BloqueFísico>()
-        };
-
         // Cañón anfitrión
         físicas.RotaciónCañónAnfitrión = ObtenerRotaciónCañón(TipoJugador.anfitrión);
 
         // Bloques
-        foreach (var bloque in bloques)
+        for (int i = 0; i < cantidadBloques; i++)
         {
-            físicas.Bloques.Add(bloque.ObtenerPosición());
+            físicas.Bloques[i] = bloques[i].ObtenerFísicas();
         }
 
         // Proyectiles
-        físicas.BolaAnfitrión = bolaAnfitrión.ObtenerPosición();
-        físicas.BolaHuesped = bolaHuesped.ObtenerPosición();
+        físicas.BolaAnfitrión = bolaAnfitrión.ObtenerFísicas();
+        físicas.BolaHuesped = bolaHuesped.ObtenerFísicas();
 
-        foreach (var bola in metrallaAnfitrión)
+        for (int i = 0; i < cantidadMetralla; i++)
         {
-            físicas.MetrallaAnfitrión.Add(bola.ObtenerPosición());
-        }
-
-        foreach (var bola in metrallaHuesped)
-        {
-            físicas.MetrallaHuesped.Add(bola.ObtenerPosición());
+            físicas.MetrallaAnfitrión[i] = metrallaAnfitrión[i].ObtenerFísicas();
+            físicas.MetrallaHuesped[i] = metrallaHuesped[i].ObtenerFísicas();
         }
 
         return físicas;
@@ -431,19 +434,18 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         ActualizarCañón(físicas.RotaciónCañónAnfitrión, TipoJugador.anfitrión);
 
         // Bloques
-        for (int i = 0; i < físicas.Bloques.Count; i++)
+        for (int i = 0; i < cantidadBloques; i++)
         {
             bloques[i].PosicionarFísica(físicas.Bloques[i]);
         }
 
         // Proyectiles
-        for (int i = 0; i < físicas.MetrallaAnfitrión.Count; i++)
+        bolaAnfitrión.PosicionarFísica(físicas.BolaAnfitrión);
+        bolaHuesped.PosicionarFísica(físicas.BolaHuesped);
+
+        for (int i = 0; i < cantidadMetralla; i++)
         {
             metrallaAnfitrión[i].PosicionarFísica(físicas.MetrallaAnfitrión[i]);
-        }
-
-        for (int i = 0; i < físicas.MetrallaHuesped.Count; i++)
-        {
             metrallaHuesped[i].PosicionarFísica(físicas.MetrallaHuesped[i]);
         }
     }
@@ -452,19 +454,22 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     // Huesped actualiza su cañón en llamado independiente  
     public RotaciónCañón ObtenerRotaciónCañón(TipoJugador jugador)
     {
-        var cañón = new RotaciónCañón();
         if (jugador == TipoJugador.anfitrión)
         {
-            cañón.SoporteCañón = cañónAnfitrión.ObtenerRotaciónSoporte();
-            cañón.TuboCañón = cañónAnfitrión.ObtenerRotaciónCañón();
+            return new RotaciónCañón
+            {
+                SoporteCañón = cañónAnfitrión.ObtenerRotaciónSoporte(),
+                TuboCañón = cañónAnfitrión.ObtenerRotaciónCañón()
+            };
         }
         else
         {
-            cañón.SoporteCañón = cañónHuesped.ObtenerRotaciónSoporte();
-            cañón.TuboCañón = cañónHuesped.ObtenerRotaciónCañón();
+            return new RotaciónCañón
+            {
+                SoporteCañón = cañónHuesped.ObtenerRotaciónSoporte(),
+                TuboCañón = cañónHuesped.ObtenerRotaciónCañón()
+            };
         }
-
-        return cañón;
     }
 
     public void ActualizarCañón(RotaciónCañón rotaciónCañón, TipoJugador tipoJugador)
