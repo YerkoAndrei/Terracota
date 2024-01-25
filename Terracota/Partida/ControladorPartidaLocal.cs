@@ -47,8 +47,11 @@ public class ControladorPartidaLocal : SyncScript, IPartida
         proyectilAnfitrión = TipoProyectil.bola;
         proyectilHuesped = TipoProyectil.bola;
 
-        cañónAnfitrión.Iniciar(interfaz, TipoJugador.anfitrión);
-        cañónHuesped.Iniciar(interfaz, TipoJugador.huesped);
+        cañónAnfitrión.Inicializar(interfaz, TipoJugador.anfitrión);
+        cañónHuesped.Inicializar(interfaz, TipoJugador.huesped);
+
+        fortalezaAnfitrión.Inicializar();
+        fortalezaHuesped.Inicializar();
 
         // Comienza con elección
         UIElección.Enabled = true;
@@ -73,9 +76,9 @@ public class ControladorPartidaLocal : SyncScript, IPartida
         var fortaleza = SistemaMemoria.ObtenerFortaleza(nombre);
 
         if(anfitrión)
-            fortalezaAnfitrión.Inicializar(fortaleza, true);
+            fortalezaAnfitrión.CargarFortaleza(fortaleza, true);
         else
-            fortalezaHuesped.Inicializar(fortaleza, false);
+            fortalezaHuesped.CargarFortaleza(fortaleza, false);
     }
 
     public void ComenzarPartida(bool ganaAnfitrión)

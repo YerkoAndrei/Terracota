@@ -59,17 +59,19 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         cantidadTurnos = 1;
         multiplicador = 1.0f;
         turnoJugador = TipoJugador.nada;
-
         proyectilActual = TipoProyectil.bola;
-        
+
+        fortalezaAnfitrión.Inicializar();
+        fortalezaHuesped.Inicializar();
+
         switch (SistemaRed.ObtenerTipoJugador())
         {
             case TipoJugador.anfitrión:
-                cañónAnfitrión.Iniciar(interfaz, TipoJugador.anfitrión);
-                cañónHuesped.Iniciar(interfaz, TipoJugador.huesped);
+                cañónAnfitrión.Inicializar(interfaz, TipoJugador.anfitrión);
+                cañónHuesped.Inicializar(interfaz, TipoJugador.huesped);
                 break;
             case TipoJugador.huesped:
-                cañónHuesped.Iniciar(interfaz, TipoJugador.huesped);
+                cañónHuesped.Inicializar(interfaz, TipoJugador.huesped);
                 break;
         }
 
@@ -149,9 +151,9 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
         // Local
         if (anfitrión)
-            fortalezaAnfitrión.Inicializar(fortaleza, true);
+            fortalezaAnfitrión.CargarFortaleza(fortaleza, true);
         else
-            fortalezaHuesped.Inicializar(fortaleza, false);
+            fortalezaHuesped.CargarFortaleza(fortaleza, false);
 
         // Remoto
         _ = SistemaRed.EnviarData(DataRed.cargarFortaleza, fortaleza);
@@ -373,9 +375,9 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         }
 
         if (tipoJugador == TipoJugador.anfitrión)
-            fortalezaAnfitrión.Inicializar(fortaleza, true);
+            fortalezaAnfitrión.CargarFortaleza(fortaleza, true);
         else
-            fortalezaHuesped.Inicializar(fortaleza, false);
+            fortalezaHuesped.CargarFortaleza(fortaleza, false);
 
         elección.MostrarNombreFortaleza(fortaleza.Nombre, tipoJugador);
     }

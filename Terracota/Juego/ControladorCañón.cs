@@ -42,7 +42,7 @@ public class ControladorCañón : SyncScript
 
     public override void Start() { }
 
-    public void Iniciar(InterfazJuego _controladorInterfaz, TipoJugador tipoJugador)
+    public void Inicializar(InterfazJuego _controladorInterfaz, TipoJugador tipoJugador)
     {
         fuerzaBola *= 1000;
         fuerzaMetralla *= 1000;

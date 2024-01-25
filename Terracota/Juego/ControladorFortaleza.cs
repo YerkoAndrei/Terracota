@@ -15,7 +15,7 @@ public class ControladorFortaleza : StartupScript
     private bool inicializado;
     private Vector3 posiciónInicial;
 
-    public override void Start() 
+    public void Inicializar() 
     {
         posiciónInicial = Entity.Transform.Position;
         Entity.Transform.Position = new Vector3(posiciónInicial.X, -100, posiciónInicial.Z);
@@ -27,7 +27,7 @@ public class ControladorFortaleza : StartupScript
         }
     }
 
-    public void Inicializar(Fortaleza fortaleza, bool anfitrión)
+    public void CargarFortaleza(Fortaleza fortaleza, bool anfitrión)
     {
         if(!inicializado)
         {
