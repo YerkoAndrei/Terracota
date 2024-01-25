@@ -55,7 +55,7 @@ public class InterfazElecciónRemota : StartupScript
     // Animación
     private Grid animSuperior;
 
-    public override void Start()
+    public void Inicializar()
     {
         partidaCancelada = false;
 

@@ -75,6 +75,8 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
         // Comienza con elección
         elección = UIElección.Entity.Get<InterfazElecciónRemota>();
+        elección.Inicializar();
+
         elecciónEstática = elección;
         UIElección.Enabled = true;
         interfaz.Activar(false);
