@@ -413,7 +413,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         // Bloques
         for (int i = 0; i < físicas.Bloques.Count; i++)
         {
-            bloques[i].Posicionar(físicas.Bloques[i].Posición, físicas.Bloques[i].Rotación);
+            bloques[i].PosicionarFísica(físicas.Bloques[i]);
         }
     }
 
