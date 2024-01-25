@@ -37,13 +37,13 @@ public class RotaciónCañón
 
 public class BloqueFísico
 {
-    public Vector3 Posición { get; set; }
+    public float[] Posición { get; set; }
     public Quaternion Rotación { get; set; }
 }
 
 public class ProyectilFísico
 {
-    public Vector3 Posición { get; set; }
-    public Vector3 Escala { get; set; }
+    public float[] Posición { get; set; }
+    public float[] Escala { get; set; }
     public Quaternion Rotación { get; set; }
 }

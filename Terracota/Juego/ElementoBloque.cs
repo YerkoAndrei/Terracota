@@ -46,7 +46,7 @@ public class ElementoBloque : StartupScript
 
     public void PosicionarFísica(BloqueFísico bloque)
     {
-        cuerpo.Entity.Transform.Position = bloque.Posición;
+        cuerpo.Entity.Transform.Position = new Vector3 (bloque.Posición[0], bloque.Posición[1], bloque.Posición[2]);
         cuerpo.Entity.Transform.Rotation = bloque.Rotación;
     }
 
@@ -56,7 +56,7 @@ public class ElementoBloque : StartupScript
         // Huesped actualiza sin física
         return new BloqueFísico
         {
-            Posición = cuerpo.Entity.Transform.Position,
+            Posición = new float[] { cuerpo.Entity.Transform.Position.X, cuerpo.Entity.Transform.Position.Y, cuerpo.Entity.Transform.Position.Z },
             Rotación = cuerpo.Entity.Transform.Rotation,
         };
     }

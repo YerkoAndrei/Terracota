@@ -175,8 +175,8 @@ public class ControladorBola : AsyncScript
 
     public void PosicionarFísica(ProyectilFísico bloque)
     {
-        cuerpo.Entity.Transform.Position = bloque.Posición;
-        cuerpo.Entity.Transform.Scale = bloque.Escala;
+        cuerpo.Entity.Transform.Position = new Vector3(bloque.Posición[0], bloque.Posición[1], bloque.Posición[2]);
+        cuerpo.Entity.Transform.Scale = new Vector3(bloque.Posición[0], bloque.Posición[1], bloque.Posición[2]);
         cuerpo.Entity.Transform.Rotation = bloque.Rotación;
     }
 
@@ -186,8 +186,8 @@ public class ControladorBola : AsyncScript
         // Huesped actualiza sin física
         return new ProyectilFísico
         {
-            Posición = cuerpo.Entity.Transform.Position,
-            Escala = cuerpo.Entity.Transform.Scale,
+            Posición = new float[] { cuerpo.Entity.Transform.Position.X, cuerpo.Entity.Transform.Position.Y, cuerpo.Entity.Transform.Position.Z },
+            Escala = new float[] { cuerpo.Entity.Transform.Scale.X, cuerpo.Entity.Transform.Scale.Y, cuerpo.Entity.Transform.Scale.Z },
             Rotación = cuerpo.Entity.Transform.Rotation,
         };
     }
