@@ -46,7 +46,6 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
     private InterfazElecciónRemota elección;
     private List<ElementoBloque> bloques;
-    private Físicas físicas;
 
     private TipoJugador cargaPendienteJugador;
     private Fortaleza cargaPendienteFortaleza;
@@ -79,12 +78,6 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
         // Red
         bloques = new List<ElementoBloque>();
-        físicas = new Físicas
-        {
-            Bloques = new List<BloqueFísico>(),
-            MetrallaAnfitrión = new List<ProyectilFísico>(),
-            MetrallaHuesped = new List<ProyectilFísico>()
-        };
 
         // Físicas anfitrión
         var índice = 0;
@@ -112,11 +105,10 @@ public class ControladorPartidaRemota : SyncScript, IPartida
             índice++;
         }
 
-        cantidadBloques = bloques.Count;
-        cantidadMetralla = metrallaAnfitrión.Count;
-
         // Código es para ordenar una sola vez
         bloques = bloques.OrderBy(o => o.ObtenerCódigo()).ToList();
+        cantidadBloques = bloques.Count;
+        cantidadMetralla = metrallaAnfitrión.Count;
 
         // Cargas pendientes
         if(cargaPendienteJugador != TipoJugador.nada)
@@ -406,23 +398,30 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
     public Físicas ObtenerFísicas()
     {
-        // Cañón anfitrión
-        físicas.RotaciónCañónAnfitrión = ObtenerRotaciónCañón(TipoJugador.anfitrión);
+        var físicas = new Físicas
+        {
+            Bloques = new List<BloqueFísico>(),
+            MetrallaAnfitrión = new List<ProyectilFísico>(),
+            MetrallaHuesped = new List<ProyectilFísico>()
+        };
 
+        // Jugador anfitrión
+        físicas.RotaciónCañónAnfitrión = ObtenerRotaciónCañón(TipoJugador.anfitrión);
+        
         // Bloques
         for (int i = 0; i < cantidadBloques; i++)
         {
-            físicas.Bloques[i] = bloques[i].ObtenerFísicas();
+            físicas.Bloques.Add(bloques[i].ObtenerFísicas());
         }
-
+        
         // Proyectiles
         físicas.BolaAnfitrión = bolaAnfitrión.ObtenerFísicas();
         físicas.BolaHuesped = bolaHuesped.ObtenerFísicas();
-
+        
         for (int i = 0; i < cantidadMetralla; i++)
         {
-            físicas.MetrallaAnfitrión[i] = metrallaAnfitrión[i].ObtenerFísicas();
-            físicas.MetrallaHuesped[i] = metrallaHuesped[i].ObtenerFísicas();
+            físicas.MetrallaAnfitrión.Add(metrallaAnfitrión[i].ObtenerFísicas());
+            físicas.MetrallaHuesped.Add(metrallaHuesped[i].ObtenerFísicas());
         }
 
         return físicas;
@@ -430,7 +429,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
     public void ActualizarFísicas(Físicas físicas)
     {
-        // Cañón Huesped      
+        // Jugador huesped      
         ActualizarCañón(físicas.RotaciónCañónAnfitrión, TipoJugador.anfitrión);
 
         // Bloques

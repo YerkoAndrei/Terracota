@@ -185,7 +185,7 @@ public class SistemaRed : StartupScript
     {
         // Serializa data
         var json = string.Empty;
-        if(data != null)
+        if (data != null)
             json = JsonConvert.SerializeObject(data);
 
         var diccionario = new Dictionary<int, string>()
