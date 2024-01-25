@@ -451,31 +451,19 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
     // Anfitrión actualiza su cañón junto con físicas
     // Huesped actualiza su cañón en llamado independiente  
-    public RotaciónCañón ObtenerRotaciónCañón(TipoJugador jugador)
+    public float[] ObtenerRotaciónCañón(TipoJugador jugador)
     {
         if (jugador == TipoJugador.anfitrión)
-        {
-            return new RotaciónCañón
-            {
-                SoporteCañón = cañónAnfitrión.ObtenerRotaciónSoporte(),
-                TuboCañón = cañónAnfitrión.ObtenerRotaciónCañón()
-            };
-        }
+            return cañónAnfitrión.ObtenerMatriz();
         else
-        {
-            return new RotaciónCañón
-            {
-                SoporteCañón = cañónHuesped.ObtenerRotaciónSoporte(),
-                TuboCañón = cañónHuesped.ObtenerRotaciónCañón()
-            };
-        }
+            return cañónHuesped.ObtenerMatriz();
     }
 
-    public void ActualizarCañón(RotaciónCañón rotaciónCañón, TipoJugador tipoJugador)
+    public void ActualizarCañón(float[] matriz, TipoJugador tipoJugador)
     {
         if (tipoJugador == TipoJugador.anfitrión)
-            cañónAnfitrión.ActualizarRotación(rotaciónCañón.TuboCañón, rotaciónCañón.SoporteCañón);
+            cañónAnfitrión.ActualizarRotación(matriz);
         else
-            cañónHuesped.ActualizarRotación(rotaciónCañón.TuboCañón, rotaciónCañón.SoporteCañón);
+            cañónHuesped.ActualizarRotación(matriz);
     }
 }

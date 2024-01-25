@@ -175,12 +175,6 @@ public class SistemaRed : StartupScript
         }
     }
 
-    // Físicas podrían optimizarse:
-    // Guardar solo XYZ de Vector3
-    // Guardar solo WXYZ de Quaternion
-    // Cargar solo bloques en movimiento
-    // Cargar solo proyectiles en movimiento
-    // Comprimir string final
     public static async Task<bool> EnviarData(DataRed entrada, dynamic data = null)
     {
         // Serializa data
@@ -196,7 +190,10 @@ public class SistemaRed : StartupScript
         // Agrega encabezado
         var dataFinal = JsonConvert.SerializeObject(diccionario);
         var buffer = Encoding.Unicode.GetBytes(dataFinal);
-
+        // antes: 72116
+        // despues solo vector: 60102
+        // despues matriz: 12324
+        // completo: 
         try
         {
             await udp.SendAsync(buffer);
@@ -306,7 +303,7 @@ public class SistemaRed : StartupScript
                 controlador.ActualizarFísicas(físicas);
                 break;
             case DataRed.cañón:
-                var cañón = JsonConvert.DeserializeObject<RotaciónCañón>(data.Values.Single());
+                var cañón = JsonConvert.DeserializeObject<float[]>(data.Values.Single());
                 switch (tipoJugador)
                 {
                     case TipoJugador.anfitrión:

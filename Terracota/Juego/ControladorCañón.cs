@@ -187,19 +187,24 @@ public class ControladorCañón : SyncScript
     }
 
     // Red
-    public Quaternion ObtenerRotaciónCañón()
+    public void ActualizarRotación(float[] matriz)
     {
-        return cañón.Transform.Rotation;
+        cañón.Transform.Rotation = new Quaternion(matriz[0], matriz[1], matriz[2], matriz[3]);
+        soporte.Transform.Rotation = new Quaternion(matriz[4], matriz[5], matriz[6], matriz[7]);
     }
 
-    public Quaternion ObtenerRotaciónSoporte()
+    public float[] ObtenerMatriz()
     {
-        return soporte.Transform.Rotation;
-    }
-
-    public void ActualizarRotación(Quaternion _cañón, Quaternion _soporte)
-    {
-        cañón.Transform.Rotation = _cañón;
-        soporte.Transform.Rotation = _soporte;
+        return
+        [
+            cañón.Transform.Rotation.X,
+            cañón.Transform.Rotation.Y,
+            cañón.Transform.Rotation.Z,
+            cañón.Transform.Rotation.X,
+            soporte.Transform.Rotation.Y,
+            soporte.Transform.Rotation.Z,
+            soporte.Transform.Rotation.W,
+            soporte.Transform.Rotation.X
+        ];
     }
 }

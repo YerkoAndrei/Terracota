@@ -184,8 +184,8 @@ public class ControladorBola : AsyncScript
     {
         // Anfitrión obtiene físicas
         // Huesped actualiza sin física
-        return new float[]
-        {
+        return
+        [
             cuerpo.Entity.Transform.Position.X,
             cuerpo.Entity.Transform.Position.Y,
             cuerpo.Entity.Transform.Position.Z,
@@ -196,6 +196,6 @@ public class ControladorBola : AsyncScript
             cuerpo.Entity.Transform.Scale.X,
             cuerpo.Entity.Transform.Scale.Y,
             cuerpo.Entity.Transform.Scale.Z
-        };
+        ];
     }
 }
