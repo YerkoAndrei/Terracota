@@ -200,11 +200,11 @@ public class ControladorCañón : SyncScript
             cañón.Transform.Rotation.X,
             cañón.Transform.Rotation.Y,
             cañón.Transform.Rotation.Z,
-            cañón.Transform.Rotation.X,
+            cañón.Transform.Rotation.W,
+            soporte.Transform.Rotation.X,
             soporte.Transform.Rotation.Y,
             soporte.Transform.Rotation.Z,
-            soporte.Transform.Rotation.W,
-            soporte.Transform.Rotation.X
+            soporte.Transform.Rotation.W
         ];
     }
 }

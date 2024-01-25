@@ -42,10 +42,10 @@ public class Turno
 // 9: Escala Z (Opcional)
 
 // Matriz cañón:
-// 0: Rotación tubo X
-// 1: Rotación tubo Y
-// 2: Rotación tubo Z
-// 3: Rotación tubo W
+// 0: Rotación cañón X
+// 1: Rotación cañón Y
+// 2: Rotación cañón Z
+// 3: Rotación cañón W
 // 4: Rotación soporte X
 // 5: Rotación soporte Y
 // 6: Rotación soporte Z

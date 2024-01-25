@@ -435,17 +435,17 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         // Bloques
         for (int i = 0; i < cantidadBloques; i++)
         {
-            bloques[i].PosicionarFísica(físicas.Bloques[i]);
+            bloques[i].ActualizarFísicas(físicas.Bloques[i]);
         }
 
         // Proyectiles
-        bolaAnfitrión.PosicionarFísica(físicas.BolaAnfitrión);
-        bolaHuesped.PosicionarFísica(físicas.BolaHuesped);
+        bolaAnfitrión.ActualizarFísicas(físicas.BolaAnfitrión);
+        bolaHuesped.ActualizarFísicas(físicas.BolaHuesped);
 
         for (int i = 0; i < cantidadMetralla; i++)
         {
-            metrallaAnfitrión[i].PosicionarFísica(físicas.MetrallaAnfitrión[i]);
-            metrallaHuesped[i].PosicionarFísica(físicas.MetrallaHuesped[i]);
+            metrallaAnfitrión[i].ActualizarFísicas(físicas.MetrallaAnfitrión[i]);
+            metrallaHuesped[i].ActualizarFísicas(físicas.MetrallaHuesped[i]);
         }
     }
 

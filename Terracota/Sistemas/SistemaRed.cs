@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Generic;
@@ -190,10 +189,6 @@ public class SistemaRed : StartupScript
         // Agrega encabezado
         var dataFinal = JsonConvert.SerializeObject(diccionario);
         var buffer = Encoding.Unicode.GetBytes(dataFinal);
-        // antes: 72116
-        // despues solo vector: 60102
-        // despues matriz: 12324
-        // completo: 
         try
         {
             await udp.SendAsync(buffer);
