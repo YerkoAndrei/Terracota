@@ -42,6 +42,17 @@ public class ElementoBloque : StartupScript
     {
         Entity.Transform.Position = posición;
         Entity.Transform.Rotation = rotación;
-        Entity.Transform.UpdateWorldMatrix();
+    }
+
+    public BloqueFísico ObtenerPosición()
+    {
+        // Anfitrión obtiene físicas
+        // Huesped actualiza sin física
+        var física = new BloqueFísico
+        {
+            Posición = cuerpo.Entity.Transform.Position,
+            Rotación = cuerpo.Entity.Transform.Rotation,
+        };
+        return física;
     }
 }

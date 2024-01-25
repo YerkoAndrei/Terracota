@@ -399,7 +399,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         // Bloques
         foreach (var bloque in bloques)
         {
-            físicas.Bloques.Add(new BloqueFísico(bloque.Entity.Transform.Position, bloque.Entity.Transform.Rotation));
+            físicas.Bloques.Add(bloque.ObtenerPosición());
         }
 
         return físicas;

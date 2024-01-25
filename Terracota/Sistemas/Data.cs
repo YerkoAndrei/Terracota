@@ -37,11 +37,5 @@ public class BloqueFísico
 {
     public Vector3 Posición { get; set; }
     public Quaternion Rotación { get; set; }
-
-    public BloqueFísico(Vector3 posición, Quaternion rotación)
-    {
-        Posición = posición;
-        Rotación = rotación;
-    }
 }
 
