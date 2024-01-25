@@ -272,8 +272,8 @@ public class InterfazJuego : SyncScript
         // Reinicio de menú de pausa
         if (pausa)
         {
-            EnClicPausa();
             interfazOpciones.Ocultar();
+            EnClicPausa();
         }
 
         gridCañón.Visibility = Visibility.Visible;
