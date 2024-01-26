@@ -209,11 +209,6 @@ public class InterfazOpciones : StartupScript
             return;
 
         MostrarResoluciones(false);
-        if (string.IsNullOrEmpty(txtPuerto.Text))
-        {
-            txtPuerto.Text = "0";
-            return;
-        }
 
         // Solo números
         string regex = @"[^0-9]";
@@ -221,13 +216,15 @@ public class InterfazOpciones : StartupScript
 
         // Excepciones y límites
         if (número < 1 || número > 65535)
-            número = 0;
+        {
+            txtPuerto.Text = SistemaMemoria.ObtenerConfiguración(Configuraciones.puertoRed);
+            return;
+        }
 
-        txtPuerto.Text = número.ToString();
-
-        SistemaMemoria.GuardarConfiguración(Configuraciones.puertoRed, txtPuerto.Text);
-        if (!SistemaRed.ActualizarConfiguración())
-            txtPuerto.Text = "0";
+        if (SistemaRed.ActualizarConfiguración())
+            SistemaMemoria.GuardarConfiguración(Configuraciones.puertoRed, txtPuerto.Text);
+        else
+            txtPuerto.Text = SistemaMemoria.ObtenerConfiguración(Configuraciones.puertoRed);
     }
     
     private void ConfigurarVolumenGeneral(object sender, RoutedEventArgs e)
