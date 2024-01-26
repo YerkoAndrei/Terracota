@@ -202,7 +202,7 @@ public class ControladorPartidaLocal : SyncScript, IPartida
                 cañónHuesped.Activar(true);
                 cañónActual = cañónHuesped;
 
-                interfaz.MostrarInterfazLocal(turnoJugador, proyectilAnfitrión, cantidadTurnos, multiplicador);
+                interfaz.MostrarInterfazLocal(turnoJugador, proyectilHuesped, cantidadTurnos, multiplicador);
             });
         }
         else
