@@ -109,7 +109,7 @@ Hierarchy:
                 Height: 110.0
                 HorizontalAlignment: Left
                 VerticalAlignment: Center
-                Margin: {Left: 260.0, Top: 50.0}
+                Margin: {Left: 260.0, Top: 40.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -398,7 +398,7 @@ Hierarchy:
                 Height: 110.0
                 HorizontalAlignment: Left
                 VerticalAlignment: Top
-                Margin: {Left: 255.0, Top: -10.0}
+                Margin: {Left: 255.0, Top: -20.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -575,6 +575,23 @@ Hierarchy:
                 BasePartAsset: ec94a22e-f511-4b8e-a71e-bc8c7df21ba9:Interfaces/Librerias/Botones
                 BasePartId: b2f0d0a3-4308-40e5-998d-2d1af808000d
                 InstanceId: 46a83f40-429f-4e6c-9d49-f4ff385d4ae9
+        -   UIElement: !TextBlock
+                Id: 2481d31f-ec59-4d79-bcb0-46e6ed7d7869
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 700.0
+                Height: 25.0
+                HorizontalAlignment: Left
+                VerticalAlignment: Bottom
+                Margin: {Left: 20.0, Bottom: 40.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtInfoRed0
+                Text: '* Velocidad de red debe ser igual o menor que los FPS'
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 20.0
+                TextColor: {R: 240, G: 220, B: 160, A: 240}
         -   UIElement: !ImageElement
                 Id: 25269b56-8bb5-48f3-94f0-26e0d0a9d9ec
                 DependencyProperties: {}
@@ -2089,6 +2106,23 @@ Hierarchy:
                 BasePartAsset: ec94a22e-f511-4b8e-a71e-bc8c7df21ba9:Interfaces/Librerias/Botones
                 BasePartId: e91e7db3-8872-4dee-9d83-b09bc3ae5510
                 InstanceId: 4214834c-b49d-4da4-a7c3-7770405e31dd
+        -   UIElement: !TextBlock
+                Id: 7899564b-f8d6-48b1-8a50-76080550790b
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 500.0
+                Height: 25.0
+                HorizontalAlignment: Left
+                VerticalAlignment: Bottom
+                Margin: {Left: 20.0, Bottom: 10.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtInfoRed1
+                Text: '* Velocidad de red debe ser igual o menor que los FPS'
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 20.0
+                TextColor: {R: 240, G: 220, B: 160, A: 240}
         -   UIElement: !ImageElement
                 Id: 798a817c-e14f-48be-acc8-99295bb9a156
                 DependencyProperties:
@@ -2323,7 +2357,6 @@ Hierarchy:
                 Id: 8452d8c2-9072-4b56-9258-44e5f4a42339
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Visibility: Hidden
                 Margin: {Top: 200.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
@@ -2332,6 +2365,8 @@ Hierarchy:
                 Children:
                     43fbb8b1b0286a90b6c6e4e796849bc5: !UniformGrid ref!! 19922654-659a-4737-9a01-97ebb9978b8f
                     7cbaa71c9e4652077b5374bed74e4bb4: !UniformGrid ref!! 03c4053e-470e-4cb9-b3b2-2e8864b3e383
+                    b841e8223f8460d7e7539db0391060cd: !TextBlock ref!! 2481d31f-ec59-4d79-bcb0-46e6ed7d7869
+                    ec454e320c67eff96986962d84ee1901: !TextBlock ref!! 7899564b-f8d6-48b1-8a50-76080550790b
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}

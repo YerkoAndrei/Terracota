@@ -1046,6 +1046,27 @@ Hierarchy:
                 BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
                 BasePartId: 25269b56-8bb5-48f3-94f0-26e0d0a9d9ec
                 InstanceId: 98639f7e-d1dc-4748-9d23-fbf16836731f
+        -   UIElement: !TextBlock
+                Id: 23d4a34e-d42d-49af-b945-17370ff05af2
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 700.0
+                Height: 25.0
+                HorizontalAlignment: Left
+                VerticalAlignment: Bottom
+                Margin: {Left: 20.0, Bottom: 40.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtInfoRed0
+                Text: '* Velocidad de red debe ser igual o menor que los FPS'
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 20.0
+                TextColor: {R: 240, G: 220, B: 160, A: 240}
+            Base:
+                BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
+                BasePartId: 2481d31f-ec59-4d79-bcb0-46e6ed7d7869
+                InstanceId: 09d01f72-4a0e-49e7-9298-d7c8d423afba
         -   UIElement: !ImageElement
                 Id: 245848d5-3ccc-4f87-a370-0c5201e4f315
                 DependencyProperties: {}
@@ -3701,6 +3722,27 @@ Hierarchy:
                 BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
                 BasePartId: f8459600-4d04-487e-be54-02bb2a90a344
                 InstanceId: 09d01f72-4a0e-49e7-9298-d7c8d423afba
+        -   UIElement: !TextBlock
+                Id: 77f0c00d-f9ed-4068-8ce6-3fccb63b39fc
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 500.0
+                Height: 25.0
+                HorizontalAlignment: Left
+                VerticalAlignment: Bottom
+                Margin: {Left: 20.0, Bottom: 10.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: txtInfoRed1
+                Text: '* Velocidad de red debe ser igual o menor que los FPS'
+                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
+                TextSize: 20.0
+                TextColor: {R: 240, G: 220, B: 160, A: 240}
+            Base:
+                BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
+                BasePartId: 7899564b-f8d6-48b1-8a50-76080550790b
+                InstanceId: 09d01f72-4a0e-49e7-9298-d7c8d423afba
         -   UIElement: !ImageElement
                 Id: 78068268-8782-49dd-9f2a-88e678f45e50
                 DependencyProperties:
@@ -4153,13 +4195,14 @@ Hierarchy:
                 Id: 8665ae8a-d039-446c-bc82-965edf5a1642
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Visibility: Hidden
                 Margin: {Top: 200.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: PanelRed
                 Children:
+                    aa08a73cbd611ff237124bfd4a499046: !TextBlock ref!! 23d4a34e-d42d-49af-b945-17370ff05af2
+                    134c9913ab85090307e844a51e46e820: !TextBlock ref!! 77f0c00d-f9ed-4068-8ce6-3fccb63b39fc
                     43fbb8b1b0286a90b6c6e4e796849bc5: !UniformGrid ref!! fc1cf81d-c4ac-4b19-966d-3c2168434ff5
                     7cbaa71c9e4652077b5374bed74e4bb4: !UniformGrid ref!! df17c218-9033-4334-ab60-9fba0b5604da
                 RowDefinitions: {}
@@ -6794,7 +6837,7 @@ Hierarchy:
                 Height: 110.0
                 HorizontalAlignment: Left
                 VerticalAlignment: Center
-                Margin: {Left: 260.0, Top: 50.0}
+                Margin: {Left: 260.0, Top: 40.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -7670,7 +7713,7 @@ Hierarchy:
                 Height: 110.0
                 HorizontalAlignment: Left
                 VerticalAlignment: Top
-                Margin: {Left: 255.0, Top: -10.0}
+                Margin: {Left: 255.0, Top: -20.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
