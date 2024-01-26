@@ -493,4 +493,9 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         else
             cañónHuesped.ActualizarRotación(matriz);
     }
+
+    public bool ObtenerActivo()
+    {
+        return partidaActiva;
+    }
 }

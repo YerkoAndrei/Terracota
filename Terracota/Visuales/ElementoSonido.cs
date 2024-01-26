@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Threading.Tasks;
 using Stride.Audio;
 using Stride.Engine;
 using Stride.Physics;
@@ -11,9 +12,20 @@ public class ElementoSonido : AsyncScript
 {
     private RigidbodyComponent cuerpo;
     private SoundInstance instanciaSonido;
+    private IPartida iPartida;
 
     public override async Task Execute()
     {
+        var controlador = Entity.Scene.Entities.FirstOrDefault(e => e.Name == "ControladorPartida");
+        foreach (var componente in controlador.Components)
+        {
+            if (componente is IPartida)
+            {
+                iPartida = (IPartida)componente;
+                break;
+            }
+        }
+
         var elemento = Entity.Get<ElementoBloque>();
 
         cuerpo = elemento.cuerpo;
@@ -58,7 +70,7 @@ public class ElementoSonido : AsyncScript
 
     public void SonarBloqueFísico(float fuerza)
     {
-        if (instanciaSonido.PlayState == Stride.Media.PlayState.Playing)
+        if (instanciaSonido.PlayState == Stride.Media.PlayState.Playing || !iPartida.ObtenerActivo())
             return;
 
         // Volumen y pitch aleatorio da más vida a los sonidos

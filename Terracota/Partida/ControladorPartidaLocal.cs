@@ -296,4 +296,9 @@ public class ControladorPartidaLocal : SyncScript, IPartida
             }
         }
     }
+
+    public bool ObtenerActivo()
+    {
+        return partidaActiva;
+    }
 }
