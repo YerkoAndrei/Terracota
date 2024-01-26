@@ -175,7 +175,7 @@ public class ControladorBola : AsyncScript
             case TipoProyectil.bola:
                 return ObtenerMayorValor(velocidad);
             case TipoProyectil.metralla:
-                return ObtenerMayorValor(velocidad) * 0.6f;
+                return ObtenerMayorValor(velocidad) * 0.4f;
         }
     }
 

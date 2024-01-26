@@ -357,11 +357,6 @@ public class InterfazJuego : SyncScript
         estadoHuesped[estatua].Color = Color.Red;
     }
 
-    public bool ObtenerActivo()
-    {
-        return activo;
-    }
-
     public async void MostrarGanador(TipoJugador jugador, int turno)
     {
         activo = false;

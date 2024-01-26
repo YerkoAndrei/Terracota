@@ -195,7 +195,7 @@ public class SistemaSonido : StartupScript
     public static void SonarInicio()
     {
         instancia.inicio.Stop();
-        instancia.inicio.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
+        instancia.inicio.Volume = ObtenerVolumen(Configuraciones.volumenMúsica);
         instancia.inicio.PlayExclusive();
     }
 
@@ -227,31 +227,17 @@ public class SistemaSonido : StartupScript
         instancia.cañonazo.PlayExclusive();
     }
 
-    public static void SonarCañónVertical(bool forzarSilencio)
+    public static void SonarCañónVertical()
     {
-        // Si va muy rápido suena más despacio
-        if (instancia.cañónVertical.PlayState == PlayState.Playing || forzarSilencio)
-        {
-            instancia.cañónVertical.Stop();
-            instancia.cañónVertical.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.015f;
-        }
-        else
-            instancia.cañónVertical.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.4f;
-
+        instancia.cañónVertical.Stop();
+        instancia.cañónVertical.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.02f;
         instancia.cañónVertical.PlayExclusive();
     }
 
-    public static void SonarCañónHorizontal(bool forzarSilencio)
+    public static void SonarCañónHorizontal()
     {
-        // Si va muy rápido suena más despacio
-        if (instancia.cañónHorizontal.PlayState == PlayState.Playing || forzarSilencio)
-        {
-            instancia.cañónHorizontal.Stop();
-            instancia.cañónHorizontal.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.015f;
-        }
-        else
-            instancia.cañónHorizontal.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.4f;
-
+        instancia.cañónHorizontal.Stop();
+        instancia.cañónHorizontal.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * 0.02f;
         instancia.cañónHorizontal.PlayExclusive();
     }
 
@@ -282,15 +268,16 @@ public class SistemaSonido : StartupScript
     public static void SonarBola(float fuerza)
     {
         instancia.bola.Stop();
-        instancia.bola.Volume = ObtenerVolumen(Configuraciones.volumenEfectos) * (fuerza - RangoAleatorio(0f, 0.2f));
-        instancia.bola.PlayExclusive();
+        instancia.bola.Volume = (ObtenerVolumen(Configuraciones.volumenEfectos) * fuerza) - RangoAleatorio(0, 0.4f);
+        instancia.bola.Pitch = RangoAleatorio(0.8f, 1.2f);
+        instancia.bola.Play();
     }
 
     public static void SonarEstatuaDesactivada()
     {
         instancia.bloqueEstatuaDesactivada.Stop();
         instancia.bloqueEstatuaDesactivada.Volume = ObtenerVolumen(Configuraciones.volumenEfectos);
-        instancia.bloqueEstatuaDesactivada.PlayExclusive();
+        instancia.bloqueEstatuaDesactivada.Play();
     }
 
     public static SoundInstance CrearInstancia(TipoBloque bloque)

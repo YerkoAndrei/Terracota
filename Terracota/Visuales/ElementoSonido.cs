@@ -36,30 +36,35 @@ public class ElementoSonido : AsyncScript
             if (ObtenerMayorFuerzaLinear() >= sensiblidadLinear && controladorBola == null)
             {
                 // Volumen base velocidad linear
-                SonarBloqueFísico(elemento.tipoBloque, ObtenerMayorFuerzaLinearNormalizada());
+                SonarBloqueFísico(ObtenerMayorFuerzaLinearNormalizada());
             }
             else if (ObtenerMayorFuerzaLinear() < sensiblidadLinear && ObtenerMayorFuerzaAngular() >= sensiblidadAngular && controladorBola == null)
             {
                 // Volumen base velocidad angular
-                SonarBloqueFísico(elemento.tipoBloque, ObtenerMayorFuerzaAngularNormalizada());
+                SonarBloqueFísico(ObtenerMayorFuerzaAngularNormalizada());
             }
             else if (controladorBola != null)
             {
                 // Volumen base velocidad bola
-                SonarBloqueFísico(elemento.tipoBloque, controladorBola.ObtenerMayorFuerzaLinearNormalizada());
+                var multiplicador = 1f;
+                if (controladorBola.tipoProyectil == TipoProyectil.metralla)
+                    multiplicador = 0.4f;
+
+                SonarBloqueFísico(controladorBola.ObtenerMayorFuerzaLinearNormalizada() * multiplicador);
             }
             await Script.NextFrame();
         }
     }
 
-    public void SonarBloqueFísico(TipoBloque bloque, float fuerza)
+    public void SonarBloqueFísico(float fuerza)
     {
         if (instanciaSonido.PlayState == Stride.Media.PlayState.Playing)
             return;
 
-        // Rango aleatorio da un poco de vida a los sonidos
-        instanciaSonido.Volume = SistemaSonido.ObtenerVolumen(Configuraciones.volumenEfectos) * (fuerza - RangoAleatorio(0.0f, 0.8f));
-        instanciaSonido.PlayExclusive();
+        // Volumen y pitch aleatorio da más vida a los sonidos
+        instanciaSonido.Volume = (SistemaSonido.ObtenerVolumen(Configuraciones.volumenEfectos) * fuerza) - RangoAleatorio(0, 0.6f);
+        instanciaSonido.Pitch = RangoAleatorio(0.8f, 1.2f);
+        instanciaSonido.Play();
     }
 
     // Encuentra mayor velocidad sin normalizar

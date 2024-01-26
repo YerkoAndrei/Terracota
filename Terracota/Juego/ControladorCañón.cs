@@ -163,7 +163,7 @@ public class ControladorCañón : SyncScript
         if (deltaXRotado >= 0.01f)
         {
             deltaXRotado = 0;
-            SistemaSonido.SonarCañónHorizontal(!interfaz.ObtenerActivo());
+            SistemaSonido.SonarCañónHorizontal();
         }
     }
 
@@ -182,7 +182,7 @@ public class ControladorCañón : SyncScript
         if (deltaYRotado >= 0.01f)
         {
             deltaYRotado = 0;
-            SistemaSonido.SonarCañónVertical(!interfaz.ObtenerActivo());
+            SistemaSonido.SonarCañónVertical();
         }
     }
 
