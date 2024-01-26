@@ -6,6 +6,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Net.Http;
 using System.Timers;
+using System.Diagnostics;
 using Stride.Engine;
 using Newtonsoft.Json;
 
@@ -33,7 +34,12 @@ public class SistemaRed : StartupScript
     private static SistemaRed instancia;
     private static ControladorPartidaRemota controlador;
 
+    private static int contadorPing;
+    private static int pingAcumulado;
+    private static int ping;
+
     private static Timer temporizador;
+    private static Stopwatch reloj;
 
     public override void Start()
     {
@@ -205,9 +211,26 @@ public class SistemaRed : StartupScript
 
     private static async void EscucharUDP()
     {
+        reloj = new Stopwatch();
         while (true)
         {
+            reloj.Start();
             await RecibirData();
+
+            // Calcular ping
+            reloj.Stop();
+            if (contadorPing >= 60)
+            {
+                ping = contadorPing / pingAcumulado;
+                pingAcumulado = 0;
+                contadorPing = 0;
+            }
+            else
+            {
+                pingAcumulado += (int)reloj.ElapsedMilliseconds;
+                contadorPing++;
+            }
+            reloj.Reset();
         }
     }
 
@@ -412,6 +435,11 @@ public class SistemaRed : StartupScript
     public static bool ObtenerJugando()
     {
         return (conectado && jugando);
+    }
+
+    public static int ObtenerPing()
+    {
+        return ping;
     }
 
     public static bool ValidarDirección(string ip)

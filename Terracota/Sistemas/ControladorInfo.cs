@@ -37,7 +37,10 @@ public class ControladorInfo : AsyncScript
             }
 
             // PING
-            txtPing.Text = string.Format("Ping: {0}", 0);
+            if (SistemaRed.ObtenerJugando())
+                txtPing.Text = string.Format("Ping: {0}", SistemaRed.ObtenerPing());
+            else
+                txtPing.Text = string.Empty;
 
             await Script.NextFrame();
         }
