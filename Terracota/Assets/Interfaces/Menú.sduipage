@@ -61,7 +61,7 @@ Hierarchy:
         -   UIElement: !Grid
                 Id: 01568e9f-4a7a-4689-ad57-1f8fc43353f6
                 DependencyProperties:
-                    751ea65b073f6a07ab525331f8644358~GridBase.RowPropertyKey: 7
+                    751ea65b073f6a07ab525331f8644358~GridBase.RowPropertyKey: 8
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 50.0
                 Margin*: {}
@@ -493,7 +493,7 @@ Hierarchy:
         -   UIElement: !Grid
                 Id: 0f4541b0-2365-4bbc-b3ed-b368116ed917
                 DependencyProperties:
-                    44623c73f7d650ad3fb22524da5723a4~GridBase.RowPropertyKey: 5
+                    44623c73f7d650ad3fb22524da5723a4~GridBase.RowPropertyKey: 6
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 50.0
                 Margin*: {}
@@ -1573,18 +1573,20 @@ Hierarchy:
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 60.0
+                Height: 30.0
                 HorizontalAlignment: Right
+                VerticalAlignment: Bottom
                 DepthAlignment: Stretch
-                Margin: {}
+                Margin: {Right: 6.0, Bottom: 1.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: "txtVersión"
-                Text: 0.8
+                Text: 0.000
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
                 TextSize: 25.0
                 TextColor: {R: 255, G: 255, B: 255, A: 255}
-                TextAlignment: Center
+                TextAlignment: Right
         -   UIElement: !TextBlock
                 Id: 3760a816-33b0-4558-b339-795ffe26dbab
                 DependencyProperties: {}
@@ -2401,9 +2403,11 @@ Hierarchy:
                 Id: 56f02e30-ab7a-44a2-b701-35979312ca4b
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 240.0
-                HorizontalAlignment: Left
-                Margin: {}
+                Width: 170.0
+                Height: 30.0
+                HorizontalAlignment: Right
+                VerticalAlignment: Bottom
+                Margin: {Right: 70.0, Bottom: 1.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -3112,7 +3116,7 @@ Hierarchy:
                 Width: 1280.0
                 Height: 80.0
                 VerticalAlignment: Top
-                Margin: {Top: 80.0}
+                Margin: {Top: 60.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -4003,10 +4007,10 @@ Hierarchy:
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Width: 500.0
-                Height: 480.0
+                Height: 540.0
                 HorizontalAlignment: Center
                 VerticalAlignment: Center
-                Margin: {Top: 140.0}
+                Margin: {Top: 110.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
@@ -4017,7 +4021,7 @@ Hierarchy:
                     120b3f90c366eef4664ec132300f8751: !Grid ref!! 0f4541b0-2365-4bbc-b3ed-b368116ed917
                     f7a95c321c5f7c7ae558345f1fc5d7bf: !Grid ref!! 919718c2-a899-4fcc-9d80-3cc351959103
                     32fc410ecd26cba05af10403c77d707e: !Grid ref!! 01568e9f-4a7a-4689-ad57-1f8fc43353f6
-                Rows: 8
+                Rows: 9
         -   UIElement: !ImageElement
                 Id: 80bf4ede-7a7a-4dd8-8f18-bb40d090031e
                 DependencyProperties: {}
@@ -4469,7 +4473,7 @@ Hierarchy:
         -   UIElement: !Grid
                 Id: 919718c2-a899-4fcc-9d80-3cc351959103
                 DependencyProperties:
-                    5a9581db551299ad824184d7a7b999d5~GridBase.RowPropertyKey: 6
+                    5a9581db551299ad824184d7a7b999d5~GridBase.RowPropertyKey: 7
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Height: 50.0
                 Margin*: {}
@@ -6512,8 +6516,11 @@ Hierarchy:
                 Opacity: 0.0
                 DrawLayerNumber: 2
                 Width: 160.0
+                Height: 25.0
+                HorizontalAlignment: Right
+                VerticalAlignment: Bottom
                 DepthAlignment: Stretch
-                Margin: {Right: 60.0}
+                Margin: {Right: 70.0, Bottom: 1.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
