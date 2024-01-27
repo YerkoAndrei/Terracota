@@ -45,7 +45,7 @@ public class InterfazElecciónLocal : StartupScript
     private Grid btnAleatorio;
 
     private bool anfitriónSeleccionado;
-    private bool huespedSeleccionado;
+    private bool huéspedSeleccionado;
 
     private bool esperandoRuleta;
     private bool ganaAnfitrión;
@@ -126,7 +126,7 @@ public class InterfazElecciónLocal : StartupScript
 
             // Derecha
             var nuevaRanuraHuésped = prefabRanura.InstantiateElement<Grid>("RanuraDerecha");
-            ConfigurarRanuraElección(nuevaRanuraHuésped, i, fortalezaTemp.Nombre, () => EnClicHuesped(fortalezaTemp.Nombre));
+            ConfigurarRanuraElección(nuevaRanuraHuésped, i, fortalezaTemp.Nombre, () => EnClicHuésped(fortalezaTemp.Nombre));
             padreRanurasHuésped.Children.Add(nuevaRanuraHuésped);
             padreRanurasHuésped.Height += (nuevaRanuraHuésped.Height + 10);
         }
@@ -160,9 +160,9 @@ public class InterfazElecciónLocal : StartupScript
         var ranuraAnfitrión = ObtenerRanuraAleatoria();
         EnClicAnfitrión(ranuraAnfitrión);
 
-        // Huesped
-        var ranuraHuesped = ObtenerRanuraAleatoria(); 
-        EnClicHuesped(ranuraHuesped);
+        // Huésped
+        var ranuraHuésped = ObtenerRanuraAleatoria(); 
+        EnClicHuésped(ranuraHuésped);
 
         // Ganador
         ganaAnfitrión = RangoAleatorio(0,2) == 1;
@@ -193,7 +193,7 @@ public class InterfazElecciónLocal : StartupScript
         if (esperandoRuleta)
             return;
 
-        if (huespedSeleccionado)
+        if (huéspedSeleccionado)
             BloquearBotón(btnComenzar, false);
 
         anfitriónSeleccionado = true;
@@ -201,7 +201,7 @@ public class InterfazElecciónLocal : StartupScript
         controladorPartida.CargarFortaleza(nombre, true);
     }
 
-    private void EnClicHuesped(string nombre)
+    private void EnClicHuésped(string nombre)
     {
         if (esperandoRuleta)
             return;
@@ -209,14 +209,14 @@ public class InterfazElecciónLocal : StartupScript
         if(anfitriónSeleccionado)
             BloquearBotón(btnComenzar, false);
 
-        huespedSeleccionado = true;
+        huéspedSeleccionado = true;
         txtHuésped.Text = nombre;
         controladorPartida.CargarFortaleza(nombre, false);
     }
 
     private async void EnClicComenzar()
     {
-        if (esperandoRuleta ||!huespedSeleccionado || !anfitriónSeleccionado)
+        if (esperandoRuleta ||!huéspedSeleccionado || !anfitriónSeleccionado)
             return;
 
         ApagarRuleta();
@@ -300,7 +300,7 @@ public class InterfazElecciónLocal : StartupScript
         }
         else
         {
-            // Gana huesped / derecha
+            // Gana huésped / derecha
             fondoGanador.Color = colorHuésped;
             imgGanador.Source = ObtenerSprite(spriteHuésped);
             imgFlechaDerecha.Visibility = Visibility.Visible;

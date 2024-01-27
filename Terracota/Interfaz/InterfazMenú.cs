@@ -43,7 +43,7 @@ public class InterfazMenú : StartupScript
     private EditText txtConexiónRemota;
     private TextBlock txtErrorConexión;
     private Grid btnComoAnfitrión;
-    private Grid btnComoHuesped;
+    private Grid btnComoHuésped;
 
     private bool animando;
     private bool animandoEspera;
@@ -86,9 +86,9 @@ public class InterfazMenú : StartupScript
         txtErrorConexión.Text = string.Empty;
 
         btnComoAnfitrión = página.FindVisualChildOfType<Grid>("btnComoAnfitrión");
-        btnComoHuesped = página.FindVisualChildOfType<Grid>("btnComoHuesped");
+        btnComoHuésped = página.FindVisualChildOfType<Grid>("btnComoHuésped");
         ConfigurarBotón(btnComoAnfitrión, () => { EnClicConectarRemoto(TipoJugador.anfitrión); });
-        ConfigurarBotón(btnComoHuesped, () => { EnClicConectarRemoto(TipoJugador.huésped); });
+        ConfigurarBotón(btnComoHuésped, () => { EnClicConectarRemoto(TipoJugador.huésped); });
 
         // Invitación
         popupInvitación = página.FindVisualChildOfType<Grid>("PopupInvitación");
@@ -157,14 +157,14 @@ public class InterfazMenú : StartupScript
 
         txtErrorConexión.Text = string.Empty;
         BloquearBotón(btnComoAnfitrión, true);
-        BloquearBotón(btnComoHuesped, true);
+        BloquearBotón(btnComoHuésped, true);
 
         // Reconoce si es dirección ip
         if(!SistemaRed.ValidarDirección(txtConexiónRemota.Text))
         {
             txtErrorConexión.Text = SistemaTraducción.ObtenerTraducción("errorIp");
             BloquearBotón(btnComoAnfitrión, false);
-            BloquearBotón(btnComoHuesped, false);
+            BloquearBotón(btnComoHuésped, false);
             return;
         }
 
@@ -178,7 +178,7 @@ public class InterfazMenú : StartupScript
         {
             txtErrorConexión.Text = SistemaTraducción.ObtenerTraducción("errorIp");
             BloquearBotón(btnComoAnfitrión, false);
-            BloquearBotón(btnComoHuesped, false);
+            BloquearBotón(btnComoHuésped, false);
             return;
         }
 
@@ -203,7 +203,7 @@ public class InterfazMenú : StartupScript
         {
             txtErrorConexión.Text = SistemaTraducción.ObtenerTraducción(resultado);
             BloquearBotón(btnComoAnfitrión, false);
-            BloquearBotón(btnComoHuesped, false);
+            BloquearBotón(btnComoHuésped, false);
         }
     }
 

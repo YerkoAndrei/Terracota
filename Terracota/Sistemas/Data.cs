@@ -17,10 +17,10 @@ public class Físicas
     public List<float[]> Bloques { get; set; }
 
     public float[] BolaAnfitrión { get; set; }
-    public float[] BolaHuesped { get; set; }
+    public float[] BolaHuésped { get; set; }
 
     public List<float[]> MetrallaAnfitrión { get; set; }
-    public List<float[]> MetrallaHuesped { get; set; }
+    public List<float[]> MetrallaHuésped { get; set; }
 }
 
 public class Turno

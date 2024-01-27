@@ -102,11 +102,11 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
         // Físicas huespes
         índice = 0;
-        var bloquesHuesped = new List<ElementoBloque>();
-        bloquesHuesped.AddRange(fortalezaHuésped.estatuas);
-        bloquesHuesped.AddRange(fortalezaHuésped.cortos);
-        bloquesHuesped.AddRange(fortalezaHuésped.largos);
-        foreach (var bloque in bloquesHuesped)
+        var bloquesHuésped = new List<ElementoBloque>();
+        bloquesHuésped.AddRange(fortalezaHuésped.estatuas);
+        bloquesHuésped.AddRange(fortalezaHuésped.cortos);
+        bloquesHuésped.AddRange(fortalezaHuésped.largos);
+        foreach (var bloque in bloquesHuésped)
         {
             bloque.CrearCódigo("1_" + índice);
             bloques.Add(bloque);
@@ -171,7 +171,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         UIElección.Enabled = false;
 
         // Anfitrión controla físicas
-        // Huesped solo controla su propio cañón
+        // Huésped solo controla su propio cañón
         SistemaRed.ActivarActualizaciónRed(true);
 
         if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
@@ -323,7 +323,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         }
         else
         {
-            interfaz.RestarHuesped(estatuasHuésped);
+            interfaz.RestarHuésped(estatuasHuésped);
             estatuasHuésped++;
         }
 
@@ -429,7 +429,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         {
             Bloques = new List<float[]>(),
             MetrallaAnfitrión = new List<float[]>(),
-            MetrallaHuesped = new List<float[]>()
+            MetrallaHuésped = new List<float[]>()
         };
 
         // Jugador anfitrión
@@ -443,12 +443,12 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         
         // Proyectiles
         físicas.BolaAnfitrión = bolaAnfitrión.ObtenerFísicas();
-        físicas.BolaHuesped = bolaHuésped.ObtenerFísicas();
+        físicas.BolaHuésped = bolaHuésped.ObtenerFísicas();
         
         for (int i = 0; i < cantidadMetralla; i++)
         {
             físicas.MetrallaAnfitrión.Add(metrallaAnfitrión[i].ObtenerFísicas());
-            físicas.MetrallaHuesped.Add(metrallaHuésped[i].ObtenerFísicas());
+            físicas.MetrallaHuésped.Add(metrallaHuésped[i].ObtenerFísicas());
         }
 
         return físicas;
@@ -456,7 +456,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
     public void ActualizarFísicas(Físicas físicas)
     {
-        // Jugador huesped      
+        // Jugador huésped      
         ActualizarCañón(físicas.RotaciónCañónAnfitrión, TipoJugador.anfitrión);
 
         // Bloques
@@ -467,17 +467,17 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
         // Proyectiles
         bolaAnfitrión.ActualizarFísicas(físicas.BolaAnfitrión);
-        bolaHuésped.ActualizarFísicas(físicas.BolaHuesped);
+        bolaHuésped.ActualizarFísicas(físicas.BolaHuésped);
 
         for (int i = 0; i < cantidadMetralla; i++)
         {
             metrallaAnfitrión[i].ActualizarFísicas(físicas.MetrallaAnfitrión[i]);
-            metrallaHuésped[i].ActualizarFísicas(físicas.MetrallaHuesped[i]);
+            metrallaHuésped[i].ActualizarFísicas(físicas.MetrallaHuésped[i]);
         }
     }
 
     // Anfitrión actualiza su cañón junto con físicas
-    // Huesped actualiza su cañón en llamado independiente  
+    // Huésped actualiza su cañón en llamado independiente  
     public float[] ObtenerRotaciónCañón(TipoJugador jugador)
     {
         if (jugador == TipoJugador.anfitrión)

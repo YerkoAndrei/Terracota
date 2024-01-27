@@ -103,7 +103,7 @@ public class InterfazJuego : SyncScript
         fondoCañón = página.FindVisualChildOfType<ImageElement>("FondoCañón");
 
         imgTurnoAnfitrión = página.FindVisualChildOfType<ImageElement>("imgTurnoAnfitrión");
-        imgTurnoHuésped = página.FindVisualChildOfType<ImageElement>("imgTurnoHuesped");
+        imgTurnoHuésped = página.FindVisualChildOfType<ImageElement>("imgTurnoHuésped");
 
         imgProyectil = página.FindVisualChildOfType<ImageElement>("imgProyectil");
         ConfigurarBotónConImagen(página.FindVisualChildOfType<Button>("btnProyectil"), imgProyectil, EnClicProyectil);
@@ -117,9 +117,9 @@ public class InterfazJuego : SyncScript
 
         estadoHuésped = new List<ImageElement>
         {
-            página.FindVisualChildOfType<ImageElement>("imgHuesped_0"),
-            página.FindVisualChildOfType<ImageElement>("imgHuesped_1"),
-            página.FindVisualChildOfType<ImageElement>("imgHuesped_2")
+            página.FindVisualChildOfType<ImageElement>("imgHuésped_0"),
+            página.FindVisualChildOfType<ImageElement>("imgHuésped_1"),
+            página.FindVisualChildOfType<ImageElement>("imgHuésped_2")
         };
 
         // Menú pausa
@@ -325,7 +325,7 @@ public class InterfazJuego : SyncScript
                 fondoCañón.Color = colorAnfitrión;
                 break;
             case TipoJugador.huésped:
-                txtNombreCañón.Text = SistemaTraducción.ObtenerTraducción("huesped");
+                txtNombreCañón.Text = SistemaTraducción.ObtenerTraducción("huésped");
                 imgCañón.Source = ObtenerSprite(spriteHuésped);
                 fondoCañón.Color = colorHuésped;
                 break;
@@ -352,7 +352,7 @@ public class InterfazJuego : SyncScript
         estadoAnfitrión[estatua].Color = Color.Red;
     }
 
-    public void RestarHuesped(int estatua)
+    public void RestarHuésped(int estatua)
     {
         estadoHuésped[estatua].Color = Color.Red;
     }
@@ -387,7 +387,7 @@ public class InterfazJuego : SyncScript
                 }
                 break;
             case TipoJugador.huésped:
-                txtGanador.Text = SistemaTraducción.ObtenerTraducción("huesped");
+                txtGanador.Text = SistemaTraducción.ObtenerTraducción("huésped");
                 foreach (var img in imgsGanador)
                 {
                     img.Source = ObtenerSprite(spriteHuésped);

@@ -232,24 +232,24 @@ public static class Sistema
         grid.SetGridRow(fila);
     }
 
-    public static void ConfigurarHostLAN(Grid grid, string ip, string nombre, Action enConectarComoAnfitrión, Action enConectarComoHuesped)
+    public static void ConfigurarHostLAN(Grid grid, string ip, string nombre, Action enConectarComoAnfitrión, Action enConectarComoHuésped)
     {
         // Busca contenido dentro del "grid botón"
         var textoNombreIP = grid.FindVisualChildOfType<TextBlock>("txtNombreIP");
         var conectar = grid.FindVisualChildOfType<TextBlock>("txtConectar");
         var anfitrión = grid.FindVisualChildOfType<TextBlock>("txtAnfitrión");
-        var huesped = grid.FindVisualChildOfType<TextBlock>("txtHuesped");
+        var huésped = grid.FindVisualChildOfType<TextBlock>("txtHuésped");
 
         conectar.Text = SistemaTraducción.ObtenerTraducción("conectarComo");
         anfitrión.Text = SistemaTraducción.ObtenerTraducción("anfitrión");
-        huesped.Text = SistemaTraducción.ObtenerTraducción("huesped");
+        huésped.Text = SistemaTraducción.ObtenerTraducción("huésped");
 
         // Botones
         var btnComoAnfitrión = grid.FindVisualChildOfType<Grid>("btnComoAnfitrión");
         ConfigurarBotón(btnComoAnfitrión, enConectarComoAnfitrión);
 
-        var btnComoHuesped = grid.FindVisualChildOfType<Grid>("btnComoHuesped");
-        ConfigurarBotón(btnComoHuesped, enConectarComoHuesped);
+        var btnComoHuésped = grid.FindVisualChildOfType<Grid>("btnComoHuésped");
+        ConfigurarBotón(btnComoHuésped, enConectarComoHuésped);
 
         // Visual
         textoNombreIP.Text = ip;
@@ -260,7 +260,7 @@ public static class Sistema
         textoNombreIP.Font = SistemaTraducción.VerificarFuente(textoNombreIP.Text);
         conectar.Font = SistemaTraducción.VerificarFuente(conectar.Text);
         anfitrión.Font = SistemaTraducción.VerificarFuente(conectar.Text);
-        huesped.Font = SistemaTraducción.VerificarFuente(conectar.Text);
+        huésped.Font = SistemaTraducción.VerificarFuente(conectar.Text);
     }
 
     public static TextBlock ObtenerTexto(Grid grid)

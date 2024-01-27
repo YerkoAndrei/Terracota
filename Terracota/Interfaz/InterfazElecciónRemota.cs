@@ -134,7 +134,7 @@ public class InterfazElecciónRemota : StartupScript
             {
                 // Derecha
                 var nuevaRanuraHuésped = prefabRanura.InstantiateElement<Grid>("RanuraDerecha");
-                ConfigurarRanuraElección(nuevaRanuraHuésped, i, fortalezaTemp.Nombre, () => EnClicHuesped(fortalezaTemp.Nombre));
+                ConfigurarRanuraElección(nuevaRanuraHuésped, i, fortalezaTemp.Nombre, () => EnClicHuésped(fortalezaTemp.Nombre));
                 padreRanurasHuésped.Children.Add(nuevaRanuraHuésped);
                 padreRanurasHuésped.Height += (nuevaRanuraHuésped.Height + 10);
             }
@@ -175,8 +175,8 @@ public class InterfazElecciónRemota : StartupScript
         }
         else
         {
-            var ranuraHuesped = ObtenerRanuraAleatoria();
-            EnClicHuesped(ranuraHuesped);
+            var ranuraHuésped = ObtenerRanuraAleatoria();
+            EnClicHuésped(ranuraHuésped);
         }
 
         // Intenta comenzar partida
@@ -205,7 +205,7 @@ public class InterfazElecciónRemota : StartupScript
         controladorPartida.CargarFortaleza(nombre, true);
     }
 
-    private void EnClicHuesped(string nombre)
+    private void EnClicHuésped(string nombre)
     {
         if (esperandoRuleta)
             return;
@@ -274,7 +274,7 @@ public class InterfazElecciónRemota : StartupScript
         else
         {
             controladorPartida.RotarXCámara(4.5f);
-            await MoverRuletaHuesped();
+            await MoverRuletaHuésped();
         }
     }
 
@@ -328,7 +328,7 @@ public class InterfazElecciónRemota : StartupScript
         await Task.Delay(500);
     }
 
-    private async Task MoverRuletaHuesped()
+    private async Task MoverRuletaHuésped()
     {
         var apagado = true;
         var toques = 40;
@@ -369,7 +369,7 @@ public class InterfazElecciónRemota : StartupScript
         }
         else
         {
-            // Gana huesped / derecha
+            // Gana huésped / derecha
             fondoGanador.Color = colorHuésped;
             imgGanador.Source = ObtenerSprite(spriteHuésped);
             imgFlechaDerecha.Visibility = Visibility.Visible;

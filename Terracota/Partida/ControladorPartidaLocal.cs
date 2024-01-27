@@ -247,7 +247,7 @@ public class ControladorPartidaLocal : SyncScript, IPartida
         }
         else
         {
-            interfaz.RestarHuesped(estatuasHuésped);
+            interfaz.RestarHuésped(estatuasHuésped);
             estatuasHuésped++;
         }
 
