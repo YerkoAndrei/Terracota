@@ -140,7 +140,7 @@ public class SistemaMemoria : StartupScript
             { Configuraciones.volumenMúsica.ToString(),     "0.5" },
             { Configuraciones.volumenEfectos.ToString(),    "0.5" },
             { Configuraciones.velocidadRed.ToString(),      "60" },
-            { Configuraciones.puertoRed.ToString(),         "666" },
+            { Configuraciones.puertoRed.ToString(),         "28" },
             { Configuraciones.pantallaCompleta.ToString(),  true.ToString() },
             { Configuraciones.resolución.ToString(),        "1920x1080" }
         };
