@@ -37,8 +37,9 @@ public class ElementoBloque : StartupScript
     public void Activar()
     {
         cuerpo.Entity.Transform.Position = posiciónCuerpo;
-        cuerpo.IsKinematic = false;
         cuerpo.Enabled = true;
+        cuerpo.IsKinematic = false;
+        cuerpo.UpdatePhysicsTransformation();
     }
 
     public void Posicionar(Vector3 posición, Quaternion rotación)
