@@ -10,10 +10,10 @@ using static Constantes;
 public class ControladorPartidaRemota : SyncScript, IPartida
 {
     public ControladorCañón cañónAnfitrión;
-    public ControladorCañón cañónHuesped;
+    public ControladorCañón cañónHuésped;
 
     public ControladorFortaleza fortalezaAnfitrión;
-    public ControladorFortaleza fortalezaHuesped;
+    public ControladorFortaleza fortalezaHuésped;
 
     public ControladorCámara controladorCámara;
     public TransformComponent luzDireccional;
@@ -24,18 +24,18 @@ public class ControladorPartidaRemota : SyncScript, IPartida
     public ControladorBola bolaAnfitrión;
     public List<ControladorBola> metrallaAnfitrión = new List<ControladorBola> { };
 
-    public ControladorBola bolaHuesped;
-    public List<ControladorBola> metrallaHuesped = new List<ControladorBola> { };
+    public ControladorBola bolaHuésped;
+    public List<ControladorBola> metrallaHuésped = new List<ControladorBola> { };
 
     private bool anfitriónListo;
-    private bool huespedListo;
+    private bool huéspedListo;
     private bool cambiandoTurno;
 
     private TipoJugador turnoJugador;
     private TipoProyectil proyectilActual;
 
     private int estatuasAnfitrión;
-    private int estatuasHuesped;
+    private int estatuasHuésped;
     private int maxEstatuas;
     private int cantidadTurnos;
     private float multiplicador;
@@ -63,16 +63,16 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         proyectilActual = TipoProyectil.bola;
 
         fortalezaAnfitrión.Inicializar();
-        fortalezaHuesped.Inicializar();
+        fortalezaHuésped.Inicializar();
 
         switch (SistemaRed.ObtenerTipoJugador())
         {
             case TipoJugador.anfitrión:
                 cañónAnfitrión.Inicializar(interfaz, TipoJugador.anfitrión);
-                cañónHuesped.Inicializar(interfaz, TipoJugador.huesped);
+                cañónHuésped.Inicializar(interfaz, TipoJugador.huesped);
                 break;
             case TipoJugador.huesped:
-                cañónHuesped.Inicializar(interfaz, TipoJugador.huesped);
+                cañónHuésped.Inicializar(interfaz, TipoJugador.huesped);
                 break;
         }
 
@@ -103,9 +103,9 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         // Físicas huespes
         índice = 0;
         var bloquesHuesped = new List<ElementoBloque>();
-        bloquesHuesped.AddRange(fortalezaHuesped.estatuas);
-        bloquesHuesped.AddRange(fortalezaHuesped.cortos);
-        bloquesHuesped.AddRange(fortalezaHuesped.largos);
+        bloquesHuesped.AddRange(fortalezaHuésped.estatuas);
+        bloquesHuesped.AddRange(fortalezaHuésped.cortos);
+        bloquesHuesped.AddRange(fortalezaHuésped.largos);
         foreach (var bloque in bloquesHuesped)
         {
             bloque.CrearCódigo("1_" + índice);
@@ -160,7 +160,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         if (anfitrión)
             fortalezaAnfitrión.CargarFortaleza(fortaleza, true);
         else
-            fortalezaHuesped.CargarFortaleza(fortaleza, false);
+            fortalezaHuésped.CargarFortaleza(fortaleza, false);
 
         // Remoto
         _ = SistemaRed.EnviarData(DataRed.cargarFortaleza, fortaleza);
@@ -178,7 +178,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         {
             // Activa colisiones
             fortalezaAnfitrión.Activar();
-            fortalezaHuesped.Activar();
+            fortalezaHuésped.Activar();
 
             // Turno inicial
             if (ganaAnfitrión)
@@ -198,14 +198,14 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
         {
             cañónAnfitrión.Activar(true);
-            cañónHuesped.Activar(false);
+            cañónHuésped.Activar(false);
 
             controladorCámara.RotarYCámara(90, false, EnFinalizarCámara);
         }
         else
         {
             cañónAnfitrión.Activar(false);
-            cañónHuesped.Activar(true);
+            cañónHuésped.Activar(true);
 
             controladorCámara.RotarYCámara(90, true, EnFinalizarCámara);
         }
@@ -235,7 +235,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
             cañónAnfitrión.Disparar(proyectilActual, multiplicador);
         else
-            cañónHuesped.ActivarPartículas();
+            cañónHuésped.ActivarPartículas();
     }
 
     public TipoProyectil CambiarProyectil()
@@ -323,8 +323,8 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         }
         else
         {
-            interfaz.RestarHuesped(estatuasHuesped);
-            estatuasHuesped++;
+            interfaz.RestarHuesped(estatuasHuésped);
+            estatuasHuésped++;
         }
 
         SistemaSonido.SonarEstatuaDesactivada();
@@ -346,13 +346,13 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         {
             ganador = TipoJugador.huesped;
             cañónAnfitrión.Activar(false);
-            cañónHuesped.Activar(true);
+            cañónHuésped.Activar(true);
         }
-        else if (estatuasHuesped >= maxEstatuas)
+        else if (estatuasHuésped >= maxEstatuas)
         {
             ganador = TipoJugador.anfitrión;
             cañónAnfitrión.Activar(true);
-            cañónHuesped.Activar(false);
+            cañónHuésped.Activar(false);
         }
 
         // Muestra ganador
@@ -384,7 +384,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         if (tipoJugador == TipoJugador.anfitrión)
             fortalezaAnfitrión.CargarFortaleza(fortaleza, true);
         else
-            fortalezaHuesped.CargarFortaleza(fortaleza, false);
+            fortalezaHuésped.CargarFortaleza(fortaleza, false);
 
         elección.MostrarNombreFortaleza(fortaleza.Nombre, tipoJugador);
     }
@@ -396,7 +396,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         if (tipoJugador == TipoJugador.anfitrión)
             cañónAnfitrión.ActivarPartículas();
         else
-            cañónHuesped.Disparar(proyectil, multiplicador);
+            cañónHuésped.Disparar(proyectil, multiplicador);
     }
 
     public void RevisarJugadoresListos(TipoJugador tipoJugador)
@@ -413,9 +413,9 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         if (tipoJugador == TipoJugador.anfitrión)
             anfitriónListo = true;
         else
-            huespedListo = true;
+            huéspedListo = true;
 
-        if ((tipoJugador == TipoJugador.anfitrión && huespedListo) ||
+        if ((tipoJugador == TipoJugador.anfitrión && huéspedListo) ||
             (tipoJugador == TipoJugador.huesped && anfitriónListo))
         {
             if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
@@ -443,12 +443,12 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         
         // Proyectiles
         físicas.BolaAnfitrión = bolaAnfitrión.ObtenerFísicas();
-        físicas.BolaHuesped = bolaHuesped.ObtenerFísicas();
+        físicas.BolaHuesped = bolaHuésped.ObtenerFísicas();
         
         for (int i = 0; i < cantidadMetralla; i++)
         {
             físicas.MetrallaAnfitrión.Add(metrallaAnfitrión[i].ObtenerFísicas());
-            físicas.MetrallaHuesped.Add(metrallaHuesped[i].ObtenerFísicas());
+            físicas.MetrallaHuesped.Add(metrallaHuésped[i].ObtenerFísicas());
         }
 
         return físicas;
@@ -467,12 +467,12 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
         // Proyectiles
         bolaAnfitrión.ActualizarFísicas(físicas.BolaAnfitrión);
-        bolaHuesped.ActualizarFísicas(físicas.BolaHuesped);
+        bolaHuésped.ActualizarFísicas(físicas.BolaHuesped);
 
         for (int i = 0; i < cantidadMetralla; i++)
         {
             metrallaAnfitrión[i].ActualizarFísicas(físicas.MetrallaAnfitrión[i]);
-            metrallaHuesped[i].ActualizarFísicas(físicas.MetrallaHuesped[i]);
+            metrallaHuésped[i].ActualizarFísicas(físicas.MetrallaHuesped[i]);
         }
     }
 
@@ -483,7 +483,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         if (jugador == TipoJugador.anfitrión)
             return cañónAnfitrión.ObtenerMatriz();
         else
-            return cañónHuesped.ObtenerMatriz();
+            return cañónHuésped.ObtenerMatriz();
     }
 
     public void ActualizarCañón(float[] matriz, TipoJugador tipoJugador)
@@ -491,7 +491,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         if (tipoJugador == TipoJugador.anfitrión)
             cañónAnfitrión.ActualizarRotación(matriz);
         else
-            cañónHuesped.ActualizarRotación(matriz);
+            cañónHuésped.ActualizarRotación(matriz);
     }
 
     public bool ObtenerActivo()

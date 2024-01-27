@@ -8,10 +8,10 @@ using static Constantes;
 public class ControladorPartidaLocal : SyncScript, IPartida
 {
     public ControladorCañón cañónAnfitrión;
-    public ControladorCañón cañónHuesped;
+    public ControladorCañón cañónHuésped;
 
     public ControladorFortaleza fortalezaAnfitrión;
-    public ControladorFortaleza fortalezaHuesped;
+    public ControladorFortaleza fortalezaHuésped;
 
     public ControladorCámara controladorCámara;
     public TransformComponent luzDireccional;
@@ -25,10 +25,10 @@ public class ControladorPartidaLocal : SyncScript, IPartida
 
     private TipoJugador turnoJugador;
     private TipoProyectil proyectilAnfitrión;
-    private TipoProyectil proyectilHuesped;
+    private TipoProyectil proyectilHuésped;
 
     private int estatuasAnfitrión;
-    private int estatuasHuesped;
+    private int estatuasHuésped;
     private int maxEstatuas;
     private int cantidadTurnos;
     private float multiplicador;
@@ -45,13 +45,13 @@ public class ControladorPartidaLocal : SyncScript, IPartida
         turnoJugador = TipoJugador.nada;
 
         proyectilAnfitrión = TipoProyectil.bola;
-        proyectilHuesped = TipoProyectil.bola;
+        proyectilHuésped = TipoProyectil.bola;
 
         cañónAnfitrión.Inicializar(interfaz, TipoJugador.anfitrión);
-        cañónHuesped.Inicializar(interfaz, TipoJugador.huesped);
+        cañónHuésped.Inicializar(interfaz, TipoJugador.huesped);
 
         fortalezaAnfitrión.Inicializar();
-        fortalezaHuesped.Inicializar();
+        fortalezaHuésped.Inicializar();
 
         // Comienza con elección
         UIElección.Enabled = true;
@@ -78,7 +78,7 @@ public class ControladorPartidaLocal : SyncScript, IPartida
         if(anfitrión)
             fortalezaAnfitrión.CargarFortaleza(fortaleza, true);
         else
-            fortalezaHuesped.CargarFortaleza(fortaleza, false);
+            fortalezaHuésped.CargarFortaleza(fortaleza, false);
     }
 
     public void ComenzarPartida(bool ganaAnfitrión)
@@ -87,12 +87,12 @@ public class ControladorPartidaLocal : SyncScript, IPartida
 
         // Activa colisiones
         fortalezaAnfitrión.Activar();
-        fortalezaHuesped.Activar();
+        fortalezaHuésped.Activar();
 
         if (ganaAnfitrión)
         {
             cañónAnfitrión.Activar(true);
-            cañónHuesped.Activar(false);
+            cañónHuésped.Activar(false);
 
             turnoJugador = TipoJugador.anfitrión;
             cañónActual = cañónAnfitrión;
@@ -103,10 +103,10 @@ public class ControladorPartidaLocal : SyncScript, IPartida
         else
         {
             cañónAnfitrión.Activar(false);
-            cañónHuesped.Activar(true);
+            cañónHuésped.Activar(true);
 
             turnoJugador = TipoJugador.huesped;
-            cañónActual = cañónHuesped;
+            cañónActual = cañónHuésped;
 
             cambiarHaciaDerecha = false;
             controladorCámara.RotarYCámara(90, true, EnFinalizarCámara);
@@ -134,7 +134,7 @@ public class ControladorPartidaLocal : SyncScript, IPartida
         if (turnoJugador == TipoJugador.anfitrión)
             cañónActual.Disparar(proyectilAnfitrión, multiplicador);
         else
-            cañónActual.Disparar(proyectilHuesped, multiplicador);
+            cañónActual.Disparar(proyectilHuésped, multiplicador);
     }
 
     public TipoProyectil CambiarProyectil()
@@ -154,16 +154,16 @@ public class ControladorPartidaLocal : SyncScript, IPartida
         }
         else
         {
-            switch (proyectilHuesped)
+            switch (proyectilHuésped)
             {
                 case TipoProyectil.bola:
-                    proyectilHuesped = TipoProyectil.metralla;
+                    proyectilHuésped = TipoProyectil.metralla;
                     break;
                 case TipoProyectil.metralla:
-                    proyectilHuesped = TipoProyectil.bola;
+                    proyectilHuésped = TipoProyectil.bola;
                     break;
             }
-            return proyectilHuesped;
+            return proyectilHuésped;
         }
     }
 
@@ -182,7 +182,7 @@ public class ControladorPartidaLocal : SyncScript, IPartida
         }
 
         cañónAnfitrión.Activar(false);
-        cañónHuesped.Activar(false);
+        cañónHuésped.Activar(false);
         controladorCámara.RotarLuz(luzDireccional);
 
         if (turnoJugador == TipoJugador.anfitrión)
@@ -199,10 +199,10 @@ public class ControladorPartidaLocal : SyncScript, IPartida
                     return;
                 }
 
-                cañónHuesped.Activar(true);
-                cañónActual = cañónHuesped;
+                cañónHuésped.Activar(true);
+                cañónActual = cañónHuésped;
 
-                interfaz.MostrarInterfazLocal(turnoJugador, proyectilHuesped, cantidadTurnos, multiplicador);
+                interfaz.MostrarInterfazLocal(turnoJugador, proyectilHuésped, cantidadTurnos, multiplicador);
             });
         }
         else
@@ -247,8 +247,8 @@ public class ControladorPartidaLocal : SyncScript, IPartida
         }
         else
         {
-            interfaz.RestarHuesped(estatuasHuesped);
-            estatuasHuesped++;
+            interfaz.RestarHuesped(estatuasHuésped);
+            estatuasHuésped++;
         }
 
         SistemaSonido.SonarEstatuaDesactivada();
@@ -266,13 +266,13 @@ public class ControladorPartidaLocal : SyncScript, IPartida
         {
             ganador = TipoJugador.huesped;
             cañónAnfitrión.Activar(false);
-            cañónHuesped.Activar(true);
+            cañónHuésped.Activar(true);
         }
-        else if (estatuasHuesped >= maxEstatuas)
+        else if (estatuasHuésped >= maxEstatuas)
         {
             ganador = TipoJugador.anfitrión;
             cañónAnfitrión.Activar(true);
-            cañónHuesped.Activar(false);
+            cañónHuésped.Activar(false);
         }
 
         // Muestra ganador
