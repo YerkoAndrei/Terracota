@@ -14,6 +14,8 @@ public class ElementoSonido : AsyncScript
     private SoundInstance instanciaSonido;
     private IPartida iPartida;
 
+    private float fuerzaSonido;
+
     public override async Task Execute()
     {
         var controlador = Entity.Scene.Entities.FirstOrDefault(e => e.Name == "ControladorPartida");
@@ -74,6 +76,7 @@ public class ElementoSonido : AsyncScript
             return;
 
         // Volumen y pitch aleatorio da más vida a los sonidos
+        fuerzaSonido = fuerza;
         instanciaSonido.Volume = (SistemaSonido.ObtenerVolumen(Configuraciones.volumenEfectos) * fuerza) - RangoAleatorio(0, 0.6f);
         instanciaSonido.Pitch = RangoAleatorio(0.8f, 1.2f);
         instanciaSonido.Play();
@@ -105,5 +108,13 @@ public class ElementoSonido : AsyncScript
         var velocidad = cuerpo.AngularVelocity;
         velocidad.Normalize();
         return ObtenerMayorValor(velocidad);
+    }
+
+    public float ObtenerFuerzaSonido()
+    {
+        var sonido = fuerzaSonido;
+        fuerzaSonido = 0;
+
+        return sonido;
     }
 }
