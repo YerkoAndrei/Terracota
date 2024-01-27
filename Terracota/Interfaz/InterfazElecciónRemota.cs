@@ -69,16 +69,16 @@ public class InterfazElecciónRemota : StartupScript
 
         // Elecciones
         imgAnfitriónListo = página.FindVisualChildOfType<ImageElement>("imgAnfitriónListo");
-        imgHuéspedListo = página.FindVisualChildOfType<ImageElement>("imgHuespedListo");
+        imgHuéspedListo = página.FindVisualChildOfType<ImageElement>("imgHuéspedListo");
 
         txtAnfitrión = página.FindVisualChildOfType<TextBlock>("txtAnfitrión");
-        txtHuésped = página.FindVisualChildOfType<TextBlock>("txtHuesped");
+        txtHuésped = página.FindVisualChildOfType<TextBlock>("txtHuésped");
         txtAnfitrión.Text = string.Empty;
         txtHuésped.Text = string.Empty;
 
         // Visor
         visorAnfitrión = página.FindVisualChildOfType<ScrollViewer>("VisorAnfitrión");
-        visorHuésped = página.FindVisualChildOfType<ScrollViewer>("VisorHuesped");
+        visorHuésped = página.FindVisualChildOfType<ScrollViewer>("VisorHuésped");
 
         // Ganador
         gridGanador = página.FindVisualChildOfType<Grid>("Ganador");
@@ -105,17 +105,17 @@ public class InterfazElecciónRemota : StartupScript
 
         // Fortalezas
         var padreRanurasAnfitrión = página.FindVisualChildOfType<UniformGrid>("RanurasAnfitrión");
-        var padreRanurasHuesped = página.FindVisualChildOfType<UniformGrid>("RanurasHuesped");
+        var padreRanurasHuésped = página.FindVisualChildOfType<UniformGrid>("RanurasHuésped");
         var fortalezas = SistemaMemoria.CargarFortalezas(true);
 
         padreRanurasAnfitrión.Children.Clear();
-        padreRanurasHuesped.Children.Clear();
+        padreRanurasHuésped.Children.Clear();
 
         padreRanurasAnfitrión.Rows = fortalezas.Count;
-        padreRanurasHuesped.Rows = fortalezas.Count;
+        padreRanurasHuésped.Rows = fortalezas.Count;
 
         padreRanurasAnfitrión.Height = 0;
-        padreRanurasHuesped.Height = 0;
+        padreRanurasHuésped.Height = 0;
 
         for (int i = 0; i < fortalezas.Count; i++)
         {
@@ -133,10 +133,10 @@ public class InterfazElecciónRemota : StartupScript
             else
             {
                 // Derecha
-                var nuevaRanuraHuesped = prefabRanura.InstantiateElement<Grid>("RanuraDerecha");
-                ConfigurarRanuraElección(nuevaRanuraHuesped, i, fortalezaTemp.Nombre, () => EnClicHuesped(fortalezaTemp.Nombre));
-                padreRanurasHuesped.Children.Add(nuevaRanuraHuesped);
-                padreRanurasHuesped.Height += (nuevaRanuraHuesped.Height + 10);
+                var nuevaRanuraHuésped = prefabRanura.InstantiateElement<Grid>("RanuraDerecha");
+                ConfigurarRanuraElección(nuevaRanuraHuésped, i, fortalezaTemp.Nombre, () => EnClicHuesped(fortalezaTemp.Nombre));
+                padreRanurasHuésped.Children.Add(nuevaRanuraHuésped);
+                padreRanurasHuésped.Height += (nuevaRanuraHuésped.Height + 10);
             }
         }
 
