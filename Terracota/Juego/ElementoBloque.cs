@@ -46,8 +46,8 @@ public class ElementoBloque : StartupScript
 
     public void ActualizarFísicas(float[] matriz)
     {
-        cuerpo.Entity.Transform.Position = new Vector3(matriz[0], matriz[1], matriz[2]);
-        cuerpo.Entity.Transform.Rotation = new Quaternion(matriz[3], matriz[4], matriz[5], matriz[6]);
+        cuerpo.Entity.Transform.Position = new Vector3(matriz[1], matriz[2], matriz[3]);
+        cuerpo.Entity.Transform.Rotation = new Quaternion(matriz[1], matriz[2], matriz[6], matriz[7]);
     }
 
     public float[] ObtenerFísicas()
@@ -56,6 +56,7 @@ public class ElementoBloque : StartupScript
         // Huesped actualiza sin física
         return
         [
+            0,
             cuerpo.Entity.Transform.Position.X,
             cuerpo.Entity.Transform.Position.Y,
             cuerpo.Entity.Transform.Position.Z,

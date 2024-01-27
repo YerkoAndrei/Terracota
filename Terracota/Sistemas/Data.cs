@@ -30,16 +30,17 @@ public class Turno
 }
 
 // Matriz:
-// 0: Posición X
-// 1: Posición Y
-// 2: Posición Z
-// 3: Rotación X
-// 4: Rotación Y
-// 5: Rotación Z
-// 6: Rotación W
-// 7: Escala X (Opcional)
-// 8: Escala Y (Opcional)
-// 9: Escala Z (Opcional)
+// 0: Fuerza sonido
+// 1: Posición X
+// 2: Posición Y
+// 3: Posición Z
+// 4: Rotación X
+// 5: Rotación Y
+// 6: Rotación Z
+// 7: Rotación W
+// 8: Escala X (Opcional)
+// 9: Escala Y (Opcional)
+// 10: Escala Z (Opcional)
 
 // Matriz cañón:
 // 0: Rotación cañón X

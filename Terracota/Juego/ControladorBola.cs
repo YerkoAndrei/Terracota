@@ -23,6 +23,8 @@ public class ControladorBola : AsyncScript
     private bool activo;
     private bool guardando;
 
+    private float fuerzaSonido;
+
     public override async Task Execute()
     {
         cuerpo = Entity.Get<RigidbodyComponent>();
@@ -50,7 +52,10 @@ public class ControladorBola : AsyncScript
 
                     // Solo suena cuando colisiona con estáticos
                     if (colisión.ColliderA.Entity.Get<ElementoSonido>() == null && colisión.ColliderB.Entity.Get<ElementoSonido>() == null)
-                        SistemaSonido.SonarBola(ObtenerMayorFuerzaLinearNormalizada());
+                    {
+                        fuerzaSonido = ObtenerMayorFuerzaLinearNormalizada();
+                        SistemaSonido.SonarBola(fuerzaSonido);
+                    }
                 }
 
                 // Evita colisiones innesesarias
@@ -181,17 +186,25 @@ public class ControladorBola : AsyncScript
 
     public void ActualizarFísicas(float[] matriz)
     {
-        cuerpo.Entity.Transform.Position = new Vector3(matriz[0], matriz[1], matriz[2]);
-        cuerpo.Entity.Transform.Rotation = new Quaternion(matriz[3], matriz[4], matriz[5], matriz[6]);
-        cuerpo.Entity.Transform.Scale = new Vector3(matriz[7], matriz[8], matriz[9]);
+        cuerpo.Entity.Transform.Position = new Vector3(matriz[1], matriz[2], matriz[3]);
+        cuerpo.Entity.Transform.Rotation = new Quaternion(matriz[4], matriz[5], matriz[6], matriz[7]);
+        cuerpo.Entity.Transform.Scale = new Vector3(matriz[8], matriz[9], matriz[10]);
+
+        // Sonido
+        if(matriz[0] > 0)
+            SistemaSonido.SonarBola(fuerzaSonido);
     }
 
     public float[] ObtenerFísicas()
     {
+        var sonido = fuerzaSonido;
+        fuerzaSonido = 0;
+
         // Anfitrión obtiene físicas
         // Huesped actualiza sin física
         return
         [
+            sonido,
             cuerpo.Entity.Transform.Position.X,
             cuerpo.Entity.Transform.Position.Y,
             cuerpo.Entity.Transform.Position.Z,
