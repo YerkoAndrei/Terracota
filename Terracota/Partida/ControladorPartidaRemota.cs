@@ -235,7 +235,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
             cañónAnfitrión.Disparar(proyectilActual, multiplicador);
         else
-            cañónHuesped.Disparar(proyectilActual, multiplicador);
+            cañónHuesped.ActivarPartículas();
     }
 
     public TipoProyectil CambiarProyectil()

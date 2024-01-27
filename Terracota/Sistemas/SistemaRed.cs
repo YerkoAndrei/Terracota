@@ -257,6 +257,7 @@ public class SistemaRed : StartupScript
         {
             case DataRed.conectar:
                 var conexión = JsonConvert.DeserializeObject<Conexión>(data.Values.Single());
+                SistemaSonido.SonarInicio();
                 MostrarInvitación(conexión);
                 break;
             case DataRed.cerrar:
