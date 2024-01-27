@@ -40,6 +40,7 @@ public class ElementoSonido : AsyncScript
         while (Game.IsRunning)
         {
             var colisión = await cuerpo.NewCollision();
+            fuerzaSonido = 0;
 
             // Obtiene controlador bola
             var controladorBola = colisión.ColliderA.Entity.Get<ControladorBola>();
@@ -50,12 +51,12 @@ public class ElementoSonido : AsyncScript
             if (ObtenerMayorFuerzaLinear() >= sensiblidadLinear && controladorBola == null)
             {
                 // Volumen base velocidad linear
-                SonarBloqueFísico(ObtenerMayorFuerzaLinearNormalizada());
+                fuerzaSonido = ObtenerMayorFuerzaLinearNormalizada();
             }
             else if (ObtenerMayorFuerzaLinear() < sensiblidadLinear && ObtenerMayorFuerzaAngular() >= sensiblidadAngular && controladorBola == null)
             {
                 // Volumen base velocidad angular
-                SonarBloqueFísico(ObtenerMayorFuerzaAngularNormalizada());
+                fuerzaSonido = ObtenerMayorFuerzaAngularNormalizada();
             }
             else if (controladorBola != null)
             {
@@ -64,8 +65,12 @@ public class ElementoSonido : AsyncScript
                 if (controladorBola.tipoProyectil == TipoProyectil.metralla)
                     multiplicador = 0.4f;
 
-                SonarBloqueFísico(controladorBola.ObtenerMayorFuerzaLinearNormalizada() * multiplicador);
+                fuerzaSonido = controladorBola.ObtenerMayorFuerzaLinearNormalizada() * multiplicador;
             }
+
+            if(fuerzaSonido > 0)
+                SonarBloqueFísico(fuerzaSonido);
+
             await Script.NextFrame();
         }
     }
@@ -76,7 +81,6 @@ public class ElementoSonido : AsyncScript
             return;
 
         // Volumen y pitch aleatorio da más vida a los sonidos
-        fuerzaSonido = fuerza;
         instanciaSonido.Volume = (SistemaSonido.ObtenerVolumen(Configuraciones.volumenEfectos) * fuerza) - RangoAleatorio(0, 0.6f);
         instanciaSonido.Pitch = RangoAleatorio(0.8f, 1.2f);
         instanciaSonido.Play();
@@ -114,7 +118,6 @@ public class ElementoSonido : AsyncScript
     {
         var sonido = fuerzaSonido;
         fuerzaSonido = 0;
-
         return sonido;
     }
 }
