@@ -106,9 +106,9 @@ Hierarchy:
                     cba79cd1dc066487cb6d936a262aa4fc: !Terracota.ControladorPartidaLocal,Terracota
                         Id: 8467c665-6f6a-4e41-8353-b93fb0b8b0b1
                         "cañónAnfitrión": ref!! 25a4fcee-4474-441d-84fa-cedfee9a7633
-                        "cañónHuesped": ref!! 00417e9d-b500-456a-80ce-1c7f700b2c18
+                        "cañónHuésped": ref!! 00417e9d-b500-456a-80ce-1c7f700b2c18
                         "fortalezaAnfitrión": ref!! 90e82940-27a5-4078-b9ee-03a7f22cf24c
-                        fortalezaHuesped: ref!! ec9b4787-ddd7-47c6-b50d-a29969b772f3
+                        "fortalezaHuésped": ref!! ec9b4787-ddd7-47c6-b50d-a29969b772f3
                         "controladorCámara": ref!! ee3ad598-d4f0-41ab-8cbd-c94072b18069
                         luzDireccional: ref!! cfa543c1-ce66-46a8-903b-7a9421fe0db8
                         interfaz: ref!! ad15c0b7-f5e1-4a2e-8702-ded2e2195d0c
@@ -158,7 +158,7 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: d8cafb9d-6269-405c-b1b6-5cfdab81d1ef
                 InstanceId: 0c05979a-3900-4c8e-a09d-a3c740b17de2
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: 021cf0a4-b215-457e-b56b-43b603758b7b
                 Name: Bola 1
@@ -166,7 +166,7 @@ Hierarchy:
                     c5d6587452bb9a37b75b6411cddd74f6: !Terracota.ControladorBola,Terracota
                         Id: 310ffe8b-724c-4011-b628-7b138ff3f7b2
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -214,9 +214,9 @@ Hierarchy:
                         spriteBola: d681f95d-d384-43f3-b287-8df74a534497:Texturas/Interfaz/Bola
                         spriteMetralla: 017a6458-410b-4810-9447-3254c0c8db29:Texturas/Interfaz/Metralla
                         "spriteAnfitrión": "8d986627-e68f-4481-a6c3-9ef06599ea85:Texturas/Interfaz/Anfitrión"
-                        spriteHuesped: 976e2b48-5f94-437c-91e9-b29ecf29da95:Texturas/Interfaz/Huesped
+                        spriteHuesped: null
                         "colorAnfitrión": {R: 200, G: 0, B: 39, A: 255}
-                        colorHuesped: {R: 39, G: 0, B: 200, A: 255}
+                        colorHuesped: {R: 0, G: 0, B: 0, A: 0}
                     22d037cf416251aa57fbebab67653be4: !Terracota.ControladorTraducciones,Terracota
                         Id: a6504006-30ee-48c8-92ed-35ec56049220
                         "códigos":
@@ -329,7 +329,7 @@ Hierarchy:
         -   Folder: null
             Entity:
                 Id: 036a9615-839b-4aef-bee6-6cc40d539b7b
-                Name*: "ControladorCañón (Huesped)"
+                Name*: "ControladorCañón (Huésped)"
                 Components:
                     b2b0bf1d60b3fc31afd4f21fa78fdfaa: !TransformComponent
                         Id: dbbb9ef8-ed9f-48b2-a33a-60b976c5d71d
@@ -476,7 +476,7 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: d702a0c1-1ce7-4fae-802b-42a70cdeee62
                 InstanceId: a5ce5142-0667-4fef-b8b0-cfc7c94f2025
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: 057f7efe-c82e-4601-9a3a-64a6b64a6f94
                 Name: Bola 5
@@ -484,7 +484,7 @@ Hierarchy:
                     782ed5b40434b4a07f0839ae718dedbc: !Terracota.ControladorBola,Terracota
                         Id: b317aa41-088e-442e-99b1-47b205cc4f30
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -744,7 +744,7 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 2ef94795-7fcd-4dc8-b784-b1aee94f67c7
                 InstanceId: a5ce5142-0667-4fef-b8b0-cfc7c94f2025
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: 099d0a8b-0c51-4e43-bc56-33ec876fb865
                 Name: Bola 15
@@ -752,7 +752,7 @@ Hierarchy:
                     9af0fa7fd686a3cfb9b7b8ec1840e946: !Terracota.ControladorBola,Terracota
                         Id: 7a95df3b-5e4a-4f90-aaa0-9ddd8d457935
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -1304,7 +1304,7 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 8be65bbb-fb13-45ae-816b-918a48f1da9c
                 InstanceId: a5ce5142-0667-4fef-b8b0-cfc7c94f2025
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: 16b91ddb-8592-4840-bb99-4858e565e06d
                 Name: Bola 16
@@ -1312,7 +1312,7 @@ Hierarchy:
                     f4a7ccc0ae1034ddce4d2667b6bf3369: !Terracota.ControladorBola,Terracota
                         Id: 97115c80-0a93-4d11-a26e-3d480c2fa9d2
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -1467,7 +1467,7 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: af1abac3-e06a-4cf4-95b9-8622cb991366
                 InstanceId: a5ce5142-0667-4fef-b8b0-cfc7c94f2025
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: 1ad9b821-0e6b-4162-924d-b34b84ce739e
                 Name: Bola 8
@@ -1475,7 +1475,7 @@ Hierarchy:
                     b54cdf5640ffbd0f70a24db40f800b67: !Terracota.ControladorBola,Terracota
                         Id: 17add727-56bd-4f44-8a82-0799fbd8b7ab
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -1785,7 +1785,7 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 18203439-b32c-438b-8194-621dbbfe2f79
                 InstanceId: 5db0cc0d-4462-4c3b-a06b-e1c728e4f9df
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: 203720a2-7da8-4b83-b684-3daadca65243
                 Name: Bola 3
@@ -1793,7 +1793,7 @@ Hierarchy:
                     049d0ab964a6389fbd0e7f4f3480c3e4: !Terracota.ControladorBola,Terracota
                         Id: f1794291-6687-4358-b3d5-32144edb9e16
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -2369,7 +2369,7 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: 1a4fd6df-f14d-4945-b2cd-cdb946c0a15a
                 InstanceId: 72952ed6-a3df-48ba-bebc-63c28a5ed472
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: 2b0d45a9-fdf5-4ff5-ab69-7cdad031d6a9
                 Name: Bola 4
@@ -2377,7 +2377,7 @@ Hierarchy:
                     2e061cbbd6aacf70bf8d7ca4ed959396: !Terracota.ControladorBola,Terracota
                         Id: 28180617-6aa0-4a98-a813-ae849611a9b0
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -2623,7 +2623,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             d8444a100efcce04e87fd19c11e0d9a9: ref!! b3bb83f2-5020-438d-bdee-6242dd68d627
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: 318b8980-bdf9-4a82-969a-7e162622143d
                 Name: Bola 22
@@ -2631,7 +2631,7 @@ Hierarchy:
                     43b90d946c2284960785657bcefcdcbb: !Terracota.ControladorBola,Terracota
                         Id: 3a6fef59-2b53-4c31-b4da-de8c039be702
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -2733,7 +2733,7 @@ Hierarchy:
                         cuerpo: ref!! e97aeaa9-a653-48d2-bc00-98125dfdb56a
                     fb06c492109ce5cf0499d7d8846d1f46: !Terracota.ControladorEstatua,Terracota
                         Id: 7499eb33-bbbb-4bd4-ae1b-794e92654244
-                        jugador*: huesped
+                        jugador*: nada
                         cuerpo: ref!! e97aeaa9-a653-48d2-bc00-98125dfdb56a
                         cabeza: ref!! b1b0f1b9-febe-4d08-9ac4-82f0608797ef
                     65e0ce82b10ff7a08a25a37be73a73db: !Terracota.ElementoSonido,Terracota
@@ -2806,7 +2806,7 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: ecdf8d0e-e9bf-426a-8cbe-1ad0bb383d29
                 InstanceId: 5db0cc0d-4462-4c3b-a06b-e1c728e4f9df
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: 370dc95b-3053-434f-941b-ae9a4fa818bf
                 Name: Bola 25
@@ -2814,7 +2814,7 @@ Hierarchy:
                     d22afe9221764f6f6d85b5f016845288: !Terracota.ControladorBola,Terracota
                         Id: 3ec9ebb7-d5ef-449c-82f9-82186fc8c943
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -3064,7 +3064,7 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 8040b2a6-bc39-46a5-a946-e4cd5fdb35e3
                 InstanceId: a5ce5142-0667-4fef-b8b0-cfc7c94f2025
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: 3a5fd824-e796-48d9-af03-5f8b48685ac9
                 Name: Bola 24
@@ -3072,7 +3072,7 @@ Hierarchy:
                     d1ef393171ea825f9a8e69771815562a: !Terracota.ControladorBola,Terracota
                         Id: 34c2a380-895e-4fac-baee-723f0ddc124d
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -3822,9 +3822,9 @@ Hierarchy:
                         controladorPartida: ref!! 8467c665-6f6a-4e41-8353-b93fb0b8b0b1
                         prefabRanura: "db6c1792-d472-4911-9e4b-3ec596fe2493:Interfaces/Librerias/RanuraElección"
                         "spriteAnfitrión": "8d986627-e68f-4481-a6c3-9ef06599ea85:Texturas/Interfaz/Anfitrión"
-                        spriteHuesped: 976e2b48-5f94-437c-91e9-b29ecf29da95:Texturas/Interfaz/Huesped
+                        spriteHuesped: null
                         "colorAnfitrión": {R: 200, G: 0, B: 39, A: 255}
-                        colorHuesped: {R: 39, G: 0, B: 200, A: 255}
+                        colorHuesped: {R: 0, G: 0, B: 0, A: 0}
                         "colorRuletaVacía": {R: 240, G: 220, B: 160, A: 240}
                         colorRuletaActiva: {R: 19, G: 200, B: 19, A: 255}
                     fa720b873c84615073730fc19bc64996: !Terracota.ControladorTraducciones,Terracota
@@ -3948,7 +3948,7 @@ Hierarchy:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
                 BasePartId: 99b37088-760c-4970-92ca-9c6e3376c46e
                 InstanceId: 4180dfb2-b204-43ee-a6d7-042dab3df14c
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: 4e7a905d-1250-4641-aa21-c783d42e2b02
                 Name: Bola 19
@@ -3956,7 +3956,7 @@ Hierarchy:
                     fe1cb20ae97b02c95a776295e4f55fc7: !Terracota.ControladorBola,Terracota
                         Id: 230cb437-279a-4dfc-a23b-731b3f42441b
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -4258,7 +4258,7 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: ab17e97e-9905-45b4-932e-be755c2f6b92
                 InstanceId: a5ce5142-0667-4fef-b8b0-cfc7c94f2025
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: 534d70f4-3cba-40e8-ad7f-c1f9b451855e
                 Name: Bola 0
@@ -4266,7 +4266,7 @@ Hierarchy:
                     35cc06cc97aa692bf8b8cbbdb426f5a5: !Terracota.ControladorBola,Terracota
                         Id: 70c5bf13-363d-4d94-9cf1-357b6789ed7d
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -4608,7 +4608,7 @@ Hierarchy:
                         cuerpo: ref!! 489bdc4e-1046-4470-8573-c9fd2428c9c9
                     fb06c492109ce5cf0499d7d8846d1f46: !Terracota.ControladorEstatua,Terracota
                         Id: ebce3ba8-8343-46cb-a326-2c744101be74
-                        jugador*: huesped
+                        jugador*: nada
                         cuerpo: ref!! 489bdc4e-1046-4470-8573-c9fd2428c9c9
                         cabeza: ref!! 629f97ea-bbe7-47f5-99ed-b0825cdd2cdc
                     65e0ce82b10ff7a08a25a37be73a73db: !Terracota.ElementoSonido,Terracota
@@ -4801,7 +4801,7 @@ Hierarchy:
                         cuerpo: ref!! 2b85e626-d928-480c-9e24-6e2fe6928bcd
                     fb06c492109ce5cf0499d7d8846d1f46: !Terracota.ControladorEstatua,Terracota
                         Id: 95ce7a83-6154-4ddb-8033-d8bf69affab5
-                        jugador*: huesped
+                        jugador*: nada
                         cuerpo: ref!! 2b85e626-d928-480c-9e24-6e2fe6928bcd
                         cabeza: ref!! f99e6687-47df-4931-a3ed-b1811e0d335d
                     65e0ce82b10ff7a08a25a37be73a73db: !Terracota.ElementoSonido,Terracota
@@ -5270,7 +5270,7 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 6d5c8925-72f2-4f64-840b-f650a8d99a01
                 InstanceId: b3114b21-f0fa-4511-a04e-44eebbf152d2
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: 62be53c2-cec8-4efd-aaec-00162a04ee3a
                 Name: Bola 26
@@ -5278,7 +5278,7 @@ Hierarchy:
                     abc05ee1c03b1a2ad85b1473ff5df1dd: !Terracota.ControladorBola,Terracota
                         Id: c70d54d6-aed1-414a-9686-61b793116331
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -5336,7 +5336,7 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: ffc0463b-24f4-4a54-92c6-fee2e10b77d6
                 InstanceId: 5db0cc0d-4462-4c3b-a06b-e1c728e4f9df
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: 648fb177-f681-45fb-8423-5f7291d6fb1f
                 Name: Bola 6
@@ -5344,7 +5344,7 @@ Hierarchy:
                     c4e549cb8044aeb7aa82e811f038f17d: !Terracota.ControladorBola,Terracota
                         Id: 141b9048-72fb-4953-9b88-08cceba532fb
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -5383,7 +5383,7 @@ Hierarchy:
                 BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
                 BasePartId: f316b750-1721-44b8-9f7a-c3ab662e9db1
                 InstanceId: ee448b2a-499f-4c26-95e1-9e1399d2b364
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: 64be60e4-6d5d-4281-aa0b-ab340c4d6c05
                 Name: Bola 2
@@ -5391,7 +5391,7 @@ Hierarchy:
                     1f845404d8ec8c265cfe1f591376d78e: !Terracota.ControladorBola,Terracota
                         Id: 8423fe15-2a8c-4707-a2a4-2b9f5e2127e3
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -5899,7 +5899,7 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: ab17e97e-9905-45b4-932e-be755c2f6b92
                 InstanceId: b3114b21-f0fa-4511-a04e-44eebbf152d2
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: 6ab85be6-c437-46d5-b5b6-5e53387b99f5
                 Name: Bola 12
@@ -5907,7 +5907,7 @@ Hierarchy:
                     dd15e53c9b449e76d79cb2489be6a21d: !Terracota.ControladorBola,Terracota
                         Id: 7bef32a8-c7d9-402e-898e-db0c303883e6
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -5946,7 +5946,7 @@ Hierarchy:
                 BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
                 BasePartId: 8428f241-86a1-4293-9916-b68380f0b4f7
                 InstanceId: ee448b2a-499f-4c26-95e1-9e1399d2b364
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: 6cad4e4c-a801-4601-8364-e6135c033476
                 Name: Bola 13
@@ -5954,7 +5954,7 @@ Hierarchy:
                     27f87fcf37326f768b7bb9ee09fe19bc: !Terracota.ControladorBola,Terracota
                         Id: 394562c8-7161-456a-ac45-8aa47d3daa6c
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -6827,7 +6827,7 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: 720ad567-9569-4ac9-926b-eff4fff082e4
                 InstanceId: 72952ed6-a3df-48ba-bebc-63c28a5ed472
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: 77443ee1-9f24-43b3-95db-69fe33c6d814
                 Name: Bola 11
@@ -6835,7 +6835,7 @@ Hierarchy:
                     52baebb8dc86bf262ad46c44842cc301: !Terracota.ControladorBola,Terracota
                         Id: 6e379473-e498-4bdf-8c4c-91df907a739c
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -7257,7 +7257,7 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: af612f0d-4347-4de6-89dd-450d3297a97f
                 InstanceId: 5db0cc0d-4462-4c3b-a06b-e1c728e4f9df
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: 815da40e-ad0f-433e-afb9-74b16bc2a5d1
                 Name: Bola 7
@@ -7265,7 +7265,7 @@ Hierarchy:
                     80a6cddffe76600c9d5b4d5ce81eb24d: !Terracota.ControladorBola,Terracota
                         Id: d2a2c5a4-e02c-4cb7-84da-bab86f537ce1
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -8400,7 +8400,7 @@ Hierarchy:
                 BasePartAsset: fbf030df-c449-4d06-ab6b-e1dfbfd3460f:Prefabs/Metralla
                 BasePartId: c9d234d0-9e69-4abe-9ba4-bce1d7e04d06
                 InstanceId: 4845bdf1-0f86-4c8a-bc0e-4a1b94a27228
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: 9592f740-1ba5-4d43-8345-a46eb639e252
                 Name: Bola 17
@@ -8408,7 +8408,7 @@ Hierarchy:
                     5d6135555ebc1d5e66cc2c33b917a4fe: !Terracota.ControladorBola,Terracota
                         Id: fa893d9e-6e8f-4cfa-aa0c-1f31676856b0
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -8591,7 +8591,7 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: 37751793-1138-45a2-b891-3e9c00db3443
                 InstanceId: 72952ed6-a3df-48ba-bebc-63c28a5ed472
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: 976a12c4-ad4d-4b30-b4d0-a4753953358f
                 Name: Bola 14
@@ -8599,7 +8599,7 @@ Hierarchy:
                     289939238cd71692af72965ea93f4c54: !Terracota.ControladorBola,Terracota
                         Id: c122c6b2-9f25-4f63-abb0-f2fa9d425cb3
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -9625,7 +9625,7 @@ Hierarchy:
                 BasePartAsset: 24adb94e-a437-4d14-b124-bd9e1fa01c91:Prefabs/Fortaleza
                 BasePartId: 4ff27906-120f-4d39-9e2b-c7a82bac78aa
                 InstanceId: a5ce5142-0667-4fef-b8b0-cfc7c94f2025
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: ab4c2d4d-49e0-431d-8ec1-78090cd2e298
                 Name: Bola 18
@@ -9633,7 +9633,7 @@ Hierarchy:
                     5c92f446875b033fb8819abe64d844cc: !Terracota.ControladorBola,Terracota
                         Id: a06ae7e8-6381-410b-9526-5ffaa4f852eb
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -9719,7 +9719,7 @@ Hierarchy:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
                 BasePartId: 2bb12672-64e7-4c41-bb2c-23f9e7330029
                 InstanceId: 542d16e6-720c-418e-831b-de378013b2ab
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: ae4346b9-c98b-4062-bf3d-299fa52e94fd
                 Name: Bola 21
@@ -9727,7 +9727,7 @@ Hierarchy:
                     3a6911a2b96b296df8c8a0a8a52613ae: !Terracota.ControladorBola,Terracota
                         Id: d61e5097-3382-48c6-a99e-a595165600c2
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -10390,7 +10390,7 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 14ea579a-a723-4eb3-a9a5-c1f68c05c21c
                 InstanceId: 5db0cc0d-4462-4c3b-a06b-e1c728e4f9df
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: b7d23bcf-998a-4579-a309-f75fd6be59ac
                 Name: Bola 9
@@ -10398,7 +10398,7 @@ Hierarchy:
                     86ae864f6ebe70f552b5e1a02c6b05bf: !Terracota.ControladorBola,Terracota
                         Id: 5b42f77e-ea04-48d7-93f5-5dfb1a6fd57e
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -10519,7 +10519,7 @@ Hierarchy:
         -   Folder: null
             Entity:
                 Id: b9b2b39d-59cf-49f6-9cf1-a6952d1e2fb6
-                Name*: Fortaleza (Huesped)
+                Name*: "Fortaleza (Huésped)"
                 Components:
                     5daf95322206bf8d422c5a6578a7e451: !TransformComponent
                         Id: baf04e39-3672-4bdf-800c-1ca063d5511b
@@ -10791,7 +10791,7 @@ Hierarchy:
         -   Folder: null
             Entity:
                 Id: c135a8d4-dd65-4b51-8cf2-b27f47c6caf6
-                Name: Banderas (Huesped)
+                Name: "Banderas (huésped)"
                 Components:
                     1de8d92ccb2039213aef3379983ee1b3: !TransformComponent
                         Id: eba7380a-ef04-438c-9f48-e455f3e8a96b
@@ -11744,7 +11744,7 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 3d29eb87-e3ff-437a-aa7d-5c92bd86eb45
                 InstanceId: 5db0cc0d-4462-4c3b-a06b-e1c728e4f9df
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: d46f9e1e-81fb-4e0d-b00d-2cdf3124cba7
                 Name: Bola 20
@@ -11752,7 +11752,7 @@ Hierarchy:
                     db5d1f791611a7e4d47d7faf2d2f1bb0: !Terracota.ControladorBola,Terracota
                         Id: cc444013-8ffb-4cd0-a1c2-82cd811516d8
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -12371,7 +12371,7 @@ Hierarchy:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
                 BasePartId: 30b719e4-a7fa-4b65-b47e-8851d2bbe3c2
                 InstanceId: 542d16e6-720c-418e-831b-de378013b2ab
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: dd658333-7841-4bcd-909a-6d2e5459d044
                 Name: Bola
@@ -12379,7 +12379,7 @@ Hierarchy:
                     0b80a32559ba00ef3b0e7c07918b9b54: !Terracota.ControladorBola,Terracota
                         Id: db9686a1-0cca-40f1-91f3-cc2fc5ff2171
                         tipoProyectil: bola
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 32
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     45f11cee7c77c9296c3e3dc685715f6e: !TransformComponent
@@ -12835,7 +12835,7 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 1124a1b7-06c8-4b45-9096-8ee4a6054018
                 InstanceId: 5db0cc0d-4462-4c3b-a06b-e1c728e4f9df
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: e7e857f7-2358-4286-addd-440d85a33baa
                 Name: Bola 10
@@ -12843,7 +12843,7 @@ Hierarchy:
                     a3d592f30f8494ff8b708e625447bf4c: !Terracota.ControladorBola,Terracota
                         Id: 50ca06dd-084d-4297-90e6-e2e7157a1d7b
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -13347,7 +13347,7 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: a08b2a79-da71-441a-88de-82dc219b8870
                 InstanceId: 5db0cc0d-4462-4c3b-a06b-e1c728e4f9df
-        -   Folder: Proyectiles (Huesped)
+        -   Folder: "Proyectiles (Huésped)"
             Entity:
                 Id: f53ca984-ffc7-4566-954e-b38f2a3f86b7
                 Name: Bola 23
@@ -13355,7 +13355,7 @@ Hierarchy:
                     534bcc1d6ae206fb84b4babcfe28de0f: !Terracota.ControladorBola,Terracota
                         Id: 307a6e26-0bfe-49c4-9cb4-5025d0f27f11
                         tipoProyectil: metralla
-                        tipoJugador*: huesped
+                        tipoJugador*: nada
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
