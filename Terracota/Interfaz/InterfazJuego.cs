@@ -18,10 +18,10 @@ public class InterfazJuego : SyncScript
     public Texture spriteMetralla;
 
     public Texture spriteAnfitrión;
-    public Texture spriteHuesped;
+    public Texture spriteHuésped;
 
     public Color colorAnfitrión;
-    public Color colorHuesped;
+    public Color colorHuésped;
 
     private Grid gridProyectil;
     private Grid gridGanador;
@@ -33,7 +33,7 @@ public class InterfazJuego : SyncScript
     private ImageElement fondoCañón;
 
     private ImageElement imgTurnoAnfitrión;
-    private ImageElement imgTurnoHuesped;
+    private ImageElement imgTurnoHuésped;
 
     private TextBlock txtGanador;
     private List<ImageElement> imgsGanador;
@@ -53,7 +53,7 @@ public class InterfazJuego : SyncScript
     private IPartida iPartida;
 
     private List<ImageElement> estadoAnfitrión;
-    private List<ImageElement> estadoHuesped;
+    private List<ImageElement> estadoHuésped;
 
     private bool activo;
     private bool pausa;
@@ -103,7 +103,7 @@ public class InterfazJuego : SyncScript
         fondoCañón = página.FindVisualChildOfType<ImageElement>("FondoCañón");
 
         imgTurnoAnfitrión = página.FindVisualChildOfType<ImageElement>("imgTurnoAnfitrión");
-        imgTurnoHuesped = página.FindVisualChildOfType<ImageElement>("imgTurnoHuesped");
+        imgTurnoHuésped = página.FindVisualChildOfType<ImageElement>("imgTurnoHuesped");
 
         imgProyectil = página.FindVisualChildOfType<ImageElement>("imgProyectil");
         ConfigurarBotónConImagen(página.FindVisualChildOfType<Button>("btnProyectil"), imgProyectil, EnClicProyectil);
@@ -115,7 +115,7 @@ public class InterfazJuego : SyncScript
             página.FindVisualChildOfType<ImageElement>("imgAnfitrión_2")
         };
 
-        estadoHuesped = new List<ImageElement>
+        estadoHuésped = new List<ImageElement>
         {
             página.FindVisualChildOfType<ImageElement>("imgHuesped_0"),
             página.FindVisualChildOfType<ImageElement>("imgHuesped_1"),
@@ -302,15 +302,15 @@ public class InterfazJuego : SyncScript
     private void CambiarTurno(TipoJugador jugador)
     {
         imgTurnoAnfitrión.Visibility = Visibility.Hidden;
-        imgTurnoHuesped.Visibility = Visibility.Hidden;
+        imgTurnoHuésped.Visibility = Visibility.Hidden;
 
         switch (jugador)
         {
             case TipoJugador.anfitrión:
                 imgTurnoAnfitrión.Visibility = Visibility.Visible;
                 break;
-            case TipoJugador.huesped:
-                imgTurnoHuesped.Visibility = Visibility.Visible;
+            case TipoJugador.huésped:
+                imgTurnoHuésped.Visibility = Visibility.Visible;
                 break;
         }
     }
@@ -324,10 +324,10 @@ public class InterfazJuego : SyncScript
                 imgCañón.Source = ObtenerSprite(spriteAnfitrión);
                 fondoCañón.Color = colorAnfitrión;
                 break;
-            case TipoJugador.huesped:
+            case TipoJugador.huésped:
                 txtNombreCañón.Text = SistemaTraducción.ObtenerTraducción("huesped");
-                imgCañón.Source = ObtenerSprite(spriteHuesped);
-                fondoCañón.Color = colorHuesped;
+                imgCañón.Source = ObtenerSprite(spriteHuésped);
+                fondoCañón.Color = colorHuésped;
                 break;
         }
     }
@@ -354,7 +354,7 @@ public class InterfazJuego : SyncScript
 
     public void RestarHuesped(int estatua)
     {
-        estadoHuesped[estatua].Color = Color.Red;
+        estadoHuésped[estatua].Color = Color.Red;
     }
 
     public async void MostrarGanador(TipoJugador jugador, int turno)
@@ -386,15 +386,15 @@ public class InterfazJuego : SyncScript
                     fondo.Color = colorAnfitrión;
                 }
                 break;
-            case TipoJugador.huesped:
+            case TipoJugador.huésped:
                 txtGanador.Text = SistemaTraducción.ObtenerTraducción("huesped");
                 foreach (var img in imgsGanador)
                 {
-                    img.Source = ObtenerSprite(spriteHuesped);
+                    img.Source = ObtenerSprite(spriteHuésped);
                 }
                 foreach (var fondo in fondosGanador)
                 {
-                    fondo.Color = colorHuesped;
+                    fondo.Color = colorHuésped;
                 }
                 break;
         }

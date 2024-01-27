@@ -17,10 +17,10 @@ public class InterfazElecciónLocal : StartupScript
     public UILibrary prefabRanura;
 
     public Texture spriteAnfitrión;
-    public Texture spriteHuesped;
+    public Texture spriteHuésped;
 
     public Color colorAnfitrión;
-    public Color colorHuesped;
+    public Color colorHuésped;
     public Color colorRuletaVacía;
     public Color colorRuletaActiva;
 
@@ -29,10 +29,10 @@ public class InterfazElecciónLocal : StartupScript
     private Grid gridRuleta;
     private Grid decoRuleta;
     private TextBlock txtAnfitrión;
-    private TextBlock txtHuesped;
+    private TextBlock txtHuésped;
 
     private ScrollViewer visorAnfitrión;
-    private ScrollViewer visorHuesped;
+    private ScrollViewer visorHuésped;
 
     private Grid gridGanador;
     private ImageElement fondoGanador;
@@ -69,13 +69,13 @@ public class InterfazElecciónLocal : StartupScript
 
         // Elecciones
         txtAnfitrión = página.FindVisualChildOfType<TextBlock>("txtAnfitrión");
-        txtHuesped = página.FindVisualChildOfType<TextBlock>("txtHuesped");
+        txtHuésped = página.FindVisualChildOfType<TextBlock>("txtHuesped");
         txtAnfitrión.Text = string.Empty;
-        txtHuesped.Text = string.Empty;
+        txtHuésped.Text = string.Empty;
 
         // Visor
         visorAnfitrión = página.FindVisualChildOfType<ScrollViewer>("VisorAnfitrión");
-        visorHuesped = página.FindVisualChildOfType<ScrollViewer>("VisorHuesped");
+        visorHuésped = página.FindVisualChildOfType<ScrollViewer>("VisorHuesped");
 
         // Ganador
         gridGanador = página.FindVisualChildOfType<Grid>("Ganador");
@@ -154,7 +154,7 @@ public class InterfazElecciónLocal : StartupScript
 
         gridRuleta.Visibility = Visibility.Hidden;
         visorAnfitrión.Visibility = Visibility.Hidden;
-        visorHuesped.Visibility = Visibility.Hidden;
+        visorHuésped.Visibility = Visibility.Hidden;
 
         // Anfitrión
         var ranuraAnfitrión = ObtenerRanuraAleatoria();
@@ -210,7 +210,7 @@ public class InterfazElecciónLocal : StartupScript
             BloquearBotón(btnComenzar, false);
 
         huespedSeleccionado = true;
-        txtHuesped.Text = nombre;
+        txtHuésped.Text = nombre;
         controladorPartida.CargarFortaleza(nombre, false);
     }
 
@@ -225,7 +225,7 @@ public class InterfazElecciónLocal : StartupScript
         decoRuleta.Visibility = Visibility.Visible;
 
         visorAnfitrión.Visibility = Visibility.Hidden;
-        visorHuesped.Visibility = Visibility.Hidden;
+        visorHuésped.Visibility = Visibility.Hidden;
 
         btnComenzar.Visibility = Visibility.Hidden;
         btnAleatorio.Visibility = Visibility.Hidden;
@@ -301,8 +301,8 @@ public class InterfazElecciónLocal : StartupScript
         else
         {
             // Gana huesped / derecha
-            fondoGanador.Color = colorHuesped;
-            imgGanador.Source = ObtenerSprite(spriteHuesped);
+            fondoGanador.Color = colorHuésped;
+            imgGanador.Source = ObtenerSprite(spriteHuésped);
             imgFlechaDerecha.Visibility = Visibility.Visible;
 
         }

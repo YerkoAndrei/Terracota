@@ -69,10 +69,10 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         {
             case TipoJugador.anfitrión:
                 cañónAnfitrión.Inicializar(interfaz, TipoJugador.anfitrión);
-                cañónHuésped.Inicializar(interfaz, TipoJugador.huesped);
+                cañónHuésped.Inicializar(interfaz, TipoJugador.huésped);
                 break;
-            case TipoJugador.huesped:
-                cañónHuésped.Inicializar(interfaz, TipoJugador.huesped);
+            case TipoJugador.huésped:
+                cañónHuésped.Inicializar(interfaz, TipoJugador.huésped);
                 break;
         }
 
@@ -184,7 +184,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
             if (ganaAnfitrión)
                 turnoJugador = TipoJugador.anfitrión;
             else
-                turnoJugador = TipoJugador.huesped;
+                turnoJugador = TipoJugador.huésped;
 
             var turno = new Turno
             {
@@ -275,7 +275,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
         // Envia cambio
         var nuevoTurno = TipoJugador.anfitrión;
         if (turnoJugador == TipoJugador.anfitrión)
-            nuevoTurno = TipoJugador.huesped;
+            nuevoTurno = TipoJugador.huésped;
 
         var turno = new Turno
         {
@@ -344,7 +344,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
 
         if (estatuasAnfitrión >= maxEstatuas)
         {
-            ganador = TipoJugador.huesped;
+            ganador = TipoJugador.huésped;
             cañónAnfitrión.Activar(false);
             cañónHuésped.Activar(true);
         }
@@ -416,7 +416,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
             huéspedListo = true;
 
         if ((tipoJugador == TipoJugador.anfitrión && huéspedListo) ||
-            (tipoJugador == TipoJugador.huesped && anfitriónListo))
+            (tipoJugador == TipoJugador.huésped && anfitriónListo))
         {
             if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
                 elección.ComenzarRuleta();

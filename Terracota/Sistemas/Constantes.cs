@@ -24,7 +24,7 @@ public static class Constantes
 
     // Amarillo     #FFF0F064
     // Anfitrión    #FFC80027
-    // Huesped      #FF2700C8
+    // Huésped      #FF2700C8
 
     // Tamaños fuentes
     // Predeterminado   25
@@ -44,7 +44,7 @@ public static class Constantes
     {
         nada,
         anfitrión,
-        huesped
+        huésped
     }
 
     public enum TipoProyectil

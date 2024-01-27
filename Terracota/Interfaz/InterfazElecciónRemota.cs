@@ -17,10 +17,10 @@ public class InterfazElecciónRemota : StartupScript
     public UILibrary prefabRanura;
 
     public Texture spriteAnfitrión;
-    public Texture spriteHuesped;
+    public Texture spriteHuésped;
 
     public Color colorAnfitrión;
-    public Color colorHuesped;
+    public Color colorHuésped;
     public Color colorRuletaVacía;
     public Color colorRuletaActiva;
 
@@ -29,10 +29,10 @@ public class InterfazElecciónRemota : StartupScript
     private Grid gridRuleta;
     private Grid decoRuleta;
     private TextBlock txtAnfitrión;
-    private TextBlock txtHuesped;
+    private TextBlock txtHuésped;
 
     private ScrollViewer visorAnfitrión;
-    private ScrollViewer visorHuesped;
+    private ScrollViewer visorHuésped;
 
     private Grid gridGanador;
     private ImageElement fondoGanador;
@@ -41,7 +41,7 @@ public class InterfazElecciónRemota : StartupScript
     private ImageElement imgFlechaDerecha;
 
     private ImageElement imgAnfitriónListo;
-    private ImageElement imgHuespedListo;
+    private ImageElement imgHuéspedListo;
 
     private Grid btnComenzar;
     private Grid btnVolver;
@@ -69,16 +69,16 @@ public class InterfazElecciónRemota : StartupScript
 
         // Elecciones
         imgAnfitriónListo = página.FindVisualChildOfType<ImageElement>("imgAnfitriónListo");
-        imgHuespedListo = página.FindVisualChildOfType<ImageElement>("imgHuespedListo");
+        imgHuéspedListo = página.FindVisualChildOfType<ImageElement>("imgHuespedListo");
 
         txtAnfitrión = página.FindVisualChildOfType<TextBlock>("txtAnfitrión");
-        txtHuesped = página.FindVisualChildOfType<TextBlock>("txtHuesped");
+        txtHuésped = página.FindVisualChildOfType<TextBlock>("txtHuesped");
         txtAnfitrión.Text = string.Empty;
-        txtHuesped.Text = string.Empty;
+        txtHuésped.Text = string.Empty;
 
         // Visor
         visorAnfitrión = página.FindVisualChildOfType<ScrollViewer>("VisorAnfitrión");
-        visorHuesped = página.FindVisualChildOfType<ScrollViewer>("VisorHuesped");
+        visorHuésped = página.FindVisualChildOfType<ScrollViewer>("VisorHuesped");
 
         // Ganador
         gridGanador = página.FindVisualChildOfType<Grid>("Ganador");
@@ -165,7 +165,7 @@ public class InterfazElecciónRemota : StartupScript
 
         gridRuleta.Visibility = Visibility.Hidden;
         visorAnfitrión.Visibility = Visibility.Hidden;
-        visorHuesped.Visibility = Visibility.Hidden;
+        visorHuésped.Visibility = Visibility.Hidden;
 
         // Carga fortaleza
         if (SistemaRed.ObtenerTipoJugador() == TipoJugador.anfitrión)
@@ -212,7 +212,7 @@ public class InterfazElecciónRemota : StartupScript
 
         BloquearBotón(btnComenzar, false);
 
-        txtHuesped.Text = nombre;
+        txtHuésped.Text = nombre;
         controladorPartida.CargarFortaleza(nombre, false);
     }
 
@@ -222,7 +222,7 @@ public class InterfazElecciónRemota : StartupScript
             return;
 
         visorAnfitrión.Visibility = Visibility.Hidden;
-        visorHuesped.Visibility = Visibility.Hidden;
+        visorHuésped.Visibility = Visibility.Hidden;
 
         btnComenzar.Visibility = Visibility.Hidden;
         btnAleatorio.Visibility = Visibility.Hidden;
@@ -249,7 +249,7 @@ public class InterfazElecciónRemota : StartupScript
             controladorPartida.RevisarJugadoresListos(SistemaRed.ObtenerTipoJugador());
         }
         else
-            _ = SistemaRed.EnviarData(DataRed.jugadorListo, TipoJugador.huesped);
+            _ = SistemaRed.EnviarData(DataRed.jugadorListo, TipoJugador.huésped);
     }
 
     public async void ComenzarRuleta()
@@ -370,8 +370,8 @@ public class InterfazElecciónRemota : StartupScript
         else
         {
             // Gana huesped / derecha
-            fondoGanador.Color = colorHuesped;
-            imgGanador.Source = ObtenerSprite(spriteHuesped);
+            fondoGanador.Color = colorHuésped;
+            imgGanador.Source = ObtenerSprite(spriteHuésped);
             imgFlechaDerecha.Visibility = Visibility.Visible;
 
         }
@@ -402,7 +402,7 @@ public class InterfazElecciónRemota : StartupScript
         if (tipoJugador == TipoJugador.anfitrión)
             imgAnfitriónListo.Color = colorRuletaActiva;
         else
-            imgHuespedListo.Color = colorRuletaActiva;
+            imgHuéspedListo.Color = colorRuletaActiva;
     }
 
     public void MostrarNombreFortaleza(string nombre, TipoJugador tipoJugador)
@@ -410,6 +410,6 @@ public class InterfazElecciónRemota : StartupScript
         if (tipoJugador == TipoJugador.anfitrión)
             txtAnfitrión.Text = nombre;
         else
-            txtHuesped.Text = nombre;
+            txtHuésped.Text = nombre;
     }
 }

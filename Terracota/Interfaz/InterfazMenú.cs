@@ -88,7 +88,7 @@ public class InterfazMenú : StartupScript
         btnComoAnfitrión = página.FindVisualChildOfType<Grid>("btnComoAnfitrión");
         btnComoHuesped = página.FindVisualChildOfType<Grid>("btnComoHuesped");
         ConfigurarBotón(btnComoAnfitrión, () => { EnClicConectarRemoto(TipoJugador.anfitrión); });
-        ConfigurarBotón(btnComoHuesped, () => { EnClicConectarRemoto(TipoJugador.huesped); });
+        ConfigurarBotón(btnComoHuesped, () => { EnClicConectarRemoto(TipoJugador.huésped); });
 
         // Invitación
         popupInvitación = página.FindVisualChildOfType<Grid>("PopupInvitación");

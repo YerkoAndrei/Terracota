@@ -48,7 +48,7 @@ public class ControladorPartidaLocal : SyncScript, IPartida
         proyectilHuésped = TipoProyectil.bola;
 
         cañónAnfitrión.Inicializar(interfaz, TipoJugador.anfitrión);
-        cañónHuésped.Inicializar(interfaz, TipoJugador.huesped);
+        cañónHuésped.Inicializar(interfaz, TipoJugador.huésped);
 
         fortalezaAnfitrión.Inicializar();
         fortalezaHuésped.Inicializar();
@@ -105,7 +105,7 @@ public class ControladorPartidaLocal : SyncScript, IPartida
             cañónAnfitrión.Activar(false);
             cañónHuésped.Activar(true);
 
-            turnoJugador = TipoJugador.huesped;
+            turnoJugador = TipoJugador.huésped;
             cañónActual = cañónHuésped;
 
             cambiarHaciaDerecha = false;
@@ -190,7 +190,7 @@ public class ControladorPartidaLocal : SyncScript, IPartida
             controladorCámara.RotarYCámara(180, cambiarHaciaDerecha, () =>
             {
                 cambiandoTurno = false;
-                turnoJugador = TipoJugador.huesped;
+                turnoJugador = TipoJugador.huésped;
 
                 // Verifica partida por si se gana mientras gira
                 if (!partidaActiva)
@@ -264,7 +264,7 @@ public class ControladorPartidaLocal : SyncScript, IPartida
 
         if (estatuasAnfitrión >= maxEstatuas)
         {
-            ganador = TipoJugador.huesped;
+            ganador = TipoJugador.huésped;
             cañónAnfitrión.Activar(false);
             cañónHuésped.Activar(true);
         }

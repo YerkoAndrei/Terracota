@@ -166,7 +166,7 @@ Hierarchy:
                     c5d6587452bb9a37b75b6411cddd74f6: !Terracota.ControladorBola,Terracota
                         Id: 310ffe8b-724c-4011-b628-7b138ff3f7b2
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -214,9 +214,9 @@ Hierarchy:
                         spriteBola: d681f95d-d384-43f3-b287-8df74a534497:Texturas/Interfaz/Bola
                         spriteMetralla: 017a6458-410b-4810-9447-3254c0c8db29:Texturas/Interfaz/Metralla
                         "spriteAnfitrión": "8d986627-e68f-4481-a6c3-9ef06599ea85:Texturas/Interfaz/Anfitrión"
-                        spriteHuesped: null
+                        "spriteHuésped": "976e2b48-5f94-437c-91e9-b29ecf29da95:Texturas/Interfaz/Huésped"
                         "colorAnfitrión": {R: 200, G: 0, B: 39, A: 255}
-                        colorHuesped: {R: 0, G: 0, B: 0, A: 0}
+                        "colorHuésped": {R: 39, G: 0, B: 200, A: 255}
                     22d037cf416251aa57fbebab67653be4: !Terracota.ControladorTraducciones,Terracota
                         Id: a6504006-30ee-48c8-92ed-35ec56049220
                         "códigos":
@@ -484,7 +484,7 @@ Hierarchy:
                     782ed5b40434b4a07f0839ae718dedbc: !Terracota.ControladorBola,Terracota
                         Id: b317aa41-088e-442e-99b1-47b205cc4f30
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -752,7 +752,7 @@ Hierarchy:
                     9af0fa7fd686a3cfb9b7b8ec1840e946: !Terracota.ControladorBola,Terracota
                         Id: 7a95df3b-5e4a-4f90-aaa0-9ddd8d457935
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -1312,7 +1312,7 @@ Hierarchy:
                     f4a7ccc0ae1034ddce4d2667b6bf3369: !Terracota.ControladorBola,Terracota
                         Id: 97115c80-0a93-4d11-a26e-3d480c2fa9d2
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -1475,7 +1475,7 @@ Hierarchy:
                     b54cdf5640ffbd0f70a24db40f800b67: !Terracota.ControladorBola,Terracota
                         Id: 17add727-56bd-4f44-8a82-0799fbd8b7ab
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -1793,7 +1793,7 @@ Hierarchy:
                     049d0ab964a6389fbd0e7f4f3480c3e4: !Terracota.ControladorBola,Terracota
                         Id: f1794291-6687-4358-b3d5-32144edb9e16
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -2377,7 +2377,7 @@ Hierarchy:
                     2e061cbbd6aacf70bf8d7ca4ed959396: !Terracota.ControladorBola,Terracota
                         Id: 28180617-6aa0-4a98-a813-ae849611a9b0
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -2631,7 +2631,7 @@ Hierarchy:
                     43b90d946c2284960785657bcefcdcbb: !Terracota.ControladorBola,Terracota
                         Id: 3a6fef59-2b53-4c31-b4da-de8c039be702
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -2814,7 +2814,7 @@ Hierarchy:
                     d22afe9221764f6f6d85b5f016845288: !Terracota.ControladorBola,Terracota
                         Id: 3ec9ebb7-d5ef-449c-82f9-82186fc8c943
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -3072,7 +3072,7 @@ Hierarchy:
                     d1ef393171ea825f9a8e69771815562a: !Terracota.ControladorBola,Terracota
                         Id: 34c2a380-895e-4fac-baee-723f0ddc124d
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -3822,9 +3822,9 @@ Hierarchy:
                         controladorPartida: ref!! 8467c665-6f6a-4e41-8353-b93fb0b8b0b1
                         prefabRanura: "db6c1792-d472-4911-9e4b-3ec596fe2493:Interfaces/Librerias/RanuraElección"
                         "spriteAnfitrión": "8d986627-e68f-4481-a6c3-9ef06599ea85:Texturas/Interfaz/Anfitrión"
-                        spriteHuesped: null
+                        "spriteHuésped": "976e2b48-5f94-437c-91e9-b29ecf29da95:Texturas/Interfaz/Huésped"
                         "colorAnfitrión": {R: 200, G: 0, B: 39, A: 255}
-                        colorHuesped: {R: 0, G: 0, B: 0, A: 0}
+                        "colorHuésped": {R: 39, G: 0, B: 200, A: 255}
                         "colorRuletaVacía": {R: 240, G: 220, B: 160, A: 240}
                         colorRuletaActiva: {R: 19, G: 200, B: 19, A: 255}
                     fa720b873c84615073730fc19bc64996: !Terracota.ControladorTraducciones,Terracota
@@ -3956,7 +3956,7 @@ Hierarchy:
                     fe1cb20ae97b02c95a776295e4f55fc7: !Terracota.ControladorBola,Terracota
                         Id: 230cb437-279a-4dfc-a23b-731b3f42441b
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -4266,7 +4266,7 @@ Hierarchy:
                     35cc06cc97aa692bf8b8cbbdb426f5a5: !Terracota.ControladorBola,Terracota
                         Id: 70c5bf13-363d-4d94-9cf1-357b6789ed7d
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -5278,7 +5278,7 @@ Hierarchy:
                     abc05ee1c03b1a2ad85b1473ff5df1dd: !Terracota.ControladorBola,Terracota
                         Id: c70d54d6-aed1-414a-9686-61b793116331
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -5344,7 +5344,7 @@ Hierarchy:
                     c4e549cb8044aeb7aa82e811f038f17d: !Terracota.ControladorBola,Terracota
                         Id: 141b9048-72fb-4953-9b88-08cceba532fb
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -5391,7 +5391,7 @@ Hierarchy:
                     1f845404d8ec8c265cfe1f591376d78e: !Terracota.ControladorBola,Terracota
                         Id: 8423fe15-2a8c-4707-a2a4-2b9f5e2127e3
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -5907,7 +5907,7 @@ Hierarchy:
                     dd15e53c9b449e76d79cb2489be6a21d: !Terracota.ControladorBola,Terracota
                         Id: 7bef32a8-c7d9-402e-898e-db0c303883e6
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -5954,7 +5954,7 @@ Hierarchy:
                     27f87fcf37326f768b7bb9ee09fe19bc: !Terracota.ControladorBola,Terracota
                         Id: 394562c8-7161-456a-ac45-8aa47d3daa6c
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -6835,7 +6835,7 @@ Hierarchy:
                     52baebb8dc86bf262ad46c44842cc301: !Terracota.ControladorBola,Terracota
                         Id: 6e379473-e498-4bdf-8c4c-91df907a739c
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -7265,7 +7265,7 @@ Hierarchy:
                     80a6cddffe76600c9d5b4d5ce81eb24d: !Terracota.ControladorBola,Terracota
                         Id: d2a2c5a4-e02c-4cb7-84da-bab86f537ce1
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -8408,7 +8408,7 @@ Hierarchy:
                     5d6135555ebc1d5e66cc2c33b917a4fe: !Terracota.ControladorBola,Terracota
                         Id: fa893d9e-6e8f-4cfa-aa0c-1f31676856b0
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -8599,7 +8599,7 @@ Hierarchy:
                     289939238cd71692af72965ea93f4c54: !Terracota.ControladorBola,Terracota
                         Id: c122c6b2-9f25-4f63-abb0-f2fa9d425cb3
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -9633,7 +9633,7 @@ Hierarchy:
                     5c92f446875b033fb8819abe64d844cc: !Terracota.ControladorBola,Terracota
                         Id: a06ae7e8-6381-410b-9526-5ffaa4f852eb
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -9727,7 +9727,7 @@ Hierarchy:
                     3a6911a2b96b296df8c8a0a8a52613ae: !Terracota.ControladorBola,Terracota
                         Id: d61e5097-3382-48c6-a99e-a595165600c2
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -10398,7 +10398,7 @@ Hierarchy:
                     86ae864f6ebe70f552b5e1a02c6b05bf: !Terracota.ControladorBola,Terracota
                         Id: 5b42f77e-ea04-48d7-93f5-5dfb1a6fd57e
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -11752,7 +11752,7 @@ Hierarchy:
                     db5d1f791611a7e4d47d7faf2d2f1bb0: !Terracota.ControladorBola,Terracota
                         Id: cc444013-8ffb-4cd0-a1c2-82cd811516d8
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -12379,7 +12379,7 @@ Hierarchy:
                     0b80a32559ba00ef3b0e7c07918b9b54: !Terracota.ControladorBola,Terracota
                         Id: db9686a1-0cca-40f1-91f3-cc2fc5ff2171
                         tipoProyectil: bola
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 32
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     45f11cee7c77c9296c3e3dc685715f6e: !TransformComponent
@@ -12843,7 +12843,7 @@ Hierarchy:
                     a3d592f30f8494ff8b708e625447bf4c: !Terracota.ControladorBola,Terracota
                         Id: 50ca06dd-084d-4297-90e6-e2e7157a1d7b
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent
@@ -13355,7 +13355,7 @@ Hierarchy:
                     534bcc1d6ae206fb84b4babcfe28de0f: !Terracota.ControladorBola,Terracota
                         Id: 307a6e26-0bfe-49c4-9cb4-5025d0f27f11
                         tipoProyectil: metralla
-                        tipoJugador*: nada
+                        tipoJugador*: "huésped"
                         maxColisiones: 3
                         "prefabPartículas": "ebd343d9-0ef6-48ac-98d2-c0a36d4c6e39:Prefabs/Partículas/PartículasBola"
                     3c5e241897e193359a70d89b5eb615fc: !TransformComponent

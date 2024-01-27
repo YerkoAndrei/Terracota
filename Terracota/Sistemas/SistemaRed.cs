@@ -66,7 +66,7 @@ public class SistemaRed : StartupScript
         {
             if(tipoJugador == TipoJugador.anfitrión)
                 await ActualizarFísica();
-            else if (tipoJugador == TipoJugador.huesped)
+            else if (tipoJugador == TipoJugador.huésped)
                 await ActualizarCañón();
         }
     }
@@ -147,9 +147,9 @@ public class SistemaRed : StartupScript
                 switch (conectarLocalComo)
                 {
                     case TipoJugador.anfitrión:
-                        conectarRemotoComo = TipoJugador.huesped;
+                        conectarRemotoComo = TipoJugador.huésped;
                         break;
-                    case TipoJugador.huesped:
+                    case TipoJugador.huésped:
                         conectarRemotoComo = TipoJugador.anfitrión;
                         break;
                 }
@@ -283,9 +283,9 @@ public class SistemaRed : StartupScript
                 switch (tipoJugador)
                 {
                     case TipoJugador.anfitrión:
-                        controlador.CargarFortaleza(fortaleza, TipoJugador.huesped);
+                        controlador.CargarFortaleza(fortaleza, TipoJugador.huésped);
                         break;
-                    case TipoJugador.huesped:
+                    case TipoJugador.huésped:
                         controlador.CargarFortaleza(fortaleza, TipoJugador.anfitrión);
                         break;
                 }
@@ -312,9 +312,9 @@ public class SistemaRed : StartupScript
                 switch (tipoJugador)
                 {
                     case TipoJugador.anfitrión:
-                        controlador.ActualizarCañón(cañón, TipoJugador.huesped);
+                        controlador.ActualizarCañón(cañón, TipoJugador.huésped);
                         break;
-                    case TipoJugador.huesped:
+                    case TipoJugador.huésped:
                         controlador.ActualizarCañón(cañón, TipoJugador.anfitrión);
                         break;
                 }
@@ -324,10 +324,10 @@ public class SistemaRed : StartupScript
                 switch (tipoJugador)
                 {
                     case TipoJugador.anfitrión:
-                        controlador.ActivarDisparo(TipoJugador.huesped, proyectil);
+                        controlador.ActivarDisparo(TipoJugador.huésped, proyectil);
                         controlador.CambiarTurno();
                         break;
-                    case TipoJugador.huesped:
+                    case TipoJugador.huésped:
                         controlador.ActivarDisparo(TipoJugador.anfitrión, proyectil);
                         controlador.EsperarCambioTurno();
                         break;
@@ -348,7 +348,7 @@ public class SistemaRed : StartupScript
 
     private static async Task ActualizarCañón()
     {
-        var data = controlador.ObtenerRotaciónCañón(TipoJugador.huesped);
+        var data = controlador.ObtenerRotaciónCañón(TipoJugador.huésped);
         await EnviarData(DataRed.cañón, data);
     }
 
