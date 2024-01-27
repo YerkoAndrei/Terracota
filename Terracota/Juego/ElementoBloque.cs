@@ -60,7 +60,7 @@ public class ElementoBloque : StartupScript
     public float[] ObtenerFísicas()
     {
         // Anfitrión obtiene físicas
-        // Huesped actualiza sin física
+        // Huésped actualiza sin física
         return
         [
             elementoSonido.ObtenerFuerzaSonido(),

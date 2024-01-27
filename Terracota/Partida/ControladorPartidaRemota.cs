@@ -100,7 +100,7 @@ public class ControladorPartidaRemota : SyncScript, IPartida
             índice++;
         }
 
-        // Físicas huespes
+        // Físicas huésped
         índice = 0;
         var bloquesHuésped = new List<ElementoBloque>();
         bloquesHuésped.AddRange(fortalezaHuésped.estatuas);

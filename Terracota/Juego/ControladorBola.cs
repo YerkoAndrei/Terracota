@@ -201,7 +201,7 @@ public class ControladorBola : AsyncScript
         fuerzaSonido = 0;
 
         // Anfitrión obtiene físicas
-        // Huesped actualiza sin física
+        // Huésped actualiza sin física
         return
         [
             sonido,
