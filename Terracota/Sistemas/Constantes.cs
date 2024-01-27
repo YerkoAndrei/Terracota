@@ -17,14 +17,14 @@ public static class Constantes
     public static Color colorBloqueado = new Color(155, 155, 155, 155);
 
     // Paleta interfaz
-    // Negro    #FA191919
-    // Oscuro   #FFA03C00
-    // Claro    #F0F0DCA0
-    // Texto    #FF191414
+    // Negro            #FA191919
+    // Oscuro           #FFA03C00
+    // Claro            #F0F0DCA0
+    // Texto            #FF191414
 
-    // Amarillo     #FFF0F064
-    // Anfitrión    #FFC80027
-    // Huésped      #FF2700C8
+    // Amarillo         #FFF0F064
+    // Anfitrión        #FFC80027
+    // Huésped          #FF2700C8
 
     // Tamaños fuentes
     // Predeterminado   25
