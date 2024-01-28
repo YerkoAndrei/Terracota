@@ -318,6 +318,6 @@ public class InterfazMenú : StartupScript
         if (animando)
             return;
 
-        Environment.Exit(0);
+        ((Game)Game).Exit();
     }
 }
