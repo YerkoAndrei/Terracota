@@ -16,6 +16,9 @@ public class ControladorInfo : AsyncScript
         txtFPS = página.FindVisualChildOfType<TextBlock>("txtFPS");
         txtPing = página.FindVisualChildOfType<TextBlock>("txtPing");
 
+        txtFPS.Text = string.Empty;
+        txtPing.Text = string.Empty;
+
         var contador = 0;
         var cuadros = 0f;
 
