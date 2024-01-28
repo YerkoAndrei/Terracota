@@ -209,6 +209,11 @@ public class InterfazOpciones : StartupScript
             return;
 
         MostrarResoluciones(false);
+        if (string.IsNullOrEmpty(txtPuerto.Text))
+        {
+            txtPuerto.Text = SistemaMemoria.ObtenerConfiguración(Configuraciones.puertoRed);
+            return;
+        }
 
         // Solo números
         string regex = @"[^0-9]";
