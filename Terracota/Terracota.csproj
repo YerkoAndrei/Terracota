@@ -1,8 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>net8.0</TargetFrameworks>
-    <AssemblyName>Proyecto</AssemblyName>
+    
+    <!--Nombre simple en Release-->
+    <AssemblyName Condition=" '$(Configuration)' == 'Release' ">Proyecto</AssemblyName>
   </PropertyGroup>
+  
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Stride.Engine" Version="4.2.0.2067" />

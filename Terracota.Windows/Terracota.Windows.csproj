@@ -11,7 +11,9 @@
     
     <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
     <SelfContained>true</SelfContained>
-    <AssemblyName>Terracota</AssemblyName>
+
+    <!--Nombre simple en Release-->
+    <AssemblyName Condition=" '$(Configuration)' == 'Release' ">Terracota</AssemblyName>
   </PropertyGroup>
   
   <ItemGroup>
