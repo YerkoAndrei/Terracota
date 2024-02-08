@@ -116,7 +116,8 @@ public class InterfazCreación : StartupScript
 
     private void EnClicRotarPieza()
     {
-        // PENDIENTE: móvil
+        // PENDIENTE 2.0: móvil
+        // Publicidad: https://www.nuget.org/packages/Google.Apis.AdMob.v1
         controladorCreación.EnClicRotarPieza();
     }
 
