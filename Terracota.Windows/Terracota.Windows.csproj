@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <ApplicationIcon>Resources\Ícono.ico</ApplicationIcon>
     <OutputType>WinExe</OutputType>
@@ -8,10 +8,23 @@
     <OutputPath>..\Bin\Windows\$(Configuration)\</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+    
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
     <SelfContained>true</SelfContained>
-    <!--<AssemblyName>Terracota</AssemblyName>-->
+    <AssemblyName>Terracota</AssemblyName>
   </PropertyGroup>
+  
   <ItemGroup>
     <ProjectReference Include="..\Terracota\Terracota.csproj" />
   </ItemGroup>
+
+  <!--Borra archivos innecesarios-->
+  <Target Name="PostPublish" AfterTargets="Publish">
+    <ItemGroup>
+      <Borrar Include="$(PublishDir)*.pdb" />
+      <Borrar Include="$(PublishDir)*.xml" />
+    </ItemGroup>
+    <Delete Files="@(Borrar)" />
+  </Target>
+  
 </Project>
