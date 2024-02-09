@@ -202,8 +202,9 @@ public class ControladorBola : AsyncScript
 
         // Anfitrión obtiene físicas
         // Huésped actualiza sin física
-        return
-        [
+
+        return new float[]
+        {
             sonido,
             cuerpo.Entity.Transform.Position.X,
             cuerpo.Entity.Transform.Position.Y,
@@ -215,6 +216,6 @@ public class ControladorBola : AsyncScript
             cuerpo.Entity.Transform.Scale.X,
             cuerpo.Entity.Transform.Scale.Y,
             cuerpo.Entity.Transform.Scale.Z
-        ];
+        };
     }
 }

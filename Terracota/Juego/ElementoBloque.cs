@@ -62,8 +62,8 @@ public class ElementoBloque : StartupScript
     {
         // Anfitrión obtiene físicas
         // Huésped actualiza sin física
-        return
-        [
+        return new float[]
+        {
             elementoSonido.ObtenerFuerzaSonido(),
             cuerpo.Entity.Transform.Position.X,
             cuerpo.Entity.Transform.Position.Y,
@@ -75,6 +75,6 @@ public class ElementoBloque : StartupScript
             cuerpo.Entity.Transform.Scale.X,
             cuerpo.Entity.Transform.Scale.Y,
             cuerpo.Entity.Transform.Scale.Z
-        ];
+        };
     }
 }

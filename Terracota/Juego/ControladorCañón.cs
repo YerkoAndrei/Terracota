@@ -195,8 +195,8 @@ public class ControladorCañón : SyncScript
 
     public float[] ObtenerMatriz()
     {
-        return
-        [
+        return new float[]
+        {
             cañón.Transform.Rotation.X,
             cañón.Transform.Rotation.Y,
             cañón.Transform.Rotation.Z,
@@ -205,6 +205,6 @@ public class ControladorCañón : SyncScript
             soporte.Transform.Rotation.Y,
             soporte.Transform.Rotation.Z,
             soporte.Transform.Rotation.W
-        ];
+        };
     }
 }
