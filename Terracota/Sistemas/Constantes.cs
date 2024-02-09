@@ -88,6 +88,7 @@ public static class Constantes
         idioma,
         gráficos,
         sombras,
+        vSync,
         volumenGeneral,
         volumenMúsica,
         volumenEfectos,

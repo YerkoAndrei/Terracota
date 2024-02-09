@@ -58,6 +58,9 @@ public class InterfazOpciones : StartupScript
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnSombrasMedias"), () => EnClicSombras(NivelesConfiguración.medio));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnSombrasAltas"), () => EnClicSombras(NivelesConfiguración.alto));
 
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVSyncSí"), () => EnClicVSync(true));
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVSyncNo"), () => EnClicVSync(false));
+
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnCompleta"), () => EnClicPantallaCompleta(true));
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnVentana"), () => EnClicPantallaCompleta(false));
 
@@ -94,7 +97,8 @@ public class InterfazOpciones : StartupScript
         BloquearVelocidadRed(   int.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.velocidadRed)));
         BloquearGráficos(       (NivelesConfiguración)Enum.Parse(typeof(NivelesConfiguración), SistemaMemoria.ObtenerConfiguración(Configuraciones.gráficos)));
         BloquearSombras(        (NivelesConfiguración)Enum.Parse(typeof(NivelesConfiguración), SistemaMemoria.ObtenerConfiguración(Configuraciones.sombras)));
-        BloquearPantallaCompleta(bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.pantallaCompleta)));
+        BloquearVSync(          bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.vSync)));
+        BloquearPantallaCompleta(bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.pantallaCompleta)));        
 
         DesbloquearBotonesResolución();
         switch(SistemaMemoria.ObtenerConfiguración(Configuraciones.resolución))
@@ -127,7 +131,7 @@ public class InterfazOpciones : StartupScript
         sliderEfectos.Value =   float.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.volumenEfectos), CultureInfo.InvariantCulture);
 
         // Actualiza gráficos
-        ActualizaGráficos(      (NivelesConfiguración)Enum.Parse(typeof(NivelesConfiguración), SistemaMemoria.ObtenerConfiguración(Configuraciones.gráficos)));
+        ActualizaGráficos((NivelesConfiguración)Enum.Parse(typeof(NivelesConfiguración), SistemaMemoria.ObtenerConfiguración(Configuraciones.gráficos)));
         ActualizaSombras();
 
         // Llamados slider
@@ -278,6 +282,16 @@ public class InterfazOpciones : StartupScript
     private void ActualizaGráficos(NivelesConfiguración nivel)
     {
         Services.GetService<SceneSystem>().GraphicsCompositor = SistemaEscenas.ObtenerGráficos(nivel);
+    }
+
+    private void EnClicVSync(bool activo)
+    {
+        if (animando)
+            return;
+
+        SistemaMemoria.GuardarConfiguración(Configuraciones.vSync, activo.ToString());
+        BloquearVSync(activo);
+        MostrarResoluciones(false);
     }
 
     private void EnClicSombras(NivelesConfiguración nivel)
@@ -462,6 +476,20 @@ public class InterfazOpciones : StartupScript
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnSombrasMedias"), false);
                 BloquearBotón(página.FindVisualChildOfType<Grid>("btnSombrasAltas"), true);
                 break;
+        }
+    }
+
+    private void BloquearVSync(bool vSync)
+    {
+        if (vSync)
+        {
+            BloquearBotón(página.FindVisualChildOfType<Grid>("btnVSyncSí"), true);
+            BloquearBotón(página.FindVisualChildOfType<Grid>("btnVSyncNo"), false);
+        }
+        else
+        {
+            BloquearBotón(página.FindVisualChildOfType<Grid>("btnVSyncSí"), false);
+            BloquearBotón(página.FindVisualChildOfType<Grid>("btnVSyncNo"), true);
         }
     }
 
