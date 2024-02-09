@@ -202,7 +202,6 @@ public class ControladorBola : AsyncScript
 
         // Anfitrión obtiene físicas
         // Huésped actualiza sin física
-
         return new float[]
         {
             sonido,
