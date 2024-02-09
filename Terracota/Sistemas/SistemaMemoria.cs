@@ -136,13 +136,14 @@ public class SistemaMemoria : StartupScript
             { Configuraciones.idioma.ToString(),            Idiomas.sistema.ToString() },
             { Configuraciones.gráficos.ToString(),          NivelesConfiguración.alto.ToString() },
             { Configuraciones.sombras.ToString(),           NivelesConfiguración.alto.ToString() },
+            { Configuraciones.vSync.ToString(),             false.ToString() },
             { Configuraciones.volumenGeneral.ToString(),    "1" },
             { Configuraciones.volumenMúsica.ToString(),     "0.5" },
             { Configuraciones.volumenEfectos.ToString(),    "0.5" },
             { Configuraciones.velocidadRed.ToString(),      "60" },
             { Configuraciones.puertoRed.ToString(),         "28" },
-            { Configuraciones.pantallaCompleta.ToString(),  true.ToString() },
-            { Configuraciones.resolución.ToString(),        "1920x1080" }
+            { Configuraciones.pantallaCompleta.ToString(),  false.ToString() },
+            { Configuraciones.resolución.ToString(),        "1280x720" }
         };
 
         // Guarda archivo
@@ -185,6 +186,14 @@ public class SistemaMemoria : StartupScript
     {
         var configuraciones = ObtenerConfiguraciones();
         return configuraciones[llave.ToString()];
+    }
+
+    public static bool ObtenerExistenciaArchivo()
+    {
+        if (!Directory.Exists(carpetaPersistente))
+            return false;
+
+        return File.Exists(rutaConfiguración);
     }
 
     // XOR

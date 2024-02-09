@@ -36,6 +36,11 @@ public class SistemaEscenas : SyncScript
     private Grid panelOscuro;
     private ImageElement imgCursor;
 
+    // Primer inicio
+    private static bool primerInicio;
+    private static int anchoInicio;
+    private static int altoInicio;
+
     public override void Start()
     {
         instancia = this;
@@ -43,14 +48,25 @@ public class SistemaEscenas : SyncScript
         // Pantalla completa
         Game.Window.AllowUserResizing = true;
         Game.Window.Title = SistemaTraducción.ObtenerTraducción("nombreJuego");
-        var pantallaCompleta = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.pantallaCompleta));
 
-        // Resolución
-        var resolución = SistemaMemoria.ObtenerConfiguración(Configuraciones.resolución).Split('x');
-        var ancho = int.Parse(resolución[0]);
-        var alto = int.Parse(resolución[1]);
+        // Primer inicio
+        if(primerInicio)
+        {
+            var resoluciónInicio = anchoInicio + " x " + altoInicio;
+            SistemaMemoria.GuardarConfiguración(Configuraciones.resolución, resoluciónInicio);
+            SistemaMemoria.GuardarConfiguración(Configuraciones.pantallaCompleta, true.ToString());
+            CambiarPrimeraPantalla(anchoInicio, altoInicio);
+        }
+        else
+        {
+            // Resolución
+            var resolución = SistemaMemoria.ObtenerConfiguración(Configuraciones.resolución).Split('x');
+            var pantallaCompleta = bool.Parse(SistemaMemoria.ObtenerConfiguración(Configuraciones.pantallaCompleta));
 
-        CambiarPantalla(pantallaCompleta, ancho, alto);
+            var ancho = int.Parse(resolución[0]);
+            var alto = int.Parse(resolución[1]);
+            CambiarPantalla(pantallaCompleta, ancho, alto);
+        }
 
         // Predeterminado
         duraciónLerp = 0.2f;
@@ -121,6 +137,21 @@ public class SistemaEscenas : SyncScript
             bottom = (0.5f - Input.MousePosition.Y) * 2 * 720;
 
         imgCursor.Margin = new Thickness(left, top, right, bottom);
+    }
+
+    public static void GuardarPrimeraPantalla(int ancho, int alto)
+    {
+        primerInicio = true;
+        anchoInicio = ancho;
+        altoInicio = alto;
+    }
+
+    public static void CambiarPrimeraPantalla(int ancho, int alto)
+    {
+        instancia.Game.Window.SetSize(new Int2(ancho, alto));
+        instancia.Game.Window.PreferredWindowedSize = new Int2(ancho, alto);
+        instancia.Game.Window.PreferredFullscreenSize = new Int2(ancho, alto);
+        instancia.Game.Window.IsFullscreen = true;
     }
 
     public static void CambiarPantalla(bool pantallaCompleta, int ancho, int alto)
