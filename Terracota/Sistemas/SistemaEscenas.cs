@@ -41,7 +41,7 @@ public class SistemaEscenas : SyncScript
         instancia = this;
 
         // Pantalla completa
-        Game.Window.AllowUserResizing = true;
+        Game.Window.AllowUserResizing = false;
         Game.Window.Title = SistemaTraducción.ObtenerTraducción("nombreJuego");
         
         // Resolución
