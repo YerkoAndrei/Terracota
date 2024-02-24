@@ -1,21 +1,22 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <ApplicationIcon>Resources\Ícono.ico</ApplicationIcon>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Terracota</RootNamespace>
+
     <OutputPath>..\Bin\Windows\$(Configuration)\</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+
+    <!-- Force msbuild to check to rebuild this assembly instead of letting VS IDE guess -->
     <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
     
-    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
-    <SelfContained>true</SelfContained>
-
     <!--Nombre simple en Release-->
     <AssemblyName Condition=" '$(Configuration)' == 'Release' ">Terracota</AssemblyName>
   </PropertyGroup>
-  
+
   <ItemGroup>
     <ProjectReference Include="..\Terracota\Terracota.csproj" />
   </ItemGroup>
@@ -30,5 +31,5 @@
     </ItemGroup>
     <Delete Files="@(Borrar)" />
   </Target>
-  
+
 </Project>
