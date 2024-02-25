@@ -24,11 +24,14 @@ public class SistemaMemoria : StartupScript
 
     public override void Start()
     {
+        EstablecerRutas();
+    }
+
+    private static void EstablecerRutas()
+    {
         carpetaPersistente = string.Format(carpetaPersistente, Environment.UserName, desarrollador, producto);
         rutaFortalezas = Path.Combine(carpetaPersistente, archivoFortalezas);
         rutaConfiguración = Path.Combine(carpetaPersistente, archivoConfiguración);
-
-        EstablecerConfiguraciónPredeterminada();
     }
 
     // Fortalezas
@@ -122,13 +125,20 @@ public class SistemaMemoria : StartupScript
     }
 
     // Configuración
-    private static void EstablecerConfiguraciónPredeterminada()
+    public static void EstablecerConfiguraciónPredeterminada(int ancho, int alto)
     {
+        EstablecerRutas();
+
         if (!Directory.Exists(carpetaPersistente))
             Directory.CreateDirectory(carpetaPersistente);
 
         if (File.Exists(rutaConfiguración))
             return;
+
+        // Resolución original
+        var resolución = "1280x720";
+        if(ancho > 0 && alto > 0)
+            resolución = ancho.ToString() + "x" + alto.ToString();
 
         // Valores predeterminados
         var diccionario = new Dictionary<string, string>
@@ -142,8 +152,8 @@ public class SistemaMemoria : StartupScript
             { Configuraciones.volumenEfectos.ToString(),    "0.5" },
             { Configuraciones.velocidadRed.ToString(),      "60" },
             { Configuraciones.puertoRed.ToString(),         "28" },
-            { Configuraciones.pantallaCompleta.ToString(),  false.ToString() },
-            { Configuraciones.resolución.ToString(),        "1280x720" }
+            { Configuraciones.pantallaCompleta.ToString(),  true.ToString() },
+            { Configuraciones.resolución.ToString(),        resolución }
         };
 
         // Guarda archivo

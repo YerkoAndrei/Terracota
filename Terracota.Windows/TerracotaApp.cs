@@ -1,4 +1,5 @@
 using Stride.Engine;
+using System.Windows;
 
 namespace Terracota
 {
@@ -10,7 +11,14 @@ namespace Terracota
             {
                 var vSync = false;
 
-                if (SistemaMemoria.ObtenerExistenciaArchivo())
+                // Primer inicio
+                if (!SistemaMemoria.ObtenerExistenciaArchivo())
+                {
+                    var alto = (int)SystemParameters.FullPrimaryScreenHeight;
+                    var ancho = (int)SystemParameters.FullPrimaryScreenWidth;
+                    SistemaMemoria.EstablecerConfiguraciónPredeterminada(ancho, alto);
+                }
+                else
                     vSync = bool.Parse(SistemaMemoria.ObtenerConfiguración(Constantes.Configuraciones.vSync));
 
                 // vSync
