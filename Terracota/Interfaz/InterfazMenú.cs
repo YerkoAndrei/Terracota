@@ -1,7 +1,7 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Silk.NET.OpenXR;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.UI;
@@ -318,6 +318,7 @@ public class InterfazMenú : StartupScript
         if (animando)
             return;
 
+        Game.Window.Visible = false;
         ((Game)Game).Exit();
     }
 }
