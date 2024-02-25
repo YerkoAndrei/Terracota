@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
+using Stride.Core.Mathematics;
 using Stride.Audio;
 using Stride.Engine;
 using Stride.Physics;
@@ -81,7 +82,8 @@ public class ElementoSonido : AsyncScript
             return;
 
         // Volumen y pitch aleatorio da más vida a los sonidos
-        instanciaSonido.Volume = (SistemaSonido.ObtenerVolumen(Configuraciones.volumenEfectos) * fuerza) - RangoAleatorio(0, 0.6f);
+        var volumen = (SistemaSonido.ObtenerVolumen(Configuraciones.volumenEfectos) * fuerza) - RangoAleatorio(0, 0.4f);
+        instanciaSonido.Volume = MathUtil.Clamp(volumen, 0, 1);
         instanciaSonido.Pitch = RangoAleatorio(0.8f, 1.2f);
         instanciaSonido.Play();
     }

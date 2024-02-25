@@ -267,8 +267,10 @@ public class SistemaSonido : StartupScript
     // Juego
     public static void SonarBola(float fuerza)
     {
+        var volumen = (ObtenerVolumen(Configuraciones.volumenEfectos) * fuerza) - RangoAleatorio(0, 0.2f);
+
         instancia.bola.Stop();
-        instancia.bola.Volume = (ObtenerVolumen(Configuraciones.volumenEfectos) * fuerza) - RangoAleatorio(0, 0.4f);
+        instancia.bola.Volume = MathUtil.Clamp(volumen, 0, 1);
         instancia.bola.Pitch = RangoAleatorio(0.8f, 1.2f);
         instancia.bola.Play();
     }
