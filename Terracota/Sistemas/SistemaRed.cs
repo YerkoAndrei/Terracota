@@ -25,6 +25,7 @@ public class SistemaRed : StartupScript
     private static UdpClient udp;
     private static IPEndPoint remoto;
 
+    private static bool activo;
     private static bool conectado;
     private static bool jugando;
     private static int velocidadRed;
@@ -44,6 +45,7 @@ public class SistemaRed : StartupScript
     public override void Start()
     {
         instancia = this;
+        activo = true;
 
         ObtenerIPs();
         ActualizarConfiguración();
@@ -212,7 +214,7 @@ public class SistemaRed : StartupScript
     private static async void EscucharUDP()
     {
         reloj = new Stopwatch();
-        while (true)
+        while (activo)
         {
             reloj.Start();
             await RecibirData();
@@ -381,6 +383,16 @@ public class SistemaRed : StartupScript
 
         SistemaSonido.CambiarMúsica(false);
         SistemaEscenas.CambiarEscena(Escenas.menú);
+    }
+
+    public static void ForzarCierreConexión()
+    {
+        activo = false;
+
+        udp.Dispose();
+        udp.Close();
+        udp = null;
+        remoto = null;
     }
 
     private static void ComenzarRuleta()

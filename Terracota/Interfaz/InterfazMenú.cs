@@ -318,6 +318,7 @@ public class InterfazMenú : StartupScript
         if (animando)
             return;
 
+        SistemaRed.ForzarCierreConexión();
         Game.Window.Visible = false;
         ((Game)Game).Exit();
     }
