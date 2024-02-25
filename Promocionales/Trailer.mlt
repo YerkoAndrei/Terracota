@@ -305,7 +305,7 @@
     <property name="meta.media.top_field_first">0</property>
     <property name="meta.media.progressive">1</property>
     <property name="shotcut:caption">Debug 2024.02.25 - 11.32.09.03.mp4</property>
-    <property name="video_delay">-0.02</property>
+    <property name="video_delay">-0.01</property>
   </chain>
   <chain id="chain5" out="00:09:39.146">
     <property name="length">00:09:39.163</property>
@@ -371,6 +371,20 @@
     <property name="shotcut_aspect_num">16</property>
     <property name="shotcut_aspect_den">8</property>
     <property name="video_delay">-0.02</property>
+    <property name="meta.shotcut.vui">1</property>
+    <filter id="filter1" in="00:07:21.786" out="00:07:22.230">
+      <property name="background">color:#00000000</property>
+      <property name="mlt_service">affine</property>
+      <property name="shotcut:filter">affineSizePosition</property>
+      <property name="transition.fill">1</property>
+      <property name="transition.distort">1</property>
+      <property name="transition.rect">-2.27374e-13 0 1920 1080 1</property>
+      <property name="transition.valign">middle</property>
+      <property name="transition.halign">center</property>
+      <property name="shotcut:animIn">00:00:00.000</property>
+      <property name="shotcut:animOut">00:00:00.000</property>
+      <property name="transition.threads">0</property>
+    </filter>
   </chain>
   <chain id="chain6" out="00:09:39.146">
     <property name="length">00:09:39.163</property>
@@ -494,7 +508,7 @@
     <property name="meta.media.top_field_first">0</property>
     <property name="meta.media.progressive">1</property>
     <property name="shotcut:caption">Debug 2024.02.25 - 11.32.09.03.mp4</property>
-    <property name="video_delay">-0.06</property>
+    <property name="video_delay">0</property>
   </chain>
   <chain id="chain8" out="00:09:39.146">
     <property name="length">00:09:39.163</property>
@@ -556,7 +570,7 @@
     <property name="meta.media.top_field_first">0</property>
     <property name="meta.media.progressive">1</property>
     <property name="shotcut:caption">Debug 2024.02.25 - 11.32.09.03.mp4</property>
-    <property name="video_delay">0.004</property>
+    <property name="video_delay">-0.02</property>
   </chain>
   <chain id="chain9" out="00:09:39.146">
     <property name="length">00:09:39.163</property>
@@ -928,7 +942,7 @@
     <property name="meta.media.top_field_first">0</property>
     <property name="meta.media.progressive">1</property>
     <property name="shotcut:caption">Debug 2024.02.25 - 11.32.09.03.mp4</property>
-    <property name="video_delay">0.05</property>
+    <property name="video_delay">0.12</property>
   </chain>
   <chain id="chain15" out="00:09:39.146">
     <property name="length">00:09:39.163</property>
@@ -1176,7 +1190,7 @@
     <property name="meta.media.top_field_first">0</property>
     <property name="meta.media.progressive">1</property>
     <property name="shotcut:caption">Debug 2024.02.25 - 11.32.09.03.mp4</property>
-    <filter id="filter1" in="00:09:20.145" out="00:09:27.424">
+    <filter id="filter2" in="00:09:20.145" out="00:09:27.424">
       <property name="start">1</property>
       <property name="level">00:00:03.281=1;00:00:07.279=0</property>
       <property name="mlt_service">brightness</property>
@@ -1184,7 +1198,7 @@
       <property name="alpha">1</property>
       <property name="shotcut:animOut">00:00:04.015</property>
     </filter>
-    <filter id="filter2" in="00:09:20.145" out="00:09:27.424">
+    <filter id="filter3" in="00:09:20.145" out="00:09:27.424">
       <property name="window">75</property>
       <property name="max_gain">20dB</property>
       <property name="level">00:00:02.290=0;00:00:07.279=-60</property>
@@ -1279,7 +1293,7 @@
     <property name="meta.media.top_field_first">0</property>
     <property name="meta.media.progressive">1</property>
     <property name="warp_pitch">1</property>
-    <filter id="filter3" in="00:00:16.113" out="00:00:28.877">
+    <filter id="filter4" in="00:00:16.113" out="00:00:28.877">
       <property name="start">1</property>
       <property name="level">00:00:00.000=0;00:00:00.991=1</property>
       <property name="mlt_service">brightness</property>
@@ -1287,7 +1301,7 @@
       <property name="alpha">1</property>
       <property name="shotcut:animIn">00:00:01.008</property>
     </filter>
-    <filter id="filter4" in="00:00:16.113" out="00:00:28.877">
+    <filter id="filter5" in="00:00:16.113" out="00:00:28.877">
       <property name="start">1</property>
       <property name="level">00:00:11.773=1;00:00:12.764=0</property>
       <property name="mlt_service">brightness</property>
@@ -1324,7 +1338,7 @@
     <property name="xml">was here</property>
     <property name="shotcut:hash">cc2e708f6e083e84eef8b6c6ff3498cd</property>
     <property name="shotcut:caption">Melodía.wav</property>
-    <filter id="filter5" out="00:00:49.996">
+    <filter id="filter6" out="00:00:49.996">
       <property name="window">75</property>
       <property name="max_gain">20dB</property>
       <property name="level">00:00:49.005=0;00:00:49.996=-60</property>
@@ -1361,7 +1375,7 @@
     <property name="xml">was here</property>
     <property name="shotcut:hash">924ccde87c371d913987a88feaad702b</property>
     <property name="shotcut:caption">Percusión.wav</property>
-    <filter id="filter6" out="00:00:13.704">
+    <filter id="filter7" out="00:00:13.704">
       <property name="window">75</property>
       <property name="max_gain">20dB</property>
       <property name="level">00:00:00.000=-60;00:00:01.999=0</property>
@@ -1417,7 +1431,7 @@
     <property name="xml">was here</property>
     <property name="shotcut:hash">924ccde87c371d913987a88feaad702b</property>
     <property name="shotcut:caption">Percusión.wav</property>
-    <filter id="filter7" out="00:00:03.862">
+    <filter id="filter8" out="00:00:03.862">
       <property name="window">75</property>
       <property name="max_gain">20dB</property>
       <property name="level">00:00:00.000=0;00:00:03.862=-60</property>
@@ -1451,7 +1465,7 @@
     <property name="shotcut:hash">ee5277126278c177a6e4e6bdcf33d39d</property>
     <property name="shotcut:caption">Ícono.png</property>
     <property name="meta.shotcut.vui">1</property>
-    <filter id="filter8" out="00:00:03.161">
+    <filter id="filter9" out="00:00:03.161">
       <property name="start">1</property>
       <property name="level">00:00:00.000=0;00:00:00.991=1</property>
       <property name="mlt_service">brightness</property>
@@ -1459,7 +1473,7 @@
       <property name="alpha">1</property>
       <property name="shotcut:animIn">00:00:01.008</property>
     </filter>
-    <filter id="filter9" out="00:00:03.161">
+    <filter id="filter10" out="00:00:03.161">
       <property name="start">1</property>
       <property name="level">00:00:03.007=1;00:00:03.161=0</property>
       <property name="mlt_service">brightness</property>
@@ -1467,7 +1481,7 @@
       <property name="alpha">1</property>
       <property name="shotcut:animOut">00:00:00.171</property>
     </filter>
-    <filter id="filter10" out="00:00:03.161">
+    <filter id="filter11" out="00:00:03.161">
       <property name="background">color:#00000000</property>
       <property name="mlt_service">affine</property>
       <property name="shotcut:filter">affineSizePosition</property>
@@ -1497,7 +1511,7 @@
     <property name="xml">was here</property>
     <property name="shotcut:hash">df7b4de8cc8e3332a89a011045929e5a</property>
     <property name="shotcut:caption">Promocional.png</property>
-    <filter id="filter11" out="00:00:04.989">
+    <filter id="filter12" out="00:00:04.989">
       <property name="start">1</property>
       <property name="level">00:00:00.000=0;00:00:00.991=1</property>
       <property name="mlt_service">brightness</property>
@@ -1505,7 +1519,7 @@
       <property name="alpha">1</property>
       <property name="shotcut:animIn">00:00:01.008</property>
     </filter>
-    <filter id="filter12" out="00:00:04.989">
+    <filter id="filter13" out="00:00:04.989">
       <property name="start">1</property>
       <property name="level">00:00:03.998=1;00:00:04.989=0</property>
       <property name="mlt_service">brightness</property>
@@ -1526,7 +1540,7 @@
     <property name="shotcut:projectAudioChannels">2</property>
     <property name="shotcut:projectFolder">0</property>
     <property name="shotcut:skipConvert">0</property>
-    <property name="shotcut:scaleFactor">0.466534</property>
+    <property name="shotcut:scaleFactor">1.96313</property>
     <track producer="background"/>
     <track producer="playlist0"/>
     <track producer="playlist1"/>
