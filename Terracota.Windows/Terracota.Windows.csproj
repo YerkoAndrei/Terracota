@@ -12,10 +12,12 @@
 
     <!-- Force msbuild to check to rebuild this assembly instead of letting VS IDE guess -->
     <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
-    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
     
-    <!--Nombre simple en Release-->
-    <AssemblyName Condition=" '$(Configuration)' == 'Release' ">Terracota</AssemblyName>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <SelfContained>true</SelfContained>
+    
+    <!--Nombre ejecutable-->
+    <AssemblyName>Terracota</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
