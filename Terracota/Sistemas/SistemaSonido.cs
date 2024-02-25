@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using Stride.Engine;
 using Stride.Audio;
-using Stride.Media;
 using Stride.Core.Mathematics;
 
 namespace Terracota;
