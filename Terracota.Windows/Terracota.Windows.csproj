@@ -16,7 +16,7 @@
     <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
     <SelfContained>true</SelfContained>
     
-    <!--Nombre ejecutable-->
+    <!-- Nombre ejecutable -->
     <AssemblyName>Terracota</AssemblyName>
   </PropertyGroup>
 
@@ -24,7 +24,7 @@
     <ProjectReference Include="..\Terracota\Proyecto.csproj" />
   </ItemGroup>
 
-  <!--Borra archivos innecesarios-->
+  <!-- Borra archivos innecesarios -->
   <Target Name="PostPublish" AfterTargets="Publish">
     <ItemGroup>
       <Borrar Include="$(PublishDir)*.pdb" />
