@@ -1,7 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Silk.NET.OpenXR;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.UI;
