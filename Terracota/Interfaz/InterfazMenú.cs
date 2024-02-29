@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Stride.Core.Mathematics;
@@ -318,7 +319,8 @@ public class InterfazMenú : StartupScript
             return;
 
         SistemaRed.ForzarCierreConexión();
-        Game.Window.Visible = false;
-        ((Game)Game).Exit();
+
+        //((Game)Game).Exit();
+        Environment.Exit(0);
     }
 }
