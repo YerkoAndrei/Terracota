@@ -14,7 +14,8 @@ namespace Terracota
                 // Primer inicio
                 if (!SistemaMemoria.ObtenerExistenciaArchivo())
                 {
-                    var alto = (int)SystemParameters.FullPrimaryScreenHeight;
+                    // 63 = barra de título
+                    var alto = (int)SystemParameters.FullPrimaryScreenHeight + 63;
                     var ancho = (int)SystemParameters.FullPrimaryScreenWidth;
                     SistemaMemoria.EstablecerConfiguraciónPredeterminada(ancho, alto);
                 }
