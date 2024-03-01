@@ -3148,27 +3148,6 @@ Hierarchy:
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
-        -   UIElement: !TextBlock
-                Id: 63f93d62-3114-424d-aa48-d4a0b0f7358e
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 700.0
-                Height: 25.0
-                HorizontalAlignment: Left
-                VerticalAlignment: Bottom
-                Margin: {Left: 20.0, Bottom: 40.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: txtInfoRed0
-                Text: '* Velocidad de red debe ser igual o menor que los FPS'
-                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
-                TextSize: 20.0
-                TextColor: {R: 240, G: 220, B: 160, A: 240}
-            Base:
-                BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
-                BasePartId: 2481d31f-ec59-4d79-bcb0-46e6ed7d7869
-                InstanceId: d0a7982e-c079-4805-b2f7-5f455de52f91
         -   UIElement: !ImageElement
                 Id: 64cd9f42-584f-48e0-aefb-43d3191ebcf3
                 DependencyProperties:
@@ -4744,7 +4723,6 @@ Hierarchy:
                 Children:
                     43fbb8b1b0286a90b6c6e4e796849bc5: !UniformGrid ref!! 1210b091-1d47-45fe-a35a-1c8d9356a05b
                     7cbaa71c9e4652077b5374bed74e4bb4: !UniformGrid ref!! 33b5558d-a159-4374-b86a-61332b91c762
-                    b841e8223f8460d7e7539db0391060cd: !TextBlock ref!! 63f93d62-3114-424d-aa48-d4a0b0f7358e
                     ec454e320c67eff96986962d84ee1901: !TextBlock ref!! b8c098b9-bcd0-4e1c-accb-737d45041546
                 RowDefinitions: {}
                 ColumnDefinitions: {}
@@ -5709,8 +5687,8 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: txtInfoRed1
-                Text: "* Diferencias de red pueden causar errores visuales en huésped"
+                Name: txtInfoRed
+                Text: '* Velocidad de red debe ser igual o menor que los FPS'
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
                 TextSize: 20.0
                 TextColor: {R: 240, G: 220, B: 160, A: 240}

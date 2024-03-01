@@ -1675,27 +1675,6 @@ Hierarchy:
                 TextSize: 40.0
                 TextColor: {R: 240, G: 220, B: 160, A: 240}
                 TextAlignment: Center
-        -   UIElement: !TextBlock
-                Id: 377c436a-d802-4fd6-8847-73d718895527
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 700.0
-                Height: 25.0
-                HorizontalAlignment: Left
-                VerticalAlignment: Bottom
-                Margin: {Left: 20.0, Bottom: 40.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: txtInfoRed0
-                Text: '* Velocidad de red debe ser igual o menor que los FPS'
-                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
-                TextSize: 20.0
-                TextColor: {R: 240, G: 220, B: 160, A: 240}
-            Base:
-                BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
-                BasePartId: 2481d31f-ec59-4d79-bcb0-46e6ed7d7869
-                InstanceId: 66d2d650-a174-4fe6-be76-419fc6f27a58
         -   UIElement: !UniformGrid
                 Id: 38b46441-d083-4b88-b920-5b4a320580cc
                 DependencyProperties:
@@ -5605,8 +5584,8 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: txtInfoRed1
-                Text: "* Diferencias de red pueden causar errores visuales en huésped"
+                Name: txtInfoRed
+                Text: '* Velocidad de red debe ser igual o menor que los FPS'
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
                 TextSize: 20.0
                 TextColor: {R: 240, G: 220, B: 160, A: 240}
@@ -6824,7 +6803,6 @@ Hierarchy:
                 Children:
                     43fbb8b1b0286a90b6c6e4e796849bc5: !UniformGrid ref!! 27363952-6f9b-4730-ac7c-afbc33641064
                     7cbaa71c9e4652077b5374bed74e4bb4: !UniformGrid ref!! d638ad86-d955-4ade-9ad8-ea1b3016e1f1
-                    b841e8223f8460d7e7539db0391060cd: !TextBlock ref!! 377c436a-d802-4fd6-8847-73d718895527
                     ec454e320c67eff96986962d84ee1901: !TextBlock ref!! d31c5a1f-0eb6-4a5a-a7b8-b0aaa7ce2ad9
                 RowDefinitions: {}
                 ColumnDefinitions: {}
