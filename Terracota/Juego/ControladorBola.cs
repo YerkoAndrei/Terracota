@@ -130,7 +130,9 @@ public class ControladorBola : AsyncScript
         }
 
         await Task.Delay(duración);
-        await Guardar();
+
+        if (activo)
+            await Guardar();
     }
 
     private async Task Guardar()
@@ -165,7 +167,7 @@ public class ControladorBola : AsyncScript
 
         Entity.Transform.Scale = Vector3.Zero;
         Entity.Transform.Position = posiciónInicial - Vector3.UnitY;
-        await Task.Delay(2);
+        await Task.Delay(1);
     }
 
     public float ObtenerMayorFuerzaLinearNormalizada()
