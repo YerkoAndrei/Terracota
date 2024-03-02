@@ -1,7 +1,7 @@
 # Terracota
 <img src="https://img.itch.zone/aW1nLzE1MTcwNTI3LnBuZw==/original/7cqxE%2B.png" height="128" width="128">
 
-<b>Derrota a tus enemigos con tus fortalezas y cañón</b>
+<b>¡Derrota a tus enemigos con tus fortalezas y cañón!</b>
 <br>
 <br>
 
