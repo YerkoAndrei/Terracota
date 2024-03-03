@@ -228,7 +228,7 @@ public class InterfazMenú : StartupScript
                 solicitud = SistemaTraducción.ObtenerTraducción("anfitrión");
                 break;
             case TipoJugador.huésped:
-                solicitud = SistemaTraducción.ObtenerTraducción("Huésped");
+                solicitud = SistemaTraducción.ObtenerTraducción("huésped");
                 break;
         }
 
