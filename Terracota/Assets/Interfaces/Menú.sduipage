@@ -99,8 +99,8 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: "txtTítuloRemoto"
-                Text: "Conexión Remota"
+                Name: "txtTítuloLAN"
+                Text: "Conexión LAN"
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
                 TextSize: 40.0
                 TextColor: {R: 240, G: 220, B: 160, A: 240}
@@ -863,7 +863,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: "txtConexiónRemota"
+                Name: "txtConexiónLAN"
                 Padding: {Left: 8.0, Top: 4.0, Right: 8.0, Bottom: 24.0}
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
                 TextSize: 25.0
@@ -1186,25 +1186,6 @@ Hierarchy:
                 BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
                 BasePartId: b717e58f-a477-476a-bf66-75feffa9348b
                 InstanceId: d0a7982e-c079-4805-b2f7-5f455de52f91
-        -   UIElement: !TextBlock
-                Id: 1ff3280e-e419-489f-9a45-06c328c06818
-                DependencyProperties:
-                    85211e90f0e1aae8c90a45b924f7cec9~Panel.ZIndexPropertyKey: 1
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 200.0
-                Height: 30.0
-                HorizontalAlignment: Right
-                VerticalAlignment: Bottom
-                Margin: {Right: 20.0, Bottom: 130.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: txtGlobalActual
-                Text: 000.000.000.000
-                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
-                TextSize: 25.0
-                TextColor: {R: 240, G: 220, B: 160, A: 240}
-                TextAlignment: Right
         -   UIElement: !ImageElement
                 Id: 20a3e299-ee45-4c8b-904e-fd006ebde7c5
                 DependencyProperties:
@@ -1388,14 +1369,12 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: animRemoto
+                Name: animLAN
                 Children:
                     f5b7bd399ee574dd91783cd716f99694: !Grid ref!! 5cf147ef-dc71-45b5-a1f9-3d753495118e
                     1ed6c957c5b0e29e9b0e4c6c2e7576ea: !TextBlock ref!! 01aebeb3-f4b6-4c3f-b374-377e3c484736
                     024ddec824151a5b63ee9d293ce90c2d: !TextBlock ref!! 4614393b-314e-4bc9-8227-f685aa2181e7
                     14df32659b6588ca6e1164f7db29d28a: !TextBlock ref!! effa766c-b0f2-4cd4-9262-833cdfbd3406
-                    1bfb3f11a3e66bcfc08e3e572cfd159b: !TextBlock ref!! 5da2a9fc-4787-4c39-9a96-b69abd0a7a3f
-                    22a20f8a251b7945ad217b8f4c5b64d7: !TextBlock ref!! 1ff3280e-e419-489f-9a45-06c328c06818
                     80f2fb12520e6beb7cd2d7497c0eb9b6: !TextBlock ref!! f9339b3d-9575-41de-ac2c-c3f522ac7005
                     68d6b409c4160189d56c6ced59072c56: !TextBlock ref!! fa23ed63-8193-4b2a-98d5-6fce533dfa47
                     94c603df33bae4346bbf36aa10f2dabd: !Grid ref!! 7269a289-ace7-48cd-bd9b-a4b6d401948d
@@ -2189,13 +2168,13 @@ Hierarchy:
                 Width: 200.0
                 Height: 30.0
                 HorizontalAlignment: Right
-                VerticalAlignment: Top
-                Margin: {Top: 120.0, Right: 20.0}
+                VerticalAlignment: Center
+                Margin: {Right: 20.0, Bottom: 60.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: txtRedLocal
-                Text: 'Local:'
+                Text: 'IP Local:'
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
                 TextSize: 25.0
                 TextColor: {R: 240, G: 220, B: 160, A: 240}
@@ -2922,25 +2901,6 @@ Hierarchy:
                 BasePartAsset: ee132879-667a-4998-acd9-115a4f25fff6:Interfaces/Librerias/Opciones
                 BasePartId: dddc2bde-ddb5-4209-848c-f37dd351a22f
                 InstanceId: d0a7982e-c079-4805-b2f7-5f455de52f91
-        -   UIElement: !TextBlock
-                Id: 5da2a9fc-4787-4c39-9a96-b69abd0a7a3f
-                DependencyProperties:
-                    85211e90f0e1aae8c90a45b924f7cec9~Panel.ZIndexPropertyKey: 1
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Width: 200.0
-                Height: 30.0
-                HorizontalAlignment: Right
-                VerticalAlignment: Bottom
-                Margin: {Right: 20.0, Bottom: 160.0}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Name: txtRedGlobal
-                Text: 'Global:'
-                Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
-                TextSize: 25.0
-                TextColor: {R: 240, G: 220, B: 160, A: 240}
-                TextAlignment: Right
         -   UIElement: !Button
                 Id: 5fb3ec8b-6aa1-4950-b3f9-1b4ae39ea9fc
                 DependencyProperties: {}
@@ -4004,7 +3964,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name*: btnRemoto
+                Name*: btnLAN
                 Children:
                     6b48d72e3f217444851a50ff9e544e33: !Button ref!! 5fb3ec8b-6aa1-4950-b3f9-1b4ae39ea9fc
                     7dc0800956523c71fb047a89e1600016: !ImageElement ref!! c479932c-be1e-427b-abd0-ee32635086f3
@@ -4780,8 +4740,8 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name*: txtRemoto
-                Text*: Remoto
+                Name*: txtLAN
+                Text*: LAN
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
                 TextSize: 25.0
                 TextColor*: {R: 0, G: 0, B: 0, A: 255}
@@ -5249,7 +5209,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: btnRemotoVolver
+                Name: btnLANVolver
                 Children:
                     6b48d72e3f217444851a50ff9e544e33: !Button ref!! 6af0a8e7-bd56-4d76-8fb6-92db7ab5665e
                     7dc0800956523c71fb047a89e1600016: !ImageElement ref!! bc56e8f1-01c8-4ea7-914e-2dfe9e6f7fa7
@@ -5423,7 +5383,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: "ConexiónRemota"
+                Name: "ConexiónLAN"
                 Children:
                     bc846d80f9c37b62945c5f1e6d8f94e3: !Button ref!! b6cb719f-0f00-4f3e-884f-48bc7b07c80a
                     1d12ad0f23e22811ab9cc5ee03ff3c34: !Grid ref!! 253f3df2-b8a2-4df5-bb9f-dcd67d8ae6b9
@@ -5610,7 +5570,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name: PanelOscuroRemoto
+                Name: PanelOscuroLAN
         -   UIElement: !Grid
                 Id: b7d71454-12b4-4d41-a289-a883b91ca859
                 DependencyProperties:
@@ -6021,7 +5981,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
-                Name*: txtRemotoVolver
+                Name*: txtLANVolver
                 Text*: Volver
                 Font: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool
                 TextSize: 25.0
@@ -7568,8 +7528,7 @@ Hierarchy:
                 Width: 200.0
                 Height: 30.0
                 HorizontalAlignment: Right
-                VerticalAlignment: Top
-                Margin: {Top: 150.0, Right: 20.0}
+                Margin: {Right: 20.0}
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38

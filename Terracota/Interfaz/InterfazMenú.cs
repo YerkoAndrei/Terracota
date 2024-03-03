@@ -24,8 +24,8 @@ public class InterfazMenú : StartupScript
     private UIElement página;
     private Grid Opciones;
     private Grid animOpciones;
-    private Grid animRemoto;
-    private Grid gridRemoto;
+    private Grid animLAN;
+    private Grid gridLAN;
 
     private Grid popupInvitación;
     private Grid animInvitación;
@@ -40,7 +40,7 @@ public class InterfazMenú : StartupScript
     private Conexión conexiónPendiente;
     private TextBlock txtDatosInvitación;
 
-    private EditText txtConexiónRemota;
+    private EditText txtConexiónLAN;
     private TextBlock txtErrorConexión;
     private Grid btnComoAnfitrión;
     private Grid btnComoHuésped;
@@ -59,36 +59,36 @@ public class InterfazMenú : StartupScript
         animOpciones = página.FindVisualChildOfType<Grid>("animOpciones");
 
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnLocal"), EnClicLocal);
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnRemoto"), EnClicRemoto);
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnLAN"), EnClicLAN);
 
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnCrear"), EnClicCrear);
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnOpciones"), EnClicOpciones);
         ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnSalir"), EnClicSalir);
 
         ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("btnCréditos"), EnClicCréditos);
-        ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("PanelOscuroRemoto"), CerrarPaneles);
+        ConfigurarBotónOculto(página.FindVisualChildOfType<Button>("PanelOscuroLAN"), CerrarPaneles);
 
         // Conexión
-        gridRemoto = página.FindVisualChildOfType<Grid>("ConexiónRemota");
-        animRemoto = página.FindVisualChildOfType<Grid>("animRemoto");
-        gridRemoto.Visibility = Visibility.Hidden;
+        gridLAN = página.FindVisualChildOfType<Grid>("ConexiónLAN");
+        animLAN = página.FindVisualChildOfType<Grid>("animLAN");
+        gridLAN.Visibility = Visibility.Hidden;
 
-        txtConexiónRemota = página.FindVisualChildOfType<EditText>("txtConexiónRemota");
-        txtConexiónRemota.TextChanged += VerificarFuente;
+        txtConexiónLAN = página.FindVisualChildOfType<EditText>("txtConexiónLAN");
+        txtConexiónLAN.TextChanged += VerificarFuente;
 
-        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnRemotoVolver"), CerrarPaneles);
+        ConfigurarBotón(página.FindVisualChildOfType<Grid>("btnLANVolver"), CerrarPaneles);
 
-        // Remoto
-        txtConexiónRemota = página.FindVisualChildOfType<EditText>("txtConexiónRemota");
-        txtConexiónRemota.Text = string.Empty;
+        // LAN
+        txtConexiónLAN = página.FindVisualChildOfType<EditText>("txtConexiónLAN");
+        txtConexiónLAN.Text = string.Empty;
 
         txtErrorConexión = página.FindVisualChildOfType<TextBlock>("txtErrorConexión");
         txtErrorConexión.Text = string.Empty;
 
         btnComoAnfitrión = página.FindVisualChildOfType<Grid>("btnComoAnfitrión");
         btnComoHuésped = página.FindVisualChildOfType<Grid>("btnComoHuésped");
-        ConfigurarBotón(btnComoAnfitrión, () => { EnClicConectarRemoto(TipoJugador.anfitrión); });
-        ConfigurarBotón(btnComoHuésped, () => { EnClicConectarRemoto(TipoJugador.huésped); });
+        ConfigurarBotón(btnComoAnfitrión, () => { EnClicConectarLAN(TipoJugador.anfitrión); });
+        ConfigurarBotón(btnComoHuésped, () => { EnClicConectarLAN(TipoJugador.huésped); });
 
         // Invitación
         popupInvitación = página.FindVisualChildOfType<Grid>("PopupInvitación");
@@ -126,31 +126,30 @@ public class InterfazMenú : StartupScript
     {
         // Solo números y puntos
         string regex = @"[^0-9.]";
-        txtConexiónRemota.Text = Regex.Replace(txtConexiónRemota.Text, regex, "");
+        txtConexiónLAN.Text = Regex.Replace(txtConexiónLAN.Text, regex, "");
 
-        var fuente = SistemaTraducción.VerificarFuente(txtConexiónRemota.Text);
+        var fuente = SistemaTraducción.VerificarFuente(txtConexiónLAN.Text);
 
-        if (txtConexiónRemota.Font != fuente)
-            txtConexiónRemota.Font = fuente;
+        if (txtConexiónLAN.Font != fuente)
+            txtConexiónLAN.Font = fuente;
     }
 
-    private void EnClicRemoto()
+    private void EnClicLAN()
     {
         if (animando)
             return;
 
-        página.FindVisualChildOfType<TextBlock>("txtLocalActual").Text = SistemaRed.ObtenerIP(TipoConexión.local);
-        página.FindVisualChildOfType<TextBlock>("txtGlobalActual").Text = SistemaRed.ObtenerIP(TipoConexión.global);
+        página.FindVisualChildOfType<TextBlock>("txtLocalActual").Text = SistemaRed.ObtenerIPLocal();
 
         animando = true;
-        gridRemoto.Visibility = Visibility.Visible;
-        SistemaAnimación.AnimarElemento(animRemoto, 0.2f, true, Direcciones.arriba, TipoCurva.rápida, () =>
+        gridLAN.Visibility = Visibility.Visible;
+        SistemaAnimación.AnimarElemento(animLAN, 0.2f, true, Direcciones.arriba, TipoCurva.rápida, () =>
         {
             animando = false;
         });
     }
 
-    private async void EnClicConectarRemoto(TipoJugador tipoJugador)
+    private async void EnClicConectarLAN(TipoJugador tipoJugador)
     {
         if (animando)
             return;
@@ -160,7 +159,7 @@ public class InterfazMenú : StartupScript
         BloquearBotón(btnComoHuésped, true);
 
         // Reconoce si es dirección ip
-        if(!SistemaRed.ValidarDirección(txtConexiónRemota.Text))
+        if(!SistemaRed.ValidarDirección(txtConexiónLAN.Text))
         {
             txtErrorConexión.Text = SistemaTraducción.ObtenerTraducción("errorIp");
             BloquearBotón(btnComoAnfitrión, false);
@@ -168,13 +167,8 @@ public class InterfazMenú : StartupScript
             return;
         }
 
-        // Identifica IP local
-        var tipoConexión = TipoConexión.global;
-        if (SistemaRed.IdentificarRedLocal(txtConexiónRemota.Text))
-            tipoConexión = TipoConexión.local;
-
-        if ((tipoConexión == TipoConexión.local && txtConexiónRemota.Text == SistemaRed.ObtenerIP(TipoConexión.local) )||
-            (tipoConexión == TipoConexión.global && txtConexiónRemota.Text == SistemaRed.ObtenerIP(TipoConexión.global)))
+        // Reconoce que no sea la misma
+        if (txtConexiónLAN.Text == SistemaRed.ObtenerIPLocal())
         {
             txtErrorConexión.Text = SistemaTraducción.ObtenerTraducción("errorIp");
             BloquearBotón(btnComoAnfitrión, false);
@@ -183,12 +177,12 @@ public class InterfazMenú : StartupScript
         }
 
         // Conexión
-        var resultado = await SistemaRed.ConectarDispositivo(txtConexiónRemota.Text, tipoConexión, tipoJugador, true);
+        var resultado = await SistemaRed.ConectarDispositivo(txtConexiónLAN.Text, tipoJugador, true);
 
         if (string.IsNullOrEmpty(resultado))
         {
             // Esperando
-            txtEsperando.Text = string.Format(SistemaTraducción.ObtenerTraducción("esperando"), txtConexiónRemota.Text);
+            txtEsperando.Text = string.Format(SistemaTraducción.ObtenerTraducción("esperando"), txtConexiónLAN.Text);
 
             SistemaAnimación.AnimarElemento(animInvitación, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, () =>
             {
@@ -244,7 +238,7 @@ public class InterfazMenú : StartupScript
             BloquearBotón(btnSí, true);
             BloquearBotón(btnNo, true);
 
-            var resultado =  await SistemaRed.ConectarDispositivo(conexiónPendiente.IP, conexiónPendiente.TipoConexión, conexiónPendiente.ConectarComo, false);
+            var resultado =  await SistemaRed.ConectarDispositivo(conexiónPendiente.IP, conexiónPendiente.ConectarComo, false);
 
             // Abre panel y muestra error
             if (string.IsNullOrEmpty(resultado))
@@ -252,7 +246,7 @@ public class InterfazMenú : StartupScript
             else
             {
                 txtErrorConexión.Text = SistemaTraducción.ObtenerTraducción(resultado);
-                txtConexiónRemota.Text = conexiónPendiente.IP;
+                txtConexiónLAN.Text = conexiónPendiente.IP;
                 CerrarInvitación(false);
             }
         }
@@ -268,12 +262,12 @@ public class InterfazMenú : StartupScript
         animando = true;
         txtErrorConexión.Text = string.Empty;
 
-        if (gridRemoto.Visibility == Visibility.Visible)
+        if (gridLAN.Visibility == Visibility.Visible)
         {
-            SistemaAnimación.AnimarElemento(animRemoto, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, () =>
+            SistemaAnimación.AnimarElemento(animLAN, 0.2f, false, Direcciones.arriba, TipoCurva.rápida, () =>
             {
                 animando = false;
-                gridRemoto.Visibility = Visibility.Hidden;
+                gridLAN.Visibility = Visibility.Hidden;
             });
         }
     }
