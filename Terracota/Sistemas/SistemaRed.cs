@@ -106,9 +106,6 @@ public class SistemaRed : StartupScript
 
             udp = new UdpClient(puerto);
             remoto = new IPEndPoint(IPAddress.Parse(ip), puerto);
-
-            udp.AllowNatTraversal(true);
-            udp.Client.SetIPProtectionLevel(IPProtectionLevel.Unrestricted);
             udp.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);            
 
             udp.Connect(remoto);
@@ -467,11 +464,7 @@ public class SistemaRed : StartupScript
             remoto = new IPEndPoint(IPAddress.Any, puerto);
             udp = new UdpClient(remoto);
 
-            udp.AllowNatTraversal(true);
-            udp.Client.SetIPProtectionLevel(IPProtectionLevel.Unrestricted);
             udp.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
-
-            udp.Connect(remoto);
             return true;
         }
         catch
