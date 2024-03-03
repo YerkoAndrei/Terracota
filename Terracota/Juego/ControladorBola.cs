@@ -168,7 +168,9 @@ public class ControladorBola : AsyncScript
 
         Entity.Transform.Scale = Vector3.Zero;
         Entity.Transform.Position = posiciónInicial - Vector3.UnitY;
-        await Task.Delay(2);
+
+        // Espera lerp
+        await Task.Delay(3);
     }
 
     public float ObtenerMayorFuerzaLinearNormalizada()
