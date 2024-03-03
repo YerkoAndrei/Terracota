@@ -313,7 +313,6 @@ public class InterfazMenú : StartupScript
             return;
 
         SistemaRed.ForzarCierreConexión();
-
-        ((Game)Game).Exit();
+        Environment.Exit(0);
     }
 }
