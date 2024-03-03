@@ -69,7 +69,7 @@ public class ControladorBola : AsyncScript
     public async void Disparar(Vector3 posición, Vector3 rotación, float aleatorio, Vector3 fuerza)
     {
         // Espera posible diferencia
-        if(activo)
+        if (activo)
             await Ocultar();
 
         activo = true;
@@ -129,10 +129,11 @@ public class ControladorBola : AsyncScript
             duración -= (tiempoGuardado + 200);
         }
 
-        await Task.Delay(duración);
-
         if (activo)
+        {
+            await Task.Delay(duración);
             await Guardar();
+        }
     }
 
     private async Task Guardar()
@@ -167,7 +168,7 @@ public class ControladorBola : AsyncScript
 
         Entity.Transform.Scale = Vector3.Zero;
         Entity.Transform.Position = posiciónInicial - Vector3.UnitY;
-        await Task.Delay(1);
+        await Task.Delay(2);
     }
 
     public float ObtenerMayorFuerzaLinearNormalizada()
