@@ -125,9 +125,12 @@ public class SistemaRed : StartupScript
 
             udp = new UdpClient(puerto);
             remoto = new IPEndPoint(IPAddress.Parse(ip), puerto);
-            udp.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
 
-            udp.Connect(ip, puerto);
+            udp.AllowNatTraversal(true);
+            udp.Client.SetIPProtectionLevel(IPProtectionLevel.Unrestricted);
+            udp.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);            
+
+            udp.Connect(remoto);
 
             var correcto = false;
             if (contactar)
@@ -502,6 +505,9 @@ public class SistemaRed : StartupScript
 
             udp = new UdpClient(puerto);
             remoto = new IPEndPoint(IPAddress.Any, puerto);
+
+            // Recibe todo
+            udp.Connect(remoto);
             return true;
         }
         catch
