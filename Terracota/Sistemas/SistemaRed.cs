@@ -123,8 +123,8 @@ public class SistemaRed : StartupScript
             if (udp != null)
                 udp.Close();
 
+            udp = new UdpClient(puerto);
             remoto = new IPEndPoint(IPAddress.Parse(ip), puerto);
-            udp = new UdpClient(remoto);
 
             udp.AllowNatTraversal(true);
             udp.Client.SetIPProtectionLevel(IPProtectionLevel.Unrestricted);
@@ -503,8 +503,8 @@ public class SistemaRed : StartupScript
             if(udp != null)
                 udp.Close();
 
+            udp = new UdpClient(puerto);
             remoto = new IPEndPoint(IPAddress.Any, puerto);
-            udp = new UdpClient(remoto);
 
             udp.AllowNatTraversal(true);
             udp.Client.SetIPProtectionLevel(IPProtectionLevel.Unrestricted);
