@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
-using System.Net.Http;
 using System.Timers;
 using System.Diagnostics;
 using Stride.Engine;
@@ -18,7 +17,6 @@ public class SistemaRed : StartupScript
     private static TipoJugador tipoJugador;
 
     private static string IPLocalActual;
-    private static string IPPúblicaActual;
     private static string IPConectada;
 
     // UDP P2P
@@ -73,7 +71,7 @@ public class SistemaRed : StartupScript
         }
     }
 
-    private static async void ObtenerIPs()
+    private static void ObtenerIPs()
     {
         // Local, última encontrada
         var IPSv4 = Dns.GetHostEntry(Dns.GetHostName()).AddressList.Where(o => o.AddressFamily == AddressFamily.InterNetwork).ToArray();
@@ -96,26 +94,9 @@ public class SistemaRed : StartupScript
         }
         else
             IPLocalActual = "NO IP";
-
-        // Global
-        var cliente = new HttpClient();
-        string[] APIs = { "https://api.seeip.org/", "https://api.ipify.org/" };
-        foreach (var ip in APIs)
-        {
-            try
-            {
-                var respuesta = await cliente.GetStringAsync(ip);
-                IPPúblicaActual = respuesta;
-                break;
-            }
-            catch
-            {
-                IPPúblicaActual = "NO IP";
-            }
-        }
     }
 
-    public static async Task<string> ConectarDispositivo(string ip, TipoConexión tipoConexión, TipoJugador conectarLocalComo, bool contactar)
+    public static async Task<string> ConectarDispositivo(string ip, TipoJugador conectarLocalComo, bool contactar)
     {
         try
         {
@@ -135,18 +116,6 @@ public class SistemaRed : StartupScript
             var correcto = false;
             if (contactar)
             {
-                // Datos conexión
-                var miIP = string.Empty;
-                switch (tipoConexión)
-                {
-                    case TipoConexión.local:
-                        miIP = IPLocalActual;
-                        break;
-                    case TipoConexión.global:
-                        miIP = IPPúblicaActual;
-                        break;
-                }
-
                 // Contrario en remoto
                 var conectarRemotoComo = conectarLocalComo;
                 switch (conectarLocalComo)
@@ -161,8 +130,8 @@ public class SistemaRed : StartupScript
 
                 var conexión = new Conexión
                 {
-                    IP = miIP,
-                    TipoConexión = tipoConexión,
+                    IP = IPLocalActual,
+                    TipoConexión = TipoConexión.local,
                     ConectarComo = conectarRemotoComo
                 };
 
@@ -430,17 +399,9 @@ public class SistemaRed : StartupScript
         CrearTemporizador();
     }
 
-    public static string ObtenerIP(TipoConexión tipoConexión)
+    public static string ObtenerIPLocal()
     {
-        switch (tipoConexión)
-        {
-            case TipoConexión.local:
-                return IPLocalActual;
-            case TipoConexión.global:
-                return IPPúblicaActual;
-            default:
-                return string.Empty;
-        }
+        return IPLocalActual;
     }
 
     public static TipoJugador ObtenerTipoJugador()
