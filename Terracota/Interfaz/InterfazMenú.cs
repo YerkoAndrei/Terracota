@@ -220,9 +220,20 @@ public class InterfazMenú : StartupScript
     {
         if (animando || conexiónPendiente != null)
             return;
-                
+
+        var solicitud = string.Empty;
+        switch(conexión.ConectarComo)
+        {
+            case TipoJugador.anfitrión:
+                solicitud = SistemaTraducción.ObtenerTraducción("anfitrión");
+                break;
+            case TipoJugador.huésped:
+                solicitud = SistemaTraducción.ObtenerTraducción("Huésped");
+                break;
+        }
+
         conexiónPendiente = conexión;
-        txtDatosInvitación.Text = string.Format(SistemaTraducción.ObtenerTraducción("datosConexión"), conexión.IP, conexión.ConectarComo.ToString());
+        txtDatosInvitación.Text = string.Format(SistemaTraducción.ObtenerTraducción("datosConexión"), conexión.IP, solicitud);
         popupInvitación.Visibility = Visibility.Visible;
 
         SistemaAnimación.AnimarElemento(animInvitación, 0.2f, true, Direcciones.arriba, TipoCurva.rápida, null);
