@@ -28,7 +28,7 @@ public class ControladorBola : AsyncScript
     public override async Task Execute()
     {
         cuerpo = Entity.Get<RigidbodyComponent>();
-        duraciónGuardado = 0.7f;
+        duraciónGuardado = 0.5f;
 
         // Valores iniciales
         posiciónInicial = Entity.Transform.Position;
@@ -121,13 +121,10 @@ public class ControladorBola : AsyncScript
     private async Task ContarVida()
     {
         // Duración según tipo de juego
-        // Remoto = (duraciónTurnoLocal - duraciónGuardado) - desface;
         var duración = duraciónTurnoLocal;
+
         if (SistemaRed.ObtenerJugando())
-        {
-            var tiempoGuardado = (int)(duraciónGuardado * 1000f);
-            duración -= (tiempoGuardado + 200);
-        }
+            duración = duraciónTurnoRemoto + 400;
 
         if (activo)
         {
@@ -141,14 +138,13 @@ public class ControladorBola : AsyncScript
         if (guardando) return;
         guardando = true;
 
-        float duraciónLerp = duraciónGuardado;
         float tiempoLerp = 0;
         float tiempo = 0;
 
         var inicial = Entity.Transform.Scale;
-        while (tiempoLerp < duraciónLerp && activo)
+        while (tiempoLerp < duraciónGuardado && activo)
         {
-            tiempo = SistemaAnimación.EvaluarRápido(tiempoLerp / duraciónLerp);
+            tiempo = SistemaAnimación.EvaluarRápido(tiempoLerp / duraciónGuardado);
 
             Entity.Transform.Scale = Vector3.Lerp(inicial, Vector3.Zero, tiempo);
             tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
@@ -163,14 +159,16 @@ public class ControladorBola : AsyncScript
     private async Task Ocultar()
     {
         activo = false;
+
         cuerpo.IsKinematic = true;
+        cuerpo.LinearVelocity = Vector3.Zero;
         cuerpo.Enabled = false;
 
         Entity.Transform.Scale = Vector3.Zero;
         Entity.Transform.Position = posiciónInicial - Vector3.UnitY;
 
         // Espera lerp
-        await Task.Delay(2);
+        await Task.Delay(3);
     }
 
     public float ObtenerMayorFuerzaLinearNormalizada()
