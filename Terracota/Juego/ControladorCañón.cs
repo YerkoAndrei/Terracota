@@ -7,8 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace Terracota;
+using static Utilidades;
 using static Constantes;
-using static Sistema;
 
 public class ControladorCañón : SyncScript
 {

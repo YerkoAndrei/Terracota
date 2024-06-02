@@ -9,7 +9,7 @@ using Stride.Core.Mathematics;
 using Stride.Input;
 
 namespace Terracota;
-using static Sistema;
+using static Utilidades;
 using static Constantes;
 
 public class InterfazJuego : SyncScript

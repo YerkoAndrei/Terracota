@@ -7,7 +7,7 @@ using Stride.Engine;
 using Newtonsoft.Json;
 
 namespace Terracota;
-using static Sistema;
+using static Utilidades;
 using static Constantes;
 
 public class SistemaMemoria : StartupScript

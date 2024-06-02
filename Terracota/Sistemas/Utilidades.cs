@@ -11,7 +11,7 @@ using Stride.UI.Panels;
 namespace Terracota;
 using static Constantes;
 
-public static class Sistema
+public static class Utilidades
 {
     private const string ISO8006 = "yyyy-MM-ddThh:mm:ss";
 

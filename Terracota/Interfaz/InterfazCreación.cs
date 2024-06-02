@@ -6,8 +6,8 @@ using Stride.UI.Events;
 using Stride.UI.Panels;
 
 namespace Terracota;
+using static Utilidades;
 using static Constantes;
-using static Sistema;
 
 public class InterfazCreación : StartupScript
 {

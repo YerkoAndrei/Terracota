@@ -8,7 +8,7 @@ using Stride.UI.Controls;
 using Stride.UI.Panels;
 
 namespace Terracota;
-using static Sistema;
+using static Utilidades;
 using static Constantes;
 
 public class InterfazElecciónRemota : StartupScript

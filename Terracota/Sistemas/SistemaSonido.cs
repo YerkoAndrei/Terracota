@@ -5,7 +5,7 @@ using Stride.Audio;
 using Stride.Core.Mathematics;
 
 namespace Terracota;
-using static Sistema;
+using static Utilidades;
 using static Constantes;
 
 public class SistemaSonido : StartupScript

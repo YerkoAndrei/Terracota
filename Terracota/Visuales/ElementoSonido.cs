@@ -6,7 +6,7 @@ using Stride.Engine;
 using Stride.Physics;
 
 namespace Terracota;
-using static Sistema;
+using static Utilidades;
 using static Constantes;
 
 public class ElementoSonido : AsyncScript

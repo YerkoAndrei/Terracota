@@ -9,7 +9,7 @@ using Stride.UI.Events;
 using System.Text.RegularExpressions;
 
 namespace Terracota;
-using static Sistema;
+using static Utilidades;
 using static Constantes;
 
 public class InterfazOpciones : StartupScript
@@ -517,6 +517,7 @@ public class InterfazOpciones : StartupScript
             animando = false;
         });
     }
+
     public void Ocultar()
     {
         if (Opciones.Visibility != Visibility.Visible)

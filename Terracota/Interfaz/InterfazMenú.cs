@@ -10,7 +10,7 @@ using Stride.UI.Events;
 using Stride.UI.Panels;
 
 namespace Terracota;
-using static Sistema;
+using static Utilidades;
 using static Constantes;
 
 public class InterfazMenú : StartupScript
