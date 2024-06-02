@@ -32,6 +32,24 @@
       <Borrar Include="$(PublishDir)*.xml" />
       <Borrar Include="$(PublishDir)*.json" />
       <Borrar Include="$(PublishDir)createdump.exe" />
+
+      <!-- DLLs que no se usan -->
+      <Borrar Include="$(PublishDir)avcodec-57.dll" />
+      <Borrar Include="$(PublishDir)avdevice-57.dll" />
+      <Borrar Include="$(PublishDir)avfilter-6.dll" />
+      <Borrar Include="$(PublishDir)avformat-57.dll" />
+      <Borrar Include="$(PublishDir)avutil-55.dll" />
+      <Borrar Include="$(PublishDir)d3dcompiler_47.dll" />
+      <Borrar Include="$(PublishDir)D3DCompiler_47_cor3.dll" />
+      <Borrar Include="$(PublishDir)microsoft.management.infrastructure.native.unmanaged.dll" />
+      <Borrar Include="$(PublishDir)openvr_api.dll" />
+      <Borrar Include="$(PublishDir)openxr_loader.dll" />
+      <Borrar Include="$(PublishDir)PenImc_cor3.dll" />
+      <Borrar Include="$(PublishDir)PresentationNative_cor3.dll" />
+      <Borrar Include="$(PublishDir)SDL2.dll" />
+      <Borrar Include="$(PublishDir)swresample-2.dll" />
+      <Borrar Include="$(PublishDir)swscale-4.dll" />
+      <Borrar Include="$(PublishDir)wpfgfx_cor3.dll" />
     </ItemGroup>
     <Delete Files="@(Borrar)" />
   </Target>
