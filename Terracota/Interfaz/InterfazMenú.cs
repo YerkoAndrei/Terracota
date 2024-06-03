@@ -53,7 +53,7 @@ public class InterfazMenú : StartupScript
         página = Entity.Get<UIComponent>().Page.RootElement;
 
         // Versión
-        página.FindVisualChildOfType<TextBlock>("txtVersión").Text = "1.0";
+        página.FindVisualChildOfType<TextBlock>("txtVersión").Text = "1.1";
 
         Opciones = página.FindVisualChildOfType<Grid>("Opciones");
         animOpciones = página.FindVisualChildOfType<Grid>("animOpciones");
