@@ -137,7 +137,7 @@ public class SistemaSonido : StartupScript
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
 
             instancia.melodía.Volume = MathUtil.Lerp(inicio, final, tiempo);
-            tiempoLerp += (float)instancia.Game.UpdateTime.Elapsed.TotalSeconds;
+            tiempoLerp += (float)instancia.Game.UpdateTime.WarpElapsed.TotalSeconds;
 
             // Task.Delay se muestra con lag visual, pero en sonido no se nota
             await Task.Delay(1);
@@ -160,7 +160,7 @@ public class SistemaSonido : StartupScript
             tiempo = SistemaAnimación.EvaluarSuave(tiempoLerp / duración);
 
             instancia.perscusión.Volume = MathUtil.Lerp(inicio, final, tiempo);
-            tiempoLerp += (float)instancia.Game.UpdateTime.Elapsed.TotalSeconds;
+            tiempoLerp += (float)instancia.Game.UpdateTime.WarpElapsed.TotalSeconds;
 
             // Task.Delay se muestra con lag visual, pero en sonido no se nota
             await Task.Delay(1);

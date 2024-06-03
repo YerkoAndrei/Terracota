@@ -9,11 +9,32 @@ using Stride.UI.Controls;
 using Stride.UI.Panels;
 
 namespace Terracota;
-using static Constantes;
 
 public static class Utilidades
 {
     private const string ISO8006 = "yyyy-MM-ddThh:mm:ss";
+
+    // Color botones
+    public static Color colorNormal = new Color(255, 255, 255, 255);
+    public static Color colorEnCursor = new Color(200, 200, 200, 250);
+    public static Color colorEnClic = new Color(155, 155, 155, 250);
+    public static Color colorBloqueado = new Color(155, 155, 155, 155);
+
+    // Paleta interfaz
+    // Negro            #FA191919
+    // Oscuro           #FFA03C00
+    // Claro            #F0F0DCA0
+    // Texto            #FF191414
+
+    // Amarillo         #FFF0F064
+    // Anfitrión        #FFC80027
+    // Huésped          #FF2700C8
+
+    // Tamaños fuentes
+    // Predeterminado   25
+    // En juego         30
+    // Títulos          40
+    // Grande           60
 
     public static float RangoAleatorio(float min, float max)
     {

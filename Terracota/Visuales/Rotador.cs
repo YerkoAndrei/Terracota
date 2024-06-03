@@ -9,6 +9,6 @@ public class Rotador : SyncScript
 
     public override void Update()
     {
-        Entity.Transform.Rotation *= Quaternion.RotationY(ánguloY / 100);
+        Entity.Transform.Rotation *= Quaternion.RotationY(ánguloY * 10 * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
     }
 }

@@ -147,7 +147,7 @@ public class ControladorBola : AsyncScript
             tiempo = SistemaAnimación.EvaluarRápido(tiempoLerp / duraciónGuardado);
 
             Entity.Transform.Scale = Vector3.Lerp(inicial, Vector3.Zero, tiempo);
-            tiempoLerp += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            tiempoLerp += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
             await Task.Delay(1);
         }
 

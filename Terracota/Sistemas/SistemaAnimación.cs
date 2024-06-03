@@ -112,7 +112,7 @@ public class SistemaAnimación : SyncScript
 
     private void Animar()
     {
-        tiempoDelta += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+        tiempoDelta += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
         switch (tipoCurva)
         {
             case TipoCurva.nada:

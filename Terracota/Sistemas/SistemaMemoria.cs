@@ -144,8 +144,8 @@ public class SistemaMemoria : StartupScript
         var diccionario = new Dictionary<string, string>
         {
             { Configuraciones.idioma.ToString(),            Idiomas.sistema.ToString() },
-            { Configuraciones.gráficos.ToString(),          NivelesConfiguración.alto.ToString() },
-            { Configuraciones.sombras.ToString(),           NivelesConfiguración.alto.ToString() },
+            { Configuraciones.gráficos.ToString(),          Calidades.alto.ToString() },
+            { Configuraciones.sombras.ToString(),           Calidades.alto.ToString() },
             { Configuraciones.vSync.ToString(),             false.ToString() },
             { Configuraciones.volumenGeneral.ToString(),    "1" },
             { Configuraciones.volumenMúsica.ToString(),     "0.5" },

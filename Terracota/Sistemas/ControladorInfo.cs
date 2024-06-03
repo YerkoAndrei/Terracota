@@ -35,7 +35,7 @@ public class ControladorInfo : AsyncScript
             }
             else
             {
-                cuadros += (float)Game.UpdateTime.Elapsed.TotalSeconds;
+                cuadros += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
                 contador++;
             }
 

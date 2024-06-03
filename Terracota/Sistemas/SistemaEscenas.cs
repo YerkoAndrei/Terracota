@@ -29,7 +29,8 @@ public class SistemaEscenas : SyncScript
     private static bool abriendo;
 
     // Lerp
-    private float duraciónLerp;
+    private float duraciónOcultar;
+    private float duraciónAbrir;
     private float tiempoDelta;
     private float tiempo;
 
@@ -53,7 +54,8 @@ public class SistemaEscenas : SyncScript
         CambiarPantalla(pantallaCompleta, ancho, alto);
 
         // Predeterminado
-        duraciónLerp = 0.2f;
+        duraciónOcultar = 0.2f;
+        duraciónAbrir = 0.4f;
 
         var página = Entity.Get<UIComponent>().Page.RootElement;
         panelOscuro = página.FindVisualChildOfType<Grid>("PanelOscuro");
@@ -76,35 +78,30 @@ public class SistemaEscenas : SyncScript
 
         if (ocultando)
         {
-            tiempoDelta += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            tiempo = SistemaAnimación.EvaluarSuave(tiempoDelta / duraciónLerp);
-            panelOscuro.BackgroundColor = Color.Lerp(Color.Transparent, Color.Black, tiempo);
+            tiempoDelta += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
+            tiempo = SistemaAnimación.EvaluarSuave(tiempoDelta / duraciónOcultar);
+            panelOscuro.Opacity = MathUtil.Lerp(0, 1, tiempo);
 
             // Fin
-            if (tiempoDelta >= duraciónLerp)
+            if (tiempoDelta >= duraciónOcultar)
                 CargarEscena();
         }
 
         if (abriendo)
         {
-            tiempoDelta += (float)Game.UpdateTime.Elapsed.TotalSeconds;
-            tiempo = SistemaAnimación.EvaluarSuave(tiempoDelta / duraciónLerp);
-            panelOscuro.BackgroundColor = Color.Lerp(Color.Black, Color.Transparent, tiempo);
+            tiempoDelta += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
+            tiempo = SistemaAnimación.EvaluarSuave(tiempoDelta / duraciónAbrir);
+            panelOscuro.Opacity = MathUtil.Lerp(1, 0, tiempo);
 
             // Fin
-            if (tiempoDelta >= duraciónLerp)
-            {
-                panelOscuro.BackgroundColor = Color.Transparent;
-                panelOscuro.CanBeHitByUser = false;
-                abriendo = false;
-            }
+            if (tiempoDelta >= duraciónAbrir)
+                TerminarCarga();
         }
     }
 
     public void PosicionarCursor()
     {
         // Cursor es un ImageElement
-        // ¿Optimizar?
         float left = 0;
         float top = 0;
         float right = 0;
@@ -142,7 +139,7 @@ public class SistemaEscenas : SyncScript
 
         instancia.tiempo = 0;
         instancia.tiempoDelta = 0;
-        instancia.panelOscuro.BackgroundColor = Color.Transparent;
+        instancia.panelOscuro.Opacity = 0;
         instancia.panelOscuro.CanBeHitByUser = true;
 
         siguienteEscena = escena;
@@ -157,7 +154,8 @@ public class SistemaEscenas : SyncScript
 
         tiempo = 0;
         tiempoDelta = 0;
-        panelOscuro.BackgroundColor = Color.Black;
+        instancia.panelOscuro.Opacity = 1;
+        await Task.Delay(10);
 
         // Descarga
         Content.Unload(escenaActual);
@@ -182,6 +180,7 @@ public class SistemaEscenas : SyncScript
 
         // Carga
         Entity.Scene.Children.Add(escenaActual);
+        await Task.Delay(10);
 
         // Retraso predeterminado
         await Task.Delay(200);
@@ -195,17 +194,26 @@ public class SistemaEscenas : SyncScript
 
         abriendo = true;
     }
+    
+    private void TerminarCarga()
+    {
+        tiempo = 0;
+        tiempoDelta = 0;
+        panelOscuro.Opacity = 0;
+        panelOscuro.CanBeHitByUser = false;
+        abriendo = false;
+    }
 
-    public static GraphicsCompositor ObtenerGráficos(NivelesConfiguración nivel)
+    public static GraphicsCompositor ObtenerGráficos(Calidades nivel)
     {
         switch (nivel)
         {
-            case NivelesConfiguración.bajo:
+            case Calidades.bajo:
                 return instancia.compositorBajo;
-            case NivelesConfiguración.medio:
+            case Calidades.medio:
                 return instancia.compositorMedio;
             default:
-            case NivelesConfiguración.alto:
+            case Calidades.alto:
                 return instancia.compositorAlto;
         }
     }

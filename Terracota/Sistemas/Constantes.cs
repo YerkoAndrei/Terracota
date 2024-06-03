@@ -10,28 +10,6 @@ public static class Constantes
     public const int duraciónTurnoRemoto = 1500;
     public const float multiplicadorMáximo = 1.5f;
 
-    // Color botones
-    public static Color colorNormal = new Color(255, 255, 255, 255);
-    public static Color colorEnCursor = new Color(200, 200, 200, 250);
-    public static Color colorEnClic = new Color(155, 155, 155, 250);
-    public static Color colorBloqueado = new Color(155, 155, 155, 155);
-
-    // Paleta interfaz
-    // Negro            #FA191919
-    // Oscuro           #FFA03C00
-    // Claro            #F0F0DCA0
-    // Texto            #FF191414
-
-    // Amarillo         #FFF0F064
-    // Anfitrión        #FFC80027
-    // Huésped          #FF2700C8
-
-    // Tamaños fuentes
-    // Predeterminado   25
-    // En juego         30
-    // Títulos          40
-    // Grande           60
-
     public enum Escenas
     {
         menú,
@@ -40,6 +18,7 @@ public static class Constantes
         remoto
     }
 
+    // Juego
     public enum TipoJugador
     {
         nada,
@@ -68,6 +47,7 @@ public static class Constantes
         rápida
     }
 
+    // Configuración
     public enum Direcciones
     {
         arriba,
@@ -98,7 +78,7 @@ public static class Constantes
         resolución
     }
     
-    public enum NivelesConfiguración
+    public enum Calidades
     {
         bajo,
         medio,
