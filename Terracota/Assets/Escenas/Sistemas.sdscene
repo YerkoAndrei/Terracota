@@ -12,7 +12,6 @@ Hierarchy:
         - ref!! 69171581-1245-4d0e-8c67-9f01f33c03ac
         - ref!! bae920a6-7993-476b-bbb2-c1edc1f6d423
         - ref!! 37dbe4f7-f45e-43e5-aa17-5edb268b1462
-        - ref!! 8d2b7c8f-2973-49e3-b966-6f6ffb139bec
     Parts:
         -   Entity:
                 Id: 21f01d7f-860f-40b3-801e-9c0ec5b41907
@@ -26,13 +25,14 @@ Hierarchy:
                         Children: {}
                     4af21ccb0419ec42e7ada10b826a00ec: !Terracota.SistemaMemoria,Terracota.Proyecto
                         Id: b9b2d0f0-dca6-4697-bb48-924bab873cad
+                        Priority: -5
         -   Entity:
                 Id: 37dbe4f7-f45e-43e5-aa17-5edb268b1462
                 Name: SistemaEscenas
                 Components:
                     f1525583878b6ca4443cbfdafc160486: !Terracota.SistemaEscenas,Terracota.Proyecto
                         Id: 804dbccc-1425-4447-a46e-36bef52e9242
-                        Priority: 2
+                        Priority: 10
                         "escenaMenú": "bf45c4dd-f4db-4005-9135-dab8e0ef10ed:Escenas/Menú"
                         "escenaCreación": "df77ba21-ef07-4f57-94a0-cfa4117accf5:Escenas/Creación"
                         escenaLocal: af761eff-0def-4e64-9185-a183866d2296:Escenas/Juego (Local)
@@ -68,6 +68,7 @@ Hierarchy:
                         Children: {}
                     2ab201454e38ddf4d9e05dc760d65317: !Terracota.SistemaAnimaci%25C3%25B3n,Terracota.Proyecto
                         Id: bb69a818-1ae1-4f24-be96-189ef55853fb
+                        Priority: -4
                         "curvaRápida": !ComputeCurveSamplerFloat
                             Curve: !ComputeAnimationCurveFloat
                                 KeyFrames:
@@ -113,7 +114,7 @@ Hierarchy:
                         Children: {}
                     3097f9c3cccda562b8a923f3c650101c: !Terracota.SistemaRed,Terracota.Proyecto
                         Id: 7afb4481-f501-412f-a355-0a622c9216d1
-                        Priority: 1
+                        Priority: -2
         -   Entity:
                 Id: 758aa04b-f96e-40e7-b903-12bf3fd17a7d
                 Name: SistemaSonido
@@ -126,6 +127,7 @@ Hierarchy:
                         Children: {}
                     479bb33f5cfe53f1ea65b9b1e53449b9: !Terracota.SistemaSonido,Terracota.Proyecto
                         Id: 46a3d677-2aab-456a-bcab-46c1e7c56cd9
+                        Priority: -3
                         "músicaMelodía": "775150f7-d8ef-4295-a590-cb2918ba86d3:Sonidos/Canción/Melodía"
                         "músicaPercusión": "2309b412-3607-451d-bf11-2c5ef7ad1bc1:Sonidos/Canción/Percusión"
                         sonidoInicio: 1d22fdad-ef0c-4100-a5b9-131268ecd31b:Sonidos/Inicio
@@ -141,16 +143,6 @@ Hierarchy:
                         sonidoBloqueCorto: 4e84bccc-5d82-4d94-91ea-6aa55c272c3b:Sonidos/Corto
                         sonidoBloqueLargo: fcaef518-5513-43ef-b22b-296bc77470b8:Sonidos/Largo
         -   Entity:
-                Id: 8d2b7c8f-2973-49e3-b966-6f6ffb139bec
-                Name: GameProfiler
-                Components:
-                    346b134265aa87e3a459649937509936: !TransformComponent
-                        Id: 3ad12529-06df-462d-b68c-7ffa109855ed
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-        -   Entity:
                 Id: bae920a6-7993-476b-bbb2-c1edc1f6d423
                 Name: "SistemaTraducción"
                 Components:
@@ -162,7 +154,7 @@ Hierarchy:
                         Children: {}
                     1b3082c5d721d7b1412e2bb53ef6625d: !Terracota.SistemaTraducci%25C3%25B3n,Terracota.Proyecto
                         Id: 01741f25-15e1-402e-8ef7-57d15deacc34
-                        Priority: 1
+                        Priority: -1
                         "textosEspañol": "751cf857-e35b-4a45-835a-0133e1d78f60:Textos/TextosEspañol"
                         "textosInglés": "35557abe-12a9-4da0-b1d3-6a2faf03f44f:Textos/TextosInglés"
                         fuentePrincipal: 3d464421-1de0-45cd-8df2-4fb005cba88a:Fuente/ZeroCool

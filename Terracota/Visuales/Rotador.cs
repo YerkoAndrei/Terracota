@@ -5,10 +5,10 @@ namespace Terracota;
 
 public class Rotador : SyncScript
 {
-    public float ánguloY;
+    public float velocidadY;
 
     public override void Update()
     {
-        Entity.Transform.Rotation *= Quaternion.RotationY(ánguloY * 10 * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
+        Entity.Transform.Rotation *= Quaternion.RotationY(velocidadY * (float)Game.UpdateTime.WarpElapsed.TotalSeconds);
     }
 }

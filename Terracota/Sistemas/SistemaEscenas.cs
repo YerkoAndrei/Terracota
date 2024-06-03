@@ -54,11 +54,11 @@ public class SistemaEscenas : SyncScript
         CambiarPantalla(pantallaCompleta, ancho, alto);
 
         // Predeterminado
-        duraciónOcultar = 0.2f;
-        duraciónAbrir = 0.4f;
-
         var página = Entity.Get<UIComponent>().Page.RootElement;
         panelOscuro = página.FindVisualChildOfType<Grid>("PanelOscuro");
+        panelOscuro.Opacity = 0;
+        duraciónOcultar = 0.2f;
+        duraciónAbrir = 0.4f;
 
         escenaActual = Content.Load(escenaMenú);
         Entity.Scene.Children.Add(escenaActual);
@@ -80,7 +80,7 @@ public class SistemaEscenas : SyncScript
         {
             tiempoDelta += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
             tiempo = SistemaAnimación.EvaluarSuave(tiempoDelta / duraciónOcultar);
-            panelOscuro.Opacity = MathUtil.Lerp(0, 1, tiempo);
+            panelOscuro.Opacity = MathUtil.Lerp(0f, 1f, tiempo);
 
             // Fin
             if (tiempoDelta >= duraciónOcultar)
@@ -91,7 +91,7 @@ public class SistemaEscenas : SyncScript
         {
             tiempoDelta += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
             tiempo = SistemaAnimación.EvaluarSuave(tiempoDelta / duraciónAbrir);
-            panelOscuro.Opacity = MathUtil.Lerp(1, 0, tiempo);
+            panelOscuro.Opacity = MathUtil.Lerp(1f, 0f, tiempo);
 
             // Fin
             if (tiempoDelta >= duraciónAbrir)

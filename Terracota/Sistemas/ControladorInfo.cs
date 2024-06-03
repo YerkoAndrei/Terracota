@@ -19,25 +19,11 @@ public class ControladorInfo : AsyncScript
         txtFPS.Text = string.Empty;
         txtPing.Text = string.Empty;
 
-        var contador = 0;
-        var cuadros = 0f;
-
         // Promedio de FPS cada 60 frames
         while (Game.IsRunning)
         {
             // FPS
-            if (contador >= 60)
-            {
-                var fps = contador / cuadros;
-                txtFPS.Text = string.Format("FPS: {0}", fps.ToString("00"));
-                cuadros = 0;
-                contador = 0;
-            }
-            else
-            {
-                cuadros += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
-                contador++;
-            }
+            txtFPS.Text = string.Format("FPS: {0}", Game.UpdateTime.FramePerSecond.ToString("00"));
 
             // PING
             if (SistemaRed.ObtenerJugando())
