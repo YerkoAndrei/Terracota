@@ -31,8 +31,6 @@
     <ItemGroup>
       <Borrar Include="$(PublishDir)*.pdb" />
       <Borrar Include="$(PublishDir)*.xml" />
-      <Borrar Include="$(PublishDir)*.json" />
-      <Borrar Include="$(PublishDir)createdump.exe" />
 
       <!-- DLLs que no se usan -->
       <Borrar Include="$(PublishDir)avcodec-57.dll" />
