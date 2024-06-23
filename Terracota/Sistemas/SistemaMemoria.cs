@@ -1,10 +1,10 @@
 ﻿using System;
 using System.IO;
 using System.Text;
+using System.Text.Json;
 using System.Linq;
 using System.Collections.Generic;
 using Stride.Engine;
-using Newtonsoft.Json;
 
 namespace Terracota;
 using static Utilidades;
@@ -50,7 +50,7 @@ public class SistemaMemoria : StartupScript
         {
             var archivo = File.ReadAllText(rutaFortalezas);
             var desencriptado = DesEncriptar(archivo);
-            fortalezas.AddRange(JsonConvert.DeserializeObject<List<Fortaleza>>(desencriptado));
+            fortalezas.AddRange(JsonSerializer.Deserialize<List<Fortaleza>>(desencriptado));
 
             // Orden
             fortalezas = fortalezas.OrderBy(o => o.Fecha).ToList();
@@ -89,7 +89,7 @@ public class SistemaMemoria : StartupScript
         // Guarda archivo
         try
         {
-            var json = JsonConvert.SerializeObject(fortalezas);
+            var json = JsonSerializer.Serialize(fortalezas);
             var encriptado = DesEncriptar(json);
             File.WriteAllText(rutaFortalezas, encriptado);
             return true;
@@ -116,7 +116,7 @@ public class SistemaMemoria : StartupScript
         // Guarda archivo
         try
         {
-            var json = JsonConvert.SerializeObject(fortalezas);
+            var json = JsonSerializer.Serialize(fortalezas);
             var encriptado = DesEncriptar(json);
             File.WriteAllText(rutaFortalezas, encriptado);
             return true;
@@ -157,7 +157,7 @@ public class SistemaMemoria : StartupScript
         };
 
         // Guarda archivo
-        var json = JsonConvert.SerializeObject(diccionario);
+        var json = JsonSerializer.Serialize(diccionario);
         var encriptado = DesEncriptar(json);
         File.WriteAllText(rutaConfiguración, encriptado);
     }
@@ -170,7 +170,7 @@ public class SistemaMemoria : StartupScript
         configuraciones[configuración.ToString()] = valor;
 
         // Sobreescribe archivo
-        var json = JsonConvert.SerializeObject(configuraciones);
+        var json = JsonSerializer.Serialize(configuraciones);
         var encriptado = DesEncriptar(json);
         File.WriteAllText(rutaConfiguración, encriptado);
     }
@@ -187,7 +187,7 @@ public class SistemaMemoria : StartupScript
         {
             var archivo = File.ReadAllText(rutaConfiguración);
             var desencriptado = DesEncriptar(archivo);
-            configuraciones = JsonConvert.DeserializeObject<Dictionary<string, string>>(desencriptado);
+            configuraciones = JsonSerializer.Deserialize<Dictionary<string, string>>(desencriptado);
         }
         return configuraciones;
     }

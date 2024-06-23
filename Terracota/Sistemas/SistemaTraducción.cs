@@ -1,11 +1,10 @@
 ﻿using System;
 using System.IO;
-using System.Text;
+using System.Text.Json;
 using System.Linq;
 using System.Collections.Generic;
 using Stride.Engine;
 using Stride.Graphics;
-using Newtonsoft.Json;
 using Stride.Core.Serialization;
 
 namespace Terracota;
@@ -100,7 +99,7 @@ public class SistemaTraducción : StartupScript
 
     private static Dictionary<string, string> CrearDiccionario(string traducciones)
     {
-        var diccionario = JsonConvert.DeserializeObject<Dictionary<string, string>>(traducciones);
+        var diccionario = JsonSerializer.Deserialize<Dictionary<string, string>>(traducciones);
         return diccionario;
     }
 

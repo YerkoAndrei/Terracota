@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Net;
@@ -7,7 +8,6 @@ using System.Net.Sockets;
 using System.Timers;
 using System.Diagnostics;
 using Stride.Engine;
-using Newtonsoft.Json;
 
 namespace Terracota;
 using static Constantes;
@@ -159,7 +159,7 @@ public class SistemaRed : StartupScript
         // Serializa data
         var json = string.Empty;
         if (data != null)
-            json = JsonConvert.SerializeObject(data);
+            json = JsonSerializer.Serialize(data);
 
         var diccionario = new Dictionary<int, string>()
         {
@@ -167,7 +167,7 @@ public class SistemaRed : StartupScript
         };
 
         // Agrega encabezado
-        var dataFinal = JsonConvert.SerializeObject(diccionario);
+        var dataFinal = JsonSerializer.Serialize(diccionario);
         var buffer = Encoding.Unicode.GetBytes(dataFinal);
         try
         {
@@ -221,13 +221,13 @@ public class SistemaRed : StartupScript
         if(string.IsNullOrEmpty(buffer))
             return;
 
-        var data = JsonConvert.DeserializeObject<Dictionary<int, string>>(buffer);
+        var data = JsonSerializer.Deserialize<Dictionary<int, string>>(buffer);
         var entrada = (DataRed)data.Keys.Single();
 
         switch(entrada)
         {
             case DataRed.conectar:
-                var conexión = JsonConvert.DeserializeObject<Conexión>(data.Values.Single());
+                var conexión = JsonSerializer.Deserialize<Conexión>(data.Values.Single());
                 SistemaSonido.SonarInicio();
                 MostrarInvitación(conexión);
                 break;
@@ -240,17 +240,17 @@ public class SistemaRed : StartupScript
                 IniciarPartida(false);
                 break;
             case DataRed.finalizarPartida:
-                var ganador = JsonConvert.DeserializeObject<TipoJugador>(data.Values.Single());
+                var ganador = JsonSerializer.Deserialize<TipoJugador>(data.Values.Single());
                 controlador.MostrarGanador(ganador);
                 break;
             case DataRed.cambioTurno:
-                var turno = JsonConvert.DeserializeObject<Turno>(data.Values.Single());
+                var turno = JsonSerializer.Deserialize<Turno>(data.Values.Single());
                 controlador.ActualizarTurno(turno.Jugador, turno.CantidadTurnos);
                 break;
 
             // Elección
             case DataRed.cargarFortaleza:
-                var fortaleza = JsonConvert.DeserializeObject<Fortaleza>(data.Values.Single());
+                var fortaleza = JsonSerializer.Deserialize<Fortaleza>(data.Values.Single());
                 switch (tipoJugador)
                 {
                     case TipoJugador.anfitrión:
@@ -262,7 +262,7 @@ public class SistemaRed : StartupScript
                 }
                 break;
             case DataRed.jugadorListo:
-                var listo = JsonConvert.DeserializeObject<TipoJugador>(data.Values.Single());
+                var listo = JsonSerializer.Deserialize<TipoJugador>(data.Values.Single());
                 controlador.RevisarJugadoresListos(listo);
                 break;
             case DataRed.comenzarRuleta:
@@ -275,11 +275,11 @@ public class SistemaRed : StartupScript
 
             // Juego
             case DataRed.físicas:
-                var físicas = JsonConvert.DeserializeObject<Físicas>(data.Values.Single());
+                var físicas = JsonSerializer.Deserialize<Físicas>(data.Values.Single());
                 controlador.ActualizarFísicas(físicas);
                 break;
             case DataRed.cañón:
-                var cañón = JsonConvert.DeserializeObject<float[]>(data.Values.Single());
+                var cañón = JsonSerializer.Deserialize<float[]>(data.Values.Single());
                 switch (tipoJugador)
                 {
                     case TipoJugador.anfitrión:
@@ -291,7 +291,7 @@ public class SistemaRed : StartupScript
                 }
                 break;
             case DataRed.disparo:
-                var proyectil = JsonConvert.DeserializeObject<TipoProyectil>(data.Values.Single());
+                var proyectil = JsonSerializer.Deserialize<TipoProyectil>(data.Values.Single());
                 switch (tipoJugador)
                 {
                     case TipoJugador.anfitrión:
@@ -305,7 +305,7 @@ public class SistemaRed : StartupScript
                 }
                 break;
             case DataRed.estatua:
-                var jugador = JsonConvert.DeserializeObject<TipoJugador>(data.Values.Single());
+                var jugador = JsonSerializer.Deserialize<TipoJugador>(data.Values.Single());
                 controlador.DesactivarEstatua(jugador);
                 break;
         }
