@@ -1,32 +1,33 @@
 using Stride.Engine;
 using System.Windows;
 
-namespace Terracota;
-
-class TerracotaApp
+namespace Terracota
 {
-    static void Main(string[] args)
+    class TerracotaApp
     {
-        using (var game = new Game())
+        static void Main(string[] args)
         {
-            var vSync = false;
-
-            // Primer inicio
-            if (!SistemaMemoria.ObtenerExistenciaArchivo())
+            using (var game = new Game())
             {
-                // 63 = barra de título windows
-                var alto = (int)SystemParameters.FullPrimaryScreenHeight + 63;
-                var ancho = (int)SystemParameters.FullPrimaryScreenWidth;
-                SistemaMemoria.EstablecerConfiguraciónPredeterminada(ancho, alto);
+                var vSync = false;
+
+                // Primer inicio
+                if (!SistemaMemoria.ObtenerExistenciaArchivo())
+                {
+                    // 63 = barra de título
+                    var alto = (int)SystemParameters.FullPrimaryScreenHeight + 63;
+                    var ancho = (int)SystemParameters.FullPrimaryScreenWidth;
+                    SistemaMemoria.EstablecerConfiguraciónPredeterminada(ancho, alto);
+                }
+                else
+                    vSync = bool.Parse(SistemaMemoria.ObtenerConfiguración(Constantes.Configuraciones.vSync));
+
+                // vSync
+                game.IsDrawDesynchronized = !vSync;
+                game.GraphicsDeviceManager.SynchronizeWithVerticalRetrace = vSync;
+
+                game.Run();
             }
-            else
-                vSync = bool.Parse(SistemaMemoria.ObtenerConfiguración(Constantes.Configuraciones.vSync));
-
-            // vSync
-            game.IsDrawDesynchronized = !vSync;
-            game.GraphicsDeviceManager.SynchronizeWithVerticalRetrace = vSync;
-
-            game.Run();
         }
     }
 }
