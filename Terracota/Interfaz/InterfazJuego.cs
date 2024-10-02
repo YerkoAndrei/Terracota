@@ -141,9 +141,6 @@ public class InterfazJuego : SyncScript
 
     public override void Update()
     {
-        if (!activo)
-            return;
-
         if (Input.IsKeyPressed(Keys.Escape))
             EnClicPausa();
     }
