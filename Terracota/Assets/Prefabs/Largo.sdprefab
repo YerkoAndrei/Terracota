@@ -26,18 +26,15 @@ Hierarchy:
         -   Folder: null
             Entity:
                 Id: 7aee0956-0800-4c88-93ee-0d281fcf29e6
-                Name: Modelo Largo
+                Name: Cuerpo (centro gravedad)
                 Components:
                     2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
                         Id: 95fe35cf-a226-411a-9aca-af87ff4630e3
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
-                        Id: 2f1fff73-410a-459c-b244-493ffdef0154
-                        Model: 8376cd3c-bb86-4a2a-ae61-842d1cef88ab:Modelos/Largo/Largo
-                        Materials: {}
+                        Children:
+                            f7cab95d82d34d202138395221a0cc83: ref!! 539b5a0f-aa45-46aa-bbd8-980896e9d556
                     b583fa0f4bdfe124afd71b85ac43b0c5: !RigidbodyComponent
                         Id: 5e70bbf7-e069-4a30-9913-a21b7e2a26f1
                         CanSleep: true
@@ -57,3 +54,17 @@ Hierarchy:
                         ColliderShapes:
                             8517c1f713513840c83942d7e32c2cd6: !ColliderShapeAssetDesc
                                 Shape: 1d299fda-7add-4645-8ecb-2cb8c515bcfc:Modelos/Largo/ColliderLargo
+        -   Entity:
+                Id: 8d6c9895-fb24-4e66-a351-14101082bfbc
+                Name: Modelo Largo
+                Components:
+                    2703c5aa54b7f2636e052f6597f3510f: !TransformComponent
+                        Id: 539b5a0f-aa45-46aa-bbd8-980896e9d556
+                        Position: {X: 0.0, Y: -0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    90c1b1bf0895af875cd76549ce57454a: !ModelComponent
+                        Id: a32af292-aa24-4bc2-9c74-a220c379041d
+                        Model: 8376cd3c-bb86-4a2a-ae61-842d1cef88ab:Modelos/Largo/Largo
+                        Materials: {}

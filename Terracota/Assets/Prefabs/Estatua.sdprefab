@@ -7,47 +7,18 @@ Hierarchy:
         - ref!! 56f5ad60-3d77-4bf7-9c13-cbb046c76088
     Parts:
         -   Entity:
-                Id: 56f5ad60-3d77-4bf7-9c13-cbb046c76088
-                Name: Estatua
-                Components:
-                    1ff5b84f1e279da93224f2a5edcc3f59: !TransformComponent
-                        Id: 582305bc-6256-408a-a859-9ca7219e6c06
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            b9a6de9d3e362d0511a1a20a34248d55: ref!! 8db621ed-1920-43a2-8875-d985433e077c
-                    74bf11dd4dd7e8fa7f6dd5d9df36ec37: !Terracota.ElementoBloque,Terracota.Proyecto
-                        Id: 7e25ae56-577a-482f-8b53-ce3c0e625433
-                        tipoBloque: estatua
-                        cuerpo: ref!! c47addce-fbb0-4105-a967-f909a0509bc9
-                    fb06c492109ce5cf0499d7d8846d1f46: !Terracota.ControladorEstatua,Terracota.Proyecto
-                        Id: 8ab78da9-2549-4bff-b839-51f30fe09677
-                        jugador: nada
-                        cuerpo: ref!! c47addce-fbb0-4105-a967-f909a0509bc9
-                        cabeza: ref!! eb4fb358-ef62-4cdf-80fe-260d34eabd00
-                    65e0ce82b10ff7a08a25a37be73a73db: !Terracota.ElementoSonido,Terracota.Proyecto
-                        Id: 2b0443ad-032d-44e2-bbcd-5f8efa41c8db
-        -   Folder: null
-            Entity:
-                Id: b846398e-bc6c-47ed-bb1c-425e4e5347fa
-                Name: Modelo Estatua
+                Id: 015511fe-f338-4f69-9c22-12f642d54d5f
+                Name: Cuerpo (centro gravedad)
                 Components:
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
-                        Id: 8db621ed-1920-43a2-8875-d985433e077c
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Id: 3dfb8df4-d948-4c8e-b5fc-aac3b41344d2
+                        Position: {X: 0.0, Y: 0.8, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            8b06b5cdb081779064882c7ae991fe6e: ref!! 196590ff-6519-45a0-a870-61a0050c0973
-                            5de0236c8c887a75fff772492bd1d350: ref!! 2b186912-7bfb-4759-b7d6-07e6f7d1eb45
-                            d22f48e1c3b8bf2a1e04183b56083dfb: ref!! c2f262da-8b23-4e89-a4d4-119afb2144b3
-                    7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
-                        Id: da1983ca-4fae-4c02-bcc6-9f118a4d2b93
-                        Model: 4504bc3d-56bd-4752-af76-a6fb0f75b742:Modelos/Estatua/Estatua
-                        Materials: {}
+                            4e246416c94906f8319b43f15d46698a: ref!! 8db621ed-1920-43a2-8875-d985433e077c
                     a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
-                        Id: c47addce-fbb0-4105-a967-f909a0509bc9
+                        Id: e4584d55-003d-4560-b1a4-0ca1a05172a4
                         CollisionGroup: CharacterFilter
                         CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
                         CanSleep: false
@@ -67,6 +38,46 @@ Hierarchy:
                         ColliderShapes:
                             4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
                                 Shape: 65af9b85-2cc6-4dcb-9772-d9395b9d5a55:Modelos/Estatua/ColliderEstatua
+        -   Entity:
+                Id: 56f5ad60-3d77-4bf7-9c13-cbb046c76088
+                Name: Estatua
+                Components:
+                    1ff5b84f1e279da93224f2a5edcc3f59: !TransformComponent
+                        Id: 582305bc-6256-408a-a859-9ca7219e6c06
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            6ec3a986d05f4b20c9b6fd2f35f3fdd3: ref!! 3dfb8df4-d948-4c8e-b5fc-aac3b41344d2
+                    74bf11dd4dd7e8fa7f6dd5d9df36ec37: !Terracota.ElementoBloque,Terracota.Proyecto
+                        Id: 7e25ae56-577a-482f-8b53-ce3c0e625433
+                        tipoBloque: estatua
+                        cuerpo: ref!! e4584d55-003d-4560-b1a4-0ca1a05172a4
+                    fb06c492109ce5cf0499d7d8846d1f46: !Terracota.ControladorEstatua,Terracota.Proyecto
+                        Id: 8ab78da9-2549-4bff-b839-51f30fe09677
+                        jugador: nada
+                        cuerpo: ref!! e4584d55-003d-4560-b1a4-0ca1a05172a4
+                        cabeza: ref!! eb4fb358-ef62-4cdf-80fe-260d34eabd00
+                        lanza: ref!! 0b4c1e64-3dcb-45b0-96ee-7841425a81bf
+                    65e0ce82b10ff7a08a25a37be73a73db: !Terracota.ElementoSonido,Terracota.Proyecto
+                        Id: 2b0443ad-032d-44e2-bbcd-5f8efa41c8db
+        -   Entity:
+                Id: b846398e-bc6c-47ed-bb1c-425e4e5347fa
+                Name: Modelo Estatua
+                Components:
+                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
+                        Id: 8db621ed-1920-43a2-8875-d985433e077c
+                        Position: {X: 0.0, Y: -0.8, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            8b06b5cdb081779064882c7ae991fe6e: ref!! 196590ff-6519-45a0-a870-61a0050c0973
+                            5de0236c8c887a75fff772492bd1d350: ref!! 2b186912-7bfb-4759-b7d6-07e6f7d1eb45
+                            d22f48e1c3b8bf2a1e04183b56083dfb: ref!! c2f262da-8b23-4e89-a4d4-119afb2144b3
+                    7a5f50469dba2410003a19eaa31dfe3d: !ModelComponent
+                        Id: da1983ca-4fae-4c02-bcc6-9f118a4d2b93
+                        Model: 4504bc3d-56bd-4752-af76-a6fb0f75b742:Modelos/Estatua/Estatua
+                        Materials: {}
         -   Entity:
                 Id: d7d6d6d0-c86b-4fd6-9533-7ccbc293cf76
                 Name: Modelo Cabeza
@@ -135,9 +146,9 @@ Hierarchy:
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: aee247a5-2a13-4f06-9019-a06d3efff9b6
-                        Position: {X: -8.0910235E-07, Y: 2.7, Z: 0.0}
+                        Position: {X: -8.0910235E-07, Y: 2.8, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
                         Id: 0b4c1e64-3dcb-45b0-96ee-7841425a81bf
@@ -158,7 +169,7 @@ Hierarchy:
                         Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
                         NodeName: null
                         ColliderShapes:
-                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.3
+                            3d442588dee3810f5ecc37272eff1133: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 0.2
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}

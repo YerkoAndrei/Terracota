@@ -15,14 +15,13 @@ Hierarchy:
         - ref!! c3591533-7c2e-498c-932d-ea660411b42a
         - ref!! e5e75d64-2099-4d2a-a9c4-d4426e610227
     Parts:
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: 00e57a4d-9f63-4154-a841-77444f10ecfd
                 Name: Modelo Estatua
                 Components:
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
                         Id: 5af5576a-29a4-4864-aa8f-683c9a4e9eca
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: -0.8, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -33,27 +32,6 @@ Hierarchy:
                         Id: c9e598fe-92aa-425d-9ce3-fe4c44070ca6
                         Model: 4504bc3d-56bd-4752-af76-a6fb0f75b742:Modelos/Estatua/Estatua
                         Materials: {}
-                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
-                        Id: 214c3d2c-04f1-4cc1-b6c7-7e354a81f3ad
-                        CollisionGroup: CharacterFilter
-                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
-                        CanSleep: false
-                        Restitution: 0.2
-                        Friction: 0.5
-                        RollingFriction: 0.5
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 400.0
-                        LinearDamping: 0.2
-                        AngularDamping: 0.2
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
-                                Shape: 65af9b85-2cc6-4dcb-9772-d9395b9d5a55:Modelos/Estatua/ColliderEstatua
             Base:
                 BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
                 BasePartId: b846398e-bc6c-47ed-bb1c-425e4e5347fa
@@ -490,9 +468,9 @@ Hierarchy:
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: 1e0a93ff-4649-4ee4-824e-dec0952983c2
-                        Position: {X: -8.0910235E-07, Y: 2.7, Z: 0.0}
+                        Position: {X: -8.0910235E-07, Y: 2.8, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
                         Id: 7c96aee5-2dc1-4cb8-9edc-f1a7aaeeccc9
@@ -513,10 +491,10 @@ Hierarchy:
                         Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
                         NodeName: null
                         ColliderShapes:
-                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.3
+                            3d442588dee3810f5ecc37272eff1133: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 0.2
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
                 BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
                 BasePartId: f7806c36-9b87-48a7-b4f6-d614ce7c93ab
@@ -539,6 +517,42 @@ Hierarchy:
                         Projection: Perspective
                         FarClipPlane: 200.0
                         Slot: 9f373eee-c85c-45b0-9b02-82451f709476
+        -   Entity:
+                Id: 12c86584-ab34-4e5f-bff6-8b93667fd2d5
+                Name: Cuerpo (centro gravedad)
+                Components:
+                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
+                        Id: 65c0af97-cf69-4e82-bb7a-13310af0bb44
+                        Position: {X: 0.0, Y: 0.8, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            dc0010e3e5cb1da5a624283fbbac2a95: ref!! 38ee70a3-408f-430f-a0af-a66483dcbfd0
+                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
+                        Id: ce5258c9-a9a0-4e53-b1af-72b2c43e60d8
+                        CollisionGroup: CharacterFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.5
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 400.0
+                        LinearDamping: 0.2
+                        AngularDamping: 0.2
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
+                                Shape: 65af9b85-2cc6-4dcb-9772-d9395b9d5a55:Modelos/Estatua/ColliderEstatua
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: 015511fe-f338-4f69-9c22-12f642d54d5f
+                InstanceId: 447679e9-8d92-452a-ba9d-7b75b6d1e7b4
         -   Folder: null
             Entity:
                 Id: 136e0c88-71e3-4a87-861b-d297a1b2f8e0
@@ -703,8 +717,7 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 1c6c1fbf-0133-4762-b2ac-5fcee2a074e9
                 InstanceId: 2b1b5a3e-39a4-4f00-8018-15df599fb41f
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: 19bb33cb-84f1-4eb0-b812-2ad77c5534cc
                 Name: Modelo Estatua
                 Components:
@@ -721,27 +734,6 @@ Hierarchy:
                         Id: 4adf62d8-b8a5-4f5d-a5f6-d5ade59a4082
                         Model: 4504bc3d-56bd-4752-af76-a6fb0f75b742:Modelos/Estatua/Estatua
                         Materials: {}
-                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
-                        Id: 84a18f2f-a3c1-44d4-9575-2a3379a84bd2
-                        CollisionGroup: CharacterFilter
-                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
-                        CanSleep: false
-                        Restitution: 0.2
-                        Friction: 0.5
-                        RollingFriction: 0.5
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 400.0
-                        LinearDamping: 0.2
-                        AngularDamping: 0.2
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
-                                Shape: 65af9b85-2cc6-4dcb-9772-d9395b9d5a55:Modelos/Estatua/ColliderEstatua
             Base:
                 BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
                 BasePartId: b846398e-bc6c-47ed-bb1c-425e4e5347fa
@@ -930,14 +922,13 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: a41f411b-e288-4d5f-be7e-1a15da528b5c
                 InstanceId: 2b1b5a3e-39a4-4f00-8018-15df599fb41f
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: 24d0c016-02ed-4851-ad28-0e7fd656407c
                 Name: Modelo Estatua
                 Components:
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
                         Id: 38ee70a3-408f-430f-a0af-a66483dcbfd0
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: -0.8, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -948,27 +939,6 @@ Hierarchy:
                         Id: 96de5102-82ce-445d-acc9-55af4d2c106b
                         Model: 4504bc3d-56bd-4752-af76-a6fb0f75b742:Modelos/Estatua/Estatua
                         Materials: {}
-                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
-                        Id: cafb709b-249e-4478-92b3-6636df0bf5bb
-                        CollisionGroup: CharacterFilter
-                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
-                        CanSleep: false
-                        Restitution: 0.2
-                        Friction: 0.5
-                        RollingFriction: 0.5
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 400.0
-                        LinearDamping: 0.2
-                        AngularDamping: 0.2
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
-                                Shape: 65af9b85-2cc6-4dcb-9772-d9395b9d5a55:Modelos/Estatua/ColliderEstatua
             Base:
                 BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
                 BasePartId: b846398e-bc6c-47ed-bb1c-425e4e5347fa
@@ -998,9 +968,9 @@ Hierarchy:
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: a2657c8b-27ef-4cad-8c93-f38191eae0d9
-                        Position: {X: -8.0910235E-07, Y: 2.7, Z: 0.0}
+                        Position: {X: -8.0910235E-07, Y: 2.8, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
                         Id: 99822218-0ac1-48bd-b2f4-ef6c24b4fd3b
@@ -1021,10 +991,10 @@ Hierarchy:
                         Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
                         NodeName: null
                         ColliderShapes:
-                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.3
+                            3d442588dee3810f5ecc37272eff1133: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 0.2
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
                 BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
                 BasePartId: f7806c36-9b87-48a7-b4f6-d614ce7c93ab
@@ -1076,7 +1046,7 @@ Hierarchy:
                         Rotation*: {X: 0.0, Y: 0.9999975, Z: 0.0, W: -0.0022234619}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            b9a6de9d3e362d0511a1a20a34248d55: ref!! c159151d-2f32-47d2-808c-0508bc53966a
+                            39036b4ca30ffbe044c0600663108565: ref!! 1f66dab4-c6cb-4031-ad60-6a4ff3785e60
                     65e0ce82b10ff7a08a25a37be73a73db: ~(Deleted)
                     fb06c492109ce5cf0499d7d8846d1f46: ~(Deleted)
                     74bf11dd4dd7e8fa7f6dd5d9df36ec37: ~(Deleted)
@@ -1090,9 +1060,9 @@ Hierarchy:
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: 97d04893-4aac-4a1b-9cec-db0b59152674
-                        Position: {X: -8.0910235E-07, Y: 2.7, Z: 0.0}
+                        Position: {X: -8.0910235E-07, Y: 2.8, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
                         Id: 6725bfd4-c4fb-48c4-b5e7-ddcb8a6f1b0c
@@ -1113,10 +1083,10 @@ Hierarchy:
                         Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
                         NodeName: null
                         ColliderShapes:
-                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.3
+                            3d442588dee3810f5ecc37272eff1133: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 0.2
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
                 BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
                 BasePartId: f7806c36-9b87-48a7-b4f6-d614ce7c93ab
@@ -1281,8 +1251,7 @@ Hierarchy:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
                 BasePartId: ed40b23d-5d39-418b-9236-c3e332db1654
                 InstanceId: 9ee92260-3c2c-4621-8703-c9ae43cca364
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: 2fccb987-3972-41e4-a45e-a922b222c861
                 Name: Modelo Estatua
                 Components:
@@ -1299,27 +1268,6 @@ Hierarchy:
                         Id: 2d301bd5-1f73-4ce2-a4a2-96754bfdc5d1
                         Model: 4504bc3d-56bd-4752-af76-a6fb0f75b742:Modelos/Estatua/Estatua
                         Materials: {}
-                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
-                        Id: b7a1d9ac-0d4f-4d3e-895d-f3d1c75b2731
-                        CollisionGroup: CharacterFilter
-                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
-                        CanSleep: false
-                        Restitution: 0.2
-                        Friction: 0.5
-                        RollingFriction: 0.5
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 400.0
-                        LinearDamping: 0.2
-                        AngularDamping: 0.2
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
-                                Shape: 65af9b85-2cc6-4dcb-9772-d9395b9d5a55:Modelos/Estatua/ColliderEstatua
             Base:
                 BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
                 BasePartId: b846398e-bc6c-47ed-bb1c-425e4e5347fa
@@ -1344,6 +1292,42 @@ Hierarchy:
                 BasePartId: 938f8135-79db-44cf-b25a-c6d03b66f6f6
                 InstanceId: 2b1b5a3e-39a4-4f00-8018-15df599fb41f
         -   Entity:
+                Id: 33438475-d501-404f-8a35-2088b91955f1
+                Name: Cuerpo (centro gravedad)
+                Components:
+                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
+                        Id: 2b34a2a0-4330-4f0c-be41-3f308b64f4f2
+                        Position: {X: 0.0, Y: 0.8, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            8a34237475e1bd45dbac37b078665e82: ref!! 4e3cb1ab-0efc-41f7-ac89-cbb83139946d
+                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
+                        Id: 6808e405-897d-4f27-be74-76b24e9b69dc
+                        CollisionGroup: CharacterFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.5
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 400.0
+                        LinearDamping: 0.2
+                        AngularDamping: 0.2
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
+                                Shape: 65af9b85-2cc6-4dcb-9772-d9395b9d5a55:Modelos/Estatua/ColliderEstatua
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: 015511fe-f338-4f69-9c22-12f642d54d5f
+                InstanceId: 4cd21a73-998b-49d1-ade6-7aba634ab76c
+        -   Entity:
                 Id: 33b17618-0c3e-4b8e-8b74-99d9210105c4
                 Name: "Bambú 0"
                 Components:
@@ -1361,6 +1345,42 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 16bbeccf-56fd-43db-8852-900c92a3a227
                 InstanceId: 2b1b5a3e-39a4-4f00-8018-15df599fb41f
+        -   Entity:
+                Id: 33d5c521-359e-4eed-a838-2741a66706a8
+                Name: Cuerpo (centro gravedad)
+                Components:
+                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
+                        Id: 1f66dab4-c6cb-4031-ad60-6a4ff3785e60
+                        Position: {X: 0.0, Y: 0.8, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            0f09015c16172aa54d4c850a71950a83: ref!! c159151d-2f32-47d2-808c-0508bc53966a
+                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
+                        Id: cb052d3a-fa6f-4ca6-b1c5-47c2479fdcb3
+                        CollisionGroup: CharacterFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.5
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 400.0
+                        LinearDamping: 0.2
+                        AngularDamping: 0.2
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
+                                Shape: 65af9b85-2cc6-4dcb-9772-d9395b9d5a55:Modelos/Estatua/ColliderEstatua
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: 015511fe-f338-4f69-9c22-12f642d54d5f
+                InstanceId: 7cffc58a-97b4-403c-9144-31375b8c34af
         -   Folder: null
             Entity:
                 Id: 34b9b719-66cd-4a20-8496-3536c9d468af
@@ -1386,9 +1406,9 @@ Hierarchy:
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: 11683d97-9bd0-4abd-80b9-cc0e4b308158
-                        Position: {X: -8.0910235E-07, Y: 2.7, Z: 0.0}
+                        Position: {X: -8.0910235E-07, Y: 2.8, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
                         Id: ae833c51-4ac3-419c-bb9e-06cd6e371910
@@ -1409,10 +1429,10 @@ Hierarchy:
                         Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
                         NodeName: null
                         ColliderShapes:
-                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.3
+                            3d442588dee3810f5ecc37272eff1133: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 0.2
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
                 BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
                 BasePartId: f7806c36-9b87-48a7-b4f6-d614ce7c93ab
@@ -1473,14 +1493,13 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 9b14ceb8-e455-465e-9d9c-628b9c4764b7
                 InstanceId: 2b1b5a3e-39a4-4f00-8018-15df599fb41f
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: 392a199e-f02d-41da-b3f1-b371faea4b79
                 Name: Modelo Estatua
                 Components:
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
                         Id: fb67c2ba-0cba-4cd5-83c4-1fa10955636a
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: -0.8, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -1491,27 +1510,6 @@ Hierarchy:
                         Id: ebd27161-2571-488c-b757-59c8f8a05a17
                         Model: 4504bc3d-56bd-4752-af76-a6fb0f75b742:Modelos/Estatua/Estatua
                         Materials: {}
-                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
-                        Id: 996814d0-6181-4a63-b6ff-9986603647c8
-                        CollisionGroup: CharacterFilter
-                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
-                        CanSleep: false
-                        Restitution: 0.2
-                        Friction: 0.5
-                        RollingFriction: 0.5
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 400.0
-                        LinearDamping: 0.2
-                        AngularDamping: 0.2
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
-                                Shape: 65af9b85-2cc6-4dcb-9772-d9395b9d5a55:Modelos/Estatua/ColliderEstatua
             Base:
                 BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
                 BasePartId: b846398e-bc6c-47ed-bb1c-425e4e5347fa
@@ -1584,7 +1582,7 @@ Hierarchy:
                         Rotation*: {X: 0.0, Y: 0.4149638, Z: 0.0, W: 0.9098379}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            b9a6de9d3e362d0511a1a20a34248d55: ref!! 4e3cb1ab-0efc-41f7-ac89-cbb83139946d
+                            68558b5db5868afe55368e0125352899: ref!! 2b34a2a0-4330-4f0c-be41-3f308b64f4f2
                     65e0ce82b10ff7a08a25a37be73a73db: ~(Deleted)
                     fb06c492109ce5cf0499d7d8846d1f46: ~(Deleted)
                     74bf11dd4dd7e8fa7f6dd5d9df36ec37: ~(Deleted)
@@ -1967,6 +1965,42 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 2e6682bb-146e-4139-a8e5-3ab23f8c5bad
                 InstanceId: 2b1b5a3e-39a4-4f00-8018-15df599fb41f
+        -   Entity:
+                Id: 45f10129-d178-48b2-99ba-2eb5710f4f1c
+                Name: Cuerpo (centro gravedad)
+                Components:
+                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
+                        Id: eb95c07c-65d5-46b6-a530-fc4c0b253201
+                        Position: {X: 0.0, Y: 0.8, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            515470d5459fce62e3a184f13097ef5f: ref!! 77d97073-9c81-44f2-8289-c8f5e8010f67
+                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
+                        Id: 6870d42f-4362-4f8b-a8e5-06732f54a6d9
+                        CollisionGroup: CharacterFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.5
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 400.0
+                        LinearDamping: 0.2
+                        AngularDamping: 0.2
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
+                                Shape: 65af9b85-2cc6-4dcb-9772-d9395b9d5a55:Modelos/Estatua/ColliderEstatua
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: 015511fe-f338-4f69-9c22-12f642d54d5f
+                InstanceId: d6a3dce5-35c7-41b8-a88f-3afba9a643f1
         -   Folder: null
             Entity:
                 Id: 46c69d62-2284-4711-8645-c7a74c02ee25
@@ -2063,9 +2097,9 @@ Hierarchy:
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: 7bb0bcaa-1df1-4cff-8f0b-a535f936bdf5
-                        Position: {X: -8.0910235E-07, Y: 2.7, Z: 0.0}
+                        Position: {X: -8.0910235E-07, Y: 2.8, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
                         Id: a7fd7e3e-88f2-40c4-a94a-d8f36143d78f
@@ -2086,10 +2120,10 @@ Hierarchy:
                         Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
                         NodeName: null
                         ColliderShapes:
-                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.3
+                            3d442588dee3810f5ecc37272eff1133: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 0.2
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
                 BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
                 BasePartId: f7806c36-9b87-48a7-b4f6-d614ce7c93ab
@@ -2406,6 +2440,42 @@ Hierarchy:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
                 BasePartId: 94c9c704-b68d-423b-9bd6-28970e014edf
                 InstanceId: b770e2a8-ffae-4349-bef5-eafb66eea1b5
+        -   Entity:
+                Id: 526ab8a0-fb00-491f-b05a-402b1630b175
+                Name: Cuerpo (centro gravedad)
+                Components:
+                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
+                        Id: f69ee07d-6349-453a-bf88-1123ddbf016f
+                        Position: {X: 0.0, Y: 0.8, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            8fe331b487d5db484be211501ec0618c: ref!! 1969d933-a7de-407f-ad10-98c9f5305591
+                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
+                        Id: 41a4d8ed-f5bd-4ac3-8073-3ba0300326d7
+                        CollisionGroup: CharacterFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.5
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 400.0
+                        LinearDamping: 0.2
+                        AngularDamping: 0.2
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
+                                Shape: 65af9b85-2cc6-4dcb-9772-d9395b9d5a55:Modelos/Estatua/ColliderEstatua
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: 015511fe-f338-4f69-9c22-12f642d54d5f
+                InstanceId: 54aa8c47-c83b-4950-9b9c-a224908e9c67
         -   Folder: null
             Entity:
                 Id: 533d2220-2b3b-4508-bbb6-dcd016f54e5e
@@ -2417,7 +2487,7 @@ Hierarchy:
                         Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            b9a6de9d3e362d0511a1a20a34248d55: ref!! 38ee70a3-408f-430f-a0af-a66483dcbfd0
+                            5634d57607ec4a669764f11bd2fd00b0: ref!! 65c0af97-cf69-4e82-bb7a-13310af0bb44
                     65e0ce82b10ff7a08a25a37be73a73db: ~(Deleted)
                     fb06c492109ce5cf0499d7d8846d1f46: ~(Deleted)
                     74bf11dd4dd7e8fa7f6dd5d9df36ec37: ~(Deleted)
@@ -2656,9 +2726,9 @@ Hierarchy:
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: 8b039234-ff4a-4694-bbe4-0fb2470e5c77
-                        Position: {X: -8.0910235E-07, Y: 2.7, Z: 0.0}
+                        Position: {X: -8.0910235E-07, Y: 2.8, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
                         Id: ad78f0a1-62bd-446d-bc5f-48f5467075cc
@@ -2679,10 +2749,10 @@ Hierarchy:
                         Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
                         NodeName: null
                         ColliderShapes:
-                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.3
+                            3d442588dee3810f5ecc37272eff1133: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 0.2
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
                 BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
                 BasePartId: f7806c36-9b87-48a7-b4f6-d614ce7c93ab
@@ -2926,7 +2996,7 @@ Hierarchy:
                         Rotation*: {X: 0.0, Y: 0.038240656, Z: 0.0, W: 0.9992686}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            b9a6de9d3e362d0511a1a20a34248d55: ref!! 0def5bb5-af3e-4cc3-b957-af7c09b399f2
+                            879f37de136129f924fdeb60efa4dc61: ref!! 9ea80a88-3b9e-436c-9e14-7277ee354168
                     65e0ce82b10ff7a08a25a37be73a73db: ~(Deleted)
                     fb06c492109ce5cf0499d7d8846d1f46: ~(Deleted)
                     74bf11dd4dd7e8fa7f6dd5d9df36ec37: ~(Deleted)
@@ -3052,9 +3122,9 @@ Hierarchy:
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: 782793f1-9460-49de-be50-86e6d964e1b6
-                        Position: {X: -8.0910235E-07, Y: 2.7, Z: 0.0}
+                        Position: {X: -8.0910235E-07, Y: 2.8, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
                         Id: 648624d9-23dd-40e8-b305-0be1538e0457
@@ -3075,10 +3145,10 @@ Hierarchy:
                         Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
                         NodeName: null
                         ColliderShapes:
-                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.3
+                            3d442588dee3810f5ecc37272eff1133: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 0.2
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
                 BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
                 BasePartId: f7806c36-9b87-48a7-b4f6-d614ce7c93ab
@@ -3250,6 +3320,42 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 6aa3c95c-7bc2-48b3-a353-40c355fce7fc
                 InstanceId: 2b1b5a3e-39a4-4f00-8018-15df599fb41f
+        -   Entity:
+                Id: 7aa663da-318b-400f-8381-06c74c9daff2
+                Name: Cuerpo (centro gravedad)
+                Components:
+                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
+                        Id: bbe06456-63b3-4910-8839-27a68bf5f68b
+                        Position: {X: 0.0, Y: 0.8, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            9c68793665bdee98899db00647d1d42b: ref!! 5af5576a-29a4-4864-aa8f-683c9a4e9eca
+                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
+                        Id: 7ab3aeda-c123-463f-acdf-6a6d5fd18b0c
+                        CollisionGroup: CharacterFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.5
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 400.0
+                        LinearDamping: 0.2
+                        AngularDamping: 0.2
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
+                                Shape: 65af9b85-2cc6-4dcb-9772-d9395b9d5a55:Modelos/Estatua/ColliderEstatua
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: 015511fe-f338-4f69-9c22-12f642d54d5f
+                InstanceId: e145b700-6466-443c-ba58-b394b68f99aa
         -   Folder: null
             Entity:
                 Id: 7ac04a44-a1cf-4bd6-8087-5ba8945cfaca
@@ -3468,6 +3574,42 @@ Hierarchy:
                         Id: fc2b616a-c198-43dd-9bd2-a0cadc4936e6
                         Model: 763433a9-cb3b-4780-b9bb-3c386030d3b7:Modelos/Esfera/Esfera
                         Materials: {}
+        -   Entity:
+                Id: 83f2da31-b0b0-470e-a380-3b91753767ad
+                Name: Cuerpo (centro gravedad)
+                Components:
+                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
+                        Id: fff525ac-660a-442f-a82a-26d4e8760e7d
+                        Position: {X: 0.0, Y: 0.8, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            6206da2735f0f888f8ae09614dc3b32a: ref!! fb67c2ba-0cba-4cd5-83c4-1fa10955636a
+                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
+                        Id: 38243348-2c48-4a77-9d49-af5b1dd982bb
+                        CollisionGroup: CharacterFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.5
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 400.0
+                        LinearDamping: 0.2
+                        AngularDamping: 0.2
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
+                                Shape: 65af9b85-2cc6-4dcb-9772-d9395b9d5a55:Modelos/Estatua/ColliderEstatua
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: 015511fe-f338-4f69-9c22-12f642d54d5f
+                InstanceId: ec2957b5-a3dc-4a46-b6e0-20110ed8f62d
         -   Folder: null
             Entity:
                 Id: 84851507-fb38-4e22-8f00-9018772e9afe
@@ -3494,7 +3636,7 @@ Hierarchy:
                         Rotation*: {X: 0.0, Y: 0.19268444, Z: 0.0, W: 0.9812608}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            b9a6de9d3e362d0511a1a20a34248d55: ref!! 1969d933-a7de-407f-ad10-98c9f5305591
+                            b42a2c601060ec4d50d9d08217ace4ea: ref!! f69ee07d-6349-453a-bf88-1123ddbf016f
                     65e0ce82b10ff7a08a25a37be73a73db: ~(Deleted)
                     fb06c492109ce5cf0499d7d8846d1f46: ~(Deleted)
                     74bf11dd4dd7e8fa7f6dd5d9df36ec37: ~(Deleted)
@@ -3537,14 +3679,13 @@ Hierarchy:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
                 BasePartId: 81b557f0-0ed9-415d-b960-2b9826423472
                 InstanceId: b770e2a8-ffae-4349-bef5-eafb66eea1b5
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: 878647a3-9f74-40f1-88ad-08506cd7787e
                 Name: Modelo Estatua
                 Components:
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
                         Id: 4057409d-bcec-4ff2-a35c-3e994fcd9b4b
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: -0.8, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -3555,27 +3696,6 @@ Hierarchy:
                         Id: 8433af7c-f3d2-4328-a02d-5c7abb35c8d1
                         Model: 4504bc3d-56bd-4752-af76-a6fb0f75b742:Modelos/Estatua/Estatua
                         Materials: {}
-                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
-                        Id: eed8ae4b-9c2e-40d3-9d22-427cf4d2d579
-                        CollisionGroup: CharacterFilter
-                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
-                        CanSleep: false
-                        Restitution: 0.2
-                        Friction: 0.5
-                        RollingFriction: 0.5
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 400.0
-                        LinearDamping: 0.2
-                        AngularDamping: 0.2
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
-                                Shape: 65af9b85-2cc6-4dcb-9772-d9395b9d5a55:Modelos/Estatua/ColliderEstatua
             Base:
                 BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
                 BasePartId: b846398e-bc6c-47ed-bb1c-425e4e5347fa
@@ -3789,7 +3909,7 @@ Hierarchy:
                         Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            b9a6de9d3e362d0511a1a20a34248d55: ref!! fb67c2ba-0cba-4cd5-83c4-1fa10955636a
+                            717e9a57a18271434cae0eb022e95d8f: ref!! fff525ac-660a-442f-a82a-26d4e8760e7d
                     65e0ce82b10ff7a08a25a37be73a73db: ~(Deleted)
                     fb06c492109ce5cf0499d7d8846d1f46: ~(Deleted)
                     74bf11dd4dd7e8fa7f6dd5d9df36ec37: ~(Deleted)
@@ -4364,8 +4484,7 @@ Hierarchy:
                 BasePartAsset: "1a6c1dc0-2736-409b-811e-710b1d2b5d92:Prefabs/Cañón"
                 BasePartId: f2b48e3a-68ee-4e2c-be7e-b0998925f257
                 InstanceId: e318f61c-c421-4b01-8ff8-32f7e273633c
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: a9afb0cb-fa5f-4bc3-878c-286e4c79e532
                 Name: Modelo Estatua
                 Components:
@@ -4382,27 +4501,6 @@ Hierarchy:
                         Id: 9e393e51-c0b0-4569-889b-dbe875b3c0ed
                         Model: 4504bc3d-56bd-4752-af76-a6fb0f75b742:Modelos/Estatua/Estatua
                         Materials: {}
-                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
-                        Id: 05758430-c754-43fe-a9f3-6ddc3b64dfd0
-                        CollisionGroup: CharacterFilter
-                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
-                        CanSleep: false
-                        Restitution: 0.2
-                        Friction: 0.5
-                        RollingFriction: 0.5
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 400.0
-                        LinearDamping: 0.2
-                        AngularDamping: 0.2
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
-                                Shape: 65af9b85-2cc6-4dcb-9772-d9395b9d5a55:Modelos/Estatua/ColliderEstatua
             Base:
                 BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
                 BasePartId: b846398e-bc6c-47ed-bb1c-425e4e5347fa
@@ -4445,6 +4543,42 @@ Hierarchy:
                 BasePartAsset: 5ce14289-c373-4ab7-b03f-ed219e6a5486:Prefabs/Entorno
                 BasePartId: e0d3d8f6-b609-4ad8-9984-789a0a30dd0e
                 InstanceId: b770e2a8-ffae-4349-bef5-eafb66eea1b5
+        -   Entity:
+                Id: acf4751d-7b7e-402e-9795-42d221ad6389
+                Name: Cuerpo (centro gravedad)
+                Components:
+                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
+                        Id: 9ea80a88-3b9e-436c-9e14-7277ee354168
+                        Position: {X: 0.0, Y: 0.8, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            883a3b3e7f522ba46b3a4144b4d78e02: ref!! 0def5bb5-af3e-4cc3-b957-af7c09b399f2
+                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
+                        Id: 4e0fd00e-d99e-4da3-89fd-22e088c3accd
+                        CollisionGroup: CharacterFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.5
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 400.0
+                        LinearDamping: 0.2
+                        AngularDamping: 0.2
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
+                                Shape: 65af9b85-2cc6-4dcb-9772-d9395b9d5a55:Modelos/Estatua/ColliderEstatua
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: 015511fe-f338-4f69-9c22-12f642d54d5f
+                InstanceId: ebda2d5e-1468-4c25-9862-08a582ebc911
         -   Folder: null
             Entity:
                 Id: ad967906-9bd9-48db-b800-553336bd643b
@@ -4744,9 +4878,9 @@ Hierarchy:
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: 0b61baac-c244-4e64-b8c5-83ab38532bc5
-                        Position: {X: -8.0910235E-07, Y: 2.7, Z: 0.0}
+                        Position: {X: -8.0910235E-07, Y: 2.8, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
                         Id: 3a5cf2e4-fa28-4870-a834-7cef3c23cf2d
@@ -4767,10 +4901,10 @@ Hierarchy:
                         Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
                         NodeName: null
                         ColliderShapes:
-                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.3
+                            3d442588dee3810f5ecc37272eff1133: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 0.2
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
                 BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
                 BasePartId: f7806c36-9b87-48a7-b4f6-d614ce7c93ab
@@ -5034,8 +5168,7 @@ Hierarchy:
                 BasePartAsset: 12aafda1-5b0c-460b-b868-21657e5a37b8:Prefabs/Banderas
                 BasePartId: d9d4a6e9-66f6-415c-a854-ed33713477f7
                 InstanceId: 0a53ac46-f8a3-4f41-9f91-07748f5c5e76
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: c4f3200d-ba75-43dd-8255-47faa3636625
                 Name: Modelo Estatua
                 Components:
@@ -5052,27 +5185,6 @@ Hierarchy:
                         Id: 36c5348e-74fa-4846-971a-f9487235badc
                         Model: 4504bc3d-56bd-4752-af76-a6fb0f75b742:Modelos/Estatua/Estatua
                         Materials: {}
-                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
-                        Id: 4ed84ac7-1612-4fe8-81aa-7356af0d25e5
-                        CollisionGroup: CharacterFilter
-                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
-                        CanSleep: false
-                        Restitution: 0.2
-                        Friction: 0.5
-                        RollingFriction: 0.5
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 400.0
-                        LinearDamping: 0.2
-                        AngularDamping: 0.2
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
-                                Shape: 65af9b85-2cc6-4dcb-9772-d9395b9d5a55:Modelos/Estatua/ColliderEstatua
             Base:
                 BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
                 BasePartId: b846398e-bc6c-47ed-bb1c-425e4e5347fa
@@ -5827,9 +5939,9 @@ Hierarchy:
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: f960da26-59f0-471d-bb59-a12ee77c2068
-                        Position: {X: -8.0910235E-07, Y: 2.7, Z: 0.0}
+                        Position: {X: -8.0910235E-07, Y: 2.8, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
-                        Scale: {X: 1.0, Y: 0.2, Z: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     a8fd353544cf04508ed211ef4755f0c3: !RigidbodyComponent
                         Id: d5cfeed8-f561-423b-b432-9ecfe0ea1661
@@ -5850,10 +5962,10 @@ Hierarchy:
                         Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
                         NodeName: null
                         ColliderShapes:
-                            3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.3
+                            3d442588dee3810f5ecc37272eff1133: !SphereColliderShapeDesc
+                                Is2D: false
+                                Radius: 0.2
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
                 BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
                 BasePartId: f7806c36-9b87-48a7-b4f6-d614ce7c93ab
@@ -5924,14 +6036,13 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 329f647b-c8fe-4a15-bf7a-bdfcaf3ef988
                 InstanceId: 2b1b5a3e-39a4-4f00-8018-15df599fb41f
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: db3070b0-8455-40fb-85b2-0731c006cd8e
                 Name: Modelo Estatua
                 Components:
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
                         Id: 1969d933-a7de-407f-ad10-98c9f5305591
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: -0.8, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -5942,27 +6053,6 @@ Hierarchy:
                         Id: 2b31623d-c851-4ec4-b75f-67c2ef6a26db
                         Model: 4504bc3d-56bd-4752-af76-a6fb0f75b742:Modelos/Estatua/Estatua
                         Materials: {}
-                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
-                        Id: 7907fdc5-422b-4fb9-bbb8-ab3ae260ba25
-                        CollisionGroup: CharacterFilter
-                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
-                        CanSleep: false
-                        Restitution: 0.2
-                        Friction: 0.5
-                        RollingFriction: 0.5
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 400.0
-                        LinearDamping: 0.2
-                        AngularDamping: 0.2
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
-                                Shape: 65af9b85-2cc6-4dcb-9772-d9395b9d5a55:Modelos/Estatua/ColliderEstatua
             Base:
                 BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
                 BasePartId: b846398e-bc6c-47ed-bb1c-425e4e5347fa
@@ -6071,7 +6161,7 @@ Hierarchy:
                         Rotation*: {X: 0.0, Y: 0.8529385, Z: 0.0, W: 0.52201146}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            b9a6de9d3e362d0511a1a20a34248d55: ref!! 5af5576a-29a4-4864-aa8f-683c9a4e9eca
+                            bd5177ee78944b591957022a289aeb15: ref!! bbe06456-63b3-4910-8839-27a68bf5f68b
                     65e0ce82b10ff7a08a25a37be73a73db: ~(Deleted)
                     fb06c492109ce5cf0499d7d8846d1f46: ~(Deleted)
                     74bf11dd4dd7e8fa7f6dd5d9df36ec37: ~(Deleted)
@@ -6315,6 +6405,42 @@ Hierarchy:
                 BasePartAsset: b806143a-ed3a-43b0-8f42-a59bd9b9b122:Prefabs/Paisaje
                 BasePartId: 5cc70f21-d480-4842-8552-85f408e8d94b
                 InstanceId: 2b1b5a3e-39a4-4f00-8018-15df599fb41f
+        -   Entity:
+                Id: e91d5ee6-eda1-4385-958c-3b37732ce427
+                Name: Cuerpo (centro gravedad)
+                Components:
+                    8b727272cf8789a57ec5d94495544f86: !TransformComponent
+                        Id: bd2b8493-2c37-427c-955d-ef99c46f4f76
+                        Position: {X: 0.0, Y: 0.8, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            7f93b6c339677771f66abcec34d68101: ref!! 4057409d-bcec-4ff2-a35c-3e994fcd9b4b
+                    a1acdcd205fd97b1fa283b1c4342baa9: !RigidbodyComponent
+                        Id: 67459b60-e31b-4d8c-938b-63c1eac5f26d
+                        CollisionGroup: CharacterFilter
+                        CanCollideWith: DefaultFilter, StaticFilter, DebrisFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.2
+                        Friction: 0.5
+                        RollingFriction: 0.5
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: true
+                        Mass: 400.0
+                        LinearDamping: 0.2
+                        AngularDamping: 0.2
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            4c0d41a2222dad232c72a98026fc862d: !ColliderShapeAssetDesc
+                                Shape: 65af9b85-2cc6-4dcb-9772-d9395b9d5a55:Modelos/Estatua/ColliderEstatua
+            Base:
+                BasePartAsset: c957f17f-b857-4560-8c7f-74977bd833cf:Prefabs/Estatua
+                BasePartId: 015511fe-f338-4f69-9c22-12f642d54d5f
+                InstanceId: e3461abe-6cf8-4c29-a31e-ab981bbac2b4
         -   Entity:
                 Id: e9764488-3665-4d87-81e8-d2216a07dc23
                 Name: Corto
@@ -6759,7 +6885,7 @@ Hierarchy:
                         Rotation*: {X: 0.0, Y: 0.97714823, Z: 0.0, W: 0.21255898}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            b9a6de9d3e362d0511a1a20a34248d55: ref!! 77d97073-9c81-44f2-8289-c8f5e8010f67
+                            e8187218089c4825e8c92f8b2d12735b: ref!! eb95c07c-65d5-46b6-a530-fc4c0b253201
                     65e0ce82b10ff7a08a25a37be73a73db: ~(Deleted)
                     fb06c492109ce5cf0499d7d8846d1f46: ~(Deleted)
                     74bf11dd4dd7e8fa7f6dd5d9df36ec37: ~(Deleted)
@@ -6909,7 +7035,7 @@ Hierarchy:
                         Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            b9a6de9d3e362d0511a1a20a34248d55: ref!! 4057409d-bcec-4ff2-a35c-3e994fcd9b4b
+                            98d3bfbe758ade97d55a4bba1c101ca1: ref!! bd2b8493-2c37-427c-955d-ef99c46f4f76
                     65e0ce82b10ff7a08a25a37be73a73db: ~(Deleted)
                     fb06c492109ce5cf0499d7d8846d1f46: ~(Deleted)
                     74bf11dd4dd7e8fa7f6dd5d9df36ec37: ~(Deleted)
