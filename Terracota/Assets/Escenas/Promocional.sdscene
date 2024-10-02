@@ -22,7 +22,7 @@ Hierarchy:
                 Components:
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
                         Id: 5af5576a-29a4-4864-aa8f-683c9a4e9eca
-                        Position: {X: 0.0, Y: 0.8, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -140,7 +140,7 @@ Hierarchy:
                 Components:
                     9ec59b0d37e9cb5593d325e653ddb6cf: !TransformComponent
                         Id: 07a696c2-6106-4270-8459-1e2f90112099
-                        Position: {X: 0.0, Y: 0.75, Z: -0.02}
+                        Position: {X: 0.0, Y: 1.55, Z: -0.02}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -327,7 +327,7 @@ Hierarchy:
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: 3c1ce27a-cc0d-4ded-bdd9-6fc708798bee
-                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 1.9, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 0.2, Z: 1.0}
                         Children: {}
@@ -351,7 +351,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.52
+                                Radius: 0.525
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
@@ -514,7 +514,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.25
+                                Radius: 0.3
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
@@ -937,7 +937,7 @@ Hierarchy:
                 Components:
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
                         Id: 38ee70a3-408f-430f-a0af-a66483dcbfd0
-                        Position: {X: 0.0, Y: 0.8, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -1022,7 +1022,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.25
+                                Radius: 0.3
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
@@ -1054,7 +1054,7 @@ Hierarchy:
                 Components:
                     9ec59b0d37e9cb5593d325e653ddb6cf: !TransformComponent
                         Id: 84f06b8a-771d-41d2-b65c-a3673cd93c29
-                        Position: {X: 0.0, Y: 0.75, Z: -0.02}
+                        Position: {X: 0.0, Y: 1.55, Z: -0.02}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -1114,7 +1114,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.25
+                                Radius: 0.3
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
@@ -1193,7 +1193,7 @@ Hierarchy:
                         Type: !LightDirectional
                             Color: !ColorRgbProvider
                                 Value: {R: 1.0, G: 1.0, B: 0.9411765}
-                            Shadow: !LightDirectionalShadowMap
+                            Shadow:
                                 Enabled: true
                                 Filter: !LightShadowMapFilterTypePcf {}
                                 Size: XLarge
@@ -1410,7 +1410,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.25
+                                Radius: 0.3
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
@@ -1480,7 +1480,7 @@ Hierarchy:
                 Components:
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
                         Id: fb67c2ba-0cba-4cd5-83c4-1fa10955636a
-                        Position: {X: 0.0, Y: 0.8, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -2026,7 +2026,7 @@ Hierarchy:
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: f8219193-8f88-491c-8599-8cf5e1c6cb89
-                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 1.9, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 0.2, Z: 1.0}
                         Children: {}
@@ -2050,7 +2050,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.52
+                                Radius: 0.525
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
@@ -2087,7 +2087,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.25
+                                Radius: 0.3
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
@@ -2304,7 +2304,7 @@ Hierarchy:
                 Components:
                     9ec59b0d37e9cb5593d325e653ddb6cf: !TransformComponent
                         Id: 07c5e7ce-de6b-4328-9659-66ddabec74f5
-                        Position: {X: 0.0, Y: 0.75, Z: -0.02}
+                        Position: {X: 0.0, Y: 1.55, Z: -0.02}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -2562,7 +2562,7 @@ Hierarchy:
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: c4d0397a-4225-49f8-aa14-403ccaaeea23
-                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 1.9, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 0.2, Z: 1.0}
                         Children: {}
@@ -2586,7 +2586,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.52
+                                Radius: 0.525
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
@@ -2680,7 +2680,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.25
+                                Radius: 0.3
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
@@ -2777,7 +2777,7 @@ Hierarchy:
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: eb9a97c8-576a-4d14-83f0-fb325f6785f3
-                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 1.9, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 0.2, Z: 1.0}
                         Children: {}
@@ -2801,7 +2801,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.52
+                                Radius: 0.525
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
@@ -2884,7 +2884,7 @@ Hierarchy:
                 Components:
                     ce491b1235ced4211f49d26b1c27d42d: !TransformComponent
                         Id: 3707d4c8-c8e5-4c4d-b5f4-ed15a0bcbde8
-                        Position: {X: 0.0, Y: -0.8, Z: 0.55}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.55}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -3034,7 +3034,7 @@ Hierarchy:
                 Components:
                     9ec59b0d37e9cb5593d325e653ddb6cf: !TransformComponent
                         Id: 24fd6318-a3aa-4d68-b52a-f7d0047251b8
-                        Position: {X: 0.0, Y: 0.75, Z: -0.02}
+                        Position: {X: 0.0, Y: 1.55, Z: -0.02}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -3076,7 +3076,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.25
+                                Radius: 0.3
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
@@ -3384,7 +3384,7 @@ Hierarchy:
                 Components:
                     ce491b1235ced4211f49d26b1c27d42d: !TransformComponent
                         Id: 16d5a8e0-b3e7-431b-bd15-c42c935ec677
-                        Position: {X: 0.0, Y: -0.8, Z: 0.55}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.55}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -3403,7 +3403,7 @@ Hierarchy:
                 Components:
                     9ec59b0d37e9cb5593d325e653ddb6cf: !TransformComponent
                         Id: 506ae39e-7f96-4e59-99f7-55735430ec57
-                        Position: {X: 0.0, Y: 0.75, Z: -0.02}
+                        Position: {X: 0.0, Y: 1.55, Z: -0.02}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -3544,7 +3544,7 @@ Hierarchy:
                 Components:
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
                         Id: 4057409d-bcec-4ff2-a35c-3e994fcd9b4b
-                        Position: {X: 0.0, Y: 0.8, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -4150,7 +4150,7 @@ Hierarchy:
                 Components:
                     ce491b1235ced4211f49d26b1c27d42d: !TransformComponent
                         Id: cedf7c0e-8b5d-42b8-bdd7-0a8a750aae9f
-                        Position: {X: 0.0, Y: -0.8, Z: 0.55}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.55}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -4314,7 +4314,7 @@ Hierarchy:
                 Components:
                     ce491b1235ced4211f49d26b1c27d42d: !TransformComponent
                         Id: a1f7864f-817c-4943-9629-b27c89432e7e
-                        Position: {X: 0.0, Y: -0.8, Z: 0.55}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.55}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -4527,7 +4527,7 @@ Hierarchy:
                 Components:
                     ce491b1235ced4211f49d26b1c27d42d: !TransformComponent
                         Id: 7c5b9005-88e0-4964-8652-7c4b4fa3133e
-                        Position: {X: 0.0, Y: -0.8, Z: 0.55}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.55}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -4660,7 +4660,7 @@ Hierarchy:
                 Components:
                     9ec59b0d37e9cb5593d325e653ddb6cf: !TransformComponent
                         Id: c0dca590-1c19-473e-b7a4-cce963aee758
-                        Position: {X: 0.0, Y: 0.75, Z: -0.02}
+                        Position: {X: 0.0, Y: 1.55, Z: -0.02}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -4768,7 +4768,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.25
+                                Radius: 0.3
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
@@ -4800,7 +4800,7 @@ Hierarchy:
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: 7fe61a0a-9115-45b1-ad24-2273b29f7fb1
-                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 1.9, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 0.2, Z: 1.0}
                         Children: {}
@@ -4824,7 +4824,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.52
+                                Radius: 0.525
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
@@ -4856,7 +4856,7 @@ Hierarchy:
                 Components:
                     9ec59b0d37e9cb5593d325e653ddb6cf: !TransformComponent
                         Id: c79ba7b3-5fc7-429d-b70a-38513b4db59e
-                        Position: {X: 0.0, Y: 0.75, Z: -0.02}
+                        Position: {X: 0.0, Y: 1.55, Z: -0.02}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -4985,7 +4985,7 @@ Hierarchy:
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: 8b39f5b7-2c52-45ea-bb6f-a6ce4ab37e03
-                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 1.9, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 0.2, Z: 1.0}
                         Children: {}
@@ -5009,7 +5009,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.52
+                                Radius: 0.525
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
@@ -5390,7 +5390,7 @@ Hierarchy:
                 Components:
                     ce491b1235ced4211f49d26b1c27d42d: !TransformComponent
                         Id: c3cb64e8-ff83-4e49-852b-2047c3b18d4d
-                        Position: {X: 0.0, Y: -0.8, Z: 0.55}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.55}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -5409,7 +5409,7 @@ Hierarchy:
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: 07fdd415-a651-41b1-9ab9-372c4ec5bb0a
-                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 1.9, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 0.2, Z: 1.0}
                         Children: {}
@@ -5433,7 +5433,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.52
+                                Radius: 0.525
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
@@ -5851,7 +5851,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.25
+                                Radius: 0.3
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
@@ -5931,7 +5931,7 @@ Hierarchy:
                 Components:
                     8b727272cf8789a57ec5d94495544f86: !TransformComponent
                         Id: 1969d933-a7de-407f-ad10-98c9f5305591
-                        Position: {X: 0.0, Y: 0.8, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -6028,7 +6028,7 @@ Hierarchy:
                 Components:
                     ce491b1235ced4211f49d26b1c27d42d: !TransformComponent
                         Id: da92c92c-7111-4cef-a785-1bbb40249cad
-                        Position: {X: 0.0, Y: -0.8, Z: 0.55}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.55}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -6265,7 +6265,7 @@ Hierarchy:
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: 74c73261-1075-40f7-ad3c-13953a9b01cd
-                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 1.9, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 0.2, Z: 1.0}
                         Children: {}
@@ -6289,7 +6289,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.52
+                                Radius: 0.525
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
@@ -6405,7 +6405,7 @@ Hierarchy:
                 Components:
                     9ec59b0d37e9cb5593d325e653ddb6cf: !TransformComponent
                         Id: 5f143e5f-47d2-440d-8bb1-852fc4a0cf51
-                        Position: {X: 0.0, Y: 0.75, Z: -0.02}
+                        Position: {X: 0.0, Y: 1.55, Z: -0.02}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -6423,7 +6423,7 @@ Hierarchy:
                 Components:
                     ce491b1235ced4211f49d26b1c27d42d: !TransformComponent
                         Id: 70ed4dec-4420-4fec-ad7d-8f7e020d3d98
-                        Position: {X: 0.0, Y: -0.8, Z: 0.55}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.55}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -6867,7 +6867,7 @@ Hierarchy:
                 Components:
                     aae717941d47dadafb07fc74e51b757a: !TransformComponent
                         Id: 988c4f0a-ef80-430f-bf42-d9b8ddd3f40e
-                        Position: {X: 0.0, Y: 1.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 1.9, Z: 0.0}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 0.2, Z: 1.0}
                         Children: {}
@@ -6891,7 +6891,7 @@ Hierarchy:
                         NodeName: null
                         ColliderShapes:
                             3d442588dee3810f5ecc37272eff1133: !CylinderColliderShapeDesc
-                                Radius: 0.52
+                                Radius: 0.525
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
             Base:
@@ -7034,7 +7034,7 @@ Hierarchy:
                 Components:
                     9ec59b0d37e9cb5593d325e653ddb6cf: !TransformComponent
                         Id: bdbfbcfb-ce98-419a-bde0-b75ca83f5951
-                        Position: {X: 0.0, Y: 0.75, Z: -0.02}
+                        Position: {X: 0.0, Y: 1.55, Z: -0.02}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -7071,7 +7071,7 @@ Hierarchy:
                 Components:
                     ce491b1235ced4211f49d26b1c27d42d: !TransformComponent
                         Id: c6c55998-08cb-4f87-90b2-54c45c69c52a
-                        Position: {X: 0.0, Y: -0.8, Z: 0.55}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.55}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
