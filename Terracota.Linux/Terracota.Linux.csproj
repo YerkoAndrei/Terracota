@@ -32,6 +32,9 @@
     <ItemGroup>
       <Borrar Include="$(PublishDir)*.pdb" />
       <Borrar Include="$(PublishDir)*.xml" />
+      
+      <!-- SOs que no se usan -->
+      <Borrar Include="$(PublishDir)libstridevr.so" />
     </ItemGroup>
     <Delete Files="@(Borrar)" />
   </Target>

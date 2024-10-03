@@ -34,6 +34,7 @@
       <Borrar Include="$(PublishDir)*.xml" />
 
       <!-- DLLs que no se usan -->
+      <Borrar Include="$(PublishDir)libstridevr.dll" />
       <Borrar Include="$(PublishDir)avcodec-57.dll" />
       <Borrar Include="$(PublishDir)avdevice-57.dll" />
       <Borrar Include="$(PublishDir)avfilter-6.dll" />
