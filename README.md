@@ -22,6 +22,4 @@ En este proyecto hice: programación, diseño, guión, arte, modelado, shaders, 
 ## Contacto
 Yerko Andrei Orellana Abello
 
-Linkedin: https://www.linkedin.com/in/yerkoandrei
-
 Correo:  yerkoandrei@gmail.com
