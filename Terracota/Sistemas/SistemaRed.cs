@@ -190,7 +190,7 @@ public class SistemaRed : StartupScript
 
             // Calcular ping
             reloj.Stop();
-            if (contadorPing >= 60)
+            if (contadorPing >= 60 && pingAcumulado > 0)
             {
                 ping = contadorPing / pingAcumulado;
                 pingAcumulado = 0;
